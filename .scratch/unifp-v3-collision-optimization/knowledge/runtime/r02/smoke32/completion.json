@@ -1,0 +1,14 @@
+{
+  "completed_iterations": 1,
+  "training_policy_steps": 24,
+  "training_transitions": 768,
+  "last_saved_iteration": 1,
+  "torch_peak_memory_bytes": 70681088,
+  "new_episode_after_resume": false,
+  "lineage": {
+    "run_id": "smoke32",
+    "reproduction_part": "A",
+    "parent_checkpoint_path": null,
+    "parent_checkpoint_sha256": null
+  }
+}

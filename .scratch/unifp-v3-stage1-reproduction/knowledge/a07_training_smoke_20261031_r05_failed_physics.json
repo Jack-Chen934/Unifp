@@ -1,0 +1,160 @@
+{
+  "结论": "学习状态及计数核验通过；恢复首步512环境物理终止，整体恢复验收待定位",
+  "smoke": {
+    "run": "/mnt/data_8THDD/myl_unifp_v3_stage1/runs/ticket05_a_seed0_512x10_20261031_r05",
+    "completion": {
+      "completed_iterations": 10,
+      "training_policy_steps": 240,
+      "training_transitions": 122880,
+      "last_saved_iteration": 10,
+      "torch_peak_memory_bytes": 283805696,
+      "new_episode_after_resume": false,
+      "lineage": {
+        "run_id": "ticket05_a_seed0_512x10_20261031_r05",
+        "reproduction_part": "A",
+        "parent_checkpoint_path": null,
+        "parent_checkpoint_sha256": null
+      }
+    },
+    "checkpoint_bytes": 29485882,
+    "checkpoint_sha256": "f1a8b552e802558e4e758198ccf75d49dce5ea9c290da7cc8a13742c866a9fb7",
+    "optimizers": {
+      "main": {
+        "parameter_tensors": 25,
+        "adam_steps": [
+          200.0
+        ],
+        "actual_lr": 3.3750000000000014e-05
+      },
+      "auxiliary": {
+        "parameter_tensors": 14,
+        "adam_steps": [
+          200.0
+        ],
+        "actual_lr": 1e-05
+      }
+    },
+    "cuda_rng_devices": [
+      "cuda:0"
+    ],
+    "persistent_tensor_shapes": {
+      "mass_com_delta": [
+        512,
+        5
+      ],
+      "friction": [
+        512,
+        1
+      ],
+      "execution_scale_delta": [
+        512,
+        14
+      ],
+      "last_push_velocity_world": [
+        512,
+        2
+      ]
+    },
+    "last_push_policy_step": 0,
+    "collection_seconds_total": 82.46907342318445,
+    "update_seconds_total": 4.2341879778541625,
+    "first_value_loss": 0.06319160182029009,
+    "last_value_loss": 0.043074986524879934,
+    "first_auxiliary_loss": 0.03753489013761282,
+    "last_auxiliary_loss": 0.01994442446157336,
+    "completed_episode_count": 129,
+    "end_types": {
+      "physical_failure": 129
+    },
+    "distinct_failed_envs": 99,
+    "mean_finished_episode_duration_s": 0.5257364223574021,
+    "mean_finished_episode_tcp_l2_m": 0.8742604631381904
+  },
+  "resume": {
+    "run": "/mnt/data_8THDD/myl_unifp_v3_stage1/runs/ticket05_a_seed0_512_resume_20261031_r02",
+    "completion": {
+      "completed_iterations": 11,
+      "training_policy_steps": 264,
+      "training_transitions": 135168,
+      "last_saved_iteration": 11,
+      "torch_peak_memory_bytes": 283126272,
+      "new_episode_after_resume": true,
+      "lineage": {
+        "run_id": "ticket05_a_seed0_512_resume_20261031_r02",
+        "reproduction_part": "A",
+        "parent_checkpoint_path": "/mnt/data_8THDD/myl_unifp_v3_stage1/runs/ticket05_a_seed0_512x10_20261031_r05/checkpoints/model_000010.pt",
+        "parent_checkpoint_sha256": "f1a8b552e802558e4e758198ccf75d49dce5ea9c290da7cc8a13742c866a9fb7"
+      }
+    },
+    "checkpoint_bytes": 29486074,
+    "checkpoint_sha256": "41144a8ecc443f1b11f74e2bc2b797e0817953fa9956b9e8d6b6b1000a62b49e",
+    "optimizers": {
+      "main": {
+        "parameter_tensors": 25,
+        "adam_steps": [
+          220.0
+        ],
+        "actual_lr": 1e-05
+      },
+      "auxiliary": {
+        "parameter_tensors": 14,
+        "adam_steps": [
+          220.0
+        ],
+        "actual_lr": 1e-05
+      }
+    },
+    "cuda_rng_devices": [
+      "cuda:0"
+    ],
+    "persistent_tensor_shapes": {
+      "mass_com_delta": [
+        512,
+        5
+      ],
+      "friction": [
+        512,
+        1
+      ],
+      "execution_scale_delta": [
+        512,
+        14
+      ],
+      "last_push_velocity_world": [
+        512,
+        2
+      ]
+    },
+    "last_push_policy_step": 0,
+    "collection_seconds_total": 9.12820404395461,
+    "update_seconds_total": 0.4852441200055182,
+    "first_value_loss": 0.43052419275045395,
+    "last_value_loss": 0.43052419275045395,
+    "first_auxiliary_loss": 0.025803777016699316,
+    "last_auxiliary_loss": 0.025803777016699316,
+    "completed_episode_count": 591,
+    "end_types": {
+      "physical_failure": 591
+    },
+    "distinct_failed_envs": 512,
+    "mean_finished_episode_duration_s": 0.06209813735988338,
+    "mean_finished_episode_tcp_l2_m": 0.9076904148720646
+  },
+  "persistent_properties": {
+    "mass_com_delta": {
+      "equal": true,
+      "max_abs_delta": 0.0
+    },
+    "friction": {
+      "equal": true,
+      "max_abs_delta": 0.0
+    }
+  },
+  "identity_equal": true,
+  "source_asset_files_checked": 1035,
+  "model_changed_after_resume_update": true,
+  "cuda_rng_advanced": true,
+  "new_episode_execution_scales_resampled": true,
+  "说明": "该短测验证学习链与持久状态，未验收训练效果、4096容量、动态稳定性或A10阈值。每环境4.8s加恢复后0.48s，均短于20s超时上限；已完成episode样本为提前失败，存在截尾偏差。尚未触发400策略步的push；不承诺PhysX逐比特连续。Torch峰值不含PhysX等全进程GPU占用。",
+  "resume_first_policy_step_physical_failures": 512
+}

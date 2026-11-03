@@ -1,0 +1,5 @@
+index, uuid, utilization.gpu [%], memory.used [MiB], memory.total [MiB]
+0, GPU-4f0f7a9e-307d-b814-acaf-63fe6f50fbc3, 0 %, 5786 MiB, 49140 MiB
+1, GPU-d5fdcf90-a004-80fd-0eae-1f552d39c6e9, 0 %, 1546 MiB, 49140 MiB
+2, GPU-6dc4a8cd-68f7-62a0-a196-2ff72459debe, 87 %, 18710 MiB, 49140 MiB
+3, GPU-76abcc7f-a56b-34a4-873e-01603a07a042, 0 %, 1780 MiB, 49140 MiB

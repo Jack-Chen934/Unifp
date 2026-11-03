@@ -1,0 +1,808 @@
+{
+  "date": "2026-10-30",
+  "scope": "只读XML拓扑与关节参数汇编；仅原始材料与旧参考事实，不是新V3参数配置。",
+  "inventories": [
+    {
+      "path": "/home/sorry/python_ws/interactive/unifp_reproduction/legacy/v3_reference_20261030/robot_description/a1arm_description/vendor/agilex_ranger_mini_v3/ranger_mini.xacro",
+      "sha256": "925fa108e23a931d5c98b27a3eda0d0056a50e0889a8fcbdaea97d5090f7675e",
+      "joints": [
+        {
+          "name": "fr_steering_joint",
+          "type": "revolute",
+          "parent": {
+            "link": "base_link"
+          },
+          "child": {
+            "link": "fr_steering_wheel_link"
+          },
+          "origin": {
+            "xyz": "0.25 -0.19 -0.1",
+            "rpy": "0 0 0"
+          },
+          "axis": {
+            "xyz": "0 0 -1"
+          },
+          "limit": {
+            "effort": "5",
+            "velocity": "6.28",
+            "lower": "-2.1",
+            "upper": "2.1"
+          },
+          "dynamics": null
+        },
+        {
+          "name": "fr_wheel",
+          "type": "continuous",
+          "parent": {
+            "link": "fr_steering_wheel_link"
+          },
+          "child": {
+            "link": "fr_wheel_link"
+          },
+          "origin": {
+            "xyz": "0.0 0.0 -0.12",
+            "rpy": "0 0 0"
+          },
+          "axis": {
+            "xyz": "0 1 0",
+            "rpy": "0 0 0"
+          },
+          "limit": null,
+          "dynamics": null
+        },
+        {
+          "name": "fl_steering_joint",
+          "type": "revolute",
+          "parent": {
+            "link": "base_link"
+          },
+          "child": {
+            "link": "fl_steering_wheel_link"
+          },
+          "origin": {
+            "xyz": "0.25 0.19 -0.1",
+            "rpy": "0 0 0"
+          },
+          "axis": {
+            "xyz": "0 0 -1"
+          },
+          "limit": {
+            "effort": "5",
+            "velocity": "6.28",
+            "lower": "-2.1",
+            "upper": "2.1"
+          },
+          "dynamics": null
+        },
+        {
+          "name": "fl_wheel",
+          "type": "continuous",
+          "parent": {
+            "link": "fl_steering_wheel_link"
+          },
+          "child": {
+            "link": "fl_wheel_link"
+          },
+          "origin": {
+            "xyz": "0.0 0.0 -0.12",
+            "rpy": "0 0 0"
+          },
+          "axis": {
+            "xyz": "0 1 0",
+            "rpy": "0 0 0"
+          },
+          "limit": null,
+          "dynamics": null
+        },
+        {
+          "name": "rl_steering_joint",
+          "type": "revolute",
+          "parent": {
+            "link": "base_link"
+          },
+          "child": {
+            "link": "rl_steering_wheel_link"
+          },
+          "origin": {
+            "xyz": "-0.25 0.19 -0.1",
+            "rpy": "0 0 0"
+          },
+          "axis": {
+            "xyz": "0 0 -1"
+          },
+          "limit": {
+            "effort": "5",
+            "velocity": "6.28",
+            "lower": "-2.1",
+            "upper": "2.1"
+          },
+          "dynamics": null
+        },
+        {
+          "name": "rl_wheel",
+          "type": "continuous",
+          "parent": {
+            "link": "rl_steering_wheel_link"
+          },
+          "child": {
+            "link": "rl_wheel_link"
+          },
+          "origin": {
+            "xyz": "0.0 0.0 -0.12 ",
+            "rpy": "0 0 0"
+          },
+          "axis": {
+            "xyz": "0 1 0",
+            "rpy": "0 0 0"
+          },
+          "limit": null,
+          "dynamics": null
+        },
+        {
+          "name": "rr_steering_joint",
+          "type": "revolute",
+          "parent": {
+            "link": "base_link"
+          },
+          "child": {
+            "link": "rr_steering_wheel_link"
+          },
+          "origin": {
+            "xyz": "-0.23 -0.206 -0.1",
+            "rpy": "0 0 0"
+          },
+          "axis": {
+            "xyz": "0 0 -1",
+            "rpy": "0 0 0"
+          },
+          "limit": {
+            "effort": "5",
+            "velocity": "6.28",
+            "lower": "-2.1",
+            "upper": "2.1"
+          },
+          "dynamics": null
+        },
+        {
+          "name": "rr_wheel",
+          "type": "continuous",
+          "parent": {
+            "link": "rr_steering_wheel_link"
+          },
+          "child": {
+            "link": "rr_wheel_link"
+          },
+          "origin": {
+            "xyz": "0.0 0.0 -0.12 ",
+            "rpy": "0 0 0"
+          },
+          "axis": {
+            "xyz": "0 1 0",
+            "rpy": "0 0 0"
+          },
+          "limit": null,
+          "dynamics": null
+        }
+      ]
+    },
+    {
+      "path": "/home/sorry/python_ws/interactive/unifp_reproduction/legacy/v3_reference_20261030/robot_description/a1arm_description/urdf/a1arm_rgm3_original_movable.urdf",
+      "sha256": "49b2e1b1acf728bdf1ec403126a219f7f62d7e5bbd0912c6b81af745fda498df",
+      "joints": [
+        {
+          "name": "arm_joint1",
+          "type": "revolute",
+          "parent": {
+            "link": "arm_base"
+          },
+          "child": {
+            "link": "arm_seg1"
+          },
+          "origin": {
+            "xyz": "-0.0011147 0 0.0892",
+            "rpy": "0 0 3.1416"
+          },
+          "axis": {
+            "xyz": "0 0 1"
+          },
+          "limit": {
+            "lower": "-2.8798",
+            "upper": "2.8798",
+            "effort": "40",
+            "velocity": "20.944"
+          },
+          "dynamics": null
+        },
+        {
+          "name": "arm_joint2",
+          "type": "revolute",
+          "parent": {
+            "link": "arm_seg1"
+          },
+          "child": {
+            "link": "arm_seg2"
+          },
+          "origin": {
+            "xyz": "0 -4E-05 0.0615",
+            "rpy": "1.5708 0 0"
+          },
+          "axis": {
+            "xyz": "0 0 1"
+          },
+          "limit": {
+            "lower": "0",
+            "upper": "3.1415",
+            "effort": "40",
+            "velocity": "20.944"
+          },
+          "dynamics": null
+        },
+        {
+          "name": "arm_joint3",
+          "type": "revolute",
+          "parent": {
+            "link": "arm_seg2"
+          },
+          "child": {
+            "link": "arm_seg3"
+          },
+          "origin": {
+            "xyz": "0.34928 0.02 0",
+            "rpy": "0 0 1.5708"
+          },
+          "axis": {
+            "xyz": "0 0 1"
+          },
+          "limit": {
+            "lower": "-3.3161",
+            "upper": "0",
+            "effort": "27",
+            "velocity": "7.5398"
+          },
+          "dynamics": null
+        },
+        {
+          "name": "arm_joint4",
+          "type": "revolute",
+          "parent": {
+            "link": "arm_seg3"
+          },
+          "child": {
+            "link": "arm_seg4"
+          },
+          "origin": {
+            "xyz": "0.07 -0.00395 -4E-05",
+            "rpy": "-1.5708 1.5708 0"
+          },
+          "axis": {
+            "xyz": "0 0 1"
+          },
+          "limit": {
+            "lower": "-2.8798",
+            "upper": "2.8798",
+            "effort": "7",
+            "velocity": "25.133"
+          },
+          "dynamics": null
+        },
+        {
+          "name": "arm_joint5",
+          "type": "revolute",
+          "parent": {
+            "link": "arm_seg4"
+          },
+          "child": {
+            "link": "arm_seg5"
+          },
+          "origin": {
+            "xyz": "0 0 0.2776",
+            "rpy": "-1.5708 0 3.1416"
+          },
+          "axis": {
+            "xyz": "0 0 1"
+          },
+          "limit": {
+            "lower": "-1.6581",
+            "upper": "1.6581",
+            "effort": "7",
+            "velocity": "25.133"
+          },
+          "dynamics": null
+        },
+        {
+          "name": "arm_joint6",
+          "type": "revolute",
+          "parent": {
+            "link": "arm_seg5"
+          },
+          "child": {
+            "link": "arm_seg6"
+          },
+          "origin": {
+            "xyz": "0 -0.1575 -0.00023266",
+            "rpy": "1.5708 0 0"
+          },
+          "axis": {
+            "xyz": "0 0 1"
+          },
+          "limit": {
+            "lower": "-2.8798",
+            "upper": "2.8798",
+            "effort": "7",
+            "velocity": "25.133"
+          },
+          "dynamics": null
+        },
+        {
+          "name": "gripper1_axis",
+          "type": "prismatic",
+          "parent": {
+            "link": "arm_seg6"
+          },
+          "child": {
+            "link": "gripper1"
+          },
+          "origin": {
+            "xyz": "0.014 -0.011914 0.003125",
+            "rpy": "1.5708 -1.5708 3.1415"
+          },
+          "axis": {
+            "xyz": "0 0 1"
+          },
+          "limit": {
+            "lower": "0",
+            "upper": "0.03",
+            "effort": "200",
+            "velocity": "0.25"
+          },
+          "dynamics": null
+        },
+        {
+          "name": "gripper2_axis",
+          "type": "prismatic",
+          "parent": {
+            "link": "arm_seg6"
+          },
+          "child": {
+            "link": "gripper2"
+          },
+          "origin": {
+            "xyz": "-0.014 0.011914 0.003125",
+            "rpy": "-1.5708 -1.5708 3.1415"
+          },
+          "axis": {
+            "xyz": "0 0 1"
+          },
+          "limit": {
+            "lower": "0",
+            "upper": "0.03",
+            "effort": "200",
+            "velocity": "0.25"
+          },
+          "dynamics": null
+        },
+        {
+          "name": "end_effector_joint",
+          "type": "fixed",
+          "parent": {
+            "link": "arm_seg6"
+          },
+          "child": {
+            "link": "end_effector_link"
+          },
+          "origin": {
+            "xyz": "0 0 0",
+            "rpy": "0 0 0"
+          },
+          "axis": null,
+          "limit": null,
+          "dynamics": null
+        },
+        {
+          "name": "connect_joint",
+          "type": "fixed",
+          "parent": {
+            "link": "aluminum_profiles"
+          },
+          "child": {
+            "link": "arm_base"
+          },
+          "origin": {
+            "rpy": "0 0 0",
+            "xyz": "0.174 0 0.42535"
+          },
+          "axis": null,
+          "limit": null,
+          "dynamics": null
+        },
+        {
+          "name": "wrist_camera_connector_joint",
+          "type": "fixed",
+          "parent": {
+            "link": "arm_seg6"
+          },
+          "child": {
+            "link": "wrist_camera_connector"
+          },
+          "origin": {
+            "xyz": "0.035 0 -0.007",
+            "rpy": "0 -1.5708 3.1415926"
+          },
+          "axis": {
+            "xyz": "0 0 0"
+          },
+          "limit": null,
+          "dynamics": null
+        },
+        {
+          "name": "wrist_camera_joint",
+          "type": "fixed",
+          "parent": {
+            "link": "wrist_camera_connector"
+          },
+          "child": {
+            "link": "wrist_camera"
+          },
+          "origin": {
+            "xyz": "-0.028107 0.002 0.034342",
+            "rpy": "1.9199 0 1.5708"
+          },
+          "axis": {
+            "xyz": "0 0 0"
+          },
+          "limit": null,
+          "dynamics": null
+        },
+        {
+          "name": "rear_top_camera_connector_joint",
+          "type": "fixed",
+          "parent": {
+            "link": "aluminum_profiles"
+          },
+          "child": {
+            "link": "rear_top_camera_connector"
+          },
+          "origin": {
+            "xyz": "-0.3025 0 1.4747",
+            "rpy": "0 0 0"
+          },
+          "axis": {
+            "xyz": "0 0 0"
+          },
+          "limit": null,
+          "dynamics": null
+        },
+        {
+          "name": "rear_top_camera_joint",
+          "type": "fixed",
+          "parent": {
+            "link": "rear_top_camera_connector"
+          },
+          "child": {
+            "link": "rear_top_camera"
+          },
+          "origin": {
+            "xyz": "0.053263 0.0325 0.001557",
+            "rpy": "2.0071 0 1.5708"
+          },
+          "axis": {
+            "xyz": "0 0 0"
+          },
+          "limit": null,
+          "dynamics": null
+        },
+        {
+          "name": "right_camera_connector_joint",
+          "type": "fixed",
+          "parent": {
+            "link": "aluminum_profiles"
+          },
+          "child": {
+            "link": "right_camera_connector"
+          },
+          "origin": {
+            "xyz": "-0.0356190289337047 -0.261074087050965 1.2323328705185",
+            "rpy": "-2.0960730769524 0.0761303256664287 -1.44031662679779"
+          },
+          "axis": {
+            "xyz": "0 0 0"
+          },
+          "limit": null,
+          "dynamics": null
+        },
+        {
+          "name": "right_camera_joint",
+          "type": "fixed",
+          "parent": {
+            "link": "right_camera_connector"
+          },
+          "child": {
+            "link": "right_camera"
+          },
+          "origin": {
+            "xyz": "0 0 0",
+            "rpy": "0 0 0"
+          },
+          "axis": {
+            "xyz": "0 0 0"
+          },
+          "limit": null,
+          "dynamics": null
+        },
+        {
+          "name": "left_camera_connector_joint",
+          "type": "fixed",
+          "parent": {
+            "link": "aluminum_profiles"
+          },
+          "child": {
+            "link": "left_camera_connector"
+          },
+          "origin": {
+            "xyz": "-0.0356190289336685 0.261074087050971 1.2273328705185",
+            "rpy": "2.09607307695239 0.0761303256664273 1.44031662679759"
+          },
+          "axis": {
+            "xyz": "0 0 0"
+          },
+          "limit": null,
+          "dynamics": null
+        },
+        {
+          "name": "left_camera_joint",
+          "type": "fixed",
+          "parent": {
+            "link": "left_camera_connector"
+          },
+          "child": {
+            "link": "left_camera"
+          },
+          "origin": {
+            "xyz": "0 0 0",
+            "rpy": "0 0 0"
+          },
+          "axis": {
+            "xyz": "0 0 0"
+          },
+          "limit": null,
+          "dynamics": null
+        },
+        {
+          "name": "aluminum_profiles_joint",
+          "type": "fixed",
+          "parent": {
+            "link": "base_link"
+          },
+          "child": {
+            "link": "aluminum_profiles"
+          },
+          "origin": {
+            "xyz": "0 0 -0.33",
+            "rpy": "0 0 0"
+          },
+          "axis": {
+            "xyz": "0 0 0"
+          },
+          "limit": null,
+          "dynamics": null
+        },
+        {
+          "name": "bl_steering_joint",
+          "type": "revolute",
+          "parent": {
+            "link": "base_link"
+          },
+          "child": {
+            "link": "bl_steering_link"
+          },
+          "origin": {
+            "xyz": "-0.247 0.185 -0.1",
+            "rpy": "0 0 0"
+          },
+          "axis": {
+            "xyz": "0 0 1"
+          },
+          "limit": {
+            "lower": "-1.5708",
+            "upper": "1.5708",
+            "effort": "35.0",
+            "velocity": "2.0"
+          },
+          "dynamics": {
+            "damping": "0.2",
+            "friction": "0.0"
+          }
+        },
+        {
+          "name": "bl_wheel_drive_joint",
+          "type": "continuous",
+          "parent": {
+            "link": "bl_steering_link"
+          },
+          "child": {
+            "link": "bl_Link"
+          },
+          "origin": {
+            "xyz": "0 0 -0.12",
+            "rpy": "0 0 0"
+          },
+          "axis": {
+            "xyz": "0 1 0"
+          },
+          "limit": {
+            "effort": "80.0",
+            "velocity": "20.0"
+          },
+          "dynamics": {
+            "damping": "0.05",
+            "friction": "0.0"
+          }
+        },
+        {
+          "name": "br_steering_joint",
+          "type": "revolute",
+          "parent": {
+            "link": "base_link"
+          },
+          "child": {
+            "link": "br_steering_link"
+          },
+          "origin": {
+            "xyz": "-0.247 -0.185 -0.1",
+            "rpy": "0 0 0"
+          },
+          "axis": {
+            "xyz": "0 0 1"
+          },
+          "limit": {
+            "lower": "-1.5708",
+            "upper": "1.5708",
+            "effort": "35.0",
+            "velocity": "2.0"
+          },
+          "dynamics": {
+            "damping": "0.2",
+            "friction": "0.0"
+          }
+        },
+        {
+          "name": "br_wheel_drive_joint",
+          "type": "continuous",
+          "parent": {
+            "link": "br_steering_link"
+          },
+          "child": {
+            "link": "br_Link"
+          },
+          "origin": {
+            "xyz": "0 0 -0.12",
+            "rpy": "0 0 0"
+          },
+          "axis": {
+            "xyz": "0 1 0"
+          },
+          "limit": {
+            "effort": "80.0",
+            "velocity": "20.0"
+          },
+          "dynamics": {
+            "damping": "0.05",
+            "friction": "0.0"
+          }
+        },
+        {
+          "name": "fl_steering_joint",
+          "type": "revolute",
+          "parent": {
+            "link": "base_link"
+          },
+          "child": {
+            "link": "fl_steering_link"
+          },
+          "origin": {
+            "xyz": "0.247 0.185 -0.1",
+            "rpy": "0 0 0"
+          },
+          "axis": {
+            "xyz": "0 0 1"
+          },
+          "limit": {
+            "lower": "-1.5708",
+            "upper": "1.5708",
+            "effort": "35.0",
+            "velocity": "2.0"
+          },
+          "dynamics": {
+            "damping": "0.2",
+            "friction": "0.0"
+          }
+        },
+        {
+          "name": "fl_wheel_drive_joint",
+          "type": "continuous",
+          "parent": {
+            "link": "fl_steering_link"
+          },
+          "child": {
+            "link": "fl_Link"
+          },
+          "origin": {
+            "xyz": "0 0 -0.12",
+            "rpy": "0 0 0"
+          },
+          "axis": {
+            "xyz": "0 1 0"
+          },
+          "limit": {
+            "effort": "80.0",
+            "velocity": "20.0"
+          },
+          "dynamics": {
+            "damping": "0.05",
+            "friction": "0.0"
+          }
+        },
+        {
+          "name": "fr_steering_joint",
+          "type": "revolute",
+          "parent": {
+            "link": "base_link"
+          },
+          "child": {
+            "link": "fr_steering_link"
+          },
+          "origin": {
+            "xyz": "0.247 -0.185 -0.1",
+            "rpy": "0 0 0"
+          },
+          "axis": {
+            "xyz": "0 0 1"
+          },
+          "limit": {
+            "lower": "-1.5708",
+            "upper": "1.5708",
+            "effort": "35.0",
+            "velocity": "2.0"
+          },
+          "dynamics": {
+            "damping": "0.2",
+            "friction": "0.0"
+          }
+        },
+        {
+          "name": "fr_wheel_drive_joint",
+          "type": "continuous",
+          "parent": {
+            "link": "fr_steering_link"
+          },
+          "child": {
+            "link": "fr_Link"
+          },
+          "origin": {
+            "xyz": "0 0 -0.12",
+            "rpy": "0 0 0"
+          },
+          "axis": {
+            "xyz": "0 1 0"
+          },
+          "limit": {
+            "effort": "80.0",
+            "velocity": "20.0"
+          },
+          "dynamics": {
+            "damping": "0.05",
+            "friction": "0.0"
+          }
+        }
+      ]
+    }
+  ],
+  "official_controller_reference": "UniFP/legged_gym/envs/b2/legged_robot_b2z1_pos_force.py:113–132,877–885",
+  "archived_controller_reference": "legacy/v3_reference_20261030/ranger_unifp_vec_env.py:34–38,57–70,100–115",
+  "limits": [
+    "厂家xacro转向轴为-Z，旧组合资产为+Z，索引与符号不能互换。",
+    "厂家xacro右后轮转向关节位置为(-0.23,-0.206,-0.1)m，其余三轮为对称矩形的其他角；来源对应不等于布局正确。",
+    "旧代码注释记录5ms显式反馈在低惯量关节振荡，这是旧实现的说明，不是本轮重新测得的稳定性结论。",
+    "所有effort、velocity及默认姿态字段仍需按来源和新物理装配重新核对。"
+  ]
+}

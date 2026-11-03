@@ -1,0 +1,16 @@
+{
+  "pid": 3870598,
+  "started_at": "2026-11-02T23:33:23.511703+08:00",
+  "command": [
+    "nohup",
+    "bash",
+    "/mnt/data_8THDD/myl_unifp_v3_stage1/validation/ticket07_20261102_r03/start_a8000_seed1_r03.sh"
+  ],
+  "detached_session": true,
+  "output_dir": "/mnt/data_8THDD/myl_unifp_v3_stage1/runs/a8000_seed1_v3_a_initial_v1",
+  "console_log": "/mnt/data_8THDD/myl_unifp_v3_stage1/launch_logs/a8000_seed1_v3_a_initial_v1.console.log",
+  "seed": 1,
+  "num_envs": 4096,
+  "target_iterations": 8000,
+  "resume": null
+}

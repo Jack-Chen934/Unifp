@@ -1,0 +1,276 @@
+{
+  "date": "2026-10-30",
+  "status": "通过",
+  "source": "/home/sorry/python_ws/interactive/research/.scratch",
+  "destination": "/home/sorry/python_ws/interactive/unifp_reproduction/.scratch",
+  "source_removed": true,
+  "files_moved": 50,
+  "symlinks_moved": 0,
+  "byte_identical_immediately_after_move": true,
+  "local_file_links_checked": 75,
+  "missing_file_links": [],
+  "official_git_head": "68847a070f88d731058c3d8476929bc3b205f5bd",
+  "official_git_status": "干净",
+  "business_code_changed": false,
+  "new_training_started": false,
+  "historical_manifest_note": "原始deliverable_manifest.json保持字节不变；其中路径以原研究根解释，哈希为历史快照。",
+  "entries_before_move": {
+    "unifp-v3-migration": {
+      "type": "directory"
+    },
+    "unifp-v3-migration/README.md": {
+      "type": "file",
+      "sha256": "a3e5fe8c0f5e34d92ebf015a39bb7a3a219e71bab308ed3258443e5fcdafb720"
+    },
+    "unifp-v3-migration/deliverable_manifest.json": {
+      "type": "file",
+      "sha256": "d6f6f73c753924cff8fa92b72a57d284b208f5fd9be20e760375129f9ec929a5"
+    },
+    "unifp-v3-migration/design": {
+      "type": "directory"
+    },
+    "unifp-v3-migration/design/00-运行架构与决策.md": {
+      "type": "file",
+      "sha256": "21c09cd7864f9339b3acdd90dfaea5765df597a93cc051168ef4b806664319f7"
+    },
+    "unifp-v3-migration/design/01-总体参数资产与执行器.md": {
+      "type": "file",
+      "sha256": "1c5e943b02b88b4c50df69f26f427a2a08290337bb0bb1bfe8342a12b97d1a09"
+    },
+    "unifp-v3-migration/design/02-环境观测命令与动作.md": {
+      "type": "file",
+      "sha256": "e8bf276c3636d020192cabd909dce907cbd06024ce79c5ef70d9cf3f0dfad04b"
+    },
+    "unifp-v3-migration/design/03-Actor与辅助估计.md": {
+      "type": "file",
+      "sha256": "fae0d1a72c54f90034a285f72fea98855028197bd55a46c5501cda0b0bdb96c8"
+    },
+    "unifp-v3-migration/design/04-Critic与价值估计.md": {
+      "type": "file",
+      "sha256": "94d7bb868113f62c64640c861992e2dd3d7cf2ad5eb5b604d646fe7bd88f25a8"
+    },
+    "unifp-v3-migration/design/05-PPO缓冲区与Runner.md": {
+      "type": "file",
+      "sha256": "31117340c69645b0e6e31839a28bde6d54f1ecea1ac46bdfec04d368ae467643"
+    },
+    "unifp-v3-migration/design/06-力模型任务与奖励.md": {
+      "type": "file",
+      "sha256": "5f7b10d5754819ea41c8930720877b3ed3332a6926d5d83d178ece8169345451"
+    },
+    "unifp-v3-migration/design/07-课程随机化与训练顺序.md": {
+      "type": "file",
+      "sha256": "3855c9580ce694b6d049f50a660d3771fc36211489df2e264106f266d216ef2c"
+    },
+    "unifp-v3-migration/design/08-轮式创新与消融.md": {
+      "type": "file",
+      "sha256": "feb0a0fbdf6d98231998ba7481e5034964230bce095d4af37c77bd0413dff1aa"
+    },
+    "unifp-v3-migration/design/09-评估部署与数据保全.md": {
+      "type": "file",
+      "sha256": "b67dfac89d6b4719545e95681251d5e110ee6503df49025b9959b3186b24b455"
+    },
+    "unifp-v3-migration/design/10-测试与准入.md": {
+      "type": "file",
+      "sha256": "2291bad0d07336ebd6c23a2c37664bc2f993edde7c63fe916115c018ca73102a"
+    },
+    "unifp-v3-migration/knowledge": {
+      "type": "directory"
+    },
+    "unifp-v3-migration/knowledge/PRD.md": {
+      "type": "file",
+      "sha256": "83d35041d941926c4ef207f0052604840fe677e5c0d0e5fa7b0dee519e68a615"
+    },
+    "unifp-v3-migration/knowledge/official_source_audit.md": {
+      "type": "file",
+      "sha256": "8fb638eaa3c7b20a0d1ef8eec65837ebae2ec2355ad51f3c77319772c4bcb5b2"
+    },
+    "unifp-v3-migration/knowledge/reproduction_source_audit.md": {
+      "type": "file",
+      "sha256": "4c7a9833015b10730921ed37412227ad6c4e22d43a39a000fb377023228aca6c"
+    },
+    "unifp-v3-migration/knowledge/reproduction_validation.json": {
+      "type": "file",
+      "sha256": "a11262fb35447730b3a9f6b705ad66db9a994620ac80d321a27c1b9be0da54f8"
+    },
+    "unifp-v3-migration/knowledge/research.md": {
+      "type": "file",
+      "sha256": "5e42a4a0ade8363f05257d540c52fa27d7049054bc3f06acb5014200526d0aa4"
+    },
+    "unifp-v3-migration/knowledge/v3_source_audit.md": {
+      "type": "file",
+      "sha256": "a96ef000d349b014188f302fa20295765c1ba6485f517a9885bf58dfeef68665"
+    },
+    "unifp-v3-migration/official_recommendations.md": {
+      "type": "file",
+      "sha256": "5bcd31567c058c74a4181a7fb8400cb55719132dda55082fe2dea7928a6efbb1"
+    },
+    "unifp-v3-migration/tickets": {
+      "type": "directory"
+    },
+    "unifp-v3-migration/tickets/00-证据冻结与可重建基线.md": {
+      "type": "file",
+      "sha256": "7d7d5ca212c21d61e34c86712888062abae6d998e12d5e96cd45eba600ea5834"
+    },
+    "unifp-v3-migration/tickets/01-硬件接口与机器人契约.md": {
+      "type": "file",
+      "sha256": "38736f9c9c29183e6dab9cc69e9fe324435679873ac3d2a055575ffe4c719abc"
+    },
+    "unifp-v3-migration/tickets/02-资产执行器与TCP物理验证.md": {
+      "type": "file",
+      "sha256": "89dd5fe4f66d2d894a81dc3b7fb92a7f41df7fd498e074d27682b6cab2e06cda"
+    },
+    "unifp-v3-migration/tickets/03-无学习环境与schema闭环.md": {
+      "type": "file",
+      "sha256": "e845d5c2daedf4413b6dac28e8664623d02209364a3fdbb6cf1db2bb6b759615"
+    },
+    "unifp-v3-migration/tickets/04-官方风格学习器最小集成.md": {
+      "type": "file",
+      "sha256": "be577b58faaed4bb3baaab190ec9a5f778ae7e2528a0bf6e8e97f61c702fe939"
+    },
+    "unifp-v3-migration/tickets/05-无力技能与冻结基线.md": {
+      "type": "file",
+      "sha256": "084793b23be739aff10a5df46aae5cc0a8994109d46a29dd7bffc6ca168d81b6"
+    },
+    "unifp-v3-migration/tickets/06-小力课程与估计控制闭环.md": {
+      "type": "file",
+      "sha256": "8a85fb57cf470afc79b843730519cf12b3980f339de77bd1c5c293c90461a1ef"
+    },
+    "unifp-v3-migration/tickets/07-真实接触与移动任务.md": {
+      "type": "file",
+      "sha256": "b248cff1660e120bdb95fce79a33047f3ff7e6092e519fe3d3db9f26d53f1276"
+    },
+    "unifp-v3-migration/tickets/08-泛化统计与基础迁移验收.md": {
+      "type": "file",
+      "sha256": "90e71c973297f600734ff301070638e2c0d2c04c1f8c71ee3c4df23cd59f5030"
+    },
+    "unifp-v3-migration/tickets/09-轮式耦合顺应研究消融.md": {
+      "type": "file",
+      "sha256": "1084394243d6d281d6410521f32624eacf684bb4ff4d3b7b9e588d3024c77782"
+    },
+    "unifp-v3-migration/tickets/10-部署导出与渐进实机验证.md": {
+      "type": "file",
+      "sha256": "a5d1d244b37bb3d494a695b65635fb57f1acc909967ec2addb6fb13b1caa01f0"
+    },
+    "unifp-v3-migration/tickets/overview.md": {
+      "type": "file",
+      "sha256": "0ef6d5ef5f53c25485038e4db3e5919a238cd5717a89111eb626cbdbe5c71234"
+    },
+    "unifp-v3-migration/v3_recommendations.md": {
+      "type": "file",
+      "sha256": "0fcb488e5ae8789afac32b44d69f3d8ad8598cbfcde2123ed95dcc6cf40cf4b3"
+    },
+    "unifp-v3-stage1-reproduction": {
+      "type": "directory"
+    },
+    "unifp-v3-stage1-reproduction/README.md": {
+      "type": "file",
+      "sha256": "e8fd3dc1968b17f3adeb8615978513942d4c02ebbf7328134d17ed871e475eee"
+    },
+    "unifp-v3-stage1-reproduction/design": {
+      "type": "directory"
+    },
+    "unifp-v3-stage1-reproduction/design/00-目标范围与阶段验收.md": {
+      "type": "file",
+      "sha256": "4defb115939c8d3da794dd82d9e0cf2c80e2729ca86d27592f1627ad72e2d8d9"
+    },
+    "unifp-v3-stage1-reproduction/design/01-官方基线与运行架构.md": {
+      "type": "file",
+      "sha256": "17dd1bfbebf272eccdc6877c43ef45e6cfbf988c4a74f6c4eb0f20a1c79bd018"
+    },
+    "unifp-v3-stage1-reproduction/design/02-总体参数与配置边界.md": {
+      "type": "file",
+      "sha256": "35a9b7cd7735a4ce84eb63bdfdd0b55085d4bb5636b40914d21eaef0c0a046cd"
+    },
+    "unifp-v3-stage1-reproduction/design/03-机器人资产与执行器.md": {
+      "type": "file",
+      "sha256": "ddf57b4cbb7ef17f254e15af04ee44d91f30d23f03c280aebce40e69acddfa77"
+    },
+    "unifp-v3-stage1-reproduction/design/04-环境接口观测与命令.md": {
+      "type": "file",
+      "sha256": "a66755ee60904b5d7505ded191dec9a858c909422a991e794d812e32d85d9648"
+    },
+    "unifp-v3-stage1-reproduction/design/05-Actor与辅助状态估计.md": {
+      "type": "file",
+      "sha256": "46cdc2506d2a6f5918d486d0ce265ede084fe7bae749d0d614e918a25b88ec50"
+    },
+    "unifp-v3-stage1-reproduction/design/06-Critic与特权状态.md": {
+      "type": "file",
+      "sha256": "47660cadd983d022d59952e324296803aae0bebd82642ac54390be47accc65cf"
+    },
+    "unifp-v3-stage1-reproduction/design/07-PPO缓冲区与Runner.md": {
+      "type": "file",
+      "sha256": "6ca406a895004cf85903d9b95b270fbe7d4f9125e84fc1be9c3dd09e45374c57"
+    },
+    "unifp-v3-stage1-reproduction/design/08-力位任务目标与奖励.md": {
+      "type": "file",
+      "sha256": "2078b1f8bab70cfdb97b1bf66a683d629e0f8aacad1c9a3cdb4100eb4d5bef15"
+    },
+    "unifp-v3-stage1-reproduction/design/09-课程与域随机化.md": {
+      "type": "file",
+      "sha256": "1ca782552e4ee7df329d48e945271da6415b9a4217ea56630d3990b2974aa39b"
+    },
+    "unifp-v3-stage1-reproduction/design/10-评估对照与数据保全.md": {
+      "type": "file",
+      "sha256": "f17ea8bfda0a40127c63d29635ce289e45a315854e877bb715a85c69c12e3796"
+    },
+    "unifp-v3-stage1-reproduction/design/11-单元测试整体测试与验收.md": {
+      "type": "file",
+      "sha256": "e427c2bb79ec12bbca30713084d6bf108a33c6b467eb78ef2f02b92ddb4014d9"
+    },
+    "unifp-v3-stage1-reproduction/knowledge": {
+      "type": "directory"
+    },
+    "unifp-v3-stage1-reproduction/knowledge/PRD.md": {
+      "type": "file",
+      "sha256": "9ade7286c58b8bea9ea977842929873b2254ce238b2c7fca1c9daac7b6a5ff5d"
+    },
+    "unifp-v3-stage1-reproduction/knowledge/research.md": {
+      "type": "file",
+      "sha256": "6a091587c1f2f62f90dcebb12fa99b217ebe93645e960ed1673625b6d6823968"
+    },
+    "unifp-v3-stage1-reproduction/knowledge/runtime_inventory_20261030.json": {
+      "type": "file",
+      "sha256": "c4e6d4e847a367e57aa110d34f4fbac80c7d4b70f3f39479e339c039043a379e"
+    },
+    "unifp-v3-stage1-reproduction/knowledge/workspace_verification.json": {
+      "type": "file",
+      "sha256": "e1d2b23a6167e42b90d580f56c53fef6debb095d0c655ec3230e5382a92173cb"
+    }
+  },
+  "documents_updated_after_move": [
+    {
+      "path": "unifp-v3-migration/design/08-轮式创新与消融.md",
+      "sha256_after_document_updates": "7dfcfc74a5cd3e16d5dcdf72271405c7d060aadd5ee2a2db8e4d7bba77e85c7f"
+    },
+    {
+      "path": "unifp-v3-migration/knowledge/research.md",
+      "sha256_after_document_updates": "e4cdc8fd2c6473fb1b226e3c1477e1026867323cc23e2c9f9018682ee39bd21e"
+    },
+    {
+      "path": "unifp-v3-stage1-reproduction/README.md",
+      "sha256_after_document_updates": "c4d03ce35a49f0827a1e2938bc88c458cf0bbb3a974191df31828af0c2326045"
+    },
+    {
+      "path": "unifp-v3-stage1-reproduction/design/02-总体参数与配置边界.md",
+      "sha256_after_document_updates": "5fdeee831ed36f78227db6c86255523250c2900d791f617f06c5f89a85667c22"
+    },
+    {
+      "path": "unifp-v3-stage1-reproduction/knowledge/PRD.md",
+      "sha256_after_document_updates": "e502e6ac4dd23656a4de62d60f0fcee371aaf147d74ee6dca4c0460c8a421de8"
+    },
+    {
+      "path": "unifp-v3-stage1-reproduction/knowledge/research.md",
+      "sha256_after_document_updates": "1a767d76fe9b5e14856e759f33691f5d05c71ca2a36cb383151830dc290772e6"
+    },
+    {
+      "path": "unifp-v3-stage1-reproduction/knowledge/workspace_verification.json",
+      "sha256_after_document_updates": "614616f32c12a3c0a6c271973616cd762b8de4e9819bc3985b8823f5284171ea"
+    }
+  ],
+  "external_documents_updated": [
+    "/home/sorry/python_ws/interactive/unifp_reproduction/README.md",
+    "/home/sorry/python_ws/interactive/research/literature/projects/unifiedforce/migration_v3_20261030/00-复现有效性评估.md",
+    "/home/sorry/python_ws/interactive/research/literature/projects/unifiedforce/migration_v3_20261030/01-总体迁移计划.md",
+    "/home/sorry/python_ws/interactive/research/literature/projects/unifiedforce/migration_v3_20261030/README.md"
+  ]
+}

@@ -1,0 +1,122 @@
+{
+  "核查日期": "2026-10-30",
+  "核查范围": "只读主机、GPU、磁盘、Conda注册及包安装元数据；无Gym或Torch导入，无仿真训练",
+  "本地": {
+    "主机": "sorry-Legion-R9000P-ADR10",
+    "GPU": {
+      "型号": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "驱动": "580.178.04",
+      "总显存MiB": 8151,
+      "已用显存MiB": 548
+    },
+    "环境包元数据": {
+      "/var/local/sorry/conda/envs/tavis": {
+        "torch": "2.7.0+cu128",
+        "numpy": "1.26.4"
+      },
+      "/home/sorry/.cache/unifp/isaacgym_preview4/py38": {
+        "torch": "2.0.1",
+        "numpy": "1.23.5"
+      },
+      "/home/sorry/.cache/unifp/isaacgym_preview4/torch231": {
+        "torch": "2.3.1+cu121"
+      }
+    }
+  },
+  "远程": {
+    "SSH别名": "gpu-server",
+    "地址": "piqiuni.cloud",
+    "端口": 8031,
+    "用户": "myl",
+    "独立批处理SSH命令成功": true,
+    "主机": "gpuf3",
+    "系统Python": "3.12.3",
+    "GPU": [
+      {
+        "索引": 0,
+        "型号": "NVIDIA RTX A6000",
+        "驱动": "580.105.08",
+        "总显存MiB": 49140,
+        "已用显存MiB": 14872
+      },
+      {
+        "索引": 1,
+        "型号": "NVIDIA RTX A6000",
+        "驱动": "580.105.08",
+        "总显存MiB": 49140,
+        "已用显存MiB": 14364
+      },
+      {
+        "索引": 2,
+        "型号": "NVIDIA RTX A6000",
+        "驱动": "580.105.08",
+        "总显存MiB": 49140,
+        "已用显存MiB": 4309
+      },
+      {
+        "索引": 3,
+        "型号": "NVIDIA RTX A6000",
+        "驱动": "580.105.08",
+        "总显存MiB": 49140,
+        "已用显存MiB": 21761
+      }
+    ],
+    "磁盘快照": {
+      "/": {
+        "使用率": "98%",
+        "可用": "37G"
+      },
+      "/mnt/data": {
+        "使用率": "93%",
+        "可用": "272G"
+      },
+      "/mnt/data_8THDD": {
+        "使用率": "85%",
+        "可用": "1.1T"
+      }
+    },
+    "已有环境": "/mnt/data_8THDD/conda_envs/unifp",
+    "环境Python目录": "lib/python3.8/site-packages",
+    "环境包元数据": {
+      "torch": "2.3.1",
+      "numpy": "1.23.0"
+    },
+    "editable链接": {
+      "isaacgym": "/mnt/data_8THDD/myl_unifp/isaacgym/python",
+      "UniFP": "/mnt/data_8THDD/myl_unifp/UniFP"
+    },
+    "运行兼容性已验证": false,
+    "依赖版本只读补核": {
+      "Conda记录Python": "3.8.20",
+      "Torch版本文件": {
+        "路径": "/mnt/data_8THDD/conda_envs/unifp/lib/python3.8/site-packages/torch/version.py",
+        "第4行": "__version__ = '2.3.1+cu121'",
+        "第6行": "cuda: Optional[str] = '12.1'"
+      },
+      "说明": "读取Conda元数据与源码文本，未导入Torch或Gym"
+    },
+    "运行工具与目录只读补核": {
+      "工具": {
+        "tmux": "/usr/bin/tmux",
+        "git": "/usr/bin/git",
+        "rsync": "/usr/bin/rsync"
+      },
+      "父目录": {
+        "/mnt/data_8THDD": {
+          "存在": true,
+          "当前用户可写": true
+        },
+        "/mnt/data_8THDD/conda_envs": {
+          "存在": true,
+          "当前用户可写": true
+        }
+      },
+      "拟建路径当前存在": {
+        "/mnt/data_8THDD/myl_unifp_v3_stage1": false,
+        "/mnt/data_8THDD/conda_envs/unifp_v3_stage1": false
+      },
+      "核查方式": "shutil.which、Path.exists及os.access(W_OK)，未创建目录或写远程文件"
+    }
+  },
+  "限制": "显存和磁盘为即时快照；包元数据不证明可导入、GPU内核运行或仿真正确；不据历史记录认定当前训练状态。"
+}

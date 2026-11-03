@@ -1,0 +1,135 @@
+{
+  "stopped_at": "2026-11-03T09:09:25.793842+00:00",
+  "reason": "用户要求停止旧资产训练，保留数据并准备新碰撞资产训练",
+  "signal": "SIGTERM",
+  "pid": 3870598,
+  "process_stopped": true,
+  "completed_a8000": false,
+  "last_logged_iteration": 1423,
+  "latest_checkpoint": "/mnt/data_8THDD/myl_unifp_v3_stage1/runs/a8000_seed1_v3_a_initial_v1/checkpoints/model_001400.pt",
+  "checkpoint_iteration": 1400,
+  "checkpoint_note": "停止时未额外保存权重；最新指标与最新完整检查点的进度不同",
+  "last_metrics": {
+    "completed_iterations": 1423,
+    "training_policy_steps": 34152,
+    "training_transitions": 139886592,
+    "simulated_time_per_environment_s": 683.0399847328663,
+    "collection_s": 42.83995206421241,
+    "update_s": 0.6411343570798635,
+    "value_loss": 0.0441559623926878,
+    "surrogate_loss": -0.0038351938032064937,
+    "auxiliary_loss": 0.00014688919254695064,
+    "main_learning_rate": 0.00011390625000000003,
+    "auxiliary/base_velocity_loss": 8.072310374700465e-05,
+    "auxiliary/tcp_position_loss": 6.442056328523905e-05,
+    "auxiliary/force_ee_loss": 8.415447240395224e-07,
+    "auxiliary/force_base_loss": 9.039812198352593e-07,
+    "episode/episode_count": 45,
+    "episode/reward_rate": 4.205815863843595,
+    "episode/reward_return": 77.33027412494023,
+    "episode/steps": 907.7777777777778,
+    "episode/timeout_bootstrap_bonus": 7.320992628733317,
+    "episode/raw/tracking_ee_force_world": 0.8324819922447204,
+    "episode/raw/tracking_lin_vel": 0.5546832131014929,
+    "episode/raw/tracking_ang_vel": 0.6850043647819095,
+    "episode/raw/alive": 1.0,
+    "episode/raw/torques_steering": 805.3019395616319,
+    "episode/raw/torques_drive": 28.977675925360785,
+    "episode/raw/torques_arm": 669.0562594943576,
+    "episode/raw/action_rate_steering": 10.427533022562663,
+    "episode/raw/action_rate_drive": 9.680716556972927,
+    "episode/raw/action_rate_arm": 3.8449138217502172,
+    "episode/raw/dof_vel_steering": 9.399846564398871,
+    "episode/raw/dof_vel_arm": 70.92240431043837,
+    "episode/raw/dof_acc_steering": 23862.50546875,
+    "episode/raw/dof_acc_drive": 53214.90277777778,
+    "episode/raw/dof_acc_arm": 204378.46006944444,
+    "episode/raw/torque_limits_steering": 0.41854149997234347,
+    "episode/raw/torque_limits_drive": 0.0,
+    "episode/raw/torque_limits_arm": 0.8704295529259576,
+    "episode/raw/dof_pos_limits": 0.0022420329629817895,
+    "episode/raw/lin_vel_z": 0.0006793706639048954,
+    "episode/raw/ang_vel_xy": 0.022493301042252115,
+    "episode/raw/base_height": 8.891567122191191e-05,
+    "episode/raw/collision": 0.001472104369248781,
+    "episode/errors/tcp_geometric_l1_m/mean": 0.09887048999468485,
+    "episode/errors/tcp_geometric_l1_m/p95": 0.1805720756451289,
+    "episode/errors/tcp_geometric_l2_m/mean": 0.06594199902481503,
+    "episode/errors/tcp_geometric_l2_m/p95": 0.1196407448914316,
+    "episode/errors/base_planar_speed_m_s/mean": 0.387084232767423,
+    "episode/errors/base_planar_speed_m_s/p95": 0.5424136771096124,
+    "episode/errors/base_yaw_rate_rad_s/mean": 0.291935562590758,
+    "episode/errors/base_yaw_rate_rad_s/p95": 0.5107882350683213,
+    "episode/errors/tcp_compensated_l1_m/mean": 0.09887048999468485,
+    "episode/errors/tcp_compensated_l1_m/p95": 0.1805720756451289,
+    "episode/errors/tcp_compensated_l2_m/mean": 0.06594199902481503,
+    "episode/errors/tcp_compensated_l2_m/p95": 0.1196407448914316
+  },
+  "inventory": [
+    {
+      "path": "/mnt/data_8THDD/myl_unifp_v3_stage1/runs/a8000_seed1_v3_a_initial_v1/checkpoints/model_000200.pt",
+      "bytes": 29801786,
+      "sha256": "548ed53bfd03965ec827ae9bbcad12dc65c639557c36db93715096e39f4fa47b"
+    },
+    {
+      "path": "/mnt/data_8THDD/myl_unifp_v3_stage1/runs/a8000_seed1_v3_a_initial_v1/checkpoints/model_000400.pt",
+      "bytes": 29801786,
+      "sha256": "f1427fbb0750c7bb3e51d858578a02fc1b00d253ada420d06f6bb3498fe2451b"
+    },
+    {
+      "path": "/mnt/data_8THDD/myl_unifp_v3_stage1/runs/a8000_seed1_v3_a_initial_v1/checkpoints/model_000600.pt",
+      "bytes": 29801786,
+      "sha256": "8f70c2dcd0de5e97b9e1d6f20308eda12e12af8f032f47082c46309b3ec3a556"
+    },
+    {
+      "path": "/mnt/data_8THDD/myl_unifp_v3_stage1/runs/a8000_seed1_v3_a_initial_v1/checkpoints/model_000800.pt",
+      "bytes": 29801786,
+      "sha256": "83ed79b207daa82333099178f9d240617f5e0bbe2aedbe7bb77973748fbbdd80"
+    },
+    {
+      "path": "/mnt/data_8THDD/myl_unifp_v3_stage1/runs/a8000_seed1_v3_a_initial_v1/checkpoints/model_001000.pt",
+      "bytes": 29801786,
+      "sha256": "d856c8a05e60bd223d9b9660e2ca9869a17d1bae3a2ee46ce8702fc1585bd25e"
+    },
+    {
+      "path": "/mnt/data_8THDD/myl_unifp_v3_stage1/runs/a8000_seed1_v3_a_initial_v1/checkpoints/model_001200.pt",
+      "bytes": 29801786,
+      "sha256": "2b4f3607c70aca7eeb874476038d35f5598ed2426fa0ae7dd6ac4e379f6731ea"
+    },
+    {
+      "path": "/mnt/data_8THDD/myl_unifp_v3_stage1/runs/a8000_seed1_v3_a_initial_v1/checkpoints/model_001400.pt",
+      "bytes": 29801786,
+      "sha256": "6f79e694dc1c59f6804faebc524a4386d66ba1927842ffbdaaea9e2c7f4ef1f2"
+    },
+    {
+      "path": "/mnt/data_8THDD/myl_unifp_v3_stage1/runs/a8000_seed1_v3_a_initial_v1/checkpoints.jsonl",
+      "bytes": 2110,
+      "sha256": "c16c7475562cf9fc6e1d0b44ef1ad8060f43496a3d273d966325220bb76c0131"
+    },
+    {
+      "path": "/mnt/data_8THDD/myl_unifp_v3_stage1/runs/a8000_seed1_v3_a_initial_v1/episode_metadata.json",
+      "bytes": 159698,
+      "sha256": "7d2656373e08125b7c9edddf41a8ad8a2b88685534cd8f2b8eee19dcf628b66a"
+    },
+    {
+      "path": "/mnt/data_8THDD/myl_unifp_v3_stage1/runs/a8000_seed1_v3_a_initial_v1/episodes.jsonl",
+      "bytes": 241468709,
+      "sha256": "b62efafd8da43af6041637906a17be86a0b960e0527c77d59475c196b8255719"
+    },
+    {
+      "path": "/mnt/data_8THDD/myl_unifp_v3_stage1/runs/a8000_seed1_v3_a_initial_v1/iterations.jsonl",
+      "bytes": 3824044,
+      "sha256": "0305b90c10f0925dfecb94e9b86235e5c046d33e41fdcfdbbc0659dccd84d9f5"
+    },
+    {
+      "path": "/mnt/data_8THDD/myl_unifp_v3_stage1/runs/a8000_seed1_v3_a_initial_v1/tensorboard/events.out.tfevents.1793633689.gpuf3.3870598.0",
+      "bytes": 5046719,
+      "sha256": "a52acdb0fdb72bf233d40bfa155ceb3b96f2f919446ab01a14d3764b2dba8014"
+    },
+    {
+      "path": "/mnt/data_8THDD/myl_unifp_v3_stage1/launch_logs/a8000_seed1_v3_a_initial_v1.console.log",
+      "bytes": 107082,
+      "sha256": "33ca950e7dcd52e4af1518e03abaf93ea59bf7f621a16eb031a522eec19b4724"
+    }
+  ]
+}

@@ -1,0 +1,1583 @@
+{
+  "status": "通过",
+  "archive_regular_file_sha256_verified": 192,
+  "archive_internal_symlinks_verified": 36,
+  "official_file_hashes_verified": 93,
+  "introduction_file_hashes_verified": 4,
+  "official_git_status": "干净",
+  "root_legacy_python_entries": 0,
+  "agent_rules_copy_matches": true,
+  "module_documents": 28,
+  "new_document_links_verified": true,
+  "business_code_changed": false,
+  "new_training_started": false,
+  "design_confirmation": "00—03沿用；A04—A11设计议题全部确认并收束。Q1b边界、Q1c时长、Q4b—Q4d参数及A09 Q3随机化参数仍为候选并须按已确认流程验证／可修订，不代表长训配置已冻结。A10验收阈值需在A11短测后、A长训前确认。A业务代码未修改，Gym或训练未执行；现进入A阶段实施tickets确认。",
+  "readonly_remote_ssh_succeeded": true,
+  "runtime_compatibility_verified": false,
+  "discussion_granularity": "基础事项合并；03-Q1—Q9及A04-Q1—Q7已按用户要求成组确认，未展示的后续模块不自动获批。",
+  "scratch_root": "/home/sorry/python_ws/interactive/unifp_reproduction/.scratch",
+  "scratch_move_byte_identical": true,
+  "scratch_move_checked_file_links": 75,
+  "scratch_move_missing_file_links": [],
+  "config_copy_probe": {
+    "source": "UniFP/legged_gym/envs/base/base_config.py:3–25",
+    "plain_deepcopy_shares_inherited_mutable_default": true,
+    "gym_imported": false,
+    "simulation_created": false
+  },
+  "asset_policy_confirmation": {
+    "date": "2026-10-31",
+    "policy": "现有V3作为资产标准，发现具体问题才修正；旧训练和控制代码仍仅供参考",
+    "current_default_variant": "v3_original",
+    "static_check_report": "current_v3_asset_check_20261031.json",
+    "gym_runtime_verified": false
+  },
+  "module_03_confirmation": {
+    "date": "2026-10-31",
+    "user_reply": "其他均同意",
+    "scope": "除已修订并确认的Q1外，整体确认Q2—Q9；未展示的新数值不在确认范围内",
+    "parameter_fact_table": "current_v3_parameter_table_20261031.md",
+    "physical_validation_completed": false,
+    "parameter_supplement_completed": true,
+    "new_numeric_candidates_approved": false,
+    "derivation_record": "v3_parameter_derivation_20261031.json"
+  },
+  "module_04_discussion": {
+    "started_by_user": "请补齐并进入04",
+    "current_question": "A04已确认并收束。",
+    "confirmed": true,
+    "future_questions": "A06字段／网络／终止输入已收束；A07确定具体PPO公式／数值及完整恢复，A08确定具体任务范围。",
+    "proposal_date": "2026-10-31",
+    "proposed_single_actor_obs": 58,
+    "proposed_actor_history_length": 32,
+    "proposed_actor_observation_width": 1856,
+    "proposed_critic_history_length": 3,
+    "proposed_prediction_label_width": 12,
+    "proposed_command_width": 15,
+    "proposed_critic_frame_width": null,
+    "static_kinematics_evidence": "a04_static_kinematics_20261031.json",
+    "proposal_is_approved": true,
+    "business_code_changed": false,
+    "proposal_verification": {
+      "q1_through_q7_present": true,
+      "confirmed_questions": 7,
+      "actor_shape_arithmetic_verified": true,
+      "checked_file_links": 41,
+      "missing_file_links": [],
+      "json_parse_passed": true,
+      "official_git_status": "干净",
+      "gym_or_training_executed": false
+    },
+    "confirmation_date": "2026-10-31",
+    "user_reply": "同意这几个议题，但要详细记录与原文相比改了什么，没改什么",
+    "comparison_record": "../comparison/A04-论文与官方源码差异.md",
+    "confirmed_schema": {
+      "single_actor_obs": 58,
+      "actor_history_length": 32,
+      "actor_observation_width": 1856,
+      "critic_history_length": 3,
+      "critic_frame_width": 98,
+      "prediction_label_width": 12,
+      "command_width": 15,
+      "action_width": 14,
+      "critic_observation_width": 294,
+      "critic_width_confirmed_by": "A06-Q4d"
+    },
+    "physical_validation_completed": false,
+    "confirmation_verification": {
+      "date": "2026-10-31",
+      "checked_markdown_files": 35,
+      "checked_file_links": 136,
+      "missing_file_links": [],
+      "confirmed_questions": 7,
+      "preserved_entries": 16,
+      "changed_entries": 26,
+      "research_section_23_present": true,
+      "paper_text_sha256": "e63007a2903274fb9e0a67d3837e303d4c19439a848718860a7fec93b2a412d5",
+      "paper_text_characters": 59291,
+      "actor_shape_arithmetic_verified": true,
+      "module_documents": 28,
+      "json_parse_passed": true,
+      "official_commit": "68847a070f88d731058c3d8476929bc3b205f5bd",
+      "official_git_status": "干净",
+      "new_v3_directory_created": false,
+      "formal_tickets_created": false,
+      "business_code_changed": false,
+      "gym_or_training_executed": false
+    },
+    "critic_schema_backfill": {
+      "confirmed_by": "A06-Q4d",
+      "single_frame_width": 98,
+      "total_width": 294,
+      "physical_candidates_validated": false
+    }
+  },
+  "reproduction_split": {
+    "date": "2026-10-31",
+    "unit_confirmed": "训练迭代",
+    "part_a_iterations": 8000,
+    "part_b_iterations": 32000,
+    "formal_total_iterations_per_seed": 40000,
+    "common_module_documents": 4,
+    "public_module_indexes": 8,
+    "part_a_module_documents": 8,
+    "part_b_module_documents": 8,
+    "current_topic": "A04—A11设计全部确认并收束；A阶段实施tickets已起草，等待用户确认计划。",
+    "detailed_design_confirmed": false,
+    "execution_rule": "A设计与实施计划确认并实现测试后先冻结运行，隔离开发B；A8000结果与B就绪均通过才续训。",
+    "formal_seeds": [
+      1,
+      2,
+      3
+    ],
+    "development_seed": 0,
+    "official_checkpoint_full_resume_verified": false,
+    "business_code_changed": false,
+    "new_training_started": false,
+    "plan": "../development-plan.md",
+    "verification": {
+      "checked_markdown_files": 34,
+      "checked_file_links": 115,
+      "missing_file_links": [],
+      "module_numbering_verified": true,
+      "unit_and_integration_topics_present": true,
+      "dependency_graph_acyclic": true,
+      "budget_arithmetic_verified": true,
+      "official_commit": "68847a070f88d731058c3d8476929bc3b205f5bd",
+      "official_git_status": "干净",
+      "new_v3_directory_created": false,
+      "formal_tickets_created": false,
+      "runtime_tests_executed": false
+    }
+  },
+  "module_05_discussion": {
+    "current_question": "A05已确认并收束。",
+    "confirmed_questions": 6,
+    "q1_conclusion": "历史编码latent；最新58维帧与latent拼接进入Actor；latent单独进入12维预测decoder；Z与网络宽度待Q4。",
+    "proposal_is_approved": true,
+    "business_code_changed": false,
+    "q2_confirmation_date": "2026-10-31",
+    "q2_user_reply": "同意，但请记录完整流程",
+    "q2_conclusion": "保留四组三维状态／人工注入力标签；预测送辅助损失与推理调用方，不直接回灌Actor。完整记录采样配对、存储、监督更新、推理评估与论文下游用途，接触能力另行验证。",
+    "comparison_record": "../comparison/A05-论文与官方源码差异.md",
+    "complete_workflow_record": "../design/part-a/05-Actor与辅助状态估计.md",
+    "remaining_questions": [],
+    "q3_proposal_approved": true,
+    "gym_or_training_executed": false,
+    "q2_document_verification": {
+      "date": "2026-10-31",
+      "checked_markdown_files": 36,
+      "checked_file_links": 146,
+      "missing_file_links": [],
+      "confirmed_questions": 2,
+      "q3_proposal_approved": false,
+      "design_documents": 28,
+      "schema_arithmetic_verified": true,
+      "json_parse_passed": true,
+      "official_commit": "68847a070f88d731058c3d8476929bc3b205f5bd",
+      "official_git_status": "干净",
+      "business_code_changed": false,
+      "gym_or_training_executed": false
+    },
+    "q3_confirmation_date": "2026-10-31",
+    "q3_user_reply": "同意",
+    "q3_conclusion": "保留四组监督和A的两组零力标签，不加mask／冻结；乘子[0.2,0.2,1,1]，实际MSE系数[0.04,0.04,1,1]，各组均值后四项相加；A／B定义一致。",
+    "q4_proposal_approved": true,
+    "q4_proposed_networks": {
+      "encoder": [
+        1856,
+        512,
+        256,
+        128,
+        64
+      ],
+      "actor": [
+        122,
+        512,
+        256,
+        128,
+        14
+      ],
+      "decoder": [
+        64,
+        128,
+        64,
+        12
+      ],
+      "hidden_activation": "elu",
+      "output_activation": null,
+      "initialization": "nn.Linear默认初始化；不启用未被调用的正交初始化函数"
+    },
+    "q3_document_verification": {
+      "checked_markdown_files": 36,
+      "checked_file_links": 146,
+      "missing_file_links": [],
+      "confirmed_questions": 3,
+      "q4_proposal_approved": false,
+      "shape_and_weight_arithmetic_verified": true,
+      "json_parse_passed": true,
+      "official_git_status": "干净",
+      "official_commit": "68847a070f88d731058c3d8476929bc3b205f5bd",
+      "business_code_changed": false,
+      "gym_or_training_executed": false
+    },
+    "q4_confirmation_date": "2026-10-31",
+    "q4_user_reply": "同意",
+    "q4_confirmed_networks": {
+      "encoder": [
+        1856,
+        512,
+        256,
+        128,
+        64
+      ],
+      "actor": [
+        122,
+        512,
+        256,
+        128,
+        14
+      ],
+      "decoder": [
+        64,
+        128,
+        64,
+        12
+      ],
+      "hidden_activation": "elu",
+      "output_activation": null,
+      "initialization": "nn.Linear默认初始化；不启用未被调用的正交初始化函数"
+    },
+    "q5_proposal_approved": true,
+    "q5_proposal": {
+      "distribution": "无tanh对角高斯；每动作维直接std参数，与状态无关",
+      "initial_std": 1.0,
+      "invalid_std_behavior": "有限且严格正；否则失败退出，不自动clamp／改参数化",
+      "training_actions": "采样原始动作并据此求logp；环境执行另行裁剪",
+      "evaluation_actions": "确定性动作均值；无梯度，不依赖Critic／标签",
+      "prediction_output": "可选policy_info[state_estimates]，同设备detach Tensor[N,12]",
+      "deployment_artifact_required": false
+    },
+    "q4_document_verification": {
+      "checked_markdown_files": 36,
+      "checked_file_links": 146,
+      "missing_file_links": [],
+      "confirmed_questions": 4,
+      "q5_proposal_approved": false,
+      "network_shape_arithmetic_verified": true,
+      "json_parse_passed": true,
+      "official_git_status": "干净",
+      "official_commit": "68847a070f88d731058c3d8476929bc3b205f5bd",
+      "business_code_changed": false,
+      "gym_or_training_executed": false
+    },
+    "q5_confirmation_date": "2026-10-31",
+    "q5_user_reply": "同意",
+    "q5_conclusion": "确认14维直接std高斯、初始1.0、训练采样／均值评估、原始logp与执行限幅分离、非法std失败、同设备state_estimates可选输出；采样完整解释已记录。",
+    "q5_confirmed_policy": {
+      "distribution": "无tanh对角高斯；每动作维直接std参数，与状态无关",
+      "initial_std": 1.0,
+      "invalid_std_behavior": "有限且严格正；否则失败退出，不自动clamp／改参数化",
+      "training_actions": "采样原始动作并据此求logp；环境执行另行裁剪",
+      "evaluation_actions": "确定性动作均值；无梯度，不依赖Critic／标签",
+      "prediction_output": "可选policy_info[state_estimates]，同设备detach Tensor[N,12]",
+      "deployment_artifact_required": false
+    },
+    "q6_proposal_approved": true,
+    "q6_proposal": {
+      "update_order": "每PPO minibatch先主Adam一步，再辅助Adam一步；辅助用更新后的encoder重新前向",
+      "main_parameters": [
+        "encoder",
+        "actor",
+        "critic",
+        "std"
+      ],
+      "auxiliary_parameters": [
+        "encoder",
+        "decoder"
+      ],
+      "auxiliary_learning_rate": 1e-05,
+      "zero_grad": "全模型set_to_none=True，阶段间清理",
+      "auxiliary_gradient_clipping": false,
+      "auxiliary_log_extra_divisor_64": false,
+      "nonfinite_loss_or_grad": "停止运行，不发布不完整更新为续训checkpoint",
+      "main_ppo_config_confirmed": false
+    },
+    "q5_document_verification": {
+      "checked_markdown_files": 36,
+      "checked_file_links": 146,
+      "missing_file_links": [],
+      "confirmed_questions": 5,
+      "q6_proposal_approved": false,
+      "json_parse_passed": true,
+      "official_git_status": "干净",
+      "official_commit": "68847a070f88d731058c3d8476929bc3b205f5bd",
+      "business_code_changed": false,
+      "gym_or_training_executed": false
+    },
+    "q6_confirmation_date": "2026-10-31",
+    "q6_user_reply": "同意",
+    "q6_confirmed_update_rules": {
+      "update_order": "每PPO minibatch先主Adam一步，再辅助Adam一步；辅助用更新后的encoder重新前向",
+      "main_parameters": [
+        "encoder",
+        "actor",
+        "critic",
+        "std"
+      ],
+      "auxiliary_parameters": [
+        "encoder",
+        "decoder"
+      ],
+      "auxiliary_learning_rate": 1e-05,
+      "zero_grad": "全模型set_to_none=True，阶段间清理",
+      "auxiliary_gradient_clipping": false,
+      "auxiliary_log_extra_divisor_64": false,
+      "nonfinite_loss_or_grad": "停止运行，不发布不完整更新为续训checkpoint",
+      "main_ppo_config_confirmed": false
+    },
+    "module_design_closed": true,
+    "complete_interface_framework_recorded": true,
+    "closure_verification": {
+      "checked_markdown_files": 36,
+      "checked_file_links": 146,
+      "missing_file_links": [],
+      "a05_confirmed_questions": 6,
+      "complete_interface_framework_present": true,
+      "a06_confirmed_questions": 0,
+      "json_parse_passed": true,
+      "official_git_status": "干净",
+      "official_commit": "68847a070f88d731058c3d8476929bc3b205f5bd",
+      "new_v3_directory_created": false,
+      "formal_tickets_created": false,
+      "business_code_changed": false,
+      "gym_or_training_executed": false
+    }
+  },
+  "module_06_discussion": {
+    "current_question": "A06已确认并收束。",
+    "confirmed_questions": 5,
+    "proposal_is_approved": true,
+    "proposed_critic_frame_width": 98,
+    "business_code_changed": false,
+    "gym_or_training_executed": false,
+    "q1_proposal_approved": true,
+    "q1_user_reply": "同意",
+    "q1_confirmed_scope": "保留真实状态／人工力／实际物性／任务条件；删除四足步态项，足接触换轮接触；关节按10／14／14适配；Critic仅训练使用，c按字段求和。",
+    "q2_proposal_approved": true,
+    "proposed_critic_width_formula": "c=79+m+k; C=3c; m、k由Q4确认",
+    "proposed_critic_hidden_dims": [
+      512,
+      256,
+      128
+    ],
+    "proposed_critic_output_width": 1,
+    "q2_user_reply": "同意",
+    "q2_confirmed_scope": "三帧旧到新历史、Q2字段顺序及已明确缩放；独立3c→512→256→128→1，隐藏ELU／末层Linear、默认初始化；c=79+m+k，物性表示留Q4，A／B同schema。",
+    "q3_proposal_approved": true,
+    "proposed_contact_threshold_newtons": 5.0,
+    "q3_user_reply": "同意",
+    "q3_confirmed_scope": "A人工力／命令力零；B激励已定义末端力槽，base力仍零；人工力为上区间末次实际值，轮接触独立、世界竖直分量阈值判定、无平滑／滞回；同schema。",
+    "q4a_proposal_approved": true,
+    "proposed_mass_parameter_width": 5,
+    "q4_remaining_decisions": [],
+    "confirmed_subquestions": [
+      "Q4a",
+      "Q4b",
+      "Q4c",
+      "Q4d"
+    ],
+    "q4a_user_reply": "同意",
+    "q4a_confirmed_scope": "m=5：base_link质量变化1、局部COM变化3、arm_seg6质量变化1，kg／m、×1；实际回读差值，其他body保持名义质量；随机化细节归A09。",
+    "confirmed_mass_parameter_width": 5,
+    "q4b_proposal_approved": true,
+    "proposed_motor_parameter_width": 14,
+    "proposed_critic_total_width": 294,
+    "critic_width_is_frozen": true,
+    "q4b_user_reply": "同意",
+    "q4b_confirmed_scope": "一维实际统一robot shape摩擦μ、14维s−1，无量纲×1；按V3控制关节顺序且实际消费参数；A09确认执行公式／范围／周期。",
+    "confirmed_motor_parameter_width": 14,
+    "derived_critic_frame_width": 98,
+    "derived_critic_total_width": 294,
+    "q4c_proposal_approved": true,
+    "contact_threshold_is_validated": false,
+    "proposed_wheel_body_order": [
+      "fl_Link",
+      "fr_Link",
+      "bl_Link",
+      "br_Link"
+    ],
+    "q4c_user_reply": "同意",
+    "q4c_confirmed_scope": "左前／右前／左后／右后轮body命名及sim域映射；世界Fz>5N候选用于短测，采集设置沿03；不增加滤波／滞回／四步聚合，验证后冻结。",
+    "contact_threshold_candidate_is_approved": true,
+    "contact_threshold_is_frozen": false,
+    "q4d_proposal_approved": true,
+    "q4d_proposed_frame_slices": [
+      {
+        "field": "base_lin_vel",
+        "start": 0,
+        "stop": 3
+      },
+      {
+        "field": "tcp_sphere",
+        "start": 3,
+        "stop": 6
+      },
+      {
+        "field": "ee_injected_force",
+        "start": 6,
+        "stop": 9
+      },
+      {
+        "field": "base_injected_force",
+        "start": 9,
+        "stop": 12
+      },
+      {
+        "field": "base_mass_delta",
+        "start": 12,
+        "stop": 13
+      },
+      {
+        "field": "base_com_delta",
+        "start": 13,
+        "stop": 16
+      },
+      {
+        "field": "tool_mass_delta",
+        "start": 16,
+        "stop": 17
+      },
+      {
+        "field": "friction",
+        "start": 17,
+        "stop": 18
+      },
+      {
+        "field": "motor_scale_delta",
+        "start": 18,
+        "stop": 32
+      },
+      {
+        "field": "wheel_contacts",
+        "start": 32,
+        "stop": 36
+      },
+      {
+        "field": "projected_gravity",
+        "start": 36,
+        "stop": 39
+      },
+      {
+        "field": "base_ang_vel",
+        "start": 39,
+        "stop": 42
+      },
+      {
+        "field": "joint_position_delta",
+        "start": 42,
+        "stop": 52
+      },
+      {
+        "field": "joint_velocity",
+        "start": 52,
+        "stop": 66
+      },
+      {
+        "field": "last_executed_actions",
+        "start": 66,
+        "stop": 80
+      },
+      {
+        "field": "commands",
+        "start": 80,
+        "stop": 95
+      },
+      {
+        "field": "compensated_tcp_target",
+        "start": 95,
+        "stop": 98
+      }
+    ],
+    "q4d_user_reply": "同意",
+    "q4d_confirmed_scope": "完整17组切片98维／三帧294维；同边界数据对齐，clip前前12维与标签一致；旧历史不重写，reset物性取新实际值；A／B同schema，已回填A04／02。",
+    "confirmed_critic_frame_width": 98,
+    "confirmed_critic_total_width": 294,
+    "q5_proposal_approved": true,
+    "schema_backfilled_into": [
+      "design/part-a/04-环境接口观测与命令.md",
+      "design/02-总体参数与配置边界.md"
+    ],
+    "confirmed_frame_slices": [
+      {
+        "field": "base_lin_vel",
+        "start": 0,
+        "stop": 3
+      },
+      {
+        "field": "tcp_sphere",
+        "start": 3,
+        "stop": 6
+      },
+      {
+        "field": "ee_injected_force",
+        "start": 6,
+        "stop": 9
+      },
+      {
+        "field": "base_injected_force",
+        "start": 9,
+        "stop": 12
+      },
+      {
+        "field": "base_mass_delta",
+        "start": 12,
+        "stop": 13
+      },
+      {
+        "field": "base_com_delta",
+        "start": 13,
+        "stop": 16
+      },
+      {
+        "field": "tool_mass_delta",
+        "start": 16,
+        "stop": 17
+      },
+      {
+        "field": "friction",
+        "start": 17,
+        "stop": 18
+      },
+      {
+        "field": "motor_scale_delta",
+        "start": 18,
+        "stop": 32
+      },
+      {
+        "field": "wheel_contacts",
+        "start": 32,
+        "stop": 36
+      },
+      {
+        "field": "projected_gravity",
+        "start": 36,
+        "stop": 39
+      },
+      {
+        "field": "base_ang_vel",
+        "start": 39,
+        "stop": 42
+      },
+      {
+        "field": "joint_position_delta",
+        "start": 42,
+        "stop": 52
+      },
+      {
+        "field": "joint_velocity",
+        "start": 52,
+        "stop": 66
+      },
+      {
+        "field": "last_executed_actions",
+        "start": 66,
+        "stop": 80
+      },
+      {
+        "field": "commands",
+        "start": 80,
+        "stop": 95
+      },
+      {
+        "field": "compensated_tcp_target",
+        "start": 95,
+        "stop": 98
+      }
+    ],
+    "module_design_closed": true,
+    "q5_user_reply": "同意",
+    "q5_confirmed_scope": "Actor／Critic前向数据隔离，纯timeout使用reset前[K,294]终止后继历史，失败不延续价值，rollout末尾存活行使用真实后继；具体公式归A07。",
+    "remaining_questions": [],
+    "complete_interface_framework_recorded": true,
+    "closure_verification": {
+      "confirmed_top_level_questions": 5,
+      "confirmed_q4_subquestions": 4,
+      "user_confirmation_records": 8,
+      "checked_markdown_files": 37,
+      "checked_local_links": 157,
+      "json_parse_passed": true,
+      "business_code_changed": false,
+      "gym_or_training_executed": false,
+      "official_commit": "68847a070f88d731058c3d8476929bc3b205f5bd",
+      "official_git_status": "干净",
+      "new_v3_directory_created": false,
+      "formal_tickets_created": false
+    }
+  },
+  "module_07_discussion": {
+    "current_question": "A07已确认并收束。",
+    "confirmed_questions": 7,
+    "q1_proposal_approved": true,
+    "proposal_is_approved": true,
+    "business_code_changed": false,
+    "gym_or_training_executed": false,
+    "q1_user_reply": "同意",
+    "q1_confirmed_scope": "单总reward、单V、单GAE、整rollout优势标准化及14维联合logp／单ratio；辅助MSE不进reward／GAE；后续公式与参数逐题确认。",
+    "q2_proposal_approved": true,
+    "q2_user_reply": "同意",
+    "q2_confirmed_scope": "T=24预分配存储，字段同刻配对与detach、入库独立copy_，bool done；完整采集及returns就绪；整除校验、同索引、每update一次随机排列跨epoch复用；E／J具体数值留Q4。",
+    "q3_proposal_approved": true,
+    "q3_user_reply": "同意，请记录这个修改点",
+    "q3_confirmed_scope": "保留奖励补偿与done遮断GAE；纯timeout使用reset前真实终止后继V替代旧V_t，入库前无梯度单次补偿；失败优先不补偿，24步存活切段保留真实后继V；原始奖励隔离，returns先于优势标准化。",
+    "q3_change_record": {
+      "official_source": "UniFP/legged_gym/b2_gym_learn/ppo_cse_pf/ppo.py:94–95",
+      "before": "r_env + gamma * time_outs * V_t",
+      "after": "r_env + gamma * pure_timeout * V_terminal_before_reset",
+      "comparison_document": "comparison/A07-论文与官方源码差异.md",
+      "implemented": false,
+      "numerically_verified": false
+    },
+    "q4_proposal_approved": true,
+    "q4_user_reply": "同意",
+    "q4_confirmed_scope": "官方实际注入配置5epoch／4minibatch、主lr1e-3及KL自适应目标0.01、gamma0.99／lambda0.95、clip0.2、value系数1与裁剪、entropy0.01、主grad clip1；辅助lr1e-5／每主步后一次；保留文档数值细节与A05主辅边界、清梯度及日志修正。",
+    "q5_proposal_approved": true,
+    "q4_confirmed_parameters": {
+      "num_learning_epochs": 5,
+      "num_mini_batches": 4,
+      "learning_rate": 0.001,
+      "schedule": "adaptive",
+      "desired_kl": 0.01,
+      "gamma": 0.99,
+      "lam": 0.95,
+      "clip_param": 0.2,
+      "use_clipped_value_loss": true,
+      "value_loss_coef": 1.0,
+      "entropy_coef": 0.01,
+      "max_grad_norm": 1.0,
+      "aux_learning_rate": 1e-05,
+      "aux_substeps_per_minibatch": 1,
+      "advantage_std": "样本标准差B-1；全rollout归约",
+      "advantage_epsilon": 1e-08,
+      "kl_log_ratio_epsilon": 1e-05
+    },
+    "q5_user_reply": "同意",
+    "q5_confirmed_scope": "Runner每次完整24步采集、returns与20组主辅更新成功后统一提交迭代／策略步／转移数；日志只读；局部reset、初始化、评估不推进训练时钟；set_training_progress发布(I,S+j)，半轮失败不提交；A8000不自动启力。",
+    "q6_proposal_approved": true,
+    "q6_user_reply": "同意",
+    "q6_confirmed_scope": "完整更新空边界format_version1，保存完整模型／双Adam／实际lr／计数／随机源／跨episode环境训练状态／身份与配置／来源；严格兼容恢复、装配后恢复RNG再开启新episode，学习状态连续但不承诺PhysX／GPU逐比特连续；A09回填环境状态，B07明确A到B白名单。",
+    "q7_proposal_approved": true,
+    "q7_user_reply": "同意",
+    "module_closed": true,
+    "q7_confirmed_scope": "learn按额外预算、A累计8000准确停止；每200完整轮及终点保存并去重、内部完成量为真值；完整checkpoint临时写入／核验／原子发布、失败停止、显式源身份与父产物只读；A冻结与B独立worktree／目录／环境，长训前资源及跨进程恢复短测。",
+    "closure_verification": {
+      "date": "2026-10-31",
+      "checked_markdown_files": 39,
+      "checked_file_links": 175,
+      "missing_file_links": [],
+      "confirmed_questions": 7,
+      "q7_confirmation_recorded": true,
+      "a08_current_question": "Q1a推荐待确认",
+      "json_parse_passed": true,
+      "official_commit": "68847a070f88d731058c3d8476929bc3b205f5bd",
+      "official_git_status": "干净",
+      "new_v3_directory_created": false,
+      "formal_tickets_created": false,
+      "business_code_changed": false,
+      "gym_or_training_executed": false
+    }
+  },
+  "module_08_discussion": {
+    "current_question": "A08-Q1a—Q5c均已确认；下一步完成A08总结与文档核验，再进入A09。",
+    "confirmed_questions": 15,
+    "q1a_proposal_approved": true,
+    "proposal_is_approved": false,
+    "comparison_record": "../comparison/A08-论文与官方源码差异.md",
+    "business_code_changed": false,
+    "gym_or_training_executed": false,
+    "q1a_user_reply": "同意",
+    "q1a_confirmed_scope": "保留r／仰角／方位角分量均匀候选采样并记录筛查后覆盖；初始安全集合与常规终点域分开，reset真实TCP起步且整段验证；后续段从上一目标端点起，不按跟踪误差重置起点；不批准新数值。",
+    "q1b_proposal_approved": true,
+    "q1b_numeric_candidates_approved_for_validation": true,
+    "physical_validation_completed": false,
+    "position_audit_record": "a08_workspace_position_audit_20261031.json",
+    "q1b_proposed_ranges": {
+      "radius_m": [
+        0.45,
+        0.7
+      ],
+      "elevation_deg": [
+        0.0,
+        60.0
+      ],
+      "azimuth_deg": [
+        -60.0,
+        60.0
+      ],
+      "offline_arm_joint_margin_deg": 5.0,
+      "tcp_ground_clearance_m": 0.05,
+      "non_exempt_robot_pair_clearance_m": 0.02
+    },
+    "documentation_verification": {
+      "date": "2026-10-31",
+      "checked_markdown_files": 40,
+      "checked_file_links": 183,
+      "missing_file_links": [],
+      "a08_confirmed_questions": 1,
+      "current_pending_question": "Q1b",
+      "audit_solutions_checked": 305,
+      "audit_source_sha256_verified": true,
+      "audit_joint_bounds_verified": true,
+      "audit_is_position_only": true,
+      "collision_or_physical_validation_completed": false,
+      "business_code_changed": false,
+      "gym_or_training_executed": false,
+      "new_v3_directory_created": false,
+      "formal_tickets_created": false
+    },
+    "q1b_rationale_clarification": {
+      "user_request": "请详细讲解为什么推荐这样的候选",
+      "status": "原因已补齐；用户随后暂定三项目标域边界，新增版本及可能修订条件／流程，几何余量未冻结。",
+      "optimal_workspace_established": false,
+      "collision_clearances_calibrated": false,
+      "new_numeric_candidates_approved": false
+    },
+    "q1b_user_reply": "暂时确定这个边界，但请记录原因和后续可能更改",
+    "q1b_confirmation_status": "仅三项目标域暂定用于验证，非物理冻结；余量保留未冻结候选",
+    "q1b_confirmed_endpoint_ranges": {
+      "radius_m": [
+        0.45,
+        0.7
+      ],
+      "elevation_deg": [
+        0.0,
+        60.0
+      ],
+      "azimuth_deg": [
+        -60.0,
+        60.0
+      ]
+    },
+    "q1b_boundary_version": "v0.1",
+    "q1b_margins_final_approved": false,
+    "q1b_long_training_configuration_frozen": false,
+    "q1b_change_policy": "证据与原因回写、旧新范围及影响比较、确认后版本化；保留原始产物，不热改冻结A，不混算不同分布曲线／种子预算。",
+    "q1c_proposal_approved": true,
+    "q1c_proposed_timing": {
+      "move_seconds": [
+        1.0,
+        3.0
+      ],
+      "hold_seconds": [
+        0.5,
+        2.0
+      ],
+      "duration_rounding": "ceil(requested_duration/0.020)",
+      "resampling": "逐环境／逐段独立重采",
+      "interpolation": "球坐标线性、最短方位差",
+      "automatic_speed_clipping_or_time_extension": false
+    },
+    "boundary_confirmation_verification": {
+      "date": "2026-10-31",
+      "checked_markdown_files": 40,
+      "checked_file_links": 184,
+      "missing_file_links": [],
+      "confirmed_decisions": [
+        "Q1a",
+        "Q1b仅三项边界暂定用于验证"
+      ],
+      "pending_question": "Q1c",
+      "boundary_reason_and_change_record_present": true,
+      "physical_validation_completed": false,
+      "business_code_changed": false,
+      "gym_or_training_executed": false,
+      "new_v3_directory_created": false,
+      "formal_tickets_created": false
+    },
+    "q1c_user_reply": "同意",
+    "q1c_confirmed_scope": "移动1—3s／保持0.5—2s为验证候选；逐环境逐段独立重采、20ms向上取整、球坐标线性与最短方位差、整数段边界与H次保持、速度记录区别；不自动限速或延时，动态验证后冻结。",
+    "q1c_long_training_timing_frozen": false,
+    "q2_proposal_approved": true,
+    "q2_proposed_contract": {
+      "formula": "p_geom_world + (F_injected_world + R_yaw_to_world*F_cmd_yaw) / K",
+      "isotropic_stiffness_n_per_m": 200.0,
+      "stiffness_shape": [
+        "N",
+        3
+      ],
+      "part_a_commanded_and_injected_forces": "全零；保留重力与真实接触物理",
+      "actual_contact_force_included_in_training_compensation": false,
+      "decoder_prediction_used_in_compensation": false,
+      "new_actor_or_critic_dimensions": false
+    },
+    "timing_confirmation_verification": {
+      "date": "2026-10-31",
+      "checked_markdown_files": 40,
+      "checked_file_links": 185,
+      "missing_file_links": [],
+      "confirmed_decisions": [
+        "Q1a",
+        "Q1b边界暂定用于验证",
+        "Q1c规则确认、时长候选待动态验证"
+      ],
+      "pending_question": "Q2",
+      "formula_source_and_paper_reaction_difference_recorded": true,
+      "business_code_changed": false,
+      "gym_or_training_executed": false,
+      "new_v3_directory_created": false,
+      "formal_tickets_created": false
+    },
+    "q2_user_reply": "同意",
+    "q2_confirmed_scope": "经补偿目标、主动施力／未知扰动和柔顺目的讲解后确认Q2：保留补偿公式、A固定各向同性K200N/m、命令／人工力全零、共享无状态计算接口及既定信息／时序边界；实际接触反力不偷加，B具体行为尚未确认。",
+    "q3a_proposal_approved": true,
+    "q3a_proposed_main_terms": [
+      "tracking_ee_force_world",
+      "tracking_lin_vel",
+      "tracking_ang_vel"
+    ],
+    "q3a_proposed_removed_or_not_directly_reused_terms": [
+      "feet_contact_number",
+      "stand_still",
+      "ref_dof_leg",
+      "feet_air_time",
+      "feet_height",
+      "hip_pos",
+      "feet_drag",
+      "feet_contact_forces",
+      "feet_pos_xy",
+      "feet_height_high"
+    ],
+    "q3b_and_q3c_approved": true,
+    "q4_weights_approved": true,
+    "compensation_confirmation_verification": {
+      "date": "2026-10-31",
+      "checked_markdown_files": 40,
+      "checked_file_links": 186,
+      "missing_file_links": [],
+      "confirmed_decisions": [
+        "Q1a",
+        "Q1b边界暂定",
+        "Q1c规则确认、时长待动态验证",
+        "Q2"
+      ],
+      "pending_question": "Q3a",
+      "business_code_changed": false,
+      "gym_or_training_executed": false,
+      "new_v3_directory_created": false,
+      "formal_tickets_created": false
+    },
+    "q3a_user_reply": "同意",
+    "q3a_confirmed_scope": "三个主跟踪奖励及公式各一次、发布命令对齐、十项四足非零项移除／不直接沿用，不新增姿态／直接力误差／轮式创新奖励；数值权重／sigma及Q3b／Q3c未随之批准。",
+    "q3b_proposal_approved": true,
+    "q3b_proposed_contract": {
+      "groups": {
+        "steering": [
+          0,
+          4
+        ],
+        "drive": [
+          4,
+          8
+        ],
+        "arm": [
+          8,
+          14
+        ]
+      },
+      "group_index_stop_is_exclusive": true,
+      "torque_and_action_rate_and_acceleration_groups": [
+        "steering",
+        "drive",
+        "arm"
+      ],
+      "absolute_joint_velocity_penalty_groups": [
+        "steering",
+        "arm"
+      ],
+      "position_soft_limit_joint_count": 10,
+      "torque_sampling": "最后5ms子步实际提交的裁剪后请求力矩",
+      "acceleration_interval_seconds": 0.02,
+      "base_stability_terms": [
+        "lin_vel_z",
+        "ang_vel_xy",
+        "base_height_relative_to_ground"
+      ],
+      "orientation_penalty_enabled": false,
+      "collision_non_wheel_body_count": 19,
+      "weights_and_soft_threshold_values_approved": false
+    },
+    "q3a_confirmation_verification": {
+      "date": "2026-10-31",
+      "checked_markdown_files": 40,
+      "checked_file_links": 187,
+      "missing_file_links": [],
+      "confirmed_decisions": [
+        "Q1a",
+        "Q1b仅三项边界暂定",
+        "Q1c规则确认、时长待动态验证",
+        "Q2",
+        "Q3a"
+      ],
+      "pending_question": "Q3b",
+      "json_parse_passed": true,
+      "official_commit": "68847a070f88d731058c3d8476929bc3b205f5bd",
+      "official_git_status": "干净",
+      "business_code_changed": false,
+      "gym_or_training_executed": false,
+      "new_v3_directory_created": false,
+      "formal_tickets_created": false
+    },
+    "q3b_user_reply": "同意",
+    "q3b_confirmed_scope": "转向4／驱动轮4／臂6分组正则，驱动轮不启用绝对速度罚；10维软角界、14维力矩约束、19个非轮body接触名单、相对高度与历史／采样语义；权重／软比例／接触阈值留Q4，物理候选未冻结。",
+    "q3c_proposal_approved": true,
+    "q3c_proposed_contract": {
+      "alive_enabled": true,
+      "unweighted_alive_value": 1.0,
+      "alive_on_physical_failure_transition": true,
+      "explicit_termination_penalty_enabled": false,
+      "timeout_bonus_or_penalty_enabled": false,
+      "failure_priority_over_timeout": "复用A04／A07已确认契约",
+      "pure_timeout_bootstrap": "复用A07，独立于原始环境reward",
+      "numerical_error": "停止运行，不继续普通reset训练",
+      "weights_and_time_scaling_approved": false
+    },
+    "q3b_confirmation_verification": {
+      "date": "2026-10-31",
+      "checked_markdown_files": 40,
+      "checked_file_links": 188,
+      "missing_file_links": [],
+      "json_parse_passed": true,
+      "confirmed_decisions": [
+        "Q1a",
+        "Q1b仅三项边界暂定",
+        "Q1c规则确认、时长待动态验证",
+        "Q2",
+        "Q3a",
+        "Q3b"
+      ],
+      "pending_question": "Q3c",
+      "official_commit": "68847a070f88d731058c3d8476929bc3b205f5bd",
+      "official_git_status": "干净",
+      "business_code_changed": false,
+      "gym_or_training_executed": false,
+      "new_v3_directory_created": false,
+      "formal_tickets_created": false
+    },
+    "q3c_user_reply": "同意",
+    "q3c_confirmed_scope": "保留每次真实转移的alive常数项（含物理失败最后一步），首版不启用独立失败终止罚或超时奖惩；失败优先和纯timeout价值处理沿A04／A07，权重与时间缩放留Q4。",
+    "q4_subquestions": [
+      "Q4a时间缩放",
+      "Q4b主跟踪／alive权重与sigma",
+      "Q4c执行器正则与软边界",
+      "Q4d稳定／接触数值及验证冻结"
+    ],
+    "q4a_proposal_approved": true,
+    "q4a_proposed_contract": {
+      "policy_dt_seconds": 0.02,
+      "scale_all_enabled_environment_terms_once": true,
+      "keep_original_config_weights": true,
+      "multiply_sigmas_or_physical_thresholds_by_dt": false,
+      "multiply_timeout_value_compensation_by_dt": false,
+      "reward_formula": "sum_i(configured_weight_i * policy_dt * raw_term_i)",
+      "example_weights_are_v3_approved": false
+    },
+    "q3c_confirmation_verification": {
+      "date": "2026-10-31",
+      "checked_markdown_files": 40,
+      "checked_file_links": 189,
+      "missing_file_links": [],
+      "json_parse_passed": true,
+      "confirmed_decisions": [
+        "Q1a",
+        "Q1b仅三项边界暂定",
+        "Q1c规则确认、时长待动态验证",
+        "Q2",
+        "Q3a",
+        "Q3b",
+        "Q3c"
+      ],
+      "pending_question": "Q4a",
+      "business_code_changed": false,
+      "gym_or_training_executed": false,
+      "new_v3_directory_created": false,
+      "formal_tickets_created": false
+    },
+    "q4a_user_reply": "同意",
+    "q4a_confirmed_scope": "全部启用环境奖励统一乘一次20ms策略周期；原始配置权重保留、派生有效权重；物理阈值／sigma不乘dt，PPO纯timeout价值补偿不重复乘dt；具体权重留Q4b—Q4d。",
+    "q4b_proposal_approved": true,
+    "q4b_proposed_contract": {
+      "candidate_weights": {
+        "tracking_ee_force_world": 2.0,
+        "tracking_lin_vel": 2.0,
+        "tracking_ang_vel": 1.0,
+        "alive": 1.5
+      },
+      "tracking_ee_sigma": 1.0,
+      "tracking_sigma": 0.25,
+      "speed_sigma_single_numeric_config_field": true,
+      "positive_terms_max_per_policy_step_before_regularizers": 0.13,
+      "weights_are_for_validation_candidates": true,
+      "long_training_configuration_frozen": false
+    },
+    "q4a_confirmation_verification": {
+      "date": "2026-10-31",
+      "checked_markdown_files": 40,
+      "checked_file_links": 190,
+      "missing_file_links": [],
+      "json_parse_passed": true,
+      "confirmed_decisions": [
+        "Q1a",
+        "Q1b仅三项边界暂定",
+        "Q1c规则确认、时长待动态验证",
+        "Q2",
+        "Q3a",
+        "Q3b",
+        "Q3c",
+        "Q4a"
+      ],
+      "pending_question": "Q4b",
+      "business_code_changed": false,
+      "gym_or_training_executed": false,
+      "new_v3_directory_created": false,
+      "formal_tickets_created": false
+    },
+    "q4b_user_reply": "同意",
+    "q4b_confirmed_scope": "TCP／平移／转向／alive权重2／2／1／1.5，TCP sigma1.0m与共用速度sigma数值0.25作为首版验证候选；不补回四足权重，不视为物理验证或长训冻结。",
+    "q4b_numeric_candidates_approved_for_validation": true,
+    "q4b_long_training_configuration_frozen": false,
+    "q4c_proposal_approved": true,
+    "q4c_proposed_contract": {
+      "torque_squared_weights": {
+        "steering": -5e-06,
+        "drive": -5e-06,
+        "arm": -5e-06
+      },
+      "action_rate_weights": {
+        "steering": -0.02,
+        "drive": -0.02,
+        "arm": -0.045
+      },
+      "joint_velocity_weights": {
+        "steering": -0.0008,
+        "arm": -0.0002
+      },
+      "joint_acceleration_weights": {
+        "steering": -2.5e-07,
+        "drive": -2.5e-07,
+        "arm": -4.5e-07
+      },
+      "torque_limit_weights": {
+        "steering": -0.005,
+        "drive": -0.005,
+        "arm": -0.005
+      },
+      "position_limit_weight": -10.0,
+      "soft_dof_pos_limit": 0.95,
+      "soft_torque_limit": 0.9,
+      "weights_before_policy_dt_scaling": true,
+      "position_ratio_official_value": 0.8,
+      "soft_limit_evidence": "a08_soft_limit_saved_solution_audit_20261031.json",
+      "physical_validation_completed": false
+    },
+    "q4b_confirmation_verification": {
+      "date": "2026-10-31",
+      "checked_markdown_files": 40,
+      "checked_file_links": 195,
+      "missing_file_links": [],
+      "json_parse_passed": true,
+      "confirmed_decisions": [
+        "Q1a",
+        "Q1b仅三项边界暂定",
+        "Q1c规则确认、时长待动态验证",
+        "Q2",
+        "Q3a",
+        "Q3b",
+        "Q3c",
+        "Q4a",
+        "Q4b数值验证候选"
+      ],
+      "pending_question": "Q4c",
+      "soft_limit_audit_input_sha256_verified": true,
+      "soft_limit_audit_saved_solution_count": 305,
+      "physical_validation_completed": false,
+      "business_code_changed": false,
+      "gym_or_training_executed": false,
+      "new_v3_directory_created": false,
+      "formal_tickets_created": false
+    },
+    "q4c_user_reply": "同意",
+    "q4c_confirmed_scope": "三组正则候选权重及配置／方法命名，位置单项−10和软比例0.95、力矩软比例0.90；候选待物理验证，03硬限位与Q1b几何余量不变，不凭静态结果冻结长训。",
+    "q4c_numeric_candidates_approved_for_validation": true,
+    "q4c_long_training_configuration_frozen": false,
+    "q4d_proposal_approved": true,
+    "q4d_proposed_contract": {
+      "candidate_weights": {
+        "lin_vel_z": -1.5,
+        "ang_vel_xy": -0.02,
+        "base_height": -2.0,
+        "collision": -5.0
+      },
+      "base_height_target_m": 0.32,
+      "base_height_is_shared_h_nominal": true,
+      "collision_force_threshold_n": 0.1,
+      "collision_threshold_is_strict_greater_than": true,
+      "collision_non_wheel_body_count": 19,
+      "contact_thresholds_are_separate": {
+        "collision_soft_n": 0.1,
+        "base_failure_n": 1.0,
+        "wheel_privileged_contact_world_fz_n": 5.0
+      },
+      "all_weights_before_policy_dt_scaling": true,
+      "physical_validation_completed": false,
+      "a10_and_a11_numeric_acceptance_thresholds_approved": false,
+      "long_training_configuration_frozen": false
+    },
+    "q4c_confirmation_verification": {
+      "date": "2026-10-31",
+      "checked_markdown_files": 40,
+      "checked_file_links": 196,
+      "missing_file_links": [],
+      "json_parse_passed": true,
+      "confirmed_decisions": [
+        "Q1a",
+        "Q1b仅三项边界暂定",
+        "Q1c规则确认、时长待动态验证",
+        "Q2",
+        "Q3a",
+        "Q3b",
+        "Q3c",
+        "Q4a",
+        "Q4b数值验证候选",
+        "Q4c数值验证候选"
+      ],
+      "pending_question": "Q4d",
+      "official_commit": "68847a070f88d731058c3d8476929bc3b205f5bd",
+      "official_git_status": "干净",
+      "physical_validation_completed": false,
+      "business_code_changed": false,
+      "gym_or_training_executed": false,
+      "new_v3_directory_created": false,
+      "formal_tickets_created": false
+    },
+    "q4d_numeric_candidates_approved_for_validation": true,
+    "q4d_long_training_configuration_frozen": false,
+    "q4d_user_reply": "同意",
+    "q4d_confirmed_scope": "稳定权重−1.5／−0.02／−2、共享名义高度0.32m、碰撞权重−5及严格>0.1N门限获准作为验证候选；确认短测、记录、冻结及有证据修订流程。0.1N软碰撞、1N base失败和5N轮接触观测职责独立；尚未物理验证或冻结长训。",
+    "q4d_confirmation_verification": {
+      "date": "2026-10-31",
+      "confirmed_decisions": [
+        "A08-Q1a",
+        "Q1b三项范围暂定用于验证",
+        "Q1c时序规则确认、时长候选待动态验证",
+        "Q2",
+        "Q3a—Q3c",
+        "Q4a",
+        "Q4b数值验证候选",
+        "Q4c数值验证候选",
+        "Q4d数值验证候选与冻结流程"
+      ],
+      "pending_question": "Q5a",
+      "official_commit": "68847a070f88d731058c3d8476929bc3b205f5bd",
+      "official_git_status": "干净",
+      "physical_validation_completed": false,
+      "long_training_configuration_frozen": false,
+      "business_code_changed": false,
+      "gym_or_training_executed": false,
+      "new_v3_directory_created": false,
+      "formal_tickets_created": false
+    },
+    "q5a_proposal_approved": true,
+    "q5a_proposed_contract": {
+      "enabled_terms_count": 23,
+      "preserve_negative_total_reward": true,
+      "only_positive_rewards": false,
+      "sum_each_enabled_term_once_in_fixed_order": true,
+      "policy_dt_seconds": 0.02,
+      "no_environment_reward_clipping_or_extra_normalization": true,
+      "timeout_value_compensation_remains_ppo_only": true,
+      "logging_and_episode_aggregation_pending_q5b": true
+    },
+    "q5a_user_reply": "同意",
+    "q5a_confirmed_scope": "23个启用项唯一注册并按固定顺序单次加权求和；有限负总reward原样保留，不裁零或额外归一化；timeout价值补偿仍由A07 PPO单独处理，原始环境reward不被修改；episode日志归约留Q5b。",
+    "q5a_confirmation_verification": {
+      "date": "2026-10-31",
+      "confirmed_decisions": [
+        "Q5a：23项奖励单次聚合，保留有限负值，不额外裁剪／归一化"
+      ],
+      "pending_question": "Q5b1：完成episode分项归约及真实时长分母",
+      "enabled_terms_count": 23,
+      "official_only_positive_rewards_default": false,
+      "environment_reward_clipping": false,
+      "timeout_value_compensation_remains_ppo_only": true,
+      "business_code_changed": false,
+      "gym_or_training_executed": false
+    },
+    "q5b1_proposal_approved": true,
+    "q5b1_proposed_contract": {
+      "episode_accumulators_per_environment": true,
+      "retain_each_completed_episode_record": true,
+      "reward_contribution_sum_over_episode": true,
+      "rate_denominator": "actual_episode_steps * 0.020 seconds",
+      "batch_mean_before_episode_aggregation": false,
+      "incomplete_episodes_in_completed_episode_curve": false,
+      "official_fixed_max_episode_duration_denominator": true,
+      "official_reset_batch_mean_before_runner_aggregation": true
+    },
+    "q5b1_user_reply": "同意",
+    "q5b1_confirmed_scope": "逐环境保存完整episode的23项加权奖励分项和总环境return；记录每个完成episode，不先压成reset批次均值；奖励速率按实际episode_steps*0.020s归一；未完成episode不计入完整episode曲线。",
+    "q5b1_confirmation_verification": {
+      "date": "2026-10-31",
+      "official_source_record": "research.md §47",
+      "confirmed_decisions": [
+        "逐episode保留奖励分项与总return",
+        "奖励速率用实际episode时长",
+        "不同reset批次不先求均值再等权汇总"
+      ],
+      "pending_question": "Q5b2：物理跟踪误差指标、单位及与reward的区分",
+      "business_code_changed": false,
+      "gym_or_training_executed": false
+    },
+    "q5b2_proposal_approved": true,
+    "q5b2_proposed_contract": {
+      "physical_metrics": [
+        "tcp_geometric_error_world_l1_and_l2_m",
+        "tcp_compensated_error_world_l1_and_l2_m",
+        "base_xy_velocity_error_body_l2_m_per_s",
+        "base_yaw_rate_error_body_abs_rad_per_s"
+      ],
+      "episode_statistics": [
+        "mean",
+        "p95"
+      ],
+      "sample_timing": "each_policy_boundary_before_reset_using_same_transition_target_and_measurement",
+      "include_final_failure_transition": true,
+      "derive_physical_error_from_reward": false,
+      "logging_field_names_and_frequency_pending_q5b3": true
+    },
+    "q5b2_user_reply": "同意",
+    "q5b2_confirmed_scope": "每个策略边界基于同刻目标与测量记录TCP几何／补偿误差世界坐标L1及欧氏范数(m)、底盘xy速度误差机身坐标范数(m/s)、z轴转向误差绝对值(rad/s)；episode内报告均值及P95，失败末转移计入，不从reward反推物理误差。",
+    "q5b2_confirmation_verification": {
+      "date": "2026-10-31",
+      "confirmed_decisions": [
+        "TCP几何与补偿物理误差分开表达",
+        "base平移与转向误差使用有单位物理值",
+        "完整episode均值与P95统计",
+        "失败末转移纳入统计"
+      ],
+      "pending_question": "Q5b3：日志字段、记录频率及训练曲线汇总",
+      "business_code_changed": false,
+      "gym_or_training_executed": false
+    },
+    "q5b3_proposal_approved": true,
+    "q5b3_proposed_contract": {
+      "record_granularity": "one structured record per completed episode",
+      "episode_fields": [
+        "iteration",
+        "completed_global_transition_count",
+        "environment_id",
+        "episode_steps",
+        "episode_duration_s",
+        "termination_type",
+        "environment_reward_return_and_rate",
+        "per_term_raw_mean",
+        "timeout_bootstrap_bonus",
+        "physical_error_mean_and_p95"
+      ],
+      "iteration_tensorboard": "mean_of_episodes_completed_in_iteration_plus_episode_count",
+      "no_completed_episode": "no_sample_no_carry_forward_no_zero_fill",
+      "update_frequency": "once_after_each_complete_training_iteration",
+      "per_physics_step_trace": false,
+      "configuration_identity": "run_metadata_includes_source_asset_config_raw_weights_effective_weights_and_policy_dt",
+      "storage_format": "pending_ticket_stage",
+      "per_term_weighted_contribution_storage": "derive_offline_from_raw_mean_and_run_metadata_weights_and_policy_dt",
+      "write_strategy": "bounded_batch_or_per_iteration_append; do_not_buffer_entire_run",
+      "p95_exact_buffer_estimate": {
+        "part_a_distinct_scalar_sequences": 4,
+        "part_a_upper_bound_bytes": 65536000,
+        "part_a_upper_bound_mib": 62.5,
+        "part_b_distinct_scalar_sequences": 6,
+        "part_b_upper_bound_mib": 93.75,
+        "assumptions": "4096 envs, 20s max episode, 20ms policy dt, float32 samples"
+      },
+      "episode_record_volume_estimate": {
+        "part_a_transitions": 786432000,
+        "episodes_if_all_1000_steps": 786432,
+        "approx_uncompressed_text": "hundreds of MB; may reach GB scale when episodes are shorter",
+        "measured": false
+      },
+      "training_time_overhead_measured": false,
+      "a11_profile_required": true
+    },
+    "q5b3_user_reply": "同意",
+    "q5b3_confirmed_scope": "每个完整episode一条记录：训练迭代／累计转移、环境ID、步数／时长／结束类型、总环境reward return与rate、23项raw均值、timeout bootstrap独立字段、Q5b2物理误差mean/P95；权重与dt在run metadata，贡献由raw值离线还原。每迭代TensorBoard汇总该迭代已完成episode的均值和数量，无样本留空；分批写盘、保留精确episode P95、不记录常规全物理步trace；文件格式留实施票据。",
+    "q5b3_confirmation_verification": {
+      "date": "2026-10-31",
+      "confirmed_decisions": [
+        "逐episode结构化记录",
+        "每训练迭代汇总完成episode并写样本数",
+        "精确episode P95",
+        "记录与训练分批flush且内存有界",
+        "timeout bootstrap独立于环境reward",
+        "权重和dt存run metadata并可还原分项贡献"
+      ],
+      "storage_format_selected": false,
+      "physical_step_trace_enabled": false,
+      "training_time_overhead_measured": false,
+      "a11_profile_required": true,
+      "business_code_changed": false,
+      "gym_or_training_executed": false
+    },
+    "q5c1_proposal_approved": true,
+    "q5c1_proposed_contract": {
+      "candidate_rejection": "resample_according_to_confirmed_sampler",
+      "initial_state_outside_initial_safe_set": "fatal_run_error",
+      "ten_candidate_screening_attempts_exhausted": "fatal_run_error",
+      "do_not_convert_screening_fault_to_episode_done": true,
+      "do_not_silently_shrink_or_clip_target_domain": true,
+      "diagnostic_context": [
+        "environment_id",
+        "episode_or_segment_index",
+        "candidate_attempt_count",
+        "rejection_categories",
+        "target_bounds",
+        "asset_identity",
+        "config_identity"
+      ],
+      "physical_failure_semantics": "remain_as_confirmed_training_episode_termination",
+      "numeric_failure_detail": "fatal_training_run_error_with_context; invalid_transition_not_committed"
+    },
+    "q5c_proposal_approved": true,
+    "q5c_proposed_contract": {
+      "failure_classes": {
+        "candidate_rejected": "resample_up_to_10",
+        "invalid_initial_state": "fatal_training_run_error",
+        "target_screening_exhausted": "fatal_training_run_error",
+        "physical_failure": "terminated_episode_failure_first",
+        "pure_timeout": "truncated_episode_timeout_bootstrap_in_ppo_only",
+        "shape_unit_nonfinite_simulation_failure": "fatal_training_run_error_no_sanitizing_or_normal_reset"
+      },
+      "transition_order": "lock_old_task_state; simulate; refresh_measurements; classify_end; compute_environment_reward_and_physical_errors_on_old_target_and_command; update_episode_metrics; advance_commands; snapshot_terminal_critic_before_reset; finalize_episode_records; reset_only_done_envs; publish_observations",
+      "timeout_compensation_mutates_environment_reward": false,
+      "complete_interface_shapes": "documented_in_A08_Q5c",
+      "combined_topic": [
+        "failure_semantics",
+        "cache_timing",
+        "call_order",
+        "interfaces",
+        "pseudocode",
+        "A11_test_seams"
+      ],
+      "business_code_changed": false,
+      "gym_or_training_executed": false,
+      "user_reply": "同意",
+      "confirmed_date": "2026-10-31",
+      "confirmation_scope": "整体确认失败分类、状态缓存与单步时序、接口shape/单位/坐标契约、reset前terminal Critic快照、训练级错误传播及A11测试seams；业务代码未修改，Gym或训练未执行。"
+    },
+    "q5c_user_reply": "同意",
+    "q5c_confirmation_date": "2026-10-31",
+    "q5c_confirmed_scope": "整体确认失败分类、状态缓存与单步时序、接口shape/单位/坐标契约、reset前terminal Critic快照、训练级错误传播及A11测试seams；业务代码未修改，Gym或训练未执行。"
+  },
+  "module_09_discussion": {
+    "current_question": "A09-Q1—Q5全部确认；A09设计已收束，下一步进入A10评估对照与数据保全。",
+    "confirmed_questions": 5,
+    "business_code_changed": false,
+    "gym_or_training_executed": false,
+    "q1_proposal_approved": true,
+    "q1_proposed_contract": {
+      "part_selector": "reproduction_part: A|B controls only explicitly confirmed phase behavior",
+      "run_purpose": "development|formal|evaluation is run identity and startup/evaluation context, not an implicit physics or curriculum switch",
+      "A_zero_force_invariant": "A remains zero commanded force and zero injected external force independent of run purpose",
+      "field_names_finalized": false
+    },
+    "q1_user_reply": "同意",
+    "q1_confirmation_date": "2026-10-31",
+    "q1_confirmed_scope": "显式reproduction_part选择A/B；run_purpose标记development/formal/evaluation且不隐式改变物理、课程或随机化；A零命令力／零人工外力对所有run_purpose不变；字段名留票据统一。",
+    "q2_proposal_approved": true,
+    "q2_proposed_contract": {
+      "A_commanded_ee_force": "zero",
+      "A_injected_ee_external_force": "zero",
+      "normal_task_base_velocity_commands": "enabled_as_confirmed_A08_task",
+      "official_base_velocity_push": "retain_mechanism_for_mobile_base_tracking_and_disturbance_recovery",
+      "push_is_ee_external_force_label": "false",
+      "push_numeric_range_and_lifecycle": "pending_Q3_and_physical_short_test; official_values_not_frozen",
+      "unrelated_disturbances": "not_implicitly_enabled",
+      "gravity_and_normal_wheel_ground_contact": "enabled",
+      "material_domain_randomization": "handled_separately_in_Q3"
+    },
+    "q2_revision_reason": "用户指出A应训练移动底盘下的追踪；零末端力不等于零底盘运动扰动。修订为保留官方底盘push机制，幅值／周期留Q3和短测。",
+    "q2_user_reply": "同意",
+    "q2_confirmation_date": "2026-10-31",
+    "q2_confirmed_scope": "A零力约束限于末端F_cmd=0及人为注入F_ext=0；保留官方底盘速度push机制，不记作末端力标签；V3 push幅值／周期留Q3与A11短测确认。",
+    "q3_proposal_approved": true,
+    "q3_proposed_candidates": {
+      "friction_coefficient": {
+        "range": [
+          0.3,
+          2.0
+        ],
+        "unit": "dimensionless",
+        "lifecycle": "sample_per_env_at_creation_hold_episode"
+      },
+      "base_mass_scale": {
+        "range": [
+          0.9,
+          1.1
+        ],
+        "unit": "dimensionless; report_delta_kg",
+        "lifecycle": "sample_per_env_at_creation_hold_episode"
+      },
+      "base_local_com_offset_xyz_m": {
+        "range_each_axis": [
+          -0.02,
+          0.02
+        ],
+        "unit": "m",
+        "lifecycle": "sample_per_env_at_creation_hold_episode"
+      },
+      "arm_seg6_mass_scale": {
+        "range": [
+          0.9,
+          1.1
+        ],
+        "unit": "dimensionless; report_delta_kg",
+        "lifecycle": "sample_per_env_at_creation_hold_episode"
+      },
+      "action_target_scale": {
+        "shape": "N x 14",
+        "range": [
+          0.85,
+          1.15
+        ],
+        "unit": "dimensionless",
+        "lifecycle": "resample_per_env_on_reset_hold_episode"
+      },
+      "base_push": {
+        "interval_s": 8,
+        "planar_velocity_component_range_m_per_s": [
+          -0.8,
+          0.8
+        ],
+        "lifecycle": "global_policy_clock_trigger; phase_and_per_env_semantics_pending_ticket"
+      },
+      "other_unlisted_randomizations": "do_not_enable_implicitly",
+      "candidate_status": "short_test_candidates_not_confirmed_or_frozen_for_long_training"
+    },
+    "q3_user_reply": "同意，但记录这些参数可能需要在真实训练中修改",
+    "q3_confirmation_date": "2026-10-31",
+    "q3_confirmed_scope": "确认摩擦、base质量、base COM、arm_seg6质量、14维动作目标执行系数与底盘push的随机化候选、单位和采样生命周期；数值为首版验证候选，可按真实训练证据修订。需记录触发证据及新旧值，在冻结运行配置前确认，冻结长训不热改。",
+    "q3_candidates_mutable_from_training_evidence": true,
+    "q3_long_training_values_frozen": false,
+    "q4_proposal_approved": true,
+    "q4_proposed_contract": {
+      "canonical_completed_counter": "completed_iterations",
+      "policy_steps_per_iteration": 24,
+      "training_policy_steps": "24 * completed_iterations",
+      "training_transitions": "N * training_policy_steps",
+      "commit_boundary": "after rollout, returns, main_and_aux_updates, and storage_clear all succeed",
+      "checkpoint_restore": "restore counters and RNG via A07; never reset course progress on resume",
+      "A8000_at_N4096": {
+        "policy_steps": 192000,
+        "transitions": 786432000
+      },
+      "do_not_use_for_training_progress": [
+        "episode_length",
+        "env_reset",
+        "initialization_noop_step",
+        "wall_clock"
+      ]
+    },
+    "q4_user_reply": "同意",
+    "q4_confirmation_date": "2026-10-31",
+    "q4_confirmed_scope": "以A07 completed_iterations为唯一课程进度，T=24，策略步及N倍累计转移为派生核对量；只在完整PPO更新提交后递增；初始化／reset／episode／墙钟不推进；checkpoint恢复计数和RNG。",
+    "q5_proposal_approved": true,
+    "q5_proposed_contract": {
+      "A_stop_after_completed_iterations": 8000,
+      "policy_steps_at_stop": 192000,
+      "transitions_at_N4096": 786432000,
+      "save_and_verify_terminal_checkpoint": "use_confirmed_A07_Q7_atomic_full_checkpoint",
+      "A_end_effector_command_and_injected_external_force": "remain_zero",
+      "do_not_auto_enable_B_or_force_at_8000": true,
+      "B_start_gate": [
+        "A10_A11_evaluation_passes",
+        "B_implementation_and_short_tests_ready",
+        "checkpoint_schema_asset_and_config_allowlist_compatible"
+      ],
+      "if_B_not_ready": "wait_at_A8000_checkpoint",
+      "official_strict_greater_extra_step": "not_used"
+    },
+    "q5_user_reply": "同意",
+    "q5_confirmation_date": "2026-10-31",
+    "q5_confirmed_scope": "恰好第8000次完整更新后停止采样，按A07保存并校验完整终点checkpoint；A末端命令／注入力全程为零；不自动启B或多运行一步；A评估、B实现／短测和checkpoint/schema/资产/配置兼容检查通过后显式启动B，未就绪则等待。",
+    "module_closed": true,
+    "proposal_is_approved": true,
+    "closure_verification": {
+      "q1_through_q5_present": true,
+      "confirmed_questions": 5,
+      "q3_candidate_revisability_recorded": true,
+      "A8000_boundary_matches_A07": true,
+      "comparison_record": "../comparison/A09-论文与官方源码差异.md",
+      "business_code_changed": false,
+      "gym_or_training_executed": false
+    }
+  },
+  "module_10_discussion": {
+    "current_question": "A10整体方案已确认并收束；A11测试与验收设计开始。",
+    "confirmed_questions": 6,
+    "business_code_changed": false,
+    "gym_or_training_executed": false,
+    "proposal_is_approved": true,
+    "proposal_scope": [
+      "A评估场景与门槛冻结",
+      "checkpoint与seed选择",
+      "指标与双横轴曲线",
+      "论文／官方对照边界",
+      "原始数据与只读归档",
+      "A通过的证据边界"
+    ],
+    "proposed_contract": {
+      "thresholds": "freeze_after_A11_short_test_before_long_A_training; no_posthoc_threshold_changes",
+      "endpoint_checkpoint": "exact_completed_iteration_8000_not_best_checkpoint",
+      "policy_action": "deterministic_actor_mean",
+      "evaluation_updates_training": "false",
+      "plots": [
+        "complete_iteration_axis",
+        "cumulative_transition_axis"
+      ],
+      "paper_figures": {
+        "fig3b": "per-axis position-estimation error distribution, not training curve",
+        "fig3c": "force-matched position tracking; B-stage comparison",
+        "fig3d": "real force-gauge evaluation; not established by A"
+      },
+      "archive": "raw_eval_trace_config_code_asset_schema_checkpoint_eval_script_hash_and_reproducible_plots",
+      "A_acceptance_scope": "zero_end_effector_force mobile-base tracking/state-estimation/checkpoint only; no full force/contact reproduction claim"
+    },
+    "user_reply": "同意",
+    "confirmation_date": "2026-10-31",
+    "module_closed": true,
+    "confirmation_scope": "整体确认A阶段场景与指标、精确A8000终点、独立评估seed与动作均值推理、双横轴曲线、论文／官方／历史对照边界、原始trace及指纹归档和A阶段验收范围；数值门槛在A11短测后且A长训前确认。",
+    "closure_verification": {
+      "merged_scope_confirmed": true,
+      "thresholds_before_long_training": true,
+      "business_code_changed": false,
+      "gym_or_training_executed": false
+    }
+  },
+  "module_11_discussion": {
+    "current_question": "A04—A11设计全部确认并收束；A阶段实施tickets已起草，等待用户确认计划。",
+    "confirmed_questions": 5,
+    "proposal_is_approved": true,
+    "user_reply": "同意",
+    "confirmation_date": "2026-10-31",
+    "confirmation_scope": "合并确认最小充分测试和A阶段启动／验收；不穷举边界、不用非关键检查阻断正常训练。",
+    "module_closed": true,
+    "business_code_changed": false,
+    "gym_or_training_executed": false,
+    "closure_verification": {
+      "q1_through_q5_present": true,
+      "simplification_constraint_recorded": true,
+      "unit_and_integration_tests_separated": true,
+      "business_code_changed": false,
+      "gym_or_training_executed": false
+    }
+  }
+}

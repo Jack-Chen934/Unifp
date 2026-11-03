@@ -1,0 +1,136 @@
+{
+  "date": "2026-10-30",
+  "scope": "只读源码与厂家固定提交文件核对，未运行仿真或修改资产。",
+  "manufacturer_repository": "https://github.com/agilexrobotics/ugv_gazebo_sim",
+  "manufacturer_commit": "27633a956c845903ee630538afeb17fe70afdd84",
+  "upstream_file_comparisons": [
+    {
+      "upstream_path": "ranger_mini/ranger_mini_v3/meshes/ranger_base.dae",
+      "local_path": "/home/sorry/python_ws/interactive/unifp_reproduction/legacy/v3_reference_20261030/robot_description/a1arm_description/vendor/agilex_ranger_mini_v3/ranger_base.dae",
+      "local_sha256": "cf8d73c2d048b781f7dcd6d63122a79114836961ee347a9c5be716f5eef5501e",
+      "error": "URLError: <urlopen error _ssl.c:1015: The handshake operation timed out>"
+    },
+    {
+      "upstream_path": "ranger_mini/ranger_mini_v3/meshes/steering_wheel.dae",
+      "local_path": "/home/sorry/python_ws/interactive/unifp_reproduction/legacy/v3_reference_20261030/robot_description/a1arm_description/vendor/agilex_ranger_mini_v3/steering_wheel.dae",
+      "local_sha256": "d8448b8856920bbdc74b21c36114cab3782a840e276511969f1ee91f8d443028",
+      "error": "URLError: <urlopen error _ssl.c:1015: The handshake operation timed out>"
+    },
+    {
+      "upstream_path": "ranger_mini/ranger_mini_v3/meshes/wheel_v3.dae",
+      "local_path": "/home/sorry/python_ws/interactive/unifp_reproduction/legacy/v3_reference_20261030/robot_description/a1arm_description/vendor/agilex_ranger_mini_v3/wheel_v3.dae",
+      "local_sha256": "d45ddac792ac54ba44cf516cf575a3b768cf7e95fd65c2c14af8b1061878253f",
+      "error": "TimeoutError: The read operation timed out"
+    },
+    {
+      "upstream_path": "ranger_mini/ranger_mini_v3/package.xml",
+      "local_path": "/home/sorry/python_ws/interactive/unifp_reproduction/legacy/v3_reference_20261030/robot_description/a1arm_description/vendor/agilex_ranger_mini_v3/package.xml",
+      "local_sha256": "0c4b1cca134c534baed836130bd21e090ee039e97cbc8230ff3a9991f5442db4",
+      "error": "TimeoutError: The read operation timed out"
+    },
+    {
+      "upstream_path": "ranger_mini/ranger_mini_v3/urdf/ranger_mini.xacro",
+      "local_path": "/home/sorry/python_ws/interactive/unifp_reproduction/legacy/v3_reference_20261030/robot_description/a1arm_description/vendor/agilex_ranger_mini_v3/ranger_mini.xacro",
+      "local_sha256": "925fa108e23a931d5c98b27a3eda0d0056a50e0889a8fcbdaea97d5090f7675e",
+      "error": "URLError: <urlopen error _ssl.c:1015: The handshake operation timed out>"
+    }
+  ],
+  "archived_urdf_inventory": [
+    {
+      "path": "/home/sorry/python_ws/interactive/unifp_reproduction/legacy/v3_reference_20261030/robot_description/a1arm_description/urdf/a1arm_rgm3.urdf",
+      "sha256": "a3eacf4b991ba7bfa4be5e57e229adeb918c71a741f17be53d4f4ba799471f2c",
+      "links": 27,
+      "mass_sum_kg": 17.595035372850802,
+      "joint_types": {
+        "fixed": 15,
+        "prismatic": 4,
+        "revolute": 7
+      }
+    },
+    {
+      "path": "/home/sorry/python_ws/interactive/unifp_reproduction/legacy/v3_reference_20261030/robot_description/a1arm_description/urdf/a1arm_rgm3_original_movable.urdf",
+      "sha256": "49b2e1b1acf728bdf1ec403126a219f7f62d7e5bbd0912c6b81af745fda498df",
+      "links": 28,
+      "mass_sum_kg": 83.3179153728508,
+      "joint_types": {
+        "continuous": 4,
+        "fixed": 11,
+        "prismatic": 2,
+        "revolute": 10
+      }
+    },
+    {
+      "path": "/home/sorry/python_ws/interactive/unifp_reproduction/legacy/v3_reference_20261030/robot_description/a1arm_description/urdf/a1arm_rgm3_approx_sim_v3.urdf",
+      "sha256": "a5b019bdd78caa2bcb77fb3a41a1a303ddd8fdd944ce4a1ae34510392eb75a28",
+      "links": 28,
+      "mass_sum_kg": 83.3179153728508,
+      "joint_types": {
+        "continuous": 4,
+        "fixed": 11,
+        "prismatic": 2,
+        "revolute": 10
+      }
+    }
+  ],
+  "limits": [
+    "厂家文件字节一致不代表物理参数经实测标定。",
+    "URDF质量求和为文件标称值，不是整机称重。",
+    "本轮未建立A1机械臂独立厂家来源链，不将其标为已验证。",
+    "旧组合URDF和生成脚本仅用于参考，没有选为新资产基线。"
+  ],
+  "upstream_git_tree_comparisons": [
+    {
+      "upstream_path": "ranger_mini/ranger_mini_v3/meshes/ranger_base.dae",
+      "local_git_blob_sha1": "5e8913271be7460971c71e051896e5fda592bf64",
+      "upstream_git_blob_sha1": "68f6f05adaf269671596b6c66ebc91ae409fffaf",
+      "matches": false
+    },
+    {
+      "upstream_path": "ranger_mini/ranger_mini_v3/meshes/steering_wheel.dae",
+      "local_git_blob_sha1": "01d64a89c847322a4e4f203444e73c789a449cb8",
+      "upstream_git_blob_sha1": "01d64a89c847322a4e4f203444e73c789a449cb8",
+      "matches": true
+    },
+    {
+      "upstream_path": "ranger_mini/ranger_mini_v3/meshes/wheel_v3.dae",
+      "local_git_blob_sha1": "f398fe371bb69be8fdb1faa40c1a73cff2237c2a",
+      "upstream_git_blob_sha1": "f398fe371bb69be8fdb1faa40c1a73cff2237c2a",
+      "matches": true
+    },
+    {
+      "upstream_path": "ranger_mini/ranger_mini_v3/package.xml",
+      "local_git_blob_sha1": "69815020207bbbe78d0ca3cfbc617572a4d0ac2f",
+      "upstream_git_blob_sha1": "69815020207bbbe78d0ca3cfbc617572a4d0ac2f",
+      "matches": true
+    },
+    {
+      "upstream_path": "ranger_mini/ranger_mini_v3/urdf/ranger_mini.xacro",
+      "local_git_blob_sha1": "fb594df737aff78c514a322690bd2f02d04bbb3c",
+      "upstream_git_blob_sha1": "fb594df737aff78c514a322690bd2f02d04bbb3c",
+      "matches": true
+    }
+  ],
+  "upstream_git_tree_truncated": false,
+  "chassis_mesh_source_detail": {
+    "upstream_tree_entry": {
+      "path": "ranger_mini/ranger_mini_v3/meshes/ranger_base.dae",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "68f6f05adaf269671596b6c66ebc91ae409fffaf",
+      "size": 133,
+      "url": "https://api.github.com/repos/agilexrobotics/ugv_gazebo_sim/git/blobs/68f6f05adaf269671596b6c66ebc91ae409fffaf"
+    },
+    "local_size": 38454037,
+    "upstream_small_blob_text": "version https://git-lfs.github.com/spec/v1\noid sha256:cf8d73c2d048b781f7dcd6d63122a79114836961ee347a9c5be716f5eef5501e\nsize 38454037\n",
+    "lfs_sha256_matches_local": true
+  },
+  "source_verification_summary": {
+    "status": "5份底盘原始材料均与厂家固定提交对应",
+    "git_blob_matches": 4,
+    "git_lfs_sha256_and_size_matches": 1,
+    "note": "底盘网格的Git对象是LFS指针，不能将其blob与实体网格直接比较。原始URL读取超时记录保留；通过Git tree和LFS对象标识完成来源核验。",
+    "geometry_assembly_verified": false,
+    "dynamics_calibrated": false,
+    "a1_source_verified": false
+  }
+}

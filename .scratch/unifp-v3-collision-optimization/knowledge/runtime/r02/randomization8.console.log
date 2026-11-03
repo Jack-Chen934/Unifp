@@ -1,0 +1,19 @@
+Importing module 'gym_38' (/mnt/data_8THDD/myl_unifp/isaacgym/python/isaacgym/_bindings/linux-x86_64/gym_38.so)
+Setting GYM_USD_PLUG_INFO_PATH to /mnt/data_8THDD/myl_unifp/isaacgym/python/isaacgym/_bindings/linux-x86_64/usd/plugInfo.json
+PyTorch version 2.3.1+cu121
+Device count 1
+/mnt/data_8THDD/myl_unifp/isaacgym/python/isaacgym/_bindings/src/gymtorch
+Using /mnt/data_8THDD/myl_unifp_v3_stage1/cache/torch_extensions as PyTorch extensions root...
+Emitting ninja build file /mnt/data_8THDD/myl_unifp_v3_stage1/cache/torch_extensions/gymtorch/build.ninja...
+Building extension module gymtorch...
+Using envvar MAX_JOBS (2) as the number of workers...
+ninja: no work to do.
+Not connected to PVD
++++ Using GPU PhysX
+Physics Engine: PhysX
+Physics Device: cuda:0
+GPU Pipeline: disabled
+Loading extension module gymtorch...
+/mnt/data_8THDD/conda_envs/unifp_v3_stage1/lib/python3.8/site-packages/torch/functional.py:512: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3587.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+{"环境数": 8, "策略步": 27, "奖励项数": 23, "奖励范围": [0.06279189884662628, 0.12237636744976044], "创建物性与Critic回读一致": true, "质量变化时惯量按同比例缩放": true, "reset执行系数局部采样": true, "训练时钟setter不推进物理": true, "push单次触发且末端力标签为零": true, "创建物性只读核验与可变状态恢复": true, "完成episode记录": {"completed_iterations": 16, "training_policy_steps": 400, "training_transitions": 3200, "env_id": 0, "steps": 27, "duration_s": 0.5399999879300594, "end_type": "timeout", "reward_return": 2.7518486976623535, "reward_rate": 5.096016220686975, "raw_reward_means": {"tracking_ee_force_world": 0.6807247400283813, "tracking_lin_vel": 0.691551685333252, "tracking_ang_vel": 0.8661503195762634, "alive": 1.0, "torques_steering": 0.2651592195034027, "torques_drive": 0.24791644513607025, "torques_arm": 15.118241310119629, "action_rate_steering": 0.0, "action_rate_drive": 0.0, "action_rate_arm": 0.0, "dof_vel_steering": 0.10549873858690262, "dof_vel_arm": 2.427022695541382, "dof_acc_steering": 436.76165771484375, "dof_acc_drive": 6417.03955078125, "dof_acc_arm": 9496.56640625, "torque_limits_steering": 0.0, "torque_limits_drive": 0.0, "torque_limits_arm": 0.0, "dof_pos_limits": 0.0, "lin_vel_z": 0.004036189988255501, "ang_vel_xy": 0.08738153427839279, "base_height": 0.0001246700412593782, "collision": 0.0}, "errors": {"tcp_geometric_l1_m": {"mean": 0.2095640003681183, "p95": 0.4068451225757599}, "tcp_geometric_l2_m": {"mean": 0.1311860829591751, "p95": 0.2518552243709564}, "base_planar_speed_m_s": {"mean": 0.30328020453453064, "p95": 0.35197776556015015}, "base_yaw_rate_rad_s": {"mean": 0.18600139021873474, "p95": 0.19381950795650482}, "tcp_compensated_l1_m": {"mean": 0.2095640003681183, "p95": 0.4068451225757599}, "tcp_compensated_l2_m": {"mean": 0.1311860829591751, "p95": 0.2518552243709564}}, "timeout_bootstrap_bonus": null}, "未训练零动作物理失败记录": []}

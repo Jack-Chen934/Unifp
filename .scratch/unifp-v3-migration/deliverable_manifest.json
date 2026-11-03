@@ -1,0 +1,147 @@
+{
+  "date": "2026-10-30",
+  "status": "评估与规划完成，未开始业务代码实施",
+  "markdown_files": 33,
+  "design_module_count": 11,
+  "implementation_ticket_count": 11,
+  "missing_file_link_targets": [],
+  "agents_copy_identical": true,
+  "files": [
+    {
+      "path": "AGENTS.md",
+      "sha256": "025a1f3286bc797166960dc324379eabde79c70ca2a84c6a151cec180aa6f80c"
+    },
+    {
+      "path": ".scratch/unifp-v3-migration/design/00-运行架构与决策.md",
+      "sha256": "21c09cd7864f9339b3acdd90dfaea5765df597a93cc051168ef4b806664319f7"
+    },
+    {
+      "path": ".scratch/unifp-v3-migration/design/01-总体参数资产与执行器.md",
+      "sha256": "1c5e943b02b88b4c50df69f26f427a2a08290337bb0bb1bfe8342a12b97d1a09"
+    },
+    {
+      "path": ".scratch/unifp-v3-migration/design/02-环境观测命令与动作.md",
+      "sha256": "e8bf276c3636d020192cabd909dce907cbd06024ce79c5ef70d9cf3f0dfad04b"
+    },
+    {
+      "path": ".scratch/unifp-v3-migration/design/03-Actor与辅助估计.md",
+      "sha256": "fae0d1a72c54f90034a285f72fea98855028197bd55a46c5501cda0b0bdb96c8"
+    },
+    {
+      "path": ".scratch/unifp-v3-migration/design/04-Critic与价值估计.md",
+      "sha256": "94d7bb868113f62c64640c861992e2dd3d7cf2ad5eb5b604d646fe7bd88f25a8"
+    },
+    {
+      "path": ".scratch/unifp-v3-migration/design/05-PPO缓冲区与Runner.md",
+      "sha256": "31117340c69645b0e6e31839a28bde6d54f1ecea1ac46bdfec04d368ae467643"
+    },
+    {
+      "path": ".scratch/unifp-v3-migration/design/06-力模型任务与奖励.md",
+      "sha256": "5f7b10d5754819ea41c8930720877b3ed3332a6926d5d83d178ece8169345451"
+    },
+    {
+      "path": ".scratch/unifp-v3-migration/design/07-课程随机化与训练顺序.md",
+      "sha256": "3855c9580ce694b6d049f50a660d3771fc36211489df2e264106f266d216ef2c"
+    },
+    {
+      "path": ".scratch/unifp-v3-migration/design/08-轮式创新与消融.md",
+      "sha256": "feb0a0fbdf6d98231998ba7481e5034964230bce095d4af37c77bd0413dff1aa"
+    },
+    {
+      "path": ".scratch/unifp-v3-migration/design/09-评估部署与数据保全.md",
+      "sha256": "b67dfac89d6b4719545e95681251d5e110ee6503df49025b9959b3186b24b455"
+    },
+    {
+      "path": ".scratch/unifp-v3-migration/design/10-测试与准入.md",
+      "sha256": "2291bad0d07336ebd6c23a2c37664bc2f993edde7c63fe916115c018ca73102a"
+    },
+    {
+      "path": ".scratch/unifp-v3-migration/knowledge/PRD.md",
+      "sha256": "83d35041d941926c4ef207f0052604840fe677e5c0d0e5fa7b0dee519e68a615"
+    },
+    {
+      "path": ".scratch/unifp-v3-migration/knowledge/official_source_audit.md",
+      "sha256": "8fb638eaa3c7b20a0d1ef8eec65837ebae2ec2355ad51f3c77319772c4bcb5b2"
+    },
+    {
+      "path": ".scratch/unifp-v3-migration/knowledge/reproduction_source_audit.md",
+      "sha256": "4c7a9833015b10730921ed37412227ad6c4e22d43a39a000fb377023228aca6c"
+    },
+    {
+      "path": ".scratch/unifp-v3-migration/knowledge/research.md",
+      "sha256": "5e42a4a0ade8363f05257d540c52fa27d7049054bc3f06acb5014200526d0aa4"
+    },
+    {
+      "path": ".scratch/unifp-v3-migration/knowledge/v3_source_audit.md",
+      "sha256": "a96ef000d349b014188f302fa20295765c1ba6485f517a9885bf58dfeef68665"
+    },
+    {
+      "path": ".scratch/unifp-v3-migration/official_recommendations.md",
+      "sha256": "5bcd31567c058c74a4181a7fb8400cb55719132dda55082fe2dea7928a6efbb1"
+    },
+    {
+      "path": ".scratch/unifp-v3-migration/tickets/00-证据冻结与可重建基线.md",
+      "sha256": "7d7d5ca212c21d61e34c86712888062abae6d998e12d5e96cd45eba600ea5834"
+    },
+    {
+      "path": ".scratch/unifp-v3-migration/tickets/01-硬件接口与机器人契约.md",
+      "sha256": "38736f9c9c29183e6dab9cc69e9fe324435679873ac3d2a055575ffe4c719abc"
+    },
+    {
+      "path": ".scratch/unifp-v3-migration/tickets/02-资产执行器与TCP物理验证.md",
+      "sha256": "89dd5fe4f66d2d894a81dc3b7fb92a7f41df7fd498e074d27682b6cab2e06cda"
+    },
+    {
+      "path": ".scratch/unifp-v3-migration/tickets/03-无学习环境与schema闭环.md",
+      "sha256": "e845d5c2daedf4413b6dac28e8664623d02209364a3fdbb6cf1db2bb6b759615"
+    },
+    {
+      "path": ".scratch/unifp-v3-migration/tickets/04-官方风格学习器最小集成.md",
+      "sha256": "be577b58faaed4bb3baaab190ec9a5f778ae7e2528a0bf6e8e97f61c702fe939"
+    },
+    {
+      "path": ".scratch/unifp-v3-migration/tickets/05-无力技能与冻结基线.md",
+      "sha256": "084793b23be739aff10a5df46aae5cc0a8994109d46a29dd7bffc6ca168d81b6"
+    },
+    {
+      "path": ".scratch/unifp-v3-migration/tickets/06-小力课程与估计控制闭环.md",
+      "sha256": "8a85fb57cf470afc79b843730519cf12b3980f339de77bd1c5c293c90461a1ef"
+    },
+    {
+      "path": ".scratch/unifp-v3-migration/tickets/07-真实接触与移动任务.md",
+      "sha256": "b248cff1660e120bdb95fce79a33047f3ff7e6092e519fe3d3db9f26d53f1276"
+    },
+    {
+      "path": ".scratch/unifp-v3-migration/tickets/08-泛化统计与基础迁移验收.md",
+      "sha256": "90e71c973297f600734ff301070638e2c0d2c04c1f8c71ee3c4df23cd59f5030"
+    },
+    {
+      "path": ".scratch/unifp-v3-migration/tickets/09-轮式耦合顺应研究消融.md",
+      "sha256": "1084394243d6d281d6410521f32624eacf684bb4ff4d3b7b9e588d3024c77782"
+    },
+    {
+      "path": ".scratch/unifp-v3-migration/tickets/10-部署导出与渐进实机验证.md",
+      "sha256": "a5d1d244b37bb3d494a695b65635fb57f1acc909967ec2addb6fb13b1caa01f0"
+    },
+    {
+      "path": ".scratch/unifp-v3-migration/tickets/overview.md",
+      "sha256": "0ef6d5ef5f53c25485038e4db3e5919a238cd5717a89111eb626cbdbe5c71234"
+    },
+    {
+      "path": ".scratch/unifp-v3-migration/v3_recommendations.md",
+      "sha256": "0fcb488e5ae8789afac32b44d69f3d8ad8598cbfcde2123ed95dcc6cf40cf4b3"
+    },
+    {
+      "path": "literature/projects/unifiedforce/migration_v3_20261030/00-复现有效性评估.md",
+      "sha256": "50d467db83576291f219acc6a282c246e8683b7343eb68bc954e00ac4038ed5f"
+    },
+    {
+      "path": "literature/projects/unifiedforce/migration_v3_20261030/01-总体迁移计划.md",
+      "sha256": "291a05ebb63137cacb35dad6f9606eb8ac612440dfaf8e8ade44179a8bd2a791"
+    },
+    {
+      "path": "literature/projects/unifiedforce/migration_v3_20261030/README.md",
+      "sha256": "e9f7f4cacdde157fb8daae97e3bc4ec2928fb76a6ba84c47b0aa353330afc0f6"
+    }
+  ]
+}

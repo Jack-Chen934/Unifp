@@ -1,0 +1,71 @@
+{
+  "checks": {
+    "all_remote_identities_match_final_sources_and_runtime": true,
+    "local_source_matches_remote_manifest": true,
+    "local_assets_match_remote_manifest": true,
+    "unit_tests_report_hash": true,
+    "unit_tests_report_content": true,
+    "unit_tests_identity_matches_final_sources_and_runtime": true,
+    "unit_tests_raw_unit_cpu.console.log": true,
+    "unit_tests_raw_reward_unit.console.log": true,
+    "gym_smoke_report_hash": true,
+    "gym_smoke_report_content": true,
+    "gym_smoke_identity_matches_final_sources_and_runtime": true,
+    "gym_smoke_raw_nominal32.console.log": true,
+    "gym_smoke_raw_randomization8.console.log": true,
+    "gym_smoke_raw_smoke32.console.log": true,
+    "training_resume_report_hash": true,
+    "training_resume_report_content": true,
+    "training_resume_identity_matches_final_sources_and_runtime": true,
+    "training_resume_raw_train512.console.log": true,
+    "training_resume_raw_resume512.console.log": true,
+    "capacity_report_hash": true,
+    "capacity_report_content": true,
+    "capacity_identity_matches_final_sources_and_runtime": true,
+    "capacity_raw_capacity4096.console.log": true,
+    "all_stages_passed": true,
+    "remote_short_checks_passed": true,
+    "contact_capacity_applied": true,
+    "official_buffer_multiplier_retained": true,
+    "capacity_iteration_finished": true,
+    "no_missing_interaction_warning": true,
+    "gpu_after_training_idle": true
+  },
+  "passed": true,
+  "capacity4096": {
+    "completion": {
+      "completed_iterations": 1,
+      "training_policy_steps": 24,
+      "training_transitions": 98304,
+      "last_saved_iteration": 1,
+      "torch_peak_memory_bytes": 1920040960,
+      "new_episode_after_resume": false,
+      "lineage": {
+        "run_id": "capacity4096",
+        "reproduction_part": "A",
+        "parent_checkpoint_path": null,
+        "parent_checkpoint_sha256": null
+      }
+    },
+    "effective_physx_config": {
+      "bounce_threshold_velocity": 0.5,
+      "contact_collection": 2,
+      "contact_offset": 0.01,
+      "default_buffer_size_multiplier": 5,
+      "max_depenetration_velocity": 1.0,
+      "max_gpu_contact_pairs": 33554432,
+      "num_position_iterations": 4,
+      "num_threads": 10,
+      "num_velocity_iterations": 0,
+      "rest_offset": 0.0,
+      "solver_type": 1
+    },
+    "collection_s": 54.567791080102324,
+    "update_s": 0.7680731937289238,
+    "finished_episodes": 545,
+    "end_types": {
+      "physical_failure": 545
+    },
+    "distinct_failed_envs": 543
+  }
+}

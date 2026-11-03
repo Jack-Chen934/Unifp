@@ -1,0 +1,1 @@
+{"path": "/mnt/data_8THDD/myl_unifp_v3_stage1/validation/ticket07_20261102_r03/runs/capacity4096/checkpoints/model_000001.pt", "sha256": "d00949a6e15842487dee1dbf683f124830b06ad1931275f43f3bbd4ea5069622", "completed_iterations": 1, "training_policy_steps": 24, "training_transitions": 98304, "rollout_step": 0}

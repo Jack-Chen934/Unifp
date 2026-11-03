@@ -1,0 +1,75 @@
+{
+  "date": "2026-10-30",
+  "read_only_recomputation": true,
+  "no_new_training_or_inference": true,
+  "evaluations": [
+    {
+      "checkpoint": 8000,
+      "source": "literature/projects/unifiedforce/reproduction/outputs/stage1_20261029/data/eval_8000.npz",
+      "sha256": "5a483f6e7388fdd8017ca643fd88a4e8c1a42ebd742643696c415265bea27450",
+      "shape": [
+        6000,
+        8,
+        3
+      ],
+      "finite": true,
+      "mean_l2_cm": 5.04757978980082,
+      "axis_mae_cm": [
+        2.660276598980029,
+        2.6203741952272446,
+        2.3069062593393026
+      ],
+      "all_axes_lt10cm_percent": 95.16458333333333
+    },
+    {
+      "checkpoint": 12000,
+      "source": "literature/projects/unifiedforce/reproduction/outputs/stage2_20261029/official_comparison/data/no_force_model12000.npz",
+      "sha256": "acae5b7d9a2d0d45cfad1e808d23a0e24962a46a1c2813d97dc967db982edb99",
+      "shape": [
+        6000,
+        8,
+        3
+      ],
+      "finite": true,
+      "mean_l2_cm": 6.865727593742734,
+      "axis_mae_cm": [
+        3.461502636472384,
+        3.4475407727683587,
+        3.4134713881959518
+      ],
+      "all_axes_lt10cm_percent": 89.89791666666666,
+      "actual_force_max_abs_N": 0.0,
+      "command_force_max_abs_N": 0.0,
+      "force_estimator_axis_mae_N": [
+        3.607215987933179,
+        3.88751721011661,
+        3.49127458112066
+      ]
+    },
+    {
+      "checkpoint": 16000,
+      "source": "literature/projects/unifiedforce/reproduction/outputs/stage2_20261029/official_comparison/data/no_force_model16000.npz",
+      "sha256": "8565372161b6be957bd9542e5bbef856ebcd52129ba81cf620bc7f15b60806b4",
+      "shape": [
+        6000,
+        8,
+        3
+      ],
+      "finite": true,
+      "mean_l2_cm": 6.631692256679463,
+      "axis_mae_cm": [
+        3.353220211217801,
+        3.334380030694107,
+        3.261167180693398
+      ],
+      "all_axes_lt10cm_percent": 92.49166666666667,
+      "actual_force_max_abs_N": 0.0,
+      "command_force_max_abs_N": 0.0,
+      "force_estimator_axis_mae_N": [
+        2.1281092913656807,
+        1.8673728574130994,
+        1.6035840570426856
+      ]
+    }
+  ]
+}

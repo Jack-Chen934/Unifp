@@ -1,0 +1,37 @@
+{
+  "核查日期": "2026-10-31",
+  "核查范围": "现有V3的默认资产选择、XML基本连接引用、质量和惯性正定、网格文件可读性；未运行Gym、未修改资产、未验证动态稳定性和接触行为",
+  "当前默认资产证据": [
+    "legacy/v3_reference_20261030/ranger_unifp_vec_env.py:27-29",
+    "legacy/v3_reference_20261030/ranger_512_migration/logic/backend_envelope.py:80-81"
+  ],
+  "资产记录": [
+    {
+      "path": "legacy/v3_reference_20261030/robot_description/a1arm_description/urdf/a1arm_rgm3_original_movable.urdf",
+      "sha256": "49b2e1b1acf728bdf1ec403126a219f7f62d7e5bbd0912c6b81af745fda498df",
+      "link_count": 28,
+      "joint_count": 27,
+      "movable_joint_count": 16,
+      "root_links": [
+        "base_link"
+      ],
+      "inertial_link_count": 27,
+      "unique_mesh_count": 47,
+      "checked_issues": []
+    },
+    {
+      "path": "legacy/v3_reference_20261030/robot_description/a1arm_description/urdf/a1arm_rgm3_approx_sim_v3.urdf",
+      "sha256": "a5b019bdd78caa2bcb77fb3a41a1a303ddd8fdd944ce4a1ae34510392eb75a28",
+      "link_count": 28,
+      "joint_count": 27,
+      "movable_joint_count": 16,
+      "root_links": [
+        "base_link"
+      ],
+      "inertial_link_count": 27,
+      "unique_mesh_count": 37,
+      "checked_issues": []
+    }
+  ],
+  "结论边界": "通过上述静态检查不代表网格格式兼容、几何装配、全部惯量物理约束、TCP定义或运行稳定性均正确；未核实信息不等于已发现缺陷"
+}

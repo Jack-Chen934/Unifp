@@ -1,0 +1,350 @@
+{
+  "asset_status": "legacy_reference_with_known_issues; do_not_use_as_active_v3_asset",
+  "asset_status_zh": "历史参考资产，已确认存在视觉基准与碰撞响应问题；不得作为当前V3训练资产。保留用于差异追溯。",
+  "known_issues_zh": [
+    "该派生URDF仅固定旧组合模型的两个夹爪关节，保留旧模型视觉、碰撞几何和安装变换，不符合桌面模型为最终外观及零位装配基准的要求。",
+    "Isaac Gym Preview4在该旧资产自碰撞启用时曾观测到约10.59 kN base净接触力及多处部件重叠；actor级关闭全部自碰撞虽可消除该次异常，但违反保留非相邻自碰撞的设计要求。",
+    "旧URDF的轮碰撞圆柱宽度为0.08 m，桌面源轮胎视觉宽度约0.14 m；旧V3轮心和安装变换没有按桌面基准重建，不能直接作为新资产几何依据。"
+  ],
+  "source_asset": "legacy/v3_reference_20261030/robot_description/a1arm_description/urdf/a1arm_rgm3_original_movable.urdf",
+  "source_sha256": "49b2e1b1acf728bdf1ec403126a219f7f62d7e5bbd0912c6b81af745fda498df",
+  "derived_urdf": "resources/robots/v3_a1/urdf/a1arm_rgm3_v3_fixed_gripper.urdf",
+  "derived_sha256": "03db4e846dd77b51f1d7bb62a373a5fa4e3cd16535a21ae6a1068c7e24dd0239",
+  "derivation": {
+    "change": "only gripper1_axis and gripper2_axis blocks changed from prismatic to fixed; original origins and parent/child links are retained, and the now-inapplicable axis, limit, and mimic fields are removed",
+    "preserved": "link inertial, collision, visual, origin, and all other joint data",
+    "expected_dofs": 14,
+    "runtime_source_is_legacy": false
+  },
+  "mesh_files": [
+    {
+      "path": "meshes/approx_sim/aluminum_profiles_modified_collision.glb",
+      "sha256": "7d50f67efb9aad45bbea4bcd88bc020a8e816c209ddab4c602b1150f6905d172",
+      "source_reference": "legacy/v3_reference_20261030/robot_description/a1arm_description/urdf/../meshes/approx_sim/aluminum_profiles_modified_collision.glb",
+      "source_reference_was_symlink": true,
+      "source_symlink_target": "/home/sorry/python_ws/interactive/unifp_reproduction/legacy/v3_reference_20261030/robot_description/a1arm_description/meshes/aluminum_profiles_modified.collision.glb"
+    },
+    {
+      "path": "meshes/approx_sim/aluminum_profiles_modified_visual.glb",
+      "sha256": "267c49ae1f2a8490261574099779b667ffbf69a9056f97e45a745381061893ed",
+      "source_reference": "legacy/v3_reference_20261030/robot_description/a1arm_description/urdf/../meshes/approx_sim/aluminum_profiles_modified_visual.glb",
+      "source_reference_was_symlink": true,
+      "source_symlink_target": "/home/sorry/python_ws/interactive/unifp_reproduction/legacy/v3_reference_20261030/robot_description/a1arm_description/meshes/aluminum_profiles_modified.visual.glb"
+    },
+    {
+      "path": "meshes/approx_sim/arm_base_collision.glb",
+      "sha256": "c75126b1d276538b7740207775e3979b45ad158679d8875d3d84beb79768ca3c",
+      "source_reference": "legacy/v3_reference_20261030/robot_description/a1arm_description/urdf/../meshes/approx_sim/arm_base_collision.glb",
+      "source_reference_was_symlink": true,
+      "source_symlink_target": "/home/sorry/python_ws/interactive/unifp_reproduction/legacy/v3_reference_20261030/robot_description/a1arm_description/meshes/arm_base.collision.glb"
+    },
+    {
+      "path": "meshes/approx_sim/arm_base_visual.glb",
+      "sha256": "509c69ea79f79d721a72838a8546991f684eb121f93e0044725d901b8b919ea8",
+      "source_reference": "legacy/v3_reference_20261030/robot_description/a1arm_description/urdf/../meshes/approx_sim/arm_base_visual.glb",
+      "source_reference_was_symlink": true,
+      "source_symlink_target": "/home/sorry/python_ws/interactive/unifp_reproduction/legacy/v3_reference_20261030/robot_description/a1arm_description/meshes/arm_base.visual.glb"
+    },
+    {
+      "path": "meshes/approx_sim/arm_seg1_collision.glb",
+      "sha256": "ddc5f1e36dd98256eda8efa5d8721f71530d513f70e7828adb660d4c093a4445",
+      "source_reference": "legacy/v3_reference_20261030/robot_description/a1arm_description/urdf/../meshes/approx_sim/arm_seg1_collision.glb",
+      "source_reference_was_symlink": true,
+      "source_symlink_target": "/home/sorry/python_ws/interactive/unifp_reproduction/legacy/v3_reference_20261030/robot_description/a1arm_description/meshes/arm_seg1.collision.glb"
+    },
+    {
+      "path": "meshes/approx_sim/arm_seg1_visual.glb",
+      "sha256": "571e652b7cf82566ba4a50ebed9886a6a2ba5276e29dd97dacb4a4354168a213",
+      "source_reference": "legacy/v3_reference_20261030/robot_description/a1arm_description/urdf/../meshes/approx_sim/arm_seg1_visual.glb",
+      "source_reference_was_symlink": true,
+      "source_symlink_target": "/home/sorry/python_ws/interactive/unifp_reproduction/legacy/v3_reference_20261030/robot_description/a1arm_description/meshes/arm_seg1.visual.glb"
+    },
+    {
+      "path": "meshes/approx_sim/arm_seg2_collision.glb",
+      "sha256": "7f92b60829668f41f45e8d5722223ccc1d8068d840e2259dd4b3c53295d026fb",
+      "source_reference": "legacy/v3_reference_20261030/robot_description/a1arm_description/urdf/../meshes/approx_sim/arm_seg2_collision.glb",
+      "source_reference_was_symlink": true,
+      "source_symlink_target": "/home/sorry/python_ws/interactive/unifp_reproduction/legacy/v3_reference_20261030/robot_description/a1arm_description/meshes/arm_seg2.collision.glb"
+    },
+    {
+      "path": "meshes/approx_sim/arm_seg2_visual.glb",
+      "sha256": "f51e2fdcfe18ba497f57d6e46fd813d51040c88fc364faffa6f4a499205cbee7",
+      "source_reference": "legacy/v3_reference_20261030/robot_description/a1arm_description/urdf/../meshes/approx_sim/arm_seg2_visual.glb",
+      "source_reference_was_symlink": true,
+      "source_symlink_target": "/home/sorry/python_ws/interactive/unifp_reproduction/legacy/v3_reference_20261030/robot_description/a1arm_description/meshes/arm_seg2.visual.glb"
+    },
+    {
+      "path": "meshes/approx_sim/arm_seg3_collision.glb",
+      "sha256": "25bbdbf6e1dd5c5903fdb09878e536b84346a340410897d5448be449cd1a10d0",
+      "source_reference": "legacy/v3_reference_20261030/robot_description/a1arm_description/urdf/../meshes/approx_sim/arm_seg3_collision.glb",
+      "source_reference_was_symlink": true,
+      "source_symlink_target": "/home/sorry/python_ws/interactive/unifp_reproduction/legacy/v3_reference_20261030/robot_description/a1arm_description/meshes/arm_seg3.collision.glb"
+    },
+    {
+      "path": "meshes/approx_sim/arm_seg3_visual.glb",
+      "sha256": "299e7c8e661c1dc10ffea7dab339eb2dab2f64c20009a465ee4ffd742e927ce4",
+      "source_reference": "legacy/v3_reference_20261030/robot_description/a1arm_description/urdf/../meshes/approx_sim/arm_seg3_visual.glb",
+      "source_reference_was_symlink": true,
+      "source_symlink_target": "/home/sorry/python_ws/interactive/unifp_reproduction/legacy/v3_reference_20261030/robot_description/a1arm_description/meshes/arm_seg3.visual.glb"
+    },
+    {
+      "path": "meshes/approx_sim/arm_seg4_collision.glb",
+      "sha256": "0d27c250425921672b02738dda17a14980fe5e814a361ff56115a21beabbe71b",
+      "source_reference": "legacy/v3_reference_20261030/robot_description/a1arm_description/urdf/../meshes/approx_sim/arm_seg4_collision.glb",
+      "source_reference_was_symlink": true,
+      "source_symlink_target": "/home/sorry/python_ws/interactive/unifp_reproduction/legacy/v3_reference_20261030/robot_description/a1arm_description/meshes/arm_seg4.collision.glb"
+    },
+    {
+      "path": "meshes/approx_sim/arm_seg4_visual.glb",
+      "sha256": "22a0260025b073eb4a55ef77aa1e31eaf4313e041e356d55234259d57c115171",
+      "source_reference": "legacy/v3_reference_20261030/robot_description/a1arm_description/urdf/../meshes/approx_sim/arm_seg4_visual.glb",
+      "source_reference_was_symlink": true,
+      "source_symlink_target": "/home/sorry/python_ws/interactive/unifp_reproduction/legacy/v3_reference_20261030/robot_description/a1arm_description/meshes/arm_seg4.visual.glb"
+    },
+    {
+      "path": "meshes/approx_sim/arm_seg5_collision.glb",
+      "sha256": "62fc42ff6722b8b0295e026bddceb98cd727d6268af006d306d3cef1388ccc03",
+      "source_reference": "legacy/v3_reference_20261030/robot_description/a1arm_description/urdf/../meshes/approx_sim/arm_seg5_collision.glb",
+      "source_reference_was_symlink": true,
+      "source_symlink_target": "/home/sorry/python_ws/interactive/unifp_reproduction/legacy/v3_reference_20261030/robot_description/a1arm_description/meshes/arm_seg5.collision.glb"
+    },
+    {
+      "path": "meshes/approx_sim/arm_seg5_visual.glb",
+      "sha256": "1cdb25d8dc3789325bf1f7df53f6e85f3a83de14f5036b2c084656eb959729db",
+      "source_reference": "legacy/v3_reference_20261030/robot_description/a1arm_description/urdf/../meshes/approx_sim/arm_seg5_visual.glb",
+      "source_reference_was_symlink": true,
+      "source_symlink_target": "/home/sorry/python_ws/interactive/unifp_reproduction/legacy/v3_reference_20261030/robot_description/a1arm_description/meshes/arm_seg5.visual.glb"
+    },
+    {
+      "path": "meshes/approx_sim/arm_seg6_collision.glb",
+      "sha256": "603474eea23fa712246bf3fc446e767c77e62eaec41ef980a3b92b1540540c8e",
+      "source_reference": "legacy/v3_reference_20261030/robot_description/a1arm_description/urdf/../meshes/approx_sim/arm_seg6_collision.glb",
+      "source_reference_was_symlink": true,
+      "source_symlink_target": "/home/sorry/python_ws/interactive/unifp_reproduction/legacy/v3_reference_20261030/robot_description/a1arm_description/meshes/arm_seg6.collision.glb"
+    },
+    {
+      "path": "meshes/approx_sim/arm_seg6_visual.glb",
+      "sha256": "cfcc5f74a2e3740e8e1c1935f64e87326eb7c275ecd1495e5e2673e948ac8108",
+      "source_reference": "legacy/v3_reference_20261030/robot_description/a1arm_description/urdf/../meshes/approx_sim/arm_seg6_visual.glb",
+      "source_reference_was_symlink": true,
+      "source_symlink_target": "/home/sorry/python_ws/interactive/unifp_reproduction/legacy/v3_reference_20261030/robot_description/a1arm_description/meshes/arm_seg6.visual.glb"
+    },
+    {
+      "path": "meshes/approx_sim/camera_collision.glb",
+      "sha256": "8cf850130f193618addb097b186d53984910c8600d941605a4a409e28b3e8e96",
+      "source_reference": "legacy/v3_reference_20261030/robot_description/a1arm_description/urdf/../meshes/approx_sim/camera_collision.glb",
+      "source_reference_was_symlink": true,
+      "source_symlink_target": "/home/sorry/python_ws/interactive/unifp_reproduction/legacy/v3_reference_20261030/robot_description/a1arm_description/meshes/camera.collision.glb"
+    },
+    {
+      "path": "meshes/approx_sim/camera_visual.glb",
+      "sha256": "af85717a5169965ee71e76bf2b819e42b1a6e86d9d8cbc3d353c888547e2e63f",
+      "source_reference": "legacy/v3_reference_20261030/robot_description/a1arm_description/urdf/../meshes/approx_sim/camera_visual.glb",
+      "source_reference_was_symlink": true,
+      "source_symlink_target": "/home/sorry/python_ws/interactive/unifp_reproduction/legacy/v3_reference_20261030/robot_description/a1arm_description/meshes/camera.visual.glb"
+    },
+    {
+      "path": "meshes/approx_sim/gripper1_collision.glb",
+      "sha256": "5050a6f6a26e5a5ab60b4b7a52b6950279a4a1216b497ba10bbe9a916064e037",
+      "source_reference": "legacy/v3_reference_20261030/robot_description/a1arm_description/urdf/../meshes/approx_sim/gripper1_collision.glb",
+      "source_reference_was_symlink": true,
+      "source_symlink_target": "/home/sorry/python_ws/interactive/unifp_reproduction/legacy/v3_reference_20261030/robot_description/a1arm_description/meshes/gripper1.collision.glb"
+    },
+    {
+      "path": "meshes/approx_sim/gripper1_visual.glb",
+      "sha256": "25a95b17bea2dc07634ff0241e966448f275eb628fd43c04577195e537660b73",
+      "source_reference": "legacy/v3_reference_20261030/robot_description/a1arm_description/urdf/../meshes/approx_sim/gripper1_visual.glb",
+      "source_reference_was_symlink": true,
+      "source_symlink_target": "/home/sorry/python_ws/interactive/unifp_reproduction/legacy/v3_reference_20261030/robot_description/a1arm_description/meshes/gripper1.visual.glb"
+    },
+    {
+      "path": "meshes/approx_sim/gripper2_collision.glb",
+      "sha256": "7221ee10dc4537cad1e84a5296c055661b4193884afdbb0f74f9500fd992eff3",
+      "source_reference": "legacy/v3_reference_20261030/robot_description/a1arm_description/urdf/../meshes/approx_sim/gripper2_collision.glb",
+      "source_reference_was_symlink": true,
+      "source_symlink_target": "/home/sorry/python_ws/interactive/unifp_reproduction/legacy/v3_reference_20261030/robot_description/a1arm_description/meshes/gripper2.collision.glb"
+    },
+    {
+      "path": "meshes/approx_sim/gripper2_visual.glb",
+      "sha256": "7355c60f15ba6b038ebcb3d320e3a194120398706fc0028754a7fe0a38967f35",
+      "source_reference": "legacy/v3_reference_20261030/robot_description/a1arm_description/urdf/../meshes/approx_sim/gripper2_visual.glb",
+      "source_reference_was_symlink": true,
+      "source_symlink_target": "/home/sorry/python_ws/interactive/unifp_reproduction/legacy/v3_reference_20261030/robot_description/a1arm_description/meshes/gripper2.visual.glb"
+    },
+    {
+      "path": "meshes/approx_sim/left_camera_collision.glb",
+      "sha256": "abf9320832ee6fc657f2c62236ea5e30b9a2e1c8fef4952ec3fec47166c9ba13",
+      "source_reference": "legacy/v3_reference_20261030/robot_description/a1arm_description/urdf/../meshes/approx_sim/left_camera_collision.glb",
+      "source_reference_was_symlink": true,
+      "source_symlink_target": "/home/sorry/python_ws/interactive/unifp_reproduction/legacy/v3_reference_20261030/robot_description/a1arm_description/meshes/left_camera.collision.glb"
+    },
+    {
+      "path": "meshes/approx_sim/left_camera_connector_collision.glb",
+      "sha256": "d2dc8a6fac131900c7ff7c9087ce444a0e8ecd452951438582ea48087164c1af",
+      "source_reference": "legacy/v3_reference_20261030/robot_description/a1arm_description/urdf/../meshes/approx_sim/left_camera_connector_collision.glb",
+      "source_reference_was_symlink": true,
+      "source_symlink_target": "/home/sorry/python_ws/interactive/unifp_reproduction/legacy/v3_reference_20261030/robot_description/a1arm_description/meshes/left_camera_connector.collision.glb"
+    },
+    {
+      "path": "meshes/approx_sim/left_camera_connector_visual.glb",
+      "sha256": "76a781eb147379589318bb97131b14a5d064b484456031a63e4bb56496f1df08",
+      "source_reference": "legacy/v3_reference_20261030/robot_description/a1arm_description/urdf/../meshes/approx_sim/left_camera_connector_visual.glb",
+      "source_reference_was_symlink": true,
+      "source_symlink_target": "/home/sorry/python_ws/interactive/unifp_reproduction/legacy/v3_reference_20261030/robot_description/a1arm_description/meshes/left_camera_connector.visual.glb"
+    },
+    {
+      "path": "meshes/approx_sim/left_camera_visual.glb",
+      "sha256": "8d12fbda107daf3ebd6dfeffe03b6471c38454671eed13a74fe28c9d77da606f",
+      "source_reference": "legacy/v3_reference_20261030/robot_description/a1arm_description/urdf/../meshes/approx_sim/left_camera_visual.glb",
+      "source_reference_was_symlink": true,
+      "source_symlink_target": "/home/sorry/python_ws/interactive/unifp_reproduction/legacy/v3_reference_20261030/robot_description/a1arm_description/meshes/left_camera.visual.glb"
+    },
+    {
+      "path": "meshes/approx_sim/ranger_mini3_decimate_visual.glb",
+      "sha256": "f780fcbbbe1bb5938aa32af9355917e5f87adbacf97c9c7dbd7988d0b031f0a4",
+      "source_reference": "legacy/v3_reference_20261030/robot_description/a1arm_description/urdf/../meshes/approx_sim/ranger_mini3_decimate_visual.glb",
+      "source_reference_was_symlink": true,
+      "source_symlink_target": "/home/sorry/python_ws/interactive/unifp_reproduction/legacy/v3_reference_20261030/robot_description/a1arm_description/meshes/ranger_mini3_decimate.visual.glb"
+    },
+    {
+      "path": "meshes/approx_sim/rear_top_camera_connector_collision.glb",
+      "sha256": "790ca363554cc6ab11b8b1cfc4619db0d2111a0c6c1138a8cac4c26c31487fea",
+      "source_reference": "legacy/v3_reference_20261030/robot_description/a1arm_description/urdf/../meshes/approx_sim/rear_top_camera_connector_collision.glb",
+      "source_reference_was_symlink": true,
+      "source_symlink_target": "/home/sorry/python_ws/interactive/unifp_reproduction/legacy/v3_reference_20261030/robot_description/a1arm_description/meshes/rear_top_camera_connector.collision.glb"
+    },
+    {
+      "path": "meshes/approx_sim/rear_top_camera_connector_visual.glb",
+      "sha256": "c3af3b0e1ecc9be7c272526f830647e9d1e619165c762cbf02d57ee36ae0bb82",
+      "source_reference": "legacy/v3_reference_20261030/robot_description/a1arm_description/urdf/../meshes/approx_sim/rear_top_camera_connector_visual.glb",
+      "source_reference_was_symlink": true,
+      "source_symlink_target": "/home/sorry/python_ws/interactive/unifp_reproduction/legacy/v3_reference_20261030/robot_description/a1arm_description/meshes/rear_top_camera_connector.visual.glb"
+    },
+    {
+      "path": "meshes/approx_sim/right_camera_collision.glb",
+      "sha256": "5a368a96550eaeb6d10b1482e316c3908237fd97c82630efb96c16a1b988dd7f",
+      "source_reference": "legacy/v3_reference_20261030/robot_description/a1arm_description/urdf/../meshes/approx_sim/right_camera_collision.glb",
+      "source_reference_was_symlink": true,
+      "source_symlink_target": "/home/sorry/python_ws/interactive/unifp_reproduction/legacy/v3_reference_20261030/robot_description/a1arm_description/meshes/right_camera.collision.glb"
+    },
+    {
+      "path": "meshes/approx_sim/right_camera_connector_collision.glb",
+      "sha256": "7966552eeb56f479bf9aac2ea1f3e258e04d0354d8824ff393b6701e1bd18e88",
+      "source_reference": "legacy/v3_reference_20261030/robot_description/a1arm_description/urdf/../meshes/approx_sim/right_camera_connector_collision.glb",
+      "source_reference_was_symlink": true,
+      "source_symlink_target": "/home/sorry/python_ws/interactive/unifp_reproduction/legacy/v3_reference_20261030/robot_description/a1arm_description/meshes/right_camera_connector.collision.glb"
+    },
+    {
+      "path": "meshes/approx_sim/right_camera_connector_visual.glb",
+      "sha256": "50e782653778cf7d635862016abd12b15d575d386463a22d11d283078347da72",
+      "source_reference": "legacy/v3_reference_20261030/robot_description/a1arm_description/urdf/../meshes/approx_sim/right_camera_connector_visual.glb",
+      "source_reference_was_symlink": true,
+      "source_symlink_target": "/home/sorry/python_ws/interactive/unifp_reproduction/legacy/v3_reference_20261030/robot_description/a1arm_description/meshes/right_camera_connector.visual.glb"
+    },
+    {
+      "path": "meshes/approx_sim/right_camera_visual.glb",
+      "sha256": "9ed53bbf83fd0029e33f66626cb47d8656876852594c74ea00d4110c72940144",
+      "source_reference": "legacy/v3_reference_20261030/robot_description/a1arm_description/urdf/../meshes/approx_sim/right_camera_visual.glb",
+      "source_reference_was_symlink": true,
+      "source_symlink_target": "/home/sorry/python_ws/interactive/unifp_reproduction/legacy/v3_reference_20261030/robot_description/a1arm_description/meshes/right_camera.visual.glb"
+    },
+    {
+      "path": "meshes/approx_sim/wrist_camera_connector_collision.glb",
+      "sha256": "debed46d8f1380aa669a72e39ca259160a69898f67401fd4666cc69b7ea02313",
+      "source_reference": "legacy/v3_reference_20261030/robot_description/a1arm_description/urdf/../meshes/approx_sim/wrist_camera_connector_collision.glb",
+      "source_reference_was_symlink": true,
+      "source_symlink_target": "/home/sorry/python_ws/interactive/unifp_reproduction/legacy/v3_reference_20261030/robot_description/a1arm_description/meshes/wrist_camera_connector.collision.glb"
+    },
+    {
+      "path": "meshes/approx_sim/wrist_camera_connector_visual.glb",
+      "sha256": "f46705a6606bfa2e9c831e9d35fd2d289d8606ecc0425ac27550346fc2ff385d",
+      "source_reference": "legacy/v3_reference_20261030/robot_description/a1arm_description/urdf/../meshes/approx_sim/wrist_camera_connector_visual.glb",
+      "source_reference_was_symlink": true,
+      "source_symlink_target": "/home/sorry/python_ws/interactive/unifp_reproduction/legacy/v3_reference_20261030/robot_description/a1arm_description/meshes/wrist_camera_connector.visual.glb"
+    },
+    {
+      "path": "meshes/original_movable/bl_fixed.glb",
+      "sha256": "2dba162718f237cbeab8aee05aa54d652c823a61d8c685cdced0953da1994e9f",
+      "source_reference": "legacy/v3_reference_20261030/robot_description/a1arm_description/urdf/../meshes/original_movable/bl_fixed.glb",
+      "source_reference_was_symlink": false,
+      "source_symlink_target": null
+    },
+    {
+      "path": "meshes/original_movable/bl_rolling.glb",
+      "sha256": "c4984866a6610248a15af59fc6f35624db531cc1ea09665f50f5712745bb84b8",
+      "source_reference": "legacy/v3_reference_20261030/robot_description/a1arm_description/urdf/../meshes/original_movable/bl_rolling.glb",
+      "source_reference_was_symlink": false,
+      "source_symlink_target": null
+    },
+    {
+      "path": "meshes/original_movable/bl_steering.glb",
+      "sha256": "a38e541c747c9d8a7f6b82cdd665f377808857969f55c3899a01e040ef8fefa4",
+      "source_reference": "legacy/v3_reference_20261030/robot_description/a1arm_description/urdf/../meshes/original_movable/bl_steering.glb",
+      "source_reference_was_symlink": false,
+      "source_symlink_target": null
+    },
+    {
+      "path": "meshes/original_movable/br_fixed.glb",
+      "sha256": "c03d86427baa44c8de001f1a9519e2464c2ba2c9c3fa7c068e27a5ced39e423a",
+      "source_reference": "legacy/v3_reference_20261030/robot_description/a1arm_description/urdf/../meshes/original_movable/br_fixed.glb",
+      "source_reference_was_symlink": false,
+      "source_symlink_target": null
+    },
+    {
+      "path": "meshes/original_movable/br_rolling.glb",
+      "sha256": "482fcbfd6cecca1458882cf85e4ad9e6a654fbf7f58291af91ae9b2fb638f783",
+      "source_reference": "legacy/v3_reference_20261030/robot_description/a1arm_description/urdf/../meshes/original_movable/br_rolling.glb",
+      "source_reference_was_symlink": false,
+      "source_symlink_target": null
+    },
+    {
+      "path": "meshes/original_movable/br_steering.glb",
+      "sha256": "31c4dee422dcff0608bf409444c021abe6e231a1ae3ad04eaec4931ae5e089b8",
+      "source_reference": "legacy/v3_reference_20261030/robot_description/a1arm_description/urdf/../meshes/original_movable/br_steering.glb",
+      "source_reference_was_symlink": false,
+      "source_symlink_target": null
+    },
+    {
+      "path": "meshes/original_movable/fl_fixed.glb",
+      "sha256": "009593cb6aa00fdf7b3e9a532fe5c1329de5844d6adf6a5e5ceb67d026c2708e",
+      "source_reference": "legacy/v3_reference_20261030/robot_description/a1arm_description/urdf/../meshes/original_movable/fl_fixed.glb",
+      "source_reference_was_symlink": false,
+      "source_symlink_target": null
+    },
+    {
+      "path": "meshes/original_movable/fl_rolling.glb",
+      "sha256": "c4984866a6610248a15af59fc6f35624db531cc1ea09665f50f5712745bb84b8",
+      "source_reference": "legacy/v3_reference_20261030/robot_description/a1arm_description/urdf/../meshes/original_movable/fl_rolling.glb",
+      "source_reference_was_symlink": false,
+      "source_symlink_target": null
+    },
+    {
+      "path": "meshes/original_movable/fl_steering.glb",
+      "sha256": "a38e541c747c9d8a7f6b82cdd665f377808857969f55c3899a01e040ef8fefa4",
+      "source_reference": "legacy/v3_reference_20261030/robot_description/a1arm_description/urdf/../meshes/original_movable/fl_steering.glb",
+      "source_reference_was_symlink": false,
+      "source_symlink_target": null
+    },
+    {
+      "path": "meshes/original_movable/fr_fixed.glb",
+      "sha256": "0a603e9d75ff3ab9023e6fa2f29aa7860550b06752b5d5030eafb868d7056be3",
+      "source_reference": "legacy/v3_reference_20261030/robot_description/a1arm_description/urdf/../meshes/original_movable/fr_fixed.glb",
+      "source_reference_was_symlink": false,
+      "source_symlink_target": null
+    },
+    {
+      "path": "meshes/original_movable/fr_rolling.glb",
+      "sha256": "482fcbfd6cecca1458882cf85e4ad9e6a654fbf7f58291af91ae9b2fb638f783",
+      "source_reference": "legacy/v3_reference_20261030/robot_description/a1arm_description/urdf/../meshes/original_movable/fr_rolling.glb",
+      "source_reference_was_symlink": false,
+      "source_symlink_target": null
+    },
+    {
+      "path": "meshes/original_movable/fr_steering.glb",
+      "sha256": "31c4dee422dcff0608bf409444c021abe6e231a1ae3ad04eaec4931ae5e089b8",
+      "source_reference": "legacy/v3_reference_20261030/robot_description/a1arm_description/urdf/../meshes/original_movable/fr_steering.glb",
+      "source_reference_was_symlink": false,
+      "source_symlink_target": null
+    }
+  ]
+}

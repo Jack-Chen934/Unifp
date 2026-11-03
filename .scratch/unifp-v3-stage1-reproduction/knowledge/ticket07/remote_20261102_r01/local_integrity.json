@@ -1,0 +1,11 @@
+{
+  "source_manifest": true,
+  "asset_manifest": true,
+  "stage_report_hashes": true,
+  "raw_log_hashes": true,
+  "capacity4096_buffer32_source": true,
+  "capacity4096_buffer32_assets": true,
+  "capacity4096_pairs25_source": true,
+  "capacity4096_pairs25_assets": true,
+  "capacity_regression": true
+}

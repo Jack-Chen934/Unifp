@@ -1,0 +1,30 @@
+Importing module 'gym_38' (/mnt/data_8THDD/myl_unifp/isaacgym/python/isaacgym/_bindings/linux-x86_64/gym_38.so)
+Setting GYM_USD_PLUG_INFO_PATH to /mnt/data_8THDD/myl_unifp/isaacgym/python/isaacgym/_bindings/linux-x86_64/usd/plugInfo.json
+PyTorch version 2.3.1+cu121
+Device count 1
+/mnt/data_8THDD/myl_unifp/isaacgym/python/isaacgym/_bindings/src/gymtorch
+Using /mnt/data_8THDD/myl_unifp_v3_stage1/cache/torch_extensions as PyTorch extensions root...
+Emitting ninja build file /mnt/data_8THDD/myl_unifp_v3_stage1/cache/torch_extensions/gymtorch/build.ninja...
+Building extension module gymtorch...
+Using envvar MAX_JOBS (2) as the number of workers...
+ninja: no work to do.
+Not connected to PVD
++++ Using GPU PhysX
+Physics Engine: PhysX
+Physics Device: cuda:0
+GPU Pipeline: enabled
+Setting seed: 0
+V3 A: I=1, S=24, transitions=12288, value=0.063192, aux=0.037535
+V3 A: I=2, S=48, transitions=24576, value=0.091665, aux=0.035054
+V3 A: I=3, S=72, transitions=36864, value=0.12807, aux=0.032021
+V3 A: I=4, S=96, transitions=49152, value=0.094046, aux=0.029481
+V3 A: I=5, S=120, transitions=61440, value=0.079618, aux=0.028383
+V3 A: I=6, S=144, transitions=73728, value=0.083456, aux=0.025985
+V3 A: I=7, S=168, transitions=86016, value=0.064104, aux=0.024605
+V3 A: I=8, S=192, transitions=98304, value=0.062243, aux=0.022322
+V3 A: I=9, S=216, transitions=110592, value=0.054905, aux=0.020784
+V3 A: I=10, S=240, transitions=122880, value=0.043075, aux=0.019944
+{"completed_iterations": 10, "training_policy_steps": 240, "training_transitions": 122880, "last_saved_iteration": 10, "torch_peak_memory_bytes": 283805696, "new_episode_after_resume": false, "lineage": {"run_id": "train512", "reproduction_part": "A", "parent_checkpoint_path": null, "parent_checkpoint_sha256": null}}
+Loading extension module gymtorch...
+/mnt/data_8THDD/conda_envs/unifp_v3_stage1/lib/python3.8/site-packages/torch/functional.py:512: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3587.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]

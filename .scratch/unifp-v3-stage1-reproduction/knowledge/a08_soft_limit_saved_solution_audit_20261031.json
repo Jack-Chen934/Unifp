@@ -1,0 +1,149 @@
+{
+  "date": "2026-10-31",
+  "kind": "既有位置解的软角界静态对照，不是重新求解或物理测试",
+  "source_urdf": "legacy/v3_reference_20261030/robot_description/a1arm_description/urdf/a1arm_rgm3_original_movable.urdf",
+  "source_urdf_sha256": "49b2e1b1acf728bdf1ec403126a219f7f62d7e5bbd0912c6b81af745fda498df",
+  "source_position_audit": "a08_workspace_position_audit_20261031.json",
+  "source_position_audit_sha256": "aca4dc95c79e23b304544aac971952effbbbbf0dc64058679a74326ebb622cc6",
+  "saved_solution_count": 305,
+  "soft_bounds_formula": "midpoint +/- soft_position_ratio * (upper_hard - lower_hard) / 2",
+  "violation_formula": "sum_j(max(lower_soft_j-q_j,0)+max(q_j-upper_soft_j,0))",
+  "outside_count_epsilon_rad": 1e-12,
+  "position_penalty_weight_for_comparison": -10.0,
+  "policy_dt_seconds": 0.02,
+  "ratio_results": [
+    {
+      "soft_position_ratio": 0.8,
+      "arm_soft_bounds_rad": [
+        [
+          -2.30384,
+          2.30384
+        ],
+        [
+          0.31414999999999993,
+          2.82735
+        ],
+        [
+          -2.98449,
+          -0.33160999999999996
+        ],
+        [
+          -2.30384,
+          2.30384
+        ],
+        [
+          -1.32648,
+          1.32648
+        ],
+        [
+          -2.30384,
+          2.30384
+        ]
+      ],
+      "saved_solution_count_outside_soft_bounds": 84,
+      "max_sum_violation_rad": 0.9646072504885419,
+      "max_abs_position_penalty_per_policy_step": 0.1929214500977084
+    },
+    {
+      "soft_position_ratio": 0.9,
+      "arm_soft_bounds_rad": [
+        [
+          -2.59182,
+          2.59182
+        ],
+        [
+          0.15707500000000008,
+          2.984425
+        ],
+        [
+          -3.150295,
+          -0.16580499999999998
+        ],
+        [
+          -2.59182,
+          2.59182
+        ],
+        [
+          -1.49229,
+          1.49229
+        ],
+        [
+          -2.59182,
+          2.59182
+        ]
+      ],
+      "saved_solution_count_outside_soft_bounds": 46,
+      "max_sum_violation_rad": 0.38864725048854254,
+      "max_abs_position_penalty_per_policy_step": 0.07772945009770851
+    },
+    {
+      "soft_position_ratio": 0.95,
+      "arm_soft_bounds_rad": [
+        [
+          -2.73581,
+          2.73581
+        ],
+        [
+          0.07853750000000015,
+          3.0629625000000003
+        ],
+        [
+          -3.2331975,
+          -0.0829025000000001
+        ],
+        [
+          -2.73581,
+          2.73581
+        ],
+        [
+          -1.575195,
+          1.575195
+        ],
+        [
+          -2.73581,
+          2.73581
+        ]
+      ],
+      "saved_solution_count_outside_soft_bounds": 29,
+      "max_sum_violation_rad": 0.10066725048854241,
+      "max_abs_position_penalty_per_policy_step": 0.020133450097708484
+    },
+    {
+      "soft_position_ratio": 0.97,
+      "arm_soft_bounds_rad": [
+        [
+          -2.793406,
+          2.793406
+        ],
+        [
+          0.047122499999999956,
+          3.0943775000000002
+        ],
+        [
+          -3.2663585,
+          -0.049741500000000105
+        ],
+        [
+          -2.793406,
+          2.793406
+        ],
+        [
+          -1.6083569999999998,
+          1.6083569999999998
+        ],
+        [
+          -2.793406,
+          2.793406
+        ]
+      ],
+      "saved_solution_count_outside_soft_bounds": 0,
+      "max_sum_violation_rad": 0,
+      "max_abs_position_penalty_per_policy_step": 0.0
+    }
+  ],
+  "limitations": [
+    "只比较已有305个位置解，其中路径含重复初始点；不代表独立随机目标样本",
+    "未重新搜索同目标其他关节分支；已有解越软界不证明该目标必须越软界",
+    "没有碰撞、速度／力矩、动态或学习验证；不同软比例没有最优性结论"
+  ]
+}

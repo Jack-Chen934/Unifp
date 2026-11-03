@@ -1,0 +1,641 @@
+{
+  "source_zip": "/home/sorry/桌面/a1arm_description.zip",
+  "source_zip_sha256": "9638c2794cfa6874b57a8def527899b0352a29997e203b3a3b51dbc0a38346d8",
+  "source_urdf_member": "robot_description/a1arm_description/urdf/a1arm_rgm3.urdf",
+  "source_urdf_sha256": "a3eacf4b991ba7bfa4be5e57e229adeb918c71a741f17be53d4f4ba799471f2c",
+  "current_urdf": "/home/sorry/python_ws/interactive/unifp_reproduction/UniFP_v3/resources/robots/v3_a1/urdf/a1arm_rgm3_v3_fixed_gripper.urdf",
+  "current_urdf_sha256": "03db4e846dd77b51f1d7bb62a373a5fa4e3cd16535a21ae6a1068c7e24dd0239",
+  "structure": {
+    "desktop": {
+      "links": 27,
+      "joints": 26,
+      "movable_joints": [
+        {
+          "name": "arm_joint1",
+          "type": "revolute"
+        },
+        {
+          "name": "arm_joint2",
+          "type": "revolute"
+        },
+        {
+          "name": "arm_joint3",
+          "type": "revolute"
+        },
+        {
+          "name": "arm_joint4",
+          "type": "revolute"
+        },
+        {
+          "name": "arm_joint5",
+          "type": "revolute"
+        },
+        {
+          "name": "arm_joint6",
+          "type": "revolute"
+        },
+        {
+          "name": "gripper1_axis",
+          "type": "prismatic"
+        },
+        {
+          "name": "gripper2_axis",
+          "type": "prismatic"
+        },
+        {
+          "name": "root_x_axis_joint",
+          "type": "prismatic"
+        },
+        {
+          "name": "root_y_axis_joint",
+          "type": "prismatic"
+        },
+        {
+          "name": "root_z_rotation_joint",
+          "type": "revolute"
+        }
+      ]
+    },
+    "current": {
+      "links": 28,
+      "joints": 27,
+      "movable_joints": [
+        {
+          "name": "arm_joint1",
+          "type": "revolute"
+        },
+        {
+          "name": "arm_joint2",
+          "type": "revolute"
+        },
+        {
+          "name": "arm_joint3",
+          "type": "revolute"
+        },
+        {
+          "name": "arm_joint4",
+          "type": "revolute"
+        },
+        {
+          "name": "arm_joint5",
+          "type": "revolute"
+        },
+        {
+          "name": "arm_joint6",
+          "type": "revolute"
+        },
+        {
+          "name": "bl_steering_joint",
+          "type": "revolute"
+        },
+        {
+          "name": "bl_wheel_drive_joint",
+          "type": "continuous"
+        },
+        {
+          "name": "br_steering_joint",
+          "type": "revolute"
+        },
+        {
+          "name": "br_wheel_drive_joint",
+          "type": "continuous"
+        },
+        {
+          "name": "fl_steering_joint",
+          "type": "revolute"
+        },
+        {
+          "name": "fl_wheel_drive_joint",
+          "type": "continuous"
+        },
+        {
+          "name": "fr_steering_joint",
+          "type": "revolute"
+        },
+        {
+          "name": "fr_wheel_drive_joint",
+          "type": "continuous"
+        }
+      ]
+    }
+  },
+  "mass_kg": {
+    "desktop": {
+      "arm_base": 1.0,
+      "arm_seg1": 0.95,
+      "arm_seg2": 1.0,
+      "arm_seg3": 0.7,
+      "arm_seg4": 0.4,
+      "arm_seg5": 0.3,
+      "arm_seg6": 0.35,
+      "gripper1": 0.020333,
+      "gripper2": 0.020333,
+      "wrist_camera_connector": 0.0439585128445217,
+      "wrist_camera": 0.0390728512545186,
+      "rear_top_camera_connector": 0.032864,
+      "rear_top_camera": 0.039073,
+      "right_camera_connector": 0.0425670560374232,
+      "right_camera": 0.039072900815424,
+      "left_camera_connector": 0.0425681027810926,
+      "left_camera": 0.0390729491178213,
+      "base_link": 0.16272,
+      "bl_Link": 2.2786,
+      "br_Link": 2.2786,
+      "fl_Link": 2.2786,
+      "fr_Link": 2.2786,
+      "aluminum_profiles": 3.259,
+      "root_link1": 0.0,
+      "root_link2": 0.0,
+      "root_link3": 0.0
+    },
+    "current": {
+      "arm_base": 1.0,
+      "arm_seg1": 0.95,
+      "arm_seg2": 1.0,
+      "arm_seg3": 0.7,
+      "arm_seg4": 0.4,
+      "arm_seg5": 0.3,
+      "arm_seg6": 0.35,
+      "gripper1": 0.020333,
+      "gripper2": 0.020333,
+      "wrist_camera_connector": 0.0439585128445217,
+      "wrist_camera": 0.0390728512545186,
+      "rear_top_camera_connector": 0.032864,
+      "rear_top_camera": 0.039073,
+      "right_camera_connector": 0.0425670560374232,
+      "right_camera": 0.039072900815424,
+      "left_camera_connector": 0.0425681027810926,
+      "left_camera": 0.0390729491178213,
+      "base_link": 65.8456,
+      "bl_steering_link": 0.01,
+      "bl_Link": 2.2786,
+      "br_steering_link": 0.01,
+      "br_Link": 2.2786,
+      "fl_steering_link": 0.01,
+      "fl_Link": 2.2786,
+      "fr_steering_link": 0.01,
+      "fr_Link": 2.2786,
+      "aluminum_profiles": 3.259
+    }
+  },
+  "total_mass_kg": {
+    "desktop": 17.595035372850802,
+    "current": 83.3179153728508
+  },
+  "desktop_wheel_joints": [
+    {
+      "name": "bl_joint",
+      "type": "fixed",
+      "parent": "base_link",
+      "child": "bl_Link",
+      "origin": {
+        "rpy": "-3.14159 0.00000 0.00000",
+        "xyz": "-0.25000 0.19000 -0.10000"
+      }
+    },
+    {
+      "name": "br_joint",
+      "type": "fixed",
+      "parent": "base_link",
+      "child": "br_Link",
+      "origin": {
+        "rpy": "0.00000 0.00000 0.00000",
+        "xyz": "-0.25000 -0.19000 -0.10000"
+      }
+    },
+    {
+      "name": "fl_joint",
+      "type": "fixed",
+      "parent": "base_link",
+      "child": "fl_Link",
+      "origin": {
+        "rpy": "-3.14159 0.00000 0.00000",
+        "xyz": "0.25000 0.19000 -0.10000"
+      }
+    },
+    {
+      "name": "fr_joint",
+      "type": "fixed",
+      "parent": "base_link",
+      "child": "fr_Link",
+      "origin": {
+        "rpy": "0.00000 0.00000 0.00000",
+        "xyz": "0.25000 -0.19000 -0.10000"
+      }
+    }
+  ],
+  "mesh_references": [
+    {
+      "source_reference": "../meshes/arm_base.visual.glb",
+      "archive_member": "robot_description/a1arm_description/meshes/arm_base.visual.glb",
+      "sha256": "509c69ea79f79d721a72838a8546991f684eb121f93e0044725d901b8b919ea8",
+      "legacy_copy_exists": true,
+      "legacy_copy_identical": true
+    },
+    {
+      "source_reference": "../meshes/arm_base.collision.glb",
+      "archive_member": "robot_description/a1arm_description/meshes/arm_base.collision.glb",
+      "sha256": "c75126b1d276538b7740207775e3979b45ad158679d8875d3d84beb79768ca3c",
+      "legacy_copy_exists": true,
+      "legacy_copy_identical": true
+    },
+    {
+      "source_reference": "../meshes/arm_seg1.visual.glb",
+      "archive_member": "robot_description/a1arm_description/meshes/arm_seg1.visual.glb",
+      "sha256": "571e652b7cf82566ba4a50ebed9886a6a2ba5276e29dd97dacb4a4354168a213",
+      "legacy_copy_exists": true,
+      "legacy_copy_identical": true
+    },
+    {
+      "source_reference": "../meshes/arm_seg1.collision.glb",
+      "archive_member": "robot_description/a1arm_description/meshes/arm_seg1.collision.glb",
+      "sha256": "ddc5f1e36dd98256eda8efa5d8721f71530d513f70e7828adb660d4c093a4445",
+      "legacy_copy_exists": true,
+      "legacy_copy_identical": true
+    },
+    {
+      "source_reference": "../meshes/arm_seg2.visual.glb",
+      "archive_member": "robot_description/a1arm_description/meshes/arm_seg2.visual.glb",
+      "sha256": "f51e2fdcfe18ba497f57d6e46fd813d51040c88fc364faffa6f4a499205cbee7",
+      "legacy_copy_exists": true,
+      "legacy_copy_identical": true
+    },
+    {
+      "source_reference": "../meshes/arm_seg2.collision.glb",
+      "archive_member": "robot_description/a1arm_description/meshes/arm_seg2.collision.glb",
+      "sha256": "7f92b60829668f41f45e8d5722223ccc1d8068d840e2259dd4b3c53295d026fb",
+      "legacy_copy_exists": true,
+      "legacy_copy_identical": true
+    },
+    {
+      "source_reference": "../meshes/arm_seg3.visual.glb",
+      "archive_member": "robot_description/a1arm_description/meshes/arm_seg3.visual.glb",
+      "sha256": "299e7c8e661c1dc10ffea7dab339eb2dab2f64c20009a465ee4ffd742e927ce4",
+      "legacy_copy_exists": true,
+      "legacy_copy_identical": true
+    },
+    {
+      "source_reference": "../meshes/arm_seg3.collision.glb",
+      "archive_member": "robot_description/a1arm_description/meshes/arm_seg3.collision.glb",
+      "sha256": "25bbdbf6e1dd5c5903fdb09878e536b84346a340410897d5448be449cd1a10d0",
+      "legacy_copy_exists": true,
+      "legacy_copy_identical": true
+    },
+    {
+      "source_reference": "../meshes/arm_seg4.visual.glb",
+      "archive_member": "robot_description/a1arm_description/meshes/arm_seg4.visual.glb",
+      "sha256": "22a0260025b073eb4a55ef77aa1e31eaf4313e041e356d55234259d57c115171",
+      "legacy_copy_exists": true,
+      "legacy_copy_identical": true
+    },
+    {
+      "source_reference": "../meshes/arm_seg4.collision.glb",
+      "archive_member": "robot_description/a1arm_description/meshes/arm_seg4.collision.glb",
+      "sha256": "0d27c250425921672b02738dda17a14980fe5e814a361ff56115a21beabbe71b",
+      "legacy_copy_exists": true,
+      "legacy_copy_identical": true
+    },
+    {
+      "source_reference": "../meshes/arm_seg5.visual.glb",
+      "archive_member": "robot_description/a1arm_description/meshes/arm_seg5.visual.glb",
+      "sha256": "1cdb25d8dc3789325bf1f7df53f6e85f3a83de14f5036b2c084656eb959729db",
+      "legacy_copy_exists": true,
+      "legacy_copy_identical": true
+    },
+    {
+      "source_reference": "../meshes/arm_seg5.collision.glb",
+      "archive_member": "robot_description/a1arm_description/meshes/arm_seg5.collision.glb",
+      "sha256": "62fc42ff6722b8b0295e026bddceb98cd727d6268af006d306d3cef1388ccc03",
+      "legacy_copy_exists": true,
+      "legacy_copy_identical": true
+    },
+    {
+      "source_reference": "../meshes/arm_seg6.visual.glb",
+      "archive_member": "robot_description/a1arm_description/meshes/arm_seg6.visual.glb",
+      "sha256": "cfcc5f74a2e3740e8e1c1935f64e87326eb7c275ecd1495e5e2673e948ac8108",
+      "legacy_copy_exists": true,
+      "legacy_copy_identical": true
+    },
+    {
+      "source_reference": "../meshes/arm_seg6.collision.glb",
+      "archive_member": "robot_description/a1arm_description/meshes/arm_seg6.collision.glb",
+      "sha256": "603474eea23fa712246bf3fc446e767c77e62eaec41ef980a3b92b1540540c8e",
+      "legacy_copy_exists": true,
+      "legacy_copy_identical": true
+    },
+    {
+      "source_reference": "../meshes/gripper1.visual.glb",
+      "archive_member": "robot_description/a1arm_description/meshes/gripper1.visual.glb",
+      "sha256": "25a95b17bea2dc07634ff0241e966448f275eb628fd43c04577195e537660b73",
+      "legacy_copy_exists": true,
+      "legacy_copy_identical": true
+    },
+    {
+      "source_reference": "../meshes/gripper1.collision.glb",
+      "archive_member": "robot_description/a1arm_description/meshes/gripper1.collision.glb",
+      "sha256": "5050a6f6a26e5a5ab60b4b7a52b6950279a4a1216b497ba10bbe9a916064e037",
+      "legacy_copy_exists": true,
+      "legacy_copy_identical": true
+    },
+    {
+      "source_reference": "../meshes/gripper2.visual.glb",
+      "archive_member": "robot_description/a1arm_description/meshes/gripper2.visual.glb",
+      "sha256": "7355c60f15ba6b038ebcb3d320e3a194120398706fc0028754a7fe0a38967f35",
+      "legacy_copy_exists": true,
+      "legacy_copy_identical": true
+    },
+    {
+      "source_reference": "../meshes/gripper2.collision.glb",
+      "archive_member": "robot_description/a1arm_description/meshes/gripper2.collision.glb",
+      "sha256": "7221ee10dc4537cad1e84a5296c055661b4193884afdbb0f74f9500fd992eff3",
+      "legacy_copy_exists": true,
+      "legacy_copy_identical": true
+    },
+    {
+      "source_reference": "../meshes/wrist_camera_connector.visual.glb",
+      "archive_member": "robot_description/a1arm_description/meshes/wrist_camera_connector.visual.glb",
+      "sha256": "f46705a6606bfa2e9c831e9d35fd2d289d8606ecc0425ac27550346fc2ff385d",
+      "legacy_copy_exists": true,
+      "legacy_copy_identical": true
+    },
+    {
+      "source_reference": "../meshes/wrist_camera_connector.collision.glb",
+      "archive_member": "robot_description/a1arm_description/meshes/wrist_camera_connector.collision.glb",
+      "sha256": "debed46d8f1380aa669a72e39ca259160a69898f67401fd4666cc69b7ea02313",
+      "legacy_copy_exists": true,
+      "legacy_copy_identical": true
+    },
+    {
+      "source_reference": "../meshes/camera.visual.glb",
+      "archive_member": "robot_description/a1arm_description/meshes/camera.visual.glb",
+      "sha256": "af85717a5169965ee71e76bf2b819e42b1a6e86d9d8cbc3d353c888547e2e63f",
+      "legacy_copy_exists": true,
+      "legacy_copy_identical": true
+    },
+    {
+      "source_reference": "../meshes/camera.collision.glb",
+      "archive_member": "robot_description/a1arm_description/meshes/camera.collision.glb",
+      "sha256": "8cf850130f193618addb097b186d53984910c8600d941605a4a409e28b3e8e96",
+      "legacy_copy_exists": true,
+      "legacy_copy_identical": true
+    },
+    {
+      "source_reference": "../meshes/rear_top_camera_connector.visual.glb",
+      "archive_member": "robot_description/a1arm_description/meshes/rear_top_camera_connector.visual.glb",
+      "sha256": "c3af3b0e1ecc9be7c272526f830647e9d1e619165c762cbf02d57ee36ae0bb82",
+      "legacy_copy_exists": true,
+      "legacy_copy_identical": true
+    },
+    {
+      "source_reference": "../meshes/rear_top_camera_connector.collision.glb",
+      "archive_member": "robot_description/a1arm_description/meshes/rear_top_camera_connector.collision.glb",
+      "sha256": "790ca363554cc6ab11b8b1cfc4619db0d2111a0c6c1138a8cac4c26c31487fea",
+      "legacy_copy_exists": true,
+      "legacy_copy_identical": true
+    },
+    {
+      "source_reference": "../meshes/camera.visual.glb",
+      "archive_member": "robot_description/a1arm_description/meshes/camera.visual.glb",
+      "sha256": "af85717a5169965ee71e76bf2b819e42b1a6e86d9d8cbc3d353c888547e2e63f",
+      "legacy_copy_exists": true,
+      "legacy_copy_identical": true
+    },
+    {
+      "source_reference": "../meshes/camera.collision.glb",
+      "archive_member": "robot_description/a1arm_description/meshes/camera.collision.glb",
+      "sha256": "8cf850130f193618addb097b186d53984910c8600d941605a4a409e28b3e8e96",
+      "legacy_copy_exists": true,
+      "legacy_copy_identical": true
+    },
+    {
+      "source_reference": "../meshes/right_camera_connector.visual.glb",
+      "archive_member": "robot_description/a1arm_description/meshes/right_camera_connector.visual.glb",
+      "sha256": "50e782653778cf7d635862016abd12b15d575d386463a22d11d283078347da72",
+      "legacy_copy_exists": true,
+      "legacy_copy_identical": true
+    },
+    {
+      "source_reference": "../meshes/right_camera_connector.collision.glb",
+      "archive_member": "robot_description/a1arm_description/meshes/right_camera_connector.collision.glb",
+      "sha256": "7966552eeb56f479bf9aac2ea1f3e258e04d0354d8824ff393b6701e1bd18e88",
+      "legacy_copy_exists": true,
+      "legacy_copy_identical": true
+    },
+    {
+      "source_reference": "../meshes/right_camera.visual.glb",
+      "archive_member": "robot_description/a1arm_description/meshes/right_camera.visual.glb",
+      "sha256": "9ed53bbf83fd0029e33f66626cb47d8656876852594c74ea00d4110c72940144",
+      "legacy_copy_exists": true,
+      "legacy_copy_identical": true
+    },
+    {
+      "source_reference": "../meshes/right_camera.collision.glb",
+      "archive_member": "robot_description/a1arm_description/meshes/right_camera.collision.glb",
+      "sha256": "5a368a96550eaeb6d10b1482e316c3908237fd97c82630efb96c16a1b988dd7f",
+      "legacy_copy_exists": true,
+      "legacy_copy_identical": true
+    },
+    {
+      "source_reference": "../meshes/left_camera_connector.visual.glb",
+      "archive_member": "robot_description/a1arm_description/meshes/left_camera_connector.visual.glb",
+      "sha256": "76a781eb147379589318bb97131b14a5d064b484456031a63e4bb56496f1df08",
+      "legacy_copy_exists": true,
+      "legacy_copy_identical": true
+    },
+    {
+      "source_reference": "../meshes/left_camera_connector.collision.glb",
+      "archive_member": "robot_description/a1arm_description/meshes/left_camera_connector.collision.glb",
+      "sha256": "d2dc8a6fac131900c7ff7c9087ce444a0e8ecd452951438582ea48087164c1af",
+      "legacy_copy_exists": true,
+      "legacy_copy_identical": true
+    },
+    {
+      "source_reference": "../meshes/left_camera.visual.glb",
+      "archive_member": "robot_description/a1arm_description/meshes/left_camera.visual.glb",
+      "sha256": "8d12fbda107daf3ebd6dfeffe03b6471c38454671eed13a74fe28c9d77da606f",
+      "legacy_copy_exists": true,
+      "legacy_copy_identical": true
+    },
+    {
+      "source_reference": "../meshes/left_camera.collision.glb",
+      "archive_member": "robot_description/a1arm_description/meshes/left_camera.collision.glb",
+      "sha256": "abf9320832ee6fc657f2c62236ea5e30b9a2e1c8fef4952ec3fec47166c9ba13",
+      "legacy_copy_exists": true,
+      "legacy_copy_identical": true
+    },
+    {
+      "source_reference": "../meshes/ranger_mini3_decimate.collision.glb",
+      "archive_member": "robot_description/a1arm_description/meshes/ranger_mini3_decimate.collision.glb",
+      "sha256": "5c8cfa67a66e662d5537589044bbd9fde8aed63c93364c513fad62e958929ead",
+      "legacy_copy_exists": true,
+      "legacy_copy_identical": true
+    },
+    {
+      "source_reference": "../meshes/ranger_mini3_decimate.visual.glb",
+      "archive_member": "robot_description/a1arm_description/meshes/ranger_mini3_decimate.visual.glb",
+      "sha256": "f780fcbbbe1bb5938aa32af9355917e5f87adbacf97c9c7dbd7988d0b031f0a4",
+      "legacy_copy_exists": true,
+      "legacy_copy_identical": true
+    },
+    {
+      "source_reference": "../meshes/ranger_mini_v3_wheel.collision.glb",
+      "archive_member": "robot_description/a1arm_description/meshes/ranger_mini_v3_wheel.collision.glb",
+      "sha256": "01ebf4df817b532776ca36b1e00fbc01e1deca3634cd2afd224a6b563b25d866",
+      "legacy_copy_exists": true,
+      "legacy_copy_identical": true
+    },
+    {
+      "source_reference": "../meshes/ranger_mini_v3_wheel.visual.glb",
+      "archive_member": "robot_description/a1arm_description/meshes/ranger_mini_v3_wheel.visual.glb",
+      "sha256": "0cee5abbb7133c5c57df55fe888be53fa1a2bb90cbe4f5cb140aec564cd7e59e",
+      "legacy_copy_exists": true,
+      "legacy_copy_identical": true
+    },
+    {
+      "source_reference": "../meshes/ranger_mini_v3_wheel_right.collision.glb",
+      "archive_member": "robot_description/a1arm_description/meshes/ranger_mini_v3_wheel_right.collision.glb",
+      "sha256": "4e021d8d9dcd7f07bc683ad696c913126736eecc3f854309d342f381f9d1ec91",
+      "legacy_copy_exists": true,
+      "legacy_copy_identical": true
+    },
+    {
+      "source_reference": "../meshes/ranger_mini_v3_wheel_right.visual.glb",
+      "archive_member": "robot_description/a1arm_description/meshes/ranger_mini_v3_wheel_right.visual.glb",
+      "sha256": "130a78150d24c539b91b27993955bb399cedca96b37bee8fc753ceb69c516418",
+      "legacy_copy_exists": true,
+      "legacy_copy_identical": true
+    },
+    {
+      "source_reference": "../meshes/ranger_mini_v3_wheel.collision.glb",
+      "archive_member": "robot_description/a1arm_description/meshes/ranger_mini_v3_wheel.collision.glb",
+      "sha256": "01ebf4df817b532776ca36b1e00fbc01e1deca3634cd2afd224a6b563b25d866",
+      "legacy_copy_exists": true,
+      "legacy_copy_identical": true
+    },
+    {
+      "source_reference": "../meshes/ranger_mini_v3_wheel.visual.glb",
+      "archive_member": "robot_description/a1arm_description/meshes/ranger_mini_v3_wheel.visual.glb",
+      "sha256": "0cee5abbb7133c5c57df55fe888be53fa1a2bb90cbe4f5cb140aec564cd7e59e",
+      "legacy_copy_exists": true,
+      "legacy_copy_identical": true
+    },
+    {
+      "source_reference": "../meshes/ranger_mini_v3_wheel_right.collision.glb",
+      "archive_member": "robot_description/a1arm_description/meshes/ranger_mini_v3_wheel_right.collision.glb",
+      "sha256": "4e021d8d9dcd7f07bc683ad696c913126736eecc3f854309d342f381f9d1ec91",
+      "legacy_copy_exists": true,
+      "legacy_copy_identical": true
+    },
+    {
+      "source_reference": "../meshes/ranger_mini_v3_wheel_right.visual.glb",
+      "archive_member": "robot_description/a1arm_description/meshes/ranger_mini_v3_wheel_right.visual.glb",
+      "sha256": "130a78150d24c539b91b27993955bb399cedca96b37bee8fc753ceb69c516418",
+      "legacy_copy_exists": true,
+      "legacy_copy_identical": true
+    },
+    {
+      "source_reference": "../meshes/aluminum_profiles_modified.visual.glb",
+      "archive_member": "robot_description/a1arm_description/meshes/aluminum_profiles_modified.visual.glb",
+      "sha256": "267c49ae1f2a8490261574099779b667ffbf69a9056f97e45a745381061893ed",
+      "legacy_copy_exists": true,
+      "legacy_copy_identical": true
+    },
+    {
+      "source_reference": "../meshes/aluminum_profiles_modified.collision.glb",
+      "archive_member": "robot_description/a1arm_description/meshes/aluminum_profiles_modified.collision.glb",
+      "sha256": "7d50f67efb9aad45bbea4bcd88bc020a8e816c209ddab4c602b1150f6905d172",
+      "legacy_copy_exists": true,
+      "legacy_copy_identical": true
+    }
+  ],
+  "source_line_anchors": [
+    {
+      "line": 310,
+      "text": "<joint name=\"connect_joint\" type=\"fixed\">"
+    },
+    {
+      "line": 560,
+      "text": "<joint name=\"bl_joint\" type=\"fixed\">"
+    },
+    {
+      "line": 565,
+      "text": "<joint name=\"br_joint\" type=\"fixed\">"
+    },
+    {
+      "line": 570,
+      "text": "<joint name=\"fl_joint\" type=\"fixed\">"
+    },
+    {
+      "line": 575,
+      "text": "<joint name=\"fr_joint\" type=\"fixed\">"
+    },
+    {
+      "line": 587,
+      "text": "<link name=\"base_link\">"
+    },
+    {
+      "line": 591,
+      "text": "<mesh filename=\"../meshes/ranger_mini3_decimate.collision.glb\" scale=\"1.00000 1.00000 1.00000\"/>"
+    },
+    {
+      "line": 603,
+      "text": "<mesh filename=\"../meshes/ranger_mini3_decimate.visual.glb\" scale=\"1.00000 1.00000 1.00000\"/>"
+    },
+    {
+      "line": 611,
+      "text": "<mesh filename=\"../meshes/ranger_mini_v3_wheel.collision.glb\" scale=\"1.00000 1.00000 1.00000\"/>"
+    },
+    {
+      "line": 623,
+      "text": "<mesh filename=\"../meshes/ranger_mini_v3_wheel.visual.glb\" scale=\"1.00000 1.00000 1.00000\"/>"
+    },
+    {
+      "line": 631,
+      "text": "<mesh filename=\"../meshes/ranger_mini_v3_wheel_right.collision.glb\" scale=\"1.00000 1.00000 1.00000\"/>"
+    },
+    {
+      "line": 643,
+      "text": "<mesh filename=\"../meshes/ranger_mini_v3_wheel_right.visual.glb\" scale=\"1.00000 1.00000 1.00000\"/>"
+    },
+    {
+      "line": 651,
+      "text": "<mesh filename=\"../meshes/ranger_mini_v3_wheel.collision.glb\" scale=\"1.00000 1.00000 1.00000\"/>"
+    },
+    {
+      "line": 663,
+      "text": "<mesh filename=\"../meshes/ranger_mini_v3_wheel.visual.glb\" scale=\"1.00000 1.00000 1.00000\"/>"
+    },
+    {
+      "line": 671,
+      "text": "<mesh filename=\"../meshes/ranger_mini_v3_wheel_right.collision.glb\" scale=\"1.00000 1.00000 1.00000\"/>"
+    },
+    {
+      "line": 683,
+      "text": "<mesh filename=\"../meshes/ranger_mini_v3_wheel_right.visual.glb\" scale=\"1.00000 1.00000 1.00000\"/>"
+    },
+    {
+      "line": 719,
+      "text": "<link name=\"root_link1\">"
+    },
+    {
+      "line": 725,
+      "text": "<link name=\"root_link2\">"
+    },
+    {
+      "line": 731,
+      "text": "<link name=\"root_link3\">"
+    },
+    {
+      "line": 737,
+      "text": "<joint name=\"root_x_axis_joint\" type=\"prismatic\">"
+    },
+    {
+      "line": 744,
+      "text": "<joint name=\"root_y_axis_joint\" type=\"prismatic\">"
+    },
+    {
+      "line": 751,
+      "text": "<joint name=\"root_z_rotation_joint\" type=\"revolute\">"
+    }
+  ]
+}

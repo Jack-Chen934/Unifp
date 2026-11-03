@@ -1,0 +1,30 @@
+{
+  "passed": true,
+  "returncode": 1,
+  "checkpoint": "/mnt/data_8THDD/myl_unifp_v3_stage1/validation/ticket07_20261102_r03/runs/capacity4096/checkpoints/model_000001.pt",
+  "output_created": false,
+  "command": [
+    "/mnt/data_8THDD/conda_envs/unifp_v3_stage1/bin/python",
+    "-m",
+    "legged_gym.scripts.train_v3",
+    "--reproduction_part",
+    "A",
+    "--run_purpose",
+    "development",
+    "--seed",
+    "1",
+    "--num_envs",
+    "4096",
+    "--max_iterations",
+    "1",
+    "--resume",
+    "/mnt/data_8THDD/myl_unifp_v3_stage1/validation/ticket07_20261102_r03/runs/capacity4096/checkpoints/model_000001.pt",
+    "--output_dir",
+    "/mnt/data_8THDD/myl_unifp_v3_stage1/validation/collision_optimization_20261103_r02/rejected_old_resume",
+    "--sim_device",
+    "cuda:0",
+    "--rl_device",
+    "cuda:0",
+    "--headless"
+  ]
+}

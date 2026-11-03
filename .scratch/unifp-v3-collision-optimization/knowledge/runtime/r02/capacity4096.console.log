@@ -1,0 +1,21 @@
+Importing module 'gym_38' (/mnt/data_8THDD/myl_unifp/isaacgym/python/isaacgym/_bindings/linux-x86_64/gym_38.so)
+Setting GYM_USD_PLUG_INFO_PATH to /mnt/data_8THDD/myl_unifp/isaacgym/python/isaacgym/_bindings/linux-x86_64/usd/plugInfo.json
+PyTorch version 2.3.1+cu121
+Device count 1
+/mnt/data_8THDD/myl_unifp/isaacgym/python/isaacgym/_bindings/src/gymtorch
+Using /mnt/data_8THDD/myl_unifp_v3_stage1/cache/torch_extensions as PyTorch extensions root...
+Emitting ninja build file /mnt/data_8THDD/myl_unifp_v3_stage1/cache/torch_extensions/gymtorch/build.ninja...
+Building extension module gymtorch...
+Using envvar MAX_JOBS (2) as the number of workers...
+ninja: no work to do.
+Not connected to PVD
++++ Using GPU PhysX
+Physics Engine: PhysX
+Physics Device: cuda:0
+GPU Pipeline: enabled
+Setting seed: 1
+V3 A: I=1, S=24, transitions=98304, value=0.061069, aux=0.030823
+{"completed_iterations": 1, "training_policy_steps": 24, "training_transitions": 98304, "last_saved_iteration": 1, "torch_peak_memory_bytes": 1920056320, "new_episode_after_resume": false, "lineage": {"run_id": "capacity4096", "reproduction_part": "A", "parent_checkpoint_path": null, "parent_checkpoint_sha256": null}, "validation_only": true, "正式训练必须重新从头开始": true}
+Loading extension module gymtorch...
+/mnt/data_8THDD/conda_envs/unifp_v3_stage1/lib/python3.8/site-packages/torch/functional.py:512: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3587.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]

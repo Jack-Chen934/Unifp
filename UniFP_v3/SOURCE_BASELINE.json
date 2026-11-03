@@ -1,0 +1,8 @@
+{
+  "repository": "unified-force/UniFP",
+  "commit": "68847a070f88d731058c3d8476929bc3b205f5bd",
+  "development_branch": "v3-reproduction",
+  "robot_asset": "resources/robots/v3_a1/urdf/a1arm_rgm3_v3_fixed_gripper.urdf",
+  "robot_asset_source": "legacy/v3_reference_20261030/robot_description/a1arm_description/urdf/a1arm_rgm3_original_movable.urdf",
+  "robot_asset_status": "independent copy created; Gym loading not yet validated"
+}

@@ -1,0 +1,51 @@
+Importing module 'gym_38' (/mnt/data_8THDD/myl_unifp/isaacgym/python/isaacgym/_bindings/linux-x86_64/gym_38.so)
+Setting GYM_USD_PLUG_INFO_PATH to /mnt/data_8THDD/myl_unifp/isaacgym/python/isaacgym/_bindings/linux-x86_64/usd/plugInfo.json
+PyTorch version 2.3.1+cu121
+Device count 1
+/mnt/data_8THDD/myl_unifp/isaacgym/python/isaacgym/_bindings/src/gymtorch
+Using /mnt/data_8THDD/myl_unifp_v3_stage1/cache/torch_extensions as PyTorch extensions root...
+Emitting ninja build file /mnt/data_8THDD/myl_unifp_v3_stage1/cache/torch_extensions/gymtorch/build.ninja...
+Building extension module gymtorch...
+Using envvar MAX_JOBS (2) as the number of workers...
+ninja: no work to do.
+Loading extension module gymtorch...
+Setting seed: 0
+Not connected to PVD
++++ Using GPU PhysX
+Physics Engine: PhysX
+Physics Device: cuda:0
+GPU Pipeline: enabled
+/mnt/data_8THDD/conda_envs/unifp_v3_stage1/lib/python3.8/site-packages/torch/functional.py:512: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3587.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+Traceback (most recent call last):
+  File "/mnt/data_8THDD/conda_envs/unifp_v3_stage1/lib/python3.8/runpy.py", line 194, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/mnt/data_8THDD/conda_envs/unifp_v3_stage1/lib/python3.8/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/mnt/data_8THDD/myl_unifp_v3_stage1/UniFP_v3/legged_gym/scripts/train_v3.py", line 105, in <module>
+    main()
+  File "/mnt/data_8THDD/myl_unifp_v3_stage1/UniFP_v3/legged_gym/scripts/train_v3.py", line 90, in main
+    runner.learn(requested)
+  File "/mnt/data_8THDD/myl_unifp_v3_stage1/UniFP_v3/legged_gym/b2_gym_learn/ppo_cse_pf/v3_on_policy_runner.py", line 97, in learn
+    write_episode_metadata(self.log_dir, {
+  File "/mnt/data_8THDD/myl_unifp_v3_stage1/UniFP_v3/legged_gym/b2_gym_learn/ppo_cse_pf/v3_episode_log.py", line 70, in write_episode_metadata
+    serialized = json.dumps(metadata, ensure_ascii=False, indent=2, allow_nan=False) + "\n"
+  File "/mnt/data_8THDD/conda_envs/unifp_v3_stage1/lib/python3.8/json/__init__.py", line 234, in dumps
+    return cls(
+  File "/mnt/data_8THDD/conda_envs/unifp_v3_stage1/lib/python3.8/json/encoder.py", line 201, in encode
+    chunks = list(chunks)
+  File "/mnt/data_8THDD/conda_envs/unifp_v3_stage1/lib/python3.8/json/encoder.py", line 431, in _iterencode
+    yield from _iterencode_dict(o, _current_indent_level)
+  File "/mnt/data_8THDD/conda_envs/unifp_v3_stage1/lib/python3.8/json/encoder.py", line 405, in _iterencode_dict
+    yield from chunks
+  File "/mnt/data_8THDD/conda_envs/unifp_v3_stage1/lib/python3.8/json/encoder.py", line 405, in _iterencode_dict
+    yield from chunks
+  File "/mnt/data_8THDD/conda_envs/unifp_v3_stage1/lib/python3.8/json/encoder.py", line 405, in _iterencode_dict
+    yield from chunks
+  File "/mnt/data_8THDD/conda_envs/unifp_v3_stage1/lib/python3.8/json/encoder.py", line 438, in _iterencode
+    o = _default(o)
+  File "/mnt/data_8THDD/conda_envs/unifp_v3_stage1/lib/python3.8/json/encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type SimType is not JSON serializable
+
+执行退出码=1

@@ -1,0 +1,14 @@
+{
+  "completed_iterations": 100,
+  "training_policy_steps": 2400,
+  "training_transitions": 9830400,
+  "last_saved_iteration": 100,
+  "torch_peak_memory_bytes": 1920056320,
+  "new_episode_after_resume": false,
+  "lineage": {
+    "run_id": "run4096",
+    "reproduction_part": "A",
+    "parent_checkpoint_path": null,
+    "parent_checkpoint_sha256": null
+  }
+}

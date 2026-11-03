@@ -1,0 +1,65 @@
+{
+  "remote_root": "/mnt/data_8THDD/myl_unifp_v3_stage1/validation/ticket07_20261102_r03",
+  "artifacts": {
+    "evaluation_development/S0/effective_config.json": {
+      "sha256": "7d7e44b9ec573278cf1e4f860f3462d9d5da12b9c0f20ac3f4baf5898e31462f",
+      "size_bytes": 9686
+    },
+    "evaluation_development/S0/episodes.jsonl": {
+      "sha256": "6a72f09ece23cb8eccab5daa2d147782d480420e467f2908432f4bf420c12b54",
+      "size_bytes": 161891
+    },
+    "evaluation_development/S0/policy_trace.jsonl": {
+      "sha256": "91dd6a284f119b3968fcedc10c063e382851a764645ef75b5b1cefa286e308ff",
+      "size_bytes": 224895825
+    },
+    "evaluation_development/S0/summary.json": {
+      "sha256": "560e81c71927e0c4e682c6f77f505e24a391fe2d24d7ba1ff422e1b28871949a",
+      "size_bytes": 3800
+    },
+    "evaluation_development/S1/effective_config.json": {
+      "sha256": "be3432c83065d3a786e9aae3310e28b4fafc372b6fd75761b7ee907eb1001f61",
+      "size_bytes": 9689
+    },
+    "evaluation_development/S1/episodes.jsonl": {
+      "sha256": "1ebcc7cdd14b87b331ad9c83d60b5be976786a5abbc8abbd58e93bf9d3fe4642",
+      "size_bytes": 161288
+    },
+    "evaluation_development/S1/policy_trace.jsonl": {
+      "sha256": "e81a9d33fbd4e1da3696657f8bae51720d97fdb1dd0bb2aa2db61bc54e9a2645",
+      "size_bytes": 231312630
+    },
+    "evaluation_development/S1/summary.json": {
+      "sha256": "e4feb855fc17f2bf8027c9341868777c410ca0c460afc816b4a4c286fb74ac72",
+      "size_bytes": 3823
+    },
+    "evaluation_development/S2/effective_config.json": {
+      "sha256": "eb7b86f322eb7d6952de76a3710ea14ceafd286c5161e9bff8d971ba1ac8a319",
+      "size_bytes": 9688
+    },
+    "evaluation_development/S2/episodes.jsonl": {
+      "sha256": "5ffa7eed1c497abef5e7d4aa2c10c7341f002154ee127f28ee2d4d9185032633",
+      "size_bytes": 161996
+    },
+    "evaluation_development/S2/policy_trace.jsonl": {
+      "sha256": "274a64088edec92b1bf4af78b7b7f80b24523bb77825a5aa50fb423590229636",
+      "size_bytes": 152093331
+    },
+    "evaluation_development/S2/summary.json": {
+      "sha256": "de9d88d6dac860cfeb5850c9f085f628efe779d5420dea368566e54d29dae0b1",
+      "size_bytes": 30534
+    },
+    "evaluation_development/verified_summary.json": {
+      "sha256": "5a52b057fe8cbec0540c7cbf14717b73bde07c74102e7f7e6319808a43ac258d",
+      "size_bytes": 43184
+    },
+    "UniFP_v3/configs/v3_a_initial_v1.json": {
+      "sha256": "c29c77a629af283f0899caef144d86f4e0c945d21b4913ad5484582415b2fb17",
+      "size_bytes": 2742
+    },
+    "start_a8000_seed1_r03.sh": {
+      "sha256": "7a2a4aa1aebe2a6f52c6bf69c6bf3584df5909457366b07333091174123b7092",
+      "size_bytes": 1311
+    }
+  }
+}

@@ -1,0 +1,208 @@
+{
+  "结论": "重复运行时物性回写可独立复现首步全环境异常；创建阶段提前施加存档物性的内存原型消除该异常",
+  "环境数": 512,
+  "动作": "全零，20ms策略周期，2个真实策略步",
+  "对照": {
+    "restore": [
+      {
+        "mode": "restore",
+        "phase": "reset",
+        "root_height_min": 0.3400000035762787,
+        "root_height_max": 0.3400000035762787,
+        "rpy_abs_max": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "base_contact_max_N": 0.0
+      },
+      {
+        "mode": "restore",
+        "phase": "before_auto_reset",
+        "done_count": 512,
+        "roll_failures": 0,
+        "pitch_failures": 0,
+        "base_contact_failures": 512,
+        "base_contact_min_N": 26322.23828125,
+        "base_contact_max_N": 32658.0859375,
+        "rpy_abs_max": [
+          0.0013923109509050846,
+          0.0004897730541415513,
+          0.00012643561058212072
+        ],
+        "root_height_min": 0.0027051493525505066,
+        "root_height_max": 0.004771880805492401,
+        "max_abs_dof_velocity_rad_s": 5.212038040161133
+      },
+      {
+        "mode": "restore",
+        "phase": "before_auto_reset",
+        "done_count": 0,
+        "roll_failures": 0,
+        "pitch_failures": 0,
+        "base_contact_failures": 0,
+        "base_contact_min_N": 0.0,
+        "base_contact_max_N": 0.0,
+        "rpy_abs_max": [
+          0.0015047986526042223,
+          0.0009764078422449529,
+          2.0614543245756067e-05
+        ],
+        "root_height_min": 0.3375473618507385,
+        "root_height_max": 0.33985966444015503,
+        "max_abs_dof_velocity_rad_s": 0.29117289185523987
+      }
+    ],
+    "properties": [
+      {
+        "mode": "properties",
+        "phase": "reset",
+        "root_height_min": 0.3400000035762787,
+        "root_height_max": 0.3400000035762787,
+        "rpy_abs_max": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "base_contact_max_N": 0.0
+      },
+      {
+        "mode": "properties",
+        "phase": "before_auto_reset",
+        "done_count": 512,
+        "roll_failures": 0,
+        "pitch_failures": 0,
+        "base_contact_failures": 512,
+        "base_contact_min_N": 26322.236328125,
+        "base_contact_max_N": 32658.08203125,
+        "rpy_abs_max": [
+          0.0013923109509050846,
+          0.0004897730541415513,
+          0.00012643561058212072
+        ],
+        "root_height_min": 0.0027051493525505066,
+        "root_height_max": 0.004771880805492401,
+        "max_abs_dof_velocity_rad_s": 5.212038040161133
+      },
+      {
+        "mode": "properties",
+        "phase": "before_auto_reset",
+        "done_count": 0,
+        "roll_failures": 0,
+        "pitch_failures": 0,
+        "base_contact_failures": 0,
+        "base_contact_min_N": 0.0,
+        "base_contact_max_N": 0.0,
+        "rpy_abs_max": [
+          0.0015047986526042223,
+          0.0009764078422449529,
+          2.0614543245756067e-05
+        ],
+        "root_height_min": 0.3375473618507385,
+        "root_height_max": 0.33985966444015503,
+        "max_abs_dof_velocity_rad_s": 0.29117289185523987
+      }
+    ],
+    "fresh": [
+      {
+        "mode": "fresh",
+        "phase": "reset",
+        "root_height_min": 0.3400000035762787,
+        "root_height_max": 0.3400000035762787,
+        "rpy_abs_max": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "base_contact_max_N": 0.0
+      },
+      {
+        "mode": "fresh",
+        "phase": "before_auto_reset",
+        "done_count": 0,
+        "roll_failures": 0,
+        "pitch_failures": 0,
+        "base_contact_failures": 0,
+        "base_contact_min_N": 0.0,
+        "base_contact_max_N": 0.0,
+        "rpy_abs_max": [
+          0.0016077123582363129,
+          0.00100853166077286,
+          2.694808063097298e-05
+        ],
+        "root_height_min": 0.3375473618507385,
+        "root_height_max": 0.3400314450263977,
+        "max_abs_dof_velocity_rad_s": 0.3103865385055542
+      },
+      {
+        "mode": "fresh",
+        "phase": "before_auto_reset",
+        "done_count": 0,
+        "roll_failures": 0,
+        "pitch_failures": 0,
+        "base_contact_failures": 0,
+        "base_contact_min_N": 0.0,
+        "base_contact_max_N": 0.0,
+        "rpy_abs_max": [
+          0.0030823471024632454,
+          0.001955687766894698,
+          0.00011457547952886671
+        ],
+        "root_height_min": 0.33126798272132874,
+        "root_height_max": 0.3363584280014038,
+        "max_abs_dof_velocity_rad_s": 1.8291162252426147
+      }
+    ],
+    "staged": [
+      {
+        "mode": "staged",
+        "phase": "reset",
+        "root_height_min": 0.3400000035762787,
+        "root_height_max": 0.3400000035762787,
+        "rpy_abs_max": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "base_contact_max_N": 0.0
+      },
+      {
+        "mode": "staged",
+        "phase": "before_auto_reset",
+        "done_count": 0,
+        "roll_failures": 0,
+        "pitch_failures": 0,
+        "base_contact_failures": 0,
+        "base_contact_min_N": 0.0,
+        "base_contact_max_N": 0.0,
+        "rpy_abs_max": [
+          0.0016077120089903474,
+          0.0010085318936035037,
+          2.6947896913043223e-05
+        ],
+        "root_height_min": 0.3375473916530609,
+        "root_height_max": 0.3400315046310425,
+        "max_abs_dof_velocity_rad_s": 0.3103780746459961
+      },
+      {
+        "mode": "staged",
+        "phase": "before_auto_reset",
+        "done_count": 0,
+        "roll_failures": 0,
+        "pitch_failures": 0,
+        "base_contact_failures": 0,
+        "base_contact_min_N": 0.0,
+        "base_contact_max_N": 0.0,
+        "rpy_abs_max": [
+          0.003082345938310027,
+          0.001955687999725342,
+          0.00011457547952886671
+        ],
+        "root_height_min": 0.33126795291900635,
+        "root_height_max": 0.33635857701301575,
+        "max_abs_dof_velocity_rad_s": 1.8291559219360352
+      }
+    ]
+  },
+  "说明": "诊断使用进程内包装，不修改业务源码；非PPO训练产物，不计入10＋1验收。原型仅证明恢复时序方向，仍需用户确认新增构造接口并实施后完整重测。"
+}

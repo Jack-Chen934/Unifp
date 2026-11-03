@@ -1,0 +1,255 @@
+{
+  "核查日期": "2026-10-31",
+  "source_urdf_sha256": "49b2e1b1acf728bdf1ec403126a219f7f62d7e5bbd0912c6b81af745fda498df",
+  "assumptions": "名义臂角[0,1,-1.5,0,0,0]rad；轮组零角；两夹爪位移0m；自由基座无接触约束；仅模型计算，未运行PhysX",
+  "mass_matrix_min_eigenvalue": 7.975350101287793e-05,
+  "control_candidates_not_validated": [
+    {
+      "joint": "fl_steering_joint",
+      "effective_inertia_kg_m2": 0.006922729926306399,
+      "gravity_hold_torque_nm_at_nominal": -0.0,
+      "omega_n_rad_s": 60.0,
+      "zeta": 0.8,
+      "kp_candidate_nm_per_rad": 24.921827734703037,
+      "kd_or_kv_candidate_nm_s_per_rad": 0.6645820729254143,
+      "single_dof_semiimplicit_bound_value_lt4": 1.05
+    },
+    {
+      "joint": "fr_steering_joint",
+      "effective_inertia_kg_m2": 0.006922729926306404,
+      "gravity_hold_torque_nm_at_nominal": -0.0,
+      "omega_n_rad_s": 60.0,
+      "zeta": 0.8,
+      "kp_candidate_nm_per_rad": 24.921827734703054,
+      "kd_or_kv_candidate_nm_s_per_rad": 0.6645820729254148,
+      "single_dof_semiimplicit_bound_value_lt4": 1.05
+    },
+    {
+      "joint": "bl_steering_joint",
+      "effective_inertia_kg_m2": 0.0069227299263064,
+      "gravity_hold_torque_nm_at_nominal": -0.0,
+      "omega_n_rad_s": 60.0,
+      "zeta": 0.8,
+      "kp_candidate_nm_per_rad": 24.92182773470304,
+      "kd_or_kv_candidate_nm_s_per_rad": 0.6645820729254145,
+      "single_dof_semiimplicit_bound_value_lt4": 1.05
+    },
+    {
+      "joint": "br_steering_joint",
+      "effective_inertia_kg_m2": 0.006922729926306403,
+      "gravity_hold_torque_nm_at_nominal": -0.0,
+      "omega_n_rad_s": 60.0,
+      "zeta": 0.8,
+      "kp_candidate_nm_per_rad": 24.92182773470305,
+      "kd_or_kv_candidate_nm_s_per_rad": 0.6645820729254147,
+      "single_dof_semiimplicit_bound_value_lt4": 1.05
+    },
+    {
+      "joint": "fl_wheel_drive_joint",
+      "effective_inertia_kg_m2": 0.011369265450635463,
+      "gravity_hold_torque_nm_at_nominal": -0.0,
+      "omega_n_rad_s": null,
+      "zeta": null,
+      "kp_candidate_nm_per_rad": 0.0,
+      "kd_or_kv_candidate_nm_s_per_rad": 0.22738530901270926,
+      "single_dof_semiimplicit_bound_value_lt4": 0.2
+    },
+    {
+      "joint": "fr_wheel_drive_joint",
+      "effective_inertia_kg_m2": 0.011369265450635465,
+      "gravity_hold_torque_nm_at_nominal": -0.0,
+      "omega_n_rad_s": null,
+      "zeta": null,
+      "kp_candidate_nm_per_rad": 0.0,
+      "kd_or_kv_candidate_nm_s_per_rad": 0.22738530901270929,
+      "single_dof_semiimplicit_bound_value_lt4": 0.2
+    },
+    {
+      "joint": "bl_wheel_drive_joint",
+      "effective_inertia_kg_m2": 0.011369265450635466,
+      "gravity_hold_torque_nm_at_nominal": -0.0,
+      "omega_n_rad_s": null,
+      "zeta": null,
+      "kp_candidate_nm_per_rad": 0.0,
+      "kd_or_kv_candidate_nm_s_per_rad": 0.2273853090127093,
+      "single_dof_semiimplicit_bound_value_lt4": 0.19999999999999998
+    },
+    {
+      "joint": "br_wheel_drive_joint",
+      "effective_inertia_kg_m2": 0.011369265450635468,
+      "gravity_hold_torque_nm_at_nominal": -0.0,
+      "omega_n_rad_s": null,
+      "zeta": null,
+      "kp_candidate_nm_per_rad": 0.0,
+      "kd_or_kv_candidate_nm_s_per_rad": 0.22738530901270934,
+      "single_dof_semiimplicit_bound_value_lt4": 0.19999999999999998
+    },
+    {
+      "joint": "arm_joint1",
+      "effective_inertia_kg_m2": 0.03089924180235469,
+      "gravity_hold_torque_nm_at_nominal": -0.0,
+      "omega_n_rad_s": 30.0,
+      "zeta": 0.8,
+      "kp_candidate_nm_per_rad": 27.80931762211922,
+      "kd_or_kv_candidate_nm_s_per_rad": 1.4831636065130254,
+      "single_dof_semiimplicit_bound_value_lt4": 0.5025000000000001
+    },
+    {
+      "joint": "arm_joint2",
+      "effective_inertia_kg_m2": 0.2449569707756834,
+      "gravity_hold_torque_nm_at_nominal": 1.194577990625006,
+      "omega_n_rad_s": 35.0,
+      "zeta": 0.8,
+      "kp_candidate_nm_per_rad": 300.07228920021214,
+      "kd_or_kv_candidate_nm_s_per_rad": 13.717590363438271,
+      "single_dof_semiimplicit_bound_value_lt4": 0.590625
+    },
+    {
+      "joint": "arm_joint3",
+      "effective_inertia_kg_m2": 0.07433958119202111,
+      "gravity_hold_torque_nm_at_nominal": -3.0819151529034183,
+      "omega_n_rad_s": 40.0,
+      "zeta": 0.8,
+      "kp_candidate_nm_per_rad": 118.94332990723377,
+      "kd_or_kv_candidate_nm_s_per_rad": 4.757733196289351,
+      "single_dof_semiimplicit_bound_value_lt4": 0.6799999999999999
+    },
+    {
+      "joint": "arm_joint4",
+      "effective_inertia_kg_m2": 0.00017335535325984497,
+      "gravity_hold_torque_nm_at_nominal": 0.04795719982924253,
+      "omega_n_rad_s": 90.0,
+      "zeta": 0.8,
+      "kp_candidate_nm_per_rad": 1.4041783614047443,
+      "kd_or_kv_candidate_nm_s_per_rad": 0.024963170869417677,
+      "single_dof_semiimplicit_bound_value_lt4": 1.6425
+    },
+    {
+      "joint": "arm_joint5",
+      "effective_inertia_kg_m2": 0.0051801451644364425,
+      "gravity_hold_torque_nm_at_nominal": -0.026196016940899854,
+      "omega_n_rad_s": 50.0,
+      "zeta": 0.8,
+      "kp_candidate_nm_per_rad": 12.950362911091107,
+      "kd_or_kv_candidate_nm_s_per_rad": 0.4144116131549154,
+      "single_dof_semiimplicit_bound_value_lt4": 0.8625
+    },
+    {
+      "joint": "arm_joint6",
+      "effective_inertia_kg_m2": 0.0001308725113289382,
+      "gravity_hold_torque_nm_at_nominal": 0.04797020659930337,
+      "omega_n_rad_s": 90.0,
+      "zeta": 0.8,
+      "kp_candidate_nm_per_rad": 1.0600673417643995,
+      "kd_or_kv_candidate_nm_s_per_rad": 0.018845641631367104,
+      "single_dof_semiimplicit_bound_value_lt4": 1.6425000000000003
+    }
+  ],
+  "finger_geometry_at_zero": [
+    {
+      "finger": "gripper1",
+      "mesh_sha256": "5050a6f6a26e5a5ab60b4b7a52b6950279a4a1216b497ba10bbe9a916064e037",
+      "joint_displacement_m": 0.0,
+      "bounds_arm_seg6_m": [
+        [
+          -0.01547386657527671,
+          -0.027575814666410365,
+          -0.007474568113107708
+        ],
+        [
+          0.01547732672252157,
+          0.014477754274183439,
+          0.07961205777345876
+        ]
+      ],
+      "distal_1mm_patch_center_m": [
+        1.7026570518427486e-06,
+        0.00026532169591355487,
+        0.07913870417473046
+      ]
+    },
+    {
+      "finger": "gripper2",
+      "mesh_sha256": "7221ee10dc4537cad1e84a5296c055661b4193884afdbb0f74f9500fd992eff3",
+      "joint_displacement_m": 0.0,
+      "bounds_arm_seg6_m": [
+        [
+          -0.015477355382207878,
+          -0.014477949151180235,
+          -0.007474597971808284
+        ],
+        [
+          0.015473886220148773,
+          0.027575759415215593,
+          0.07961195491718895
+        ]
+      ],
+      "distal_1mm_patch_center_m": [
+        -1.237740466428043e-06,
+        -0.0002654245955113158,
+        0.07913859145304607
+      ]
+    }
+  ],
+  "finger_min_vertex_distance_m": 8.54800061504613e-06,
+  "tcp_midpoint_candidate_in_arm_seg6_m": [
+    2.3245829270735277e-07,
+    -5.144979888047768e-08,
+    0.07913864781388827
+  ],
+  "tcp_height_world_if_base_origin_z032_m": 1.1766343254378273,
+  "limitations": [
+    "反射惯量只针对名义姿态，不能证明全工作空间、轮地约束或GPU仿真稳定",
+    "指尖1mm端部包围盒中心的中点是待选TCP，不等于已证实位于单一碰撞表面",
+    "顶点最近距离不是三角面穿透检查，不证明夹爪闭合无穿透",
+    "控制增益是低带宽模型候选，不保证重力下位置误差或任务跟踪达标"
+  ],
+  "tcp_surface_candidate": {
+    "body": "arm_seg6",
+    "physical_collision_body": "gripper1",
+    "gripper_displacement_m": 0.0,
+    "mesh_triangle_index": 152,
+    "point_in_arm_seg6_m": [
+      -0.00014368773353949706,
+      0.0003806802217573308,
+      0.07961205671429354
+    ],
+    "surface_normal_in_arm_seg6": [
+      3.6732050874566102e-06,
+      -3.403356485520703e-10,
+      0.9999999999932537
+    ],
+    "triangle_area_m2": 2.605752912206681e-07,
+    "selection_rule": "选现有gripper1碰撞网格中法向与arm_seg6正z夹角小于arccos(0.9)、面积大于1e-8m²的端面三角形，取中心z最大的三角形重心；不修改资产",
+    "quaternion_xyzw_for_tcp_axes_aligned_with_arm_seg6": [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "limitation": "几何表面点候选，尚未验证PhysX凸分解后的接触表面；不等同双指接触合力中心"
+  },
+  "control_derivation_inputs": {
+    "position_omega_n_rad_s_in_action_order": [
+      60.0,
+      60.0,
+      60.0,
+      60.0,
+      null,
+      null,
+      null,
+      null,
+      30.0,
+      35.0,
+      40.0,
+      90.0,
+      50.0,
+      90.0
+    ],
+    "position_damping_ratio": 0.8,
+    "wheel_velocity_time_constant_s": 0.05,
+    "input_status": "设计计算所选初始带宽，不是资产原值或实测带宽",
+    "formula": "I_eff=1/(M_inverse)jj；kp=I_eff*omega_n²；kd=2*zeta*I_eff*omega_n；轮kv=I_eff/0.05s",
+    "stability_caveat": "单DOF半隐式Euler条件h²kp/I+2hkd/I<4只是孤立线性近似；未验证耦合系统谱半径、约束、关节被动阻尼和全工作空间"
+  }
+}

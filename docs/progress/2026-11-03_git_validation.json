@@ -1,0 +1,14 @@
+{
+  "checked_at": "2026-11-03",
+  "tracked_file_count_before_validation_record": 2027,
+  "upstream_snapshot_unchanged": true,
+  "nested_git_backups_fsck_passed": true,
+  "active_asset_hashes_unchanged": true,
+  "missing_active_asset_files": [],
+  "new_entry_links_missing": [],
+  "gitlinks": 0,
+  "files_over_100_mib": 0,
+  "checkpoint_and_cache_files_staged": 0,
+  "credential_signature_scan_matches": 0,
+  "note": "仅文档与版本归档，不修改业务代码，不重跑仿真。上游与历史文件原有空白格式保持，不作无关清理。"
+}

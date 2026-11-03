@@ -1,0 +1,45 @@
+{
+  "date": "2026-10-31",
+  "kind": "只读静态正运动学核查，不是Gym或物理验证",
+  "source_urdf": "legacy/v3_reference_20261030/robot_description/a1arm_description/urdf/a1arm_rgm3_original_movable.urdf",
+  "source_urdf_sha256": "49b2e1b1acf728bdf1ec403126a219f7f62d7e5bbd0912c6b81af745fda498df",
+  "tcp_source": "v3_parameter_derivation_20261031.json:tcp_surface_candidate",
+  "arm_joint_positions_rad": [
+    0,
+    1,
+    -1.5,
+    0,
+    0,
+    0
+  ],
+  "wheel_and_steering_positions_rad": 0,
+  "gripper_displacements_m": [
+    0,
+    0
+  ],
+  "root_frame": "base_link",
+  "tcp_frame_binding": "arm_seg6",
+  "method": "按URDF parent链复合T_parent_origin与关节旋转／平移，再乘TCP齐次坐标；origin的rpy为固定轴xyz，关节轴在joint坐标中。",
+  "tcp_in_base_m": [
+    0.4156048098351045,
+    -0.00013966138456645335,
+    0.8571954106562761
+  ],
+  "reference_arm_mount_in_base_m": [
+    0.174,
+    0,
+    0.09535
+  ],
+  "tcp_relative_to_reference_mount_m": [
+    0.24160480983510452,
+    -0.00013966138456645335,
+    0.7618454106562761
+  ],
+  "spherical_radius_m_elevation_rad_azimuth_rad": [
+    0.7992379704310784,
+    1.263697985627187,
+    -0.0005780570722322227
+  ],
+  "spherical_formula": "r=norm(p); elevation=atan2(z,norm(xy)); azimuth=atan2(y,x)",
+  "limitations": "只在上述名义角与TCP候选下成立，不验证碰撞、PhysX导入、地面支撑、执行器稳定性或动态可达性；实际TCP候选仍待批准／验证。"
+}

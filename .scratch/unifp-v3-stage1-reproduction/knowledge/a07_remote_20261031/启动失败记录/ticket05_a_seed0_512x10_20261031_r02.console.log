@@ -1,0 +1,33 @@
+Importing module 'gym_38' (/mnt/data_8THDD/myl_unifp/isaacgym/python/isaacgym/_bindings/linux-x86_64/gym_38.so)
+Setting GYM_USD_PLUG_INFO_PATH to /mnt/data_8THDD/myl_unifp/isaacgym/python/isaacgym/_bindings/linux-x86_64/usd/plugInfo.json
+PyTorch version 2.3.1+cu121
+Device count 1
+/mnt/data_8THDD/myl_unifp/isaacgym/python/isaacgym/_bindings/src/gymtorch
+Using /mnt/data_8THDD/myl_unifp_v3_stage1/cache/torch_extensions as PyTorch extensions root...
+Emitting ninja build file /mnt/data_8THDD/myl_unifp_v3_stage1/cache/torch_extensions/gymtorch/build.ninja...
+Building extension module gymtorch...
+Using envvar MAX_JOBS (2) as the number of workers...
+ninja: no work to do.
+Loading extension module gymtorch...
+Setting seed: 0
+Not connected to PVD
++++ Using GPU PhysX
+Physics Engine: PhysX
+Physics Device: cuda:0
+GPU Pipeline: enabled
+/mnt/data_8THDD/conda_envs/unifp_v3_stage1/lib/python3.8/site-packages/torch/functional.py:512: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3587.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+Traceback (most recent call last):
+  File "/mnt/data_8THDD/conda_envs/unifp_v3_stage1/lib/python3.8/runpy.py", line 194, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/mnt/data_8THDD/conda_envs/unifp_v3_stage1/lib/python3.8/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/mnt/data_8THDD/myl_unifp_v3_stage1/UniFP_v3/legged_gym/scripts/train_v3.py", line 105, in <module>
+    main()
+  File "/mnt/data_8THDD/myl_unifp_v3_stage1/UniFP_v3/legged_gym/scripts/train_v3.py", line 86, in main
+    runner = V3OnPolicyRunner(environment, snapshot["training"], Path(args.output_dir), identity, snapshot, str(device))
+  File "/mnt/data_8THDD/myl_unifp_v3_stage1/UniFP_v3/legged_gym/b2_gym_learn/ppo_cse_pf/v3_on_policy_runner.py", line 47, in __init__
+    model = V3ActorCritic(env.num_obs, env.num_privileged_obs, env.num_pred_obs,
+AttributeError: 'V3PosForce' object has no attribute 'num_pred_obs'
+
+执行退出码=1

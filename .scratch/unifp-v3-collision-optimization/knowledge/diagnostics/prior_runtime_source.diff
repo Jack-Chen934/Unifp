@@ -1,0 +1,192 @@
+--- 首次远程副本/legged_robot_v3.py
++++ 最终源码/legged_robot_v3.py
+@@ -229,16 +229,53 @@
+             controls pushes in every run purpose; EE force stays zero.
+         """
+         interval = int(round(self.cfg.domain_rand.push_interval_s / self.dt))
+-        progress = self.training_policy_steps
++        evaluation_active = self.evaluation_policy_step is not None
++        progress = self.evaluation_policy_step if evaluation_active else self.training_policy_steps
++        last_push = self.evaluation_last_push_step if evaluation_active else self.last_push_policy_step
+         if (not self.cfg.domain_rand.push_robots or progress == 0
+-                or progress % interval != 0 or progress == self.last_push_policy_step):
++                or progress % interval != 0 or progress == last_push):
+             return False
+         max_velocity = self.cfg.domain_rand.max_push_vel_xy
+-        self.last_push_velocity_world = (2.0 * torch.rand(self.num_envs, 2, device=self.device) - 1.0) * max_velocity
++        if self.push_generator is None:
++            random_velocity = torch.rand(self.num_envs, 2, device=self.device)
++        else:
++            random_velocity = torch.rand(self.num_envs, 2, device=self.device, generator=self.push_generator)
++        self.last_push_velocity_world = (2.0 * random_velocity - 1.0) * max_velocity
+         self.root_states[:, 7:9] = self.last_push_velocity_world
+         self.gym.set_actor_root_state_tensor(self.sim, gymtorch.unwrap_tensor(self.root_states))
+-        self.last_push_policy_step = progress
++        if evaluation_active:
++            self.evaluation_last_push_step = progress
++        else:
++            self.last_push_policy_step = progress
+         return True
++
++    def set_evaluation_policy_step(self, policy_step: int) -> None:
++        """Set evaluation time without mutating any training progress counter.
++
++        Args:
++            policy_step: Absolute per-environment policy boundary, starting at A8000.
++
++        Note:
++            The first value seeds the separate evaluation push clock to prevent
++            replaying a push exactly at the saved training boundary.
++        """
++        if self.evaluation_policy_step is None:
++            self.evaluation_last_push_step = policy_step
++        self.evaluation_policy_step = policy_step
++
++    def set_evaluation_push_seed(self, seed: int) -> None:
++        """Install an independent deterministic random stream for evaluation pushes.
++
++        Args:
++            seed: Non-negative evaluation push seed, independent of task/reset RNG.
++
++        Raises:
++            ValueError: The push seed is negative.
++        """
++        if seed < 0:
++            raise ValueError("Evaluation push seed must be non-negative")
++        self.push_generator = torch.Generator(device=self.device)
++        self.push_generator.manual_seed(seed)
+ 
+     def get_training_state(self) -> Dict[str, Any]:
+         """Snapshot A09 persistent state without consuming randomness or stepping physics.
+@@ -344,7 +381,10 @@
+         self.training_policy_steps = 0
+         self.training_transitions = 0
+         self.last_push_policy_step = 0
++        self.evaluation_policy_step: Optional[int] = None
++        self.evaluation_last_push_step = 0
+         self.last_push_velocity_world = torch.zeros(self.num_envs, 2, device=self.device)
++        self.push_generator: Optional[torch.Generator] = None
+         if len(self.dof_names) != len(ACTION_JOINT_NAMES):
+             raise ValueError(f"Expected 14 actuated V3 joints, found {len(self.dof_names)}")
+         self.action_dof_indices = torch.tensor(
+@@ -403,6 +443,7 @@
+         self.execution_scale_delta = torch.zeros(self.num_envs, 14, device=self.device)
+         self.contact_valid = torch.zeros(self.num_envs, device=self.device, dtype=torch.bool)
+         self._published_observations: Dict[str, torch.Tensor] = {}
++        self.policy_trace_enabled = False
+         self._initialize_episode_metrics()
+         self.reset_idx(torch.arange(self.num_envs, device=self.device))
+         self._publish_observations(torch.arange(self.num_envs, device=self.device), initial=True)
+@@ -457,6 +498,7 @@
+         # Commands still describe the action interval that just ended. Settle it
+         # before command resampling and before done environments lose their state.
+         self.compute_reward()
++        policy_trace = self._build_policy_trace(base_push_applied, terminated, time_outs)
+         done_ids = dones.nonzero(as_tuple=False).flatten()
+         episode_records = self._accumulate_episode_metrics(done_ids, terminated)
+         self.last_actions.copy_(self.actions)
+@@ -475,8 +517,104 @@
+             "terminal_privileged_obs": terminal_privileged,
+             "episode_records": episode_records,
+             "base_push_applied": base_push_applied,
++            "policy_trace": policy_trace,
+         }
+         return self._published_observations, self.rew_buf.clone(), dones.long(), infos
++
++    def _build_policy_trace(
++        self, base_push_applied: bool, terminated: torch.Tensor, time_outs: torch.Tensor
++    ) -> List[Dict[str, Any]]:
++        """Capture physical policy-boundary data only during explicit evaluation.
++
++        Args:
++            base_push_applied: Whether this policy boundary injected a base push.
++            terminated: Boolean [N] physical-failure flags before any reset.
++            time_outs: Boolean [N] pure-timeout flags before any reset.
++
++        Returns:
++            One CPU JSON-compatible trace dictionary per environment, or an empty list.
++
++        Note:
++            Disabled during training to avoid device synchronization and trace storage.
++        """
++        if not self.policy_trace_enabled:
++            return []
++
++        # Snapshot terminal states before reset_idx replaces completed environments.
++        tcp_world = self._tcp_position()
++        target_world = self._geometric_target_world()
++        physical_errors = self._physical_tracking_errors()
++        tensors = {
++            "commands": self.commands[:, :3],
++            "ee_force_command": self.commands[:, 9:12],
++            "base_force_command": self.commands[:, 12:15],
++            "external_ee_force": self.external_ee_force_y,
++            "external_base_force": self.external_base_force_y,
++            "mass_com_delta": self.mass_com_delta,
++            "friction": self.friction,
++            "execution_scale_delta": self.execution_scale_delta,
++            "target_spherical": self.commands[:, 3:6],
++            "target_world_m": target_world,
++            "tcp_world_m": tcp_world,
++            "base_position_world_m": self.root_states[:, :3],
++            "base_orientation_world_xyzw": self.root_states[:, 3:7],
++            "base_linear_velocity_body_m_s": self.base_lin_vel,
++            "base_angular_velocity_body_rad_s": self.base_ang_vel,
++            "state_estimate_labels_scaled": self.obs_pred,
++            "physical_errors": physical_errors,
++            "actions": self.actions,
++            "raw_rewards": self.reward_raw,
++        }
++        cpu_tensors = {name: value.detach().cpu().tolist() for name, value in tensors.items()}
++        steps = self.episode_length_buf.detach().cpu().tolist()
++        push_velocity = self.last_push_velocity_world.detach().cpu().tolist()
++        terminated_values = terminated.detach().cpu().tolist()
++        timeout_values = time_outs.detach().cpu().tolist()
++        target_elapsed = self.target_elapsed_steps.detach().cpu().tolist()
++        target_move = self.target_move_steps.detach().cpu().tolist()
++        reward_names = self.reward_names
++        trace_rows = []
++        for env_id in range(self.num_envs):
++            trace_rows.append({
++                "env_id": env_id,
++                "episode_step": steps[env_id],
++                "time_s": steps[env_id] * self.dt,
++                "policy_input_time_s": max(steps[env_id] - 1, 0) * self.dt,
++                "target_segment_elapsed_steps": target_elapsed[env_id],
++                "target_segment_move_steps": target_move[env_id],
++                "target_segment_complete": target_elapsed[env_id] >= target_move[env_id],
++                "commands_body": cpu_tensors["commands"][env_id],
++                "end_effector_force_command_yaw_n": cpu_tensors["ee_force_command"][env_id],
++                "base_force_command_yaw_n": cpu_tensors["base_force_command"][env_id],
++                "external_end_effector_force_yaw_n": cpu_tensors["external_ee_force"][env_id],
++                "external_base_force_yaw_n": cpu_tensors["external_base_force"][env_id],
++                "target_spherical_m_rad_rad": cpu_tensors["target_spherical"][env_id],
++                "target_world_m": cpu_tensors["target_world_m"][env_id],
++                "tcp_world_m": cpu_tensors["tcp_world_m"][env_id],
++                "base_position_world_m": cpu_tensors["base_position_world_m"][env_id],
++                "base_orientation_world_xyzw": cpu_tensors["base_orientation_world_xyzw"][env_id],
++                "base_linear_velocity_body_m_s": cpu_tensors["base_linear_velocity_body_m_s"][env_id],
++                "base_angular_velocity_body_rad_s": cpu_tensors["base_angular_velocity_body_rad_s"][env_id],
++                "domain_randomization": {
++                    "base_mass_delta_kg": cpu_tensors["mass_com_delta"][env_id][0],
++                    "base_com_delta_local_m": cpu_tensors["mass_com_delta"][env_id][1:4],
++                    "tool_mass_delta_kg": cpu_tensors["mass_com_delta"][env_id][4],
++                    "friction_coefficient": cpu_tensors["friction"][env_id][0],
++                    "execution_scale_delta": cpu_tensors["execution_scale_delta"][env_id],
++                },
++                "state_estimate_labels_scaled": cpu_tensors["state_estimate_labels_scaled"][env_id],
++                "physical_errors": dict(zip(ERROR_METRIC_NAMES, cpu_tensors["physical_errors"][env_id])),
++                "action": cpu_tensors["actions"][env_id],
++                "reward": float(self.rew_buf[env_id]),
++                "raw_rewards": dict(zip(reward_names, cpu_tensors["raw_rewards"][env_id])),
++                "base_push_applied": base_push_applied,
++                "base_push_velocity_world_m_s": push_velocity[env_id] if base_push_applied else None,
++                "terminated": bool(terminated_values[env_id]),
++                "timeout": bool(timeout_values[env_id]),
++                "done_reason": "physical_failure" if terminated_values[env_id]
++                else "timeout" if timeout_values[env_id] else None,
++            })
++        return trace_rows
+ 
+     def _initialize_episode_metrics(self) -> None:
+         """Allocate bounded A-stage error histories and per-environment reward sums.

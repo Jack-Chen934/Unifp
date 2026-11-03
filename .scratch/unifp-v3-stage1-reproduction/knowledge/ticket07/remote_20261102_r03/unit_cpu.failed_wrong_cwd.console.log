@@ -1,0 +1,95 @@
+ERROR conda.cli.main_run:execute(148): `conda run python -m pytest /home/sorry/python_ws/interactive/unifp_reproduction/UniFP_v3/tests -q --ignore=/home/sorry/python_ws/interactive/unifp_reproduction/UniFP_v3/tests/test_v3_rewards.py` failed. (See above for error)
+[Quadrants] version 1.3.0, llvm 22.1.0, commit ab9a58ab, linux, python 3.11.15
+
+==================================== ERRORS ====================================
+________________ ERROR collecting tests/test_v3_actor_critic.py ________________
+ImportError while importing test module '/home/sorry/python_ws/interactive/unifp_reproduction/UniFP_v3/tests/test_v3_actor_critic.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/var/local/sorry/conda/envs/tavis/lib/python3.11/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UniFP_v3/tests/test_v3_actor_critic.py:7: in <module>
+    from legged_gym.b2_gym_learn.ppo_cse_pf.v3_actor_critic import V3ActorCritic
+E   ModuleNotFoundError: No module named 'legged_gym'
+________________ ERROR collecting tests/test_v3_episode_log.py _________________
+ImportError while importing test module '/home/sorry/python_ws/interactive/unifp_reproduction/UniFP_v3/tests/test_v3_episode_log.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/var/local/sorry/conda/envs/tavis/lib/python3.11/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UniFP_v3/tests/test_v3_episode_log.py:8: in <module>
+    from legged_gym.b2_gym_learn.ppo_cse_pf.v3_episode_log import flush_episode_records, write_episode_metadata
+E   ModuleNotFoundError: No module named 'legged_gym'
+_________________ ERROR collecting tests/test_v3_evaluation.py _________________
+ImportError while importing test module '/home/sorry/python_ws/interactive/unifp_reproduction/UniFP_v3/tests/test_v3_evaluation.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/var/local/sorry/conda/envs/tavis/lib/python3.11/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UniFP_v3/tests/test_v3_evaluation.py:11: in <module>
+    from legged_gym.b2_gym_learn.ppo_cse_pf.v3_evaluation import (
+E   ModuleNotFoundError: No module named 'legged_gym'
+____________________ ERROR collecting tests/test_v3_ppo.py _____________________
+ImportError while importing test module '/home/sorry/python_ws/interactive/unifp_reproduction/UniFP_v3/tests/test_v3_ppo.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/var/local/sorry/conda/envs/tavis/lib/python3.11/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UniFP_v3/tests/test_v3_ppo.py:7: in <module>
+    from legged_gym.b2_gym_learn.ppo_cse_pf.v3_actor_critic import V3ActorCritic
+E   ModuleNotFoundError: No module named 'legged_gym'
+_________________ ERROR collecting tests/test_v3_preflight.py __________________
+ImportError while importing test module '/home/sorry/python_ws/interactive/unifp_reproduction/UniFP_v3/tests/test_v3_preflight.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/var/local/sorry/conda/envs/tavis/lib/python3.11/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UniFP_v3/tests/test_v3_preflight.py:11: in <module>
+    from legged_gym.b2_gym_learn.ppo_cse_pf.v3_evaluation import REQUIRED_A_THRESHOLD_METRICS
+E   ModuleNotFoundError: No module named 'legged_gym'
+______________ ERROR collecting tests/test_v3_rollout_storage.py _______________
+ImportError while importing test module '/home/sorry/python_ws/interactive/unifp_reproduction/UniFP_v3/tests/test_v3_rollout_storage.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/var/local/sorry/conda/envs/tavis/lib/python3.11/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UniFP_v3/tests/test_v3_rollout_storage.py:8: in <module>
+    from legged_gym.b2_gym_learn.ppo_cse_pf.v3_rollout_storage import V3RolloutStorage
+E   ModuleNotFoundError: No module named 'legged_gym'
+________________ ERROR collecting tests/test_v3_run_identity.py ________________
+ImportError while importing test module '/home/sorry/python_ws/interactive/unifp_reproduction/UniFP_v3/tests/test_v3_run_identity.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/var/local/sorry/conda/envs/tavis/lib/python3.11/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UniFP_v3/tests/test_v3_run_identity.py:7: in <module>
+    from legged_gym.b2_gym_learn.ppo_cse_pf.v3_run_identity import build_run_identity
+E   ModuleNotFoundError: No module named 'legged_gym'
+___________________ ERROR collecting tests/test_v3_runner.py ___________________
+ImportError while importing test module '/home/sorry/python_ws/interactive/unifp_reproduction/UniFP_v3/tests/test_v3_runner.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/var/local/sorry/conda/envs/tavis/lib/python3.11/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UniFP_v3/tests/test_v3_runner.py:13: in <module>
+    from legged_gym.b2_gym_learn.ppo_cse_pf.v3_on_policy_runner import V3OnPolicyRunner
+E   ModuleNotFoundError: No module named 'legged_gym'
+=========================== short test summary info ============================
+ERROR UniFP_v3/tests/test_v3_actor_critic.py
+ERROR UniFP_v3/tests/test_v3_episode_log.py
+ERROR UniFP_v3/tests/test_v3_evaluation.py
+ERROR UniFP_v3/tests/test_v3_ppo.py
+ERROR UniFP_v3/tests/test_v3_preflight.py
+ERROR UniFP_v3/tests/test_v3_rollout_storage.py
+ERROR UniFP_v3/tests/test_v3_run_identity.py
+ERROR UniFP_v3/tests/test_v3_runner.py
+!!!!!!!!!!!!!!!!!!! Interrupted: 8 errors during collection !!!!!!!!!!!!!!!!!!!!
+8 errors in 0.42s

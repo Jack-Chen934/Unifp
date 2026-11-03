@@ -1,0 +1,19 @@
+{
+  "python": "3.8.20",
+  "torch": "2.3.1+cu121",
+  "numpy": "1.23.0",
+  "cuda_runtime": "12.1",
+  "isaac_gym": "1.0.preview4",
+  "device": "cuda:0",
+  "sim_device": "cuda:0",
+  "physics_engine": "SimType.SIM_PHYSX",
+  "use_gpu_pipeline": true,
+  "physx_use_gpu": true,
+  "cuda_visible_devices": "1",
+  "gpu_name": "NVIDIA RTX A6000",
+  "gpu_driver": "580.105.08",
+  "torch_num_threads": 4,
+  "platform": "Linux-6.8.0-139-generic-x86_64-with-glibc2.17",
+  "python_executable": "/mnt/data_8THDD/conda_envs/unifp_v3_stage1/bin/python",
+  "gym_import_path": "/mnt/data_8THDD/myl_unifp/isaacgym/python/isaacgym/__init__.py"
+}

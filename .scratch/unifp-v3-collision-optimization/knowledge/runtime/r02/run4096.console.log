@@ -1,0 +1,120 @@
+Importing module 'gym_38' (/mnt/data_8THDD/myl_unifp/isaacgym/python/isaacgym/_bindings/linux-x86_64/gym_38.so)
+Setting GYM_USD_PLUG_INFO_PATH to /mnt/data_8THDD/myl_unifp/isaacgym/python/isaacgym/_bindings/linux-x86_64/usd/plugInfo.json
+PyTorch version 2.3.1+cu121
+Device count 1
+/mnt/data_8THDD/myl_unifp/isaacgym/python/isaacgym/_bindings/src/gymtorch
+Using /mnt/data_8THDD/myl_unifp_v3_stage1/cache/torch_extensions as PyTorch extensions root...
+Emitting ninja build file /mnt/data_8THDD/myl_unifp_v3_stage1/cache/torch_extensions/gymtorch/build.ninja...
+Building extension module gymtorch...
+Using envvar MAX_JOBS (2) as the number of workers...
+ninja: no work to do.
+Not connected to PVD
++++ Using GPU PhysX
+Physics Engine: PhysX
+Physics Device: cuda:0
+GPU Pipeline: enabled
+Setting seed: 1
+V3 A: I=1, S=24, transitions=98304, value=0.061069, aux=0.030823
+V3 A: I=2, S=48, transitions=196608, value=0.083041, aux=0.030695
+V3 A: I=3, S=72, transitions=294912, value=0.091978, aux=0.031299
+V3 A: I=4, S=96, transitions=393216, value=0.092042, aux=0.030704
+V3 A: I=5, S=120, transitions=491520, value=0.072486, aux=0.030256
+V3 A: I=6, S=144, transitions=589824, value=0.072618, aux=0.029075
+V3 A: I=7, S=168, transitions=688128, value=0.072299, aux=0.02745
+V3 A: I=8, S=192, transitions=786432, value=0.065313, aux=0.025718
+V3 A: I=9, S=216, transitions=884736, value=0.057891, aux=0.024602
+V3 A: I=10, S=240, transitions=983040, value=0.05592, aux=0.02321
+V3 A: I=11, S=264, transitions=1081344, value=0.049004, aux=0.023085
+V3 A: I=12, S=288, transitions=1179648, value=0.05624, aux=0.022469
+V3 A: I=13, S=312, transitions=1277952, value=0.040416, aux=0.021722
+V3 A: I=14, S=336, transitions=1376256, value=0.035926, aux=0.021151
+V3 A: I=15, S=360, transitions=1474560, value=0.042222, aux=0.020415
+V3 A: I=16, S=384, transitions=1572864, value=0.035183, aux=0.019844
+V3 A: I=17, S=408, transitions=1671168, value=1.0804, aux=0.021043
+V3 A: I=18, S=432, transitions=1769472, value=0.31901, aux=0.020162
+V3 A: I=19, S=456, transitions=1867776, value=0.14796, aux=0.018268
+V3 A: I=20, S=480, transitions=1966080, value=0.085497, aux=0.017289
+V3 A: I=21, S=504, transitions=2064384, value=0.068656, aux=0.01658
+V3 A: I=22, S=528, transitions=2162688, value=0.052988, aux=0.016512
+V3 A: I=23, S=552, transitions=2260992, value=0.045989, aux=0.015974
+V3 A: I=24, S=576, transitions=2359296, value=0.029262, aux=0.015104
+V3 A: I=25, S=600, transitions=2457600, value=0.036508, aux=0.014337
+V3 A: I=26, S=624, transitions=2555904, value=0.024745, aux=0.013493
+V3 A: I=27, S=648, transitions=2654208, value=0.023359, aux=0.013177
+V3 A: I=28, S=672, transitions=2752512, value=0.053755, aux=0.012409
+V3 A: I=29, S=696, transitions=2850816, value=0.031161, aux=0.012196
+V3 A: I=30, S=720, transitions=2949120, value=0.030383, aux=0.011781
+V3 A: I=31, S=744, transitions=3047424, value=0.016806, aux=0.011222
+V3 A: I=32, S=768, transitions=3145728, value=0.077773, aux=0.010849
+V3 A: I=33, S=792, transitions=3244032, value=0.030587, aux=0.010902
+V3 A: I=34, S=816, transitions=3342336, value=2.0473, aux=0.013587
+V3 A: I=35, S=840, transitions=3440640, value=0.43921, aux=0.010534
+V3 A: I=36, S=864, transitions=3538944, value=0.14625, aux=0.0087736
+V3 A: I=37, S=888, transitions=3637248, value=0.098294, aux=0.0083943
+V3 A: I=38, S=912, transitions=3735552, value=0.088983, aux=0.0078146
+V3 A: I=39, S=936, transitions=3833856, value=0.053668, aux=0.0075144
+V3 A: I=40, S=960, transitions=3932160, value=0.042927, aux=0.0068385
+V3 A: I=41, S=984, transitions=4030464, value=0.03108, aux=0.0063437
+V3 A: I=42, S=1008, transitions=4128768, value=0.0502, aux=0.0071298
+V3 A: I=43, S=1032, transitions=4227072, value=0.19666, aux=0.006979
+V3 A: I=44, S=1056, transitions=4325376, value=0.191, aux=0.0060508
+V3 A: I=45, S=1080, transitions=4423680, value=0.10651, aux=0.0055314
+V3 A: I=46, S=1104, transitions=4521984, value=0.07233, aux=0.0050506
+V3 A: I=47, S=1128, transitions=4620288, value=0.039264, aux=0.0047229
+V3 A: I=48, S=1152, transitions=4718592, value=0.062493, aux=0.0045936
+V3 A: I=49, S=1176, transitions=4816896, value=0.056507, aux=0.0042237
+V3 A: I=50, S=1200, transitions=4915200, value=0.040395, aux=0.0040735
+V3 A: I=51, S=1224, transitions=5013504, value=1.7971, aux=0.0077313
+V3 A: I=52, S=1248, transitions=5111808, value=0.25131, aux=0.0039531
+V3 A: I=53, S=1272, transitions=5210112, value=0.17193, aux=0.0032012
+V3 A: I=54, S=1296, transitions=5308416, value=0.07261, aux=0.0029081
+V3 A: I=55, S=1320, transitions=5406720, value=0.070164, aux=0.0026684
+V3 A: I=56, S=1344, transitions=5505024, value=0.053912, aux=0.002499
+V3 A: I=57, S=1368, transitions=5603328, value=0.047136, aux=0.0022752
+V3 A: I=58, S=1392, transitions=5701632, value=0.028237, aux=0.0021922
+V3 A: I=59, S=1416, transitions=5799936, value=0.041616, aux=0.0026251
+V3 A: I=60, S=1440, transitions=5898240, value=0.093926, aux=0.0023182
+V3 A: I=61, S=1464, transitions=5996544, value=0.13691, aux=0.0019901
+V3 A: I=62, S=1488, transitions=6094848, value=0.056775, aux=0.0018798
+V3 A: I=63, S=1512, transitions=6193152, value=0.070833, aux=0.0018758
+V3 A: I=64, S=1536, transitions=6291456, value=0.037503, aux=0.0018481
+V3 A: I=65, S=1560, transitions=6389760, value=0.060126, aux=0.0018521
+V3 A: I=66, S=1584, transitions=6488064, value=0.036773, aux=0.0017792
+V3 A: I=67, S=1608, transitions=6586368, value=2.5399, aux=0.0037999
+V3 A: I=68, S=1632, transitions=6684672, value=0.63885, aux=0.0033448
+V3 A: I=69, S=1656, transitions=6782976, value=0.10844, aux=0.0019578
+V3 A: I=70, S=1680, transitions=6881280, value=0.053822, aux=0.0017308
+V3 A: I=71, S=1704, transitions=6979584, value=0.058406, aux=0.0017493
+V3 A: I=72, S=1728, transitions=7077888, value=0.052576, aux=0.0017527
+V3 A: I=73, S=1752, transitions=7176192, value=0.045005, aux=0.0017177
+V3 A: I=74, S=1776, transitions=7274496, value=0.024606, aux=0.0016331
+V3 A: I=75, S=1800, transitions=7372800, value=0.016373, aux=0.0016071
+V3 A: I=76, S=1824, transitions=7471104, value=0.048218, aux=0.0019151
+V3 A: I=77, S=1848, transitions=7569408, value=0.052272, aux=0.001597
+V3 A: I=78, S=1872, transitions=7667712, value=0.081262, aux=0.0014976
+V3 A: I=79, S=1896, transitions=7766016, value=0.030623, aux=0.0014715
+V3 A: I=80, S=1920, transitions=7864320, value=0.032691, aux=0.0014684
+V3 A: I=81, S=1944, transitions=7962624, value=0.019513, aux=0.001453
+V3 A: I=82, S=1968, transitions=8060928, value=0.071941, aux=0.0014463
+V3 A: I=83, S=1992, transitions=8159232, value=0.038695, aux=0.0013875
+V3 A: I=84, S=2016, transitions=8257536, value=1.0401, aux=0.004069
+V3 A: I=85, S=2040, transitions=8355840, value=0.13765, aux=0.0016148
+V3 A: I=86, S=2064, transitions=8454144, value=0.12444, aux=0.0012794
+V3 A: I=87, S=2088, transitions=8552448, value=0.087192, aux=0.0012266
+V3 A: I=88, S=2112, transitions=8650752, value=0.079869, aux=0.0011957
+V3 A: I=89, S=2136, transitions=8749056, value=0.072907, aux=0.0011786
+V3 A: I=90, S=2160, transitions=8847360, value=0.050896, aux=0.0011994
+V3 A: I=91, S=2184, transitions=8945664, value=0.039119, aux=0.00119
+V3 A: I=92, S=2208, transitions=9043968, value=0.083601, aux=0.0014201
+V3 A: I=93, S=2232, transitions=9142272, value=0.094749, aux=0.0014738
+V3 A: I=94, S=2256, transitions=9240576, value=0.099753, aux=0.0013189
+V3 A: I=95, S=2280, transitions=9338880, value=0.066079, aux=0.0012561
+V3 A: I=96, S=2304, transitions=9437184, value=0.094137, aux=0.0012191
+V3 A: I=97, S=2328, transitions=9535488, value=0.087548, aux=0.0011661
+V3 A: I=98, S=2352, transitions=9633792, value=0.071464, aux=0.0011358
+V3 A: I=99, S=2376, transitions=9732096, value=0.083988, aux=0.001113
+V3 A: I=100, S=2400, transitions=9830400, value=0.056864, aux=0.0011147
+{"completed_iterations": 100, "training_policy_steps": 2400, "training_transitions": 9830400, "last_saved_iteration": 100, "torch_peak_memory_bytes": 1920056320, "new_episode_after_resume": false, "lineage": {"run_id": "run4096", "reproduction_part": "A", "parent_checkpoint_path": null, "parent_checkpoint_sha256": null}}
+Loading extension module gymtorch...
+/mnt/data_8THDD/conda_envs/unifp_v3_stage1/lib/python3.8/site-packages/torch/functional.py:512: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3587.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]

@@ -1,0 +1,140 @@
+{
+  "capacity4096_buffer32": {
+    "passed": false,
+    "checks": {
+      "checkpoint_progress": true,
+      "completion_counters": true,
+      "checkpoint_identity": true,
+      "main_adam_steps": true,
+      "auxiliary_adam_steps": true,
+      "finite_iteration_metrics": true,
+      "finite_model": true,
+      "expected_environment_count": true,
+      "no_missing_physics_interactions": false,
+      "iteration_sequence": true,
+      "iteration_counters": true
+    },
+    "completion": {
+      "completed_iterations": 1,
+      "training_policy_steps": 24,
+      "training_transitions": 98304,
+      "last_saved_iteration": 1,
+      "torch_peak_memory_bytes": 1920017408,
+      "new_episode_after_resume": false,
+      "lineage": {
+        "run_id": "capacity4096_buffer32",
+        "reproduction_part": "A",
+        "parent_checkpoint_path": null,
+        "parent_checkpoint_sha256": null
+      }
+    },
+    "effective_physx_config": {
+      "bounce_threshold_velocity": 0.5,
+      "contact_collection": 2,
+      "contact_offset": 0.01,
+      "default_buffer_size_multiplier": 32,
+      "max_depenetration_velocity": 1.0,
+      "max_gpu_contact_pairs": 8388608,
+      "num_position_iterations": 4,
+      "num_threads": 10,
+      "num_velocity_iterations": 0,
+      "rest_offset": 0.0,
+      "solver_type": 1
+    },
+    "checkpoint_sha256": "ab705158ad07e695f3910a5b0720f407c93d24588c88560565d10a93513a99d0",
+    "checkpoint_path": "/mnt/data_8THDD/myl_unifp_v3_stage1/validation/ticket07_20261102_r01/runs/capacity4096_buffer32/checkpoints/model_000001.pt",
+    "optimizer_steps": {
+      "main": [
+        20.0
+      ],
+      "auxiliary": [
+        20.0
+      ]
+    },
+    "raw_output_sha256": {
+      "completion.json": "e0eedbd5debc7e332908d9e532d467c40ef6946f24acfb8747004e8e2935ae5b",
+      "episode_metadata.json": "dba08e84832a1448b20ce7c03ded6743dd1dc86d8b6cba4a3f95fb107aceda19",
+      "iterations.jsonl": "c976af6a17209b339e19f5606c0598852c0275b09637f9fd65ac72ce9fa88725",
+      "checkpoints.jsonl": "cae92b9cb9bc27b28418d48e8adea3afb8f2a26889bbed29c95d62bc678d4521"
+    },
+    "collection_s": 52.14492355892435,
+    "update_s": 0.795778124127537,
+    "finished_episodes": 288,
+    "end_types": {
+      "physical_failure": 288
+    },
+    "distinct_failed_envs": 267,
+    "mean_finished_episode_duration_s": 0.12743055270726067,
+    "mean_finished_episode_tcp_l2_m": 1.0683893468489662,
+    "first_policy_step_physical_failures": null
+  },
+  "capacity4096_pairs25": {
+    "passed": true,
+    "checks": {
+      "checkpoint_progress": true,
+      "completion_counters": true,
+      "checkpoint_identity": true,
+      "main_adam_steps": true,
+      "auxiliary_adam_steps": true,
+      "finite_iteration_metrics": true,
+      "finite_model": true,
+      "expected_environment_count": true,
+      "no_missing_physics_interactions": true,
+      "iteration_sequence": true,
+      "iteration_counters": true
+    },
+    "completion": {
+      "completed_iterations": 1,
+      "training_policy_steps": 24,
+      "training_transitions": 98304,
+      "last_saved_iteration": 1,
+      "torch_peak_memory_bytes": 1920040960,
+      "new_episode_after_resume": false,
+      "lineage": {
+        "run_id": "capacity4096_pairs25",
+        "reproduction_part": "A",
+        "parent_checkpoint_path": null,
+        "parent_checkpoint_sha256": null
+      }
+    },
+    "effective_physx_config": {
+      "bounce_threshold_velocity": 0.5,
+      "contact_collection": 2,
+      "contact_offset": 0.01,
+      "default_buffer_size_multiplier": 5,
+      "max_depenetration_velocity": 1.0,
+      "max_gpu_contact_pairs": 33554432,
+      "num_position_iterations": 4,
+      "num_threads": 10,
+      "num_velocity_iterations": 0,
+      "rest_offset": 0.0,
+      "solver_type": 1
+    },
+    "checkpoint_sha256": "7ba731d69b49f0d12c58261d10def22e328a6b3b9ea907cc8e37b736e5b3b7d9",
+    "checkpoint_path": "/mnt/data_8THDD/myl_unifp_v3_stage1/validation/ticket07_20261102_r01/runs/capacity4096_pairs25/checkpoints/model_000001.pt",
+    "optimizer_steps": {
+      "main": [
+        20.0
+      ],
+      "auxiliary": [
+        20.0
+      ]
+    },
+    "raw_output_sha256": {
+      "completion.json": "084df22329d15f3b3787bd23e50a9b8b42ef04ab3fae7312d02e9de1bb99137d",
+      "episode_metadata.json": "1592ba405cb3d8cee234c22b8bee97c9f277709b109a0ec3f04aadb539769e06",
+      "iterations.jsonl": "5568d869cba821d35fbfd8ef4d422d99c314ca19301146c3e63efad8d1aa3b6e",
+      "checkpoints.jsonl": "0acbb9bd6b3ec359ae755d5127f45388d9b448c1862ca1189c2b0ac991b8d291"
+    },
+    "collection_s": 54.69486744701862,
+    "update_s": 0.8873999062925577,
+    "finished_episodes": 545,
+    "end_types": {
+      "physical_failure": 545
+    },
+    "distinct_failed_envs": 543,
+    "mean_finished_episode_duration_s": 0.3518532031446422,
+    "mean_finished_episode_tcp_l2_m": 1.0912635780255728,
+    "first_policy_step_physical_failures": null
+  }
+}

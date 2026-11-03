@@ -1,0 +1,49 @@
+Importing module 'gym_38' (/mnt/data_8THDD/myl_unifp/isaacgym/python/isaacgym/_bindings/linux-x86_64/gym_38.so)
+Setting GYM_USD_PLUG_INFO_PATH to /mnt/data_8THDD/myl_unifp/isaacgym/python/isaacgym/_bindings/linux-x86_64/usd/plugInfo.json
+PyTorch version 2.3.1+cu121
+Device count 1
+/mnt/data_8THDD/myl_unifp/isaacgym/python/isaacgym/_bindings/src/gymtorch
+Using /mnt/data_8THDD/myl_unifp_v3_stage1/cache/torch_extensions as PyTorch extensions root...
+Creating extension directory /mnt/data_8THDD/myl_unifp_v3_stage1/cache/torch_extensions/gymtorch...
+Emitting ninja build file /mnt/data_8THDD/myl_unifp_v3_stage1/cache/torch_extensions/gymtorch/build.ninja...
+Building extension module gymtorch...
+Using envvar MAX_JOBS (2) as the number of workers...
+[1/2] c++ -MMD -MF gymtorch.o.d -DTORCH_EXTENSION_NAME=gymtorch -DTORCH_API_INCLUDE_EXTENSION_H -DPYBIND11_COMPILER_TYPE=\"_gcc\" -DPYBIND11_STDLIB=\"_libstdcpp\" -DPYBIND11_BUILD_ABI=\"_cxxabi1011\" -isystem /mnt/data_8THDD/conda_envs/unifp_v3_stage1/lib/python3.8/site-packages/torch/include -isystem /mnt/data_8THDD/conda_envs/unifp_v3_stage1/lib/python3.8/site-packages/torch/include/torch/csrc/api/include -isystem /mnt/data_8THDD/conda_envs/unifp_v3_stage1/lib/python3.8/site-packages/torch/include/TH -isystem /mnt/data_8THDD/conda_envs/unifp_v3_stage1/lib/python3.8/site-packages/torch/include/THC -isystem /mnt/data_8THDD/conda_envs/unifp_v3_stage1/include/python3.8 -D_GLIBCXX_USE_CXX11_ABI=0 -fPIC -std=c++17 -DTORCH_MAJOR=2 -DTORCH_MINOR=3 -c /mnt/data_8THDD/myl_unifp/isaacgym/python/isaacgym/_bindings/src/gymtorch/gymtorch.cpp -o gymtorch.o 
+[2/2] c++ gymtorch.o -shared -L/mnt/data_8THDD/conda_envs/unifp_v3_stage1/lib/python3.8/site-packages/torch/lib -lc10 -ltorch_cpu -ltorch -ltorch_python -o gymtorch.so
+Loading extension module gymtorch...
+Setting seed: 0
+Not connected to PVD
++++ Using GPU PhysX
+Physics Engine: PhysX
+Physics Device: cuda:0
+GPU Pipeline: enabled
+/mnt/data_8THDD/conda_envs/unifp_v3_stage1/lib/python3.8/site-packages/torch/functional.py:512: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3587.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+Traceback (most recent call last):
+  File "/mnt/data_8THDD/conda_envs/unifp_v3_stage1/lib/python3.8/runpy.py", line 194, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/mnt/data_8THDD/conda_envs/unifp_v3_stage1/lib/python3.8/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/mnt/data_8THDD/myl_unifp_v3_stage1/UniFP_v3/legged_gym/scripts/train_v3.py", line 105, in <module>
+    main()
+  File "/mnt/data_8THDD/myl_unifp_v3_stage1/UniFP_v3/legged_gym/scripts/train_v3.py", line 84, in main
+    environment = V3PosForce(env_cfg, params, args.physics_engine, args.sim_device, args.headless)
+  File "/mnt/data_8THDD/myl_unifp_v3_stage1/UniFP_v3/legged_gym/envs/v3/legged_robot_v3.py", line 317, in __init__
+    super().__init__(cfg, sim_params, physics_engine, sim_device, headless)
+  File "/mnt/data_8THDD/myl_unifp_v3_stage1/UniFP_v3/legged_gym/envs/base/legged_robot.py", line 41, in __init__
+    super().__init__(self.cfg, sim_params, physics_engine, sim_device, headless)
+  File "/mnt/data_8THDD/myl_unifp_v3_stage1/UniFP_v3/legged_gym/envs/base/base_task.py", line 56, in __init__
+    self.create_sim()
+  File "/mnt/data_8THDD/myl_unifp_v3_stage1/UniFP_v3/legged_gym/envs/base/legged_robot.py", line 199, in create_sim
+    self._create_envs()
+  File "/mnt/data_8THDD/myl_unifp_v3_stage1/UniFP_v3/legged_gym/envs/v3/legged_robot_v3.py", line 97, in _create_envs
+    apply_desktop_assembly_filters(self.gym, env_handle, actor_handle, manifest_path)
+  File "/mnt/data_8THDD/myl_unifp_v3_stage1/UniFP_v3/legged_gym/utils/v3_asset_collision.py", line 28, in apply_desktop_assembly_filters
+    manifest = json.loads(manifest_path.read_text())
+  File "/mnt/data_8THDD/conda_envs/unifp_v3_stage1/lib/python3.8/pathlib.py", line 1237, in read_text
+    return f.read()
+  File "/mnt/data_8THDD/conda_envs/unifp_v3_stage1/lib/python3.8/encodings/ascii.py", line 26, in decode
+    return codecs.ascii_decode(input, self.errors)[0]
+UnicodeDecodeError: 'ascii' codec can't decode byte 0xe6 in position 31: ordinal not in range(128)
+
+执行退出码=1

@@ -1,0 +1,43 @@
+# 本机、Python 与仿真缓存
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+.venv/
+.vscode/
+.idea/
+.DS_Store
+.cache/
+.history/
+# 训练大数据；保留 .scratch 下有限的短测证据与指标摘要
+logs/
+wandb/
+ckpt/
+checkpoints/
+*.pt
+*.pth
+*.ckpt
+*.onnx
+*.tfevents.*
+events.out.tfevents.*
+# 独立压缩归档留在原存储，源码和展开资产正常追踪
+*.tar.gz
+*.tgz
+*.zip
+*.7z
+*.bundle
+# 历史完整目录在本机留存，Git 只收录入口说明
+/legacy/*
+!/legacy/README.md
+# SDK 与认证配置不纳入项目
+isaacgym/
+isaac-gym-preview-4/
+.env
+.env.*
+*.pem
+*.key
+id_rsa*
+id_ed25519*
+known_hosts*

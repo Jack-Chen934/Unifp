@@ -1,0 +1,47 @@
+{
+  "short_checks_passed": true,
+  "restore_checks": {
+    "same_identity": true,
+    "parent_checkpoint_sha256": true,
+    "creation_mass_com_preserved": true,
+    "creation_friction_preserved": true,
+    "first_resume_step_no_physical_failure": true
+  },
+  "gate": {
+    "ready": true,
+    "blockers": [],
+    "formal_num_envs": 4096,
+    "formal_config_sha256": "2bffdf4d7e1173b3c6f157090d561c683da78e1da7a5abab7df5a0cc03ebeefd",
+    "identity_matches": true
+  },
+  "performance": {
+    "creation_s": 26.416920077055693,
+    "learn_wall_s": 403.0105445939116,
+    "iterations": 100,
+    "mean_wall_per_iteration_s": 4.030105445939117,
+    "interval_median_s": 4.039909212384373,
+    "interval_p95_s": 4.64690546928905,
+    "warm_after_10_interval_mean_s": 4.003873092096506,
+    "warm_after_10_collection_mean_s": 2.702819732700785,
+    "warm_after_10_update_mean_s": 0.6698858718956924,
+    "checkpoint_writes": [
+      {
+        "iteration": 100,
+        "seconds": 0.8406589757651091
+      }
+    ],
+    "estimated_a8000_hours": 8.955789879864703,
+    "torch_peak_memory_bytes": 1920056320,
+    "target_passed": true,
+    "说明": "100轮开发短测含正常日志及最终保存；区间含上一轮尾部IO，最后尾部IO完整计入learn_wall_s。长训策略、GPU共享负载及额外定期保存可改变耗时。",
+    "same_gpu_512": {
+      "baseline_full_step_s": 0.23306131466757507,
+      "candidate_full_step_s": 0.04843295730650425,
+      "full_step_speedup": 4.8120397272597755,
+      "baseline_physics_step_s": 0.1889053380396217,
+      "candidate_physics_step_s": 0.026483725821599365,
+      "physics_step_speedup": 7.132883768399231,
+      "说明": "相同最终源码、GPU1、seed1、2**25容量，独立进程依次100步。物理段与完整step轨迹可能分离，不相减计算精确占比。"
+    }
+  }
+}

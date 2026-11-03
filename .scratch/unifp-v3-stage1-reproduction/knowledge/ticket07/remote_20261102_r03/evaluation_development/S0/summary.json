@@ -1,0 +1,135 @@
+{
+  "scenario_name": "S0",
+  "checkpoint_iteration": 1,
+  "trace_policy_steps": 57873,
+  "episodes": {
+    "completed": 96,
+    "expected": 96,
+    "completion_rate": 1.0,
+    "physical_failures": 39,
+    "timeouts": 57,
+    "failure_denominator": 96,
+    "physical_failure_rate": 0.40625
+  },
+  "metrics": {
+    "tcp_geometric_l1_m": {
+      "mean": 0.8228990844294681,
+      "p95": 1.2308067321777338,
+      "sample_count": 57873
+    },
+    "tcp_geometric_l2_m": {
+      "mean": 0.5497541109164129,
+      "p95": 0.8067321658134458,
+      "sample_count": 57873
+    },
+    "base_planar_speed_m_s": {
+      "mean": 0.004162396453466861,
+      "p95": 0.023607368022203208,
+      "sample_count": 57873
+    },
+    "base_yaw_rate_rad_s": {
+      "mean": 0.004131440213829463,
+      "p95": 0.01022246554493901,
+      "sample_count": 57873
+    },
+    "episode_reward_return": {
+      "mean": 59.620547292133175,
+      "p95": 101.91682815551758,
+      "sample_count": 96
+    },
+    "episode_reward_rate": {
+      "mean": 5.112747676189945,
+      "p95": 5.890481759785311,
+      "sample_count": 96
+    },
+    "state_estimation_base_velocity_tcp_mae_rmse": {
+      "mae_by_dimension": [
+        0.0742361381125433,
+        0.0644997296829577,
+        0.03323358160031747,
+        0.8695285449639474,
+        1.1241191178443104,
+        0.03742960435070283
+      ],
+      "rmse_by_dimension": [
+        0.07513983309923479,
+        0.06464258673522086,
+        0.03599093103234997,
+        0.8696248413910949,
+        1.1243649286837092,
+        0.05843649296960109
+      ],
+      "dimensions": [
+        "base_vx_m_s",
+        "base_vy_m_s",
+        "base_vz_m_s",
+        "tcp_radius_m",
+        "tcp_elevation_rad",
+        "tcp_azimuth_rad"
+      ]
+    },
+    "state_estimation/base_vx_m_s_mae": {
+      "mean": 0.0742361381125433
+    },
+    "state_estimation/base_vx_m_s_rmse": {
+      "mean": 0.07513983309923479
+    },
+    "state_estimation/base_vy_m_s_mae": {
+      "mean": 0.0644997296829577
+    },
+    "state_estimation/base_vy_m_s_rmse": {
+      "mean": 0.06464258673522086
+    },
+    "state_estimation/base_vz_m_s_mae": {
+      "mean": 0.03323358160031747
+    },
+    "state_estimation/base_vz_m_s_rmse": {
+      "mean": 0.03599093103234997
+    },
+    "state_estimation/tcp_radius_m_mae": {
+      "mean": 0.8695285449639474
+    },
+    "state_estimation/tcp_radius_m_rmse": {
+      "mean": 0.8696248413910949
+    },
+    "state_estimation/tcp_elevation_rad_mae": {
+      "mean": 1.1241191178443104
+    },
+    "state_estimation/tcp_elevation_rad_rmse": {
+      "mean": 1.1243649286837092
+    },
+    "state_estimation/tcp_azimuth_rad_mae": {
+      "mean": 0.03742960435070283
+    },
+    "state_estimation/tcp_azimuth_rad_rmse": {
+      "mean": 0.05843649296960109
+    },
+    "physical_failure_rate": {
+      "mean": 0.40625
+    },
+    "target_movement_phase_elapsed_rate": {
+      "mean": 0.3661120038705441,
+      "sample_count": 57873
+    }
+  },
+  "threshold_version": null,
+  "threshold_results": null,
+  "push_recovery_windows": [],
+  "paper_comparison_scope": {
+    "fig_3b": "V3逐维TCP球坐标与底盘速度估计误差分布；单位见维度标签",
+    "fig_3b_limit": "资产、目标分布和环境协议不同；不重建论文未公开的原始数据点",
+    "fig_3c_fig_3d": "受力仿真与实机结果不属于本A阶段评估"
+  },
+  "evidence_complete": true,
+  "assessment": "ungraded_or_incomplete",
+  "evaluation_device": "cuda:0",
+  "evaluation_environment_count": 32,
+  "evaluation_seed": 1001,
+  "push_seed": 2001,
+  "policy_updates": 0,
+  "用途": "真实1轮模型的开发场景验证，非A8000验收",
+  "trace_rows": 57873,
+  "push_rows": 0,
+  "nonzero_base_command_rows": 0,
+  "checkpoint_sha256": "07811ea238e52883ccba327794c062afbd131614cbeb5a3ed385e2a3535a5c50"
+}

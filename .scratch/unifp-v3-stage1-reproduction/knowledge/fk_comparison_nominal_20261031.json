@@ -1,0 +1,292 @@
+{
+  "urdf": "UniFP_v3/resources/robots/v3_a1_desktop/urdf/a1arm_rgm3_desktop_fixed_gripper.urdf",
+  "probe_asset": "UniFP_v3/resources/robots/v3_a1_desktop/urdf/a1arm_rgm3_desktop_fixed_gripper.urdf",
+  "arm_joint_positions_rad": [
+    -7.989457984081128e-10,
+    1.0,
+    -1.5,
+    2.0878707651661443e-09,
+    1.2951596239929586e-08,
+    5.100145017422619e-08
+  ],
+  "tcp_offset_in_arm_seg6_m": [
+    -0.00014368773353949706,
+    0.0003806802217573308,
+    0.07961205671429354
+  ],
+  "tcp_world_position_m": [
+    0.4156048098402447,
+    -0.00013965852723194245,
+    1.197195414226771
+  ],
+  "gym_to_urdf_link_differences": {
+    "base_link": {
+      "position_error_m": 0.0,
+      "orientation_error_rad": 0.0
+    },
+    "aluminum_profiles": {
+      "position_error_m": 1.663695795670526e-07,
+      "orientation_error_rad": 1.717853695100766e-08
+    },
+    "fl_steering_link": {
+      "position_error_m": 1.5334029953948293e-07,
+      "orientation_error_rad": 1.5149564284540105e-08
+    },
+    "fl_Link": {
+      "position_error_m": 1.6107343075117947e-07,
+      "orientation_error_rad": 2.6350904651508717e-08
+    },
+    "fr_steering_link": {
+      "position_error_m": 1.4671850518758543e-07,
+      "orientation_error_rad": 1.5149564284540105e-08
+    },
+    "fr_Link": {
+      "position_error_m": 1.4979527432137128e-07,
+      "orientation_error_rad": 5.337823331971259e-08
+    },
+    "bl_steering_link": {
+      "position_error_m": 1.41841865579453e-07,
+      "orientation_error_rad": 1.5149564284540105e-08
+    },
+    "bl_Link": {
+      "position_error_m": 1.3911945149246788e-07,
+      "orientation_error_rad": 2.6350904651508717e-08
+    },
+    "br_steering_link": {
+      "position_error_m": 1.5095785481480254e-07,
+      "orientation_error_rad": 1.5149564284540105e-08
+    },
+    "br_Link": {
+      "position_error_m": 1.506229706836898e-07,
+      "orientation_error_rad": 5.337823331971259e-08
+    },
+    "arm_base": {
+      "position_error_m": 6.669555663089385e-08,
+      "orientation_error_rad": 1.5017574725440176e-08
+    },
+    "rear_top_camera_connector": {
+      "position_error_m": 2.9835972282740214e-07,
+      "orientation_error_rad": 5.9604644775390605e-08
+    },
+    "rear_top_camera": {
+      "position_error_m": 2.986137803519839e-07,
+      "orientation_error_rad": 2.5576485594150893e-07
+    },
+    "right_camera_connector": {
+      "position_error_m": 5.9260733901100034e-08,
+      "orientation_error_rad": 8.773998306431858e-08
+    },
+    "right_camera": {
+      "position_error_m": 6.705552728635436e-08,
+      "orientation_error_rad": 1.3448615545948002e-07
+    },
+    "left_camera_connector": {
+      "position_error_m": 1.0591439724173401e-07,
+      "orientation_error_rad": 2.455873068468916e-07
+    },
+    "left_camera": {
+      "position_error_m": 1.1289049116225462e-07,
+      "orientation_error_rad": 2.3438808561446037e-07
+    },
+    "arm_seg1": {
+      "position_error_m": 8.277921696792314e-08,
+      "orientation_error_rad": 1.2245768992871046e-07
+    },
+    "arm_seg2": {
+      "position_error_m": 4.40461840452098e-08,
+      "orientation_error_rad": 1.3048863755355255e-07
+    },
+    "arm_seg3": {
+      "position_error_m": 1.0479606766594397e-07,
+      "orientation_error_rad": 5.003795107226835e-07
+    },
+    "arm_seg4": {
+      "position_error_m": 7.622557619820381e-08,
+      "orientation_error_rad": 4.4585747397568925e-07
+    },
+    "arm_seg5": {
+      "position_error_m": 1.6538907722019057e-07,
+      "orientation_error_rad": 5.741006739426415e-07
+    },
+    "arm_seg6": {
+      "position_error_m": 2.0933247750188142e-07,
+      "orientation_error_rad": 5.198788212068611e-07
+    },
+    "gripper1": {
+      "position_error_m": 2.1629768612439179e-07,
+      "orientation_error_rad": 5.80179782128436e-07
+    },
+    "gripper2": {
+      "position_error_m": 2.1613650248411836e-07,
+      "orientation_error_rad": 4.699445390485996e-07
+    },
+    "end_effector_link": {
+      "position_error_m": 2.1026384970549585e-07,
+      "orientation_error_rad": 5.198788212068611e-07
+    },
+    "wrist_camera_connector": {
+      "position_error_m": 2.238532705686975e-07,
+      "orientation_error_rad": 5.861900334032217e-07
+    },
+    "wrist_camera": {
+      "position_error_m": 2.1588953889967165e-07,
+      "orientation_error_rad": 5.491618347644839e-07
+    }
+  },
+  "max_link_position_error_m": 2.986137803519839e-07,
+  "max_link_orientation_error_rad": 5.861900334032217e-07,
+  "saved_ik_audit": {
+    "sample_count": 305,
+    "position_residual_p95_m": 3.736329041217424e-10,
+    "position_residual_max_m": 7.107988875909542e-10,
+    "position_residual_below_0_1mm_count": 305,
+    "first_transition_path_count": 12,
+    "first_transition_path_max_joint_step_rad": 5.165028243530678,
+    "first_transition_paths": [
+      {
+        "path_index": 0,
+        "max_joint_step_rad": 4.515160670812989,
+        "max_step_by_joint_rad": [
+          0.19224677315059946,
+          0.13009133189188438,
+          0.12268569669906082,
+          3.6161065263790495,
+          0.11271215144988181,
+          4.515160670812989
+        ]
+      },
+      {
+        "path_index": 1,
+        "max_joint_step_rad": 2.382523801803492,
+        "max_step_by_joint_rad": [
+          0.32344121179750873,
+          0.11922178743502743,
+          0.10249269974699149,
+          1.4307928827550134,
+          0.08138922296149556,
+          2.382523801803492
+        ]
+      },
+      {
+        "path_index": 2,
+        "max_joint_step_rad": 2.8877704110171223,
+        "max_step_by_joint_rad": [
+          0.08852455800101455,
+          0.05109821098425482,
+          0.11247151657156795,
+          1.2875833507554226,
+          0.08242141580170369,
+          2.8877704110171223
+        ]
+      },
+      {
+        "path_index": 3,
+        "max_joint_step_rad": 2.8509314462443127,
+        "max_step_by_joint_rad": [
+          2.2910638584658036,
+          0.10907913800170632,
+          0.09348298831887458,
+          0.37093024487507015,
+          2.8509314462443127,
+          2.783274550973011
+        ]
+      },
+      {
+        "path_index": 4,
+        "max_joint_step_rad": 4.285994433358146,
+        "max_step_by_joint_rad": [
+          0.10893321786813262,
+          0.14492164059455281,
+          0.13698395023652554,
+          4.285994433358146,
+          0.4663920759416706,
+          3.5590355885032032
+        ]
+      },
+      {
+        "path_index": 5,
+        "max_joint_step_rad": 4.839474568774383,
+        "max_step_by_joint_rad": [
+          0.15505723815925765,
+          0.09689500405331164,
+          0.14630616571491362,
+          3.9159060444077642,
+          0.3777601622454587,
+          4.839474568774383
+        ]
+      },
+      {
+        "path_index": 6,
+        "max_joint_step_rad": 4.8333305277158125,
+        "max_step_by_joint_rad": [
+          0.15547037997402374,
+          0.06452086757469755,
+          0.09084145594081372,
+          4.8333305277158125,
+          0.11570410108284497,
+          2.2692560805032462
+        ]
+      },
+      {
+        "path_index": 7,
+        "max_joint_step_rad": 3.188987569463198,
+        "max_step_by_joint_rad": [
+          0.17147541944515832,
+          0.02193941726638915,
+          0.07657226172493092,
+          2.7731617588092226,
+          0.3601552047999206,
+          3.188987569463198
+        ]
+      },
+      {
+        "path_index": 8,
+        "max_joint_step_rad": 3.7366848385013323,
+        "max_step_by_joint_rad": [
+          2.6727413985918296,
+          1.393060556726049,
+          0.6743369919239326,
+          3.7366848385013323,
+          1.5162103971183223,
+          3.32470437164225
+        ]
+      },
+      {
+        "path_index": 9,
+        "max_joint_step_rad": 3.854441409481279,
+        "max_step_by_joint_rad": [
+          0.1239360517935397,
+          0.09048010193169231,
+          0.07183548886328217,
+          3.854441409481279,
+          0.3138739784345122,
+          2.6147090729479303
+        ]
+      },
+      {
+        "path_index": 10,
+        "max_joint_step_rad": 5.165028243530678,
+        "max_step_by_joint_rad": [
+          0.1785154255509538,
+          0.012677379566017999,
+          0.0834666820059824,
+          1.5245314229724474,
+          0.07395121021572576,
+          5.165028243530678
+        ]
+      },
+      {
+        "path_index": 11,
+        "max_joint_step_rad": 3.0821995511085376,
+        "max_step_by_joint_rad": [
+          0.14542304972766035,
+          0.032627180057135385,
+          0.14323864805589226,
+          0.9320017029464505,
+          0.20554010732270306,
+          3.0821995511085376
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,236 @@
+{
+  "short_checks_passed": false,
+  "restore_checks": {
+    "same_identity": true,
+    "parent_checkpoint_sha256": true,
+    "creation_mass_com_preserved": true,
+    "creation_friction_preserved": true,
+    "first_resume_step_no_physical_failure": true
+  },
+  "runs": {
+    "smoke32": {
+      "passed": true,
+      "checks": {
+        "checkpoint_progress": true,
+        "completion_counters": true,
+        "checkpoint_identity": true,
+        "main_adam_steps": true,
+        "auxiliary_adam_steps": true,
+        "finite_iteration_metrics": true,
+        "finite_model": true,
+        "expected_environment_count": true,
+        "no_missing_physics_interactions": true,
+        "iteration_sequence": true,
+        "iteration_counters": true
+      },
+      "completion": {
+        "completed_iterations": 1,
+        "training_policy_steps": 24,
+        "training_transitions": 768,
+        "last_saved_iteration": 1,
+        "torch_peak_memory_bytes": 70681088,
+        "new_episode_after_resume": false,
+        "lineage": {
+          "run_id": "smoke32",
+          "reproduction_part": "A",
+          "parent_checkpoint_path": null,
+          "parent_checkpoint_sha256": null
+        }
+      },
+      "checkpoint_sha256": "1d75b1b282e76255ca3c66710caa5167bf9474787432389ead3e417f4b7df556",
+      "checkpoint_path": "/mnt/data_8THDD/myl_unifp_v3_stage1/validation/ticket07_20261102_r01/runs/smoke32/checkpoints/model_000001.pt",
+      "optimizer_steps": {
+        "main": [
+          20.0
+        ],
+        "auxiliary": [
+          20.0
+        ]
+      },
+      "raw_output_sha256": {
+        "completion.json": "0a8f861da06867634bf80e4af0197f8fc364ed5abd586d4685ee0c071d96ba41",
+        "episode_metadata.json": "4bfb257ef8ace42ae303a28351b6f17b04aaf215b5dd3a4bb4890945fa0ac8a5",
+        "iterations.jsonl": "46e622bd64d92aad413671c580cab1ad4bfe60be2e8adc359b7874c8977ba192",
+        "checkpoints.jsonl": "9d3f3ae863e683b062488de057446cd978378dae23a20e7057fd6b5b542f2352"
+      },
+      "collection_s": 4.089273629710078,
+      "update_s": 0.49643663223832846,
+      "finished_episodes": 5,
+      "end_types": {
+        "physical_failure": 5
+      },
+      "distinct_failed_envs": 5,
+      "mean_finished_episode_duration_s": 0.3199999928474426,
+      "mean_finished_episode_tcp_l2_m": 1.0939951181411742,
+      "first_policy_step_physical_failures": null
+    },
+    "train512": {
+      "passed": true,
+      "checks": {
+        "checkpoint_progress": true,
+        "completion_counters": true,
+        "checkpoint_identity": true,
+        "main_adam_steps": true,
+        "auxiliary_adam_steps": true,
+        "finite_iteration_metrics": true,
+        "finite_model": true,
+        "expected_environment_count": true,
+        "no_missing_physics_interactions": true,
+        "iteration_sequence": true,
+        "iteration_counters": true
+      },
+      "completion": {
+        "completed_iterations": 10,
+        "training_policy_steps": 240,
+        "training_transitions": 122880,
+        "last_saved_iteration": 10,
+        "torch_peak_memory_bytes": 283805696,
+        "new_episode_after_resume": false,
+        "lineage": {
+          "run_id": "train512",
+          "reproduction_part": "A",
+          "parent_checkpoint_path": null,
+          "parent_checkpoint_sha256": null
+        }
+      },
+      "checkpoint_sha256": "5483fb531e5156fc3ecbe68ad6f7618834e95434d967c6c587cbc4ae23250cd0",
+      "checkpoint_path": "/mnt/data_8THDD/myl_unifp_v3_stage1/validation/ticket07_20261102_r01/runs/train512/checkpoints/model_000010.pt",
+      "optimizer_steps": {
+        "main": [
+          200.0
+        ],
+        "auxiliary": [
+          200.0
+        ]
+      },
+      "raw_output_sha256": {
+        "completion.json": "37bb3a20e1104e525f96b80f570292f111e505e79e51d632d1048409f186d8ee",
+        "episode_metadata.json": "5c68d041b849393adb612213e9efeaf30efb1d527d4749af9daef039ab888783",
+        "iterations.jsonl": "2d6cc2d7f458802dbe8422e8193ee782cfc58b79bc668075f23e944665ef8add",
+        "checkpoints.jsonl": "7fbe10bb14223ebe5701d73391cd8d210bfbfd49694c80596340eb061a670fa0"
+      },
+      "collection_s": 84.81266822107136,
+      "update_s": 4.7185682454146445,
+      "finished_episodes": 129,
+      "end_types": {
+        "physical_failure": 129
+      },
+      "distinct_failed_envs": 99,
+      "mean_finished_episode_duration_s": 0.5257364223574021,
+      "mean_finished_episode_tcp_l2_m": 0.8742604631381904,
+      "first_policy_step_physical_failures": null
+    },
+    "resume512": {
+      "passed": true,
+      "checks": {
+        "checkpoint_progress": true,
+        "completion_counters": true,
+        "checkpoint_identity": true,
+        "main_adam_steps": true,
+        "auxiliary_adam_steps": true,
+        "finite_iteration_metrics": true,
+        "finite_model": true,
+        "expected_environment_count": true,
+        "no_missing_physics_interactions": true,
+        "iteration_sequence": true,
+        "iteration_counters": true
+      },
+      "completion": {
+        "completed_iterations": 11,
+        "training_policy_steps": 264,
+        "training_transitions": 135168,
+        "last_saved_iteration": 11,
+        "torch_peak_memory_bytes": 283126272,
+        "new_episode_after_resume": true,
+        "lineage": {
+          "run_id": "resume512",
+          "reproduction_part": "A",
+          "parent_checkpoint_path": "/mnt/data_8THDD/myl_unifp_v3_stage1/validation/ticket07_20261102_r01/runs/train512/checkpoints/model_000010.pt",
+          "parent_checkpoint_sha256": "5483fb531e5156fc3ecbe68ad6f7618834e95434d967c6c587cbc4ae23250cd0"
+        }
+      },
+      "checkpoint_sha256": "fb116879385ec1358fd79f97c16003a36dd3a730c2aa58b2c2bbb17bead4ccf1",
+      "checkpoint_path": "/mnt/data_8THDD/myl_unifp_v3_stage1/validation/ticket07_20261102_r01/runs/resume512/checkpoints/model_000011.pt",
+      "optimizer_steps": {
+        "main": [
+          220.0
+        ],
+        "auxiliary": [
+          220.0
+        ]
+      },
+      "raw_output_sha256": {
+        "completion.json": "173368da1b3fc0d0d25097a93c7ada8015a354ad21b52a0ab3e80db4dbc36f78",
+        "episode_metadata.json": "23814dd7e8e89653eaf5f70b4a27817b52377c6b829a0f1befd1c787d3ef04b4",
+        "iterations.jsonl": "6d1d4eea83c59966849e58c4a2a6b344fb8fb3480e0a3270de41c0d24f06ccc6",
+        "checkpoints.jsonl": "116f5d90d50ba8cf5d09b99536e8881619fae06959e333651c963e76aa8e878f"
+      },
+      "collection_s": 8.52233319496736,
+      "update_s": 0.5332750272937119,
+      "finished_episodes": 74,
+      "end_types": {
+        "physical_failure": 74
+      },
+      "distinct_failed_envs": 74,
+      "mean_finished_episode_duration_s": 0.3645945864452704,
+      "mean_finished_episode_tcp_l2_m": 1.0512557061942849,
+      "first_policy_step_physical_failures": 0
+    },
+    "capacity4096": {
+      "passed": false,
+      "checks": {
+        "checkpoint_progress": true,
+        "completion_counters": true,
+        "checkpoint_identity": true,
+        "main_adam_steps": true,
+        "auxiliary_adam_steps": true,
+        "finite_iteration_metrics": true,
+        "finite_model": true,
+        "expected_environment_count": true,
+        "no_missing_physics_interactions": false,
+        "iteration_sequence": true,
+        "iteration_counters": true
+      },
+      "completion": {
+        "completed_iterations": 1,
+        "training_policy_steps": 24,
+        "training_transitions": 98304,
+        "last_saved_iteration": 1,
+        "torch_peak_memory_bytes": 1920017408,
+        "new_episode_after_resume": false,
+        "lineage": {
+          "run_id": "capacity4096",
+          "reproduction_part": "A",
+          "parent_checkpoint_path": null,
+          "parent_checkpoint_sha256": null
+        }
+      },
+      "checkpoint_sha256": "bc1a4ceb398859e3e29608e0c577d247c425abab98b2b0c8d3e2d7d579427092",
+      "checkpoint_path": "/mnt/data_8THDD/myl_unifp_v3_stage1/validation/ticket07_20261102_r01/runs/capacity4096/checkpoints/model_000001.pt",
+      "optimizer_steps": {
+        "main": [
+          20.0
+        ],
+        "auxiliary": [
+          20.0
+        ]
+      },
+      "raw_output_sha256": {
+        "completion.json": "7e2525fa954e2218e0c89670fd72c7a2ea0327d5df7574fd70a9e24c0f841f70",
+        "episode_metadata.json": "b49f0deab0fe22dade49559f536acc15086a82c46e9483e66e3b031a8a73a5a1",
+        "iterations.jsonl": "bdd5bfcc60d04d7f63ed199483aaeb310668937d2f182f54c1f064bf30fa1e61",
+        "checkpoints.jsonl": "748ba56744b9e0690a0ec1305ad324bbaa6610bc92e30e42a3f79935eaad7407"
+      },
+      "collection_s": 51.162010996136814,
+      "update_s": 0.7988439481705427,
+      "finished_episodes": 291,
+      "end_types": {
+        "physical_failure": 291
+      },
+      "distinct_failed_envs": 270,
+      "mean_finished_episode_duration_s": 0.129690718750671,
+      "mean_finished_episode_tcp_l2_m": 1.0658586378052473,
+      "first_policy_step_physical_failures": null
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "completed_iterations": 11,
+  "training_policy_steps": 264,
+  "training_transitions": 135168,
+  "last_saved_iteration": 11,
+  "torch_peak_memory_bytes": 283125248,
+  "new_episode_after_resume": true,
+  "lineage": {
+    "run_id": "resume512",
+    "reproduction_part": "A",
+    "parent_checkpoint_path": "/mnt/data_8THDD/myl_unifp_v3_stage1/validation/collision_optimization_20261103_r02/run512/checkpoints/model_000010.pt",
+    "parent_checkpoint_sha256": "639d7e23d00b8fa08e215bb6030e47159b99a05cb3900f62d9d7e6b171ee5f0e"
+  }
+}

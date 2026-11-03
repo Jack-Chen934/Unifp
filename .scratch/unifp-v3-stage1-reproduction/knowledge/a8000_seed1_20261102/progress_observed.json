@@ -1,0 +1,25 @@
+{
+  "observed_at": "2026-11-02T23:37:53.616289+08:00",
+  "process": "3870598       1 3870598 ?        Rsl        04:30",
+  "completed_iterations": 3,
+  "training_policy_steps": 72,
+  "training_transitions": 294912,
+  "recent_timings": [
+    {
+      "iteration": 1,
+      "collection_s": 54.77892564609647,
+      "update_s": 0.7712518312036991
+    },
+    {
+      "iteration": 2,
+      "collection_s": 51.537463852670044,
+      "update_s": 0.6408999869599938
+    },
+    {
+      "iteration": 3,
+      "collection_s": 54.35033338237554,
+      "update_s": 0.6467942339368165
+    }
+  ],
+  "failure_report_exists": false
+}

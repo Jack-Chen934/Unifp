@@ -1,0 +1,21 @@
+Importing module 'gym_38' (/mnt/data_8THDD/myl_unifp/isaacgym/python/isaacgym/_bindings/linux-x86_64/gym_38.so)
+Setting GYM_USD_PLUG_INFO_PATH to /mnt/data_8THDD/myl_unifp/isaacgym/python/isaacgym/_bindings/linux-x86_64/usd/plugInfo.json
+PyTorch version 2.3.1+cu121
+Device count 1
+/mnt/data_8THDD/myl_unifp/isaacgym/python/isaacgym/_bindings/src/gymtorch
+ninja: no work to do.
+Using /mnt/data_8THDD/myl_unifp_v3_stage1/cache/torch_extensions as PyTorch extensions root...
+Emitting ninja build file /mnt/data_8THDD/myl_unifp_v3_stage1/cache/torch_extensions/gymtorch/build.ninja...
+Building extension module gymtorch...
+Using envvar MAX_JOBS (2) as the number of workers...
+Loading extension module gymtorch...
+Traceback (most recent call last):
+  File "/mnt/data_8THDD/conda_envs/unifp_v3_stage1/lib/python3.8/runpy.py", line 194, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/mnt/data_8THDD/conda_envs/unifp_v3_stage1/lib/python3.8/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/mnt/data_8THDD/myl_unifp_v3_stage1/validation/collision_optimization_20261103_r02/source/UniFP_v3/legged_gym/scripts/train_v3.py", line 124, in <module>
+    main()
+  File "/mnt/data_8THDD/myl_unifp_v3_stage1/validation/collision_optimization_20261103_r02/source/UniFP_v3/legged_gym/scripts/train_v3.py", line 68, in main
+    raise ValueError("Resume learning/source/asset/schema/runtime identity mismatch")
+ValueError: Resume learning/source/asset/schema/runtime identity mismatch
