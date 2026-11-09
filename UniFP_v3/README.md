@@ -2,7 +2,7 @@
 
 基于官方提交`68847a070f88d731058c3d8476929bc3b205f5bd`开发。原官方快照位于`../UniFP/`，本目录随根项目仓库统一版本管理。
 
-截至2026-11-03，A阶段票据01—07及设计A01—A11已完成对应实现与启动验证。新碰撞资产seed1 A8000已于17:35 CST在远程GPU1从零启动，尚未完成终点评估。最新进度见[研究进度](../docs/progress/2026-11-03.md)，设计和票据见[阶段入口](../.scratch/unifp-v3-stage1-reproduction/README.md)。
+截至2026-11-09，V6 r2的seed1 A8000已经完成，S0／S1／S2冻结评估通过；B受力复现已实施，首版冻结为`B1`分支并继续原参数训练。B1绑定17800轮完整checkpoint，受力／接触效果尚未通过验收。见[B1冻结说明](../docs/releases/B1/README.md)、[统一报告](../docs/progress/2026-11-06_v3_status.md)与[阶段入口](../.scratch/unifp-v3-stage1-reproduction/README.md)。
 
 ## 环境与入口
 
@@ -13,18 +13,16 @@
 - 冻结评估：`legged_gym/scripts/evaluate_v3.py`。
 - 参数解析：`legged_gym/scripts/v3_args.py`。
 - A阶段冻结manifest：`configs/v3_a_initial_v1.json`。
-- 当前已启动实验的精确环境、身份和命令：[启动记录](../.scratch/unifp-v3-collision-optimization/knowledge/训练启动记录.md)。训练存活时不要重复启动。
+- B受力／接触manifest：`configs/v3_b_initial_v1.json`、`configs/v3_b_contact_v1.json`；正式观察工具`tools/train_v3_b_observed.py`。
+- 已完成训练的精确环境、身份和命令：[统一报告](../docs/progress/2026-11-06_v3_status.md)。不要依据历史启动记录重复启动训练。
 
-当前资产为`resources/robots/v3_a1_desktop_train_v1/`，从冻结桌面基准独立派生，碰撞927→80 shapes，保留视觉、运动链、28 links、14 DOF与实际actor物性。`v3_a1_desktop/`保留修复基准；`v3_a1/`存在已记录的历史问题。内部候选manifest保持验证时字节，最终验证状态记录在资产外部文档。
+当前配置资产为`resources/robots/v3_a1_desktop_train_v6_coplanar_r2/`，从冻结桌面基准独立派生，保留外观、28 links和14 DOF，已完成轮区、共面与低层控制修复。`v3_a1_desktop/`保留桌面基准；`v3_a1/`存在已记录的历史问题。r3／V8仅为独立碰撞候选，正式配置未切换；V9路线暂停。内部候选manifest保持验证时字节，最终验证状态记录在资产外部文档。
 
 ## 验证和实验记录
 
-最终碰撞优化r02源码下48项本机和5项远程单测、物理回归、512×10＋跨进程续1轮、4096×100及四阶段启动门控通过。4096规模的V3接触对容量为`2**25`。短测通过不能证明最终追踪效果；A阶段仍需S0／S1／S2正式评估。
+V6最终修复身份通过恢复、容量及控制门控，8000轮三场景TCP L2均值为2.06／2.09／2.27cm，共288个episode零物理失败；多训练seed及B尚未完成。4096规模V3接触对容量为`2**25`。旧r02的80-shape性能结果不能套用到当前V6身份。
 
-- [碰撞优化与性能验证](docs/experiments/2026-11-03_v3_collision_optimization.md)
-- [桌面资产修复](docs/experiments/2026-10-31_v3_desktop_asset_repair.md)
-- [奖励和随机化](docs/experiments/2026-10-31_v3_rewards_randomization.md)
-- [PPO、恢复与检查点](docs/experiments/2026-10-31_v3_ppo_runner_checkpoint.md)
+- [V3实验汇总：资产、环境、PPO、恢复与正式结果](docs/experiments/v3/实验汇总.md)
 - [A阶段票据总览](../.scratch/unifp-v3-stage1-reproduction/tickets/part-a/overview.md)
 
-旧正式训练已在1423轮停止，最近完整权重为1400轮，完整数据保留远程，不能计入新资产A8000验收。B受力复现与seed2／3未启动，第一阶段全部验收前不开展轮式创新。
+早期927-shape旧训练在1423轮停止，与已完成的正式V6 A8000不同；完整数据保留远程。早期物理接触分类采用V6第1400轮探索权重，不能视为8000轮成熟策略或当前B性能。B正式训练已启动且继续观察，普通物理失败局部reset；第一阶段全部验收前不开展轮式创新。

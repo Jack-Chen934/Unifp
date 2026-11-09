@@ -1,0 +1,12 @@
+{
+  "status": "通过",
+  "archived_top_level_entries": 23,
+  "archived_regular_files": 192,
+  "archived_bytes": 619709491,
+  "retargeted_internal_symlinks": 36,
+  "broken_archived_symlinks": 0,
+  "official_files_verified": 93,
+  "introduction_files_verified": 4,
+  "official_revision": "68847a070f88d731058c3d8476929bc3b205f5bd",
+  "official_git_status": "干净"
+}

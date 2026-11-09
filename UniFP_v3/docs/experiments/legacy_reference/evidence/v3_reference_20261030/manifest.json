@@ -1,0 +1,1802 @@
+{
+  "original_root": "/home/sorry/python_ws/interactive/unifp_reproduction",
+  "archive_root": "/home/sorry/python_ws/interactive/unifp_reproduction/legacy/v3_reference_20261030",
+  "top_level_entries": [
+    "PROJECT_REPORT.md",
+    "README.md",
+    "assets",
+    "evaluate_unifp_policy.py",
+    "play_unifp_policy.py",
+    "plot_unifp_trace.py",
+    "ranger_512_migration",
+    "ranger_force_experiment_config.py",
+    "ranger_unifp_vec_env.py",
+    "robot_description",
+    "smoke_b2z1.py",
+    "smoke_unifp_eval_contract.py",
+    "smoke_unifp_vec_env.py",
+    "test_ranger_approx_drive.py",
+    "train_unifp_ppo_smoke.py",
+    "unifp_domain_randomization.py",
+    "unifp_eval_protocol.py",
+    "unifp_force_curriculum.py",
+    "unifp_observations.py",
+    "unifp_stage1_control.py",
+    "unifp_task_rewards.py",
+    "unifp_task_signals.py",
+    "unifp_vec_env.py"
+  ],
+  "records": [
+    {
+      "path": "PROJECT_REPORT.md",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 3418,
+      "sha256": "cf9e7fedfab22db12fabe6ecbc98db107ed225b2673ea4b360654c1c08f3cb8a"
+    },
+    {
+      "path": "README.md",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 1184,
+      "sha256": "b7ddae9ec19d9f4f42cda50f4339ef9d3a042dff6f4932073920cb22df3dd59d"
+    },
+    {
+      "path": "assets",
+      "mode": 509,
+      "type": "directory"
+    },
+    {
+      "path": "assets/b2z1",
+      "mode": 509,
+      "type": "directory"
+    },
+    {
+      "path": "assets/b2z1/.asset_hash",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 32,
+      "sha256": "3c4b70bbecea510b4a0ee0dec69ba162756a6bac618a03c1862dba5814cb3d57"
+    },
+    {
+      "path": "assets/b2z1/b2z1.usd",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 1463,
+      "sha256": "ff356366e30e1b50b682e2deb9ef10f154c3a7021a1e3ba39cdbc831efb36778"
+    },
+    {
+      "path": "assets/b2z1/config.yaml",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 658,
+      "sha256": "1eaf99ba0724166f195c175b366eb4f9c782014344819457cbfb17d8e3613605"
+    },
+    {
+      "path": "assets/b2z1/configuration",
+      "mode": 509,
+      "type": "directory"
+    },
+    {
+      "path": "assets/b2z1/configuration/b2z1_base.usd",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 26297963,
+      "sha256": "e7d2016f683b4c7c9ecb177d142304009bf6ef9808eb0ddabff00203861ce569"
+    },
+    {
+      "path": "assets/b2z1/configuration/b2z1_physics.usd",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 11002,
+      "sha256": "7f85ad690661ce213bd3999d389317982431b865bf8df6cf66bc2174a8d75117"
+    },
+    {
+      "path": "assets/b2z1/configuration/b2z1_robot.usd",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 3250,
+      "sha256": "4dd574c47e58c703dcede4d363040b49564e9dae22e64ab269c7ae7b5e501a3c"
+    },
+    {
+      "path": "assets/b2z1/configuration/b2z1_sensor.usd",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 654,
+      "sha256": "e802bb5f912da593d2bf3d3d76bed237abd8c92ebebec37f1fa0edce57b66aa3"
+    },
+    {
+      "path": "assets/b2z1_merged",
+      "mode": 509,
+      "type": "directory"
+    },
+    {
+      "path": "assets/b2z1_merged/.asset_hash",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 32,
+      "sha256": "fc51d69ed1e5984b06c73dd80d3c8bab1c8eff7d807f3628d9588f43b2bb703c"
+    },
+    {
+      "path": "assets/b2z1_merged/b2z1.usd",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 1463,
+      "sha256": "ff356366e30e1b50b682e2deb9ef10f154c3a7021a1e3ba39cdbc831efb36778"
+    },
+    {
+      "path": "assets/b2z1_merged/config.yaml",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 664,
+      "sha256": "f24361f6b05895ff9ef118c05bee3e47469ee6f1122f971c847a66f31c874303"
+    },
+    {
+      "path": "assets/b2z1_merged/configuration",
+      "mode": 509,
+      "type": "directory"
+    },
+    {
+      "path": "assets/b2z1_merged/configuration/b2z1_base.usd",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 26296712,
+      "sha256": "552f6fe348b38e89c899c89cb4a6c3fe6928acae291d85ce3dd847b77bca6a33"
+    },
+    {
+      "path": "assets/b2z1_merged/configuration/b2z1_physics.usd",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 8011,
+      "sha256": "74119b0dd25a640c80f5f89c45036182cb9f42dd9fe05c5a445a65920dfe3635"
+    },
+    {
+      "path": "assets/b2z1_merged/configuration/b2z1_robot.usd",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 2442,
+      "sha256": "28f87994241230c84bd62adadcc34642fa9699be7e496120f96cb29685593db3"
+    },
+    {
+      "path": "assets/b2z1_merged/configuration/b2z1_sensor.usd",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 654,
+      "sha256": "e802bb5f912da593d2bf3d3d76bed237abd8c92ebebec37f1fa0edce57b66aa3"
+    },
+    {
+      "path": "evaluate_unifp_policy.py",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 16663,
+      "sha256": "74decbf71bd06c957e072c933fe137372ca05389a67a7d16c8b0987c60a68986"
+    },
+    {
+      "path": "play_unifp_policy.py",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 17327,
+      "sha256": "3418392bf737ae5ba7a358d23b4711222985cde4377f61cb9a611735805888b3"
+    },
+    {
+      "path": "plot_unifp_trace.py",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 4399,
+      "sha256": "c416304d126d129b04fe8da7edbdcd0ac938ffa493276562129136b3c8c33b80"
+    },
+    {
+      "path": "ranger_512_migration",
+      "mode": 509,
+      "type": "directory"
+    },
+    {
+      "path": "ranger_512_migration/SUMMARY.json",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 4090,
+      "sha256": "68422f58bf86ba581de4cab2b115544301cd90e618e9a2bed57b7a4c326a367d"
+    },
+    {
+      "path": "ranger_512_migration/checkpoints",
+      "mode": 509,
+      "type": "directory"
+    },
+    {
+      "path": "ranger_512_migration/checkpoints/model_iter_008000.pt",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 29298178,
+      "sha256": "3ed0adc13c3dc84b87f82606160c3eb0df6e52727fb34ea089f96c686b40110e"
+    },
+    {
+      "path": "ranger_512_migration/checkpoints/model_iter_016000.pt",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 29264194,
+      "sha256": "498f039122bf33075d4144ebcd7a05adcd91fde9214ac761aed9def79ebabb25"
+    },
+    {
+      "path": "ranger_512_migration/environment-freeze.txt",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 5726,
+      "sha256": "8dc35e6b7f0b219d5428ba310acab5240147493d10f51f1abda0c3c61f5c520e"
+    },
+    {
+      "path": "ranger_512_migration/hardware-summary.txt",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 91,
+      "sha256": "1c1ed5b55025e9722bac52b0951d98babacba60a82af4e7c86e826e139acfac2"
+    },
+    {
+      "path": "ranger_512_migration/logic",
+      "mode": 509,
+      "type": "directory"
+    },
+    {
+      "path": "ranger_512_migration/logic/audit_snapshot.py",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 1295485,
+      "sha256": "1a23960e6c9f6fbd0b7cf819c29d20be76ecd5b7f976e32d8be0ea5e85304889"
+    },
+    {
+      "path": "ranger_512_migration/logic/backend_envelope.py",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 21572,
+      "sha256": "6a825e2a49428d68660967c30621be57abe2e273b36f80e7b7448254641af659"
+    },
+    {
+      "path": "ranger_512_migration/logic/baseline_plan.json",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 32757,
+      "sha256": "aaa093f8f3e1ba674c8aee4ef6712a66d924b652cdb5fb24ba21490261855437"
+    },
+    {
+      "path": "ranger_512_migration/logic/evaluate_stage_verified.py",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 13190,
+      "sha256": "84618378dbce78a08d93fd58b08b5f14fb124d1e28a2dcc56fa7e1f74dfa4045"
+    },
+    {
+      "path": "ranger_512_migration/logic/final_plan.json",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 37648,
+      "sha256": "22326e082ace2fd8178a38683bc8feffc70ded3ff058ea870505cef7d0d1dfcf"
+    },
+    {
+      "path": "ranger_512_migration/logic/force_stage_plan.json",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 3773,
+      "sha256": "328fa12a58f61ab8e417be3859f8ccd988fb8a550c5ef49b824debdc830fc93f"
+    },
+    {
+      "path": "ranger_512_migration/logic/force_stage_runner.py",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 13761,
+      "sha256": "0962d6481245ba9897b370156db007a02e7eaf99967ab3a1fe7eb0508346eb5d"
+    },
+    {
+      "path": "ranger_512_migration/logic/ranger_512_fixedcom_baseline.py",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 34437,
+      "sha256": "fe7825f6d423e2096096d24374623626f503137abc393fcc8f9dc056cd0c587e"
+    },
+    {
+      "path": "ranger_512_migration/logic/ranger_force_continue_13000_to_16000.py",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 27002,
+      "sha256": "f6101620dff058241fe69ee6d32471d6e85e2448d423c47f0e7a5aee680130b0"
+    },
+    {
+      "path": "ranger_512_migration/logic/shape_properties.pt",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 4289,
+      "sha256": "0d0a5347debba0db0ccfc709b809d5233bef6dcfe24672f392be67a48a9a0fa1"
+    },
+    {
+      "path": "ranger_512_migration/logic/shape_properties_result.json",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 7970,
+      "sha256": "6fc547223348698307be36d2a3fdcfa8854488d201b76c2b84617db1786337ea"
+    },
+    {
+      "path": "ranger_512_migration/logic/verify_boundary.py",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 7783,
+      "sha256": "abd624ff79f3645e5b2b3a3d5a4e2d71c811dcf8b7b07e68b80145e6d75cd2ae"
+    },
+    {
+      "path": "ranger_512_migration/protected_log_sources",
+      "mode": 509,
+      "type": "directory"
+    },
+    {
+      "path": "ranger_512_migration/protected_log_sources/logs",
+      "mode": 509,
+      "type": "directory"
+    },
+    {
+      "path": "ranger_512_migration/protected_log_sources/logs/ranger-unifp-v3-original-force-to10000-resume9500",
+      "mode": 509,
+      "type": "directory"
+    },
+    {
+      "path": "ranger_512_migration/protected_log_sources/logs/ranger-unifp-v3-original-force-to10000-resume9500/model_iter_010000.pt",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 29254683,
+      "sha256": "5d6fffb2ed30e68a13a77e36ebe33fe2c19b5aace396fe25c223c989f0530690"
+    },
+    {
+      "path": "ranger_512_migration/protected_log_sources/logs/ranger-unifp-v3-original-force-to10000-resume9500/supervision_audit",
+      "mode": 509,
+      "type": "directory"
+    },
+    {
+      "path": "ranger_512_migration/protected_log_sources/logs/ranger-unifp-v3-original-force-to10000-resume9500/supervision_audit/audit.py",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 1295485,
+      "sha256": "1a23960e6c9f6fbd0b7cf819c29d20be76ecd5b7f976e32d8be0ea5e85304889"
+    },
+    {
+      "path": "ranger_512_migration/protected_log_sources/logs/ranger-unifp-v3-original-force-to10000-resume9500/supervision_audit/gym_ranger_force_continue12000_to13000_20261028_v1",
+      "mode": 509,
+      "type": "directory"
+    },
+    {
+      "path": "ranger_512_migration/protected_log_sources/logs/ranger-unifp-v3-original-force-to10000-resume9500/supervision_audit/gym_ranger_force_continue12000_to13000_20261028_v1/dispatch.json",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 678,
+      "sha256": "cce9fe2462cbaf8990c83a6688ea55dc5aef6843571dc150c78317a174177070"
+    },
+    {
+      "path": "ranger_512_migration/protected_log_sources/logs/ranger-unifp-v3-original-force-to10000-resume9500/supervision_audit/gym_ranger_force_continue12000_to13000_20261028_v1/plan.json",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 36286,
+      "sha256": "242a56a9a5a5cb86bcf9ea3872b2b1f9174cf87fdd65e2ed17f95cd6020d8870"
+    },
+    {
+      "path": "ranger_512_migration/protected_log_sources/logs/ranger-unifp-v3-original-force-to10000-resume9500/supervision_audit/gym_ranger_force_continue12000_to13000_20261028_v1/preflight.json",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 415,
+      "sha256": "c21166bb1840097cacaff34d56476b2d3baba7f3f5977dee18ab809f95fb69eb"
+    },
+    {
+      "path": "ranger_512_migration/protected_log_sources/logs/ranger-unifp-v3-original-force-to10000-resume9500/supervision_audit/gym_ranger_force_continue12000_to13000_20261028_v1/restoration_verification.json",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 654,
+      "sha256": "537338bb3cf0a930c94a893040b4eb9b4805b5292781f1e5183713f3dcc48af3"
+    },
+    {
+      "path": "ranger_512_migration/protected_log_sources/logs/ranger-unifp-v3-original-force-to10000-resume9500/supervision_audit/gym_ranger_force_continue12000_to13000_20261028_v1/run.py",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 27002,
+      "sha256": "b1864fbaa8255933155b932b10918e14e7ec5433a1ec661c5e6922dad189e2df"
+    },
+    {
+      "path": "ranger_512_migration/protected_log_sources/logs/ranger-unifp-v3-original-force-to10000-resume9500/supervision_audit/gym_ranger_force_continue9000_to12000_20261028_v1",
+      "mode": 509,
+      "type": "directory"
+    },
+    {
+      "path": "ranger_512_migration/protected_log_sources/logs/ranger-unifp-v3-original-force-to10000-resume9500/supervision_audit/gym_ranger_force_continue9000_to12000_20261028_v1/dispatch.json",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 671,
+      "sha256": "f6dcdb7be24668f98cd2ea270ec9ba56b99f853a11cc4fb87290f490f1759684"
+    },
+    {
+      "path": "ranger_512_migration/protected_log_sources/logs/ranger-unifp-v3-original-force-to10000-resume9500/supervision_audit/gym_ranger_force_continue9000_to12000_20261028_v1/plan.json",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 34611,
+      "sha256": "b60d894a7617f23b0689fd5df7341a63f8c00184d1d5e3f3fe1120a5f429dbbb"
+    },
+    {
+      "path": "ranger_512_migration/protected_log_sources/logs/ranger-unifp-v3-original-force-to10000-resume9500/supervision_audit/gym_ranger_force_continue9000_to12000_20261028_v1/preflight.json",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 414,
+      "sha256": "246640f810af96e2a00465c53e230aaf6f0e634984699a8f1a99b87ffbe8ea64"
+    },
+    {
+      "path": "ranger_512_migration/protected_log_sources/logs/ranger-unifp-v3-original-force-to10000-resume9500/supervision_audit/gym_ranger_force_continue9000_to12000_20261028_v1/restoration_verification.json",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 654,
+      "sha256": "59ed2c8dd9b888052dbb693b49050cb5c746fc4f3ac86322625a3a733582ca4e"
+    },
+    {
+      "path": "ranger_512_migration/protected_log_sources/logs/ranger-unifp-v3-original-force-to10000-resume9500/supervision_audit/gym_ranger_force_continue9000_to12000_20261028_v1/run.py",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 26985,
+      "sha256": "0610e53ea0825dddb4ddcdebb14ea2671f7307cb9cc5d17811c6ec2a00afe684"
+    },
+    {
+      "path": "ranger_512_migration/protected_log_sources/logs/ranger-unifp-v3-original-force-to10000-resume9500/supervision_audit/gym_ranger_force_stage_20261028_v1",
+      "mode": 509,
+      "type": "directory"
+    },
+    {
+      "path": "ranger_512_migration/protected_log_sources/logs/ranger-unifp-v3-original-force-to10000-resume9500/supervision_audit/gym_ranger_force_stage_20261028_v1/completion.json",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 705,
+      "sha256": "4c2130be5f6fc159883ccc6424d4500766a1c2c304cf4e4c21fcdd06a05ca8bd"
+    },
+    {
+      "path": "ranger_512_migration/protected_log_sources/logs/ranger-unifp-v3-original-force-to10000-resume9500/supervision_audit/gym_ranger_force_stage_20261028_v1/evaluate_stage_verified.py",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 13190,
+      "sha256": "84618378dbce78a08d93fd58b08b5f14fb124d1e28a2dcc56fa7e1f74dfa4045"
+    },
+    {
+      "path": "ranger_512_migration/protected_log_sources/logs/ranger-unifp-v3-original-force-to10000-resume9500/supervision_audit/gym_ranger_force_stage_20261028_v1/evaluation_summary.json",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 33320,
+      "sha256": "fe9288eff15f470ea4284119f094d6f429619fd51516e65ac084f3913b700d8e"
+    },
+    {
+      "path": "ranger_512_migration/protected_log_sources/logs/ranger-unifp-v3-original-force-to10000-resume9500/supervision_audit/gym_ranger_force_stage_20261028_v1/run_stage.py",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 13761,
+      "sha256": "0962d6481245ba9897b370156db007a02e7eaf99967ab3a1fe7eb0508346eb5d"
+    },
+    {
+      "path": "ranger_512_migration/protected_log_sources/logs/ranger-unifp-v3-original-force-to10000-resume9500/supervision_audit/gym_ranger_force_stage_20261028_v1/train",
+      "mode": 509,
+      "type": "directory"
+    },
+    {
+      "path": "ranger_512_migration/protected_log_sources/logs/ranger-unifp-v3-original-force-to10000-resume9500/supervision_audit/gym_ranger_force_stage_20261028_v1/train/model_iter_009000.pt",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 29264194,
+      "sha256": "bcf1a28f1073587338c7be85125a63535ed8702acff4f1721e53754bf622786b"
+    },
+    {
+      "path": "ranger_512_migration/protected_log_sources/logs/ranger-unifp-v3-original-force-to10000-resume9500/supervision_audit/gym_ranger_fresh512_fixedcom_20261028_v1",
+      "mode": 509,
+      "type": "directory"
+    },
+    {
+      "path": "ranger_512_migration/protected_log_sources/logs/ranger-unifp-v3-original-force-to10000-resume9500/supervision_audit/gym_ranger_fresh512_fixedcom_20261028_v1/audit_snapshot.py",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 1295485,
+      "sha256": "1a23960e6c9f6fbd0b7cf819c29d20be76ecd5b7f976e32d8be0ea5e85304889"
+    },
+    {
+      "path": "ranger_512_migration/protected_log_sources/logs/ranger-unifp-v3-original-force-to10000-resume9500/supervision_audit/gym_ranger_fresh512_fixedcom_20261028_v1/backend_envelope.py",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 21572,
+      "sha256": "6a825e2a49428d68660967c30621be57abe2e273b36f80e7b7448254641af659"
+    },
+    {
+      "path": "ranger_512_migration/protected_log_sources/logs/ranger-unifp-v3-original-force-to10000-resume9500/supervision_audit/gym_ranger_fresh512_fixedcom_20261028_v1/run.py",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 34437,
+      "sha256": "fe7825f6d423e2096096d24374623626f503137abc393fcc8f9dc056cd0c587e"
+    },
+    {
+      "path": "ranger_512_migration/protected_log_sources/logs/ranger-unifp-v3-original-force-to10000-resume9500/supervision_audit/gym_ranger_fresh512_fixedcom_20261028_v1/train",
+      "mode": 509,
+      "type": "directory"
+    },
+    {
+      "path": "ranger_512_migration/protected_log_sources/logs/ranger-unifp-v3-original-force-to10000-resume9500/supervision_audit/gym_ranger_fresh512_fixedcom_20261028_v1/train/model_iter_008000.pt",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 29298178,
+      "sha256": "3ed0adc13c3dc84b87f82606160c3eb0df6e52727fb34ea089f96c686b40110e"
+    },
+    {
+      "path": "ranger_512_migration/source_manifest.json",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 65037,
+      "sha256": "659e0b05fea51ce71479c5c2f15b8671953731b4c3b3aad47504c094c621da30"
+    },
+    {
+      "path": "ranger_force_experiment_config.py",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 603,
+      "sha256": "c8852fc0969c83af76bb91a2f0a40713a022b5e61395aa4c052650d64f9fd78a"
+    },
+    {
+      "path": "ranger_unifp_vec_env.py",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 15785,
+      "sha256": "0f2db9583ffa59cfb1e0bd474dfae3ba4028f41fe274803c20f64576db9bbe1e"
+    },
+    {
+      "path": "robot_description",
+      "mode": 509,
+      "type": "directory"
+    },
+    {
+      "path": "robot_description/a1arm_description",
+      "mode": 509,
+      "type": "directory"
+    },
+    {
+      "path": "robot_description/a1arm_description/README_approx_sim.md",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 20725,
+      "sha256": "e7fa04a8fd5ad05c6f33de358a1522c4e7374df7ea2ee6e5076219f2de71709d"
+    },
+    {
+      "path": "robot_description/a1arm_description/assets",
+      "mode": 509,
+      "type": "directory"
+    },
+    {
+      "path": "robot_description/a1arm_description/assets/.asset_hash",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 32,
+      "sha256": "5a4cf8762c6270ebfd3b4b2a6d29487a012c3ae2b482c0edcbc305608a329aa7"
+    },
+    {
+      "path": "robot_description/a1arm_description/assets/a1arm_rgm3_approx_sim.usd",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 1471,
+      "sha256": "42cff4fd606e90745d9fefb76acf56e5123f30160057dadab2ae9f35818bc636"
+    },
+    {
+      "path": "robot_description/a1arm_description/assets/a1arm_rgm3_approx_sim_v2.usd",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 1474,
+      "sha256": "2ca95127ffcf56fbed6a6bc9ba71e8d548a4219122acdd15439e112870472b52"
+    },
+    {
+      "path": "robot_description/a1arm_description/assets/config.yaml",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 739,
+      "sha256": "289b2861006963b32c4f2ffa3b9278bfdb37a5047bd82df02f479c944c1ee336"
+    },
+    {
+      "path": "robot_description/a1arm_description/assets/configuration",
+      "mode": 509,
+      "type": "directory"
+    },
+    {
+      "path": "robot_description/a1arm_description/assets/configuration/a1arm_rgm3_approx_sim_base.usd",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 40166994,
+      "sha256": "a3d043beaa7d6d15e9c300a15e8269e10613a7cbde1f0d02c2cf491af57264f9"
+    },
+    {
+      "path": "robot_description/a1arm_description/assets/configuration/a1arm_rgm3_approx_sim_physics.usd",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 7265,
+      "sha256": "e419274230932479b8046ac7edbe9430d804bc5542360c36a28f6f2d2ce6c11e"
+    },
+    {
+      "path": "robot_description/a1arm_description/assets/configuration/a1arm_rgm3_approx_sim_robot.usd",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 2084,
+      "sha256": "0f2c5e7a8a82d93df6fa304da3e589edc6e17be9cea4b9d90b9443537f1344ec"
+    },
+    {
+      "path": "robot_description/a1arm_description/assets/configuration/a1arm_rgm3_approx_sim_sensor.usd",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 661,
+      "sha256": "6ea1bd3f02ee98451a58b5ce3c524a6e5f1fb4b3ae668fa1a4b8ec04067d6558"
+    },
+    {
+      "path": "robot_description/a1arm_description/assets/configuration/a1arm_rgm3_approx_sim_v2_base.usd",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 40166646,
+      "sha256": "45f940050fb99dd22300c398ea6032160641e0f55d36ff32f0830738705db061"
+    },
+    {
+      "path": "robot_description/a1arm_description/assets/configuration/a1arm_rgm3_approx_sim_v2_physics.usd",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 7038,
+      "sha256": "54364726e1238de0bcd9b39a1bd1b803a787fa82fad24c3fe2f295a9f4a11a42"
+    },
+    {
+      "path": "robot_description/a1arm_description/assets/configuration/a1arm_rgm3_approx_sim_v2_robot.usd",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 2084,
+      "sha256": "0f2c5e7a8a82d93df6fa304da3e589edc6e17be9cea4b9d90b9443537f1344ec"
+    },
+    {
+      "path": "robot_description/a1arm_description/assets/configuration/a1arm_rgm3_approx_sim_v2_sensor.usd",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 661,
+      "sha256": "6ea1bd3f02ee98451a58b5ce3c524a6e5f1fb4b3ae668fa1a4b8ec04067d6558"
+    },
+    {
+      "path": "robot_description/a1arm_description/assets/v3",
+      "mode": 509,
+      "type": "directory"
+    },
+    {
+      "path": "robot_description/a1arm_description/assets/v3/.asset_hash",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 32,
+      "sha256": "f87ecd1186c233e1798c8cfa393cc204a87b453ec74b43f3c75763fbe83702af"
+    },
+    {
+      "path": "robot_description/a1arm_description/assets/v3/a1arm_rgm3_approx_sim_v3.usd",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 25985,
+      "sha256": "b15ec34fc98c527f039b3b188b4f816bd36903cb29529fd027f6187d10e37dd6"
+    },
+    {
+      "path": "robot_description/a1arm_description/assets/v3/config.yaml",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 742,
+      "sha256": "f6c177c5211754a79eb4add44c6abc85d3c8db6492a53366880ed709e226df1d"
+    },
+    {
+      "path": "robot_description/a1arm_description/assets/v3/configuration",
+      "mode": 509,
+      "type": "directory"
+    },
+    {
+      "path": "robot_description/a1arm_description/assets/v3/configuration/a1arm_rgm3_approx_sim_v3_base.usd",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 55415238,
+      "sha256": "442a0d0799b2f7b8539175f0e479aea740bce6225116643cc8a37426bf0729f1"
+    },
+    {
+      "path": "robot_description/a1arm_description/assets/v3/configuration/a1arm_rgm3_approx_sim_v3_physics.usd",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 7041,
+      "sha256": "586c60d169cbd19d50b987d252cf7349eb1f9762ae3eed23908e1559b0e2fac5"
+    },
+    {
+      "path": "robot_description/a1arm_description/assets/v3/configuration/a1arm_rgm3_approx_sim_v3_robot.usd",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 2084,
+      "sha256": "0f2c5e7a8a82d93df6fa304da3e589edc6e17be9cea4b9d90b9443537f1344ec"
+    },
+    {
+      "path": "robot_description/a1arm_description/assets/v3/configuration/a1arm_rgm3_approx_sim_v3_sensor.usd",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 661,
+      "sha256": "6ea1bd3f02ee98451a58b5ce3c524a6e5f1fb4b3ae668fa1a4b8ec04067d6558"
+    },
+    {
+      "path": "robot_description/a1arm_description/assets/v3_original",
+      "mode": 509,
+      "type": "directory"
+    },
+    {
+      "path": "robot_description/a1arm_description/assets/v3_original/.asset_hash",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 32,
+      "sha256": "a9e4359bba37f11d35e3080651c268c5df201f6b7c872698ffe08efab747db02"
+    },
+    {
+      "path": "robot_description/a1arm_description/assets/v3_original/a1arm_rgm3_original_movable.usd",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 1486,
+      "sha256": "4903f3a2ae8f636a539a0cd095919fdbbf234f41025baf6164bb4b651fcafb3e"
+    },
+    {
+      "path": "robot_description/a1arm_description/assets/v3_original/config.yaml",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 757,
+      "sha256": "5a9d799dd01a62b9cc22270654dad6985afed03e2fd7d177d1c772c874d9319a"
+    },
+    {
+      "path": "robot_description/a1arm_description/assets/v3_original/configuration",
+      "mode": 509,
+      "type": "directory"
+    },
+    {
+      "path": "robot_description/a1arm_description/assets/v3_original/configuration/a1arm_rgm3_original_movable_base.usd",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 70772041,
+      "sha256": "127d2f658e6ff03f279c2e27b3c85652b4d30b370dc16da311610eb5245b8af7"
+    },
+    {
+      "path": "robot_description/a1arm_description/assets/v3_original/configuration/a1arm_rgm3_original_movable_physics.usd",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 7053,
+      "sha256": "f96589eb3c774e9813c8ae68d5eb75aa52145918c42d0eca5310f0881fb81476"
+    },
+    {
+      "path": "robot_description/a1arm_description/assets/v3_original/configuration/a1arm_rgm3_original_movable_robot.usd",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 2084,
+      "sha256": "0f2c5e7a8a82d93df6fa304da3e589edc6e17be9cea4b9d90b9443537f1344ec"
+    },
+    {
+      "path": "robot_description/a1arm_description/assets/v3_original/configuration/a1arm_rgm3_original_movable_sensor.usd",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 661,
+      "sha256": "6ea1bd3f02ee98451a58b5ce3c524a6e5f1fb4b3ae668fa1a4b8ec04067d6558"
+    },
+    {
+      "path": "robot_description/a1arm_description/configs",
+      "mode": 509,
+      "type": "directory"
+    },
+    {
+      "path": "robot_description/a1arm_description/configs/collision_spheres.json",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 14928,
+      "sha256": "afbf4a3ebb746034e3ed5591f5f907fb037a423bada2d024e8bf3753d244457b"
+    },
+    {
+      "path": "robot_description/a1arm_description/configs/curobo_config.yml",
+      "mode": 384,
+      "type": "file",
+      "size_bytes": 24243,
+      "sha256": "667d9c77bda4918584fe92e2f2bca8e49edc710ae05583d48f508aa211f816d9"
+    },
+    {
+      "path": "robot_description/a1arm_description/meshes",
+      "mode": 509,
+      "type": "directory"
+    },
+    {
+      "path": "robot_description/a1arm_description/meshes/aluminum_profiles_modified.STL",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 613084,
+      "sha256": "39ea1deb201c86260603c96069d22ae954a9bc6738e5df4e36158e0c5513ea1a"
+    },
+    {
+      "path": "robot_description/a1arm_description/meshes/aluminum_profiles_modified.collision.glb",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 90412,
+      "sha256": "7d50f67efb9aad45bbea4bcd88bc020a8e816c209ddab4c602b1150f6905d172"
+    },
+    {
+      "path": "robot_description/a1arm_description/meshes/aluminum_profiles_modified.visual.glb",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 957204,
+      "sha256": "267c49ae1f2a8490261574099779b667ffbf69a9056f97e45a745381061893ed"
+    },
+    {
+      "path": "robot_description/a1arm_description/meshes/approx_sim",
+      "mode": 509,
+      "type": "directory"
+    },
+    {
+      "path": "robot_description/a1arm_description/meshes/approx_sim/aluminum_profiles_modified_collision.glb",
+      "mode": 511,
+      "type": "symlink",
+      "original_target": "/home/sorry/python_ws/interactive/unifp_reproduction/robot_description/a1arm_description/meshes/aluminum_profiles_modified.collision.glb",
+      "archived_target": "/home/sorry/python_ws/interactive/unifp_reproduction/legacy/v3_reference_20261030/robot_description/a1arm_description/meshes/aluminum_profiles_modified.collision.glb"
+    },
+    {
+      "path": "robot_description/a1arm_description/meshes/approx_sim/aluminum_profiles_modified_visual.glb",
+      "mode": 511,
+      "type": "symlink",
+      "original_target": "/home/sorry/python_ws/interactive/unifp_reproduction/robot_description/a1arm_description/meshes/aluminum_profiles_modified.visual.glb",
+      "archived_target": "/home/sorry/python_ws/interactive/unifp_reproduction/legacy/v3_reference_20261030/robot_description/a1arm_description/meshes/aluminum_profiles_modified.visual.glb"
+    },
+    {
+      "path": "robot_description/a1arm_description/meshes/approx_sim/arm_base_collision.glb",
+      "mode": 511,
+      "type": "symlink",
+      "original_target": "/home/sorry/python_ws/interactive/unifp_reproduction/robot_description/a1arm_description/meshes/arm_base.collision.glb",
+      "archived_target": "/home/sorry/python_ws/interactive/unifp_reproduction/legacy/v3_reference_20261030/robot_description/a1arm_description/meshes/arm_base.collision.glb"
+    },
+    {
+      "path": "robot_description/a1arm_description/meshes/approx_sim/arm_base_visual.glb",
+      "mode": 511,
+      "type": "symlink",
+      "original_target": "/home/sorry/python_ws/interactive/unifp_reproduction/robot_description/a1arm_description/meshes/arm_base.visual.glb",
+      "archived_target": "/home/sorry/python_ws/interactive/unifp_reproduction/legacy/v3_reference_20261030/robot_description/a1arm_description/meshes/arm_base.visual.glb"
+    },
+    {
+      "path": "robot_description/a1arm_description/meshes/approx_sim/arm_seg1_collision.glb",
+      "mode": 511,
+      "type": "symlink",
+      "original_target": "/home/sorry/python_ws/interactive/unifp_reproduction/robot_description/a1arm_description/meshes/arm_seg1.collision.glb",
+      "archived_target": "/home/sorry/python_ws/interactive/unifp_reproduction/legacy/v3_reference_20261030/robot_description/a1arm_description/meshes/arm_seg1.collision.glb"
+    },
+    {
+      "path": "robot_description/a1arm_description/meshes/approx_sim/arm_seg1_visual.glb",
+      "mode": 511,
+      "type": "symlink",
+      "original_target": "/home/sorry/python_ws/interactive/unifp_reproduction/robot_description/a1arm_description/meshes/arm_seg1.visual.glb",
+      "archived_target": "/home/sorry/python_ws/interactive/unifp_reproduction/legacy/v3_reference_20261030/robot_description/a1arm_description/meshes/arm_seg1.visual.glb"
+    },
+    {
+      "path": "robot_description/a1arm_description/meshes/approx_sim/arm_seg2_collision.glb",
+      "mode": 511,
+      "type": "symlink",
+      "original_target": "/home/sorry/python_ws/interactive/unifp_reproduction/robot_description/a1arm_description/meshes/arm_seg2.collision.glb",
+      "archived_target": "/home/sorry/python_ws/interactive/unifp_reproduction/legacy/v3_reference_20261030/robot_description/a1arm_description/meshes/arm_seg2.collision.glb"
+    },
+    {
+      "path": "robot_description/a1arm_description/meshes/approx_sim/arm_seg2_visual.glb",
+      "mode": 511,
+      "type": "symlink",
+      "original_target": "/home/sorry/python_ws/interactive/unifp_reproduction/robot_description/a1arm_description/meshes/arm_seg2.visual.glb",
+      "archived_target": "/home/sorry/python_ws/interactive/unifp_reproduction/legacy/v3_reference_20261030/robot_description/a1arm_description/meshes/arm_seg2.visual.glb"
+    },
+    {
+      "path": "robot_description/a1arm_description/meshes/approx_sim/arm_seg3_collision.glb",
+      "mode": 511,
+      "type": "symlink",
+      "original_target": "/home/sorry/python_ws/interactive/unifp_reproduction/robot_description/a1arm_description/meshes/arm_seg3.collision.glb",
+      "archived_target": "/home/sorry/python_ws/interactive/unifp_reproduction/legacy/v3_reference_20261030/robot_description/a1arm_description/meshes/arm_seg3.collision.glb"
+    },
+    {
+      "path": "robot_description/a1arm_description/meshes/approx_sim/arm_seg3_visual.glb",
+      "mode": 511,
+      "type": "symlink",
+      "original_target": "/home/sorry/python_ws/interactive/unifp_reproduction/robot_description/a1arm_description/meshes/arm_seg3.visual.glb",
+      "archived_target": "/home/sorry/python_ws/interactive/unifp_reproduction/legacy/v3_reference_20261030/robot_description/a1arm_description/meshes/arm_seg3.visual.glb"
+    },
+    {
+      "path": "robot_description/a1arm_description/meshes/approx_sim/arm_seg4_collision.glb",
+      "mode": 511,
+      "type": "symlink",
+      "original_target": "/home/sorry/python_ws/interactive/unifp_reproduction/robot_description/a1arm_description/meshes/arm_seg4.collision.glb",
+      "archived_target": "/home/sorry/python_ws/interactive/unifp_reproduction/legacy/v3_reference_20261030/robot_description/a1arm_description/meshes/arm_seg4.collision.glb"
+    },
+    {
+      "path": "robot_description/a1arm_description/meshes/approx_sim/arm_seg4_visual.glb",
+      "mode": 511,
+      "type": "symlink",
+      "original_target": "/home/sorry/python_ws/interactive/unifp_reproduction/robot_description/a1arm_description/meshes/arm_seg4.visual.glb",
+      "archived_target": "/home/sorry/python_ws/interactive/unifp_reproduction/legacy/v3_reference_20261030/robot_description/a1arm_description/meshes/arm_seg4.visual.glb"
+    },
+    {
+      "path": "robot_description/a1arm_description/meshes/approx_sim/arm_seg5_collision.glb",
+      "mode": 511,
+      "type": "symlink",
+      "original_target": "/home/sorry/python_ws/interactive/unifp_reproduction/robot_description/a1arm_description/meshes/arm_seg5.collision.glb",
+      "archived_target": "/home/sorry/python_ws/interactive/unifp_reproduction/legacy/v3_reference_20261030/robot_description/a1arm_description/meshes/arm_seg5.collision.glb"
+    },
+    {
+      "path": "robot_description/a1arm_description/meshes/approx_sim/arm_seg5_visual.glb",
+      "mode": 511,
+      "type": "symlink",
+      "original_target": "/home/sorry/python_ws/interactive/unifp_reproduction/robot_description/a1arm_description/meshes/arm_seg5.visual.glb",
+      "archived_target": "/home/sorry/python_ws/interactive/unifp_reproduction/legacy/v3_reference_20261030/robot_description/a1arm_description/meshes/arm_seg5.visual.glb"
+    },
+    {
+      "path": "robot_description/a1arm_description/meshes/approx_sim/arm_seg6_collision.glb",
+      "mode": 511,
+      "type": "symlink",
+      "original_target": "/home/sorry/python_ws/interactive/unifp_reproduction/robot_description/a1arm_description/meshes/arm_seg6.collision.glb",
+      "archived_target": "/home/sorry/python_ws/interactive/unifp_reproduction/legacy/v3_reference_20261030/robot_description/a1arm_description/meshes/arm_seg6.collision.glb"
+    },
+    {
+      "path": "robot_description/a1arm_description/meshes/approx_sim/arm_seg6_visual.glb",
+      "mode": 511,
+      "type": "symlink",
+      "original_target": "/home/sorry/python_ws/interactive/unifp_reproduction/robot_description/a1arm_description/meshes/arm_seg6.visual.glb",
+      "archived_target": "/home/sorry/python_ws/interactive/unifp_reproduction/legacy/v3_reference_20261030/robot_description/a1arm_description/meshes/arm_seg6.visual.glb"
+    },
+    {
+      "path": "robot_description/a1arm_description/meshes/approx_sim/camera_collision.glb",
+      "mode": 511,
+      "type": "symlink",
+      "original_target": "/home/sorry/python_ws/interactive/unifp_reproduction/robot_description/a1arm_description/meshes/camera.collision.glb",
+      "archived_target": "/home/sorry/python_ws/interactive/unifp_reproduction/legacy/v3_reference_20261030/robot_description/a1arm_description/meshes/camera.collision.glb"
+    },
+    {
+      "path": "robot_description/a1arm_description/meshes/approx_sim/camera_visual.glb",
+      "mode": 511,
+      "type": "symlink",
+      "original_target": "/home/sorry/python_ws/interactive/unifp_reproduction/robot_description/a1arm_description/meshes/camera.visual.glb",
+      "archived_target": "/home/sorry/python_ws/interactive/unifp_reproduction/legacy/v3_reference_20261030/robot_description/a1arm_description/meshes/camera.visual.glb"
+    },
+    {
+      "path": "robot_description/a1arm_description/meshes/approx_sim/gripper1_collision.glb",
+      "mode": 511,
+      "type": "symlink",
+      "original_target": "/home/sorry/python_ws/interactive/unifp_reproduction/robot_description/a1arm_description/meshes/gripper1.collision.glb",
+      "archived_target": "/home/sorry/python_ws/interactive/unifp_reproduction/legacy/v3_reference_20261030/robot_description/a1arm_description/meshes/gripper1.collision.glb"
+    },
+    {
+      "path": "robot_description/a1arm_description/meshes/approx_sim/gripper1_visual.glb",
+      "mode": 511,
+      "type": "symlink",
+      "original_target": "/home/sorry/python_ws/interactive/unifp_reproduction/robot_description/a1arm_description/meshes/gripper1.visual.glb",
+      "archived_target": "/home/sorry/python_ws/interactive/unifp_reproduction/legacy/v3_reference_20261030/robot_description/a1arm_description/meshes/gripper1.visual.glb"
+    },
+    {
+      "path": "robot_description/a1arm_description/meshes/approx_sim/gripper2_collision.glb",
+      "mode": 511,
+      "type": "symlink",
+      "original_target": "/home/sorry/python_ws/interactive/unifp_reproduction/robot_description/a1arm_description/meshes/gripper2.collision.glb",
+      "archived_target": "/home/sorry/python_ws/interactive/unifp_reproduction/legacy/v3_reference_20261030/robot_description/a1arm_description/meshes/gripper2.collision.glb"
+    },
+    {
+      "path": "robot_description/a1arm_description/meshes/approx_sim/gripper2_visual.glb",
+      "mode": 511,
+      "type": "symlink",
+      "original_target": "/home/sorry/python_ws/interactive/unifp_reproduction/robot_description/a1arm_description/meshes/gripper2.visual.glb",
+      "archived_target": "/home/sorry/python_ws/interactive/unifp_reproduction/legacy/v3_reference_20261030/robot_description/a1arm_description/meshes/gripper2.visual.glb"
+    },
+    {
+      "path": "robot_description/a1arm_description/meshes/approx_sim/left_camera_collision.glb",
+      "mode": 511,
+      "type": "symlink",
+      "original_target": "/home/sorry/python_ws/interactive/unifp_reproduction/robot_description/a1arm_description/meshes/left_camera.collision.glb",
+      "archived_target": "/home/sorry/python_ws/interactive/unifp_reproduction/legacy/v3_reference_20261030/robot_description/a1arm_description/meshes/left_camera.collision.glb"
+    },
+    {
+      "path": "robot_description/a1arm_description/meshes/approx_sim/left_camera_connector_collision.glb",
+      "mode": 511,
+      "type": "symlink",
+      "original_target": "/home/sorry/python_ws/interactive/unifp_reproduction/robot_description/a1arm_description/meshes/left_camera_connector.collision.glb",
+      "archived_target": "/home/sorry/python_ws/interactive/unifp_reproduction/legacy/v3_reference_20261030/robot_description/a1arm_description/meshes/left_camera_connector.collision.glb"
+    },
+    {
+      "path": "robot_description/a1arm_description/meshes/approx_sim/left_camera_connector_visual.glb",
+      "mode": 511,
+      "type": "symlink",
+      "original_target": "/home/sorry/python_ws/interactive/unifp_reproduction/robot_description/a1arm_description/meshes/left_camera_connector.visual.glb",
+      "archived_target": "/home/sorry/python_ws/interactive/unifp_reproduction/legacy/v3_reference_20261030/robot_description/a1arm_description/meshes/left_camera_connector.visual.glb"
+    },
+    {
+      "path": "robot_description/a1arm_description/meshes/approx_sim/left_camera_visual.glb",
+      "mode": 511,
+      "type": "symlink",
+      "original_target": "/home/sorry/python_ws/interactive/unifp_reproduction/robot_description/a1arm_description/meshes/left_camera.visual.glb",
+      "archived_target": "/home/sorry/python_ws/interactive/unifp_reproduction/legacy/v3_reference_20261030/robot_description/a1arm_description/meshes/left_camera.visual.glb"
+    },
+    {
+      "path": "robot_description/a1arm_description/meshes/approx_sim/ranger_mini3_decimate_collision.glb",
+      "mode": 511,
+      "type": "symlink",
+      "original_target": "/home/sorry/python_ws/interactive/unifp_reproduction/robot_description/a1arm_description/meshes/ranger_mini3_decimate.collision.glb",
+      "archived_target": "/home/sorry/python_ws/interactive/unifp_reproduction/legacy/v3_reference_20261030/robot_description/a1arm_description/meshes/ranger_mini3_decimate.collision.glb"
+    },
+    {
+      "path": "robot_description/a1arm_description/meshes/approx_sim/ranger_mini3_decimate_visual.glb",
+      "mode": 511,
+      "type": "symlink",
+      "original_target": "/home/sorry/python_ws/interactive/unifp_reproduction/robot_description/a1arm_description/meshes/ranger_mini3_decimate.visual.glb",
+      "archived_target": "/home/sorry/python_ws/interactive/unifp_reproduction/legacy/v3_reference_20261030/robot_description/a1arm_description/meshes/ranger_mini3_decimate.visual.glb"
+    },
+    {
+      "path": "robot_description/a1arm_description/meshes/approx_sim/rear_top_camera_connector_collision.glb",
+      "mode": 511,
+      "type": "symlink",
+      "original_target": "/home/sorry/python_ws/interactive/unifp_reproduction/robot_description/a1arm_description/meshes/rear_top_camera_connector.collision.glb",
+      "archived_target": "/home/sorry/python_ws/interactive/unifp_reproduction/legacy/v3_reference_20261030/robot_description/a1arm_description/meshes/rear_top_camera_connector.collision.glb"
+    },
+    {
+      "path": "robot_description/a1arm_description/meshes/approx_sim/rear_top_camera_connector_visual.glb",
+      "mode": 511,
+      "type": "symlink",
+      "original_target": "/home/sorry/python_ws/interactive/unifp_reproduction/robot_description/a1arm_description/meshes/rear_top_camera_connector.visual.glb",
+      "archived_target": "/home/sorry/python_ws/interactive/unifp_reproduction/legacy/v3_reference_20261030/robot_description/a1arm_description/meshes/rear_top_camera_connector.visual.glb"
+    },
+    {
+      "path": "robot_description/a1arm_description/meshes/approx_sim/right_camera_collision.glb",
+      "mode": 511,
+      "type": "symlink",
+      "original_target": "/home/sorry/python_ws/interactive/unifp_reproduction/robot_description/a1arm_description/meshes/right_camera.collision.glb",
+      "archived_target": "/home/sorry/python_ws/interactive/unifp_reproduction/legacy/v3_reference_20261030/robot_description/a1arm_description/meshes/right_camera.collision.glb"
+    },
+    {
+      "path": "robot_description/a1arm_description/meshes/approx_sim/right_camera_connector_collision.glb",
+      "mode": 511,
+      "type": "symlink",
+      "original_target": "/home/sorry/python_ws/interactive/unifp_reproduction/robot_description/a1arm_description/meshes/right_camera_connector.collision.glb",
+      "archived_target": "/home/sorry/python_ws/interactive/unifp_reproduction/legacy/v3_reference_20261030/robot_description/a1arm_description/meshes/right_camera_connector.collision.glb"
+    },
+    {
+      "path": "robot_description/a1arm_description/meshes/approx_sim/right_camera_connector_visual.glb",
+      "mode": 511,
+      "type": "symlink",
+      "original_target": "/home/sorry/python_ws/interactive/unifp_reproduction/robot_description/a1arm_description/meshes/right_camera_connector.visual.glb",
+      "archived_target": "/home/sorry/python_ws/interactive/unifp_reproduction/legacy/v3_reference_20261030/robot_description/a1arm_description/meshes/right_camera_connector.visual.glb"
+    },
+    {
+      "path": "robot_description/a1arm_description/meshes/approx_sim/right_camera_visual.glb",
+      "mode": 511,
+      "type": "symlink",
+      "original_target": "/home/sorry/python_ws/interactive/unifp_reproduction/robot_description/a1arm_description/meshes/right_camera.visual.glb",
+      "archived_target": "/home/sorry/python_ws/interactive/unifp_reproduction/legacy/v3_reference_20261030/robot_description/a1arm_description/meshes/right_camera.visual.glb"
+    },
+    {
+      "path": "robot_description/a1arm_description/meshes/approx_sim/wrist_camera_connector_collision.glb",
+      "mode": 511,
+      "type": "symlink",
+      "original_target": "/home/sorry/python_ws/interactive/unifp_reproduction/robot_description/a1arm_description/meshes/wrist_camera_connector.collision.glb",
+      "archived_target": "/home/sorry/python_ws/interactive/unifp_reproduction/legacy/v3_reference_20261030/robot_description/a1arm_description/meshes/wrist_camera_connector.collision.glb"
+    },
+    {
+      "path": "robot_description/a1arm_description/meshes/approx_sim/wrist_camera_connector_visual.glb",
+      "mode": 511,
+      "type": "symlink",
+      "original_target": "/home/sorry/python_ws/interactive/unifp_reproduction/robot_description/a1arm_description/meshes/wrist_camera_connector.visual.glb",
+      "archived_target": "/home/sorry/python_ws/interactive/unifp_reproduction/legacy/v3_reference_20261030/robot_description/a1arm_description/meshes/wrist_camera_connector.visual.glb"
+    },
+    {
+      "path": "robot_description/a1arm_description/meshes/arm_base.STL",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 608084,
+      "sha256": "be3d34b3244d745f527273f2005ca4ae9b08118c7778c4f3fae88a6e361203a0"
+    },
+    {
+      "path": "robot_description/a1arm_description/meshes/arm_base.collision.glb",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 1001776,
+      "sha256": "c75126b1d276538b7740207775e3979b45ad158679d8875d3d84beb79768ca3c"
+    },
+    {
+      "path": "robot_description/a1arm_description/meshes/arm_base.visual.glb",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 949376,
+      "sha256": "509c69ea79f79d721a72838a8546991f684eb121f93e0044725d901b8b919ea8"
+    },
+    {
+      "path": "robot_description/a1arm_description/meshes/arm_seg1.STL",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 1924784,
+      "sha256": "b80652f37e0d2d4b59d5127cbd97b404ddf661cd421d2ea47c100cc991bedcae"
+    },
+    {
+      "path": "robot_description/a1arm_description/meshes/arm_seg1.collision.glb",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 400188,
+      "sha256": "ddc5f1e36dd98256eda8efa5d8721f71530d513f70e7828adb660d4c093a4445"
+    },
+    {
+      "path": "robot_description/a1arm_description/meshes/arm_seg1.visual.glb",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 3234396,
+      "sha256": "571e652b7cf82566ba4a50ebed9886a6a2ba5276e29dd97dacb4a4354168a213"
+    },
+    {
+      "path": "robot_description/a1arm_description/meshes/arm_seg2.STL",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 539684,
+      "sha256": "98d224d819f1ecbbd19c979e4f18409bd16e277bd752c4bb3fd913182bee41d8"
+    },
+    {
+      "path": "robot_description/a1arm_description/meshes/arm_seg2.collision.glb",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 100712,
+      "sha256": "7f92b60829668f41f45e8d5722223ccc1d8068d840e2259dd4b3c53295d026fb"
+    },
+    {
+      "path": "robot_description/a1arm_description/meshes/arm_seg2.visual.glb",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 842672,
+      "sha256": "f51e2fdcfe18ba497f57d6e46fd813d51040c88fc364faffa6f4a499205cbee7"
+    },
+    {
+      "path": "robot_description/a1arm_description/meshes/arm_seg3.STL",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 1976034,
+      "sha256": "dbfd8fea24de4480195d62096b63c206c002ba122021dbdab71ccfe4ea1a56f0"
+    },
+    {
+      "path": "robot_description/a1arm_description/meshes/arm_seg3.collision.glb",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 195364,
+      "sha256": "25bbdbf6e1dd5c5903fdb09878e536b84346a340410897d5448be449cd1a10d0"
+    },
+    {
+      "path": "robot_description/a1arm_description/meshes/arm_seg3.visual.glb",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 3320496,
+      "sha256": "299e7c8e661c1dc10ffea7dab339eb2dab2f64c20009a465ee4ffd742e927ce4"
+    },
+    {
+      "path": "robot_description/a1arm_description/meshes/arm_seg4.STL",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 251384,
+      "sha256": "df203b499f3c2eff565b2078a9b8b0888552c9453b97d7734f82b0689208a6bf"
+    },
+    {
+      "path": "robot_description/a1arm_description/meshes/arm_seg4.collision.glb",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 468544,
+      "sha256": "0d27c250425921672b02738dda17a14980fe5e814a361ff56115a21beabbe71b"
+    },
+    {
+      "path": "robot_description/a1arm_description/meshes/arm_seg4.visual.glb",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 392920,
+      "sha256": "22a0260025b073eb4a55ef77aa1e31eaf4313e041e356d55234259d57c115171"
+    },
+    {
+      "path": "robot_description/a1arm_description/meshes/arm_seg5.STL",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 306684,
+      "sha256": "cf71a6682a3a702d92ff6278742549a9fe2620f6edc338c4d5b45621743d2ff6"
+    },
+    {
+      "path": "robot_description/a1arm_description/meshes/arm_seg5.collision.glb",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 243440,
+      "sha256": "62fc42ff6722b8b0295e026bddceb98cd727d6268af006d306d3cef1388ccc03"
+    },
+    {
+      "path": "robot_description/a1arm_description/meshes/arm_seg5.visual.glb",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 479192,
+      "sha256": "1cdb25d8dc3789325bf1f7df53f6e85f3a83de14f5036b2c084656eb959729db"
+    },
+    {
+      "path": "robot_description/a1arm_description/meshes/arm_seg6.STL",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 1134584,
+      "sha256": "c0073262d2cc5f950eb66ef4bec90662f30791c4be8ba6b88e0a6b5584f4153f"
+    },
+    {
+      "path": "robot_description/a1arm_description/meshes/arm_seg6.collision.glb",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 407344,
+      "sha256": "603474eea23fa712246bf3fc446e767c77e62eaec41ef980a3b92b1540540c8e"
+    },
+    {
+      "path": "robot_description/a1arm_description/meshes/arm_seg6.visual.glb",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 1906860,
+      "sha256": "cfcc5f74a2e3740e8e1c1935f64e87326eb7c275ecd1495e5e2673e948ac8108"
+    },
+    {
+      "path": "robot_description/a1arm_description/meshes/camera.STL",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 5595484,
+      "sha256": "143e9a11d60f1c05c7bce39a83a81a5b128abdd2886ab02e42791e4f0582ffae"
+    },
+    {
+      "path": "robot_description/a1arm_description/meshes/camera.collision.glb",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 168360,
+      "sha256": "8cf850130f193618addb097b186d53984910c8600d941605a4a409e28b3e8e96"
+    },
+    {
+      "path": "robot_description/a1arm_description/meshes/camera.visual.glb",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 9401176,
+      "sha256": "af85717a5169965ee71e76bf2b819e42b1a6e86d9d8cbc3d353c888547e2e63f"
+    },
+    {
+      "path": "robot_description/a1arm_description/meshes/gripper1.STL",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 567484,
+      "sha256": "e888cc5f0cd77a8e1abef7b436378a38a2d0ee7268cc739fb51f9913d4ce5a1d"
+    },
+    {
+      "path": "robot_description/a1arm_description/meshes/gripper1.collision.glb",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 111868,
+      "sha256": "5050a6f6a26e5a5ab60b4b7a52b6950279a4a1216b497ba10bbe9a916064e037"
+    },
+    {
+      "path": "robot_description/a1arm_description/meshes/gripper1.visual.glb",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 886044,
+      "sha256": "25a95b17bea2dc07634ff0241e966448f275eb628fd43c04577195e537660b73"
+    },
+    {
+      "path": "robot_description/a1arm_description/meshes/gripper2.STL",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 567484,
+      "sha256": "393dfe556f193ff31694e765e01161c00e2a2bb563ed1f5ea2f28d4c00048a47"
+    },
+    {
+      "path": "robot_description/a1arm_description/meshes/gripper2.collision.glb",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 111868,
+      "sha256": "7221ee10dc4537cad1e84a5296c055661b4193884afdbb0f74f9500fd992eff3"
+    },
+    {
+      "path": "robot_description/a1arm_description/meshes/gripper2.visual.glb",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 886044,
+      "sha256": "7355c60f15ba6b038ebcb3d320e3a194120398706fc0028754a7fe0a38967f35"
+    },
+    {
+      "path": "robot_description/a1arm_description/meshes/left_camera.STL",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 5595484,
+      "sha256": "c319d553da8e0eab8a15a69bfe15e30d70981f925c1cb2c4d792fa2086690138"
+    },
+    {
+      "path": "robot_description/a1arm_description/meshes/left_camera.collision.glb",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 202488,
+      "sha256": "abf9320832ee6fc657f2c62236ea5e30b9a2e1c8fef4952ec3fec47166c9ba13"
+    },
+    {
+      "path": "robot_description/a1arm_description/meshes/left_camera.visual.glb",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 9401184,
+      "sha256": "8d12fbda107daf3ebd6dfeffe03b6471c38454671eed13a74fe28c9d77da606f"
+    },
+    {
+      "path": "robot_description/a1arm_description/meshes/left_camera_connector.STL",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 30084,
+      "sha256": "af9bd1d798f5f347e1a4baff8123bc3a608b405e61015256f8ba8204c27417b0"
+    },
+    {
+      "path": "robot_description/a1arm_description/meshes/left_camera_connector.collision.glb",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 86300,
+      "sha256": "d2dc8a6fac131900c7ff7c9087ce444a0e8ecd452951438582ea48087164c1af"
+    },
+    {
+      "path": "robot_description/a1arm_description/meshes/left_camera_connector.visual.glb",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 47716,
+      "sha256": "76a781eb147379589318bb97131b14a5d064b484456031a63e4bb56496f1df08"
+    },
+    {
+      "path": "robot_description/a1arm_description/meshes/official_v3",
+      "mode": 509,
+      "type": "directory"
+    },
+    {
+      "path": "robot_description/a1arm_description/meshes/official_v3/ranger_base.glb",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 12268024,
+      "sha256": "2f190f32211807ad4ab0218a561681b40e97ee6eded0e70473a5a4330fb549aa"
+    },
+    {
+      "path": "robot_description/a1arm_description/meshes/official_v3/steering_wheel.glb",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 90584,
+      "sha256": "ff5d60bb48e5b46e0d147585bd95b008e6fb1505e2788042c10f3ff545846dc7"
+    },
+    {
+      "path": "robot_description/a1arm_description/meshes/official_v3/wheel_v3.glb",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 412524,
+      "sha256": "71bdb2721051607733b3fdf4126024d18f60bf9123ec81f5a9bfcd4217b43f02"
+    },
+    {
+      "path": "robot_description/a1arm_description/meshes/original_movable",
+      "mode": 509,
+      "type": "directory"
+    },
+    {
+      "path": "robot_description/a1arm_description/meshes/original_movable/bl_fixed.glb",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 4610896,
+      "sha256": "2dba162718f237cbeab8aee05aa54d652c823a61d8c685cdced0953da1994e9f"
+    },
+    {
+      "path": "robot_description/a1arm_description/meshes/original_movable/bl_rolling.glb",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 4043328,
+      "sha256": "c4984866a6610248a15af59fc6f35624db531cc1ea09665f50f5712745bb84b8"
+    },
+    {
+      "path": "robot_description/a1arm_description/meshes/original_movable/bl_steering.glb",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 3820148,
+      "sha256": "a38e541c747c9d8a7f6b82cdd665f377808857969f55c3899a01e040ef8fefa4"
+    },
+    {
+      "path": "robot_description/a1arm_description/meshes/original_movable/br_fixed.glb",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 4766512,
+      "sha256": "c03d86427baa44c8de001f1a9519e2464c2ba2c9c3fa7c068e27a5ced39e423a"
+    },
+    {
+      "path": "robot_description/a1arm_description/meshes/original_movable/br_rolling.glb",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 4263700,
+      "sha256": "482fcbfd6cecca1458882cf85e4ad9e6a654fbf7f58291af91ae9b2fb638f783"
+    },
+    {
+      "path": "robot_description/a1arm_description/meshes/original_movable/br_steering.glb",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 3981772,
+      "sha256": "31c4dee422dcff0608bf409444c021abe6e231a1ae3ad04eaec4931ae5e089b8"
+    },
+    {
+      "path": "robot_description/a1arm_description/meshes/original_movable/fl_fixed.glb",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 4610892,
+      "sha256": "009593cb6aa00fdf7b3e9a532fe5c1329de5844d6adf6a5e5ceb67d026c2708e"
+    },
+    {
+      "path": "robot_description/a1arm_description/meshes/original_movable/fl_rolling.glb",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 4043328,
+      "sha256": "c4984866a6610248a15af59fc6f35624db531cc1ea09665f50f5712745bb84b8"
+    },
+    {
+      "path": "robot_description/a1arm_description/meshes/original_movable/fl_steering.glb",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 3820148,
+      "sha256": "a38e541c747c9d8a7f6b82cdd665f377808857969f55c3899a01e040ef8fefa4"
+    },
+    {
+      "path": "robot_description/a1arm_description/meshes/original_movable/fr_fixed.glb",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 4766508,
+      "sha256": "0a603e9d75ff3ab9023e6fa2f29aa7860550b06752b5d5030eafb868d7056be3"
+    },
+    {
+      "path": "robot_description/a1arm_description/meshes/original_movable/fr_rolling.glb",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 4263700,
+      "sha256": "482fcbfd6cecca1458882cf85e4ad9e6a654fbf7f58291af91ae9b2fb638f783"
+    },
+    {
+      "path": "robot_description/a1arm_description/meshes/original_movable/fr_steering.glb",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 3981772,
+      "sha256": "31c4dee422dcff0608bf409444c021abe6e231a1ae3ad04eaec4931ae5e089b8"
+    },
+    {
+      "path": "robot_description/a1arm_description/meshes/original_movable/provenance.json",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 1854,
+      "sha256": "e6b71adef7212c11e45919e3fcf28b4a9bfd521f14dac547d6ee209e5bba65f7"
+    },
+    {
+      "path": "robot_description/a1arm_description/meshes/ranger_mini3_decimate.collision.glb",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 342104,
+      "sha256": "5c8cfa67a66e662d5537589044bbd9fde8aed63c93364c513fad62e958929ead"
+    },
+    {
+      "path": "robot_description/a1arm_description/meshes/ranger_mini3_decimate.stl",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 1746684,
+      "sha256": "0757cd5f6d0134d81fc1807adeba9e7a31978fdb9b7fb9b6fc0df4d8fa19eda6"
+    },
+    {
+      "path": "robot_description/a1arm_description/meshes/ranger_mini3_decimate.visual.glb",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 2935212,
+      "sha256": "f780fcbbbe1bb5938aa32af9355917e5f87adbacf97c9c7dbd7988d0b031f0a4"
+    },
+    {
+      "path": "robot_description/a1arm_description/meshes/ranger_mini_v3_wheel.collision.glb",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 345228,
+      "sha256": "01ebf4df817b532776ca36b1e00fbc01e1deca3634cd2afd224a6b563b25d866"
+    },
+    {
+      "path": "robot_description/a1arm_description/meshes/ranger_mini_v3_wheel.stl",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 5196734,
+      "sha256": "b90bf4e2772d5471f8e6bc60d7b97ffef076a06950f494f869e0eee5b70df927"
+    },
+    {
+      "path": "robot_description/a1arm_description/meshes/ranger_mini_v3_wheel.visual.glb",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 8731300,
+      "sha256": "0cee5abbb7133c5c57df55fe888be53fa1a2bb90cbe4f5cb140aec564cd7e59e"
+    },
+    {
+      "path": "robot_description/a1arm_description/meshes/ranger_mini_v3_wheel_right.collision.glb",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 361760,
+      "sha256": "4e021d8d9dcd7f07bc683ad696c913126736eecc3f854309d342f381f9d1ec91"
+    },
+    {
+      "path": "robot_description/a1arm_description/meshes/ranger_mini_v3_wheel_right.stl",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 5420734,
+      "sha256": "ab295109861bb10a92e91041641e688158f95bbd08b760d8725e22a468175c55"
+    },
+    {
+      "path": "robot_description/a1arm_description/meshes/ranger_mini_v3_wheel_right.visual.glb",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 9107628,
+      "sha256": "130a78150d24c539b91b27993955bb399cedca96b37bee8fc753ceb69c516418"
+    },
+    {
+      "path": "robot_description/a1arm_description/meshes/rear_top_camera_connector.STL",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 18384,
+      "sha256": "827f4226336a831fed43848fe717217aca1a36a85b0076d85fe4aa7c6977b1a3"
+    },
+    {
+      "path": "robot_description/a1arm_description/meshes/rear_top_camera_connector.collision.glb",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 69652,
+      "sha256": "790ca363554cc6ab11b8b1cfc4619db0d2111a0c6c1138a8cac4c26c31487fea"
+    },
+    {
+      "path": "robot_description/a1arm_description/meshes/rear_top_camera_connector.visual.glb",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 29472,
+      "sha256": "c3af3b0e1ecc9be7c272526f830647e9d1e619165c762cbf02d57ee36ae0bb82"
+    },
+    {
+      "path": "robot_description/a1arm_description/meshes/right_camera.STL",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 5595484,
+      "sha256": "656c20497e3f780c5c1b3ae45d760b2d32944fec377319a4250170f0fca4782b"
+    },
+    {
+      "path": "robot_description/a1arm_description/meshes/right_camera.collision.glb",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 201268,
+      "sha256": "5a368a96550eaeb6d10b1482e316c3908237fd97c82630efb96c16a1b988dd7f"
+    },
+    {
+      "path": "robot_description/a1arm_description/meshes/right_camera.visual.glb",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 9401188,
+      "sha256": "9ed53bbf83fd0029e33f66626cb47d8656876852594c74ea00d4110c72940144"
+    },
+    {
+      "path": "robot_description/a1arm_description/meshes/right_camera_connector.STL",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 29684,
+      "sha256": "e6f32c78a847eee738fbb9365f33cff87fd5e7d9d4a92f298b003f23d7f2acee"
+    },
+    {
+      "path": "robot_description/a1arm_description/meshes/right_camera_connector.collision.glb",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 81096,
+      "sha256": "7966552eeb56f479bf9aac2ea1f3e258e04d0354d8824ff393b6701e1bd18e88"
+    },
+    {
+      "path": "robot_description/a1arm_description/meshes/right_camera_connector.visual.glb",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 47092,
+      "sha256": "50e782653778cf7d635862016abd12b15d575d386463a22d11d283078347da72"
+    },
+    {
+      "path": "robot_description/a1arm_description/meshes/wrist_camera_connector.STL",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 53084,
+      "sha256": "db3b1c84b9d742335e8b8e92eb5dddaf9423bdaa672477c8eb184322b98ad58a"
+    },
+    {
+      "path": "robot_description/a1arm_description/meshes/wrist_camera_connector.collision.glb",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 74100,
+      "sha256": "debed46d8f1380aa669a72e39ca259160a69898f67401fd4666cc69b7ea02313"
+    },
+    {
+      "path": "robot_description/a1arm_description/meshes/wrist_camera_connector.visual.glb",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 83592,
+      "sha256": "f46705a6606bfa2e9c831e9d35fd2d289d8606ecc0425ac27550346fc2ff385d"
+    },
+    {
+      "path": "robot_description/a1arm_description/scripts",
+      "mode": 509,
+      "type": "directory"
+    },
+    {
+      "path": "robot_description/a1arm_description/scripts/build_ranger_mini3_approx_sim_urdf.py",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 9624,
+      "sha256": "26db62ebb0e98a739228fb3567cfcbd5a5524684c1427958b4d43449c0d23fd8"
+    },
+    {
+      "path": "robot_description/a1arm_description/scripts/build_ranger_visual_usd.py",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 17328,
+      "sha256": "e290f901c4eac918b7bde309a07ba257e5f7631f74837e925e8f46689f11067b"
+    },
+    {
+      "path": "robot_description/a1arm_description/urdf",
+      "mode": 509,
+      "type": "directory"
+    },
+    {
+      "path": "robot_description/a1arm_description/urdf/a1arm_gripper.urdf",
+      "mode": 384,
+      "type": "file",
+      "size_bytes": 3178,
+      "sha256": "3f181819139147b830c3b2d33a13b2a2a63f52bdf953f9c841d7b2d9a2448587"
+    },
+    {
+      "path": "robot_description/a1arm_description/urdf/a1arm_rgm3.urdf",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 28896,
+      "sha256": "a3eacf4b991ba7bfa4be5e57e229adeb918c71a741f17be53d4f4ba799471f2c"
+    },
+    {
+      "path": "robot_description/a1arm_description/urdf/a1arm_rgm3_approx_sim.urdf",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 26237,
+      "sha256": "a1f1536490f6599ade598ad4cde9d15b29c7a69ccc9a544de8287628697d7293"
+    },
+    {
+      "path": "robot_description/a1arm_description/urdf/a1arm_rgm3_approx_sim_v2.urdf",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 26174,
+      "sha256": "a79f5f6b3ab2c25d1e7b5757e9b020dad5e406b1c0051fd50d3049c8a3bc2b81"
+    },
+    {
+      "path": "robot_description/a1arm_description/urdf/a1arm_rgm3_approx_sim_v3.urdf",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 26462,
+      "sha256": "a5b019bdd78caa2bcb77fb3a41a1a303ddd8fdd944ce4a1ae34510392eb75a28"
+    },
+    {
+      "path": "robot_description/a1arm_description/urdf/a1arm_rgm3_original_movable.urdf",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 27686,
+      "sha256": "49b2e1b1acf728bdf1ec403126a219f7f62d7e5bbd0912c6b81af745fda498df"
+    },
+    {
+      "path": "robot_description/a1arm_description/vendor",
+      "mode": 509,
+      "type": "directory"
+    },
+    {
+      "path": "robot_description/a1arm_description/vendor/agilex_ranger_mini_v3",
+      "mode": 509,
+      "type": "directory"
+    },
+    {
+      "path": "robot_description/a1arm_description/vendor/agilex_ranger_mini_v3/package.xml",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 651,
+      "sha256": "0c4b1cca134c534baed836130bd21e090ee039e97cbc8230ff3a9991f5442db4"
+    },
+    {
+      "path": "robot_description/a1arm_description/vendor/agilex_ranger_mini_v3/provenance.json",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 1841,
+      "sha256": "b76e5ec39171c510e692ad3452a03830a3c975b763e41725f31a51ec3819d7ba"
+    },
+    {
+      "path": "robot_description/a1arm_description/vendor/agilex_ranger_mini_v3/ranger_base.dae",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 38454037,
+      "sha256": "cf8d73c2d048b781f7dcd6d63122a79114836961ee347a9c5be716f5eef5501e"
+    },
+    {
+      "path": "robot_description/a1arm_description/vendor/agilex_ranger_mini_v3/ranger_mini.xacro",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 14239,
+      "sha256": "925fa108e23a931d5c98b27a3eda0d0056a50e0889a8fcbdaea97d5090f7675e"
+    },
+    {
+      "path": "robot_description/a1arm_description/vendor/agilex_ranger_mini_v3/steering_wheel.dae",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 171983,
+      "sha256": "d8448b8856920bbdc74b21c36114cab3782a840e276511969f1ee91f8d443028"
+    },
+    {
+      "path": "robot_description/a1arm_description/vendor/agilex_ranger_mini_v3/wheel_v3.dae",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 1041026,
+      "sha256": "d45ddac792ac54ba44cf516cf575a3b768cf7e95fd65c2c14af8b1061878253f"
+    },
+    {
+      "path": "smoke_b2z1.py",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 3289,
+      "sha256": "be178ff6199108220fa5472e89800b0b4abb593e9d43b0be95043f73e8b7a47b"
+    },
+    {
+      "path": "smoke_unifp_eval_contract.py",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 4121,
+      "sha256": "b8b88a016fb32dafc95c655833f3f71593612a9a698a6b1f4d5f757efcd0a234"
+    },
+    {
+      "path": "smoke_unifp_vec_env.py",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 7300,
+      "sha256": "296a51528269f48c0b381285602b488918b766bbdd17581e2f9e14af809bee63"
+    },
+    {
+      "path": "test_ranger_approx_drive.py",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 11001,
+      "sha256": "fb1d3887c174772558fdc8d480bdb76decbee8226d8c61cb11ee1427d8082ec0"
+    },
+    {
+      "path": "train_unifp_ppo_smoke.py",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 13424,
+      "sha256": "b71270edae7e66b287db7ad53226a7130aeb07371f763cedd412f9fe310b68a0"
+    },
+    {
+      "path": "unifp_domain_randomization.py",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 5503,
+      "sha256": "5528c7d506b53dd0b810f36758c3aca4da39913ed541eb29b3ca781874e20adf"
+    },
+    {
+      "path": "unifp_eval_protocol.py",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 5828,
+      "sha256": "fa70183fafecc431dcd1a81bcb81b246c13af47d498ea70ade3e98f1a6e40177"
+    },
+    {
+      "path": "unifp_force_curriculum.py",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 5845,
+      "sha256": "6e9aaa1105aa8981604ece6f23863d3718f7052f4434c43aec1618e8b6afbddf"
+    },
+    {
+      "path": "unifp_observations.py",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 4621,
+      "sha256": "e0579b3045f4a79b6084d0a1e02305100ebd93b562a4d0efe3030eb2711a220b"
+    },
+    {
+      "path": "unifp_stage1_control.py",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 5092,
+      "sha256": "0739b871eacf65e1cfb6aa0ef19e08656ac8d6527a668b9fe32016c28f827084"
+    },
+    {
+      "path": "unifp_task_rewards.py",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 11888,
+      "sha256": "063e29401dfe8b214cbdce7e39d72c8106ee7d0546ef01994f64c19cf9b7573f"
+    },
+    {
+      "path": "unifp_task_signals.py",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 12711,
+      "sha256": "e95613d04a6752effe5c50a5b09607f3e525aaed636c351a6d6e7de60e085312"
+    },
+    {
+      "path": "unifp_vec_env.py",
+      "mode": 436,
+      "type": "file",
+      "size_bytes": 20366,
+      "sha256": "90b631a49947520ebe7b908efcb8ccd4c3172f924c17f0b3e0d2e8b9edf0511d"
+    }
+  ]
+}

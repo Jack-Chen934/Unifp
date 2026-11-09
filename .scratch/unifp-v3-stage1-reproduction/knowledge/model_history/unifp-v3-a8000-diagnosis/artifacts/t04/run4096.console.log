@@ -1,0 +1,40 @@
+Importing module 'gym_38' (/mnt/data_8THDD/myl_unifp/isaacgym/python/isaacgym/_bindings/linux-x86_64/gym_38.so)
+Setting GYM_USD_PLUG_INFO_PATH to /mnt/data_8THDD/myl_unifp/isaacgym/python/isaacgym/_bindings/linux-x86_64/usd/plugInfo.json
+PyTorch version 2.3.1+cu121
+Device count 1
+/mnt/data_8THDD/myl_unifp/isaacgym/python/isaacgym/_bindings/src/gymtorch
+Using /mnt/data_8THDD/myl_unifp_v3_stage1/cache/torch_extensions as PyTorch extensions root...
+Emitting ninja build file /mnt/data_8THDD/myl_unifp_v3_stage1/cache/torch_extensions/gymtorch/build.ninja...
+Building extension module gymtorch...
+Using envvar MAX_JOBS (2) as the number of workers...
+ninja: no work to do.
+Not connected to PVD
++++ Using GPU PhysX
+Physics Engine: PhysX
+Physics Device: cuda:0
+GPU Pipeline: enabled
+Setting seed: 1
+V3 A: I=1, S=24, transitions=98304, value=0.20406, aux=0.0292
+V3 A: I=2, S=48, transitions=196608, value=0.13678, aux=0.031561
+V3 A: I=3, S=72, transitions=294912, value=0.099471, aux=0.03181
+V3 A: I=4, S=96, transitions=393216, value=0.072162, aux=0.030848
+V3 A: I=5, S=120, transitions=491520, value=0.068432, aux=0.029269
+V3 A: I=6, S=144, transitions=589824, value=0.059037, aux=0.02849
+V3 A: I=7, S=168, transitions=688128, value=0.057786, aux=0.027268
+V3 A: I=8, S=192, transitions=786432, value=0.053167, aux=0.026661
+V3 A: I=9, S=216, transitions=884736, value=0.053468, aux=0.025576
+V3 A: I=10, S=240, transitions=983040, value=0.052923, aux=0.025071
+V3 A: I=11, S=264, transitions=1081344, value=0.047086, aux=0.024498
+V3 A: I=12, S=288, transitions=1179648, value=0.039059, aux=0.023694
+V3 A: I=13, S=312, transitions=1277952, value=0.039608, aux=0.022801
+V3 A: I=14, S=336, transitions=1376256, value=0.036417, aux=0.02194
+V3 A: I=15, S=360, transitions=1474560, value=0.032024, aux=0.021177
+V3 A: I=16, S=384, transitions=1572864, value=0.031903, aux=0.02096
+V3 A: I=17, S=408, transitions=1671168, value=0.0226, aux=0.02192
+V3 A: I=18, S=432, transitions=1769472, value=0.026655, aux=0.020315
+V3 A: I=19, S=456, transitions=1867776, value=0.023452, aux=0.01971
+V3 A: I=20, S=480, transitions=1966080, value=0.022096, aux=0.018973
+{"completed_iterations": 20, "training_policy_steps": 480, "training_transitions": 1966080, "last_saved_iteration": 20, "torch_peak_memory_bytes": 1920028160, "new_episode_after_resume": false, "lineage": {"run_id": "run4096", "reproduction_part": "A", "parent_checkpoint_path": null, "parent_checkpoint_sha256": null}}
+Loading extension module gymtorch...
+/mnt/data_8THDD/conda_envs/unifp_v3_stage1/lib/python3.8/site-packages/torch/functional.py:512: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3587.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]

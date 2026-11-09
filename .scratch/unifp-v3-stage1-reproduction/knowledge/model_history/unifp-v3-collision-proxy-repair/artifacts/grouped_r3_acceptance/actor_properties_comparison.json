@@ -1,0 +1,11 @@
+{
+  "baseline": ".scratch/unifp-v3-a8000-diagnosis/artifacts/t04/final_nominal32.json",
+  "candidate": ".scratch/unifp-v3-collision-proxy-repair/artifacts/grouped_r3_acceptance/remote_nominal_4env.json",
+  "body_count": 28,
+  "total_mass_kg": 83.3179115088416,
+  "max_difference": {
+    "mass": 0.0,
+    "com": 0.0,
+    "inertia": 0.0
+  }
+}

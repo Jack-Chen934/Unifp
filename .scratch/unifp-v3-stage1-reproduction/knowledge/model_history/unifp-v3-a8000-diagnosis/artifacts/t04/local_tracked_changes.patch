@@ -1,0 +1,196 @@
+diff --git a/UniFP_v3/legged_gym/envs/v3/legged_robot_v3.py b/UniFP_v3/legged_gym/envs/v3/legged_robot_v3.py
+index f0416be..976446d 100644
+--- a/UniFP_v3/legged_gym/envs/v3/legged_robot_v3.py
++++ b/UniFP_v3/legged_gym/envs/v3/legged_robot_v3.py
+@@ -9,11 +9,12 @@ from typing import Any, Dict, List, Optional, Tuple
+ 
+ import torch
+ from isaacgym import gymapi, gymtorch
+-from isaacgym.torch_utils import quat_apply, quat_rotate_inverse
++from isaacgym.torch_utils import quat_rotate_inverse
+ 
+ from legged_gym.envs.base.legged_robot import LeggedRobot
+ from legged_gym.utils.helpers import class_to_dict
+ from legged_gym.utils.v3_asset_collision import apply_desktop_assembly_filters
++from legged_gym.utils.v3_kinematics import V3TcpKinematics
+ 
+ 
+ ACTION_JOINT_NAMES = (
+@@ -402,6 +403,7 @@ class V3PosForce(LeggedRobot):
+             device=self.device,
+             dtype=torch.long,
+         )
++        self.tcp_kinematics = V3TcpKinematics(Path(self.cfg.asset.file), self.dof_names, self.device)
+         body_names = self.gym.get_actor_rigid_body_names(self.envs[0], self.actor_handles[0])
+         self.base_body_index = body_names.index("base_link")
+         self.tcp_body_index = body_names.index("arm_seg6")
+@@ -1074,8 +1076,8 @@ class V3PosForce(LeggedRobot):
+         self.critic_history[env_ids] = 0.0
+         self.obs_pred[env_ids] = 0.0
+         self.commands[env_ids] = 0.0
+-        # Refreshing after indexed root/DOF writes gives this reset's TCP state
+-        # in Preview4; the zero-velocity command must start at that same state.
++        # Indexed writes do not immediately update Preview4 rigid-body caches.
++        # FK reads the new root/DOF tensors for both initial targets and labels.
+         reset_tcp = self._tcp_spherical_position()[env_ids]
+         self._validate_reset_state(env_ids, reset_tcp)
+         self._initialize_target_segments(env_ids, reset_tcp)
+@@ -1364,14 +1366,12 @@ class V3PosForce(LeggedRobot):
+         return torch.stack((roll, pitch, yaw), dim=-1)
+ 
+     def _tcp_position(self) -> torch.Tensor:
+-        """Return the candidate contact-point position in world coordinates.
++        """Compute the contact point from current root/DOF state, including reset.
+ 
+         Returns:
+             Candidate TCP world positions with shape ``[N, 3]`` in meters.
+         """
+-        body_state = self.rigid_state[:, self.tcp_body_index]
+-        local_offset = torch.tensor((0.0, 0.0, 0.07961206), device=self.device).expand(self.num_envs, 3)
+-        return body_state[:, :3] + quat_apply(body_state[:, 3:7], local_offset)
++        return self.tcp_kinematics.tcp_world(self.root_states, self.dof_pos)
+ 
+     def _tcp_spherical_position(self) -> torch.Tensor:
+         """Express the candidate TCP position relative to the yaw-aligned V3 arm center.
+diff --git a/UniFP_v3/legged_gym/envs/v3/v3_pos_force_config.py b/UniFP_v3/legged_gym/envs/v3/v3_pos_force_config.py
+index d56d790..6a16a5b 100644
+--- a/UniFP_v3/legged_gym/envs/v3/v3_pos_force_config.py
++++ b/UniFP_v3/legged_gym/envs/v3/v3_pos_force_config.py
+@@ -25,7 +25,7 @@ class V3PosForceCfg(LeggedRobotCfg):
+     class asset(LeggedRobotCfg.asset):
+         file = os.path.join(
+             LEGGED_GYM_ROOT_DIR,
+-            "resources/robots/v3_a1_desktop_train_v1/urdf/a1arm_rgm3_desktop_fixed_gripper.urdf",
++            "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/urdf/a1arm_rgm3_desktop_fixed_gripper.urdf",
+         )
+         name = "v3_a1"
+         foot_name = "_Link"
+@@ -54,17 +54,17 @@ class V3PosForceCfg(LeggedRobotCfg):
+         }
+ 
+     class control(LeggedRobotCfg.control):
+-        decimation = 4
++        decimation = 8
+         control_type = "P"
+         action_scale = 0.25
+         wheel_action_scale = 5.0
+         wheel_velocity_limit = 20.0
+         # A03 short-test candidates; these are not frozen long-training values.
+         stiffness = {
+-            "fl_steering_joint": 24.9218,
+-            "fr_steering_joint": 24.9218,
+-            "bl_steering_joint": 24.9218,
+-            "br_steering_joint": 24.9218,
++            "fl_steering_joint": 49.8436,
++            "fr_steering_joint": 49.8436,
++            "bl_steering_joint": 49.8436,
++            "br_steering_joint": 49.8436,
+             "fl_wheel_drive_joint": 0.0,
+             "fr_wheel_drive_joint": 0.0,
+             "bl_wheel_drive_joint": 0.0,
+@@ -81,10 +81,11 @@ class V3PosForceCfg(LeggedRobotCfg):
+             "fr_steering_joint": 0.664582,
+             "bl_steering_joint": 0.664582,
+             "br_steering_joint": 0.664582,
+-            "fl_wheel_drive_joint": 0.227385,
+-            "fr_wheel_drive_joint": 0.227385,
+-            "bl_wheel_drive_joint": 0.227385,
+-            "br_wheel_drive_joint": 0.227385,
++            # Validated with 2.5 ms explicit feedback; simulation-only calibration.
++            "fl_wheel_drive_joint": 7.73109,
++            "fr_wheel_drive_joint": 7.73109,
++            "bl_wheel_drive_joint": 7.73109,
++            "br_wheel_drive_joint": 7.73109,
+             "arm_joint1": 1.48316,
+             "arm_joint2": 13.7176,
+             "arm_joint3": 4.75773,
+@@ -173,7 +174,7 @@ class V3PosForceCfg(LeggedRobotCfg):
+         max_push_vel_xy = 0.8
+ 
+     class sim(LeggedRobotCfg.sim):
+-        dt = 0.005
++        dt = 0.0025
+         substeps = 1
+ 
+         class physx(LeggedRobotCfg.sim.physx):
+diff --git a/UniFP_v3/legged_gym/utils/v3_asset_collision.py b/UniFP_v3/legged_gym/utils/v3_asset_collision.py
+index 3b1b2c7..40c4db9 100644
+--- a/UniFP_v3/legged_gym/utils/v3_asset_collision.py
++++ b/UniFP_v3/legged_gym/utils/v3_asset_collision.py
+@@ -22,8 +22,8 @@ def apply_desktop_assembly_filters(gym: Any, env: Any, actor: int,
+         ValueError: Imported shape counts do not match the generated asset.
+ 
+     Note:
+-        Updates actor shape filter masks. Unrelated chassis solids and all
+-        nonadjacent arm/payload collision pairs keep their original masks.
++        Updates actor shape filter masks. Unrelated chassis solids, wheel hubs,
++        and all nonadjacent arm/payload collision pairs keep their original masks.
+     """
+     manifest = json.loads(manifest_path.read_text())
+     names = gym.get_actor_rigid_body_names(env, actor)
+@@ -47,5 +47,22 @@ def apply_desktop_assembly_filters(gym: Any, env: Any, actor: int,
+             span = spans[names.index(name)]
+             for local_index in local_indices:
+                 properties[span.start + local_index].filter |= rule['mask']
++    clearance_records = sorted(manifest.get('visual_clearance_records', []),
++                               key=lambda record: record['wheel'])
++    rolling_records = {record['link']: record for record in manifest.get('rolling_collision_records', [])}
++    for bit, record in enumerate(clearance_records, start=5):
++        wheel = record['wheel'] + '_Link'
++        tire_shapes = rolling_records[wheel]['shape_indices']
++        mask = 1 << bit
++        clearance_rule = {'bodies': ['base_link', wheel],
++                          'local_shapes': [[record['local_shape']], tire_shapes],
++                          'mask': mask,
++                          '依据': '后轮胎面与对应base visual间的紧密装配间隙；仅豁免该低位碰撞与胎面分片。',
++                          'source_component': record['source_component']}
++        rules.append(clearance_rule)
++        for name, local_indices in zip(clearance_rule['bodies'], clearance_rule['local_shapes']):
++            span = spans[names.index(name)]
++            for local_index in local_indices:
++                properties[span.start + local_index].filter |= mask
+     gym.set_actor_rigid_shape_properties(env, actor, properties)
+     return rules
+diff --git a/UniFP_v3/tests/test_v3_rewards.py b/UniFP_v3/tests/test_v3_rewards.py
+index 9c6f031..244c81c 100644
+--- a/UniFP_v3/tests/test_v3_rewards.py
++++ b/UniFP_v3/tests/test_v3_rewards.py
+@@ -7,6 +7,8 @@ import torch
+ 
+ from legged_gym.envs.v3.legged_robot_v3 import V3PosForce
+ from legged_gym.envs.v3.v3_pos_force_config import V3PosForceCfg
++from legged_gym.utils.v3_kinematics import V3TcpKinematics
++from pathlib import Path
+ 
+ 
+ def make_reward_environment() -> V3PosForce:
+@@ -39,13 +41,14 @@ def make_reward_environment() -> V3PosForce:
+     environment.root_states[:, 2] = 0.32
+     environment.root_states[:, 6] = 1.0
+     environment.rpy = torch.zeros(2, 3)
+-    environment.tcp_body_index = 0
+-    environment.rigid_state = torch.zeros(2, 1, 13)
+-    environment.rigid_state[:, 0, 6] = 1.0
+-    # r=0.5, elevation=0: target world position [0.674, 0, 0.41535] m.
+-    environment.rigid_state[:, 0, :3] = torch.tensor([0.674, 0.0, 0.33573794])
++    environment.tcp_kinematics = V3TcpKinematics(
++        Path(environment.cfg.asset.file),
++        [f'{corner}_{kind}_joint' for kind in ('steering', 'wheel_drive')
++         for corner in ('fl', 'fr', 'bl', 'br')] + [f'arm_joint{index}' for index in range(1, 7)],
++        'cpu')
+     environment.commands = torch.zeros(2, 15)
+-    environment.commands[:, 3] = 0.5
++    # Keep perfect tracking using the real FK seam rather than an injected body cache.
++    environment.commands[:, 3:6] = environment._tcp_spherical_position()
+     environment.external_ee_force_y = torch.zeros(2, 3)
+     environment.external_base_force_y = torch.zeros(2, 3)
+     environment.gripper_force_kps = torch.full((2, 3), 200.0)
+@@ -110,7 +113,7 @@ class V3RewardTests(unittest.TestCase):
+         environment._initialize_episode_metrics()
+         environment.compute_reward()
+         environment._accumulate_episode_metrics(torch.empty(0, dtype=torch.long), torch.zeros(2, dtype=torch.bool))
+-        environment.rigid_state[0, 0, 0] += 0.1
++        environment.commands[0, 3] += 0.1
+         environment.compute_reward()
+         records = environment._accumulate_episode_metrics(torch.tensor([0]), torch.zeros(2, dtype=torch.bool))
+         self.assertEqual(len(records), 1)

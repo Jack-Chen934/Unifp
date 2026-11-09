@@ -1,0 +1,151 @@
+{
+  "passed": true,
+  "cases": 60,
+  "yaw_values_rad": [
+    -3.141592653589793,
+    -1.5707963267948966,
+    0.0,
+    1.5707963267948966,
+    3.141592653589793
+  ],
+  "max_absolute_errors": {
+    "actor_force_scaled": 0.0,
+    "geometric_world_m": 2.384185791015625e-07,
+    "compensated_world_m": 2.384185791015625e-07,
+    "external_label_scaled": 2.9802322387695312e-08,
+    "critic_target_world_m": 2.384185791015625e-07
+  },
+  "actor_force_slice": [
+    52,
+    55
+  ],
+  "actor_target_slice": [
+    46,
+    49
+  ],
+  "critic_compensated_target_slice": [
+    95,
+    98
+  ],
+  "force_scale_per_n": 0.01,
+  "pending_force_isolated": true,
+  "external_truth_isolated_from_actor": true,
+  "history_append_checked": true,
+  "examples": [
+    {
+      "yaw_rad": 0.0,
+      "command_axis": "X",
+      "command_yaw_n": [
+        30.0,
+        0.0,
+        0.0
+      ],
+      "actor_force_slot": [
+        0.29999998211860657,
+        0.0,
+        0.0
+      ],
+      "world_target_offset_m": [
+        0.15000009536743164,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "yaw_rad": 0.0,
+      "command_axis": "Y",
+      "command_yaw_n": [
+        0.0,
+        30.0,
+        0.0
+      ],
+      "actor_force_slot": [
+        0.0,
+        0.29999998211860657,
+        0.0
+      ],
+      "world_target_offset_m": [
+        0.0,
+        0.15000009536743164,
+        0.0
+      ]
+    },
+    {
+      "yaw_rad": 0.0,
+      "command_axis": "Z",
+      "command_yaw_n": [
+        0.0,
+        0.0,
+        30.0
+      ],
+      "actor_force_slot": [
+        0.0,
+        0.0,
+        0.29999998211860657
+      ],
+      "world_target_offset_m": [
+        0.0,
+        0.0,
+        0.15000003576278687
+      ]
+    },
+    {
+      "yaw_rad": 1.5707963267948966,
+      "command_axis": "X",
+      "command_yaw_n": [
+        30.0,
+        0.0,
+        0.0
+      ],
+      "actor_force_slot": [
+        0.29999998211860657,
+        0.0,
+        0.0
+      ],
+      "world_target_offset_m": [
+        0.0,
+        0.15000009536743164,
+        0.0
+      ]
+    },
+    {
+      "yaw_rad": 1.5707963267948966,
+      "command_axis": "Y",
+      "command_yaw_n": [
+        0.0,
+        30.0,
+        0.0
+      ],
+      "actor_force_slot": [
+        0.0,
+        0.29999998211860657,
+        0.0
+      ],
+      "world_target_offset_m": [
+        -0.15000009536743164,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "yaw_rad": 1.5707963267948966,
+      "command_axis": "Z",
+      "command_yaw_n": [
+        0.0,
+        0.0,
+        30.0
+      ],
+      "actor_force_slot": [
+        0.0,
+        0.0,
+        0.29999998211860657
+      ],
+      "world_target_offset_m": [
+        0.0,
+        0.0,
+        0.15000003576278687
+      ]
+    }
+  ],
+  "说明": "原帧构建与坐标方法，roll/pitch非零、不同yaw与正负命令；仅tensor fixture，不替代真实物理效果验证。"
+}

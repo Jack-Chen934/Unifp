@@ -1,0 +1,21 @@
+{
+  "ticket": "B-T04",
+  "passed": 56,
+  "sha256": {
+    "legged_gym/envs/v3/legged_robot_v3.py": "bfe27e44b56b04c1ecd470559ae0a443a0386a8322b0a6c227a51979d61c4251",
+    "legged_gym/b2_gym_learn/ppo_cse_pf/v3_on_policy_runner.py": "75bab97ea39a91b9a79d1e7c05fd3155a10c0a53abdf6f5cdd7f4c11c3a26939",
+    "legged_gym/b2_gym_learn/ppo_cse_pf/v3_run_identity.py": "f25d9953499c17b1211b78ca61830b17806162dbbcffcf156ba33d91ab67c4c8",
+    "legged_gym/scripts/train_v3.py": "daa58d08a4f5dceafc854cf607f652dd5dfecf3be84077ae3cfe743f602f85e8",
+    "tests/test_v3_runner.py": "5410e8e3e11e945c3dc417dc6b167cf75c477b078624d1c9808e76f04efd2233",
+    "tests/test_v3_force_transitions.py": "3c6e55108638ce748b659cf2327bfd5f52384874a98f51766004fdceb1182452"
+  },
+  "review": [
+    "真实小环境A8000→8001→B恢复8002，双Adam step为60",
+    "B缺force_state在学习状态改写前拒绝，A→B显式豁免",
+    "保存快照CPU独立clone；恢复不续旧事件，RNG最后恢复后一次reset",
+    "A7999→8000与B39999→40000各仅24步，零预算不再采样",
+    "原有原子保存失败／半轮异常／严格身份回归继续通过",
+    "CLI零预算源码审查：完整终点校验位于Gym构造前；未将内部mock测试作为证据"
+  ],
+  "limits": "只验证CPU张量环境，正式4096父与跨进程原生恢复待B-T08"
+}

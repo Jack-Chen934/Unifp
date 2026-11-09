@@ -1,0 +1,20 @@
+Importing module 'gym_38' (/home/sorry/.cache/unifp/isaacgym_preview4/pkg/isaacgym/python/isaacgym/_bindings/linux-x86_64/gym_38.so)
+Setting GYM_USD_PLUG_INFO_PATH to /home/sorry/.cache/unifp/isaacgym_preview4/pkg/isaacgym/python/isaacgym/_bindings/linux-x86_64/usd/plugInfo.json
+PyTorch version 2.3.1+cu121
+Device count 1
+/home/sorry/.cache/unifp/isaacgym_preview4/pkg/isaacgym/python/isaacgym/_bindings/src/gymtorch
+Using /home/sorry/.cache/torch_extensions/py38_cu121 as PyTorch extensions root...
+Emitting ninja build file /home/sorry/.cache/torch_extensions/py38_cu121/gymtorch/build.ninja...
+Building extension module gymtorch...
+Allowing ninja to set a default number of workers... (overridable by setting the environment variable MAX_JOBS=N)
+ninja: no work to do.
+Not connected to PVD
++++ Using GPU PhysX
+Physics Engine: PhysX
+Physics Device: cuda:0
+GPU Pipeline: disabled
+POSITIVE 750.6836547851562 750.6837158203125
+Loading extension module gymtorch...
+/home/sorry/.cache/unifp/isaacgym_preview4/torch231/lib/python3.8/site-packages/torch/functional.py:512: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3587.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+{"robot_actor_indices": [0, 2, 4, 6], "wall_body_indices": [28, 57, 86, 115], "raw_root_shape": [8, 13], "raw_body_shape": [116, 13], "robot_state_shape": [4, 28, 13], "physical_failures": 0, "local_reset_isolated": true, "policy_steps": 30, "wall_peak_n": 750.6836547851562, "finger_peak_n": 750.6837158203125, "measurement_valid": [true, true, true, true], "wall_force_peak_n": 0.0}

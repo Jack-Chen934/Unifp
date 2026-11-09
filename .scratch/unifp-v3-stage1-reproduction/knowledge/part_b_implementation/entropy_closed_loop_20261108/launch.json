@@ -1,0 +1,18 @@
+{
+  "pid": 2011444,
+  "sid": 2011444,
+  "gpu": 3,
+  "command": [
+    "/mnt/data_8THDD/conda_envs/unifp_v3_stage1/bin/python",
+    "/mnt/data_8THDD/myl_unifp_v3_stage1/validation/b_entropy_closed_loop_20261108_r01/run_experiment.py"
+  ],
+  "verified_control_smoke": {
+    "completed_iterations": 9010,
+    "additional_iterations": 10,
+    "last_saved_iteration": 9010,
+    "entropy_coef": 0.01,
+    "origin_sha256": "d0c64674c852300776662b389e14047e998f8444486f74db5fabea684f089b1f"
+  },
+  "started_at": "2026-11-08T20:38:01.574407+08:00",
+  "state": "running"
+}

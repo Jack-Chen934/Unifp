@@ -1,0 +1,17 @@
+{
+  "command": [
+    "/home/sorry/.cache/unifp/isaacgym_preview4/py38/bin/python",
+    "/home/sorry/python_ws/interactive/unifp_reproduction/.scratch/unifp-v3-collision-proxy-repair/knowledge/probe_cpu_tensor_v3.py",
+    "--source-root",
+    "/home/sorry/python_ws/interactive/unifp_reproduction/UniFP_v3",
+    "--asset",
+    "/home/sorry/python_ws/interactive/unifp_reproduction/UniFP_v3/resources/robots/v3_a1_desktop_train_v7_local_base_proxy_r2/urdf/a1arm_rgm3_desktop_fixed_gripper.urdf",
+    "--backend",
+    "cpu",
+    "--steps",
+    "25",
+    "--output",
+    "/home/sorry/python_ws/interactive/unifp_reproduction/.scratch/unifp-v3-collision-proxy-repair/artifacts/local_backend_20261106/v3_cpu_tensor_cpu_v7_local_base_proxy_r2.json"
+  ],
+  "returncode": 0
+}

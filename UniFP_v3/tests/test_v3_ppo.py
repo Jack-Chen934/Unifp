@@ -1,7 +1,8 @@
 """Exercise the confirmed V3 PPO interfaces with real models and offline tensors."""
 
-from typing import Dict
+from typing import Dict, Tuple
 
+import pytest
 import torch
 
 from legged_gym.b2_gym_learn.ppo_cse_pf.v3_actor_critic import V3ActorCritic
@@ -73,8 +74,14 @@ def test_timeout_uses_unordered_terminal_successor_once_without_mutating_reward(
     assert algorithm.storage.step == 1
 
 
-def test_full_update_uses_twenty_main_and_auxiliary_steps_with_separate_momenta() -> None:
+@pytest.mark.parametrize("force_labels", [(0., 0., 0., 0., 0., 0.), (.2, -.1, .05, 0., 0., 0.)])
+def test_full_update_uses_twenty_main_and_auxiliary_steps_with_separate_momenta(
+    force_labels: Tuple[float, ...]
+) -> None:
     """Run a real offline rollout/update and check public optimizer ownership/state.
+
+    Args:
+        force_labels: Six scaled EE/base force labels, covering A zero and B nonzero.
 
     Raises:
         AssertionError: Main/auxiliary Adam states overlap incorrectly or skip updates.
@@ -82,7 +89,8 @@ def test_full_update_uses_twenty_main_and_auxiliary_steps_with_separate_momenta(
     algorithm = make_ppo(1)
     observations = torch.randn(1, 1856) * 0.02
     critic = torch.randn(1, 294) * 0.02
-    labels = torch.tensor([[0.1] * 6 + [0.0] * 6])
+    labels = torch.tensor([[0.1] * 6 + list(force_labels)])
+    decoder_before = algorithm.actor_critic.adaptation_decoder_module[-1].weight.detach().clone()
     for _ in range(24):
         algorithm.act(observations, critic, labels)
         algorithm.process_env_step(torch.tensor([0.1]), torch.zeros(1, dtype=torch.long), empty_infos(1))
@@ -105,3 +113,4 @@ def test_full_update_uses_twenty_main_and_auxiliary_steps_with_separate_momenta(
             assert parameter not in algorithm.adaptation_module_optimizer.state
     assert all(parameter.grad is None for parameter in model_parameters.values())
     assert algorithm.adaptation_module_optimizer.param_groups[0]["lr"] == 1e-5
+    assert not torch.equal(decoder_before, algorithm.actor_critic.adaptation_decoder_module[-1].weight)

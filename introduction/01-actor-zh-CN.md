@@ -102,15 +102,15 @@ obs_buf = torch.cat((self.get_body_orientation(),
 
 `[3:6]` 的球坐标相对于一个随底盘 XY 位置和 yaw 移动、保持水平的目标坐标系。设底盘世界坐标为 `(x_B,y_B,z_B)`、yaw 为 `ψ`，官方 B2+Z1 的球心为：
 
-\[
+$$
 c^W=[x_B,y_B,0]^T+R_z(\psi)[0.2,0,0.8]^T
-\]
+$$
 
 该坐标系 X 轴沿底盘的水平朝向，Y 轴向左，Z 轴沿世界竖直向上。它跟随底盘的平移 XY 和转向 yaw，但不跟随实际底盘高度 `z_B`、roll 或 pitch。配置注释写着高度偏移相对于地形，但当前球心函数的实际计算直接使用零 Z 加 `0.8 m`，没有在这里查询或加上局部地形高度；应以公式为准。
 
 球坐标 `s=(r,θ,φ)` 中，`θ` 是相对水平面的仰角，`φ` 是从该坐标系 X 轴朝 Y 轴的方位角：
 
-\[
+$$
 p^C(s)=
 \begin{bmatrix}
 r\cos\theta\cos\phi\\
@@ -118,7 +118,7 @@ r\cos\theta\sin\phi\\
 r\sin\theta
 \end{bmatrix},\qquad
 p^W_{\rm geom}=c^W+R_z(\psi)p^C(s)
-\]
+$$
 
 因此，同一组球坐标命令会随底盘 XY 和 yaw 改变其世界目标点，并非世界中的固定点。输入缩放 `[0.5r,θ,1.3φ]` 只改变数值尺度，不改变坐标系。监督标签中的真实末端球坐标也用同一球心和逆 yaw 旋转计算。出处：[官方球心配置](/home/sorry/python_ws/interactive/unifp_reproduction/UniFP/legged_gym/envs/b2/b2z1_pos_force_config.py:18)、[目标变换与球心函数](/home/sorry/python_ws/interactive/unifp_reproduction/UniFP/legged_gym/envs/b2/legged_robot_b2z1_pos_force.py:949)、[球坐标转换约定](/home/sorry/python_ws/interactive/unifp_reproduction/UniFP/legged_gym/utils/isaacgym_utils.py:59)、[真实末端坐标计算](/home/sorry/python_ws/interactive/unifp_reproduction/UniFP/legged_gym/envs/b2/legged_robot_b2z1_pos_force.py:352)。
 
@@ -126,9 +126,9 @@ p^W_{\rm geom}=c^W+R_z(\psi)p^C(s)
 
 官方随机端点范围为 `r∈[0.35,0.95] m`、`θ∈[-2π/5,2π/5]`、`φ∈[-3π/5,3π/5]`；每次从范围内采样，没有固定“每次移动多少厘米”。路径有离散碰撞/地下检查，但这不构成完整的逆运动学可达性保证。当前目标是在起点 `s_A` 和终点 `s_B` 之间做球坐标线性插值：
 
-\[
+$$
 s^*(t)=s_A+\operatorname{clip}(t/T_{move},0,1)(s_B-s_A)
-\]
+$$
 
 控制周期约 `20 ms`，当前插值点随之更新；移动时长为 `1–3 s`，随后保持 `0.5–2 s`，一段名义周期为 `1.5–5 s`，边界按离散计时器触发。源码在环境初始化时为各环境采样这些时长，后续换端点并没有每次重抽时长。新段从上一个**期望端点**开始，计时器不会等机器人真正到达；reset 会中断当前段并重新设置初始化目标段。
 
@@ -226,9 +226,9 @@ mean = self.actor_body(torch.cat(
 
 可以把前向关系明确写成：
 
-\[
+$$
 z_t=E(H_t),\qquad \mu_t=A([o_t,z_t]),\qquad \hat y_t=D(z_t)
-\]
+$$
 
 其中 `H_t` 是观测历史，`D` 输出上述 12 维估计，外力估计只是其中一部分。这里不存在把 `\hat F_ext` 再送入动作头的连线；`act_student()` 先计算动作均值，再解码记录预测值。因此，若只省略解码器的推理计算、保留编码器权重和动作路径，相同输入的动作均值不会改变；原始接口仍会计算解码值用于记录。训练时去掉解码损失则是另一回事，会改变编码器接受的训练信号。
 
@@ -250,9 +250,9 @@ return self.distribution.sample()
 
 对于一个环境，17 个关节各有一个高斯分布：
 
-\[
+$$
 a_{t,i}\sim\mathcal N(\mu_{t,i},\sigma_i^2),\quad i=1,\ldots,17
-\]
+$$
 
 - `mean:[N,17]` 随当前输入改变。
 - `std:[17]` 是可学习参数，由所有环境共享，不是每次由输入网络再预测一套 std。
@@ -286,17 +286,17 @@ actions_scaled = actions * self.motor_strength * self.cfg.control.action_scale
 
 可用以下公式区分：
 
-\[
+$$
 \bar a_{t,i}=\operatorname{clip}(a_{t,i},-100,100)
-\]
+$$
 
-\[
+$$
 \Delta q_{t,i}=0.25\,m_i\bar a_{t,i}
-\]
+$$
 
-\[
+$$
 q^{target}_{t,i}=q^{default}_i+\Delta q_{t,i}
-\]
+$$
 
 - `a`：无量纲的策略动作数值。
 - `Δq`：关节角度偏移，单位 rad。
@@ -473,10 +473,10 @@ torques = torch.cat([default_torques, last_torque, gripper_torque], dim=-1)
 
 力参考规定任务条件，没有规定各关节应该给多少角度残差或力矩。官方启用的 `tracking_ee_force_world` 奖励具体通过**力相关的位置偏移**定义末端目标；它不是简单要求机器人制造出一个数值等于 `F_cmd` 的接触反力。按代码统一到世界坐标后：
 
-\[
+$$
 p^W_{reward}=p^W_{geom}
 +\frac{F^W_{ext}+R_z(\psi)F^{yaw}_{cmd}}{K}
-\]
+$$
 
 除法按轴进行，官方 `gripper_force_kps` 配置为各轴 `200 N/m`；这里的任务刚度 `K` 不同于关节 PD 的位置增益。奖励根据实际末端位置与 `p_reward` 的距离计算。Actor 直接看见几何球坐标目标和 `F_cmd`，看不见 `F_ext` 及完整的 `p_reward`；因此策略仍需利用运动历史中的受力线索，通过全身关节动作实现这种力与位移的关系。
 

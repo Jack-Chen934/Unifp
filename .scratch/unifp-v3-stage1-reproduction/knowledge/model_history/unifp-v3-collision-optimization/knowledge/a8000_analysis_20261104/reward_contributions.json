@@ -1,0 +1,68 @@
+[
+  {
+    "range": [
+      2001,
+      4000
+    ],
+    "contributions_per_second": {
+      "tracking_ee_force_world": 1.6869897106823792,
+      "tracking_lin_vel": 1.1213505698055293,
+      "tracking_ang_vel": 0.6901620006979302,
+      "alive": 1.499999999292048,
+      "torques_steering": -0.004429059329047222,
+      "torques_drive": -0.00019299619062936239,
+      "torques_arm": -0.003637377202679831,
+      "action_rate_steering": -0.24172335281772403,
+      "action_rate_drive": -0.2231871524917098,
+      "action_rate_arm": -0.18133947241571619,
+      "dof_vel_steering": -0.0069402045695733695,
+      "dof_vel_arm": -0.014436129136451302,
+      "dof_acc_steering": -0.005556536068004859,
+      "dof_acc_drive": -0.016277855037888273,
+      "dof_acc_arm": -0.0964231304417606,
+      "torque_limits_steering": -0.002397990571322398,
+      "torque_limits_drive": -0.0,
+      "torque_limits_arm": -0.0049882767699382085,
+      "dof_pos_limits": -0.00962009264456435,
+      "lin_vel_z": -0.0005833500014647406,
+      "ang_vel_xy": -0.00041370296628941936,
+      "base_height": -0.00018121589118725895,
+      "collision": -0.011910429633099254
+    },
+    "contributions_sum": 4.174263956298836,
+    "reported_reward_rate_mean": 4.174263818339855
+  },
+  {
+    "range": [
+      7501,
+      8000
+    ],
+    "contributions_per_second": {
+      "tracking_ee_force_world": 1.6671305539603045,
+      "tracking_lin_vel": 1.1479367314318907,
+      "tracking_ang_vel": 0.7034947775097485,
+      "alive": 1.499999999038172,
+      "torques_steering": -0.005184212959290847,
+      "torques_drive": -0.00021671832865120341,
+      "torques_arm": -0.004137603803968471,
+      "action_rate_steering": -0.28033534650523545,
+      "action_rate_drive": -0.26606302837532453,
+      "action_rate_arm": -0.21339910395812092,
+      "dof_vel_steering": -0.007339510422732734,
+      "dof_vel_arm": -0.016993531533338165,
+      "dof_acc_steering": -0.005939177565801849,
+      "dof_acc_drive": -0.019333153245992538,
+      "dof_acc_arm": -0.11393874990299928,
+      "torque_limits_steering": -0.0036294255931209763,
+      "torque_limits_drive": -0.0,
+      "torque_limits_arm": -0.006171199071941943,
+      "dof_pos_limits": -0.02115960562164752,
+      "lin_vel_z": -0.0007379831651042902,
+      "ang_vel_xy": -0.0005242337518734828,
+      "base_height": -0.00019051572316509247,
+      "collision": -0.005503614756272612
+    },
+    "contributions_sum": 4.047765347655534,
+    "reported_reward_rate_mean": 4.047765235524544
+  }
+]

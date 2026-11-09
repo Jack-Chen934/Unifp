@@ -1,0 +1,26 @@
+{
+  "S0": {
+    "trace_samples": 96000,
+    "command_mean_m_s": 0.0,
+    "actual_mean_m_s": 0.011016632866151442,
+    "summary_and_protocol_hashes_verified": true,
+    "git_commit": "6f93215118373445edd38c96b70aa5c88f17829d",
+    "checkpoint_sha256": "323a6688fe42559db1d0c545b778b456551ce0ac472f8169fec5ebce2d849dbc"
+  },
+  "S1": {
+    "trace_samples": 96000,
+    "command_mean_m_s": 0.3893604745578237,
+    "actual_mean_m_s": 0.3819971331383062,
+    "summary_and_protocol_hashes_verified": true,
+    "git_commit": "6f93215118373445edd38c96b70aa5c88f17829d",
+    "checkpoint_sha256": "323a6688fe42559db1d0c545b778b456551ce0ac472f8169fec5ebce2d849dbc"
+  },
+  "S2": {
+    "trace_samples": 96000,
+    "command_mean_m_s": 0.3893604745578237,
+    "actual_mean_m_s": 0.3816529272107097,
+    "summary_and_protocol_hashes_verified": true,
+    "git_commit": "6f93215118373445edd38c96b70aa5c88f17829d",
+    "checkpoint_sha256": "323a6688fe42559db1d0c545b778b456551ce0ac472f8169fec5ebce2d849dbc"
+  }
+}

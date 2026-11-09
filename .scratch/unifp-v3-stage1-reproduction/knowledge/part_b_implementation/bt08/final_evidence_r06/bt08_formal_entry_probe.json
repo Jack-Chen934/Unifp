@@ -1,0 +1,7 @@
+{
+  "passed": true,
+  "formal_gate_reached_simulation_boundary": true,
+  "gym_created": false,
+  "policy_updates": 0,
+  "说明": "实际父SHA、迁移合同和formal B准入均由原生产入口核验；仅拦截Gym构造，不替换门控。"
+}

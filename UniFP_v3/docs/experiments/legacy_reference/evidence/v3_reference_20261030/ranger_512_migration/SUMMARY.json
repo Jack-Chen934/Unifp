@@ -1,0 +1,89 @@
+{
+  "project": "Ranger Mini 3 + A1Arm UniFP fixed-COM force continuation",
+  "purpose": "512-environment migration and reproduction record",
+  "status": "completed_and_frozen",
+  "training": {
+    "environment_count": 512,
+    "steps_per_environment": 24,
+    "threads": 8,
+    "training_seed": 266281,
+    "iterations": 16000,
+    "global_policy_steps": 384000,
+    "ppo_adam_steps": 320000,
+    "auxiliary_adam_steps": 320000,
+    "force_iterations": 8000,
+    "force_start_global_policy_step": 192001,
+    "force_limit_per_axis_n": 60,
+    "fixed_com": true,
+    "critic_com_offset_m": 0.0,
+    "learner": "native PPO plus auxiliary joint update",
+    "checkpoint_sha256": "498f039122bf33075d4144ebcd7a05adcd91fde9214ac761aed9def79ebabb25"
+  },
+  "validation": {
+    "force_seeds": [266391, 266392],
+    "action_modes": ["mean", "sample"],
+    "conditions": ["zero", "force"],
+    "post9000_boundaries": [9500, 10000, 10500, 11000, 11500, 12000, 12500, 13000, 13500, 14000, 14500, 15000, 15500, 16000],
+    "post9000_evaluations": 112,
+    "frozen_8000_9000_evaluations": 16,
+    "total_force_protocol_evaluations": 128,
+    "evaluation_steps": 1000,
+    "evaluation_environments": 32,
+    "all_raw_sha_and_float64_recomputed": true
+  },
+  "endpoint_metrics_two_seed_mean": {
+    "mean_force": {
+      "ee_force_target_error_cm": 50.348,
+      "xy_rmse_m_s": 0.6393,
+      "yaw_rmse_rad_s": 0.5566,
+      "force_estimate_rmse_n_per_axis": 27.702,
+      "zero_predictor_rmse_n_per_axis": 17.713,
+      "force_rmse_improvement_over_zero_n_per_axis": -9.989
+    },
+    "sample_force": {
+      "ee_force_target_error_cm": 45.795,
+      "xy_rmse_m_s": 0.5607,
+      "yaw_rmse_rad_s": 0.6227,
+      "force_estimate_rmse_n_per_axis": 11.271,
+      "zero_predictor_rmse_n_per_axis": 17.846,
+      "force_rmse_improvement_over_zero_n_per_axis": 6.575
+    },
+    "training_last100": {
+      "reward_per_step": 0.009725,
+      "complete_episode_return": 9.310,
+      "ee_error_cm": 46.766,
+      "xy_rmse_m_s": 0.5520,
+      "yaw_rmse_rad_s": 0.6376
+    }
+  },
+  "best_validation_selections": {
+    "mean_force_offset_target_trained_checkpoint": 9000,
+    "mean_force_estimation_trained_checkpoint": 14000,
+    "sample_force_offset_target": 10000,
+    "sample_force_estimation_and_nonzero_vector": 10500,
+    "selection_is_validation_only": true
+  },
+  "conclusion": "The auxiliary estimator learned partial force information, especially under sample actions, but the policy did not convert it into stable force-conditioned control. Endpoint control remains poor; do not call this a successful recovery.",
+  "reproduction_notes": [
+    "Keep the repository UniFP, robot_description, root Ranger/UniFP Python modules, and Isaac Gym Preview4 runtime.",
+    "The training code is CPU learner code with 512 environments; the old 8 GiB GPU was a capacity constraint, not the algorithm definition.",
+    "PhysX, task, history, episode statistics, and force pulses are rebuilt on resume; the run is not physically continuous.",
+    "The project-local IsaacLab checkout was not used by this fixed-COM training path and is removed from the cleaned workspace."
+  ],
+  "migration_files": {
+    "directory": "ranger_512_migration",
+    "final_checkpoint": "checkpoints/model_iter_016000.pt",
+    "baseline_checkpoint": "checkpoints/model_iter_008000.pt",
+    "logic": "logic/",
+    "protected_source_manifest": "source_manifest.json",
+    "protected_source_manifest_sha256": "659e0b05fea51ce71479c5c2f15b8671953731b4c3b3aad47504c094c621da30",
+    "final_checkpoint_sha256": "498f039122bf33075d4144ebcd7a05adcd91fde9214ac761aed9def79ebabb25",
+    "baseline_checkpoint_sha256": "3ed0adc13c3dc84b87f82606160c3eb0df6e52727fb34ea089f96c686b40110",
+    "single_summary": "SUMMARY.json"
+  },
+  "cleanup_scope": {
+    "deleted": ["logs/", "artifacts/", "archive/", "IsaacLab/", "smoke_isaaclab.py", "IsaacLab-related root logs"],
+    "retained": ["UniFP/", "robot_description/", "assets/", "fixed-COM and force source modules", "ranger_512_migration/", "PROJECT_REPORT.md"],
+    "isaac_gym_cache_retained": true
+  }
+}

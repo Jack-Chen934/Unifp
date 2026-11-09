@@ -1,0 +1,1731 @@
+{
+  "length_unit": "m",
+  "coordinate_frame": "base_link",
+  "events": [
+    {
+      "policy_step": 67,
+      "env_id": 37,
+      "other_pose_in_base_m": [
+        [
+          0.17889951228473905,
+          -0.9655170602390609,
+          -0.18913426683603404,
+          0.4213544040205992
+        ],
+        [
+          -0.9405245822518431,
+          -0.22425765483901064,
+          0.25519015346620066,
+          -0.3352603922083812
+        ],
+        [
+          -0.2888052539069855,
+          0.13223203331049854,
+          -0.9482121148151887,
+          0.23894368184346232
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "matrix": {
+        "visual": {
+          "visual": {
+            "surface_intersection": false,
+            "intersecting_pairs": [],
+            "minimum_surface_distance_m": 0.004059771152879997,
+            "closest_disjoint_pair": {
+              "distance_m": 0.004059771152879997,
+              "base_surface": "base_link_visual",
+              "other_surface": "arm_seg4_visual_0",
+              "nearest_points_in_base_m": [
+                [
+                  0.33106470567408214,
+                  -0.23751539901075877,
+                  -0.02152579811995115
+                ],
+                [
+                  0.33285284395159703,
+                  -0.24115998099489572,
+                  -0.02148939104444314
+                ]
+              ]
+            }
+          },
+          "v8_arm_proxy1": {
+            "surface_intersection": false,
+            "intersecting_pairs": [],
+            "minimum_surface_distance_m": 0.0039780949928892,
+            "closest_disjoint_pair": {
+              "distance_m": 0.0039780949928892,
+              "base_surface": "base_link_visual",
+              "other_surface": "arm_seg4_proxy_1",
+              "nearest_points_in_base_m": [
+                [
+                  0.3305549767509421,
+                  -0.2378074633798024,
+                  -0.025727913694106912
+                ],
+                [
+                  0.33230714052089483,
+                  -0.24137872215186007,
+                  -0.025692239071245127
+                ]
+              ]
+            }
+          }
+        },
+        "v8_proxy13": {
+          "visual": {
+            "surface_intersection": true,
+            "intersecting_pairs": [
+              [
+                "base_link_proxy_13",
+                "arm_seg4_visual_0"
+              ]
+            ],
+            "minimum_surface_distance_m": 0.0,
+            "closest_disjoint_pair": null
+          },
+          "v8_arm_proxy1": {
+            "surface_intersection": false,
+            "intersecting_pairs": [],
+            "minimum_surface_distance_m": 7.0326821544977935e-06,
+            "closest_disjoint_pair": {
+              "distance_m": 7.0326821544977935e-06,
+              "base_surface": "base_link_proxy_13",
+              "other_surface": "arm_seg4_proxy_1",
+              "nearest_points_in_base_m": [
+                [
+                  0.33230328314776686,
+                  -0.24137284728086758,
+                  -0.02569198376425458
+                ],
+                [
+                  0.33230714052089483,
+                  -0.24137872215186007,
+                  -0.025692239071245127
+                ]
+              ]
+            }
+          }
+        },
+        "local43_only_diagnostic": {
+          "visual": {
+            "surface_intersection": false,
+            "intersecting_pairs": [],
+            "minimum_surface_distance_m": 0.003413517833558338,
+            "closest_disjoint_pair": {
+              "distance_m": 0.003413517833558338,
+              "base_surface": "local43_only_diagnostic",
+              "other_surface": "arm_seg4_visual_0",
+              "nearest_points_in_base_m": [
+                [
+                  0.3312665258800364,
+                  -0.23813759501244214,
+                  -0.021519088669417406
+                ],
+                [
+                  0.33285284395159703,
+                  -0.24115998099489572,
+                  -0.02148939104444314
+                ]
+              ]
+            }
+          },
+          "v8_arm_proxy1": {
+            "surface_intersection": false,
+            "intersecting_pairs": [],
+            "minimum_surface_distance_m": 0.003317032732901545,
+            "closest_disjoint_pair": {
+              "distance_m": 0.003317032732901545,
+              "base_surface": "local43_only_diagnostic",
+              "other_surface": "arm_seg4_proxy_1",
+              "nearest_points_in_base_m": [
+                [
+                  0.3307656606679319,
+                  -0.23844176569693784,
+                  -0.02572109727528339
+                ],
+                [
+                  0.33230714052089483,
+                  -0.24137872215186007,
+                  -0.025692239071245127
+                ]
+              ]
+            }
+          }
+        },
+        "full_union_hull_before_compact": {
+          "visual": {
+            "surface_intersection": true,
+            "intersecting_pairs": [
+              [
+                "full_union_hull_before_compact",
+                "arm_seg4_visual_0"
+              ]
+            ],
+            "minimum_surface_distance_m": 0.0,
+            "closest_disjoint_pair": null
+          },
+          "v8_arm_proxy1": {
+            "surface_intersection": false,
+            "intersecting_pairs": [],
+            "minimum_surface_distance_m": 7.035274673808363e-06,
+            "closest_disjoint_pair": {
+              "distance_m": 7.035274673808363e-06,
+              "base_surface": "full_union_hull_before_compact",
+              "other_surface": "arm_seg4_proxy_1",
+              "nearest_points_in_base_m": [
+                [
+                  0.33230328173200074,
+                  -0.2413728451111058,
+                  -0.02569198366964099
+                ],
+                [
+                  0.33230714052089483,
+                  -0.24137872215186007,
+                  -0.025692239071245127
+                ]
+              ]
+            }
+          }
+        },
+        "retained_source_14": {
+          "visual": {
+            "surface_intersection": false,
+            "intersecting_pairs": [],
+            "minimum_surface_distance_m": 0.061741622044766235,
+            "closest_disjoint_pair": {
+              "distance_m": 0.061741622044766235,
+              "base_surface": "base_link_solid_14",
+              "other_surface": "arm_seg4_visual_0",
+              "nearest_points_in_base_m": [
+                [
+                  0.36379898789903925,
+                  -0.16989412986638994,
+                  -0.02616547533445116
+                ],
+                [
+                  0.3778120841392005,
+                  -0.23002433100178465,
+                  -0.02602427370655988
+                ]
+              ]
+            }
+          },
+          "v8_arm_proxy1": {
+            "surface_intersection": false,
+            "intersecting_pairs": [],
+            "minimum_surface_distance_m": 0.06272617418147775,
+            "closest_disjoint_pair": {
+              "distance_m": 0.06272617418147775,
+              "base_surface": "base_link_solid_14",
+              "other_surface": "arm_seg4_proxy_1",
+              "nearest_points_in_base_m": [
+                [
+                  0.36377509021896837,
+                  -0.16988443919736337,
+                  -0.020080874831835238
+                ],
+                [
+                  0.3776795685490727,
+                  -0.23104990945794118,
+                  -0.019927064509957064
+                ]
+              ]
+            }
+          }
+        },
+        "retained_source_22": {
+          "visual": {
+            "surface_intersection": false,
+            "intersecting_pairs": [],
+            "minimum_surface_distance_m": 0.011063692619001864,
+            "closest_disjoint_pair": {
+              "distance_m": 0.011063692619001864,
+              "base_surface": "base_link_solid_22",
+              "other_surface": "arm_seg4_visual_0",
+              "nearest_points_in_base_m": [
+                [
+                  0.3196805715560913,
+                  -0.24750358586917384,
+                  -0.03443155224847544
+                ],
+                [
+                  0.33074426417509317,
+                  -0.24750358586917384,
+                  -0.03443155224847544
+                ]
+              ]
+            }
+          },
+          "v8_arm_proxy1": {
+            "surface_intersection": false,
+            "intersecting_pairs": [],
+            "minimum_surface_distance_m": 0.012325928373494919,
+            "closest_disjoint_pair": {
+              "distance_m": 0.012325928373494919,
+              "base_surface": "base_link_solid_22",
+              "other_surface": "arm_seg4_proxy_1",
+              "nearest_points_in_base_m": [
+                [
+                  0.3196805715560913,
+                  -0.24806466986878017,
+                  -0.039783764962560614
+                ],
+                [
+                  0.33199454073988877,
+                  -0.24860748219827108,
+                  -0.039778474975195585
+                ]
+              ]
+            }
+          }
+        },
+        "retained_source_37": {
+          "visual": {
+            "surface_intersection": false,
+            "intersecting_pairs": [],
+            "minimum_surface_distance_m": 0.0245309515566779,
+            "closest_disjoint_pair": {
+              "distance_m": 0.0245309515566779,
+              "base_surface": "base_link_solid_37",
+              "other_surface": "arm_seg4_visual_0",
+              "nearest_points_in_base_m": [
+                [
+                  0.3196805715560913,
+                  -0.22455045704266335,
+                  -0.0027878710519060462
+                ],
+                [
+                  0.33457409787148235,
+                  -0.24229729309699372,
+                  -0.010850145435078118
+                ]
+              ]
+            }
+          },
+          "v8_arm_proxy1": {
+            "surface_intersection": false,
+            "intersecting_pairs": [],
+            "minimum_surface_distance_m": 0.02513466801084706,
+            "closest_disjoint_pair": {
+              "distance_m": 0.02513466801084706,
+              "base_surface": "base_link_solid_37",
+              "other_surface": "arm_seg4_proxy_1",
+              "nearest_points_in_base_m": [
+                [
+                  0.3196805715560913,
+                  -0.22455045704266335,
+                  -0.0027878710519060462
+                ],
+                [
+                  0.3353562616528708,
+                  -0.24355746001381398,
+                  -0.007763623664315454
+                ]
+              ]
+            }
+          }
+        },
+        "retained_source_44": {
+          "visual": {
+            "surface_intersection": false,
+            "intersecting_pairs": [],
+            "minimum_surface_distance_m": 0.0018563970777493923,
+            "closest_disjoint_pair": {
+              "distance_m": 0.0018563970777493923,
+              "base_surface": "base_link_solid_44",
+              "other_surface": "arm_seg4_visual_0",
+              "nearest_points_in_base_m": [
+                [
+                  0.333715776704602,
+                  -0.24069144683061036,
+                  -0.010462108323334957
+                ],
+                [
+                  0.3345483850981946,
+                  -0.24226610712000954,
+                  -0.010985002525047798
+                ]
+              ]
+            }
+          },
+          "v8_arm_proxy1": {
+            "surface_intersection": false,
+            "intersecting_pairs": [],
+            "minimum_surface_distance_m": 0.0027484172894284196,
+            "closest_disjoint_pair": {
+              "distance_m": 0.0027484172894284196,
+              "base_surface": "base_link_solid_44",
+              "other_surface": "arm_seg4_proxy_1",
+              "nearest_points_in_base_m": [
+                [
+                  0.3335484470548761,
+                  -0.24077996991901407,
+                  -0.010461967336601225
+                ],
+                [
+                  0.33481146472860696,
+                  -0.243168177451858,
+                  -0.010966990833816907
+                ]
+              ]
+            }
+          }
+        },
+        "retained_source_66": {
+          "visual": {
+            "surface_intersection": false,
+            "intersecting_pairs": [],
+            "minimum_surface_distance_m": 0.07011736369456675,
+            "closest_disjoint_pair": {
+              "distance_m": 0.07011736369456675,
+              "base_surface": "base_link_solid_66",
+              "other_surface": "arm_seg4_visual_0",
+              "nearest_points_in_base_m": [
+                [
+                  0.33606845140457153,
+                  -0.16985674354691258,
+                  -0.0026819072353759543
+                ],
+                [
+                  0.34989173923519495,
+                  -0.23707240339868418,
+                  -0.017083868064333367
+                ]
+              ]
+            }
+          },
+          "v8_arm_proxy1": {
+            "surface_intersection": false,
+            "intersecting_pairs": [],
+            "minimum_surface_distance_m": 0.071267485083083,
+            "closest_disjoint_pair": {
+              "distance_m": 0.071267485083083,
+              "base_surface": "base_link_solid_66",
+              "other_surface": "arm_seg4_proxy_1",
+              "nearest_points_in_base_m": [
+                [
+                  0.33606845140457153,
+                  -0.16985674354691258,
+                  -0.0026819072353759543
+                ],
+                [
+                  0.3530397417497646,
+                  -0.23816396308716092,
+                  -0.013869109422112716
+                ]
+              ]
+            }
+          }
+        }
+      }
+    },
+    {
+      "policy_step": 97,
+      "env_id": 96,
+      "other_pose_in_base_m": [
+        [
+          0.3049960752708562,
+          -0.9142528153612897,
+          -0.26668180229128907,
+          0.4748688646944572
+        ],
+        [
+          -0.8948472329714721,
+          -0.3709465052857839,
+          0.2482883804360646,
+          -0.2811627467693958
+        ],
+        [
+          -0.32592303341843504,
+          0.16291249129584826,
+          -0.931253830310032,
+          0.27611345239677143
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "matrix": {
+        "visual": {
+          "visual": {
+            "surface_intersection": false,
+            "intersecting_pairs": [],
+            "minimum_surface_distance_m": 0.0036218788266824584,
+            "closest_disjoint_pair": {
+              "distance_m": 0.0036218788266824584,
+              "base_surface": "base_link_visual",
+              "other_surface": "arm_seg4_visual_0",
+              "nearest_points_in_base_m": [
+                [
+                  0.3584631838266275,
+                  -0.20072366848238055,
+                  0.0022238384555473864
+                ],
+                [
+                  0.3614981746763435,
+                  -0.2019968745965165,
+                  0.003735719062023246
+                ]
+              ]
+            }
+          },
+          "v8_arm_proxy1": {
+            "surface_intersection": false,
+            "intersecting_pairs": [],
+            "minimum_surface_distance_m": 0.0034006996530766484,
+            "closest_disjoint_pair": {
+              "distance_m": 0.0034006996530766484,
+              "base_surface": "base_link_visual",
+              "other_surface": "arm_seg4_proxy_1",
+              "nearest_points_in_base_m": [
+                [
+                  0.3583218460701088,
+                  -0.2010575473580888,
+                  0.0022263930037072256
+                ],
+                [
+                  0.3613970335662028,
+                  -0.2023543415457327,
+                  0.0028793132355854453
+                ]
+              ]
+            }
+          }
+        },
+        "v8_proxy13": {
+          "visual": {
+            "surface_intersection": false,
+            "intersecting_pairs": [],
+            "minimum_surface_distance_m": 0.0002622627895483941,
+            "closest_disjoint_pair": {
+              "distance_m": 0.0002622627895483941,
+              "base_surface": "base_link_proxy_13",
+              "other_surface": "arm_seg4_visual_0",
+              "nearest_points_in_base_m": [
+                [
+                  0.3614484557537711,
+                  -0.20268293788622832,
+                  0.0026479474225689008
+                ],
+                [
+                  0.3616478398701493,
+                  -0.2027828732576095,
+                  0.0027859353440138346
+                ]
+              ]
+            }
+          },
+          "v8_arm_proxy1": {
+            "surface_intersection": true,
+            "intersecting_pairs": [
+              [
+                "base_link_proxy_13",
+                "arm_seg4_proxy_1"
+              ]
+            ],
+            "minimum_surface_distance_m": 0.0,
+            "closest_disjoint_pair": null
+          }
+        },
+        "local43_only_diagnostic": {
+          "visual": {
+            "surface_intersection": false,
+            "intersecting_pairs": [],
+            "minimum_surface_distance_m": 0.010581220245506768,
+            "closest_disjoint_pair": {
+              "distance_m": 0.010581220245506768,
+              "base_surface": "local43_only_diagnostic",
+              "other_surface": "arm_seg4_visual_0",
+              "nearest_points_in_base_m": [
+                [
+                  0.3566284597417992,
+                  -0.2050479197493891,
+                  -0.010018875528536248
+                ],
+                [
+                  0.36310424391743074,
+                  -0.20868647072153107,
+                  -0.0024831348205708345
+                ]
+              ]
+            }
+          },
+          "v8_arm_proxy1": {
+            "surface_intersection": false,
+            "intersecting_pairs": [],
+            "minimum_surface_distance_m": 0.011793182021743813,
+            "closest_disjoint_pair": {
+              "distance_m": 0.011793182021743813,
+              "base_surface": "local43_only_diagnostic",
+              "other_surface": "arm_seg4_proxy_1",
+              "nearest_points_in_base_m": [
+                [
+                  0.35674617149325283,
+                  -0.20483910866304228,
+                  -0.010019208092543593
+                ],
+                [
+                  0.3632323303538399,
+                  -0.20848093508878301,
+                  -0.0008679248099659068
+                ]
+              ]
+            }
+          }
+        },
+        "full_union_hull_before_compact": {
+          "visual": {
+            "surface_intersection": false,
+            "intersecting_pairs": [],
+            "minimum_surface_distance_m": 0.0009677065363428627,
+            "closest_disjoint_pair": {
+              "distance_m": 0.0009677065363428627,
+              "base_surface": "full_union_hull_before_compact",
+              "other_surface": "arm_seg4_visual_0",
+              "nearest_points_in_base_m": [
+                [
+                  0.36004156282761224,
+                  -0.20461177467067745,
+                  0.003226610474943528
+                ],
+                [
+                  0.3609318649509936,
+                  -0.20480753423054737,
+                  0.0035514123596407385
+                ]
+              ]
+            }
+          },
+          "v8_arm_proxy1": {
+            "surface_intersection": false,
+            "intersecting_pairs": [],
+            "minimum_surface_distance_m": 0.0008102139710914619,
+            "closest_disjoint_pair": {
+              "distance_m": 0.0008102139710914619,
+              "base_surface": "full_union_hull_before_compact",
+              "other_surface": "arm_seg4_proxy_1",
+              "nearest_points_in_base_m": [
+                [
+                  0.3606245998916483,
+                  -0.20221733054998833,
+                  0.0026702967495080697
+                ],
+                [
+                  0.36139714691752384,
+                  -0.20235928649846485,
+                  0.0028689579698173984
+                ]
+              ]
+            }
+          }
+        },
+        "retained_source_14": {
+          "visual": {
+            "surface_intersection": false,
+            "intersecting_pairs": [],
+            "minimum_surface_distance_m": 0.024824565761051697,
+            "closest_disjoint_pair": {
+              "distance_m": 0.024824565761051697,
+              "base_surface": "base_link_solid_14",
+              "other_surface": "arm_seg4_visual_0",
+              "nearest_points_in_base_m": [
+                [
+                  0.3593416213989258,
+                  -0.16983853493324141,
+                  0.008741604584530162
+                ],
+                [
+                  0.36981975615148277,
+                  -0.1914213290169905,
+                  0.01511739919152022
+                ]
+              ]
+            }
+          },
+          "v8_arm_proxy1": {
+            "surface_intersection": false,
+            "intersecting_pairs": [],
+            "minimum_surface_distance_m": 0.025252997237138777,
+            "closest_disjoint_pair": {
+              "distance_m": 0.025252997237138777,
+              "base_surface": "base_link_solid_14",
+              "other_surface": "arm_seg4_proxy_1",
+              "nearest_points_in_base_m": [
+                [
+                  0.3593416213989258,
+                  -0.16983853493324141,
+                  0.008741604584530162
+                ],
+                [
+                  0.36964624832358456,
+                  -0.19194439275241307,
+                  0.015288327694690202
+                ]
+              ]
+            }
+          }
+        },
+        "retained_source_22": {
+          "visual": {
+            "surface_intersection": false,
+            "intersecting_pairs": [],
+            "minimum_surface_distance_m": 0.04474601611964559,
+            "closest_disjoint_pair": {
+              "distance_m": 0.04474601611964559,
+              "base_surface": "base_link_solid_22",
+              "other_surface": "arm_seg4_visual_0",
+              "nearest_points_in_base_m": [
+                [
+                  0.3196805715560913,
+                  -0.2245481746507943,
+                  -0.0013547973729361815
+                ],
+                [
+                  0.3625760826681329,
+                  -0.21181315703647774,
+                  -0.0013750798616048443
+                ]
+              ]
+            }
+          },
+          "v8_arm_proxy1": {
+            "surface_intersection": false,
+            "intersecting_pairs": [],
+            "minimum_surface_distance_m": 0.04633188339492099,
+            "closest_disjoint_pair": {
+              "distance_m": 0.04633188339492099,
+              "base_surface": "base_link_solid_22",
+              "other_surface": "arm_seg4_proxy_1",
+              "nearest_points_in_base_m": [
+                [
+                  0.3196805715560913,
+                  -0.22455004155661196,
+                  -0.002526994673797658
+                ],
+                [
+                  0.3640575152580847,
+                  -0.21123351660508236,
+                  -0.0025482033029974914
+                ]
+              ]
+            }
+          }
+        },
+        "retained_source_37": {
+          "visual": {
+            "surface_intersection": false,
+            "intersecting_pairs": [],
+            "minimum_surface_distance_m": 0.0404794198455396,
+            "closest_disjoint_pair": {
+              "distance_m": 0.0404794198455396,
+              "base_surface": "base_link_solid_37",
+              "other_surface": "arm_seg4_visual_0",
+              "nearest_points_in_base_m": [
+                [
+                  0.3196805715560913,
+                  -0.1998381899203612,
+                  0.011865372642928418
+                ],
+                [
+                  0.3601599914016309,
+                  -0.1998381899203612,
+                  0.011865372642928418
+                ]
+              ]
+            }
+          },
+          "v8_arm_proxy1": {
+            "surface_intersection": false,
+            "intersecting_pairs": [],
+            "minimum_surface_distance_m": 0.04159256085442293,
+            "closest_disjoint_pair": {
+              "distance_m": 0.04159256085442293,
+              "base_surface": "base_link_solid_37",
+              "other_surface": "arm_seg4_proxy_1",
+              "nearest_points_in_base_m": [
+                [
+                  0.3196805715560913,
+                  -0.1967403950485188,
+                  0.013978992313502291
+                ],
+                [
+                  0.3612701413032978,
+                  -0.19681866506461312,
+                  0.014471618414820394
+                ]
+              ]
+            }
+          }
+        },
+        "retained_source_44": {
+          "visual": {
+            "surface_intersection": false,
+            "intersecting_pairs": [],
+            "minimum_surface_distance_m": 0.0009677065363428627,
+            "closest_disjoint_pair": {
+              "distance_m": 0.0009677065363428627,
+              "base_surface": "base_link_solid_44",
+              "other_surface": "arm_seg4_visual_0",
+              "nearest_points_in_base_m": [
+                [
+                  0.36004156282761224,
+                  -0.20461177467067745,
+                  0.003226610474943528
+                ],
+                [
+                  0.3609318649509936,
+                  -0.20480753423054737,
+                  0.0035514123596407385
+                ]
+              ]
+            }
+          },
+          "v8_arm_proxy1": {
+            "surface_intersection": false,
+            "intersecting_pairs": [],
+            "minimum_surface_distance_m": 0.0008102139710914619,
+            "closest_disjoint_pair": {
+              "distance_m": 0.0008102139710914619,
+              "base_surface": "base_link_solid_44",
+              "other_surface": "arm_seg4_proxy_1",
+              "nearest_points_in_base_m": [
+                [
+                  0.3606245998916483,
+                  -0.20221733054998833,
+                  0.0026702967495080697
+                ],
+                [
+                  0.36139714691752384,
+                  -0.20235928649846485,
+                  0.0028689579698173984
+                ]
+              ]
+            }
+          }
+        },
+        "retained_source_66": {
+          "visual": {
+            "surface_intersection": false,
+            "intersecting_pairs": [],
+            "minimum_surface_distance_m": 0.03685981482938754,
+            "closest_disjoint_pair": {
+              "distance_m": 0.03685981482938754,
+              "base_surface": "base_link_solid_66",
+              "other_surface": "arm_seg4_visual_0",
+              "nearest_points_in_base_m": [
+                [
+                  0.33606845140457153,
+                  -0.16983825979357783,
+                  0.008923716124858112
+                ],
+                [
+                  0.36113952557126583,
+                  -0.1961667783364065,
+                  0.014997948646319472
+                ]
+              ]
+            }
+          },
+          "v8_arm_proxy1": {
+            "surface_intersection": false,
+            "intersecting_pairs": [],
+            "minimum_surface_distance_m": 0.03678498723423973,
+            "closest_disjoint_pair": {
+              "distance_m": 0.03678498723423973,
+              "base_surface": "base_link_solid_66",
+              "other_surface": "arm_seg4_proxy_1",
+              "nearest_points_in_base_m": [
+                [
+                  0.33606845140457153,
+                  -0.16983825979357783,
+                  0.008923716124858112
+                ],
+                [
+                  0.3612274147839888,
+                  -0.19495472015067994,
+                  0.01837492063150381
+                ]
+              ]
+            }
+          }
+        }
+      }
+    },
+    {
+      "policy_step": 1064,
+      "env_id": 86,
+      "other_pose_in_base_m": [
+        [
+          0.4480553799469737,
+          -0.8307691920813924,
+          -0.3302558492880993,
+          0.49758232057760177
+        ],
+        [
+          -0.8016879796326146,
+          -0.5368558975042091,
+          0.2628347934112357,
+          -0.25841548094373223
+        ],
+        [
+          -0.3956548493487093,
+          0.146997601352474,
+          -0.9065588482737728,
+          0.21919619510599403
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "matrix": {
+        "visual": {
+          "visual": {
+            "surface_intersection": false,
+            "intersecting_pairs": [],
+            "minimum_surface_distance_m": 0.003953462200471049,
+            "closest_disjoint_pair": {
+              "distance_m": 0.003953462200471049,
+              "base_surface": "base_link_visual",
+              "other_surface": "arm_seg4_visual_0",
+              "nearest_points_in_base_m": [
+                [
+                  0.3595268396526077,
+                  -0.1787792769580162,
+                  -0.03433025518573391
+                ],
+                [
+                  0.3634791974592456,
+                  -0.17887035292552014,
+                  -0.034309367222579545
+                ]
+              ]
+            }
+          },
+          "v8_arm_proxy1": {
+            "surface_intersection": false,
+            "intersecting_pairs": [],
+            "minimum_surface_distance_m": 0.004336291071469434,
+            "closest_disjoint_pair": {
+              "distance_m": 0.004336291071469434,
+              "base_surface": "base_link_visual",
+              "other_surface": "arm_seg4_proxy_1",
+              "nearest_points_in_base_m": [
+                [
+                  0.35958084281109454,
+                  -0.17541938548948308,
+                  -0.029898728737129177
+                ],
+                [
+                  0.36391592254605054,
+                  -0.17551928069138123,
+                  -0.029875818112584274
+                ]
+              ]
+            }
+          }
+        },
+        "v8_proxy13": {
+          "visual": {
+            "surface_intersection": true,
+            "intersecting_pairs": [
+              [
+                "base_link_proxy_13",
+                "arm_seg4_visual_0"
+              ]
+            ],
+            "minimum_surface_distance_m": 0.0,
+            "closest_disjoint_pair": null
+          },
+          "v8_arm_proxy1": {
+            "surface_intersection": true,
+            "intersecting_pairs": [
+              [
+                "base_link_proxy_13",
+                "arm_seg4_proxy_1"
+              ]
+            ],
+            "minimum_surface_distance_m": 0.0,
+            "closest_disjoint_pair": null
+          }
+        },
+        "local43_only_diagnostic": {
+          "visual": {
+            "surface_intersection": false,
+            "intersecting_pairs": [],
+            "minimum_surface_distance_m": 0.003453462200457592,
+            "closest_disjoint_pair": {
+              "distance_m": 0.003453462200457592,
+              "base_surface": "local43_only_diagnostic",
+              "other_surface": "arm_seg4_visual_0",
+              "nearest_points_in_base_m": [
+                [
+                  0.3600266999783588,
+                  -0.17879079546545174,
+                  -0.03432761345525797
+                ],
+                [
+                  0.3634791974592456,
+                  -0.17887035292552014,
+                  -0.034309367222579545
+                ]
+              ]
+            }
+          },
+          "v8_arm_proxy1": {
+            "surface_intersection": false,
+            "intersecting_pairs": [],
+            "minimum_surface_distance_m": 0.003836291071454755,
+            "closest_disjoint_pair": {
+              "distance_m": 0.003836291071454755,
+              "base_surface": "local43_only_diagnostic",
+              "other_surface": "arm_seg4_proxy_1",
+              "nearest_points_in_base_m": [
+                [
+                  0.36008070313684687,
+                  -0.17543090399691863,
+                  -0.02989608700665314
+                ],
+                [
+                  0.36391592254605054,
+                  -0.17551928069138123,
+                  -0.029875818112584274
+                ]
+              ]
+            }
+          }
+        },
+        "full_union_hull_before_compact": {
+          "visual": {
+            "surface_intersection": true,
+            "intersecting_pairs": [
+              [
+                "full_union_hull_before_compact",
+                "arm_seg4_visual_0"
+              ]
+            ],
+            "minimum_surface_distance_m": 0.0,
+            "closest_disjoint_pair": null
+          },
+          "v8_arm_proxy1": {
+            "surface_intersection": false,
+            "intersecting_pairs": [],
+            "minimum_surface_distance_m": 0.00024396831542442674,
+            "closest_disjoint_pair": {
+              "distance_m": 0.00024396831542442674,
+              "base_surface": "full_union_hull_before_compact",
+              "other_surface": "arm_seg4_proxy_1",
+              "nearest_points_in_base_m": [
+                [
+                  0.3636720343431821,
+                  -0.17551304223672046,
+                  -0.02987622445738037
+                ],
+                [
+                  0.36391592254605054,
+                  -0.17551928069138123,
+                  -0.029875818112584274
+                ]
+              ]
+            }
+          }
+        },
+        "retained_source_14": {
+          "visual": {
+            "surface_intersection": false,
+            "intersecting_pairs": [],
+            "minimum_surface_distance_m": 0.005681489067289714,
+            "closest_disjoint_pair": {
+              "distance_m": 0.005681489067289714,
+              "base_surface": "base_link_solid_14",
+              "other_surface": "arm_seg4_visual_0",
+              "nearest_points_in_base_m": [
+                [
+                  0.3637975869895644,
+                  -0.16989344172820162,
+                  -0.02573340547889077
+                ],
+                [
+                  0.36479716996019984,
+                  -0.1754862946961959,
+                  -0.02572125702443163
+                ]
+              ]
+            }
+          },
+          "v8_arm_proxy1": {
+            "surface_intersection": false,
+            "intersecting_pairs": [],
+            "minimum_surface_distance_m": 0.004856043642611471,
+            "closest_disjoint_pair": {
+              "distance_m": 0.004856043642611471,
+              "base_surface": "base_link_solid_14",
+              "other_surface": "arm_seg4_proxy_1",
+              "nearest_points_in_base_m": [
+                [
+                  0.36381409707479556,
+                  -0.16990155161705903,
+                  -0.030825461938844927
+                ],
+                [
+                  0.3663366645176402,
+                  -0.17405096057298972,
+                  -0.03081067438699206
+                ]
+              ]
+            }
+          }
+        },
+        "retained_source_22": {
+          "visual": {
+            "surface_intersection": false,
+            "intersecting_pairs": [],
+            "minimum_surface_distance_m": 0.06309939725630162,
+            "closest_disjoint_pair": {
+              "distance_m": 0.06309939725630162,
+              "base_surface": "base_link_solid_22",
+              "other_surface": "arm_seg4_visual_0",
+              "nearest_points_in_base_m": [
+                [
+                  0.3196805715560913,
+                  -0.23312063632549895,
+                  -0.04929000618140425
+                ],
+                [
+                  0.37285573695314006,
+                  -0.19971375394545188,
+                  -0.055447597329797635
+                ]
+              ]
+            }
+          },
+          "v8_arm_proxy1": {
+            "surface_intersection": false,
+            "intersecting_pairs": [],
+            "minimum_surface_distance_m": 0.06458152860963784,
+            "closest_disjoint_pair": {
+              "distance_m": 0.06458152860963784,
+              "base_surface": "base_link_solid_22",
+              "other_surface": "arm_seg4_proxy_1",
+              "nearest_points_in_base_m": [
+                [
+                  0.3196805715560913,
+                  -0.2283627628978549,
+                  -0.023477035793149775
+                ],
+                [
+                  0.3744896281611745,
+                  -0.19477103083508376,
+                  -0.029668698626448574
+                ]
+              ]
+            }
+          }
+        },
+        "retained_source_37": {
+          "visual": {
+            "surface_intersection": false,
+            "intersecting_pairs": [],
+            "minimum_surface_distance_m": 0.04873769816375867,
+            "closest_disjoint_pair": {
+              "distance_m": 0.04873769816375867,
+              "base_surface": "base_link_solid_37",
+              "other_surface": "arm_seg4_visual_0",
+              "nearest_points_in_base_m": [
+                [
+                  0.3196805715560913,
+                  -0.17859617205983067,
+                  -0.0030479130080679293
+                ],
+                [
+                  0.36588539003145343,
+                  -0.1786839222584953,
+                  -0.018555016924116048
+                ]
+              ]
+            }
+          },
+          "v8_arm_proxy1": {
+            "surface_intersection": false,
+            "intersecting_pairs": [],
+            "minimum_surface_distance_m": 0.04969071790362723,
+            "closest_disjoint_pair": {
+              "distance_m": 0.04969071790362723,
+              "base_surface": "base_link_solid_37",
+              "other_surface": "arm_seg4_proxy_1",
+              "nearest_points_in_base_m": [
+                [
+                  0.3196805715560913,
+                  -0.18055065999942194,
+                  -0.0030368531282918437
+                ],
+                [
+                  0.36765690218787755,
+                  -0.18062388155593992,
+                  -0.015976473814040312
+                ]
+              ]
+            }
+          }
+        },
+        "retained_source_44": {
+          "visual": {
+            "surface_intersection": false,
+            "intersecting_pairs": [],
+            "minimum_surface_distance_m": 0.0051106597359624716,
+            "closest_disjoint_pair": {
+              "distance_m": 0.0051106597359624716,
+              "base_surface": "base_link_solid_44",
+              "other_surface": "arm_seg4_visual_0",
+              "nearest_points_in_base_m": [
+                [
+                  0.3634998463868161,
+                  -0.18003913473557215,
+                  -0.010558706527597632
+                ],
+                [
+                  0.36812378154044484,
+                  -0.1801497372948613,
+                  -0.012732604801598282
+                ]
+              ]
+            }
+          },
+          "v8_arm_proxy1": {
+            "surface_intersection": false,
+            "intersecting_pairs": [],
+            "minimum_surface_distance_m": 0.005467479937211613,
+            "closest_disjoint_pair": {
+              "distance_m": 0.005467479937211613,
+              "base_surface": "base_link_solid_44",
+              "other_surface": "arm_seg4_proxy_1",
+              "nearest_points_in_base_m": [
+                [
+                  0.3634555009172415,
+                  -0.18195298597380563,
+                  -0.01055565842297551
+                ],
+                [
+                  0.3687220954728003,
+                  -0.18207734751505528,
+                  -0.012018823778712023
+                ]
+              ]
+            }
+          }
+        },
+        "retained_source_66": {
+          "visual": {
+            "surface_intersection": false,
+            "intersecting_pairs": [],
+            "minimum_surface_distance_m": 0.03456909065692418,
+            "closest_disjoint_pair": {
+              "distance_m": 0.03456909065692418,
+              "base_surface": "base_link_solid_66",
+              "other_surface": "arm_seg4_visual_0",
+              "nearest_points_in_base_m": [
+                [
+                  0.33606845140457153,
+                  -0.16985674354691258,
+                  -0.0026819072353759556
+                ],
+                [
+                  0.36744777747438073,
+                  -0.1769630637437059,
+                  -0.01532548811706777
+                ]
+              ]
+            }
+          },
+          "v8_arm_proxy1": {
+            "surface_intersection": false,
+            "intersecting_pairs": [],
+            "minimum_surface_distance_m": 0.03515810286026927,
+            "closest_disjoint_pair": {
+              "distance_m": 0.03515810286026927,
+              "base_surface": "base_link_solid_66",
+              "other_surface": "arm_seg4_proxy_1",
+              "nearest_points_in_base_m": [
+                [
+                  0.33606845140457153,
+                  -0.16985674354691258,
+                  -0.002681907235375954
+                ],
+                [
+                  0.3686347848907773,
+                  -0.17807017543978756,
+                  -0.013077370502571527
+                ]
+              ]
+            }
+          }
+        }
+      }
+    },
+    {
+      "policy_step": 1217,
+      "env_id": 107,
+      "other_pose_in_base_m": [
+        [
+          -0.29160807288711676,
+          -0.943930373269095,
+          -0.1547907692568547,
+          0.38364003520253576
+        ],
+        [
+          -0.933133303042891,
+          0.2451453177215746,
+          0.26299431923798666,
+          -0.3580867004304551
+        ],
+        [
+          -0.21030209361612576,
+          0.22113168841044734,
+          -0.9522992207291882,
+          0.26775245872493064
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "matrix": {
+        "visual": {
+          "visual": {
+            "surface_intersection": false,
+            "intersecting_pairs": [],
+            "minimum_surface_distance_m": 0.0037569057000839657,
+            "closest_disjoint_pair": {
+              "distance_m": 0.0037569057000839657,
+              "base_surface": "base_link_visual",
+              "other_surface": "arm_seg4_visual_0",
+              "nearest_points_in_base_m": [
+                [
+                  0.3172854877975104,
+                  -0.24473548740171336,
+                  0.0044560615367912945
+                ],
+                [
+                  0.3188211678029628,
+                  -0.24816419000093579,
+                  0.00446114545874968
+                ]
+              ]
+            }
+          },
+          "v8_arm_proxy1": {
+            "surface_intersection": false,
+            "intersecting_pairs": [],
+            "minimum_surface_distance_m": 0.0038342947873392782,
+            "closest_disjoint_pair": {
+              "distance_m": 0.0038342947873392782,
+              "base_surface": "base_link_visual",
+              "other_surface": "arm_seg4_proxy_1",
+              "nearest_points_in_base_m": [
+                [
+                  0.31716870573936806,
+                  -0.24478776627316426,
+                  0.004473994395983059
+                ],
+                [
+                  0.3186067500251551,
+                  -0.2482603006247362,
+                  0.003715475888967385
+                ]
+              ]
+            }
+          }
+        },
+        "v8_proxy13": {
+          "visual": {
+            "surface_intersection": false,
+            "intersecting_pairs": [],
+            "minimum_surface_distance_m": 0.0002912955846636121,
+            "closest_disjoint_pair": {
+              "distance_m": 0.0002912955846636121,
+              "base_surface": "base_link_proxy_13",
+              "other_surface": "arm_seg4_visual_0",
+              "nearest_points_in_base_m": [
+                [
+                  0.3183145693211523,
+                  -0.24807485222996714,
+                  0.0029328322121313613
+                ],
+                [
+                  0.31841722981987197,
+                  -0.2483473651557707,
+                  0.002939948736362885
+                ]
+              ]
+            }
+          },
+          "v8_arm_proxy1": {
+            "surface_intersection": false,
+            "intersecting_pairs": [],
+            "minimum_surface_distance_m": 4.605949837739995e-06,
+            "closest_disjoint_pair": {
+              "distance_m": 4.605949837739995e-06,
+              "base_surface": "base_link_proxy_13",
+              "other_surface": "arm_seg4_proxy_1",
+              "nearest_points_in_base_m": [
+                [
+                  0.31833652290308323,
+                  -0.24808043348869435,
+                  0.002402414455889291
+                ],
+                [
+                  0.31833814616526884,
+                  -0.24808474244815845,
+                  0.002402526981980846
+                ]
+              ]
+            }
+          }
+        },
+        "local43_only_diagnostic": {
+          "visual": {
+            "surface_intersection": false,
+            "intersecting_pairs": [],
+            "minimum_surface_distance_m": 0.009104146445536835,
+            "closest_disjoint_pair": {
+              "distance_m": 0.009104146445536835,
+              "base_surface": "local43_only_diagnostic",
+              "other_surface": "arm_seg4_visual_0",
+              "nearest_points_in_base_m": [
+                [
+                  0.3191848928928375,
+                  -0.2442507775043216,
+                  -0.009957566955099875
+                ],
+                [
+                  0.3158225309307179,
+                  -0.2511374021236368,
+                  -0.005042853749823918
+                ]
+              ]
+            }
+          },
+          "v8_arm_proxy1": {
+            "surface_intersection": false,
+            "intersecting_pairs": [],
+            "minimum_surface_distance_m": 0.009441479420722583,
+            "closest_disjoint_pair": {
+              "distance_m": 0.009441479420722583,
+              "base_surface": "local43_only_diagnostic",
+              "other_surface": "arm_seg4_proxy_1",
+              "nearest_points_in_base_m": [
+                [
+                  0.3191848928928375,
+                  -0.2442507775043216,
+                  -0.009957566955099875
+                ],
+                [
+                  0.31845470798268,
+                  -0.2524535908138503,
+                  -0.005339968287185519
+                ]
+              ]
+            }
+          }
+        },
+        "full_union_hull_before_compact": {
+          "visual": {
+            "surface_intersection": false,
+            "intersecting_pairs": [],
+            "minimum_surface_distance_m": 0.0006075976564301027,
+            "closest_disjoint_pair": {
+              "distance_m": 0.0006075976564301027,
+              "base_surface": "full_union_hull_before_compact",
+              "other_surface": "arm_seg4_visual_0",
+              "nearest_points_in_base_m": [
+                [
+                  0.31776664993910636,
+                  -0.24812224949420544,
+                  0.0012119887207396867
+                ],
+                [
+                  0.31794883230569626,
+                  -0.24869137540035863,
+                  0.0013218986854761638
+                ]
+              ]
+            }
+          },
+          "v8_arm_proxy1": {
+            "surface_intersection": false,
+            "intersecting_pairs": [],
+            "minimum_surface_distance_m": 0.00035158516406467424,
+            "closest_disjoint_pair": {
+              "distance_m": 0.00035158516406467424,
+              "base_surface": "full_union_hull_before_compact",
+              "other_surface": "arm_seg4_proxy_1",
+              "nearest_points_in_base_m": [
+                [
+                  0.31823272670459557,
+                  -0.24775541888515465,
+                  0.0023389278015441407
+                ],
+                [
+                  0.31833814616526884,
+                  -0.24808474244815845,
+                  0.002402526981980846
+                ]
+              ]
+            }
+          }
+        },
+        "retained_source_14": {
+          "visual": {
+            "surface_intersection": false,
+            "intersecting_pairs": [],
+            "minimum_surface_distance_m": 0.07970230181667916,
+            "closest_disjoint_pair": {
+              "distance_m": 0.07970230181667916,
+              "base_surface": "base_link_solid_14",
+              "other_surface": "arm_seg4_visual_0",
+              "nearest_points_in_base_m": [
+                [
+                  0.3360711932182312,
+                  -0.16983937023981857,
+                  0.008217130288147748
+                ],
+                [
+                  0.3198079674960023,
+                  -0.24786467998992118,
+                  0.008341397682885887
+                ]
+              ]
+            }
+          },
+          "v8_arm_proxy1": {
+            "surface_intersection": false,
+            "intersecting_pairs": [],
+            "minimum_surface_distance_m": 0.08022053716230788,
+            "closest_disjoint_pair": {
+              "distance_m": 0.08022053716230788,
+              "base_surface": "base_link_solid_14",
+              "other_surface": "arm_seg4_proxy_1",
+              "nearest_points_in_base_m": [
+                [
+                  0.3360711932182312,
+                  -0.16984882934576293,
+                  0.0022779241687740557
+                ],
+                [
+                  0.31833814616526884,
+                  -0.24808474244815845,
+                  0.002402526981980846
+                ]
+              ]
+            }
+          }
+        },
+        "retained_source_22": {
+          "visual": {
+            "surface_intersection": false,
+            "intersecting_pairs": [],
+            "minimum_surface_distance_m": 0.0006830788535332932,
+            "closest_disjoint_pair": {
+              "distance_m": 0.0006830788535332932,
+              "base_surface": "base_link_solid_22",
+              "other_surface": "arm_seg4_visual_0",
+              "nearest_points_in_base_m": [
+                [
+                  0.31771991299880376,
+                  -0.24805377709351828,
+                  0.0012343711458641384
+                ],
+                [
+                  0.31794883230569626,
+                  -0.24869137540035863,
+                  0.0013218986854761638
+                ]
+              ]
+            }
+          },
+          "v8_arm_proxy1": {
+            "surface_intersection": false,
+            "intersecting_pairs": [],
+            "minimum_surface_distance_m": 0.00038577503974850043,
+            "closest_disjoint_pair": {
+              "distance_m": 0.00038577503974850043,
+              "base_surface": "base_link_solid_22",
+              "other_surface": "arm_seg4_proxy_1",
+              "nearest_points_in_base_m": [
+                [
+                  0.31820886188972897,
+                  -0.2477246529637708,
+                  0.0023530950022053643
+                ],
+                [
+                  0.31833814616526884,
+                  -0.24808474244815845,
+                  0.002402526981980846
+                ]
+              ]
+            }
+          }
+        },
+        "retained_source_37": {
+          "visual": {
+            "surface_intersection": false,
+            "intersecting_pairs": [],
+            "minimum_surface_distance_m": 0.023332266239109827,
+            "closest_disjoint_pair": {
+              "distance_m": 0.023332266239109827,
+              "base_surface": "base_link_solid_37",
+              "other_surface": "arm_seg4_visual_0",
+              "nearest_points_in_base_m": [
+                [
+                  0.3196805715560913,
+                  -0.22453279114037103,
+                  0.008304238034933915
+                ],
+                [
+                  0.3198079674960023,
+                  -0.24786467998992118,
+                  0.008341397682885887
+                ]
+              ]
+            }
+          },
+          "v8_arm_proxy1": {
+            "surface_intersection": false,
+            "intersecting_pairs": [],
+            "minimum_surface_distance_m": 0.023542522060175448,
+            "closest_disjoint_pair": {
+              "distance_m": 0.023542522060175448,
+              "base_surface": "base_link_solid_37",
+              "other_surface": "arm_seg4_proxy_1",
+              "nearest_points_in_base_m": [
+                [
+                  0.3183381461652688,
+                  -0.22454225024631538,
+                  0.0023650319155602176
+                ],
+                [
+                  0.31833814616526884,
+                  -0.24808474244815845,
+                  0.002402526981980846
+                ]
+              ]
+            }
+          }
+        },
+        "retained_source_44": {
+          "visual": {
+            "surface_intersection": false,
+            "intersecting_pairs": [],
+            "minimum_surface_distance_m": 0.0015521753842616677,
+            "closest_disjoint_pair": {
+              "distance_m": 0.0015521753842616677,
+              "base_surface": "base_link_solid_44",
+              "other_surface": "arm_seg4_visual_0",
+              "nearest_points_in_base_m": [
+                [
+                  0.3196805715560913,
+                  -0.24698508580889253,
+                  0.003896739352106877
+                ],
+                [
+                  0.31881983960755733,
+                  -0.2482204100383482,
+                  0.004274049548630297
+                ]
+              ]
+            }
+          },
+          "v8_arm_proxy1": {
+            "surface_intersection": false,
+            "intersecting_pairs": [],
+            "minimum_surface_distance_m": 0.001180579960182495,
+            "closest_disjoint_pair": {
+              "distance_m": 0.001180579960182495,
+              "base_surface": "base_link_solid_44",
+              "other_surface": "arm_seg4_proxy_1",
+              "nearest_points_in_base_m": [
+                [
+                  0.3196805715560913,
+                  -0.24720697223934374,
+                  0.002281936559224026
+                ],
+                [
+                  0.3193990403056964,
+                  -0.2483428199468309,
+                  0.0024380108454844403
+                ]
+              ]
+            }
+          }
+        },
+        "retained_source_66": {
+          "visual": {
+            "surface_intersection": false,
+            "intersecting_pairs": [],
+            "minimum_surface_distance_m": 0.0780253938064185,
+            "closest_disjoint_pair": {
+              "distance_m": 0.0780253938064185,
+              "base_surface": "base_link_solid_66",
+              "other_surface": "arm_seg4_visual_0",
+              "nearest_points_in_base_m": [
+                [
+                  0.3198079674960023,
+                  -0.16983938514096086,
+                  0.008217130311880093
+                ],
+                [
+                  0.3198079674960023,
+                  -0.24786467998992118,
+                  0.008341397682885887
+                ]
+              ]
+            }
+          },
+          "v8_arm_proxy1": {
+            "surface_intersection": false,
+            "intersecting_pairs": [],
+            "minimum_surface_distance_m": 0.07824751369303647,
+            "closest_disjoint_pair": {
+              "distance_m": 0.07824751369303647,
+              "base_surface": "base_link_solid_66",
+              "other_surface": "arm_seg4_proxy_1",
+              "nearest_points_in_base_m": [
+                [
+                  0.3196805715560913,
+                  -0.16984884424690522,
+                  0.002277924192506398
+                ],
+                [
+                  0.31833814616526884,
+                  -0.24808474244815845,
+                  0.002402526981980846
+                ]
+              ]
+            }
+          }
+        }
+      }
+    }
+  ],
+  "local43_vertices": 50,
+  "full_union_vertices": 173,
+  "input_sha256": {
+    "UniFP_v3/resources/robots/v3_a1_desktop_train_v8_visual_envelope_r1/urdf/a1arm_rgm3_desktop_fixed_gripper.urdf": "cf1644b782d66aa903ff4c75491cc1e08fa4feaffcc448dea1183ab49524af21",
+    ".scratch/unifp-v3-collision-proxy-repair/artifacts/visual_envelope_v8_20261106/comparison_summary.json": "6d14434fbd5277f6d474e6cea3fc6ee2523a799f75ac583f72e841eb57b5294a"
+  },
+  "note_zh": "局部source43单独及未压缩完整凸包仅为只读离线定位，不生成或部署资产，不删除保留部件。表面矩阵不重建此前子步／PhysX margin。 五个保留源组件逐个单独测量，区别原组件外扩与全组凸化填隙。"
+}

@@ -1,0 +1,345 @@
+{
+  "summary": {
+    "tracking": {
+      "all": {
+        "tcp_geometric_l1_m": {
+          "mean": 0.08328132813982665,
+          "p95": 0.39478848576545716,
+          "sample_count": 1000
+        },
+        "tcp_geometric_l2_m": {
+          "mean": 0.053959834592416885,
+          "p95": 0.24975253045558915,
+          "sample_count": 1000
+        },
+        "base_planar_speed_m_s": {
+          "mean": 0.015186733930080663,
+          "p95": 0.0447468794882297,
+          "sample_count": 1000
+        },
+        "base_yaw_rate_rad_s": {
+          "mean": 0.016673550990006333,
+          "p95": 0.053132736869156316,
+          "sample_count": 1000
+        },
+        "tcp_compensated_l1_m": {
+          "mean": 0.16693723530322313,
+          "p95": 0.625009050965309,
+          "sample_count": 1000
+        },
+        "tcp_compensated_l2_m": {
+          "mean": 0.11226360632129945,
+          "p95": 0.4219095304608345,
+          "sample_count": 1000
+        }
+      },
+      "nonzero_task": {
+        "tcp_geometric_l1_m": {
+          "mean": 0.09528553153995195,
+          "p95": 0.42905889451503726,
+          "sample_count": 827
+        },
+        "tcp_geometric_l2_m": {
+          "mean": 0.06142434898956466,
+          "p95": 0.2675821214914319,
+          "sample_count": 827
+        },
+        "base_planar_speed_m_s": {
+          "mean": 0.016166370160322515,
+          "p95": 0.04795383214950558,
+          "sample_count": 827
+        },
+        "base_yaw_rate_rad_s": {
+          "mean": 0.017964054846965387,
+          "p95": 0.05996985621750345,
+          "sample_count": 827
+        },
+        "tcp_compensated_l1_m": {
+          "mean": 0.1964414047725958,
+          "p95": 0.6443210542201996,
+          "sample_count": 827
+        },
+        "tcp_compensated_l2_m": {
+          "mean": 0.13192467756136947,
+          "p95": 0.42793892025947566,
+          "sample_count": 827
+        }
+      },
+      "zero_task": {
+        "tcp_geometric_l1_m": {
+          "mean": 0.025897072579690143,
+          "p95": 0.048089072108268745,
+          "sample_count": 173
+        },
+        "tcp_geometric_l2_m": {
+          "mean": 0.01827686692512664,
+          "p95": 0.03289689943194389,
+          "sample_count": 173
+        },
+        "base_planar_speed_m_s": {
+          "mean": 0.010503732991294472,
+          "p95": 0.029488907009363175,
+          "sample_count": 173
+        },
+        "base_yaw_rate_rad_s": {
+          "mean": 0.010504494980150044,
+          "p95": 0.029515229538083082,
+          "sample_count": 173
+        },
+        "tcp_compensated_l1_m": {
+          "mean": 0.025897072579690143,
+          "p95": 0.048089072108268745,
+          "sample_count": 173
+        },
+        "tcp_compensated_l2_m": {
+          "mean": 0.01827686692512664,
+          "p95": 0.03289689943194389,
+          "sample_count": 173
+        }
+      }
+    },
+    "phase_metrics": {
+      "zero": {
+        "task_samples": 591,
+        "estimator_samples": 591,
+        "tcp_compensated_l2_mean_m": 0.03831674493321371,
+        "force_axis_mae_n": [
+          0.01782681005053512,
+          0.015145543704278982,
+          0.019075084862168468
+        ]
+      },
+      "rise": {
+        "task_samples": 154,
+        "estimator_samples": 154,
+        "tcp_compensated_l2_mean_m": 0.11170133112554813,
+        "force_axis_mae_n": [
+          10.323722016907489,
+          15.18817974145633,
+          8.73047729450287
+        ]
+      },
+      "hold": {
+        "task_samples": 100,
+        "estimator_samples": 100,
+        "tcp_compensated_l2_mean_m": 0.3178043380379677,
+        "force_axis_mae_n": [
+          20.815525676123798,
+          30.095421187579632,
+          17.17277112044394
+        ]
+      },
+      "fall": {
+        "task_samples": 155,
+        "estimator_samples": 155,
+        "tcp_compensated_l2_mean_m": 0.2621675565718643,
+        "force_axis_mae_n": [
+          10.655356040281937,
+          14.480102260732242,
+          8.662049365976277
+        ]
+      },
+      "hold_tail": {
+        "task_samples": 50,
+        "estimator_samples": 50,
+        "tcp_compensated_l2_mean_m": 0.3379790058732033,
+        "force_axis_mae_n": [
+          20.84333061426878,
+          30.082965597510338,
+          17.189007567241788
+        ]
+      }
+    },
+    "force_estimation": {
+      "nonzero": {
+        "sample_count": 409,
+        "axis_mae_n": [
+          13.014635561026488,
+          18.564639729476127,
+          10.76867546974122
+        ],
+        "l2_mean_n": 29.987494681639095,
+        "zero_reference_l2_n": 29.953774615006488
+      },
+      "zero": {
+        "sample_count": 591,
+        "axis_mae_n": [
+          0.01782681005053512,
+          0.015145543704278982,
+          0.019075084862168468
+        ],
+        "l2_mean_n": 0.03461178095653889,
+        "zero_reference_l2_n": 0.0
+      }
+    },
+    "stream_phase_metrics": {
+      "command": {
+        "zero": {
+          "task_samples": 394,
+          "tcp_compensated_l2_mean_m": 0.08496972838201593
+        },
+        "rise": {
+          "task_samples": 242,
+          "tcp_compensated_l2_mean_m": 0.12131654823676122
+        },
+        "hold": {
+          "task_samples": 151,
+          "tcp_compensated_l2_mean_m": 0.1878266346128966
+        },
+        "fall": {
+          "task_samples": 213,
+          "tcp_compensated_l2_mean_m": 0.09889721520629847
+        },
+        "hold_tail": {
+          "task_samples": 75,
+          "tcp_compensated_l2_mean_m": 0.18544228106737137
+        }
+      },
+      "external": {
+        "zero": {
+          "task_samples": 591,
+          "tcp_compensated_l2_mean_m": 0.03831674493321371,
+          "estimator_samples": 591,
+          "force_axis_mae_n": [
+            0.01782681005053512,
+            0.015145543704278982,
+            0.019075084862168468
+          ]
+        },
+        "rise": {
+          "task_samples": 154,
+          "tcp_compensated_l2_mean_m": 0.11170133112554813,
+          "estimator_samples": 154,
+          "force_axis_mae_n": [
+            10.323722016907489,
+            15.18817974145633,
+            8.73047729450287
+          ]
+        },
+        "hold": {
+          "task_samples": 100,
+          "tcp_compensated_l2_mean_m": 0.3178043380379677,
+          "estimator_samples": 100,
+          "force_axis_mae_n": [
+            20.815525676123798,
+            30.095421187579632,
+            17.17277112044394
+          ]
+        },
+        "fall": {
+          "task_samples": 155,
+          "tcp_compensated_l2_mean_m": 0.2621675565718643,
+          "estimator_samples": 155,
+          "force_axis_mae_n": [
+            10.655356040281937,
+            14.480102260732242,
+            8.662049365976277
+          ]
+        },
+        "hold_tail": {
+          "task_samples": 50,
+          "tcp_compensated_l2_mean_m": 0.3379790058732033,
+          "estimator_samples": 50,
+          "force_axis_mae_n": [
+            20.84333061426878,
+            30.082965597510338,
+            17.189007567241788
+          ]
+        }
+      }
+    },
+    "base_force_zero_input": {
+      "sample_count": 1000,
+      "axis_bias_n": [
+        -0.03956471011042595,
+        -0.028483910858631133,
+        -0.009012144804000855
+      ],
+      "axis_mae_n": [
+        0.04057931005954742,
+        0.029856596887111665,
+        0.017050930857658388
+      ]
+    },
+    "state_estimation_mae": [
+      0.012826833596577672,
+      0.006211870171401642,
+      0.0019624598554776186,
+      0.028188308268785475,
+      0.011325427994132041,
+      0.022556794616612037
+    ],
+    "episode_equal_weight_errors": {
+      "tcp_geometric_l1_m": 0.08328133076429367,
+      "tcp_geometric_l2_m": 0.053959839046001434,
+      "base_planar_speed_m_s": 0.01518673449754715,
+      "base_yaw_rate_rad_s": 0.016673550009727478,
+      "tcp_compensated_l1_m": 0.16693724691867828,
+      "tcp_compensated_l2_m": 0.11226360499858856
+    },
+    "signed_tcp_error_m": {
+      "geometric_xyz_mean": [
+        0.027765377283096315,
+        0.014358945082254649,
+        0.009501561522483826
+      ],
+      "compensated_xyz_mean": [
+        -0.04683290264010429,
+        0.00863820156177826,
+        0.017602258890867233
+      ],
+      "geometric_xyz_mae": [
+        0.03405839002132416,
+        0.02724405758766079,
+        0.021978880524635314
+      ],
+      "compensated_xyz_mae": [
+        0.05890867552161217,
+        0.0406667292993734,
+        0.06736183044314384
+      ]
+    },
+    "torque_saturation_fraction": 0.0,
+    "net_compensation_residual_mean_n": 24.131612143844983,
+    "direction": {
+      "eligible_samples": 100,
+      "undefined_prediction_count": 100,
+      "mean_degrees": null
+    },
+    "directions": {},
+    "delay": [],
+    "push_recovery": {
+      "complete_windows": 0,
+      "incomplete_windows": 0,
+      "mean_tcp_and_speed": null
+    },
+    "episodes": {
+      "completed": 1,
+      "expected": 1,
+      "physical_failures": 0,
+      "failure_denominator": 1,
+      "physical_failure_rate": 0.0
+    },
+    "evidence_complete": true,
+    "threshold_results": {
+      "tcp_compensated_l2_m": false,
+      "base_planar_speed_m_s": true,
+      "base_yaw_rate_rad_s": true,
+      "physical_failure_rate": true,
+      "force_nonzero_axis_mae_n": false,
+      "force_nonzero_zero_reference_ratio": false,
+      "force_zero_axis_mae_n": true,
+      "base_velocity_tcp_estimation": true
+    },
+    "threshold_version": "v3-b-initial-v1",
+    "policy_updates": 0,
+    "assessment": "ungraded_or_incomplete"
+  },
+  "policy_updates": 0,
+  "report_only_reprocessing": true,
+  "source_sha256": {
+    "../.scratch/unifp-v3-stage1-reproduction/knowledge/part_b_implementation/bt07/local_random_force_r02/R0/policy_trace.jsonl": "feaa98b9d90b3e76a34d6ae6bd10950210708983f9d2ad2527e3d65ff3f06c00",
+    "../.scratch/unifp-v3-stage1-reproduction/knowledge/part_b_implementation/bt07/local_random_force_r02/R0/episodes.jsonl": "dc8b73c291c4510b1e4688e4604cfb2c6079cd92cea3a0c1bf813932e2773d12",
+    "legged_gym/b2_gym_learn/ppo_cse_pf/v3_evaluation.py": "31e496c6f685584d00caf1cba2dca786ade220bb3159f5592f7c84f65350c04d"
+  }
+}

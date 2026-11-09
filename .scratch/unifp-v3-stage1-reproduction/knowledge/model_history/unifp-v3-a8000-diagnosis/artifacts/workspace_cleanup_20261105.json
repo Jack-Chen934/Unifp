@@ -1,0 +1,537 @@
+{
+  "date": "2026-11-05",
+  "scope_zh": "仅本机 unifp_reproduction 项目中的 V3 诊断重复副本及可再生成缓存；未访问或清理远程。",
+  "removed": [
+    {
+      "path": ".scratch/unifp-v3-a8000-diagnosis/artifacts/t02/local_yaw_settle_contacts.trace.jsonl",
+      "bytes": 1674898,
+      "category": "verified_duplicate",
+      "sha256": "c3a0f5e4f85c94a8eb89551d2ae104d70f0eabd6650c3c3e65c77c1aebc19a90",
+      "retained": ".scratch/unifp-v3-a8000-diagnosis/artifacts/t02/local_yaw_timing_forward.trace.jsonl"
+    },
+    {
+      "path": ".scratch/unifp-v3-a8000-diagnosis/artifacts/t02/local_yaw_settle_pose.trace.jsonl",
+      "bytes": 1674898,
+      "category": "verified_duplicate",
+      "sha256": "c3a0f5e4f85c94a8eb89551d2ae104d70f0eabd6650c3c3e65c77c1aebc19a90",
+      "retained": ".scratch/unifp-v3-a8000-diagnosis/artifacts/t02/local_yaw_timing_forward.trace.jsonl"
+    },
+    {
+      "path": ".scratch/unifp-v3-a8000-diagnosis/artifacts/t02/local_yaw_settle_diagnostic.trace.jsonl",
+      "bytes": 1674898,
+      "category": "verified_duplicate",
+      "sha256": "c3a0f5e4f85c94a8eb89551d2ae104d70f0eabd6650c3c3e65c77c1aebc19a90",
+      "retained": ".scratch/unifp-v3-a8000-diagnosis/artifacts/t02/local_yaw_timing_forward.trace.jsonl"
+    },
+    {
+      "path": ".scratch/unifp-v3-a8000-diagnosis/artifacts/t02/v6_r2_gpu/final_learning_unit.log",
+      "bytes": 178,
+      "category": "verified_duplicate",
+      "sha256": "fcd41fafa6d9eddb10f8786c2807b2cffab6826ddf8c065d1cef5489ca3abec1",
+      "retained": ".scratch/unifp-v3-a8000-diagnosis/artifacts/t04/final_learning_unit.log"
+    },
+    {
+      "path": ".scratch/unifp-v3-a8000-diagnosis/artifacts/t02/v6_r2_gpu/final_control_unit.log",
+      "bytes": 1757,
+      "category": "verified_duplicate",
+      "sha256": "f049e4c2690cb2eb4ebd0ed27496dcd56f0d20b7d729ea4942d9d8be73343566",
+      "retained": ".scratch/unifp-v3-a8000-diagnosis/artifacts/t04/final_control_unit.log"
+    },
+    {
+      "path": ".scratch/unifp-v3-a8000-diagnosis/artifacts/t02/v6_r2_gpu/final_asset_unit.log",
+      "bytes": 177,
+      "category": "verified_duplicate",
+      "sha256": "a6f7189d5f8b423ac11481a18c21efd9bba0161b74d4d229b043e4e5d8932fdc",
+      "retained": ".scratch/unifp-v3-a8000-diagnosis/artifacts/t04/final_asset_unit.log"
+    },
+    {
+      "path": ".scratch/unifp-v3-a8000-diagnosis/artifacts/t02/v6_r2_gpu/ground_factor2_gain170_steering2_sign1.trace.jsonl",
+      "bytes": 1681691,
+      "category": "verified_duplicate",
+      "sha256": "9e80c684b9cbd1c21dc52a0db395adf5380946531221a7e3891077a0684c8b08",
+      "retained": ".scratch/unifp-v3-a8000-diagnosis/artifacts/t04/final_motion_sign1.trace.jsonl"
+    },
+    {
+      "path": ".scratch/unifp-v3-a8000-diagnosis/artifacts/t02/v6_r2_gpu/ground_factor2_gain170_steering2_sign-1.trace.jsonl",
+      "bytes": 1678948,
+      "category": "verified_duplicate",
+      "sha256": "9c4f89a0cfe537b365db53cfae1e6d9529ea143bb91400f487bfbcf1cd1619f4",
+      "retained": ".scratch/unifp-v3-a8000-diagnosis/artifacts/t04/final_motion_sign-1.trace.jsonl"
+    },
+    {
+      "path": "UniFP_v3/.pytest_cache/.gitignore",
+      "bytes": 37,
+      "category": "regenerable_cache"
+    },
+    {
+      "path": "UniFP_v3/.pytest_cache/CACHEDIR.TAG",
+      "bytes": 191,
+      "category": "regenerable_cache"
+    },
+    {
+      "path": "UniFP_v3/.pytest_cache/README.md",
+      "bytes": 302,
+      "category": "regenerable_cache"
+    },
+    {
+      "path": "UniFP_v3/.pytest_cache/v/cache/lastfailed",
+      "bytes": 81,
+      "category": "regenerable_cache"
+    },
+    {
+      "path": "UniFP_v3/.pytest_cache/v/cache/nodeids",
+      "bytes": 5110,
+      "category": "regenerable_cache"
+    },
+    {
+      "path": "UniFP_v3/legged_gym/__pycache__/__init__.cpython-311.pyc",
+      "bytes": 592,
+      "category": "regenerable_cache"
+    },
+    {
+      "path": "UniFP_v3/legged_gym/__pycache__/__init__.cpython-38.pyc",
+      "bytes": 338,
+      "category": "regenerable_cache"
+    },
+    {
+      "path": "UniFP_v3/legged_gym/envs/__pycache__/__init__.cpython-311.pyc",
+      "bytes": 1165,
+      "category": "regenerable_cache"
+    },
+    {
+      "path": "UniFP_v3/legged_gym/envs/__pycache__/__init__.cpython-38.pyc",
+      "bytes": 830,
+      "category": "regenerable_cache"
+    },
+    {
+      "path": "UniFP_v3/legged_gym/envs/b2/__pycache__/b2z1_pos_force_config.cpython-311.pyc",
+      "bytes": 13703,
+      "category": "regenerable_cache"
+    },
+    {
+      "path": "UniFP_v3/legged_gym/envs/b2/__pycache__/b2z1_pos_force_config.cpython-38.pyc",
+      "bytes": 10572,
+      "category": "regenerable_cache"
+    },
+    {
+      "path": "UniFP_v3/legged_gym/envs/b2/__pycache__/legged_robot_b2z1_pos_force.cpython-38.pyc",
+      "bytes": 84817,
+      "category": "regenerable_cache"
+    },
+    {
+      "path": "UniFP_v3/legged_gym/envs/v3/__pycache__/__init__.cpython-311.pyc",
+      "bytes": 237,
+      "category": "regenerable_cache"
+    },
+    {
+      "path": "UniFP_v3/legged_gym/envs/v3/__pycache__/__init__.cpython-38.pyc",
+      "bytes": 217,
+      "category": "regenerable_cache"
+    },
+    {
+      "path": "UniFP_v3/legged_gym/envs/v3/__pycache__/legged_robot_v3.cpython-38.pyc",
+      "bytes": 61413,
+      "category": "regenerable_cache"
+    },
+    {
+      "path": "UniFP_v3/legged_gym/envs/v3/__pycache__/v3_pos_force_config.cpython-311.pyc",
+      "bytes": 9631,
+      "category": "regenerable_cache"
+    },
+    {
+      "path": "UniFP_v3/legged_gym/envs/v3/__pycache__/v3_pos_force_config.cpython-38.pyc",
+      "bytes": 7369,
+      "category": "regenerable_cache"
+    },
+    {
+      "path": "UniFP_v3/legged_gym/envs/base/__pycache__/base_config.cpython-311.pyc",
+      "bytes": 1419,
+      "category": "regenerable_cache"
+    },
+    {
+      "path": "UniFP_v3/legged_gym/envs/base/__pycache__/base_config.cpython-38.pyc",
+      "bytes": 935,
+      "category": "regenerable_cache"
+    },
+    {
+      "path": "UniFP_v3/legged_gym/envs/base/__pycache__/base_task.cpython-38.pyc",
+      "bytes": 4162,
+      "category": "regenerable_cache"
+    },
+    {
+      "path": "UniFP_v3/legged_gym/envs/base/__pycache__/legged_robot.cpython-311.pyc",
+      "bytes": 57230,
+      "category": "regenerable_cache"
+    },
+    {
+      "path": "UniFP_v3/legged_gym/envs/base/__pycache__/legged_robot.cpython-38.pyc",
+      "bytes": 28942,
+      "category": "regenerable_cache"
+    },
+    {
+      "path": "UniFP_v3/legged_gym/envs/base/__pycache__/legged_robot_config.cpython-311.pyc",
+      "bytes": 10479,
+      "category": "regenerable_cache"
+    },
+    {
+      "path": "UniFP_v3/legged_gym/envs/base/__pycache__/legged_robot_config.cpython-38.pyc",
+      "bytes": 8174,
+      "category": "regenerable_cache"
+    },
+    {
+      "path": "UniFP_v3/legged_gym/scripts/__pycache__/preflight_v3.cpython-311.pyc",
+      "bytes": 4710,
+      "category": "regenerable_cache"
+    },
+    {
+      "path": "UniFP_v3/legged_gym/b2_gym_learn/__pycache__/__init__.cpython-311.pyc",
+      "bytes": 206,
+      "category": "regenerable_cache"
+    },
+    {
+      "path": "UniFP_v3/legged_gym/b2_gym_learn/__pycache__/__init__.cpython-38.pyc",
+      "bytes": 188,
+      "category": "regenerable_cache"
+    },
+    {
+      "path": "UniFP_v3/legged_gym/b2_gym_learn/ppo_cse_pf/__pycache__/actor_critic.cpython-38.pyc",
+      "bytes": 6737,
+      "category": "regenerable_cache"
+    },
+    {
+      "path": "UniFP_v3/legged_gym/b2_gym_learn/ppo_cse_pf/__pycache__/on_policy_runner.cpython-38.pyc",
+      "bytes": 7328,
+      "category": "regenerable_cache"
+    },
+    {
+      "path": "UniFP_v3/legged_gym/b2_gym_learn/ppo_cse_pf/__pycache__/ppo.cpython-38.pyc",
+      "bytes": 6250,
+      "category": "regenerable_cache"
+    },
+    {
+      "path": "UniFP_v3/legged_gym/b2_gym_learn/ppo_cse_pf/__pycache__/rollout_storage.cpython-38.pyc",
+      "bytes": 5820,
+      "category": "regenerable_cache"
+    },
+    {
+      "path": "UniFP_v3/legged_gym/b2_gym_learn/ppo_cse_pf/__pycache__/v3_actor_critic.cpython-311.pyc",
+      "bytes": 20840,
+      "category": "regenerable_cache"
+    },
+    {
+      "path": "UniFP_v3/legged_gym/b2_gym_learn/ppo_cse_pf/__pycache__/v3_actor_critic.cpython-38.pyc",
+      "bytes": 14132,
+      "category": "regenerable_cache"
+    },
+    {
+      "path": "UniFP_v3/legged_gym/b2_gym_learn/ppo_cse_pf/__pycache__/v3_episode_log.cpython-311.pyc",
+      "bytes": 6288,
+      "category": "regenerable_cache"
+    },
+    {
+      "path": "UniFP_v3/legged_gym/b2_gym_learn/ppo_cse_pf/__pycache__/v3_evaluation.cpython-311.pyc",
+      "bytes": 40452,
+      "category": "regenerable_cache"
+    },
+    {
+      "path": "UniFP_v3/legged_gym/b2_gym_learn/ppo_cse_pf/__pycache__/v3_on_policy_runner.cpython-311.pyc",
+      "bytes": 33805,
+      "category": "regenerable_cache"
+    },
+    {
+      "path": "UniFP_v3/legged_gym/b2_gym_learn/ppo_cse_pf/__pycache__/v3_ppo.cpython-311.pyc",
+      "bytes": 24878,
+      "category": "regenerable_cache"
+    },
+    {
+      "path": "UniFP_v3/legged_gym/b2_gym_learn/ppo_cse_pf/__pycache__/v3_preflight.cpython-311.pyc",
+      "bytes": 10804,
+      "category": "regenerable_cache"
+    },
+    {
+      "path": "UniFP_v3/legged_gym/b2_gym_learn/ppo_cse_pf/__pycache__/v3_rollout_storage.cpython-311.pyc",
+      "bytes": 15362,
+      "category": "regenerable_cache"
+    },
+    {
+      "path": "UniFP_v3/legged_gym/b2_gym_learn/ppo_cse_pf/__pycache__/v3_run_identity.cpython-311.pyc",
+      "bytes": 8100,
+      "category": "regenerable_cache"
+    },
+    {
+      "path": "UniFP_v3/legged_gym/b2_gym_learn/env/__pycache__/__init__.cpython-38.pyc",
+      "bytes": 230,
+      "category": "regenerable_cache"
+    },
+    {
+      "path": "UniFP_v3/legged_gym/b2_gym_learn/env/__pycache__/vec_env.cpython-38.pyc",
+      "bytes": 1495,
+      "category": "regenerable_cache"
+    },
+    {
+      "path": "UniFP_v3/legged_gym/b2_gym_learn/utils/__pycache__/__init__.cpython-38.pyc",
+      "bytes": 279,
+      "category": "regenerable_cache"
+    },
+    {
+      "path": "UniFP_v3/legged_gym/b2_gym_learn/utils/__pycache__/utils.cpython-38.pyc",
+      "bytes": 1950,
+      "category": "regenerable_cache"
+    },
+    {
+      "path": "UniFP_v3/legged_gym/utils/__pycache__/__init__.cpython-38.pyc",
+      "bytes": 492,
+      "category": "regenerable_cache"
+    },
+    {
+      "path": "UniFP_v3/legged_gym/utils/__pycache__/helpers.cpython-38.pyc",
+      "bytes": 6684,
+      "category": "regenerable_cache"
+    },
+    {
+      "path": "UniFP_v3/legged_gym/utils/__pycache__/isaacgym_utils.cpython-38.pyc",
+      "bytes": 3291,
+      "category": "regenerable_cache"
+    },
+    {
+      "path": "UniFP_v3/legged_gym/utils/__pycache__/logger.cpython-38.pyc",
+      "bytes": 4046,
+      "category": "regenerable_cache"
+    },
+    {
+      "path": "UniFP_v3/legged_gym/utils/__pycache__/math.cpython-38.pyc",
+      "bytes": 1037,
+      "category": "regenerable_cache"
+    },
+    {
+      "path": "UniFP_v3/legged_gym/utils/__pycache__/task_registry.cpython-38.pyc",
+      "bytes": 5092,
+      "category": "regenerable_cache"
+    },
+    {
+      "path": "UniFP_v3/legged_gym/utils/__pycache__/terrain.cpython-38.pyc",
+      "bytes": 10832,
+      "category": "regenerable_cache"
+    },
+    {
+      "path": "UniFP_v3/legged_gym/utils/__pycache__/v3_asset_collision.cpython-311.pyc",
+      "bytes": 5714,
+      "category": "regenerable_cache"
+    },
+    {
+      "path": "UniFP_v3/legged_gym/utils/__pycache__/v3_asset_collision.cpython-38.pyc",
+      "bytes": 3565,
+      "category": "regenerable_cache"
+    },
+    {
+      "path": "UniFP_v3/legged_gym/utils/__pycache__/v3_kinematics.cpython-311.pyc",
+      "bytes": 7005,
+      "category": "regenerable_cache"
+    },
+    {
+      "path": "UniFP_v3/legged_gym/utils/__pycache__/v3_kinematics.cpython-38.pyc",
+      "bytes": 4217,
+      "category": "regenerable_cache"
+    },
+    {
+      "path": "UniFP_v3/tests/__pycache__/test_desktop_asset.cpython-311-pytest-9.1.1.pyc",
+      "bytes": 18191,
+      "category": "regenerable_cache"
+    },
+    {
+      "path": "UniFP_v3/tests/__pycache__/test_rolling_collision_asset.cpython-311-pytest-9.1.1.pyc",
+      "bytes": 58476,
+      "category": "regenerable_cache"
+    },
+    {
+      "path": "UniFP_v3/tests/__pycache__/test_rolling_collision_asset.cpython-311.pyc",
+      "bytes": 17788,
+      "category": "regenerable_cache"
+    },
+    {
+      "path": "UniFP_v3/tests/__pycache__/test_training_collision_asset.cpython-311-pytest-9.1.1.pyc",
+      "bytes": 19139,
+      "category": "regenerable_cache"
+    },
+    {
+      "path": "UniFP_v3/tests/__pycache__/test_v3_actor_critic.cpython-311-pytest-9.1.1.pyc",
+      "bytes": 28699,
+      "category": "regenerable_cache"
+    },
+    {
+      "path": "UniFP_v3/tests/__pycache__/test_v3_control_config.cpython-311-pytest-9.1.1.pyc",
+      "bytes": 1823,
+      "category": "regenerable_cache"
+    },
+    {
+      "path": "UniFP_v3/tests/__pycache__/test_v3_control_config.cpython-38.pyc",
+      "bytes": 3041,
+      "category": "regenerable_cache"
+    },
+    {
+      "path": "UniFP_v3/tests/__pycache__/test_v3_episode_log.cpython-311-pytest-9.1.1.pyc",
+      "bytes": 5075,
+      "category": "regenerable_cache"
+    },
+    {
+      "path": "UniFP_v3/tests/__pycache__/test_v3_evaluation.cpython-311-pytest-9.1.1.pyc",
+      "bytes": 38619,
+      "category": "regenerable_cache"
+    },
+    {
+      "path": "UniFP_v3/tests/__pycache__/test_v3_kinematics.cpython-311-pytest-9.1.1.pyc",
+      "bytes": 5865,
+      "category": "regenerable_cache"
+    },
+    {
+      "path": "UniFP_v3/tests/__pycache__/test_v3_ppo.cpython-311-pytest-9.1.1.pyc",
+      "bytes": 22134,
+      "category": "regenerable_cache"
+    },
+    {
+      "path": "UniFP_v3/tests/__pycache__/test_v3_preflight.cpython-311-pytest-9.1.1.pyc",
+      "bytes": 31060,
+      "category": "regenerable_cache"
+    },
+    {
+      "path": "UniFP_v3/tests/__pycache__/test_v3_rewards.cpython-311-pytest-9.1.1.pyc",
+      "bytes": 14943,
+      "category": "regenerable_cache"
+    },
+    {
+      "path": "UniFP_v3/tests/__pycache__/test_v3_rollout_storage.cpython-311-pytest-9.1.1.pyc",
+      "bytes": 17794,
+      "category": "regenerable_cache"
+    },
+    {
+      "path": "UniFP_v3/tests/__pycache__/test_v3_run_identity.cpython-311-pytest-9.1.1.pyc",
+      "bytes": 6932,
+      "category": "regenerable_cache"
+    },
+    {
+      "path": "UniFP_v3/tests/__pycache__/test_v3_runner.cpython-311-pytest-9.1.1.pyc",
+      "bytes": 41145,
+      "category": "regenerable_cache"
+    },
+    {
+      "path": "UniFP_v3/tools/__pycache__/build_desktop_asset.cpython-311.pyc",
+      "bytes": 34266,
+      "category": "regenerable_cache"
+    },
+    {
+      "path": "UniFP_v3/tools/__pycache__/build_desktop_asset.cpython-313.pyc",
+      "bytes": 30257,
+      "category": "regenerable_cache"
+    },
+    {
+      "path": "UniFP_v3/tools/__pycache__/build_rolling_collision_asset.cpython-311.pyc",
+      "bytes": 39445,
+      "category": "regenerable_cache"
+    },
+    {
+      "path": "UniFP_v3/tools/__pycache__/build_training_collision_asset.cpython-311.pyc",
+      "bytes": 24540,
+      "category": "regenerable_cache"
+    },
+    {
+      "path": "UniFP_v3/tools/__pycache__/build_training_collision_asset.cpython-313.pyc",
+      "bytes": 19514,
+      "category": "regenerable_cache"
+    },
+    {
+      "path": "UniFP_v3/tools/__pycache__/compare_desktop_fk.cpython-311.pyc",
+      "bytes": 16699,
+      "category": "regenerable_cache"
+    },
+    {
+      "path": "UniFP_v3/tools/__pycache__/compare_desktop_fk.cpython-313.pyc",
+      "bytes": 14818,
+      "category": "regenerable_cache"
+    },
+    {
+      "path": "UniFP_v3/tools/__pycache__/compare_desktop_fk.cpython-38.pyc",
+      "bytes": 9360,
+      "category": "regenerable_cache"
+    },
+    {
+      "path": ".scratch/unifp-v3-a8000-diagnosis/knowledge/__pycache__/probe_control_timing.cpython-313.pyc",
+      "bytes": 3808,
+      "category": "regenerable_cache"
+    },
+    {
+      "path": ".scratch/unifp-v3-a8000-diagnosis/knowledge/__pycache__/probe_reset.cpython-38.pyc",
+      "bytes": 5682,
+      "category": "regenerable_cache"
+    },
+    {
+      "path": ".scratch/unifp-v3-a8000-diagnosis/knowledge/__pycache__/probe_wheels.cpython-311.pyc",
+      "bytes": 25545,
+      "category": "regenerable_cache"
+    },
+    {
+      "path": ".scratch/unifp-v3-a8000-diagnosis/knowledge/__pycache__/probe_wheels.cpython-313.pyc",
+      "bytes": 27859,
+      "category": "regenerable_cache"
+    },
+    {
+      "path": ".scratch/unifp-v3-a8000-diagnosis/knowledge/__pycache__/test_probe_wheels.cpython-311-pytest-9.1.1.pyc",
+      "bytes": 15727,
+      "category": "regenerable_cache"
+    },
+    {
+      "path": ".pytest_cache/.gitignore",
+      "bytes": 37,
+      "category": "regenerable_cache"
+    },
+    {
+      "path": ".pytest_cache/CACHEDIR.TAG",
+      "bytes": 191,
+      "category": "regenerable_cache"
+    },
+    {
+      "path": ".pytest_cache/README.md",
+      "bytes": 302,
+      "category": "regenerable_cache"
+    },
+    {
+      "path": ".pytest_cache/v/cache/lastfailed",
+      "bytes": 2,
+      "category": "regenerable_cache"
+    },
+    {
+      "path": ".pytest_cache/v/cache/nodeids",
+      "bytes": 726,
+      "category": "regenerable_cache"
+    }
+  ],
+  "removed_file_count": 97,
+  "removed_bytes": 9556722,
+  "duplicate_file_count": 8,
+  "cache_file_count": 89,
+  "preserved_zh": [
+    "原始官方代码、副本与有效/候选机器人资产",
+    "知识库、设计、tickets、历史失败证据及 T04 完整最终验收证据",
+    "全部非重复实验轨迹、模型图片和启动/观察脚本",
+    "Go2W/Piper 任务内容与相关字节码",
+    "远程训练进程、SDK、扩展缓存、检查点、训练和评估输出"
+  ],
+  "drafts_zh": "未发现可明确判定为废弃的独立草稿；修改计划、实施记录和按日期保留的设计/实验文档继续保留。",
+  "agents_update_zh": "纠正项目默认根目录、文档入口、本地与远程用途及环境路径；取消 tavis 作为项目默认环境的错误说明。",
+  "accounting_zh": "按删除文件内容字节数统计，不含新报告与文件系统块开销。",
+  "verification": {
+    "unchanged_files_verified": 2671,
+    "concurrent_changes_observed": [
+      {
+        "path": ".scratch/go2w-unifp-migration/tickets/04-single-env-physics-gate.md",
+        "before_sha256": "eae368950678168f3292199093f99a4d7447cae13680a4e5109a6b6a11443cb6",
+        "observed_sha256": "cdd627bec2b35581c56679ed27752c9338ca44d39b241a45c14d0d8bbbcb2a5c",
+        "note_zh": "本次清理未写入此路径；检测到其他任务文档更新，保留当前版本。"
+      }
+    ],
+    "deleted_files_absent": true,
+    "retained_duplicate_sha256_verified": true,
+    "document_paths_exist": true,
+    "git_status_delta_matches_cleanup": true,
+    "agents_diff_check_passed": true
+  }
+}

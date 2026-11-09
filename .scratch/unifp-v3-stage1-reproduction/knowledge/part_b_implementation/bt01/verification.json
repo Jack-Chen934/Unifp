@@ -1,0 +1,34 @@
+{
+  "ticket": "B-T01",
+  "status": "passed",
+  "说明": "完整迁移切片的CPU张量／真实学习器测试通过；没有创建PhysX仿真、读取远程父检查点或启动B训练。",
+  "tests": {
+    "passed": 50,
+    "warnings": 3,
+    "log": "unit.log",
+    "scope": "identity、Runner、PPO、storage、网络、奖励／环境持久状态、episode日志、原A准入／评估与控制配置"
+  },
+  "tdd_observations": [
+    "A→B身份函数缺失导致预期失败，最小实现后通过。",
+    "Runner只接受A导致迁移测试预期失败，新增显式迁移后通过。",
+    "配置好既有Ninja路径后，CLI测试因缺迁移参数预期失败；实现后在读取错误父文件前拒绝SHA不匹配。"
+  ],
+  "review": {
+    "标准": "修改函数具有完整类型标注和英文Google docstring；新增状态只在加载边界处理，未加逐step检查或通用迁移框架。",
+    "规格": "严格同阶段恢复保留；模型／双Adam／实际lr／RNG／创建物性／push／累计计数延续，显式阶段映射后一次新episode；A8000完成态不reset、不采样。",
+    "结论": "本票未发现未解决关键问题。B非零力事件、40000预算与原生4096验证仍归后续票据，不视为已通过。"
+  },
+  "source_sha256": {
+    "legged_gym/b2_gym_learn/ppo_cse_pf/v3_run_identity.py": "3591aa2adf1f73b7e990d9c2a736f0b49a529c4c500575c4cfa759f1b6fe2543",
+    "legged_gym/b2_gym_learn/ppo_cse_pf/v3_on_policy_runner.py": "c34ef1d759db28ab87e4618e76aa241c0df952654052bff4bf8dd37ed0835778",
+    "legged_gym/scripts/train_v3.py": "0512a435e9c445c4c28a8ea100670d4e9b2e9e1b51dd87249b809485665464b4",
+    "legged_gym/scripts/v3_args.py": "5530ab1c51a710a0934a17f40475933c3eafd552df0d2cbe89274585f10de2a0",
+    "legged_gym/utils/v3_config.py": "647a3db08b8fb1f8c0e242b85658e3015114f766e90ea659b650a42d03c1556b",
+    "tests/test_v3_runner.py": "9796460fdb51dbe689567b111cdc4477151516a7f1047fc24c8b9cba394a053b",
+    "tests/test_v3_run_identity.py": "3fbe220629cfa661ac87d5fd99dd99dccbc7a9af319a5b1e169e22b87dca8938"
+  },
+  "evidence_sha256": {
+    "unit.log": "71001264ebf2b3ce7913c739f9c88408f7fbcbababcc02d68f538444f8cb03c7",
+    "archived_identity_check.json": "391488e4e9817746396d23fe17f3168df0075e33735bff615e8cbc37d7fc4738"
+  }
+}

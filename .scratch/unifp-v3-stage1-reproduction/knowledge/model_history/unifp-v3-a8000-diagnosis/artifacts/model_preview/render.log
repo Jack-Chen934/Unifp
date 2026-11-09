@@ -1,0 +1,3 @@
+/home/sorry/python_ws/interactive/unifp_reproduction/.scratch/unifp-v3-a8000-diagnosis/knowledge/render_v6_model.py:72: DeprecationWarning: Call to deprecated method SetCells. (Use ImportLegacyFormat or SetData instead.) -- Deprecated since version 9.6.0.
+  vtk_cells.SetCells(len(mesh.faces), numpy_to_vtkIdTypeArray(
+/home/sorry/python_ws/interactive/unifp_reproduction/.scratch/unifp-v3-a8000-diagnosis/artifacts/model_preview/v6_r2_model_overview.png

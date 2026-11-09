@@ -1,0 +1,94 @@
+{
+  "passed": true,
+  "properties_max_absolute_difference_from_r3": {
+    "local": {
+      "mass": 0.0,
+      "com": 0.0,
+      "inertia": 0.0
+    },
+    "remote": {
+      "mass": 0.0,
+      "com": 0.0,
+      "inertia": 0.0
+    }
+  },
+  "motion_checks": [
+    {
+      "motion_sign": 1,
+      "case": "forward",
+      "main_axis": 0,
+      "mean_absolute_error": 0.014279035449027979,
+      "threshold": 0.03,
+      "passed": true,
+      "peak_base_contact_n": 0.0
+    },
+    {
+      "motion_sign": 1,
+      "case": "backward",
+      "main_axis": 0,
+      "mean_absolute_error": 0.013957610875368088,
+      "threshold": 0.03,
+      "passed": true,
+      "peak_base_contact_n": 0.0
+    },
+    {
+      "motion_sign": 1,
+      "case": "lateral",
+      "main_axis": 1,
+      "mean_absolute_error": 0.007590398296713805,
+      "threshold": 0.03,
+      "passed": true,
+      "peak_base_contact_n": 0.0
+    },
+    {
+      "motion_sign": 1,
+      "case": "yaw",
+      "main_axis": 2,
+      "mean_absolute_error": 0.040304532974958326,
+      "threshold": 0.05,
+      "passed": true,
+      "peak_base_contact_n": 0.0
+    },
+    {
+      "motion_sign": -1,
+      "case": "forward",
+      "main_axis": 0,
+      "mean_absolute_error": 0.015847288966178846,
+      "threshold": 0.03,
+      "passed": true,
+      "peak_base_contact_n": 0.0
+    },
+    {
+      "motion_sign": -1,
+      "case": "backward",
+      "main_axis": 0,
+      "mean_absolute_error": 0.01416919946670529,
+      "threshold": 0.03,
+      "passed": true,
+      "peak_base_contact_n": 0.0
+    },
+    {
+      "motion_sign": -1,
+      "case": "lateral",
+      "main_axis": 1,
+      "mean_absolute_error": 0.007183425188064555,
+      "threshold": 0.03,
+      "passed": true,
+      "peak_base_contact_n": 0.0
+    },
+    {
+      "motion_sign": -1,
+      "case": "yaw",
+      "main_axis": 2,
+      "mean_absolute_error": 0.039867852374911195,
+      "threshold": 0.05,
+      "passed": true,
+      "peak_base_contact_n": 0.0
+    }
+  ],
+  "local_runtime_exit_code": 0,
+  "remote_runtime_and_motion_exit_code": 0,
+  "local_nominal_failure_events": 0,
+  "remote_nominal_failure_events": 0,
+  "note_zh": "本机与远程源码身份分开记录；实际物性与冻结r3名义基线完全相同。8项运动只验有限动作，不代替策略能力验收。"
+}

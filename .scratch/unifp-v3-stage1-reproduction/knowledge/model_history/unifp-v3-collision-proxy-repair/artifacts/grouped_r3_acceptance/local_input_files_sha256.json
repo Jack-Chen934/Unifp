@@ -1,0 +1,10 @@
+{
+  "UniFP_v3/resources/robots/v3_a1_desktop/asset_manifest.json": "9126efc71b87a1af1691cac36b52fd11b2b53ed2fa66e2ab523b15784bf90873",
+  "UniFP_v3/resources/robots/v3_a1_desktop/urdf/a1arm_rgm3_desktop_fixed_gripper.urdf": "1dc2f47cf62baf707d9f1e7595b9df6b4455193feabedbd0b46e940ddffb9c0d",
+  "UniFP_v3/resources/robots/v3_a1_desktop_train_v6_coplanar_r2/asset_manifest.json": "1e0f6541e9f2ed34a50d19108cf2bfb0d3c31091a5aa18ed2e7181fbe82abe69",
+  "UniFP_v3/resources/robots/v3_a1_desktop_train_v6_coplanar_r2/urdf/a1arm_rgm3_desktop_fixed_gripper.urdf": "bbbff3c20cb87e0a94ffb6c844ae9450c50380eb51216ff4b61dd9aed63de773",
+  ".scratch/unifp-v3-collision-proxy-repair/knowledge/probe_cpu_tensor_v3.py": "927bce1757049433457362a99b6653c5ffe7600f19151b0f92a52cc29d4e5427",
+  ".scratch/unifp-v3-collision-proxy-repair/knowledge/build_local_base_proxy_candidate.py": "0978b11418dc151a31a1c0b896249fab2558d15c1995a1c4084fecfa129beb51",
+  ".scratch/unifp-v3-collision-proxy-repair/knowledge/test_local_base_proxy_candidate.py": "a05edfdfff00d87d9d47b139da18b990d7ef9c53b4119601d263d3a869e3f021",
+  ".scratch/unifp-v3-collision-proxy-repair/knowledge/probe_native_backend.py": "7c9676c323fc98d3d1849e2d53e4e6ff9c446f9ff57cae8a43f278460706e6db"
+}

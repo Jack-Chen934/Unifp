@@ -1,0 +1,6 @@
+{
+  "reference": ".scratch/unifp-v3-collision-optimization/knowledge/runtime/collision_final80_nominal32_full.json",
+  "candidate": "airborne_gain120_factor2.json:rigid_body_properties",
+  "body_count": 28,
+  "exact_mass_com_inertia_match": true
+}

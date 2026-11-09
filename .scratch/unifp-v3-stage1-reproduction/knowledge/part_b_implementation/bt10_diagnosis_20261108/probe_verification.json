@@ -1,0 +1,56 @@
+{
+  "passed": true,
+  "transitions": 896000,
+  "captured_physical_failures": 50,
+  "conditions": [
+    {
+      "name": "probe_9000_mean",
+      "transitions": 128000,
+      "physical_failures": 1,
+      "ended_episodes": 128,
+      "policy_updates": 0
+    },
+    {
+      "name": "probe_9000_sample",
+      "transitions": 128000,
+      "physical_failures": 2,
+      "ended_episodes": 128,
+      "policy_updates": 0
+    },
+    {
+      "name": "probe_10000_mean",
+      "transitions": 128000,
+      "physical_failures": 0,
+      "ended_episodes": 128,
+      "policy_updates": 0
+    },
+    {
+      "name": "probe_10000_sample",
+      "transitions": 128000,
+      "physical_failures": 1,
+      "ended_episodes": 128,
+      "policy_updates": 0
+    },
+    {
+      "name": "probe_12000_mean",
+      "transitions": 128000,
+      "physical_failures": 9,
+      "ended_episodes": 128,
+      "policy_updates": 0
+    },
+    {
+      "name": "probe_12000_sample",
+      "transitions": 128000,
+      "physical_failures": 23,
+      "ended_episodes": 130,
+      "policy_updates": 0
+    },
+    {
+      "name": "probe_12000_sample_std9000",
+      "transitions": 128000,
+      "physical_failures": 14,
+      "ended_episodes": 129,
+      "policy_updates": 0
+    }
+  ]
+}

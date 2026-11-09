@@ -70,7 +70,7 @@ ENV:125–130的力课程是global_steps > force_start_step×24，CFG:178为8000
 
 `L/PROJECT_REPORT.md:7–15`记录512环境、24步/轮、单训练seed、16000轮；第21–34行报告终点确定性mean受力偏移目标误差50.348cm、估力RMSE27.702N/轴，sample误差45.795cm、估力11.271N/轴。mean是确定性动作均值，sample是加策略噪声，并非力分布命名。第38–40行说明旧原始轨迹和日志已清理；归档并未恢复缺失数据。
 
-旧路径失效、COM施力与TCP偏置等更完整的归档前源码记录保存在 `P/.scratch/unifp-v3-migration/knowledge/v3_source_audit.md:79–95`。该历史记录中的原根路径现对应L；归档文件普通字节已通过manifest核验。历史记录不表示本轮重新执行了旧评估。
+旧路径失效、COM施力与TCP偏置等更完整的归档前源码记录保存在 `P/.scratch/unifp-v3-stage1-reproduction/knowledge/model_history/unifp-v3-migration/knowledge/v3_source_audit.md:79–95`。该历史记录中的原根路径现对应L；归档文件普通字节已通过manifest核验。历史记录不表示本轮重新执行了旧评估。
 
 ## 7. 已有 B2 复现与论文证据边界
 
@@ -78,7 +78,7 @@ ENV:125–130的力课程是global_steps > force_start_step×24，CFG:178为8000
 
 `R/literature/projects/unifiedforce/reproduction/outputs/stage2_20261029/official_comparison/analysis_report.md:5–15`报告8环境×6000步固定零力评估：8000轮平均L2约5.05cm，16000轮约6.63cm；第25–45行说明16k与官方图目测37–38k预算不同，Fig3b是逐轴分布而非时间曲线，缺作者原始MAE。
 
-此前float64复核记录在 `P/.scratch/unifp-v3-migration/knowledge/reproduction_source_audit.md:7–40`及同目录`reproduction_validation.json`：8000轮L2=5.0476cm、16000轮6.6317cm；最终随机受力补偿误差11.2453cm、估力XYZ MAE6.0864/4.8267/5.4815N。此次仅复用本地已有核验记录，没有重新推理。
+此前float64复核记录在 `P/.scratch/unifp-v3-stage1-reproduction/knowledge/model_history/unifp-v3-migration/knowledge/reproduction_source_audit.md:7–40`及同目录`reproduction_validation.json`：8000轮L2=5.0476cm、16000轮6.6317cm；最终随机受力补偿误差11.2453cm、估力XYZ MAE6.0864/4.8267/5.4815N。此次仅复用本地已有核验记录，没有重新推理。
 
 `.../official_comparison/paper_check.md:13–39,56–76`记录Fig3b逐轴误差分布、作者精确分箱/seed/MAE未公开；Fig3c匹配力、Fig3d真实接触力与随机独立施力协议不同。上述证据不能给出“全论文实验已完成”的事实，也不能替代新V3数据。
 
@@ -467,15 +467,15 @@ ENV:125–130的力课程是global_steps > force_start_step×24，CFG:178为8000
 
 2026-10-31按当前工作树核对桌面基准资产、V3环境实现和Gym回归。静态文件事实与运行记录分开列出。
 
-- `UniFP_v3/legged_gym/envs/v3/v3_pos_force_config.py:25—34`将活动V3配置指向桌面派生URDF，关闭fixed-joint collapse及cylinder替换并以`base_link`作为接触终止名称；`:36—54`设置名义root高度0.34m及14个关节默认值；`:96—116`定义15维命令、底盘速度候选、A08目标/时长验证候选和名义base高度0.32m。旧`resources/robots/v3_a1/asset_manifest.json`标记为历史问题资产，其派生URDF SHA256为`03db4e846dd77b51f1d7bb62a373a5fa4e3cd16535a21ae6a1068c7e24dd0239`。桌面候选归档与记录为`UniFP_v3/docs/experiments/archives/v3_a1_desktop_accepted_20261031.tar.gz`及`UniFP_v3/docs/experiments/2026-10-31_v3_desktop_asset_repair.md`。
+- `UniFP_v3/legged_gym/envs/v3/v3_pos_force_config.py:25—34`将活动V3配置指向桌面派生URDF，关闭fixed-joint collapse及cylinder替换并以`base_link`作为接触终止名称；`:36—54`设置名义root高度0.34m及14个关节默认值；`:96—116`定义15维命令、底盘速度候选、A08目标/时长验证候选和名义base高度0.32m。旧`resources/robots/v3_a1/asset_manifest.json`标记为历史问题资产，其派生URDF SHA256为`03db4e846dd77b51f1d7bb62a373a5fa4e3cd16535a21ae6a1068c7e24dd0239`。桌面候选归档与记录为`UniFP_v3/docs/experiments/archives/v3_a1_desktop_accepted_20261031.tar.gz`及`UniFP_v3/docs/experiments/v3/实验汇总.md`。
 - `UniFP_v3/legged_gym/envs/v3/legged_robot_v3.py:32—68`仅在V3路径显式设Gym DOF `EFFORT`并清零导入stiffness，创建V3 actor后按活动资产manifest应用shape级局部装配过滤；`:87—138`按关节／body名称构建索引、分配观测历史／标签／命令／目标状态并执行初始reset。此实现没有修改`UniFP/`官方副本。
 - 同文件`:140—218`实现物理step、核心非有限状态停止、base失败／timeout区分、命令推进、terminal Critic帧和done局部reset；`:220—297`实现局部root／DOF reset、Gym张量刷新、TCP读回和候选地面状态核验；`:299—490`实现底盘命令采样、球坐标目标段采样／插值／候选筛查和命令更新；`:492—521`按14维动作计算10个位置关节与4个轮速关节显式PD力矩；`:547—578`由`arm_seg6`和TCP局部偏移取世界TCP，并按yaw及单一名义高度来源转换至球坐标。
 - 同文件`:580—675`构造58维Actor帧、98维Critic帧、12维监督标签和32／3帧历史；当前step仍将奖励置零，尚未接入A08奖励或PPO Runner。目标筛查仅覆盖采样域、有限性、非零半径和TCP候选离地条件，不证明整臂碰撞或动态可达性。
-- `UniFP_v3/tools/check_v3_desktop_runtime.py:17—154`在32个真实V3 Gym actor上验证reset TCP目标起点、A零力命令、策略边界目标插值／段切换、250步底盘命令重采、1000步timeout终止Critic新命令对齐及局部reset隔离，并回读质量／惯量和轮系状态。2026-10-31报告位于`.scratch/v3-desktop-model-repair/knowledge/v3_runtime_check.json`；该短测仍不是Actor/Critic训练闭环或完整物理安全认证。
+- `UniFP_v3/tools/check_v3_desktop_runtime.py:17—154`在32个真实V3 Gym actor上验证reset TCP目标起点、A零力命令、策略边界目标插值／段切换、250步底盘命令重采、1000步timeout终止Critic新命令对齐及局部reset隔离，并回读质量／惯量和轮系状态。2026-10-31报告位于`.scratch/unifp-v3-stage1-reproduction/knowledge/model_history/v3-desktop-model-repair/knowledge/v3_runtime_check.json`；该短测仍不是Actor/Critic训练闭环或完整物理安全认证。
 
 ## 50. A04目标命令时序及timeout定向回归事实
 
-2026-10-31基于当前V3工作树实现后，在专用Isaac Gym Preview4 Python 3.8/Torch 2.3.1运行时执行4环境GPU PhysX定向短测；报告为`.scratch/v3-desktop-model-repair/knowledge/v3_runtime_check.json`。
+2026-10-31基于当前V3工作树实现后，在专用Isaac Gym Preview4 Python 3.8/Torch 2.3.1运行时执行4环境GPU PhysX定向短测；报告为`.scratch/unifp-v3-stage1-reproduction/knowledge/model_history/v3-desktop-model-repair/knowledge/v3_runtime_check.json`。
 
 - `UniFP_v3/legged_gym/envs/v3/v3_pos_force_config.py:96—116`设置15维命令及A08验证候选；仰角、方位角用弧度保存，几何余量仍未冻结。配置的`base_height_target=0.32m`与TCP球心z安装偏移`0.09535m`共同决定名义球心高度`0.41535m`。
 - `UniFP_v3/legged_gym/envs/v3/legged_robot_v3.py:87—90`将20s episode按20ms策略周期取最近整数为1000步，避免基类对浮点比值执行ceil得到1001步。`:172—218`完成单步核心状态有限性、base失败／timeout判定、命令推进和reset前终止Critic构造；`:252—297`在root／DOF索引写入并刷新Gym张量后读取TCP，核验核心有限值和候选离地高度；`:319—490`实现目标段采样、策略边界插值、候选筛查和250策略步底盘速度命令重采。筛查不计算IK、全臂碰撞或连续轨迹间隙，不构成冻结安全域认证。
@@ -569,7 +569,7 @@ ENV:125–130的力课程是global_steps > force_start_step×24，CFG:178为8000
 - `UniFP_v3/legged_gym/envs/v3/v3_pos_force_config.py:116–149,159–173`实际配置23项权重、软界／sigma及摩擦、base／臂端质量比例、COM、执行系数、push候选；这些候选来源和确认状态见A08/A09设计，源码注释仍明确为验证候选。
 - `UniFP_v3/tests/test_v3_rewards.py:12–141`的4个单测验证单次dt加权、负总reward、物理误差mean/P95、局部清理、软／硬位置界和执行系数作用位置；`UniFP_v3/tests/test_v3_episode_log.py:11–53`的2个单测验证等episode归约、空batch、metadata不覆盖及未解析bonus拒绝。2026-10-31本机回归：模型／日志／桌面资产10项pytest通过，奖励4项unittest通过。
 - `UniFP_v3/tools/check_v3_reward_runtime.py:16–128`运行8环境27步，检查实际物性回读、惯量比例、局部执行系数、Torch RNG恢复、push与timeout／episode记录。报告`.scratch/unifp-v3-stage1-reproduction/knowledge/a08_a09_runtime_20261031.json`记录全部接口断言通过、奖励范围约`[-0.0294281,0.1223764]`，并保留第23步env3／第24步env2的接触物理终止记录；不含训练网络或optimizer。timeout判定计数手动预置，但record时长仍由真实采样数得到0.54s。
-- `UniFP_v3/tools/check_v3_desktop_runtime.py:17–205`显式关闭随机化和push以核验名义合同；本机32环境25步短测非timeout终止为0，结果存于`.scratch/v3-desktop-model-repair/knowledge/v3_runtime_check.json`。两次Gym短测均使用GPU PhysX／CPU张量pipeline；没有目标N的GPU张量容量或训练性能结果。详细命令和实验观察保存在`UniFP_v3/docs/experiments/2026-10-31_v3_rewards_randomization.md`。核查时官方`UniFP/`的`git status --porcelain`为空。
+- `UniFP_v3/tools/check_v3_desktop_runtime.py:17–205`显式关闭随机化和push以核验名义合同；本机32环境25步短测非timeout终止为0，结果存于`.scratch/unifp-v3-stage1-reproduction/knowledge/model_history/v3-desktop-model-repair/knowledge/v3_runtime_check.json`。两次Gym短测均使用GPU PhysX／CPU张量pipeline；没有目标N的GPU张量容量或训练性能结果。详细命令和实验观察保存在`UniFP_v3/docs/experiments/v3/实验汇总.md`。核查时官方`UniFP/`的`git status --porcelain`为空。
 
 ## 59. 票据05实施前的学习链与远程装配事实
 
@@ -626,3 +626,203 @@ ENV:125–130的力课程是global_steps > force_start_step×24，CFG:178为8000
 - r06的10轮value loss从0.0631916到0.0430750，辅助loss从0.0375349到0.0199444；采集82.9339s、更新4.2575s（未计创建／写盘）。Torch峰值283805696B，不含PhysX等全进程显存；没有4096规模结果。
 - 修正后的`tools/check_v3_reward_runtime.py`另在远程运行8环境27步，全部合同断言通过，奖励范围[-0.0294281,0.1223764]；push单次触发、末端注入力为零、实际物性回读、可变状态恢复和手动预置的纯timeout记录通过。该回归为CPU张量pipeline／GPU PhysX，不替代512规模GPU张量训练。证据为`a07_runtime_regression_20261031.json`及console。
 - 最终摘要在`knowledge/a07_training_smoke_20261031.json`，原始console／metadata／iterations／episodes／发布清单位于`knowledge/a07_remote_20261031/`的r06和r03目录。旧异常摘要及四组因果对照均独立保留。24项本机回归通过；官方`UniFP/`的git status仍为空。
+
+
+## 2026-11-07 B实施准备：当前源码事实
+
+- `UniFP_v3/legged_gym/envs/v3/v3_pos_force_config.py:28,177`活动资产为V6 r2，物理dt=0.0025s；控制decimation=8，策略周期20ms。
+- `UniFP_v3/legged_gym/envs/v3/legged_robot_v3.py:473-486`对命令9:15及两路external force非零报错；物理子步仅提交关节力矩，没有提交非零刚体力张量。`load_training_state:319`要求存档部分与当前部分一致。
+- 同文件`:775-789`补偿公式已有F_ext+F_cmd的yaw→world旋转并除K；`:1398-1449`Actor58、Critic98、标签12，外力标签乘0.01，末尾compensated_target目前直接取commands[:,3:6]。
+- `UniFP_v3/legged_gym/b2_gym_learn/ppo_cse_pf/v3_on_policy_runner.py:43-44,58,82`只允许A、lineage写A且完整预算≤8000；`:250-255`存档校验也限制A边界。`:386-399`恢复模型、双Adam、实际lr、计数、环境状态、RNG；8000时不创建新episode。
+- 同一Runner的`:115-119`先以已发布obs／privileged_obs／obs_pred调用act，再step并process_env_step。`v3_ppo.py:88-113`在act中保存同边界三类输入，`:248-255`以配对历史的encoder／decoder输出计算四组标签MSE。环境`legged_robot_v3.py:1398-1481`以当前状态、external_ee_force_y与external_base_force_y构建标签，再将标签clone随历史发布；A当前两力为零。官方`ppo_cse_pf/ppo.py:77-87`及`on_policy_runner.py:121-129`也先act保存obs_pred，环境物理步后生成下一obs_pred；`legged_robot_b2z1_pos_force.py:125-142,333-436`的force提交先于观测与外力标签生成。
+- `legged_robot_v3.py:490-530`在真实post-physics状态计算reward及episode统计后更新last_actions、推进任务命令，再构造并clone done行终止Critic历史，之后reset并发布普通观测。`:1040-1088`的reset按env_ids清历史、动作、标签和外力缓存，无simulate调用。`v3_ppo.py:116-157`仅对time_outs行计算终止Critic的gamma折扣价值，入库后清当前转移。官方`legged_robot_b2z1_pos_force.py:172-180`先update_curr_ee_goal，再check_termination与compute_reward，随后reset并compute_observations；其执行顺序与V3当前实现不完全相同。
+- `UniFP_v3/legged_gym/b2_gym_learn/ppo_cse_pf/v3_run_identity.py:65-84`持有动作／命令／辅助shape语义、源码与资产逐文件哈希及学习配置hash。Actor122输入为58当前帧+64latent；辅助四组三维，损失系数[0.04,0.04,1,1]。
+- 活动模型由`v3_on_policy_runner.py:15,47`导入／构造`v3_actor_critic.py`的V3ActorCritic，不使用同目录保留的actor_critic.py类。活动模型`:11-28,88-109`固定encoder1856→512→256→128→64、Actor122→512→256→128→14、decoder64→128→64→12、ELU及14维可学习std；`:156-175`将最新58维帧与latent拼接得到高斯均值，decoder预测不进入此拼接。`v3_ppo.py:52-60`主Adam排除decoder，辅助Adam只含encoder／decoder；`:242-262`主更新后清梯度、重新前向decoder、执行辅助更新。
+- `UniFP_v3/legged_gym/scripts/evaluate_v3.py:155-185`在step前保存labels_before_action并调用mean动作推理，step后将同次state_estimates与先存标签写入原policy trace。`v3_actor_critic.py:275-322`通过policy_info返回设备端12维预测，无优化器更新。`v3_evaluation.py:169-182`当前只将前6维速度／TCP误差按既有缩放还原；尚无人工末端外力非零分组、方向／幅值或事件延迟汇总。环境`legged_robot_v3.py:540-590`普通trace的姿态来自执行结束状态，其state_estimate_labels_scaled会由评估入口动作前标签覆盖；当前trace并未另存动作前yaw字段。
+- 官方`UniFP/legged_gym/envs/b2/legged_robot_b2z1_pos_force.py:125-130`以global_steps>force_start_step*24启用_push_gripper，_push_robot_base调用被注释，随后GLOBAL_SPACE提交刚体force。`:1042-1150`命令与外力独立事件及分段上升／保持／下降逻辑。
+- 官方`UniFP/legged_gym/envs/b2/b2z1_pos_force_config.py:137-156,178`zero_vel_cmd_prob=0.3、zero_vel_cmd_prob_after_force=0.8（后者未找到读取／切换路径）；末端cmd/ext事件概率各0.8、间隔[3.5,9]s、时长[1,3]s、settle1s、力各轴[-60,60]N、K=200N/m、force_start_step=8000。这些是配置事实，不是V3验证结论。
+- 官方`UniFP/legged_gym/envs/b2/legged_robot_b2z1_pos_force.py:1124-1126,1144,1152`将人工外力三轴抽样值直接作为世界系force张量的事件峰值与包络值，`:130`以GLOBAL_SPACE提交，未将人工力随底盘yaw正向旋转；`:362-366`用当前底盘仅yaw四元数逆旋转世界人工力为局部分量。`:1891-1898`将yaw系命令力正向旋转到世界，再与世界人工力相加除以虚拟刚度，得到几何目标的补偿偏移。人工外力事件的保存坐标与估力标签的表达坐标不同。
+- `UniFP_v3/legged_gym/utils/v3_kinematics.py:35-84`从活动URDF建立base_link到arm_seg6的链，将link坐标`(0,0,0.07961206)m`转换成世界TCP；方法读取root与DOF张量，不读取rigid-body缓存。活动V6 `resources/robots/v3_a1_desktop_train_v6_coplanar_r2/urdf/a1arm_rgm3_desktop_fixed_gripper.urdf:194-198`的arm_seg6名义COM为`(2.406e-6,-9.4582e-8,-0.038796)m`。`legged_robot_v3.py:113-191`在创建时回读实际actor末端COM与其他物性，工具质量随机化不平移该COM。当前step物理子步刷新DOF，root在整个策略区间后刷新。
+- 本机SDK根为`/home/sorry/.cache/unifp/isaacgym_preview4/pkg/isaacgym/`；`docs/api/python/gym_py.html:472-493`记录`apply_rigid_body_force_at_pos_tensors(sim, forceTensor, posTensor=None, space=ENV_SPACE)`，posTensor为None时施力于COM；同页`:420-442`说明偏离COM的指定点施力产生力矩。`python/examples/apply_forces_at_pos.py:107-126`使用设备端`[num_envs,num_bodies,3]`力与位置张量提交偏置施力；该例使用ENV_SPACE，不是V3 GLOBAL_SPACE运行结果。
+- 正式V6 A8000父路径、SHA256和288episode零失败记录见`docs/progress/2026-11-06_v3_status.md:23-62`；3501—8000轮442368结束episode零失败。先前1400轮接触分类不属于成熟8000策略表现。
+- 本轮旧模型任务退出独立scratch路径，证据现位于`knowledge/model_history/`；原机器JSON保留当时路径，目录迁移表为该目录`cleanup_20261107.json`。V6、桌面基准、r3、V8迁移前后逐文件SHA256一致；四份URDF引用的mesh均实际存在。
+
+### B08源码核对：补偿目标与奖励
+
+- 官方`UniFP/legged_gym/envs/b2/legged_robot_b2z1_pos_force.py:1891-1900`读取`forces[:,gripper_idx,0:3]`及`current_Fxyz_gripper_cmd`，将命令力经base_yaw_quat旋转到世界，与人工外力相加后按分量除gripper_force_kps，叠加curr_ee_goal_cart_world；对ee_pos到该点的L1误差计算`exp(-2*error/tracking_ee_sigma)`。该函数不读取物体接触净力，也没有单独的力误差项。
+- 官方`UniFP/legged_gym/envs/b2/b2z1_pos_force_config.py:149,258,304`分别设置末端虚拟刚度范围[200,200]、末端tracking_ee_sigma=1、tracking_ee_force_world权重2。其关节PD刚度／阻尼另在`:230-231`的control配置定义，两者不是同一参数。
+- 当前V3`UniFP_v3/legged_gym/envs/v3/legged_robot_v3.py:444`初始化gripper_force_kps为[N,3]、各分量200；`:775-800`将yaw系已缓存人工力与命令力相加，旋转到世界并除K，再按世界TCP的L1误差计算同形指数项。`:700-744`注册23项，配置权重仅在初始化时乘一次策略dt，compute_reward做带符号总和。
+- 当前V3`UniFP_v3/legged_gym/envs/v3/v3_pos_force_config.py:120-155`配置tracking_ee_sigma=1、末端权重2、平面速度2、偏航1、alive1.5及各执行器组／碰撞等惩罚。`legged_robot_v3.py:763-773`的物理跟踪误差当前相对几何目标计算，区别于补偿目标reward；`:473-474`仍拒绝非零力通道。
+- `UniFP_v3/legged_gym/envs/v3/legged_robot_v3.py:51-54,621-669`定义四列物理误差、分配[N,max_episode_length,4]的float32历史，并在完成episode时计算每列mean／P95；其中`:668-669`将几何L1／L2统计复制为补偿L1／L2字段。当前非零力step被拒绝，因此该别名仅反映A的零力状态。`:541-617`评估trace中的target_world_m为几何目标，physical_errors来自同一四列函数。
+- `UniFP_v3/legged_gym/b2_gym_learn/ppo_cse_pf/v3_episode_log.py:9-53`对完成episode按等权汇总return／rate及各误差mean、P95；这里P95汇总是各episode P95的算术均值，不是将全部step合并后重新计算分位数。无完成episode时仅返回episode_count=0。
+
+### B08源码核对：物体接触与张量布局
+
+- `UniFP/legged_gym/scripts/play_b2z1posforce.py:120-152`使用policy推理后step，画图／打印将decoder第6:9维与`env.forces_local[0,env.gripper_idx]`按缩放比较；该脚本没有创建额外物体actor。官方`envs/b2/legged_robot_b2z1_pos_force.py:1634,1682`加载机器人并在每环境创建机器人actor；本次查阅的公开环境／回放文件未定义固定墙按压场景。
+- `UniFP_v3/legged_gym/envs/v3/legged_robot_v3.py:82-99`调用父类创建机器人actor后应用V6碰撞过滤及创建物性随机化；父类`envs/base/legged_robot.py:569-581`每环境创建一个机器人。V3`:407-429`从机器人actor取body名字／局部索引，并将全仿真rigid-body状态view为[N,num_bodies,13]；`:1049-1059`reset写root_states[env_ids]，直接将env_ids转int32用作全局actor索引。该调用链的索引与布局以每环境一个机器人actor为前提。
+- 本机SDK`/home/sorry/.cache/unifp/isaacgym_preview4/pkg/isaacgym/docs/programming/tensors.html:347-360`说明net contact force tensor为[num_rigid_bodies,3]只读张量，记录上个simulate step中各刚体净接触力；报告受contact_collection和SimParams.substeps影响。单个PhysX substep时CC_LAST_SUBSTEP与CC_ALL_SUBSTEPS等价，文档中的substeps不是策略decimation次数。V3`:481-491`当前8次simulate后仅刷新一次net contact tensor。
+- 同SDK`docs/programming/forcesensors.html:107-123`说明刚体force sensor读数包含外力、接触及solver内部力（例如关节驱动），默认不能将其直接等同某物体的接触反力；可分别选择forward-dynamics与constraint-solver分量，并设置世界系输出。该文档事实不代表当前V3已经安装或验证了接触传感器。
+
+### 2026-11-07 V6指尖参考姿态的只读几何计算
+
+- 活动V6 URDF中gripper1_axis、gripper2_axis为fixed，分别将gripper1／gripper2固定在arm_seg6；`v3_pos_force_config.py:33`为collapse_fixed_joints=False。两个指各有独立visual和两个collision proxy，arm_seg6独立collision；`v3_kinematics.py:62`定义TCP偏置为arm_seg6的(0,0,0.07961206)m。
+- 使用现有`UniFP_v3/tools/compare_desktop_fk.py:17-100`、系统Python的NumPy／SciPy／trimesh，只读加载活动V6 URDF和visual／collision glb。在参考root位置(0,0,0.32)m、yaw=0，arm_joint1—6=(0,1.4,−1.0,0,0,0)rad时，TCP为(0.630838858,0.000004149,0.779004049)m；相对原任务中心(0.174,0,0.41535)m的球坐标为(0.583905823m,0.672310980rad,0.000009082rad)。URDF arm_joint2限位[0,3.1415]、arm_joint3限位[−3.3161,0]rad；当前几何命令范围为radius[0.45,0.70]m、elevation[0,60°]、azimuth[−60°,60°]。
+- 同姿态collision最大X（m）分别为gripper1约0.631065、gripper2约0.630612、arm_seg6约0.568995、wrist_camera_connector约0.562066、wrist_camera约0.551973；两指visual最大X分别约0.630736／0.630575m。数值为mesh顶点变换后的静态结果，未加入PhysX contact_offset或动态形变，未运行Gym接触／策略评估。
+- 本机Preview4 py38解释器本次不能import trimesh，错误为ModuleNotFoundError；同一系统Python已有NumPy／SciPy／trimesh，几何读取执行成功。未安装或变更任一环境依赖，未生成新的模型文件。
+
+### B08额外actor接口的当前调用链
+
+- `UniFP_v3/legged_gym/envs/base/legged_robot.py:42-51`在BaseTask构造／prepare_sim之后调用虚方法_init_buffers和_prepare_reward_function；同文件`:414-453`获取全root／DOF／接触张量并直接将root用于base_quat、last_root_vel等缓冲分配，`:455-472`设置原默认关节与增益。当前V3继承该_init_buffers，没有覆盖。
+- `UniFP_v3/legged_gym/envs/v3/legged_robot_v3.py:427-429`在构造后段再获取全rigid-body状态并view为[N,num_bodies,13]，`:450-452`在自身构造末尾reset所有环境并发布初始观测。额外actor不能在该构造已经完成之后才修正root／rigid-body布局。
+- V3`:1049-1064`修改逻辑root／DOF后，将self.root_states和self.dof_state直接传给全局indexed setter；`:245-246`底盘push使用非indexed全root提交。当前接触场景设计关闭push，源码本身尚无额外actor专用写回实现。`:483-486`每物理步提交全DOF力矩并simulate；墙无DOF时DOF张量总宽度不增加。
+- `UniFP_v3/legged_gym/scripts/evaluate_v3.py:100-200`已有独立scenario环境、显式模型推理、动作前标签与逐episode归档，主入口仍限定A8000和S0／S1／S2。源码没有V3ContactEvaluation或evaluate_v3_contact入口；接触扩展目前仅在设计中。
+
+
+### B09官方力分布与V6名义静态外载核对（2026-11-07）
+
+- `UniFP/legged_gym/envs/b2/b2z1_pos_force_config.py:137-178`定义zero_vel_cmd_prob=0.3和zero_vel_cmd_prob_after_force=0.8（后者未找到读取／切换路径）；cmd/ext各自事件概率0.8、间隔[3.5,9]s、duration[1,3]s、settle=1s、每轴范围[-60,60]N、K=[200,200]N/m、force_start_step=8000。这是固定源码事实，不代表V3已验证这些幅值。
+- `UniFP/legged_gym/envs/b2/legged_robot_b2z1_pos_force.py:1044-1059,1115-1130`分别抽取cmd/ext XYZ峰值与duration；duration用于上升段，且裁剪到不超过(interval-settle)/2；`:1067-1097,1138-1152`体现上升、保持、下降，因此不能将[1,3]s误记为整个非零事件长度。`:1101`结束后重采离散interval，触发条件使用episode步数对interval取模；配置的interval名称本身不足以推出相邻事件的实际固定等待时长。
+- 每路XYZ立方采样域的合力范数最大60√3≈103.9N。yaw=0时两路各轴同向边界对应补偿0.6m；任意yaw时两路域方向不同，两路偏移范数三角上界为2×60√3/200≈1.039m。由B04既定坐标定义推得：yaw=45°时某水平分量和可达到60(1+√2)N，不能普遍用世界每轴120N封顶。
+- 活动URDF `UniFP_v3/resources/robots/v3_a1_desktop_train_v6_coplanar_r2/urdf/a1arm_rgm3_desktop_fixed_gripper.urdf:52,87,122,157,192,221`给出六臂关节effort=[40,40,27,7,7,7]N·m；`:196`为arm_seg6名义COM=(2.406e-6,-9.4582e-8,-0.038796)m。`legged_robot_v3.py:1341`将实际控制输出裁到torque_limits。
+- 使用现有`UniFP_v3/tools/compare_desktop_fk.py:63-100`，系统Python NumPy／SciPy只读计算COM位置对六臂角的中心差分Jacobian（步长1e-6rad）。每轴独立±60N人工力下，逐关节最大绝对外载力矩为60×sum(abs(J_column))：reset姿态(0,1,-1.5,0,0,0)rad得到[8.3397,41.5822,33.6124,0.0141,7.1225,0.0002]N·m；B08参考姿态(0,1.4,-1,0,0,0)rad得到[20.9339,36.4775,28.6251,0.0141,7.1225,0.0002]N·m。各关节极值可对应不同力向量；计算未含重力、惯性、真实接触或控制余量，仅表示名义姿态的单路人工力准静态外载，不是Gym实测或训练可行性结论。未生成一次性文件或修改环境依赖。
+
+
+### B09事件时钟与采样实现补充核对（2026-11-07）
+
+- `UniFP/legged_gym/envs/b2/legged_robot_b2z1_pos_force.py:114-130`在decimation循环内以global_steps>force_start_step×24启用_push_gripper，随后提交刚体力并simulate。`:1049-1057,1120-1128`每次新事件从固定配置范围采样峰值和上升时长；所查事件路径未按训练迭代对力峰值乘渐进系数。
+- 同文件`:1511-1512,1757-1766`以ceil(配置秒数/dt)得到interval与duration的步单位范围，interval用torch.randint且上界不含。在dt=0.020s的V3时序下，[3.5,9]s对应175—449整步，[1,3]s对应50—150浮点步范围，保持时长1s对应50步。该换算不代表官方原任务的物理dt已与V3一致。
+
+
+### B09底盘零速度命令概率的运行路径核对（2026-11-07）
+
+- 对固定`UniFP/`完整副本搜索zero_vel_cmd_prob与after_force，命中仅为`legged_gym/envs/b2/b2z1_pos_force_config.py:137-138`两项定义，以及`legged_robot_b2z1_pos_force.py:850`读取zero_vel_cmd_prob。未找到zero_vel_cmd_prob_after_force的读取或课程切换赋值；检查`legged_gym/b2_gym_learn/ppo_cse_pf/on_policy_runner.py:90-166`训练循环，未见该切换。可核验的是默认0.3显式置零概率，0.8是未接入所查运行链的配置值。
+- 官方`legged_robot_b2z1_pos_force.py:846-856`先均匀抽三轴速度，再逐行按0.3概率整体置零，之后将三轴都低于lin_vel_x_clip／lin_vel_y_clip／ang_vel_yaw_clip的小命令整体置零；因此总零命令概率不严格为0.3。该方法未读取末端力启用状态来切换概率。
+- V6`UniFP_v3/legged_gym/envs/v3/legged_robot_v3.py:1114-1132`仅返回三维连续均匀采样结果；`:1084`reset和`:1289-1292`周期重采共用该方法。`v3_pos_force_config.py:97-104`设置重采5s及vx±0.6m/s、vy±0.4m/s、wz±0.6rad/s，没有V3零速度命令概率字段。
+- `UniFP_v3/legged_gym/b2_gym_learn/ppo_cse_pf/v3_evaluation.py:82-103`当前S0将三轴范围全设零，S1／S2保留原移动范围，S2才启用push；该函数当前没有零命令概率覆盖项。这些是当前A评估实现行为，不是B评估已实现的结论。
+
+
+### B09随机化、执行系数与push的当前实现核对（2026-11-07）
+
+- `UniFP_v3/legged_gym/envs/v3/v3_pos_force_config.py:161-186`启用摩擦[0.3,2]、base_link质量比例[0.9,1.1]、局部COM各轴[-0.02,0.02]m、arm_seg6质量比例[0.9,1.1]、执行系数[0.85,1.15]、8s／0.8m/s底盘push与noise_level=1的Actor观测噪声。`:177-182`为dt=0.0025s、substeps=1及contact pairs 2**25；动作控制另由V3 decimation=8配置实现。
+- `UniFP_v3/legged_gym/envs/base/legged_robot.py:209-228`以64个摩擦桶分配每环境系数；V3`legged_robot_v3.py:113-151`捕获base_link与arm_seg6名义物性并构造请求，若有creation_properties则使用传入的mass_com_delta与friction；`:154-220`应用实际质量、COM与shape摩擦并回读。质量改变时惯量按名义质量比例缩放，原生setter使用recomputeInertia=False。
+- V3`:1067-1071`仅对reset环境采样14维执行系数偏差；`:1315-1341`在位置残差／轮速目标前应用系数，随后沿原PD与力矩硬限幅输出，不按该系数缩放外部施力。
+- V3`:225-251`依据累计策略步（或评估显式时钟）每间隔触发一次push，并用last_push去重；各环境独立抽样世界XY速度，直接赋给root_states[:,7:9]后提交完整root状态。该写入不表示增量速度，也不生成N单位末端力。`:294-298,335-336`保存／恢复创建物性与push持久状态。
+- V3`:1459-1461,1483-1495`只在原指定Actor槽加高斯噪声，初始帧将噪声置零；噪声标准差向量其余槽为零。当前没有针对命令力、人工力标签或接触测量的额外噪声处理。
+- 官方`UniFP/legged_gym/envs/b2/b2z1_pos_force_config.py:70-99`设摩擦[0.3,2]、base附加质量[0,15]kg、COM各轴±0.15m、夹爪附加质量[0,0.2]kg及8s／0.8m/s速度push；`legged_robot_b2z1_pos_force.py:125-130`末端力调用生效而_push_robot_base调用被注释。
+
+
+### B10既有A零力协议、校验与统计接口核对（2026-11-07）
+
+- `UniFP_v3/configs/v3_a_initial_v1.json:1-14`为schema2、来源A／8000、32环境×3episode、seed1001、push_seed2001、Actor均值和v3-a-initial-v1；各S0／S1／S2的TCP、底盘、失败率与六维估计阈值保存在同一文件，S2额外包含两项push恢复阈值。文件未包含B来源或受力评估配置。
+- `UniFP_v3/legged_gym/b2_gym_learn/ppo_cse_pf/v3_evaluation.py:30-79`严格校验schema2的A8000 manifest；`:105-142`的validate_a8000_checkpoint检查完整学习存档、来源身份精确一致、A阶段及8000／192000／N×192000的真实边界，现有实现不接受B来源。
+- `UniFP_v3/legged_gym/scripts/evaluate_v3.py:100-218`按明确场景解析配置、构造32环境与模型、load_state_dict并eval，使用act_inference和env.step采集JSONL；该函数不创建Runner或优化器，finally销毁仿真。现有入口面向A8000，没有zero_force_regression分支。
+- `v3_evaluation.py:163-215`以trace逐步误差收集PHYSICAL_TRACE_METRICS并计算六维状态估计误差，另累计完整50策略步push窗口；原A几何／底盘统计口径不是对所有已完成episode先等权求均值。各类诊断统计与阈值判断使用的对象须按源码分别理解。
+- 已归档进度`docs/progress/2026-11-06_v3_status.md:50-62`记录V6 r2 A8000三场景288episode全部正常20s结束，TCP几何L2均值2.06／2.09／2.27cm；S2有224个完整push窗口。这是已归档结果，本轮未重新运行仿真或SSH回读。
+
+
+### B10论文效果与接触评估依据补充（2026-11-07）
+
+- 一手论文缓存为`/home/sorry/python_ws/interactive/research/literature/projects/unifiedforce/assets/paper.txt`，文本身份见本文件第23节。read_text后0基字符区间[22308,25400)覆盖§4.1与Fig.3说明：仿真位置评估为6000-step rollout，零力及匹配力下误差多数在0.1m内，位置估计误差在0.05m内；实机测力计评估命令0—60N，五个末端位置的平均力误差在10N内，离散估力误差约5—10N，Y／Z因硬件限制到40N。仿真跟踪分布、实机力控制与估力是不同实验，文本未给本项目S0／S1／S2或固定墙成功阈值。
+- 同一文本[52480,54000)的附录C.4描述两段课程及受力启用后的reward下降／恢复；没有给V3的观察节点或首次物理失败全局停训要求。本轮重新读取文本，没有联网检索、运行Gym或取得作者未公开原始数据。
+- `UniFP_v3/legged_gym/envs/v3/legged_robot_v3.py:775-800`现有补偿奖励在当前状态yaw下重建命令力世界向量；B04已确认执行快照与结束yaw求值。固定世界力的边界匹配命令在机器人20ms内发生yaw变化时，结束姿态下的两力和可有非零残差；不能以发布边界的抵消关系推出整个区间及结束reward严格为零补偿。
+
+
+### B11既有单元测试与离线接缝核对（2026-11-07）
+
+- `UniFP_v3/tests/test_v3_rewards.py:1-61`导入真实V3环境、通过__new__构造小规模CPU张量fixture并使用真实FK／reward方法，不create_sim；`:64-86`覆盖load只核验创建物性、不运行native setter的行为。该文件需要可导入Isaac Gym，且Gym先于Torch导入。
+- `UniFP_v3/tests/test_v3_runner.py:17-129`的TensorEnvironment替代外部仿真，runner仍构造真实V3模型／PPO；`:130,191,217,237`起的用例覆盖双Adam／RNG往返、7999→8000精确停止、半收集失败及存档发布失败。当前`v3_on_policy_runner.py:43,82,251`仍限定A与8000上限，源码尚无完整B迁移实现。
+- `UniFP_v3/tests/test_v3_ppo.py:42-73`使用真实模型验证混合done行的旧值／终止值／reset值不混淆、纯timeout单次bootstrap与reward不原地修改；`:76`起验证24步真实更新及双Adam独立动量。`test_v3_rollout_storage.py:44,65`覆盖GAE不跨done及配对minibatch。
+- `UniFP_v3/tests/test_v3_actor_critic.py:25,72,111`覆盖固定shape／高斯推理、梯度路径和schema／std；当前PPO更新`v3_ppo.py:242-262`主后辅重新前向，真实辅助loss按四组计算。既有离线更新测试标签的力槽为零，不能据其通过推出非零力监督已验证。
+- `UniFP_v3/tests/test_v3_evaluation.py:62,92,200,223,253,277,293`等覆盖A8000校验、统计分母、三场景manifest、push窗口／场景覆盖和每环境配额；当前测试未包含B10的人工力分组、墙接触成功分母或额外actor映射。
+- `UniFP_v3/tests/test_v3_kinematics.py:16-85`使用独立URDF FK对照真实batched TCP计算，并验证只重置一行后其他行不变；容差atol=rtol=1e-5。该测试是张量／FK正确性，不代表真实PhysX局部reset或GPU接触通过。本轮仅查阅测试源码，未运行测试。
+
+
+### B11当前启动门控与小规模验证入口核对（2026-11-07）
+
+- `UniFP_v3/legged_gym/scripts/preflight_v3.py:1-65`当前只读核验显式A formal配置，调用`b2_gym_learn/ppo_cse_pf/v3_preflight.py::assess_a_start_gate`与validate_stage_artifacts，重算当前源码／资产／配置身份并写独立report；没有B启动门控。
+- `UniFP_v3/legged_gym/scripts/train_v3.py:35-81`只支持A，要求仿真张量与策略设备一致，resume以完整identity相等检查；完成态核验要求真实8000／192000／N×192000。现有入口没有“将4096父完整恢复到512”接口，不支持将不同N／用途视为同身份恢复。
+- `UniFP_v3/tools/check_v3_reward_runtime.py:16-65`当前创建8个真实Gym环境、核验物性与局部reset，并运行A零动作；不是B非零力测试，也没有固定墙actor。`check_v3_desktop_runtime.py`、`check_v3_reset_tcp.py`等是已存在的资产／FK／控制诊断，不直接覆盖B事件、接触反力或完整A→B迁移。
+- A11已确认记录位于`design/part-a/11-单元测试整体测试与验收.md:23-40,82-99`：4096旧容量告警会遗漏交互，扩大contact pairs到2**25后才通过；32冒烟／512×10及跨进程续一轮／正式规模容量是不同层级。上述是既有A证据，不等于B受力条件下已测试通过。本轮仅查阅文件，没有运行仿真或远程训练。
+
+
+### B-T01已实现的阶段迁移调用链（2026-11-07）
+
+- `UniFP_v3/legged_gym/b2_gym_learn/ppo_cse_pf/v3_run_identity.py:124-186`新增`validate_a_to_b_transition(parent_identity, target_identity, parent_config, target_config)`：重算两端配置哈希，核对资产／schema／seed／官方来源；当前允许三个阶段／输出字段差异和明确B源码路径差异，runtime只允许解释器路径、Gym路径和可见物理GPU编号变化。原identity构造的归一化行为保持。
+- `UniFP_v3/legged_gym/b2_gym_learn/ppo_cse_pf/v3_on_policy_runner.py:367-425`的`load(..., transition_from_a=False)`默认仍严格同identity；显式迁移校验完整A8000后映射环境stage，恢复模型／双Adam／实际lr／计数，加载持久环境状态，最后恢复RNG并一次reset。迁移lineage包含父路径／SHA、父identity和具体差异。已完成A8000的同阶段加载仍不reset。
+- `UniFP_v3/legged_gym/scripts/train_v3.py:41-104`明确区分迁移／同阶段恢复，`--transition_from_a`需要B、明确父路径与`--parent_sha256`；先核对父摘要，再读取并校验完整迁移状态，早于环境构造。B正式启动当前仍被明确禁用，B训练预算／非零力行为尚未实现。
+- 实测记录在`knowledge/part_b_implementation/bt01/`：50项相关回归通过；测试是CPU张量与真实模型／PPO／Adam，没有create_sim。`archived_identity_check.json`使用归档t04 A身份与当前实际B配置做离线核对，runtime是归档比较输入，没有访问远程父文件。创建时物性与prepare后的只读核验沿用已存在实现。
+
+## 2026-11-07 B-T02实施结果
+
+`legged_robot_v3.py:455`起现有两路梯形事件与pending/applied缓存，`step`在8子步提交GLOBAL_SPACE末端COM外力、随后用当前yaw构建上一转移标签，推进下一事件后保存终止后继并局部reset。`tests/test_v3_force_events.py`和`test_v3_force_transitions.py`覆盖事件／采样与真实step边界；23项相关回归通过。源码身份及实际验证范围见`knowledge/part_b_implementation/bt02/verification.json`（相对主线任务目录）；尚未原生验证、不代表已能正式B训练。
+
+## 2026-11-07 B-T03实施结果
+
+`UniFP_v3/legged_gym/envs/v3/legged_robot_v3.py`的`_world_to_task_spherical`共用原任务中心，`_build_frames`已为B填入真正补偿目标；`ERROR_METRIC_NAMES`与episode统计分别保存几何／补偿误差。trace监督标签从当前转移clean帧读取。网络、PPO和双Adam原算法未改；45项相关测试通过，源码身份／日志见主线`knowledge/part_b_implementation/bt03/`。下一项B-T04。
+
+## 2026-11-07 B-T04实施结果
+
+Runner已实现B累计40000轮边界，环境保存`force_state`两路参数、local tick、pending/applied CPU独立快照。`load_training_state(state, *, transition_from_a=False)`只在显式A迁移允许缺少B字段，不恢复旧半事件；Runner最后恢复RNG，再一次reset。真实CPU学习器往返、A/B终点和异常保存等56项回归通过，身份／日志见主线`knowledge/part_b_implementation/bt04/`。正式B开训仍受B-T08准入限制。当前继续B-T05。
+
+## 2026-11-07 B-T05实施结果
+
+已新增`V3ForceEvaluation`及`configs/v3_b_initial_v1.json`；`evaluate_v3.py`支持显式force_tracking／zero_force_regression，来源checkpoint与评估场景分开核验，默认A8000规则不变。统计按执行转移与动作前估计分别配对，非零力不被零样本稀释，失败不删；支持固定代表视频／曲线与同协议A参考差值。62项相关测试通过；本机合成测试checkpoint完成CPU Torch＋GPU PhysX的1000步工程smoke和MP4，不是正式A／B模型效果。幅值仍未冻结，全配额与两端验收未运行。证据见主线`knowledge/part_b_implementation/bt05/verification.json`。下一项B-T06。
+
+
+### B-T06实施源码与SDK创建约束（2026-11-07）
+
+- 本机SDK `/home/sorry/.cache/unifp/isaacgym_preview4/pkg/isaacgym/docs/programming/simsetup.html:292`说明actor必须按环境连续创建，开始下一个环境后不能再向之前环境追加actor。同SDK `docs/api/python/gym_py.html:3314`声明`get_env(sim, env_index) -> Env`。
+- `UniFP_v3/legged_gym/envs/base/legged_robot.py:569-584`每环境先创建robot，再调用`self._process_rigid_body_props(body_props, i)`，之后提交物性、append环境与actor句柄，再进入下一个环境；共享base未被本票修改。`legged_gym/envs/v3/legged_robot_v3.py:104-114`物性回调原样返回props。
+- 当前V3已具五个绑定／同步／写回／采样接缝；`v3_contact_evaluation.py`只实现完整raw张量与机器人逻辑缓存隔离、全局索引reset及8点墙／指净力采样，尚未包含真实墙创建。`tests/test_v3_contact_evaluation.py`以交错索引和手算8点数据调用真实接口。
+- 64项相关测试通过；本机CPU Torch＋GPU PhysX无墙4环境×250策略步（5秒）物理失败0次，局部reset未改动其他环境。原始日志、源码哈希及运行身份在`knowledge/part_b_implementation/bt06/partial_verification.json`，不构成真实墙测量或正式受力效果证据。
+
+
+等待B08-Q3d确认期间，已补齐B10范围内三项评估遗漏：保持末0.5秒的估力标记按上一转移配对并在reset清零；底盘人工力槽报零输入偏置／MAE；归档显式记录sim_device、PhysX GPU与GPU pipeline。修正后49项相关回归通过，合成fixture单环境×1000步原生smoke退出0、物理失败0、策略更新0；保持末0.5秒task／estimator各50点，逐行核对上一转移标记一致。新证据为`knowledge/part_b_implementation/bt06/evaluation_followup_verification.json`，不覆盖B-T05旧哈希与归档，也不作为正式模型效果证据。R组两流独立阶段诊断仍待后续审查，不能将单外力阶段称为两流完整分段。
+
+
+## B-T06完成记录（2026-11-07）
+
+Q3d逐环境回调创建已实施。接触子类处理全局actor／body映射、完整raw张量写回、八点采样、保守污染分类、固定世界目标和两档命令；入口`legged_gym/scripts/evaluate_v3_contact.py`只加载策略，独立运行接触与0N对照，复用原step与归档／视频链。接触力不回填训练通道。已规划的trace访问职责直接复用既有`info["policy_trace"]`，不另建同义读取或二次采样接口。
+
+73项V3测试通过；修正SDK单精度dt导致19秒边界漏点后，最终r02完成CPU Torch＋GPU PhysX的1环境×两档各20秒及0N20秒，3000条trace、0物理失败、0策略更新，3个MP4和17张图。每episode稳态／释放为100／50点，首动作前反力无效，后续逐行核验与上一末子步反力一致。4环境创建／reset隔离和主动接触探针另留原始记录。主动穿入峰值约751N只验证墙／指读数，不代表正式按压能力或训练幅值。
+
+证据与源码哈希见`knowledge/part_b_implementation/bt06/verification.json`。合成fixture没有建立接触，不能作为正式A或B效果；正式父仍为V6 A8000。两端完整工程对照、范围冻结及A零力回归留B-T07，完整正式配额B前基准留B-T08。下一票B-T07。
+
+## 2026-11-07 B-T07源码事实补充
+
+- `UniFP_v3/tools/check_v3_force_runtime.py:28`生成1／4／7／10／13／16秒的六轴事件，32环境按静止／移动×C／E／同向／匹配分组。`:122`以无重力自由box核对10N×0.1秒的COM施力；`:174`通过真实step核对四机器人的施力槽与reset隔离；`:271`复用接触类测量与真实A策略脚本；`:378`保留每档1000步的实际裁剪力矩、失败姿态和方向覆盖。
+- `UniFP_v3/legged_gym/envs/v3/v3_force_evaluation.py:107`分别按两路事件自己的start／ramp／enabled记录阶段；随机事件的`direction_index=None`，未启用周期阶段恒为zero。`UniFP_v3/legged_gym/b2_gym_learn/ppo_cse_pf/v3_evaluation.py:295`按两流分别汇总task阶段，并按上一转移标记汇总external估力阶段；随机组不生成六个固定轴的分组结果。
+- 本机首次G3日志`knowledge/part_b_implementation/bt07/local_contact_interface`对应的原生进程出现显存分配失败，trace中root／DOF及所有接触保持不变；单独运行的`local_contact_interface_r02/report.json`四环境接触连续7／6／7／6区间，说明前次全零读数不能用于资产结论。
+
+
+## B-T08当前实现源码事实（2026-11-07）
+
+- `UniFP_v3/legged_gym/b2_gym_learn/ppo_cse_pf/v3_preflight.py:65`提供`assess_b_start_gate`，核对实际A8000父元数据、最终B身份、三个manifest和七阶段哈希报告；普通物理失败及A父的B终点性能不在阻塞字段中。`:17`的artifact验证默认仍使用A原四项，B显式传自己的七项。
+- `UniFP_v3/legged_gym/scripts/train_v3.py:108`起formal B分支沿存档lineage读取原A祖先，使用实际文件SHA／资产／schema／环境数生成父元数据，门控位于Gym创建前；A原门控分支保留。`scripts/preflight_v3.py:15`提供独立只读A／B准入。
+- `UniFP_v3/tools/check_v3_b_training.py:47`在真实load的一次reset前逐值核对Python／NumPy／Torch／CUDA RNG，核对网络、双Adam、实际lr和创建物性；`:104`包装真实act／step读取非零标签与人工力，真实learn不改动。
+- `UniFP_v3/tools/check_v3_b_capacity.py:21`只覆盖开发压力场景的事件源，以世界系(60,0,60)N同时构建命令／人工力，命令旋转至yaw后各轴仍不超过60N；`:43`完整恢复父创建样本并执行500个零更新策略区间，全部机器人核心状态做有限性核对。
+- `UniFP_v3/tools/train_v3_b_observed.py:15`从冻结manifest读取观察边界，构建零力三组、受力组及接触／0N命令；中期R2、终点14组，并读取准入证据中同协议A参考归档。`:67`在实际完整轮日志后每1000 B轮记录轻检，`:87`在原save完成后暂停父进程、以独立子进程顺序评估，不修改父RNG／模型。
+
+
+### B11-Q2a进程隔离实现（2026-11-07）
+
+`UniFP_v3/legged_gym/scripts/evaluate_v3_contact.py:162`新增`evaluate_contact_groups(arguments, archive_path)`，默认双组入口只执行实际参数／来源检查，不构造Gym；两个子进程以原CLI和显式`--scenario contact|zero_control`顺序运行，原封装目录逐字节移至默认contact／zero_control位置。单组路径只创建一次仿真，测量／固定墙／32环境与3／1episode未变。子进程失败原样传播且不重试；父目录保留各组console日志。`:196`起同时恢复子包装目录与待移动封存目录的写权限，跨父移动后将目标目录恢复为555；内部文件权限、字节及哈希不变。`:217`起拒绝不合法的接触scenario；原v3_args.py已经支持scenario，没有新增重复参数。
+
+`tests/test_v3_contact_processes.py`两项回归先红后绿，核对真实子CLI的场景、固定配额、视频、输出布局和失败传播；隔离r05业务源码82项测试全通过，r06目录权限两行修订的两项受影响测试在共享及隔离副本均通过，其余80项源码未变。远程源码r06相比r04仅接触评估入口有变化，AST／整文件桥接保留原运行身份，训练／恢复／容量和受力基准不伪称重新执行。
+
+
+### B-T08最终实际证据（2026-11-08）
+
+远程`validation/b_stage_20261107_r01/source_r06/UniFP_v3`的默认接触入口完成contact96与zero_control32episode，全部timeout、policy_updates=0、evidence_complete=true。每组封存文件哈希核验通过，含3个视频与`plots/`曲线；目录移动后仍555。既有contact assessment字符串为ungraded_or_incomplete，分幅success_rate均0；不能把这个性能字符串解释为缺少episode。原始console及摘要见本知识库`part_b_implementation/bt08/final_evidence_r06/`。
+
+七阶段摘要、实际父元数据及冻结配置写入远程`bt08_evidence_r06/`。`scripts/preflight_v3.py`实际执行返回ready=true、blockers=[]；`bt08_formal_entry_probe.json`记录真实train.main通过父与formal门控后仅在V3PosForce构造边界被拦截，gym_created=false、policy_updates=0。最终verification记录原报告／source bridge身份，不改写旧运行来源。正式run目录不存在，启动脚本仅上传、语法和工具SHA核验，没有执行。
+
+
+### 正式启动与12000观察事实（2026-11-08）
+
+`UniFP_v3/configs/v3_b_initial_v1.json`的observation_schedule.intermediate_cumulative_iterations为[12000,16000,24000,32000]；原observer无需改函数，仍从manifest生成中期零力／R2／接触命令。`tests/test_v3_b_observer.py:26`覆盖新增12000命令，观察／门控12项回归通过。新冻结快照source_launch12000_20261108与r06逐文件仅manifest与该测试不同；actual preflight通过。远程正式PID1883377在GPU1执行，episode_metadata实际identity与原目标一致，N4096、formal B、原A8000 SHA已核验，8001首更新及8006启动快照有限，见bt08/launch_20261108/launch.json。
+
+
+### B-T09实际源码与续训事实（2026-11-08）
+
+`UniFP_v3/tools/train_v3_b_observed.py:55`起从force_references读取场景的封存manifest；:58起比较去掉顶层observation_schedule后的整个对象；:63使用封存manifest路径构造受力CLI。原`legged_gym/scripts/evaluate_v3.py:127`精确hash校验未变。实际observer→evaluate.main guard集成测试先失败后通过，观察／准入13项通过。冻结新快照与原启动版只有tools及该测试改变，same_stage identity不变。远程12000完整父恢复至12001以上，启动快照12003，路径／父SHA／PID见bt09/launch.json。论文paper.html:1672确实描述第二课程奖励先下降，随后locomotion恢复与reaching稳定。

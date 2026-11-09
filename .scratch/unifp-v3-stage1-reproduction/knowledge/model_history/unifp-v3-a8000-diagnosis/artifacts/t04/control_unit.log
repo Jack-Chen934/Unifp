@@ -1,0 +1,24 @@
+Importing module 'gym_38' (/mnt/data_8THDD/myl_unifp/isaacgym/python/isaacgym/_bindings/linux-x86_64/gym_38.so)
+Setting GYM_USD_PLUG_INFO_PATH to /mnt/data_8THDD/myl_unifp/isaacgym/python/isaacgym/_bindings/linux-x86_64/usd/plugInfo.json
+PyTorch version 2.3.1+cu121
+Device count 1
+/mnt/data_8THDD/myl_unifp/isaacgym/python/isaacgym/_bindings/src/gymtorch
+Using /mnt/data_8THDD/myl_unifp_v3_stage1/cache/torch_extensions as PyTorch extensions root...
+Emitting ninja build file /mnt/data_8THDD/myl_unifp_v3_stage1/cache/torch_extensions/gymtorch/build.ninja...
+Building extension module gymtorch...
+Using envvar MAX_JOBS (2) as the number of workers...
+ninja: no work to do.
+Loading extension module gymtorch...
+test_drive_feedback_matches_stable_timing_candidate (test_v3_control_config.V3ControlConfigTests)
+Use the physically validated drive feedback with the refined control step. ... ok
+test_inner_loop_preserves_policy_and_episode_time (test_v3_control_config.V3ControlConfigTests)
+Refine native integration without changing policy or episode duration. ... ok
+test_steering_stiffness_matches_loaded_motion_candidate (test_v3_control_config.V3ControlConfigTests)
+Keep the validated steering feedback and retain its original damping. ... ok
+test_training_uses_the_independent_coplanar_asset (test_v3_control_config.V3ControlConfigTests)
+Select the validated geometry candidate for subsequent runtime checks. ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.000s
+
+OK

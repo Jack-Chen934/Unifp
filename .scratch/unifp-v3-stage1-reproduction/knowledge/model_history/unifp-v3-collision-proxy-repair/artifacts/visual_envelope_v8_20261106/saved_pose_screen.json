@@ -1,0 +1,1104 @@
+{
+  "urdf_sha256": "cf1644b782d66aa903ff4c75491cc1e08fa4feaffcc448dea1183ab49524af21",
+  "manifest_sha256": "5c4fd9745723d7af818bc81185d81b0e869fe2f6ae883a3271ebf681e3098914",
+  "events": [
+    {
+      "source": "nine_geometry.json",
+      "policy_step": 158,
+      "env_id": 8,
+      "other_body": "wrist_camera_connector",
+      "pose_source": "urdf_fk",
+      "other_pose_in_base_m": [
+        [
+          -0.9938443210829118,
+          -0.05320691653805469,
+          0.09717247287044567,
+          -0.11703689734582727
+        ],
+        [
+          0.0913109113146696,
+          0.10329023776935035,
+          0.9904511316851702,
+          -0.2912883081665655
+        ],
+        [
+          -0.06273581852601876,
+          0.9932271395879507,
+          -0.09779604419303929,
+          0.07782007745712735
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "r3_collision": {
+        "surface_intersection": false,
+        "intersecting_pairs": [],
+        "minimum_surface_distance_m": 0.001736939658807384,
+        "closest_disjoint_pair": {
+          "distance_m": 0.001736939658807384,
+          "base_surface": "base_link_local_1_group_0",
+          "other_surface": "wrist_camera_connector_proxy_0",
+          "nearest_points_in_base_m": [
+            [
+              -0.05032578409730108,
+              -0.2485867263037819,
+              0.005467710532137123
+            ],
+            [
+              -0.05032584029201495,
+              -0.2495645472814672,
+              0.006903268093079423
+            ]
+          ]
+        }
+      },
+      "v8_collision": {
+        "surface_intersection": false,
+        "intersecting_pairs": [],
+        "minimum_surface_distance_m": 0.000985060377104809,
+        "closest_disjoint_pair": {
+          "distance_m": 0.000985060377104809,
+          "base_surface": "base_link_local_1_group_0",
+          "other_surface": "wrist_camera_connector_proxy_0",
+          "nearest_points_in_base_m": [
+            [
+              -0.05032620635340468,
+              -0.2488382064758311,
+              0.0062378563058312405
+            ],
+            [
+              -0.05032584029201495,
+              -0.2495645472814672,
+              0.006903268093079423
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "source": "nine_geometry.json",
+      "policy_step": 454,
+      "env_id": 93,
+      "other_body": "wrist_camera",
+      "pose_source": "urdf_fk",
+      "other_pose_in_base_m": [
+        [
+          -0.26197757598657806,
+          0.2965086842338761,
+          -0.9183955301797208,
+          -0.030348894859604306
+        ],
+        [
+          0.2293868543012092,
+          0.9434913818759667,
+          0.2391770963106077,
+          -0.20667096510343416
+        ],
+        [
+          0.937416354003914,
+          -0.14800882574925614,
+          -0.31518877953749214,
+          0.0816300246636735
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "r3_collision": {
+        "surface_intersection": false,
+        "intersecting_pairs": [],
+        "minimum_surface_distance_m": 0.0023832484392989953,
+        "closest_disjoint_pair": {
+          "distance_m": 0.0023832484392989953,
+          "base_surface": "base_link_local_1_group_0",
+          "other_surface": "wrist_camera_proxy_0",
+          "nearest_points_in_base_m": [
+            [
+              -0.008836558492479607,
+              -0.2238726311067336,
+              0.009695529996106254
+            ],
+            [
+              -0.00883668802669792,
+              -0.22386697178645343,
+              0.012078771712495079
+            ]
+          ]
+        }
+      },
+      "v8_collision": {
+        "surface_intersection": false,
+        "intersecting_pairs": [],
+        "minimum_surface_distance_m": 0.006115102838516887,
+        "closest_disjoint_pair": {
+          "distance_m": 0.006115102838516887,
+          "base_surface": "base_link_local_1_group_0",
+          "other_surface": "wrist_camera_proxy_0",
+          "nearest_points_in_base_m": [
+            [
+              -0.008837136865944926,
+              -0.2239334552154309,
+              0.005964030305219378
+            ],
+            [
+              -0.00883668802669792,
+              -0.22386697178645343,
+              0.012078771712495079
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "source": "nine_geometry.json",
+      "policy_step": 1068,
+      "env_id": 9,
+      "other_body": "wrist_camera",
+      "pose_source": "urdf_fk",
+      "other_pose_in_base_m": [
+        [
+          0.40538893283444927,
+          0.10969576603696757,
+          -0.907538788178725,
+          -0.028946428905807745
+        ],
+        [
+          0.6332388846639965,
+          0.6823050623243537,
+          0.36533315874152045,
+          -0.22458183275778626
+        ],
+        [
+          0.6592938101369095,
+          -0.7227908693668742,
+          0.20713529654560006,
+          0.047605671635478936
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "r3_collision": {
+        "surface_intersection": false,
+        "intersecting_pairs": [],
+        "minimum_surface_distance_m": 0.0008509778932682452,
+        "closest_disjoint_pair": {
+          "distance_m": 0.0008509778932682452,
+          "base_surface": "base_link_local_1_group_0",
+          "other_surface": "wrist_camera_proxy_0",
+          "nearest_points_in_base_m": [
+            [
+              -0.02599231855990003,
+              -0.2537252278867966,
+              0.001703155154175748
+            ],
+            [
+              -0.02599120459218059,
+              -0.25433082754831426,
+              0.0023009939149439378
+            ]
+          ]
+        }
+      },
+      "v8_collision": {
+        "surface_intersection": false,
+        "intersecting_pairs": [],
+        "minimum_surface_distance_m": 0.0011493099469168922,
+        "closest_disjoint_pair": {
+          "distance_m": 0.0011493099469168922,
+          "base_surface": "base_link_local_1_group_0",
+          "other_surface": "wrist_camera_proxy_0",
+          "nearest_points_in_base_m": [
+            [
+              -0.023268593971405793,
+              -0.2488265060190544,
+              0.006235742985905882
+            ],
+            [
+              -0.023268177331796487,
+              -0.24964410258779443,
+              0.007043486157513091
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "source": "nine_geometry.json",
+      "policy_step": 1268,
+      "env_id": 76,
+      "other_body": "wrist_camera",
+      "pose_source": "urdf_fk",
+      "other_pose_in_base_m": [
+        [
+          0.2565878370692882,
+          0.9584609345372984,
+          -0.12456050270447704,
+          -0.05628242724113783
+        ],
+        [
+          0.4778433576654451,
+          -0.013774884610627581,
+          0.8783370526676966,
+          -0.09463626640152356
+        ],
+        [
+          0.8401359457868213,
+          -0.28489101340662115,
+          -0.4615286589985833,
+          0.08519193299415644
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "r3_collision": {
+        "surface_intersection": true,
+        "intersecting_pairs": [
+          [
+            "base_link_local_1_group_5",
+            "wrist_camera_proxy_0"
+          ]
+        ],
+        "minimum_surface_distance_m": 0.0,
+        "closest_disjoint_pair": {
+          "distance_m": 0.01833491407973191,
+          "base_surface": "base_link_local_1_group_0",
+          "other_surface": "wrist_camera_proxy_0",
+          "nearest_points_in_base_m": [
+            [
+              -0.07383023447500003,
+              -0.1497024205684603,
+              0.009505379712197878
+            ],
+            [
+              -0.07382840933587469,
+              -0.14414056593873287,
+              0.026976351180831155
+            ]
+          ]
+        }
+      },
+      "v8_collision": {
+        "surface_intersection": false,
+        "intersecting_pairs": [],
+        "minimum_surface_distance_m": 0.0024565753492210235,
+        "closest_disjoint_pair": {
+          "distance_m": 0.0024565753492210235,
+          "base_surface": "base_link_local_1_group_5",
+          "other_surface": "wrist_camera_proxy_0",
+          "nearest_points_in_base_m": [
+            [
+              -0.07479686169727945,
+              -0.13211639259415223,
+              0.02068245854824552
+            ],
+            [
+              -0.07479727623266727,
+              -0.13208581831246155,
+              0.023138843592952457
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "source": "nine_geometry.json",
+      "policy_step": 2066,
+      "env_id": 68,
+      "other_body": "arm_seg4",
+      "pose_source": "urdf_fk",
+      "other_pose_in_base_m": [
+        [
+          0.19724732649321405,
+          -0.9540986545672696,
+          -0.2253647034125006,
+          0.45150666185087107
+        ],
+        [
+          -0.9344742504254485,
+          -0.2524826037001563,
+          0.25101874456021245,
+          -0.31034428214340987
+        ],
+        [
+          -0.29639731355576576,
+          0.16108473602956527,
+          -0.9413821436245801,
+          0.22952102469850877
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "r3_collision": {
+        "surface_intersection": true,
+        "intersecting_pairs": [
+          [
+            "base_link_proxy_13",
+            "arm_seg4_proxy_1"
+          ]
+        ],
+        "minimum_surface_distance_m": 0.0,
+        "closest_disjoint_pair": {
+          "distance_m": 0.004702568800588037,
+          "base_surface": "base_link_proxy_13",
+          "other_surface": "arm_seg4_proxy_0",
+          "nearest_points_in_base_m": [
+            [
+              0.3520685924506181,
+              -0.21857883195030417,
+              -0.011508209304564716
+            ],
+            [
+              0.3558787267734487,
+              -0.22133498600551105,
+              -0.011533598085929575
+            ]
+          ]
+        }
+      },
+      "v8_collision": {
+        "surface_intersection": false,
+        "intersecting_pairs": [],
+        "minimum_surface_distance_m": 7.3766522618989006e-06,
+        "closest_disjoint_pair": {
+          "distance_m": 7.3766522618989006e-06,
+          "base_surface": "base_link_proxy_13",
+          "other_surface": "arm_seg4_proxy_1",
+          "nearest_points_in_base_m": [
+            [
+              0.3517152732606092,
+              -0.21868863470510616,
+              -0.03204746783154423
+            ],
+            [
+              0.35172154714765314,
+              -0.218692502548592,
+              -0.03204777299825606
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "source": "nine_geometry.json",
+      "policy_step": 2103,
+      "env_id": 69,
+      "other_body": "wrist_camera",
+      "pose_source": "urdf_fk",
+      "other_pose_in_base_m": [
+        [
+          0.13487027514537428,
+          0.26613401755363236,
+          -0.9544541338288456,
+          -0.12165290446020052
+        ],
+        [
+          0.32954780759040847,
+          0.8963718618369881,
+          0.29650586472993246,
+          -0.22863527265256187
+        ],
+        [
+          0.9344561259869639,
+          -0.35452809480724184,
+          0.03319003762849911,
+          0.08157225875597493
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "r3_collision": {
+        "surface_intersection": false,
+        "intersecting_pairs": [],
+        "minimum_surface_distance_m": 0.0033886906860949493,
+        "closest_disjoint_pair": {
+          "distance_m": 0.0033886906860949493,
+          "base_surface": "base_link_local_1_group_0",
+          "other_surface": "wrist_camera_proxy_0",
+          "nearest_points_in_base_m": [
+            [
+              -0.11765229066885675,
+              -0.2473531786336338,
+              0.006305298259573107
+            ],
+            [
+              -0.11765240030220096,
+              -0.24926086311936063,
+              0.009106006108836273
+            ]
+          ]
+        }
+      },
+      "v8_collision": {
+        "surface_intersection": false,
+        "intersecting_pairs": [],
+        "minimum_surface_distance_m": 0.0028898136007452333,
+        "closest_disjoint_pair": {
+          "distance_m": 0.0028898136007452333,
+          "base_surface": "base_link_local_1_group_0",
+          "other_surface": "wrist_camera_proxy_0",
+          "nearest_points_in_base_m": [
+            [
+              -0.11765279408548357,
+              -0.2488673203465807,
+              0.0062431148119164006
+            ],
+            [
+              -0.11765240030220096,
+              -0.24926086311936063,
+              0.009106006108836273
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "source": "nine_geometry.json",
+      "policy_step": 2112,
+      "env_id": 1,
+      "other_body": "wrist_camera",
+      "pose_source": "urdf_fk",
+      "other_pose_in_base_m": [
+        [
+          0.34894268548683743,
+          0.3498460716336356,
+          -0.8693944607643568,
+          -0.0973927318927423
+        ],
+        [
+          0.7143943106740807,
+          0.5011210713920244,
+          0.4883834975543447,
+          -0.16717941136081893
+        ],
+        [
+          0.6065309317106086,
+          -0.791508305685684,
+          -0.07506551078117216,
+          0.06276460772468473
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "r3_collision": {
+        "surface_intersection": false,
+        "intersecting_pairs": [],
+        "minimum_surface_distance_m": 0.002593838160871444,
+        "closest_disjoint_pair": {
+          "distance_m": 0.002593838160871444,
+          "base_surface": "base_link_local_1_group_0",
+          "other_surface": "wrist_camera_proxy_0",
+          "nearest_points_in_base_m": [
+            [
+              -0.10958534397088751,
+              -0.22191527838862218,
+              0.009685406095983062
+            ],
+            [
+              -0.10958548495106946,
+              -0.22190911899681673,
+              0.012279236939891379
+            ]
+          ]
+        }
+      },
+      "v8_collision": {
+        "surface_intersection": false,
+        "intersecting_pairs": [],
+        "minimum_surface_distance_m": 0.006334788374490401,
+        "closest_disjoint_pair": {
+          "distance_m": 0.006334788374490401,
+          "base_surface": "base_link_local_1_group_0",
+          "other_surface": "wrist_camera_proxy_0",
+          "nearest_points_in_base_m": [
+            [
+              -0.10958536599610143,
+              -0.2219807173791869,
+              0.005944853196616077
+            ],
+            [
+              -0.10958548495106946,
+              -0.22190911899681673,
+              0.012279236939891379
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "source": "nine_geometry.json",
+      "policy_step": 2242,
+      "env_id": 8,
+      "other_body": "wrist_camera",
+      "pose_source": "urdf_fk",
+      "other_pose_in_base_m": [
+        [
+          0.08734337078187424,
+          0.15224489274140263,
+          -0.9844758139307527,
+          -0.09353970151422497
+        ],
+        [
+          0.7039530819757451,
+          0.6898147642523814,
+          0.16913204721838138,
+          -0.21808042722168564
+        ],
+        [
+          0.7048554418867098,
+          -0.707797346458426,
+          -0.046922514735470364,
+          0.05092010565770665
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "r3_collision": {
+        "surface_intersection": false,
+        "intersecting_pairs": [],
+        "minimum_surface_distance_m": 1.2277580741025852e-05,
+        "closest_disjoint_pair": {
+          "distance_m": 1.2277580741025852e-05,
+          "base_surface": "base_link_local_1_group_0",
+          "other_surface": "wrist_camera_proxy_0",
+          "nearest_points_in_base_m": [
+            [
+              -0.09224353123353998,
+              -0.2537514944051747,
+              0.0017999951743467163
+            ],
+            [
+              -0.09224351512091618,
+              -0.2537601939744102,
+              0.001808658673890932
+            ]
+          ]
+        }
+      },
+      "v8_collision": {
+        "surface_intersection": false,
+        "intersecting_pairs": [],
+        "minimum_surface_distance_m": 0.00034317271054659003,
+        "closest_disjoint_pair": {
+          "distance_m": 0.00034317271054659003,
+          "base_surface": "base_link_local_1_group_0",
+          "other_surface": "wrist_camera_proxy_0",
+          "nearest_points_in_base_m": [
+            [
+              -0.08818000735974518,
+              -0.24885457550190243,
+              0.006240812856127988
+            ],
+            [
+              -0.08817988334603893,
+              -0.24909759702826745,
+              0.006483110259349136
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "source": "nine_geometry.json",
+      "policy_step": 2253,
+      "env_id": 77,
+      "other_body": "wrist_camera",
+      "pose_source": "urdf_fk",
+      "other_pose_in_base_m": [
+        [
+          -0.044650524847685995,
+          0.8600802939204414,
+          -0.5082009628489026,
+          -0.051223441195997345
+        ],
+        [
+          0.2975681321408152,
+          0.49706734420632576,
+          0.8150934069527828,
+          -0.13737720528736155
+        ],
+        [
+          0.9536558799509658,
+          -0.11483006284678168,
+          -0.27812680435648696,
+          0.09103349073935388
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "r3_collision": {
+        "surface_intersection": false,
+        "intersecting_pairs": [],
+        "minimum_surface_distance_m": 0.010673857353301789,
+        "closest_disjoint_pair": {
+          "distance_m": 0.010673857353301789,
+          "base_surface": "base_link_local_1_group_0",
+          "other_surface": "wrist_camera_proxy_0",
+          "nearest_points_in_base_m": [
+            [
+              -0.046509438494979204,
+              -0.16102453518414003,
+              0.00953674297644752
+            ],
+            [
+              -0.04650892046673905,
+              -0.1609937177468717,
+              0.020210555829212065
+            ]
+          ]
+        }
+      },
+      "v8_collision": {
+        "surface_intersection": false,
+        "intersecting_pairs": [],
+        "minimum_surface_distance_m": 0.01495290710680732,
+        "closest_disjoint_pair": {
+          "distance_m": 0.01495290710680732,
+          "base_surface": "base_link_local_1_group_0",
+          "other_surface": "wrist_camera_proxy_0",
+          "nearest_points_in_base_m": [
+            [
+              -0.04650863968031311,
+              -0.16116272164996812,
+              0.005258603831338811
+            ],
+            [
+              -0.04650892046673905,
+              -0.1609937177468717,
+              0.020210555829212065
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "source": "native_geometry.json",
+      "policy_step": 158,
+      "env_id": 8,
+      "other_body": "wrist_camera_connector",
+      "pose_source": "native_terminal_body_pose",
+      "other_pose_in_base_m": [
+        [
+          -0.9938444020085143,
+          -0.05320737614833863,
+          0.09717139352581225,
+          -0.11703629227630152
+        ],
+        [
+          0.09130981709310182,
+          0.10328981762396218,
+          0.9904512763774066,
+          -0.2912863686552498
+        ],
+        [
+          -0.06273612913436216,
+          0.9932271586593968,
+          -0.09779565124594654,
+          0.07781980524539034
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "r3_collision": {
+        "surface_intersection": false,
+        "intersecting_pairs": [],
+        "minimum_surface_distance_m": 0.001735597688384832,
+        "closest_disjoint_pair": {
+          "distance_m": 0.001735597688384832,
+          "base_surface": "base_link_local_1_group_0",
+          "other_surface": "wrist_camera_connector_proxy_0",
+          "nearest_points_in_base_m": [
+            [
+              -0.05032520143697355,
+              -0.2485854415576384,
+              0.005468585651677223
+            ],
+            [
+              -0.05032525758827103,
+              -0.2495625070647327,
+              0.006903034091887028
+            ]
+          ]
+        }
+      },
+      "v8_collision": {
+        "surface_intersection": false,
+        "intersecting_pairs": [],
+        "minimum_surface_distance_m": 0.0009833988965352292,
+        "closest_disjoint_pair": {
+          "distance_m": 0.0009833988965352292,
+          "base_surface": "base_link_local_1_group_0",
+          "other_surface": "wrist_camera_connector_proxy_0",
+          "nearest_points_in_base_m": [
+            [
+              -0.05032562274925101,
+              -0.2488382062234646,
+              0.00623785626024916
+            ],
+            [
+              -0.05032525758827103,
+              -0.2495625070647327,
+              0.006903034091887028
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "source": "native_geometry.json",
+      "policy_step": 454,
+      "env_id": 93,
+      "other_body": "wrist_camera",
+      "pose_source": "native_terminal_body_pose",
+      "other_pose_in_base_m": [
+        [
+          -0.2619773160278758,
+          0.296507235403245,
+          -0.9183960720954525,
+          -0.03035218812613394
+        ],
+        [
+          0.22938702508406164,
+          0.943491721538313,
+          0.23917559263385216,
+          -0.20667197584537078
+        ],
+        [
+          0.9374163848631593,
+          -0.14800956300927007,
+          -0.3151883415481771,
+          0.08162967971065199
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "r3_collision": {
+        "surface_intersection": false,
+        "intersecting_pairs": [],
+        "minimum_surface_distance_m": 0.0023828977527639355,
+        "closest_disjoint_pair": {
+          "distance_m": 0.0023828977527639355,
+          "base_surface": "base_link_local_1_group_0",
+          "other_surface": "wrist_camera_proxy_0",
+          "nearest_points_in_base_m": [
+            [
+              -0.00883987081165152,
+              -0.2238736507056101,
+              0.00969553223724608
+            ],
+            [
+              -0.008840000326809334,
+              -0.22386799221807877,
+              0.012078423268089097
+            ]
+          ]
+        }
+      },
+      "v8_collision": {
+        "surface_intersection": false,
+        "intersecting_pairs": [],
+        "minimum_surface_distance_m": 0.0061147430774500236,
+        "closest_disjoint_pair": {
+          "distance_m": 0.0061147430774500236,
+          "base_surface": "base_link_local_1_group_0",
+          "other_surface": "wrist_camera_proxy_0",
+          "nearest_points_in_base_m": [
+            [
+              -0.008840449139650423,
+              -0.2239344717357321,
+              0.005964041600616695
+            ],
+            [
+              -0.008840000326809334,
+              -0.22386799221807877,
+              0.012078423268089097
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "source": "new_failures_geometry.json",
+      "policy_step": 423,
+      "env_id": 41,
+      "other_body": "wrist_camera",
+      "pose_source": "native_terminal_body_pose",
+      "other_pose_in_base_m": [
+        [
+          0.09493185446271005,
+          0.45250706108878236,
+          -0.8866934660146445,
+          -0.09130806124746016
+        ],
+        [
+          0.5493878396116095,
+          0.7189741467141272,
+          0.4257336938082074,
+          -0.19826673317404442
+        ],
+        [
+          0.8301571807164948,
+          -0.5275542967519885,
+          -0.18034832764224812,
+          0.07321950510381764
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "r3_collision": {
+        "surface_intersection": true,
+        "intersecting_pairs": [
+          [
+            "base_link_local_1_group_0",
+            "wrist_camera_proxy_0"
+          ]
+        ],
+        "minimum_surface_distance_m": 0.0,
+        "closest_disjoint_pair": {
+          "distance_m": 0.028387326219846524,
+          "base_surface": "base_link_local_1_group_10",
+          "other_surface": "wrist_camera_proxy_0",
+          "nearest_points_in_base_m": [
+            [
+              -0.08364835760691879,
+              -0.2382612421875028,
+              -0.018714298289471576
+            ],
+            [
+              -0.08364835757156518,
+              -0.23821603092821825,
+              0.009672991927349398
+            ]
+          ]
+        }
+      },
+      "v8_collision": {
+        "surface_intersection": false,
+        "intersecting_pairs": [],
+        "minimum_surface_distance_m": 0.0035479711399443027,
+        "closest_disjoint_pair": {
+          "distance_m": 0.0035479711399443027,
+          "base_surface": "base_link_local_1_group_0",
+          "other_surface": "wrist_camera_proxy_0",
+          "nearest_points_in_base_m": [
+            [
+              -0.08364861798725023,
+              -0.23825460448838978,
+              0.006125230489129933
+            ],
+            [
+              -0.08364835757156518,
+              -0.23821603092821825,
+              0.009672991927349398
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "source": "new_failures_geometry.json",
+      "policy_step": 480,
+      "env_id": 51,
+      "other_body": "wrist_camera",
+      "pose_source": "native_terminal_body_pose",
+      "other_pose_in_base_m": [
+        [
+          -0.1886052837433184,
+          0.2865226051447332,
+          -0.939325738860156,
+          -0.12406313028786631
+        ],
+        [
+          0.059167315061707595,
+          0.9580696773735891,
+          0.28035998667009576,
+          -0.17266487054499535
+        ],
+        [
+          0.9802689813375159,
+          -0.002700007100523784,
+          -0.19764977659781485,
+          0.08233291316988112
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "r3_collision": {
+        "surface_intersection": true,
+        "intersecting_pairs": [
+          [
+            "base_link_local_1_group_0",
+            "wrist_camera_proxy_0"
+          ]
+        ],
+        "minimum_surface_distance_m": 0.0,
+        "closest_disjoint_pair": {
+          "distance_m": 0.02001005157080283,
+          "base_surface": "base_link_local_1_group_5",
+          "other_surface": "wrist_camera_proxy_0",
+          "nearest_points_in_base_m": [
+            [
+              -0.10696186214776837,
+              -0.14967585504905245,
+              0.009499572099244114
+            ],
+            [
+              -0.10696086754191234,
+              -0.16764234646921383,
+              0.018309075429524174
+            ]
+          ]
+        }
+      },
+      "v8_collision": {
+        "surface_intersection": false,
+        "intersecting_pairs": [],
+        "minimum_surface_distance_m": 0.003974376190130968,
+        "closest_disjoint_pair": {
+          "distance_m": 0.003974376190130968,
+          "base_surface": "base_link_local_1_group_0",
+          "other_surface": "wrist_camera_proxy_0",
+          "nearest_points_in_base_m": [
+            [
+              -0.10800124602914156,
+              -0.17725067470010747,
+              0.0054392933205460485
+            ],
+            [
+              -0.10800132066017336,
+              -0.17720575466658436,
+              0.009413415649526177
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "source": "new_failures_geometry.json",
+      "policy_step": 766,
+      "env_id": 96,
+      "other_body": "wrist_camera",
+      "pose_source": "native_terminal_body_pose",
+      "other_pose_in_base_m": [
+        [
+          0.03066097211258359,
+          0.5538556561713154,
+          -0.8320479655141001,
+          -0.06444424866364784
+        ],
+        [
+          0.3722954918221724,
+          0.7662121489481327,
+          0.5237509041263522,
+          -0.21710837703309327
+        ],
+        [
+          0.9276076603597008,
+          -0.3258264184060683,
+          -0.18270515458157027,
+          0.07747855488569866
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "r3_collision": {
+        "surface_intersection": false,
+        "intersecting_pairs": [],
+        "minimum_surface_distance_m": 1.1604832528055173e-05,
+        "closest_disjoint_pair": {
+          "distance_m": 1.1604832528055173e-05,
+          "base_surface": "base_link_local_1_group_0",
+          "other_surface": "wrist_camera_proxy_0",
+          "nearest_points_in_base_m": [
+            [
+              -0.053742692697128,
+              -0.24231886311699727,
+              0.00973689225207852
+            ],
+            [
+              -0.053742693128412095,
+              -0.24232438674632503,
+              0.00974709821390814
+            ]
+          ]
+        }
+      },
+      "v8_collision": {
+        "surface_intersection": false,
+        "intersecting_pairs": [],
+        "minimum_surface_distance_m": 0.002118872022342309,
+        "closest_disjoint_pair": {
+          "distance_m": 0.002118872022342309,
+          "base_surface": "base_link_local_1_group_0",
+          "other_surface": "wrist_camera_proxy_0",
+          "nearest_points_in_base_m": [
+            [
+              -0.06486811570824629,
+              -0.2456477536678512,
+              0.006204235053626554
+            ],
+            [
+              -0.06486796018626274,
+              -0.24562471728051155,
+              0.008322981840700516
+            ]
+          ]
+        }
+      }
+    }
+  ]
+}

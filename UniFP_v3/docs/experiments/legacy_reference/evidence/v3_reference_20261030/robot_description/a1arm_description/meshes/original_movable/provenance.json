@@ -1,0 +1,65 @@
+{
+  "source_urdf_sha256": "a3eacf4b991ba7bfa4be5e57e229adeb918c71a741f17be53d4f4ba799471f2c",
+  "physics_source": "/home/sorry/python_ws/interactive/unifp_reproduction/robot_description/a1arm_description/urdf/a1arm_rgm3_approx_sim_v3.urdf",
+  "wheel_partition": {
+    "fl": {
+      "faces": {
+        "rolling": 25078,
+        "steering": 6480,
+        "fixed": 72375
+      },
+      "source_faces": 103933,
+      "registration_translation_m": [
+        -0.0009998289291572315,
+        0.01760223091603863,
+        -0.0004017297757399618
+      ],
+      "scale": 1.0
+    },
+    "fr": {
+      "faces": {
+        "rolling": 30002,
+        "steering": 6508,
+        "fixed": 71903
+      },
+      "source_faces": 108413,
+      "registration_translation_m": [
+        -0.0011812048669423147,
+        -0.01584900497434072,
+        0.005421324074268347
+      ],
+      "scale": 1.0
+    },
+    "bl": {
+      "faces": {
+        "rolling": 25078,
+        "steering": 6480,
+        "fixed": 72375
+      },
+      "source_faces": 103933,
+      "registration_translation_m": [
+        -0.0019998289291572324,
+        0.02110220703371818,
+        0.008598279511792623
+      ],
+      "scale": 1.0
+    },
+    "br": {
+      "faces": {
+        "rolling": 30002,
+        "steering": 6508,
+        "fixed": 71903
+      },
+      "source_faces": 108413,
+      "registration_translation_m": [
+        -0.0021812048669423156,
+        -0.018849004974340722,
+        0.005421324074268347
+      ],
+      "scale": 1.0
+    }
+  },
+  "note": "All source visual triangles retained. Wheel groups assigned by connected source-face components; suspension remains rigid and contacts remain v3 approximations.",
+  "physical_xml_identical_to_v3": true,
+  "output": "/home/sorry/python_ws/interactive/unifp_reproduction/robot_description/a1arm_description/urdf/a1arm_rgm3_original_movable.urdf"
+}

@@ -1,0 +1,37 @@
+Importing module 'gym_38' (/home/sorry/.cache/unifp/isaacgym_preview4/pkg/isaacgym/python/isaacgym/_bindings/linux-x86_64/gym_38.so)
+Setting GYM_USD_PLUG_INFO_PATH to /home/sorry/.cache/unifp/isaacgym_preview4/pkg/isaacgym/python/isaacgym/_bindings/linux-x86_64/usd/plugInfo.json
+V3 test modules: 19
+
+==================================== ERRORS ====================================
+_________________ ERROR collecting tests/test_v3_b_capacity.py _________________
+tests/test_v3_b_capacity.py:6: in <module>
+    from tools.check_v3_b_capacity import PeakLoadEnvironment
+tools/check_v3_b_capacity.py:12: in <module>
+    from legged_gym.envs.v3.legged_robot_v3 import V3PosForce
+legged_gym/envs/__init__.py:7: in <module>
+    from .base.legged_robot import LeggedRobot
+legged_gym/envs/base/legged_robot.py:8: in <module>
+    from isaacgym import gymtorch, gymapi, gymutil
+/home/sorry/.cache/unifp/isaacgym_preview4/pkg/isaacgym/python/isaacgym/gymtorch.py:109: in <module>
+    _import_gymtorch()
+/home/sorry/.cache/unifp/isaacgym_preview4/pkg/isaacgym/python/isaacgym/gymtorch.py:45: in _import_gymtorch
+    gt = torch.utils.cpp_extension.load(name="gymtorch", sources=sources, extra_cflags=cflags, verbose=True)
+/home/sorry/.cache/unifp/isaacgym_preview4/torch231/lib/python3.8/site-packages/torch/utils/cpp_extension.py:1309: in load
+    return _jit_compile(
+/home/sorry/.cache/unifp/isaacgym_preview4/torch231/lib/python3.8/site-packages/torch/utils/cpp_extension.py:1719: in _jit_compile
+    _write_ninja_file_and_build_library(
+/home/sorry/.cache/unifp/isaacgym_preview4/torch231/lib/python3.8/site-packages/torch/utils/cpp_extension.py:1802: in _write_ninja_file_and_build_library
+    verify_ninja_availability()
+/home/sorry/.cache/unifp/isaacgym_preview4/torch231/lib/python3.8/site-packages/torch/utils/cpp_extension.py:1851: in verify_ninja_availability
+    raise RuntimeError("Ninja is required to load C++ extensions")
+E   RuntimeError: Ninja is required to load C++ extensions
+------------------------------- Captured stdout --------------------------------
+PyTorch version 2.3.1+cu121
+Device count 0
+/home/sorry/.cache/unifp/isaacgym_preview4/pkg/isaacgym/python/isaacgym/_bindings/src/gymtorch
+------------------------------- Captured stderr --------------------------------
+Using /home/sorry/.cache/torch_extensions/py38_cu121 as PyTorch extensions root...
+=========================== short test summary info ============================
+ERROR tests/test_v3_b_capacity.py - RuntimeError: Ninja is required to load C...
+!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
+2 warnings, 1 error in 2.13s

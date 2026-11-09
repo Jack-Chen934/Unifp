@@ -1,0 +1,65 @@
+{
+  "visual_mesh": "/home/sorry/python_ws/interactive/unifp_reproduction/UniFP_v3/resources/robots/v3_a1_desktop/meshes/ranger_mini3_decimate.visual.glb",
+  "visual_sha256": "f780fcbbbe1bb5938aa32af9355917e5f87adbacf97c9c7dbd7988d0b031f0a4",
+  "scene_geometry_count": 1,
+  "merged_vertex_count": 15691,
+  "face_count": 34932,
+  "connected_surface_count_after_merge": 343,
+  "source_collision_meshes": {
+    "8": {
+      "path": "/home/sorry/python_ws/interactive/unifp_reproduction/UniFP_v3/resources/robots/v3_a1_desktop/meshes/base_link_solid_8.glb",
+      "sha256": "2f03abd33452717be901987a70c1b7ce9b10abf4b8533fb2980bdef00210fce1",
+      "bounds_before_urdf_origin_m": [
+        [
+          -0.1758873015642166,
+          0.14969928562641144,
+          -0.009369387291371822
+        ],
+        [
+          0.28557801246643066,
+          0.25414520502090454,
+          0.019090957939624786
+        ]
+      ],
+      "vertex_count": 70,
+      "convex": true
+    },
+    "99": {
+      "path": "/home/sorry/python_ws/interactive/unifp_reproduction/UniFP_v3/resources/robots/v3_a1_desktop/meshes/base_link_solid_99.glb",
+      "sha256": "4411561a1067159a59e8103e18ee1885ead5ac29fc84185d8676e98f8a4c54fc",
+      "bounds_before_urdf_origin_m": [
+        [
+          -0.17593248188495636,
+          0.06307404488325119,
+          -0.024011341854929924
+        ],
+        [
+          0.18066160380840302,
+          0.14969079196453094,
+          0.009307121858000755
+        ]
+      ],
+      "vertex_count": 53,
+      "convex": true
+    },
+    "43": {
+      "path": "/home/sorry/python_ws/interactive/unifp_reproduction/UniFP_v3/resources/robots/v3_a1_desktop/meshes/base_link_solid_43.glb",
+      "sha256": "23ecb760702e0ba29075cb9ac25552666b306f4754b5f2b547cc0ad9c8fc31a3",
+      "bounds_before_urdf_origin_m": [
+        [
+          0.3196848928928375,
+          0.16985608637332916,
+          0.010845432989299297
+        ],
+        [
+          0.3638491630554199,
+          0.2483212649822235,
+          0.09162209928035736
+        ]
+      ],
+      "vertex_count": 123,
+      "convex": true
+    }
+  },
+  "note_zh": "连通表面数不是CAD部件数；视觉场景未提供source索引到独立visual几何的一对一映射，局部选取不能仅依赖完整部件名称或少数顶点。"
+}

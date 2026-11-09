@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "standard_library_unittests": 4,
+  "red_before_implementation": "ModuleNotFoundError: experiment_contract",
+  "green_after_implementation": true,
+  "function_annotations_docstrings_ast": true,
+  "new_document_links_valid": true,
+  "own_local_pyc_removed": true,
+  "cross_end_scripts_sha256_equal": true,
+  "business_source_files_modified": 0,
+  "formal_training_modified": false,
+  "note": "本验证不代表两组200轮与全部冻结评估完成"
+}

@@ -1,0 +1,12 @@
+{
+  "checked_at": "2026-11-08T20:06:22.429251+08:00",
+  "hostname": "gpuf3",
+  "formal_pid": 1981990,
+  "training_alive": true,
+  "completed_iterations": 12569,
+  "latest_scalar_metrics_finite": true,
+  "failure_json_exists": false,
+  "diagnostic_processes": [],
+  "next_full_observation": 16000,
+  "formal_budget": 40000
+}

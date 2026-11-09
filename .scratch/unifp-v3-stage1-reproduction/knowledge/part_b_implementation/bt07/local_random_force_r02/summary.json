@@ -1,0 +1,13 @@
+{
+  "assessment": "smoke_only",
+  "scenarios": {
+    "R0": "smoke_only"
+  },
+  "checkpoint_sha256": "323a6688fe42559db1d0c545b778b456551ce0ac472f8169fec5ebce2d849dbc",
+  "evaluation_manifest_sha256": "f25201436b07902fa9e6b3bb23c9f24da8a9dc353e27c07b430dd1bc4176453b",
+  "threshold_version": "v3-b-initial-v1",
+  "scenario_archive_manifest_sha256": {
+    "R0": "cd05086818f32995138d10c4dcdcabdf769db00b133fa3c35ae2e11ef50025fa"
+  },
+  "policy_updates": 0
+}

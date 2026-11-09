@@ -1,0 +1,28 @@
+{
+  "status": "confirmed",
+  "default_files_unchanged": true,
+  "options": {
+    "retain_official_60n": {
+      "max_force_n": 60.0,
+      "half_force_n": 30.0,
+      "contact_peak_n": 20.0,
+      "contact_half_n": 10.0,
+      "next_stage": "4096环境10+1轮工程验收"
+    },
+    "adapt_v3_40n": {
+      "max_force_n": 40.0,
+      "half_force_n": 20.0,
+      "contact_peak_n": 20.0,
+      "contact_half_n": 10.0,
+      "next_stage": "按V3适配分布完成4096环境10+1轮工程验收"
+    }
+  },
+  "evidence_sha256": "b25b935c4c15e35620fbdcda1383fdfc17ed435c387a477530f9e938fda75783",
+  "说明": "两方案都不改K=200N/m、资产、reward、控制器或关节力矩上限；尚不启动正式B长训。",
+  "selected": "retain_official_60n",
+  "confirmation": "用户选择保留官方±60N，记录限幅并继续验证；正式32000轮训练仍不启动。",
+  "manifest_sha256": {
+    "v3_b_initial_v1.json": "92a92d5829ce2fc3a34040312ef172dde26a00c7f90c4b511e8d066882c04fb7",
+    "v3_b_contact_v1.json": "d159d116dec8caa47ea5111a089170cb9bbed86760f8d99f1f3129c42be1b9d8"
+  }
+}

@@ -1,0 +1,33 @@
+Importing module 'gym_38' (/mnt/data_8THDD/myl_unifp/isaacgym/python/isaacgym/_bindings/linux-x86_64/gym_38.so)
+Setting GYM_USD_PLUG_INFO_PATH to /mnt/data_8THDD/myl_unifp/isaacgym/python/isaacgym/_bindings/linux-x86_64/usd/plugInfo.json
+PyTorch version 2.3.1+cu121
+Device count 1
+/mnt/data_8THDD/myl_unifp/isaacgym/python/isaacgym/_bindings/src/gymtorch
+Using /mnt/data_8THDD/myl_unifp_v3_stage1/cache/torch_extensions as PyTorch extensions root...
+Emitting ninja build file /mnt/data_8THDD/myl_unifp_v3_stage1/cache/torch_extensions/gymtorch/build.ninja...
+Building extension module gymtorch...
+Using envvar MAX_JOBS (2) as the number of workers...
+ninja: no work to do.
+Not connected to PVD
++++ Using GPU PhysX
+Physics Engine: PhysX
+Physics Device: cuda:0
+GPU Pipeline: enabled
+Setting seed: 1
+{"passed": false, "num_envs": 4, "seed": 1, "records": [{"boundary": "constructor_reset", "tcp_world_m": [1.1148685216903687, -0.9453238248825073, 0.340795636177063], "tcp_fk_error_m": 1.454375388393674, "raw_cache_fk_error_m": 1.454375388393674, "target_fk_error_m": 1.4543754271360323, "label_error": 0.0, "critic_label_error": 0.0}, {"boundary": "local_reset", "tcp_world_m": [1.1473519802093506, 0.027310771867632866, 1.1681393384933472], "tcp_fk_error_m": 0.732637337868323, "raw_cache_fk_error_m": 0.732637337868323, "target_fk_error_m": 0.732637337868323, "label_error": 0.0, "critic_label_error": 0.0}, {"boundary": "after_physics", "tcp_world_m": [0.4157874584197998, 3.7141392112971516e-06, 1.1944091320037842], "tcp_fk_error_m": 4.7034860946059186e-07, "raw_cache_fk_error_m": 4.7034860946059186e-07, "target_fk_error_m": 0.7325452893916851, "label_error": 0.0, "critic_label_error": 0.0}], "other_row_differences": {"root_states": 0.0, "dof_pos": 0.0, "dof_vel": 0.0, "obs_history": 0.0, "critic_history": 0.0, "episode_length_buf": 0.0}, "training_counters_unchanged": true}
+Loading extension module gymtorch...
+/mnt/data_8THDD/conda_envs/unifp_v3_stage1/lib/python3.8/site-packages/torch/functional.py:512: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3587.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/mnt/data_8THDD/conda_envs/unifp_v3_stage1/lib/python3.8/runpy.py", line 265, in run_path
+    return _run_module_code(code, init_globals, run_name,
+  File "/mnt/data_8THDD/conda_envs/unifp_v3_stage1/lib/python3.8/runpy.py", line 97, in _run_module_code
+    _run_code(code, mod_globals, init_globals,
+  File "/mnt/data_8THDD/conda_envs/unifp_v3_stage1/lib/python3.8/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "tools/check_v3_reset_tcp.py", line 137, in <module>
+    main()
+  File "tools/check_v3_reset_tcp.py", line 131, in main
+    assert passed, 'Reset TCP, target, labels or local isolation failed'
+AssertionError: Reset TCP, target, labels or local isolation failed

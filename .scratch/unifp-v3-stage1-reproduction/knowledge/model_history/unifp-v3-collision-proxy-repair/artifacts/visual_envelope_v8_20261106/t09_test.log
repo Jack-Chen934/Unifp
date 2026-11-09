@@ -1,0 +1,9 @@
+test_real_visual_contacts_remain_detectable (test_visual_envelope_regression.VisualEnvelopeRegressionTests.test_real_visual_contacts_remain_detectable)
+Keep actual surface collision detection at all three repaired regions. ... ok
+test_saved_false_contacts_and_substeps (test_visual_envelope_regression.VisualEnvelopeRegressionTests.test_saved_false_contacts_and_substeps)
+Remove the specified false intersections without regressing separation. ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 6.641s
+
+OK

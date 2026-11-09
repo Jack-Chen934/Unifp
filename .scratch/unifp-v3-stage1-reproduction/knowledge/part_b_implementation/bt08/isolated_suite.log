@@ -1,0 +1,155 @@
+Importing module 'gym_38' (/home/sorry/.cache/unifp/isaacgym_preview4/pkg/isaacgym/python/isaacgym/_bindings/linux-x86_64/gym_38.so)
+Setting GYM_USD_PLUG_INFO_PATH to /home/sorry/.cache/unifp/isaacgym_preview4/pkg/isaacgym/python/isaacgym/_bindings/linux-x86_64/usd/plugInfo.json
+.....................F.................................................. [ 91%]
+.......                                                                  [100%]
+=================================== FAILURES ===================================
+____ test_archive_copies_checkpoint_hashes_artifacts_and_removes_write_bits ____
+
+tmp_path = PosixPath('/tmp/pytest-of-sorry/pytest-35/test_archive_copies_checkpoint0')
+
+    def test_archive_copies_checkpoint_hashes_artifacts_and_removes_write_bits(tmp_path: Path) -> None:
+        """Seal exact inputs and verify all archived artifacts against their hashes.
+    
+        Args:
+            tmp_path: Pytest-managed directory for generated evidence files.
+    
+        Returns:
+            None.
+    
+        Raises:
+            AssertionError: Archive bytes, hashes, plots, or write permissions are wrong.
+        """
+        checkpoint = tmp_path / "model.pt"
+        checkpoint.write_bytes(b"a8000-checkpoint")
+        manifest_path = tmp_path / "manifest.json"
+        manifest_path.write_text(json.dumps(make_manifest()), encoding="utf-8")
+        trace_path = tmp_path / "trace.jsonl"
+        trace_path.write_text(json.dumps(make_trace_row(0, 0.1)) + "\n", encoding="utf-8")
+        episodes_path = tmp_path / "episodes.jsonl"
+        episodes_path.write_text(json.dumps({"end_type": "timeout", "reward_return": 1.0,
+                                            "reward_rate": 1.0, "errors": {
+            "tcp_geometric_l2_m": {"mean": 0.1}, "base_planar_speed_m_s": {"mean": 0.2}}}) + "\n",
+            encoding="utf-8")
+        iterations_path = tmp_path / "iterations.jsonl"
+        iterations_path.write_text(json.dumps({"completed_iterations": 8000,
+                                              "training_transitions": 100,
+                                              "episode/reward_rate": 1.0,
+                                              "episode/errors/tcp_geometric_l2_m/mean": 0.2}) + "\n",
+                                    encoding="utf-8")
+        archive = tmp_path / "sealed"
+>       inventory = seal_evaluation_archive(
+            archive, checkpoint, manifest_path, trace_path, episodes_path,
+            {"assessment": "ungraded_or_incomplete"}, {"schema_sha256": "schema"},
+            iterations_path, {"evaluation": True},
+        )
+
+tests/test_v3_evaluation.py:183: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+legged_gym/b2_gym_learn/ppo_cse_pf/v3_evaluation.py:929: in seal_evaluation_archive
+    "git_commit": _git_commit(Path(__file__).resolve().parents[3]),
+legged_gym/b2_gym_learn/ppo_cse_pf/v3_evaluation.py:1096: in _git_commit
+    return subprocess.check_output(["git", "-C", str(repository), "rev-parse", "HEAD"], text=True).strip()
+/home/sorry/.cache/unifp/isaacgym_preview4/py38/lib/python3.8/subprocess.py:415: in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+input = None, capture_output = False, timeout = None, check = True
+popenargs = (['git', '-C', '/tmp/unifp-bt08-unit-source/UniFP_v3', 'rev-parse', 'HEAD'],)
+kwargs = {'stdout': -1, 'text': True}
+process = <subprocess.Popen object at 0x711676c83d60>, stdout = ''
+stderr = None, retcode = 128
+
+    def run(*popenargs,
+            input=None, capture_output=False, timeout=None, check=False, **kwargs):
+        """Run command with arguments and return a CompletedProcess instance.
+    
+        The returned instance will have attributes args, returncode, stdout and
+        stderr. By default, stdout and stderr are not captured, and those attributes
+        will be None. Pass stdout=PIPE and/or stderr=PIPE in order to capture them.
+    
+        If check is True and the exit code was non-zero, it raises a
+        CalledProcessError. The CalledProcessError object will have the return code
+        in the returncode attribute, and output & stderr attributes if those streams
+        were captured.
+    
+        If timeout is given, and the process takes too long, a TimeoutExpired
+        exception will be raised.
+    
+        There is an optional argument "input", allowing you to
+        pass bytes or a string to the subprocess's stdin.  If you use this argument
+        you may not also use the Popen constructor's "stdin" argument, as
+        it will be used internally.
+    
+        By default, all communication is in bytes, and therefore any "input" should
+        be bytes, and the stdout and stderr will be bytes. If in text mode, any
+        "input" should be a string, and stdout and stderr will be strings decoded
+        according to locale encoding, or by "encoding" if set. Text mode is
+        triggered by setting any of text, encoding, errors or universal_newlines.
+    
+        The other arguments are the same as for the Popen constructor.
+        """
+        if input is not None:
+            if kwargs.get('stdin') is not None:
+                raise ValueError('stdin and input arguments may not both be used.')
+            kwargs['stdin'] = PIPE
+    
+        if capture_output:
+            if kwargs.get('stdout') is not None or kwargs.get('stderr') is not None:
+                raise ValueError('stdout and stderr arguments may not be used '
+                                 'with capture_output.')
+            kwargs['stdout'] = PIPE
+            kwargs['stderr'] = PIPE
+    
+        with Popen(*popenargs, **kwargs) as process:
+            try:
+                stdout, stderr = process.communicate(input, timeout=timeout)
+            except TimeoutExpired as exc:
+                process.kill()
+                if _mswindows:
+                    # Windows accumulates the output in a single blocking
+                    # read() call run on child threads, with the timeout
+                    # being done in a join() on those threads.  communicate()
+                    # _after_ kill() is required to collect that and add it
+                    # to the exception.
+                    exc.stdout, exc.stderr = process.communicate()
+                else:
+                    # POSIX _communicate already populated the output so
+                    # far into the TimeoutExpired exception.
+                    process.wait()
+                raise
+            except:  # Including KeyboardInterrupt, communicate handled that.
+                process.kill()
+                # We don't call process.wait() as .__exit__ does that for us.
+                raise
+            retcode = process.poll()
+            if check and retcode:
+>               raise CalledProcessError(retcode, process.args,
+                                         output=stdout, stderr=stderr)
+E               subprocess.CalledProcessError: Command '['git', '-C', '/tmp/unifp-bt08-unit-source/UniFP_v3', 'rev-parse', 'HEAD']' returned non-zero exit status 128.
+
+/home/sorry/.cache/unifp/isaacgym_preview4/py38/lib/python3.8/subprocess.py:516: CalledProcessError
+----------------------------- Captured stderr call -----------------------------
+fatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+=============================== warnings summary ===============================
+../../../home/sorry/.cache/unifp/isaacgym_preview4/pkg/isaacgym/python/isaacgym/torch_utils.py:135
+  /home/sorry/.cache/unifp/isaacgym_preview4/pkg/isaacgym/python/isaacgym/torch_utils.py:135: DeprecationWarning: `np.float` is a deprecated alias for the builtin `float`. To silence this warning, use `float` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.float64` here.
+  Deprecated in NumPy 1.20; for more details and guidance: https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+    def get_axis_params(value, axis_idx, x_value=0., dtype=np.float, n_dims=3):
+
+../../../home/sorry/.cache/unifp/isaacgym_preview4/py38/lib/python3.8/site-packages/wandb/analytics/sentry.py:90
+  /home/sorry/.cache/unifp/isaacgym_preview4/py38/lib/python3.8/site-packages/wandb/analytics/sentry.py:90: SentryHubDeprecationWarning: `sentry_sdk.Hub` is deprecated and will be removed in a future major release. Please consult our 1.x to 2.x migration guide for details on how to migrate `Hub` usage to the new API: https://docs.sentry.io/platforms/python/migration/1.x-to-2.x
+    self.hub = sentry_sdk.Hub(client)
+
+tests/test_v3_force_transitions.py::test_b_snapshot_is_detached_and_restore_restarts_local_force_events
+  /home/sorry/.cache/unifp/isaacgym_preview4/torch231/lib/python3.8/site-packages/torch/cuda/__init__.py:209: UserWarning: 
+  NVIDIA GeForce RTX 5060 Laptop GPU with CUDA capability sm_120 is not compatible with the current PyTorch installation.
+  The current PyTorch install supports CUDA capabilities sm_50 sm_60 sm_70 sm_75 sm_80 sm_86 sm_90.
+  If you want to use the NVIDIA GeForce RTX 5060 Laptop GPU GPU with PyTorch, please check the instructions at https://pytorch.org/get-started/locally/
+  
+    warnings.warn(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED tests/test_v3_evaluation.py::test_archive_copies_checkpoint_hashes_artifacts_and_removes_write_bits
+1 failed, 78 passed, 3 warnings in 12.42s

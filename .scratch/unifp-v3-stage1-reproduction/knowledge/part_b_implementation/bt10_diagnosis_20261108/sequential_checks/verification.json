@@ -1,0 +1,241 @@
+{
+  "checked_at": "2026-11-08T19:02:14.195472+08:00",
+  "groups": [
+    {
+      "iteration": 9000,
+      "shapes": {
+        "raw_rewards": [
+          1000,
+          128,
+          23
+        ],
+        "saturated_fraction": [
+          1000,
+          128,
+          14
+        ],
+        "errors": [
+          1000,
+          128,
+          6
+        ],
+        "step": [
+          100
+        ],
+        "root": [
+          100,
+          128,
+          13
+        ],
+        "joint_position": [
+          100,
+          128,
+          14
+        ],
+        "geometric_target": [
+          100,
+          128,
+          3
+        ],
+        "compensated_target": [
+          100,
+          128,
+          3
+        ],
+        "external_force_world": [
+          100,
+          128,
+          3
+        ],
+        "command_force_yaw": [
+          100,
+          128,
+          3
+        ],
+        "snapshot_saturated_fraction": [
+          100,
+          128,
+          14
+        ]
+      },
+      "finite": true,
+      "saturation_range_and_mean": true,
+      "update_counts": {
+        "main": 20,
+        "auxiliary": 20
+      },
+      "checkpoint_sha256": "d0c64674c852300776662b389e14047e998f8444486f74db5fabea684f089b1f",
+      "workspace_counts": true
+    },
+    {
+      "iteration": 10000,
+      "shapes": {
+        "raw_rewards": [
+          1000,
+          128,
+          23
+        ],
+        "saturated_fraction": [
+          1000,
+          128,
+          14
+        ],
+        "errors": [
+          1000,
+          128,
+          6
+        ],
+        "step": [
+          100
+        ],
+        "root": [
+          100,
+          128,
+          13
+        ],
+        "joint_position": [
+          100,
+          128,
+          14
+        ],
+        "geometric_target": [
+          100,
+          128,
+          3
+        ],
+        "compensated_target": [
+          100,
+          128,
+          3
+        ],
+        "external_force_world": [
+          100,
+          128,
+          3
+        ],
+        "command_force_yaw": [
+          100,
+          128,
+          3
+        ],
+        "snapshot_saturated_fraction": [
+          100,
+          128,
+          14
+        ]
+      },
+      "finite": true,
+      "saturation_range_and_mean": true,
+      "update_counts": {
+        "main": 20,
+        "auxiliary": 20
+      },
+      "checkpoint_sha256": "7e7ec14c8d772d9343ed3a9f9918e477657383980e9d747cd209f79006f6fd4d",
+      "workspace_counts": true
+    },
+    {
+      "iteration": 12000,
+      "shapes": {
+        "raw_rewards": [
+          1000,
+          128,
+          23
+        ],
+        "saturated_fraction": [
+          1000,
+          128,
+          14
+        ],
+        "errors": [
+          1000,
+          128,
+          6
+        ],
+        "step": [
+          100
+        ],
+        "root": [
+          100,
+          128,
+          13
+        ],
+        "joint_position": [
+          100,
+          128,
+          14
+        ],
+        "geometric_target": [
+          100,
+          128,
+          3
+        ],
+        "compensated_target": [
+          100,
+          128,
+          3
+        ],
+        "external_force_world": [
+          100,
+          128,
+          3
+        ],
+        "command_force_yaw": [
+          100,
+          128,
+          3
+        ],
+        "snapshot_saturated_fraction": [
+          100,
+          128,
+          14
+        ]
+      },
+      "finite": true,
+      "saturation_range_and_mean": true,
+      "update_counts": {
+        "main": 20,
+        "auxiliary": 20
+      },
+      "checkpoint_sha256": "273d4269bc37e95f879d21b178bc0380e20d2539e2d9cfd7488296f049c3146c",
+      "workspace_counts": true
+    }
+  ],
+  "python_ast": {
+    "latent_crosscheck.py": true,
+    "run_checks.py": true,
+    "check_same_point_gradients.py": true,
+    "collect_checks.py": true,
+    "check_workspace.py": true,
+    "analyze_rewards.py": true,
+    "summarize_checks.py": true
+  },
+  "说明": "独立诊断证据核验；不修改正式策略或训练。",
+  "max_old_logp_difference": 9.72747802734375e-05,
+  "remote_local_sha256": {
+    "check_9000/summary.json": "c0e46b281784f132ec5e7b97ba2609cd667deb9a3825f5c1da8057612ecd98c1",
+    "check_9000/measurements.npz": "0eecfd549599e6fcdc83659485d66e6c419f777a77ea97823ec2545b8d26c316",
+    "check_9000/held_inputs.pt": "ff7f04a6d1e74b8ca2dcecd8b87f402e2be4243fd4ae982290c5bf30c82bbca2",
+    "check_9000/rollout.pt": "02d2952cf8150148b1c8263346f57c5f52cc8cb1539cce7a5480b15527712cd2",
+    "check_9000/update_observation.json": "fd93378400271b378fb1880c78bb978deb161755773bed169d1710b968676398",
+    "check_10000/summary.json": "203fa2b2767726653c77cc96c018643280ca6472fb27ce95d8295b93144d094a",
+    "check_10000/measurements.npz": "4ffd27b94b61d8a10d1f6451cc61d123d28f7c02dfc9f645e0f6e4fe64c665a6",
+    "check_10000/held_inputs.pt": "928a48b15c3ceb5a0f2abc5624b1a59689ad16508643c992104f722682c8a07f",
+    "check_10000/rollout.pt": "45e6c24051396d74c894090f6a7adc7f73c55ae99ea4b84e7076ee897bcca502",
+    "check_10000/update_observation.json": "bb1467069fdc8f6748e8fc950728b428c43b2611be03b15a52105cd00db27829",
+    "check_12000/summary.json": "cbb84d90ee4ff4c6b11d67dac34f6d3be834e092ec54ba9154c34d6d39fa98f0",
+    "check_12000/measurements.npz": "1750c2380b0ee131af0c38c83b868de574aed3835bd21d5d6b33a4b06a36b6a0",
+    "check_12000/held_inputs.pt": "1e7988b8c2b638b347648f0fb5487ca84cd41a053d951df0f08917f4e651f57d",
+    "check_12000/rollout.pt": "54bcfe5be102de4f8c0384c7d531e09b89392c8d15c7f32631e254814226be35",
+    "check_12000/update_observation.json": "40fa4c0164d2dba9bf2bcea8fb0601afe579872d527d08e383a07c1f78b8bf74",
+    "collect_checks.py": "0405db53f1a693bab122df8e6fe52bcd283e497b7c4df3de2c88f861042485f2",
+    "run_checks.py": "f57a3355d789e0db46e9673e19f24c20224bf9795ba914ab4981d1b552992318",
+    "check_same_point_gradients.py": "a76e7808cebd3b639e62a55e40d81fa0edf1f531260dee491ffeb8c7b5fa1414"
+  },
+  "remote_source_sha256": {
+    "9000": "d0c64674c852300776662b389e14047e998f8444486f74db5fabea684f089b1f",
+    "10000": "7e7ec14c8d772d9343ed3a9f9918e477657383980e9d747cd209f79006f6fd4d",
+    "12000": "273d4269bc37e95f879d21b178bc0380e20d2539e2d9cfd7488296f049c3146c",
+    "episodes": "f43afc89efab8d3376be97ae9b9bb3b549a69abaf2561952f3d295cb79ceac36"
+  },
+  "passed": true
+}

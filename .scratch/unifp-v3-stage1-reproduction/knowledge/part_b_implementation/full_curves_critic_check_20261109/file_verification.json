@@ -1,0 +1,14 @@
+{
+  "verified_remote_files": [
+    "check_12000/summary.json",
+    "check_12000/trajectory.npz",
+    "check_12000/episodes.json",
+    "check_16000/summary.json",
+    "check_16000/trajectory.npz",
+    "check_16000/episodes.json",
+    "check_9000/summary.json",
+    "check_9000/trajectory.npz",
+    "check_9000/episodes.json"
+  ],
+  "all_match": true
+}

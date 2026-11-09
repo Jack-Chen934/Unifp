@@ -1,0 +1,19 @@
+test_clipping_retains_crossing_triangle (test_visual_envelope_candidate.VisualEnvelopeGeometryTests.test_clipping_retains_crossing_triangle)
+Keep the unit square crossed by a triangle whose vertices lie outside. ... ok
+test_hull_covers_reference_with_half_millimeter_margin (test_visual_envelope_candidate.VisualEnvelopeGeometryTests.test_hull_covers_reference_with_half_millimeter_margin)
+Cover a 20 mm cube with the known 21 mm axis-aligned envelope. ... ERROR
+
+======================================================================
+ERROR: test_hull_covers_reference_with_half_millimeter_margin (test_visual_envelope_candidate.VisualEnvelopeGeometryTests.test_hull_covers_reference_with_half_millimeter_margin)
+Cover a 20 mm cube with the known 21 mm axis-aligned envelope.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/sorry/python_ws/interactive/unifp_reproduction/.scratch/unifp-v3-collision-proxy-repair/knowledge/test_visual_envelope_candidate.py", line 38, in test_hull_covers_reference_with_half_millimeter_margin
+    hull, _ = builder.rebuild_local_hull(reference_points_m, 0.0005)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'build_visual_envelope_candidate' has no attribute 'rebuild_local_hull'
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.001s
+
+FAILED (errors=1)

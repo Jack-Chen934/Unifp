@@ -1,0 +1,322 @@
+{
+  "historical_failures": 1648,
+  "historical_completed_episodes": 783332,
+  "historical_failure_rate": 0.00210383336822701,
+  "affected_environments": 1367,
+  "max_failures_per_environment": 4,
+  "experiments": {
+    "early_sample": {
+      "checkpoint": "/mnt/data_8THDD/myl_unifp_v3_stage1/runs/a8000_seed1_v3_v6r2_resume0767_20261105/checkpoints/model_001400.pt",
+      "checkpoint_sha256": "83c2784e52d0a89d5fc4b2e725a8df4c7c8e48de51add860e77e3186413d7102",
+      "checkpoint_iteration": 1400,
+      "action_mode": "sample",
+      "scenario": "training",
+      "seed": 1001,
+      "num_envs": 128,
+      "policy_steps": 3000,
+      "seconds_per_environment": 59.99999865889549,
+      "completed_episodes": {
+        "physical_failure": 8,
+        "timeout": 376
+      },
+      "failure_predicates_overlapping": {
+        "base_contact": 8
+      },
+      "action_std": [
+        0.9163087010383606,
+        0.8847324848175049,
+        0.8694848418235779,
+        0.8728775382041931,
+        0.6048445701599121,
+        0.6248438954353333,
+        0.6458113789558411,
+        0.6327691674232483,
+        0.5693799257278442,
+        0.3617255389690399,
+        0.29156574606895447,
+        0.5922232270240784,
+        0.4811200797557831,
+        0.4993436336517334
+      ],
+      "action_clip_fraction_steering_drive_arm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "policy_updates": 0,
+      "source_identity_verified": true,
+      "note_zh": "新episode冻结推理，采用保存物性前N行；非训练历史重放，非正式评估，未修改终止阈值。"
+    },
+    "early_mean": {
+      "checkpoint": "/mnt/data_8THDD/myl_unifp_v3_stage1/runs/a8000_seed1_v3_v6r2_resume0767_20261105/checkpoints/model_001400.pt",
+      "checkpoint_sha256": "83c2784e52d0a89d5fc4b2e725a8df4c7c8e48de51add860e77e3186413d7102",
+      "checkpoint_iteration": 1400,
+      "action_mode": "mean",
+      "scenario": "training",
+      "seed": 1001,
+      "num_envs": 128,
+      "policy_steps": 3000,
+      "seconds_per_environment": 59.99999865889549,
+      "completed_episodes": {
+        "timeout": 384
+      },
+      "failure_predicates_overlapping": {},
+      "action_std": [
+        0.9163087010383606,
+        0.8847324848175049,
+        0.8694848418235779,
+        0.8728775382041931,
+        0.6048445701599121,
+        0.6248438954353333,
+        0.6458113789558411,
+        0.6327691674232483,
+        0.5693799257278442,
+        0.3617255389690399,
+        0.29156574606895447,
+        0.5922232270240784,
+        0.4811200797557831,
+        0.4993436336517334
+      ],
+      "action_clip_fraction_steering_drive_arm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "policy_updates": 0,
+      "source_identity_verified": true,
+      "note_zh": "新episode冻结推理，采用保存物性前N行；非训练历史重放，非正式评估，未修改终止阈值。"
+    },
+    "early_sample_no_self_collision": {
+      "checkpoint": "/mnt/data_8THDD/myl_unifp_v3_stage1/runs/a8000_seed1_v3_v6r2_resume0767_20261105/checkpoints/model_001400.pt",
+      "checkpoint_sha256": "83c2784e52d0a89d5fc4b2e725a8df4c7c8e48de51add860e77e3186413d7102",
+      "checkpoint_iteration": 1400,
+      "action_mode": "sample",
+      "scenario": "training",
+      "seed": 1001,
+      "num_envs": 128,
+      "self_collision_disabled": true,
+      "policy_steps": 1000,
+      "seconds_per_environment": 19.999999552965164,
+      "completed_episodes": {
+        "timeout": 128
+      },
+      "failure_predicates_overlapping": {},
+      "action_std": [
+        0.9163087010383606,
+        0.8847324848175049,
+        0.8694848418235779,
+        0.8728775382041931,
+        0.6048445701599121,
+        0.6248438954353333,
+        0.6458113789558411,
+        0.6327691674232483,
+        0.5693799257278442,
+        0.3617255389690399,
+        0.29156574606895447,
+        0.5922232270240784,
+        0.4811200797557831,
+        0.4993436336517334
+      ],
+      "action_clip_fraction_steering_drive_arm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "policy_updates": 0,
+      "source_identity_verified": true,
+      "note_zh": "新episode冻结推理，采用保存物性前N行；非训练历史重放，非正式评估，未修改终止阈值。"
+    },
+    "video_s1": {
+      "checkpoint": "/mnt/data_8THDD/myl_unifp_v3_stage1/runs/a8000_seed1_v3_v6r2_resume0767_20261105/checkpoints/model_008000.pt",
+      "checkpoint_sha256": "323a6688fe42559db1d0c545b778b456551ce0ac472f8169fec5ebce2d849dbc",
+      "checkpoint_iteration": 8000,
+      "action_mode": "mean",
+      "scenario": "S1",
+      "seed": 1001,
+      "num_envs": 1,
+      "policy_steps": 1000,
+      "seconds_per_environment": 19.999999552965164,
+      "completed_episodes": {
+        "timeout": 1
+      },
+      "failure_predicates_overlapping": {},
+      "action_std": [
+        0.4903799295425415,
+        0.4834515452384949,
+        0.47717127203941345,
+        0.4857828617095947,
+        0.309442937374115,
+        0.30986934900283813,
+        0.3094802498817444,
+        0.3198336064815521,
+        0.2507898211479187,
+        0.12125680595636368,
+        0.11074373126029968,
+        0.27505233883857727,
+        0.16828125715255737,
+        0.2465958148241043
+      ],
+      "action_clip_fraction_steering_drive_arm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "policy_updates": 0,
+      "source_identity_verified": true,
+      "note_zh": "新episode冻结推理，采用保存物性前N行；非训练历史重放，非正式评估，未修改终止阈值。"
+    },
+    "early_sample_no_push": {
+      "checkpoint": "/mnt/data_8THDD/myl_unifp_v3_stage1/runs/a8000_seed1_v3_v6r2_resume0767_20261105/checkpoints/model_001400.pt",
+      "checkpoint_sha256": "83c2784e52d0a89d5fc4b2e725a8df4c7c8e48de51add860e77e3186413d7102",
+      "checkpoint_iteration": 1400,
+      "action_mode": "sample",
+      "scenario": "S1",
+      "seed": 1001,
+      "num_envs": 128,
+      "self_collision_disabled": false,
+      "policy_steps": 3000,
+      "seconds_per_environment": 59.99999865889549,
+      "completed_episodes": {
+        "physical_failure": 9,
+        "timeout": 376
+      },
+      "failure_predicates_overlapping": {
+        "base_contact": 9
+      },
+      "action_std": [
+        0.9163087010383606,
+        0.8847324848175049,
+        0.8694848418235779,
+        0.8728775382041931,
+        0.6048445701599121,
+        0.6248438954353333,
+        0.6458113789558411,
+        0.6327691674232483,
+        0.5693799257278442,
+        0.3617255389690399,
+        0.29156574606895447,
+        0.5922232270240784,
+        0.4811200797557831,
+        0.4993436336517334
+      ],
+      "action_clip_fraction_steering_drive_arm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "policy_updates": 0,
+      "source_identity_verified": true,
+      "note_zh": "新episode冻结推理，采用保存物性前N行；非训练历史重放，非正式评估，未修改终止阈值。"
+    }
+  },
+  "same_first_20_seconds": {
+    "early_sample_failures": 2,
+    "no_self_collision_failures": 0
+  },
+  "failure_events_semantics_zh": "reset前采集，分项条件不互斥；原Gym step及终止判据未修改。",
+  "remaining_zh": "最新显示错位已由原生Gym单变量对照定位为flip_visual_attachments=True，独立回放False已恢复；物理几何有代理比visual保守的证据，未改正式资产或接触判据。见followup记录；历史实验的脚本版本见原报告。",
+  "cancelled_experiment_zh": "最终模型额外sample推理原排队任务已取消；最终原训练sample后期零失败及正式评估已有证据，避免重复长测。",
+  "tool_scripts": {
+    "replay_v3.py": "7b0b65065d958e569c737df70eac287cf3ce518fdfe196f5bfced26aada8b304",
+    "run_replay_v3.sh": "191562a9c069e3bdaa2dabce8e63d1a81b9316e356cc4ab3abd8cfe17f1a5352",
+    "probe_visual_frames.py": "1ee523f7738213e604c8a5fa661fb3e816edafd2091b08be0b4735c05edcffc3",
+    "audit_failure_geometry.py": "c3a220301786af974013d7d38951ff3a536ef77815e5e7a30c7d235a85d5adf1"
+  },
+  "video": {
+    "path": "v3_seed1_S1_8000.mp4",
+    "sha256": "b489b6f277ce62e9c6f20fb52f36eaaa3bc0d735768ede2d6fd13cdfe1fd067a",
+    "ffprobe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 960,
+          "height": 720,
+          "r_frame_rate": "50/1",
+          "duration": "20.000000",
+          "nb_frames": "1000"
+        }
+      ]
+    },
+    "fully_decoded_remote": true,
+    "frame8_inspected": true
+  },
+  "no_push_contact_pairs": [
+    {
+      "policy_step": 158,
+      "env_id": 8,
+      "base_contact_norm_n": 5.230741375370327,
+      "opposite_body": "wrist_camera_connector",
+      "force_sum_residual_n": 0.0
+    },
+    {
+      "policy_step": 454,
+      "env_id": 93,
+      "base_contact_norm_n": 75.86261900535393,
+      "opposite_body": "wrist_camera",
+      "force_sum_residual_n": 0.0
+    },
+    {
+      "policy_step": 1068,
+      "env_id": 9,
+      "base_contact_norm_n": 99.2672731223032,
+      "opposite_body": "wrist_camera",
+      "force_sum_residual_n": 0.0
+    },
+    {
+      "policy_step": 1268,
+      "env_id": 76,
+      "base_contact_norm_n": 235.07343066636898,
+      "opposite_body": "wrist_camera",
+      "force_sum_residual_n": 0.0
+    },
+    {
+      "policy_step": 2066,
+      "env_id": 68,
+      "base_contact_norm_n": 75.90596985175179,
+      "opposite_body": "arm_seg4",
+      "force_sum_residual_n": 0.0
+    },
+    {
+      "policy_step": 2103,
+      "env_id": 69,
+      "base_contact_norm_n": 85.42234096530834,
+      "opposite_body": "wrist_camera",
+      "force_sum_residual_n": 0.0
+    },
+    {
+      "policy_step": 2112,
+      "env_id": 1,
+      "base_contact_norm_n": 174.4609496488776,
+      "opposite_body": "wrist_camera",
+      "force_sum_residual_n": 0.0
+    },
+    {
+      "policy_step": 2242,
+      "env_id": 8,
+      "base_contact_norm_n": 304.1169563631681,
+      "opposite_body": "wrist_camera",
+      "force_sum_residual_n": 0.0
+    },
+    {
+      "policy_step": 2253,
+      "env_id": 77,
+      "base_contact_norm_n": 10.472911188992688,
+      "opposite_body": "wrist_camera",
+      "force_sum_residual_n": 0.0
+    }
+  ],
+  "conclusion_zh": "1400轮冻结sample复现自碰撞触发base_contact终止。关闭push仍9次：8次腕部相机／支架、1次arm_seg4，与base_link接触向量逐分量反向。均值60秒0次；关闭自碰撞20秒0次，而基线同20秒2次。不能将新episode复现泛化为1648次历史分项。",
+  "followup": {
+    "report": "../knowledge/2026-11-06-显示错位与碰撞代理继续排查.md",
+    "native_static": "static_flip_probe/summary.json",
+    "fk_terminal_geometry": "terminal_geometry_audit.json",
+    "native_terminal_geometry": "native_terminal_geometry_audit.json",
+    "actual_10s_probe": "terminal_pose_probe/summary.json",
+    "corrected_video": "video_s1_unflipped/policy.mp4",
+    "corrected_video_sha256": "bebda2cbc4d032454c979e88f500c62b5edd874d9d1d330f729f96e809d15a22",
+    "corrected_video_fully_decoded": true,
+    "formal_source_modified": false,
+    "formal_collision_asset_modified": false
+  }
+}

@@ -1,0 +1,22 @@
+Loading extension module gymtorch...
+/mnt/data_8THDD/conda_envs/unifp_v3_stage1/lib/python3.8/site-packages/torch/functional.py:512: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3587.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+Traceback (most recent call last):
+  File "/mnt/data_8THDD/conda_envs/unifp_v3_stage1/lib/python3.8/runpy.py", line 194, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/mnt/data_8THDD/conda_envs/unifp_v3_stage1/lib/python3.8/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/mnt/data_8THDD/myl_unifp_v3_stage1/validation/collision_optimization_20261103_r02/source/UniFP_v3/legged_gym/scripts/evaluate_v3.py", line 240, in <module>
+    main()
+  File "/mnt/data_8THDD/myl_unifp_v3_stage1/validation/collision_optimization_20261103_r02/source/UniFP_v3/legged_gym/scripts/evaluate_v3.py", line 76, in main
+    seal_evaluation_archive(
+  File "/mnt/data_8THDD/myl_unifp_v3_stage1/validation/collision_optimization_20261103_r02/source/UniFP_v3/legged_gym/b2_gym_learn/ppo_cse_pf/v3_evaluation.py", line 477, in seal_evaluation_archive
+    "git_commit": _git_commit(Path(__file__).resolve().parents[3]),
+  File "/mnt/data_8THDD/myl_unifp_v3_stage1/validation/collision_optimization_20261103_r02/source/UniFP_v3/legged_gym/b2_gym_learn/ppo_cse_pf/v3_evaluation.py", line 520, in _git_commit
+    return subprocess.check_output(["git", "-C", str(repository), "rev-parse", "HEAD"], text=True).strip()
+  File "/mnt/data_8THDD/conda_envs/unifp_v3_stage1/lib/python3.8/subprocess.py", line 415, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/mnt/data_8THDD/conda_envs/unifp_v3_stage1/lib/python3.8/subprocess.py", line 516, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['git', '-C', '/mnt/data_8THDD/myl_unifp_v3_stage1/validation/collision_optimization_20261103_r02/source/UniFP_v3', 'rev-parse', 'HEAD']' returned non-zero exit status 128.
+Setting seed: 1001

@@ -1,0 +1,72 @@
+{
+  "controls": [
+    {
+      "name": "no_contact",
+      "policy_steps": 250,
+      "peak_wall_norm_n": 0.0,
+      "ordinary_physical_failures": 0
+    },
+    {
+      "name": "known_finger_contact",
+      "policy_steps": 250,
+      "peak_wall_norm_n": 1081.64208984375,
+      "ordinary_physical_failures": 0
+    },
+    {
+      "name": "retreated",
+      "policy_steps": 250,
+      "peak_wall_norm_n": 0.0,
+      "ordinary_physical_failures": 0
+    }
+  ],
+  "clean_contact_consecutive_intervals": [
+    7,
+    6,
+    7,
+    6
+  ],
+  "wall_pose_preserved": true,
+  "local_reset_isolated": true,
+  "reset_invalidates_only_selected_measurement": true,
+  "diagnostic_pose_offset_x_m": 0.012,
+  "说明": "人为参考姿态与12mm相对穿入仅验证测量；按压力峰值不是策略性能或训练幅值。",
+  "contact": {
+    "complete": true,
+    "policy_updates": 0,
+    "assessment": "ungraded_or_incomplete"
+  },
+  "zero_control": {
+    "complete": true,
+    "policy_updates": 0,
+    "assessment": "control_only"
+  },
+  "source_compatibility": {
+    "allowed_source_changes": [
+      "legged_gym/b2_gym_learn/ppo_cse_pf/v3_evaluation.py",
+      "legged_gym/b2_gym_learn/ppo_cse_pf/v3_on_policy_runner.py",
+      "legged_gym/b2_gym_learn/ppo_cse_pf/v3_run_identity.py",
+      "legged_gym/envs/v3/legged_robot_v3.py",
+      "legged_gym/envs/v3/v3_contact_evaluation.py",
+      "legged_gym/envs/v3/v3_force_evaluation.py",
+      "legged_gym/envs/v3/v3_pos_force_config.py",
+      "legged_gym/scripts/evaluate_v3.py",
+      "legged_gym/scripts/evaluate_v3_contact.py",
+      "legged_gym/scripts/train_v3.py",
+      "legged_gym/scripts/v3_args.py",
+      "legged_gym/utils/v3_config.py"
+    ],
+    "source_reproduction_part": "A"
+  },
+  "runtime": {
+    "python": "3.8.20",
+    "torch": "2.3.1+cu121",
+    "sim_device": "cuda:0",
+    "rl_device": "cpu",
+    "physx_gpu": true,
+    "gpu_pipeline": false
+  },
+  "source_sha256": {
+    "tools/check_v3_force_runtime.py": "d67926ac1462a9ec6bd148f4d293be764520ef3f4062c2a1d085cafb65d7a1b0",
+    "legged_gym/envs/v3/legged_robot_v3.py": "558295945e22af4091a196e1f53ce9fafdcc6c898bc0ccf205578381329836ca"
+  }
+}

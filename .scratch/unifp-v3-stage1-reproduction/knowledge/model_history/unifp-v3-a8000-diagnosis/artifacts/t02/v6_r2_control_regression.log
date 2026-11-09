@@ -1,0 +1,19 @@
+/usr/bin/bash: /home/sorry/.cache/unifp/isaacgym_preview4/py38/lib/libtinfo.so.6: no version information available (required by /usr/bin/bash)
+Importing module 'gym_38' (/home/sorry/.cache/unifp/isaacgym_preview4/pkg/isaacgym/python/isaacgym/_bindings/linux-x86_64/gym_38.so)
+Setting GYM_USD_PLUG_INFO_PATH to /home/sorry/.cache/unifp/isaacgym_preview4/pkg/isaacgym/python/isaacgym/_bindings/linux-x86_64/usd/plugInfo.json
+PyTorch version 2.0.1+cu117
+Device count 1
+/home/sorry/.cache/unifp/isaacgym_preview4/pkg/isaacgym/python/isaacgym/_bindings/src/gymtorch
+Using /home/sorry/.cache/torch_extensions/py38_cu117 as PyTorch extensions root...
+Emitting ninja build file /home/sorry/.cache/torch_extensions/py38_cu117/gymtorch/build.ninja...
+Building extension module gymtorch...
+Allowing ninja to set a default number of workers... (overridable by setting the environment variable MAX_JOBS=N)
+ninja: no work to do.
+Loading extension module gymtorch...
+test_all_wheel_drive_damping_uses_confirmed_gain_20 (test_v3_control_config.V3ControlConfigTests)
+Keep all four drive wheels at 20x the previous baseline damping. ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+OK

@@ -1,0 +1,133 @@
+{
+  "events": [
+    {
+      "env_id": 0,
+      "episode_index": 0,
+      "evaluation_step": 50,
+      "roll_rad": -0.003891211209631918,
+      "pitch_rad": 0.00893271529556699,
+      "tilt_predicate": false,
+      "base_contact_required_by_termination": true
+    },
+    {
+      "env_id": 24,
+      "episode_index": 0,
+      "evaluation_step": 61,
+      "roll_rad": 0.8315586175904714,
+      "pitch_rad": 0.021590701037014458,
+      "tilt_predicate": true,
+      "base_contact_required_by_termination": false
+    },
+    {
+      "env_id": 25,
+      "episode_index": 0,
+      "evaluation_step": 310,
+      "roll_rad": 0.8136466479150198,
+      "pitch_rad": -0.14396572046573938,
+      "tilt_predicate": true,
+      "base_contact_required_by_termination": false
+    },
+    {
+      "env_id": 6,
+      "episode_index": 0,
+      "evaluation_step": 315,
+      "roll_rad": -0.002567294391511916,
+      "pitch_rad": 0.009673648086222328,
+      "tilt_predicate": false,
+      "base_contact_required_by_termination": true
+    },
+    {
+      "env_id": 7,
+      "episode_index": 0,
+      "evaluation_step": 462,
+      "roll_rad": -0.4159818182611715,
+      "pitch_rad": 1.0085348495401374,
+      "tilt_predicate": true,
+      "base_contact_required_by_termination": false
+    },
+    {
+      "env_id": 13,
+      "episode_index": 0,
+      "evaluation_step": 521,
+      "roll_rad": -0.0026102118725425164,
+      "pitch_rad": 0.008627775733478482,
+      "tilt_predicate": false,
+      "base_contact_required_by_termination": true
+    },
+    {
+      "env_id": 1,
+      "episode_index": 0,
+      "evaluation_step": 661,
+      "roll_rad": 0.08090043025339293,
+      "pitch_rad": 0.4287500039346267,
+      "tilt_predicate": false,
+      "base_contact_required_by_termination": true
+    },
+    {
+      "env_id": 16,
+      "episode_index": 0,
+      "evaluation_step": 776,
+      "roll_rad": 0.8318491777604125,
+      "pitch_rad": -0.005932122222104857,
+      "tilt_predicate": true,
+      "base_contact_required_by_termination": false
+    },
+    {
+      "env_id": 16,
+      "episode_index": 1,
+      "evaluation_step": 937,
+      "roll_rad": -0.0036277104852835288,
+      "pitch_rad": 0.00950848403887372,
+      "tilt_predicate": false,
+      "base_contact_required_by_termination": true
+    },
+    {
+      "env_id": 25,
+      "episode_index": 2,
+      "evaluation_step": 1368,
+      "roll_rad": 0.820976191012346,
+      "pitch_rad": 0.007534817037560397,
+      "tilt_predicate": true,
+      "base_contact_required_by_termination": false
+    },
+    {
+      "env_id": 28,
+      "episode_index": 1,
+      "evaluation_step": 1611,
+      "roll_rad": 0.8204950836662945,
+      "pitch_rad": -0.1505512352918936,
+      "tilt_predicate": true,
+      "base_contact_required_by_termination": false
+    },
+    {
+      "env_id": 12,
+      "episode_index": 2,
+      "evaluation_step": 2074,
+      "roll_rad": 0.10916191613444758,
+      "pitch_rad": -0.04632552148089136,
+      "tilt_predicate": false,
+      "base_contact_required_by_termination": true
+    },
+    {
+      "env_id": 9,
+      "episode_index": 2,
+      "evaluation_step": 2343,
+      "roll_rad": -0.0029852695166243917,
+      "pitch_rad": 0.004480238854564006,
+      "tilt_predicate": false,
+      "base_contact_required_by_termination": true
+    },
+    {
+      "env_id": 29,
+      "episode_index": 2,
+      "evaluation_step": 2618,
+      "roll_rad": -0.0023763944333546096,
+      "pitch_rad": 0.008110972608321599,
+      "tilt_predicate": false,
+      "base_contact_required_by_termination": true
+    }
+  ],
+  "tilt_count": 6,
+  "base_contact_without_tilt_count": 8,
+  "说明": "从正式R2终止步原始四元数重算倾覆谓词；不倾覆的终止按源码可确定触发base_contact；若已倾覆则无法仅凭此trace确定是否同时base_contact，亦无法判定实际接触对。"
+}

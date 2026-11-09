@@ -1,0 +1,25 @@
+{
+  "scripts": {
+    "train_observed.py": "09d0f3b5a86d227e90f4cf4a837e7b6c3262351c2cd28dca581dfaf08d6dc4ba",
+    "evaluate_observation.py": "7282af04f895620c1c839ce34b66a3c7a0cc9e9a9c92bec0889f3d35c634f811",
+    "run_a8000_observed.sh": "ab9d47f50e36a342b309f7f13fcc175984ba4e663622d36ca6ec2d652e610647"
+  },
+  "training_run": "/mnt/data_8THDD/myl_unifp_v3_stage1/runs/a8000_seed1_v3_v6r2_20261104",
+  "training_seed": 1,
+  "evaluation_seed": 1001,
+  "evaluation_push_seed": 2001,
+  "health_interval": 1000,
+  "evaluation_iterations": [
+    2000,
+    4000,
+    6000,
+    8000
+  ],
+  "evaluation_num_envs": 32,
+  "evaluation_episodes_per_env": 3,
+  "physical_failure_action": "save_complete_boundary_and_stop",
+  "nan_action": "original_failure_exit",
+  "intermediate_threshold_failure_action": "record_only",
+  "source_commit": "6f93215118373445edd38c96b70aa5c88f17829d",
+  "notes_zh": "使用训练GPU1；评估是独立解释器，训练环境保留并在保存边界等待；额外评估耗时不包含21小时估算。中途评估不是A8000验收。"
+}

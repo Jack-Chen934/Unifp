@@ -1,0 +1,18 @@
+{
+  "checked_at": "2026-11-08T20:23:47.750222+08:00",
+  "hostname": "gpuf3",
+  "formal_pid": 1981990,
+  "training_alive": true,
+  "formal_process": "1981990    02:56:39 /mnt/data_8THDD/conda_envs/unifp_v3_stage1/bin/python tools/train_v3_b_observed.py --reproduction_part B --run_purpose formal --seed 1 --num_envs 4096 --resume /mnt/data_8THDD/myl_unifp_v3_stage1/runs/b32000_seed1_v3_v6r2_from_a8000_20261108/checkpoints/model_012000.pt --start_evidence /mnt/data_8THDD/myl_unifp_v3_stage1/validation/b_stage_20261107_r01/resume_evidence12000_20261108/start_evidence.json --manifest configs/v3_b_initial_v1.json --output_dir /mnt/data_8THDD/myl_unifp_v3_stage1/runs/b32000_seed1_v3_v6r2_resume12000_20261108 --sim_device cuda:0 --rl_device cuda:0 --pipeline gpu --num_threads 4 --headless",
+  "completed_iterations": 12629,
+  "latest_scalar_metrics_finite": true,
+  "failure_json_exists": false,
+  "diagnostic_processes": [],
+  "excluded_inspection_pid": 2009629,
+  "next_full_observation": 16000,
+  "formal_budget": 40000,
+  "cross_end_sha256": {
+    "audit_std_updates.py": "7fe2781d6eb1e143d9a5cdc9495fa77029c28a3cf7099b3fa12c1b7b9e98e959",
+    "std_updates.json": "ca2052e55871f4dd475826474b8d48ada171f131dc9815dbfda598ab68a71cd9"
+  }
+}

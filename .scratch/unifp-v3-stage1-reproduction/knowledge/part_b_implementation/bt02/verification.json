@@ -1,0 +1,31 @@
+{
+  "ticket": "B-T02",
+  "status": "单元与相关回归通过；原生两端验收在B-T07",
+  "tests": {
+    "passed": 23,
+    "files": [
+      "test_v3_force_events.py",
+      "test_v3_force_transitions.py",
+      "test_v3_rewards.py",
+      "test_v3_run_identity.py",
+      "test_v3_runner.py",
+      "test_v3_ppo.py",
+      "test_v3_rollout_storage.py"
+    ],
+    "runtime": "Python3.8 / torch231 / CPU；Gym先于Torch导入"
+  },
+  "review": [
+    "8子步GLOBAL_SPACE提交同一外力，torque=None，命令力不提交",
+    "上一转移标签与pending隔离，当前yaw逆旋转只缩放一次",
+    "真实294终止快照先clone，物理失败优先，局部reset清历史",
+    "A零概率不多耗随机数，旧A身份hash兼容"
+  ],
+  "sha256": {
+    "UniFP_v3/legged_gym/envs/v3/legged_robot_v3.py": "1b404cc4d2e6c3966732f7b7721e6927ba98db571fab2bc1529f07c3d6fe33d7",
+    "UniFP_v3/legged_gym/envs/v3/v3_pos_force_config.py": "93af20919c7b6f4095216c9824f26b26678b1fe76eab164f027bd6a8018886e3",
+    "UniFP_v3/legged_gym/utils/v3_config.py": "f2623389df5c1a30023bb2948a0355eea5578a9061b8f5496883145862474de1",
+    "UniFP_v3/legged_gym/b2_gym_learn/ppo_cse_pf/v3_run_identity.py": "9ada9a7dd02808071f2d5395e475a79e21c875c0d955d4929ac32f42a903c6d3",
+    "UniFP_v3/tests/test_v3_force_events.py": "0c0b76402a6787163984af8f63cb70c7b4853eb23d1e3dd9c199459d27a801f9",
+    "UniFP_v3/tests/test_v3_force_transitions.py": "df5f76973cf30c6fc94b5b3a92d485f728b5174a5bf4bac9bec92f2063455f91"
+  }
+}

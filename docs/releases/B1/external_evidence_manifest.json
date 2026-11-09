@@ -1,0 +1,479 @@
+{
+  "说明": "文件保留原位置，Git仅记录哈希和路径；本清单不等于已备份文件内容。不删除原数据。",
+  "files": [
+    {
+      "path": ".scratch/unifp-v3-failure-visualization/artifacts/contact_classification_20261107/v8_seed1001_step838_env117.html",
+      "absolute_local_path": "/home/sorry/python_ws/interactive/unifp_reproduction/.scratch/unifp-v3-failure-visualization/artifacts/contact_classification_20261107/v8_seed1001_step838_env117.html",
+      "size_bytes": 58207095,
+      "sha256": "0b49eddb0147bebcef5ee575dd546dff236361db70952fe0d1cb2a9fdcd20cc0",
+      "git_content_included": false,
+      "retained_in_place": true
+    },
+    {
+      "path": ".scratch/unifp-v3-failure-visualization/artifacts/contact_classification_20261107/v8_seed1002_step2669_env126.html",
+      "absolute_local_path": "/home/sorry/python_ws/interactive/unifp_reproduction/.scratch/unifp-v3-failure-visualization/artifacts/contact_classification_20261107/v8_seed1002_step2669_env126.html",
+      "size_bytes": 58236118,
+      "sha256": "a04f8889cbb1b5c40455ca879d187661edaeeecd269d49c4e6f0dd5fa07212c4",
+      "git_content_included": false,
+      "retained_in_place": true
+    },
+    {
+      "path": ".scratch/unifp-v3-failure-visualization/artifacts/contact_classification_20261107/v8_seed1003_step97_env96.html",
+      "absolute_local_path": "/home/sorry/python_ws/interactive/unifp_reproduction/.scratch/unifp-v3-failure-visualization/artifacts/contact_classification_20261107/v8_seed1003_step97_env96.html",
+      "size_bytes": 58509002,
+      "sha256": "c15953618517a3dd13ff44478f172b561dbdf201f671b9a0d4a49a55ebd28876",
+      "git_content_included": false,
+      "retained_in_place": true
+    },
+    {
+      "path": ".scratch/unifp-v3-failure-visualization/artifacts/v3_seed1_S1_8000.mp4",
+      "absolute_local_path": "/home/sorry/python_ws/interactive/unifp_reproduction/.scratch/unifp-v3-failure-visualization/artifacts/v3_seed1_S1_8000.mp4",
+      "size_bytes": 3500320,
+      "sha256": "b489b6f277ce62e9c6f20fb52f36eaaa3bc0d735768ede2d6fd13cdfe1fd067a",
+      "git_content_included": false,
+      "retained_in_place": true
+    },
+    {
+      "path": ".scratch/unifp-v3-failure-visualization/artifacts/video_s1_unflipped/policy.mp4",
+      "absolute_local_path": "/home/sorry/python_ws/interactive/unifp_reproduction/.scratch/unifp-v3-failure-visualization/artifacts/video_s1_unflipped/policy.mp4",
+      "size_bytes": 3148846,
+      "sha256": "bebda2cbc4d032454c979e88f500c62b5edd874d9d1d330f729f96e809d15a22",
+      "git_content_included": false,
+      "retained_in_place": true
+    },
+    {
+      "path": ".scratch/unifp-v3-stage1-reproduction/knowledge/model_history/unifp-v3-collision-optimization/knowledge/a8000_analysis_20261104/iterations.jsonl",
+      "absolute_local_path": "/home/sorry/python_ws/interactive/unifp_reproduction/.scratch/unifp-v3-stage1-reproduction/knowledge/model_history/unifp-v3-collision-optimization/knowledge/a8000_analysis_20261104/iterations.jsonl",
+      "size_bytes": 21606454,
+      "sha256": "e3b6a692adbe8159d63feac0cbe7e1a307f1f64112a3a228b9af772fa71a0971",
+      "git_content_included": false,
+      "retained_in_place": true
+    },
+    {
+      "path": ".scratch/unifp-v3-stage1-reproduction/knowledge/part_b_implementation/bt05/native_video_r03/static_half_E/representative_env0_episode0.mp4",
+      "absolute_local_path": "/home/sorry/python_ws/interactive/unifp_reproduction/.scratch/unifp-v3-stage1-reproduction/knowledge/part_b_implementation/bt05/native_video_r03/static_half_E/representative_env0_episode0.mp4",
+      "size_bytes": 264595,
+      "sha256": "2862e241bbccf5d1f3c29c75f0cb74bc84b0adb9ff6c413437a10730ec27df22",
+      "git_content_included": false,
+      "retained_in_place": true
+    },
+    {
+      "path": ".scratch/unifp-v3-stage1-reproduction/knowledge/part_b_implementation/bt06/native_contact_r01/contact/policy_trace.jsonl",
+      "absolute_local_path": "/home/sorry/python_ws/interactive/unifp_reproduction/.scratch/unifp-v3-stage1-reproduction/knowledge/part_b_implementation/bt06/native_contact_r01/contact/policy_trace.jsonl",
+      "size_bytes": 21393110,
+      "sha256": "8ff8687c9c09e2cc66439f4e7b7ac496eddeb20c0b98d21129de54ac859fe1f6",
+      "git_content_included": false,
+      "retained_in_place": true
+    },
+    {
+      "path": ".scratch/unifp-v3-stage1-reproduction/knowledge/part_b_implementation/bt06/native_contact_r01/contact/representative_env0_episode0.mp4",
+      "absolute_local_path": "/home/sorry/python_ws/interactive/unifp_reproduction/.scratch/unifp-v3-stage1-reproduction/knowledge/part_b_implementation/bt06/native_contact_r01/contact/representative_env0_episode0.mp4",
+      "size_bytes": 329925,
+      "sha256": "9fadddc5e0c9f0e37ff5c5d41371b47fb1e80fce30e30452e54a45b4324d05bb",
+      "git_content_included": false,
+      "retained_in_place": true
+    },
+    {
+      "path": ".scratch/unifp-v3-stage1-reproduction/knowledge/part_b_implementation/bt06/native_contact_r01/contact/representative_env0_episode1.mp4",
+      "absolute_local_path": "/home/sorry/python_ws/interactive/unifp_reproduction/.scratch/unifp-v3-stage1-reproduction/knowledge/part_b_implementation/bt06/native_contact_r01/contact/representative_env0_episode1.mp4",
+      "size_bytes": 327855,
+      "sha256": "947dab597b9ed75f899c6df830900e9dc70fb732351fe016e4f8ea8bacbd644a",
+      "git_content_included": false,
+      "retained_in_place": true
+    },
+    {
+      "path": ".scratch/unifp-v3-stage1-reproduction/knowledge/part_b_implementation/bt06/native_contact_r01/zero_control/policy_trace.jsonl",
+      "absolute_local_path": "/home/sorry/python_ws/interactive/unifp_reproduction/.scratch/unifp-v3-stage1-reproduction/knowledge/part_b_implementation/bt06/native_contact_r01/zero_control/policy_trace.jsonl",
+      "size_bytes": 10663986,
+      "sha256": "b66d451c54de2d06fec1515ab4ad13e633b717543f0bedbe28ef404abbf5e896",
+      "git_content_included": false,
+      "retained_in_place": true
+    },
+    {
+      "path": ".scratch/unifp-v3-stage1-reproduction/knowledge/part_b_implementation/bt06/native_contact_r01/zero_control/representative_env0_episode0.mp4",
+      "absolute_local_path": "/home/sorry/python_ws/interactive/unifp_reproduction/.scratch/unifp-v3-stage1-reproduction/knowledge/part_b_implementation/bt06/native_contact_r01/zero_control/representative_env0_episode0.mp4",
+      "size_bytes": 328430,
+      "sha256": "2b066da9a832237cb424a4e88324f78c55b9342a99e43cfc327016be8de8002d",
+      "git_content_included": false,
+      "retained_in_place": true
+    },
+    {
+      "path": ".scratch/unifp-v3-stage1-reproduction/knowledge/part_b_implementation/bt06/native_contact_r02/contact/policy_trace.jsonl",
+      "absolute_local_path": "/home/sorry/python_ws/interactive/unifp_reproduction/.scratch/unifp-v3-stage1-reproduction/knowledge/part_b_implementation/bt06/native_contact_r02/contact/policy_trace.jsonl",
+      "size_bytes": 10701170,
+      "sha256": "5016203a904e6f7431aa935ce310891f79086a00055286ac0eef59343f5ee4b5",
+      "git_content_included": false,
+      "retained_in_place": true
+    },
+    {
+      "path": ".scratch/unifp-v3-stage1-reproduction/knowledge/part_b_implementation/bt06/native_contact_r02/contact/representative_env0_episode0.mp4",
+      "absolute_local_path": "/home/sorry/python_ws/interactive/unifp_reproduction/.scratch/unifp-v3-stage1-reproduction/knowledge/part_b_implementation/bt06/native_contact_r02/contact/representative_env0_episode0.mp4",
+      "size_bytes": 309544,
+      "sha256": "901c446ea8296fe31448bbeef2b866b441e08863a68c0875674fa60f560d78e4",
+      "git_content_included": false,
+      "retained_in_place": true
+    },
+    {
+      "path": ".scratch/unifp-v3-stage1-reproduction/knowledge/part_b_implementation/bt06/native_contact_r02/contact/representative_env0_episode1.mp4",
+      "absolute_local_path": "/home/sorry/python_ws/interactive/unifp_reproduction/.scratch/unifp-v3-stage1-reproduction/knowledge/part_b_implementation/bt06/native_contact_r02/contact/representative_env0_episode1.mp4",
+      "size_bytes": 340778,
+      "sha256": "e1e5f23e590ec8c30dcd7a5feba75259306176e31b652fb3a203330e479bf331",
+      "git_content_included": false,
+      "retained_in_place": true
+    },
+    {
+      "path": ".scratch/unifp-v3-stage1-reproduction/knowledge/part_b_implementation/bt06/native_contact_r02/zero_control/representative_env0_episode0.mp4",
+      "absolute_local_path": "/home/sorry/python_ws/interactive/unifp_reproduction/.scratch/unifp-v3-stage1-reproduction/knowledge/part_b_implementation/bt06/native_contact_r02/zero_control/representative_env0_episode0.mp4",
+      "size_bytes": 305050,
+      "sha256": "3197db96fa12c71128b945418dc2bb62a85ac13cef2cfd252966f8b150736a1c",
+      "git_content_included": false,
+      "retained_in_place": true
+    },
+    {
+      "path": ".scratch/unifp-v3-stage1-reproduction/knowledge/part_b_implementation/bt07/local_contact_interface/contact_probe_trace.jsonl",
+      "absolute_local_path": "/home/sorry/python_ws/interactive/unifp_reproduction/.scratch/unifp-v3-stage1-reproduction/knowledge/part_b_implementation/bt07/local_contact_interface/contact_probe_trace.jsonl",
+      "size_bytes": 11880149,
+      "sha256": "81273eac2a5ce52b00594fc1f88a331a3b7f15732e9f8495fa13f6871d0e69dd",
+      "git_content_included": false,
+      "retained_in_place": true
+    },
+    {
+      "path": ".scratch/unifp-v3-stage1-reproduction/knowledge/part_b_implementation/bt07/local_contact_interface_r02/contact/policy_trace.jsonl",
+      "absolute_local_path": "/home/sorry/python_ws/interactive/unifp_reproduction/.scratch/unifp-v3-stage1-reproduction/knowledge/part_b_implementation/bt07/local_contact_interface_r02/contact/policy_trace.jsonl",
+      "size_bytes": 23720245,
+      "sha256": "24bc04d8025751a7788fa968d47f7c7cda4224b03e74769c6f3ce6e1701ab800",
+      "git_content_included": false,
+      "retained_in_place": true
+    },
+    {
+      "path": ".scratch/unifp-v3-stage1-reproduction/knowledge/part_b_implementation/bt07/local_contact_interface_r02/contact_probe_trace.jsonl",
+      "absolute_local_path": "/home/sorry/python_ws/interactive/unifp_reproduction/.scratch/unifp-v3-stage1-reproduction/knowledge/part_b_implementation/bt07/local_contact_interface_r02/contact_probe_trace.jsonl",
+      "size_bytes": 13487776,
+      "sha256": "dcc3f74552ff7b5ab45b945c3dfc9bfb5d6a5133443b3638b21ce5533f562a4c",
+      "git_content_included": false,
+      "retained_in_place": true
+    },
+    {
+      "path": ".scratch/unifp-v3-stage1-reproduction/knowledge/part_b_implementation/bt07/local_contact_interface_r02/zero_control/policy_trace.jsonl",
+      "absolute_local_path": "/home/sorry/python_ws/interactive/unifp_reproduction/.scratch/unifp-v3-stage1-reproduction/knowledge/part_b_implementation/bt07/local_contact_interface_r02/zero_control/policy_trace.jsonl",
+      "size_bytes": 23593884,
+      "sha256": "8475685e8d709f6aa1a0b0b3e445b0bf6ac39dd37ee210913fe458f6e8fd834f",
+      "git_content_included": false,
+      "retained_in_place": true
+    },
+    {
+      "path": ".scratch/unifp-v3-stage1-reproduction/knowledge/part_b_implementation/bt07/local_random_force_r02/R0/training_iterations.jsonl",
+      "absolute_local_path": "/home/sorry/python_ws/interactive/unifp_reproduction/.scratch/unifp-v3-stage1-reproduction/knowledge/part_b_implementation/bt07/local_random_force_r02/R0/training_iterations.jsonl",
+      "size_bytes": 19090864,
+      "sha256": "1415945954447903c2aae501e5f508909484132d46cb3ae233010dd24e34f4da",
+      "git_content_included": false,
+      "retained_in_place": true
+    },
+    {
+      "path": ".scratch/unifp-v3-stage1-reproduction/knowledge/part_b_implementation/bt07/local_source/UniFP_v3/resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/camera.visual.glb",
+      "absolute_local_path": "/home/sorry/python_ws/interactive/unifp_reproduction/.scratch/unifp-v3-stage1-reproduction/knowledge/part_b_implementation/bt07/local_source/UniFP_v3/resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/camera.visual.glb",
+      "size_bytes": 9401176,
+      "sha256": "af85717a5169965ee71e76bf2b819e42b1a6e86d9d8cbc3d353c888547e2e63f",
+      "git_content_included": false,
+      "retained_in_place": true
+    },
+    {
+      "path": ".scratch/unifp-v3-stage1-reproduction/knowledge/part_b_implementation/bt07/local_source/UniFP_v3/resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/left_camera.visual.glb",
+      "absolute_local_path": "/home/sorry/python_ws/interactive/unifp_reproduction/.scratch/unifp-v3-stage1-reproduction/knowledge/part_b_implementation/bt07/local_source/UniFP_v3/resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/left_camera.visual.glb",
+      "size_bytes": 9401184,
+      "sha256": "8d12fbda107daf3ebd6dfeffe03b6471c38454671eed13a74fe28c9d77da606f",
+      "git_content_included": false,
+      "retained_in_place": true
+    },
+    {
+      "path": ".scratch/unifp-v3-stage1-reproduction/knowledge/part_b_implementation/bt07/local_source/UniFP_v3/resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/right_camera.visual.glb",
+      "absolute_local_path": "/home/sorry/python_ws/interactive/unifp_reproduction/.scratch/unifp-v3-stage1-reproduction/knowledge/part_b_implementation/bt07/local_source/UniFP_v3/resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/right_camera.visual.glb",
+      "size_bytes": 9401188,
+      "sha256": "9ed53bbf83fd0029e33f66626cb47d8656876852594c74ea00d4110c72940144",
+      "git_content_included": false,
+      "retained_in_place": true
+    },
+    {
+      "path": ".scratch/unifp-v3-stage1-reproduction/knowledge/part_b_implementation/bt07/parent/iterations.jsonl",
+      "absolute_local_path": "/home/sorry/python_ws/interactive/unifp_reproduction/.scratch/unifp-v3-stage1-reproduction/knowledge/part_b_implementation/bt07/parent/iterations.jsonl",
+      "size_bytes": 19090864,
+      "sha256": "1415945954447903c2aae501e5f508909484132d46cb3ae233010dd24e34f4da",
+      "git_content_included": false,
+      "retained_in_place": true
+    },
+    {
+      "path": ".scratch/unifp-v3-stage1-reproduction/knowledge/part_b_implementation/bt08/check_12000_20261108/iterations.jsonl",
+      "absolute_local_path": "/home/sorry/python_ws/interactive/unifp_reproduction/.scratch/unifp-v3-stage1-reproduction/knowledge/part_b_implementation/bt08/check_12000_20261108/iterations.jsonl",
+      "size_bytes": 10803279,
+      "sha256": "3f8b477778472642523adaa7b5fc945247f71f962f0066cd408700be29b61d69",
+      "git_content_included": false,
+      "retained_in_place": true
+    },
+    {
+      "path": ".scratch/unifp-v3-stage1-reproduction/knowledge/part_b_implementation/bt10_diagnosis_20261108/R2_policy.mp4",
+      "absolute_local_path": "/home/sorry/python_ws/interactive/unifp_reproduction/.scratch/unifp-v3-stage1-reproduction/knowledge/part_b_implementation/bt10_diagnosis_20261108/R2_policy.mp4",
+      "size_bytes": 70591,
+      "sha256": "5bc814cc9f29d31f57d359ea039efaa77005a7e362df8179823f89dad70103c9",
+      "git_content_included": false,
+      "retained_in_place": true
+    },
+    {
+      "path": ".scratch/unifp-v3-stage1-reproduction/knowledge/part_b_implementation/bt10_diagnosis_20261108/action_execution/analysis.json",
+      "absolute_local_path": "/home/sorry/python_ws/interactive/unifp_reproduction/.scratch/unifp-v3-stage1-reproduction/knowledge/part_b_implementation/bt10_diagnosis_20261108/action_execution/analysis.json",
+      "size_bytes": 10599168,
+      "sha256": "b6bf17652b7b92e60c561f3522966d37ca67379a0f79e975f569a6d16b1426a4",
+      "git_content_included": false,
+      "retained_in_place": true
+    },
+    {
+      "path": ".scratch/unifp-v3-stage1-reproduction/knowledge/part_b_implementation/bt10_diagnosis_20261108/action_execution/check_12000_mean/trace.npz",
+      "absolute_local_path": "/home/sorry/python_ws/interactive/unifp_reproduction/.scratch/unifp-v3-stage1-reproduction/knowledge/part_b_implementation/bt10_diagnosis_20261108/action_execution/check_12000_mean/trace.npz",
+      "size_bytes": 153298698,
+      "sha256": "43bd05f3aab6191c43bc460cfc319aa461211329f4dc14254c7d3f350daee9ba",
+      "git_content_included": false,
+      "retained_in_place": true
+    },
+    {
+      "path": ".scratch/unifp-v3-stage1-reproduction/knowledge/part_b_implementation/bt10_diagnosis_20261108/action_execution/check_12000_sample/trace.npz",
+      "absolute_local_path": "/home/sorry/python_ws/interactive/unifp_reproduction/.scratch/unifp-v3-stage1-reproduction/knowledge/part_b_implementation/bt10_diagnosis_20261108/action_execution/check_12000_sample/trace.npz",
+      "size_bytes": 153208920,
+      "sha256": "326b966bd401372357364093648c10d6716cf3b958aef9912d2e8c38e8f9ef7d",
+      "git_content_included": false,
+      "retained_in_place": true
+    },
+    {
+      "path": ".scratch/unifp-v3-stage1-reproduction/knowledge/part_b_implementation/bt10_diagnosis_20261108/action_execution/check_9000_mean/trace.npz",
+      "absolute_local_path": "/home/sorry/python_ws/interactive/unifp_reproduction/.scratch/unifp-v3-stage1-reproduction/knowledge/part_b_implementation/bt10_diagnosis_20261108/action_execution/check_9000_mean/trace.npz",
+      "size_bytes": 124201263,
+      "sha256": "465800a02698746d5b742b1babe5b9c989e9d08fe0a9e9cb85f00f626c74b4b9",
+      "git_content_included": false,
+      "retained_in_place": true
+    },
+    {
+      "path": ".scratch/unifp-v3-stage1-reproduction/knowledge/part_b_implementation/bt10_diagnosis_20261108/action_execution/check_9000_sample/trace.npz",
+      "absolute_local_path": "/home/sorry/python_ws/interactive/unifp_reproduction/.scratch/unifp-v3-stage1-reproduction/knowledge/part_b_implementation/bt10_diagnosis_20261108/action_execution/check_9000_sample/trace.npz",
+      "size_bytes": 124226264,
+      "sha256": "ea963b8d6713f0e2c32c85b2ca56dbc4cfcccc75f5c8a36c649498f3414b9168",
+      "git_content_included": false,
+      "retained_in_place": true
+    },
+    {
+      "path": ".scratch/unifp-v3-stage1-reproduction/knowledge/part_b_implementation/bt10_diagnosis_20261108/contact_0N.mp4",
+      "absolute_local_path": "/home/sorry/python_ws/interactive/unifp_reproduction/.scratch/unifp-v3-stage1-reproduction/knowledge/part_b_implementation/bt10_diagnosis_20261108/contact_0N.mp4",
+      "size_bytes": 544407,
+      "sha256": "a9d375eab6911badb69ac71c532beeed16e8fd4408e357d9ad4ad06bbd03e010",
+      "git_content_included": false,
+      "retained_in_place": true
+    },
+    {
+      "path": ".scratch/unifp-v3-stage1-reproduction/knowledge/part_b_implementation/bt10_diagnosis_20261108/contact_10N.mp4",
+      "absolute_local_path": "/home/sorry/python_ws/interactive/unifp_reproduction/.scratch/unifp-v3-stage1-reproduction/knowledge/part_b_implementation/bt10_diagnosis_20261108/contact_10N.mp4",
+      "size_bytes": 603313,
+      "sha256": "25199464e05191f255b215b930110fa3c1591f28008583a3bae37cb3de5ca575",
+      "git_content_included": false,
+      "retained_in_place": true
+    },
+    {
+      "path": ".scratch/unifp-v3-stage1-reproduction/knowledge/part_b_implementation/bt10_diagnosis_20261108/contact_20N.mp4",
+      "absolute_local_path": "/home/sorry/python_ws/interactive/unifp_reproduction/.scratch/unifp-v3-stage1-reproduction/knowledge/part_b_implementation/bt10_diagnosis_20261108/contact_20N.mp4",
+      "size_bytes": 550810,
+      "sha256": "d56ad97846ec16b602c07c30747218d0b02ee4cd75058c3b2b9f8f5c03abd860",
+      "git_content_included": false,
+      "retained_in_place": true
+    },
+    {
+      "path": ".scratch/unifp-v3-stage1-reproduction/knowledge/part_b_implementation/bt10_diagnosis_20261108/geometry_final/probe_12000_mean_event0.html",
+      "absolute_local_path": "/home/sorry/python_ws/interactive/unifp_reproduction/.scratch/unifp-v3-stage1-reproduction/knowledge/part_b_implementation/bt10_diagnosis_20261108/geometry_final/probe_12000_mean_event0.html",
+      "size_bytes": 21231849,
+      "sha256": "8e287d1d7ea01af6cbc8a87fd0562ccc820457914715812f1595ec4c50ef927b",
+      "git_content_included": false,
+      "retained_in_place": true
+    },
+    {
+      "path": ".scratch/unifp-v3-stage1-reproduction/knowledge/part_b_implementation/bt10_diagnosis_20261108/geometry_final/probe_12000_mean_event2.html",
+      "absolute_local_path": "/home/sorry/python_ws/interactive/unifp_reproduction/.scratch/unifp-v3-stage1-reproduction/knowledge/part_b_implementation/bt10_diagnosis_20261108/geometry_final/probe_12000_mean_event2.html",
+      "size_bytes": 26035011,
+      "sha256": "51ee861941ca2e95c9ed52672749725e9dbb0fe443bf1ebfbe89e3735b440e02",
+      "git_content_included": false,
+      "retained_in_place": true
+    },
+    {
+      "path": ".scratch/unifp-v3-stage1-reproduction/knowledge/part_b_implementation/bt10_diagnosis_20261108/geometry_final/probe_12000_mean_event5.html",
+      "absolute_local_path": "/home/sorry/python_ws/interactive/unifp_reproduction/.scratch/unifp-v3-stage1-reproduction/knowledge/part_b_implementation/bt10_diagnosis_20261108/geometry_final/probe_12000_mean_event5.html",
+      "size_bytes": 20941465,
+      "sha256": "507d9b9806d5630cedf75778b3552a930796040e110256053d37607c8c23d19a",
+      "git_content_included": false,
+      "retained_in_place": true
+    },
+    {
+      "path": ".scratch/unifp-v3-stage1-reproduction/knowledge/part_b_implementation/bt10_diagnosis_20261108/geometry_final/probe_12000_mean_event8.html",
+      "absolute_local_path": "/home/sorry/python_ws/interactive/unifp_reproduction/.scratch/unifp-v3-stage1-reproduction/knowledge/part_b_implementation/bt10_diagnosis_20261108/geometry_final/probe_12000_mean_event8.html",
+      "size_bytes": 26050744,
+      "sha256": "84f13a5e299ac17759c39001b4c35c93413b9a9e6a2864901025d3d4fc8bb784",
+      "git_content_included": false,
+      "retained_in_place": true
+    },
+    {
+      "path": ".scratch/unifp-v3-stage1-reproduction/knowledge/part_b_implementation/bt10_diagnosis_20261108/geometry_final/probe_12000_sample_event12.html",
+      "absolute_local_path": "/home/sorry/python_ws/interactive/unifp_reproduction/.scratch/unifp-v3-stage1-reproduction/knowledge/part_b_implementation/bt10_diagnosis_20261108/geometry_final/probe_12000_sample_event12.html",
+      "size_bytes": 20759575,
+      "sha256": "cc10e40b2310658351894402011d97c01cc3fa0bb55739e6bffe296c8d284d65",
+      "git_content_included": false,
+      "retained_in_place": true
+    },
+    {
+      "path": ".scratch/unifp-v3-stage1-reproduction/knowledge/part_b_implementation/bt10_diagnosis_20261108/geometry_final/probe_12000_sample_event14.html",
+      "absolute_local_path": "/home/sorry/python_ws/interactive/unifp_reproduction/.scratch/unifp-v3-stage1-reproduction/knowledge/part_b_implementation/bt10_diagnosis_20261108/geometry_final/probe_12000_sample_event14.html",
+      "size_bytes": 21232761,
+      "sha256": "255fb54cb867fe42c4de3356479c23d2cbd97cb593774330df4d301405be75af",
+      "git_content_included": false,
+      "retained_in_place": true
+    },
+    {
+      "path": ".scratch/unifp-v3-stage1-reproduction/knowledge/part_b_implementation/bt10_diagnosis_20261108/geometry_final/probe_12000_sample_event20.html",
+      "absolute_local_path": "/home/sorry/python_ws/interactive/unifp_reproduction/.scratch/unifp-v3-stage1-reproduction/knowledge/part_b_implementation/bt10_diagnosis_20261108/geometry_final/probe_12000_sample_event20.html",
+      "size_bytes": 20759740,
+      "sha256": "d19ce3144c4c2bb92ad7c4e6de5d351fdc394b628a1d3639ad0d3f6989d457ba",
+      "git_content_included": false,
+      "retained_in_place": true
+    },
+    {
+      "path": ".scratch/unifp-v3-stage1-reproduction/knowledge/part_b_implementation/bt10_diagnosis_20261108/geometry_final/probe_12000_sample_event5.html",
+      "absolute_local_path": "/home/sorry/python_ws/interactive/unifp_reproduction/.scratch/unifp-v3-stage1-reproduction/knowledge/part_b_implementation/bt10_diagnosis_20261108/geometry_final/probe_12000_sample_event5.html",
+      "size_bytes": 20939515,
+      "sha256": "4c22b0481a80ea74d1507222e1bdaab49dd2718c8723f764219a089c177d3d0c",
+      "git_content_included": false,
+      "retained_in_place": true
+    },
+    {
+      "path": ".scratch/unifp-v3-stage1-reproduction/knowledge/part_b_implementation/bt10_diagnosis_20261108/geometry_final/probe_12000_sample_event6.html",
+      "absolute_local_path": "/home/sorry/python_ws/interactive/unifp_reproduction/.scratch/unifp-v3-stage1-reproduction/knowledge/part_b_implementation/bt10_diagnosis_20261108/geometry_final/probe_12000_sample_event6.html",
+      "size_bytes": 21748255,
+      "sha256": "76f1fcd3ff5e3bc60872c4b3032e392d4c3ed286f4eb8b7d77ec070adf079b58",
+      "git_content_included": false,
+      "retained_in_place": true
+    },
+    {
+      "path": ".scratch/unifp-v3-stage1-reproduction/knowledge/part_b_implementation/bt10_diagnosis_20261108/geometry_final/probe_12000_sample_event8.html",
+      "absolute_local_path": "/home/sorry/python_ws/interactive/unifp_reproduction/.scratch/unifp-v3-stage1-reproduction/knowledge/part_b_implementation/bt10_diagnosis_20261108/geometry_final/probe_12000_sample_event8.html",
+      "size_bytes": 20939365,
+      "sha256": "c729a2879270145db03614c9131d7a7d6b30ac09d05cd7bb94b6d5efd6aa179f",
+      "git_content_included": false,
+      "retained_in_place": true
+    },
+    {
+      "path": ".scratch/unifp-v3-stage1-reproduction/knowledge/part_b_implementation/bt10_diagnosis_20261108/sequential_checks/check_10000/measurements.npz",
+      "absolute_local_path": "/home/sorry/python_ws/interactive/unifp_reproduction/.scratch/unifp-v3-stage1-reproduction/knowledge/part_b_implementation/bt10_diagnosis_20261108/sequential_checks/check_10000/measurements.npz",
+      "size_bytes": 13711541,
+      "sha256": "4ffd27b94b61d8a10d1f6451cc61d123d28f7c02dfc9f645e0f6e4fe64c665a6",
+      "git_content_included": false,
+      "retained_in_place": true
+    },
+    {
+      "path": ".scratch/unifp-v3-stage1-reproduction/knowledge/part_b_implementation/bt10_diagnosis_20261108/sequential_checks/check_12000/measurements.npz",
+      "absolute_local_path": "/home/sorry/python_ws/interactive/unifp_reproduction/.scratch/unifp-v3-stage1-reproduction/knowledge/part_b_implementation/bt10_diagnosis_20261108/sequential_checks/check_12000/measurements.npz",
+      "size_bytes": 14205938,
+      "sha256": "1750c2380b0ee131af0c38c83b868de574aed3835bd21d5d6b33a4b06a36b6a0",
+      "git_content_included": false,
+      "retained_in_place": true
+    },
+    {
+      "path": ".scratch/unifp-v3-stage1-reproduction/knowledge/part_b_implementation/bt10_diagnosis_20261108/sequential_checks/check_9000/measurements.npz",
+      "absolute_local_path": "/home/sorry/python_ws/interactive/unifp_reproduction/.scratch/unifp-v3-stage1-reproduction/knowledge/part_b_implementation/bt10_diagnosis_20261108/sequential_checks/check_9000/measurements.npz",
+      "size_bytes": 13392777,
+      "sha256": "0eecfd549599e6fcdc83659485d66e6c419f777a77ea97823ec2545b8d26c316",
+      "git_content_included": false,
+      "retained_in_place": true
+    },
+    {
+      "path": ".scratch/unifp-v3-stage1-reproduction/knowledge/part_b_implementation/entropy_closed_loop_20261108/analysis_20261109/remote_snapshot.json",
+      "absolute_local_path": "/home/sorry/python_ws/interactive/unifp_reproduction/.scratch/unifp-v3-stage1-reproduction/knowledge/part_b_implementation/entropy_closed_loop_20261108/analysis_20261109/remote_snapshot.json",
+      "size_bytes": 25969179,
+      "sha256": "d8a4f592735b77e080246a5cca217c90f9b2698c6ee0e888e3544a07dfd37cb3",
+      "git_content_included": false,
+      "retained_in_place": true
+    },
+    {
+      "path": ".scratch/unifp-v3-stage1-reproduction/knowledge/part_b_implementation/full_curves_critic_check_20261109/check_12000/derived_advantages.npz",
+      "absolute_local_path": "/home/sorry/python_ws/interactive/unifp_reproduction/.scratch/unifp-v3-stage1-reproduction/knowledge/part_b_implementation/full_curves_critic_check_20261109/check_12000/derived_advantages.npz",
+      "size_bytes": 1954495,
+      "sha256": "6a562887e0eeb77d33525462d30cb16d2f5f21ace057c494f2df38d739afaa2b",
+      "git_content_included": false,
+      "retained_in_place": true
+    },
+    {
+      "path": ".scratch/unifp-v3-stage1-reproduction/knowledge/part_b_implementation/full_curves_critic_check_20261109/check_12000/trajectory.npz",
+      "absolute_local_path": "/home/sorry/python_ws/interactive/unifp_reproduction/.scratch/unifp-v3-stage1-reproduction/knowledge/part_b_implementation/full_curves_critic_check_20261109/check_12000/trajectory.npz",
+      "size_bytes": 28771854,
+      "sha256": "767f1266b8249989fca2c450ee1bebe358e6766bf566c954fbb3d8c20af0a701",
+      "git_content_included": false,
+      "retained_in_place": true
+    },
+    {
+      "path": ".scratch/unifp-v3-stage1-reproduction/knowledge/part_b_implementation/full_curves_critic_check_20261109/check_16000/derived_advantages.npz",
+      "absolute_local_path": "/home/sorry/python_ws/interactive/unifp_reproduction/.scratch/unifp-v3-stage1-reproduction/knowledge/part_b_implementation/full_curves_critic_check_20261109/check_16000/derived_advantages.npz",
+      "size_bytes": 1953405,
+      "sha256": "82bccab8e4015f49a06bd48fe60fb3c7d7df6d07e2e71023ad384c08c1801715",
+      "git_content_included": false,
+      "retained_in_place": true
+    },
+    {
+      "path": ".scratch/unifp-v3-stage1-reproduction/knowledge/part_b_implementation/full_curves_critic_check_20261109/check_16000/trajectory.npz",
+      "absolute_local_path": "/home/sorry/python_ws/interactive/unifp_reproduction/.scratch/unifp-v3-stage1-reproduction/knowledge/part_b_implementation/full_curves_critic_check_20261109/check_16000/trajectory.npz",
+      "size_bytes": 28696239,
+      "sha256": "01b3c6a3f550aa7e48ed686e5493a1c0eadd2da6a2558b4fb30ce6d48449496e",
+      "git_content_included": false,
+      "retained_in_place": true
+    },
+    {
+      "path": ".scratch/unifp-v3-stage1-reproduction/knowledge/part_b_implementation/full_curves_critic_check_20261109/check_9000/derived_advantages.npz",
+      "absolute_local_path": "/home/sorry/python_ws/interactive/unifp_reproduction/.scratch/unifp-v3-stage1-reproduction/knowledge/part_b_implementation/full_curves_critic_check_20261109/check_9000/derived_advantages.npz",
+      "size_bytes": 1953251,
+      "sha256": "04ac61d609925f4346d5368082069c83fe42b1da447ff612647ffbc67129578b",
+      "git_content_included": false,
+      "retained_in_place": true
+    },
+    {
+      "path": ".scratch/unifp-v3-stage1-reproduction/knowledge/part_b_implementation/full_curves_critic_check_20261109/check_9000/trajectory.npz",
+      "absolute_local_path": "/home/sorry/python_ws/interactive/unifp_reproduction/.scratch/unifp-v3-stage1-reproduction/knowledge/part_b_implementation/full_curves_critic_check_20261109/check_9000/trajectory.npz",
+      "size_bytes": 27850914,
+      "sha256": "251c60b0d53052b8c67b1b75d8b3bab5bf66ab3457e1b41711d7f339cbee4d3b",
+      "git_content_included": false,
+      "retained_in_place": true
+    },
+    {
+      "path": ".scratch/unifp-v3-stage1-reproduction/knowledge/part_b_implementation/full_curves_critic_check_20261109/training_snapshot.json",
+      "absolute_local_path": "/home/sorry/python_ws/interactive/unifp_reproduction/.scratch/unifp-v3-stage1-reproduction/knowledge/part_b_implementation/full_curves_critic_check_20261109/training_snapshot.json",
+      "size_bytes": 42400263,
+      "sha256": "82660e22a46a03472c5ea8cb5e886c0681ccea162e931ff8f4be627ab1170622",
+      "git_content_included": false,
+      "retained_in_place": true
+    },
+    {
+      "path": "UniFP_v3/docs/experiments/legacy_reference/evidence/v3_reference_20261030/robot_description/a1arm_description/meshes/official_v3/ranger_base.glb",
+      "absolute_local_path": "/home/sorry/python_ws/interactive/unifp_reproduction/UniFP_v3/docs/experiments/legacy_reference/evidence/v3_reference_20261030/robot_description/a1arm_description/meshes/official_v3/ranger_base.glb",
+      "size_bytes": 12268024,
+      "sha256": "2f190f32211807ad4ab0218a561681b40e97ee6eded0e70473a5a4330fb549aa",
+      "git_content_included": false,
+      "retained_in_place": true
+    },
+    {
+      "path": "UniFP_v3/docs/experiments/legacy_reference/evidence/v3_reference_20261030/robot_description/a1arm_description/vendor/agilex_ranger_mini_v3/ranger_base.dae",
+      "absolute_local_path": "/home/sorry/python_ws/interactive/unifp_reproduction/UniFP_v3/docs/experiments/legacy_reference/evidence/v3_reference_20261030/robot_description/a1arm_description/vendor/agilex_ranger_mini_v3/ranger_base.dae",
+      "size_bytes": 38454037,
+      "sha256": "cf8d73c2d048b781f7dcd6d63122a79114836961ee347a9c5be716f5eef5501e",
+      "git_content_included": false,
+      "retained_in_place": true
+    },
+    {
+      "path": "checkpoints/B1/model_017800.pt",
+      "absolute_local_path": "/home/sorry/python_ws/interactive/unifp_reproduction/checkpoints/B1/model_017800.pt",
+      "remote_path": "/mnt/data_8THDD/myl_unifp_v3_stage1/runs/b32000_seed1_v3_v6r2_resume12000_20261108/checkpoints/model_017800.pt",
+      "size_bytes": 30095648,
+      "sha256": "fd591daeffe6ccb65cb082b251fdcfde039e90448da5a2bb3bd6cd193b53fbca",
+      "git_content_included": false,
+      "retained_in_place": true,
+      "remote_frozen_copy": "/mnt/data_8THDD/myl_unifp_v3_stage1/archives/B1_20261109/model_017800.pt"
+    }
+  ]
+}

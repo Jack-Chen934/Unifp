@@ -1,0 +1,20 @@
+Importing module 'gym_38' (/mnt/data_8THDD/myl_unifp/isaacgym/python/isaacgym/_bindings/linux-x86_64/gym_38.so)
+Setting GYM_USD_PLUG_INFO_PATH to /mnt/data_8THDD/myl_unifp/isaacgym/python/isaacgym/_bindings/linux-x86_64/usd/plugInfo.json
+PyTorch version 2.3.1+cu121
+Device count 1
+/mnt/data_8THDD/myl_unifp/isaacgym/python/isaacgym/_bindings/src/gymtorch
+Using /mnt/data_8THDD/myl_unifp_v3_stage1/cache/torch_extensions as PyTorch extensions root...
+Emitting ninja build file /mnt/data_8THDD/myl_unifp_v3_stage1/cache/torch_extensions/gymtorch/build.ninja...
+Building extension module gymtorch...
+Using envvar MAX_JOBS (2) as the number of workers...
+ninja: no work to do.
+Not connected to PVD
++++ Using GPU PhysX
+Physics Engine: PhysX
+Physics Device: cuda:0
+GPU Pipeline: enabled
+Setting seed: 1
+{"passed": true, "num_envs": 4, "seed": 1, "records": [{"boundary": "constructor_reset", "tcp_world_m": [0.4157872498035431, 4.0306581468030345e-06, 1.1968613862991333], "tcp_fk_error_m": 8.275107541153957e-08, "raw_cache_fk_error_m": 1.455775667915572, "target_fk_error_m": 1.0815555664723788e-07, "label_error": 0.0, "critic_label_error": 0.0}, {"boundary": "local_reset", "tcp_world_m": [0.4157872498035431, 4.0306581468030345e-06, 1.1968613862991333], "tcp_fk_error_m": 8.275107541153957e-08, "raw_cache_fk_error_m": 0.7119864096340034, "target_fk_error_m": 1.0815555664723788e-07, "label_error": 0.0, "critic_label_error": 0.0}, {"boundary": "after_physics", "tcp_world_m": [0.4157872498035431, 4.030690433864947e-06, 1.1946539878845215], "tcp_fk_error_m": 7.763132134349301e-08, "raw_cache_fk_error_m": 5.577994514651388e-07, "target_fk_error_m": 0.002207358304363809, "label_error": 0.0, "critic_label_error": 0.0}], "other_row_differences": {"root_states": 0.0, "dof_pos": 0.0, "dof_vel": 0.0, "obs_history": 0.0, "critic_history": 0.0, "episode_length_buf": 0.0}, "training_counters_unchanged": true}
+Loading extension module gymtorch...
+/mnt/data_8THDD/conda_envs/unifp_v3_stage1/lib/python3.8/site-packages/torch/functional.py:512: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3587.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]

@@ -1,0 +1,52 @@
+Importing module 'gym_38' (/home/sorry/.cache/unifp/isaacgym_preview4/pkg/isaacgym/python/isaacgym/_bindings/linux-x86_64/gym_38.so)
+Setting GYM_USD_PLUG_INFO_PATH to /home/sorry/.cache/unifp/isaacgym_preview4/pkg/isaacgym/python/isaacgym/_bindings/linux-x86_64/usd/plugInfo.json
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_ test_contact_summary_keeps_failed_and_ambiguous_episodes_in_the_denominator __
+
+    def test_contact_summary_keeps_failed_and_ambiguous_episodes_in_the_denominator() -> None:
+        """Count one clean success, one missing failure and one polluted full episode.
+    
+        Raises:
+            AssertionError: Filtering invalid samples inflates success or a zero force
+                from a valid sensor is treated as missing measurement.
+        """
+        import json
+        from pathlib import Path
+        from legged_gym.b2_gym_learn.ppo_cse_pf.v3_evaluation import summarize_contact_evaluation
+    
+        manifest = json.loads(Path("configs/v3_b_contact_v1.json").read_text())
+        manifest.update(num_envs=1, episodes_per_env=3)
+        rows, episodes = [], []
+        for episode_index in range(3):
+            peak_n = 10. if episode_index % 2 == 0 else 20.
+            for step in range(1000 if episode_index < 2 else 1):
+                normal_n = peak_n if 450 <= step < 550 else 0.
+                rows.append({"env_id": 0, "episode_index": episode_index,
+                             "policy_input_time_s": step * .019999999552965164,
+                             "contact_peak_n": peak_n, "contact_measurement_valid": episode_index < 2,
+                             "contact_status": "ambiguous_contact" if episode_index == 1 else
+                                               "clean_expected_contact" if normal_n else "no_contact",
+                             "wall_force_mean_world_n": [normal_n, 0., 0.]})
+            episodes.append({"env_id": 0, "episode_index": episode_index,
+                             "end_type": "physical_failure" if episode_index == 2 else "timeout"})
+        summary = summarize_contact_evaluation(rows, episodes, manifest, zero_control=False)
+        assert summary["amplitudes"]["half"]["expected_episodes"] == 2
+>       assert summary["amplitudes"]["half"]["success_rate"] == .5
+E       assert 0.0 == 0.5
+
+tests/test_v3_contact_evaluation.py:201: AssertionError
+=============================== warnings summary ===============================
+../../../../.cache/unifp/isaacgym_preview4/pkg/isaacgym/python/isaacgym/torch_utils.py:135
+  /home/sorry/.cache/unifp/isaacgym_preview4/pkg/isaacgym/python/isaacgym/torch_utils.py:135: DeprecationWarning: `np.float` is a deprecated alias for the builtin `float`. To silence this warning, use `float` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.float64` here.
+  Deprecated in NumPy 1.20; for more details and guidance: https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+    def get_axis_params(value, axis_idx, x_value=0., dtype=np.float, n_dims=3):
+
+../../../../.cache/unifp/isaacgym_preview4/py38/lib/python3.8/site-packages/wandb/analytics/sentry.py:90
+  /home/sorry/.cache/unifp/isaacgym_preview4/py38/lib/python3.8/site-packages/wandb/analytics/sentry.py:90: SentryHubDeprecationWarning: `sentry_sdk.Hub` is deprecated and will be removed in a future major release. Please consult our 1.x to 2.x migration guide for details on how to migrate `Hub` usage to the new API: https://docs.sentry.io/platforms/python/migration/1.x-to-2.x
+    self.hub = sentry_sdk.Hub(client)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED tests/test_v3_contact_evaluation.py::test_contact_summary_keeps_failed_and_ambiguous_episodes_in_the_denominator
+1 failed, 2 warnings in 1.74s

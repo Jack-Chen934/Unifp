@@ -1,0 +1,226 @@
+{
+  "iteration_count": 8000,
+  "counter_mismatch_rows": [],
+  "bands": [
+    {
+      "range": [
+        1,
+        100
+      ],
+      "count": 100,
+      "means": {
+        "episode/reward_rate": 3.068890712453867,
+        "episode/errors/tcp_geometric_l2_m/mean": 0.34167595012662166,
+        "episode/errors/base_planar_speed_m_s/mean": 0.38965248944360664,
+        "episode/errors/base_yaw_rate_rad_s/mean": 0.301819254483473,
+        "episode/steps": 438.94603881060885,
+        "collection_s": 2.5546695308294147,
+        "update_s": 0.6614539660653099,
+        "value_loss": 0.16211958793271333,
+        "auxiliary_loss": 0.008812698482302948
+      }
+    },
+    {
+      "range": [
+        101,
+        400
+      ],
+      "count": 300,
+      "means": {
+        "episode/reward_rate": 3.978719547046024,
+        "episode/errors/tcp_geometric_l2_m/mean": 0.11627275175982471,
+        "episode/errors/base_planar_speed_m_s/mean": 0.3903432688349099,
+        "episode/errors/base_yaw_rate_rad_s/mean": 0.3080125018965907,
+        "episode/steps": 935.8231507202455,
+        "collection_s": 2.5613268895524866,
+        "update_s": 0.6560052407191446,
+        "value_loss": 0.052724506337040414,
+        "auxiliary_loss": 0.000602359289919453
+      }
+    },
+    {
+      "range": [
+        401,
+        800
+      ],
+      "count": 400,
+      "means": {
+        "episode/reward_rate": 4.154096776101492,
+        "episode/errors/tcp_geometric_l2_m/mean": 0.08340094199068596,
+        "episode/errors/base_planar_speed_m_s/mean": 0.39002694360827866,
+        "episode/errors/base_yaw_rate_rad_s/mean": 0.30441230148749754,
+        "episode/steps": 966.6337316988036,
+        "collection_s": 2.4716160760831554,
+        "update_s": 0.656032580898609,
+        "value_loss": 0.041968741258257065,
+        "auxiliary_loss": 0.00032815986811874607
+      }
+    },
+    {
+      "range": [
+        801,
+        1400
+      ],
+      "count": 600,
+      "means": {
+        "episode/reward_rate": 4.198801814549545,
+        "episode/errors/tcp_geometric_l2_m/mean": 0.07082011670626755,
+        "episode/errors/base_planar_speed_m_s/mean": 0.38713794323077244,
+        "episode/errors/base_yaw_rate_rad_s/mean": 0.2965920896419552,
+        "episode/steps": 968.6762098843014,
+        "collection_s": 2.507914723341819,
+        "update_s": 0.6549532233496818,
+        "value_loss": 0.044534658491921925,
+        "auxiliary_loss": 0.0002813558411993047
+      }
+    },
+    {
+      "range": [
+        1401,
+        2000
+      ],
+      "count": 600,
+      "means": {
+        "episode/reward_rate": 4.175267233343242,
+        "episode/errors/tcp_geometric_l2_m/mean": 0.06902853471502957,
+        "episode/errors/base_planar_speed_m_s/mean": 0.38510333632749355,
+        "episode/errors/base_yaw_rate_rad_s/mean": 0.29260920623077674,
+        "episode/steps": 965.8339772213196,
+        "collection_s": 2.5583244255914663,
+        "update_s": 0.6575951872719452,
+        "value_loss": 0.046559377877507364,
+        "auxiliary_loss": 0.00026192159550555516
+      }
+    },
+    {
+      "range": [
+        2001,
+        4000
+      ],
+      "count": 2000,
+      "means": {
+        "episode/reward_rate": 4.174263818339855,
+        "episode/errors/tcp_geometric_l2_m/mean": 0.06466143405223432,
+        "episode/errors/base_planar_speed_m_s/mean": 0.38254282948105445,
+        "episode/errors/base_yaw_rate_rad_s/mean": 0.2889998346460162,
+        "episode/steps": 964.849971991847,
+        "collection_s": 2.4893099152036013,
+        "update_s": 0.644714152709581,
+        "value_loss": 0.055834699362423273,
+        "auxiliary_loss": 0.00023717343569442165
+      }
+    },
+    {
+      "range": [
+        4001,
+        6000
+      ],
+      "count": 2000,
+      "means": {
+        "episode/reward_rate": 4.070991124031681,
+        "episode/errors/tcp_geometric_l2_m/mean": 0.07349314141615106,
+        "episode/errors/base_planar_speed_m_s/mean": 0.37798828097077164,
+        "episode/errors/base_yaw_rate_rad_s/mean": 0.28357614281149046,
+        "episode/steps": 950.3610596789254,
+        "collection_s": 2.5263655995479786,
+        "update_s": 0.6454970373122487,
+        "value_loss": 0.05895368956294842,
+        "auxiliary_loss": 0.00034508710664704265
+      }
+    },
+    {
+      "range": [
+        6001,
+        8000
+      ],
+      "count": 2000,
+      "means": {
+        "episode/reward_rate": 4.045019574564358,
+        "episode/errors/tcp_geometric_l2_m/mean": 0.07559856810444861,
+        "episode/errors/base_planar_speed_m_s/mean": 0.37443480000572665,
+        "episode/errors/base_yaw_rate_rad_s/mean": 0.2808079471148253,
+        "episode/steps": 949.7533502652645,
+        "collection_s": 2.5347611785321496,
+        "update_s": 0.6516214130660519,
+        "value_loss": 0.06125636963588185,
+        "auxiliary_loss": 0.00034555277372746784
+      }
+    },
+    {
+      "range": [
+        7501,
+        8000
+      ],
+      "count": 500,
+      "means": {
+        "episode/reward_rate": 4.047765235524544,
+        "episode/errors/tcp_geometric_l2_m/mean": 0.07478463955918677,
+        "episode/errors/base_planar_speed_m_s/mean": 0.3738178439454745,
+        "episode/errors/base_yaw_rate_rad_s/mean": 0.2798701359319516,
+        "episode/steps": 951.1862524150737,
+        "collection_s": 2.545937109000981,
+        "update_s": 0.6527630470069126,
+        "value_loss": 0.06146320902071894,
+        "auxiliary_loss": 0.00033918503908498675
+      }
+    }
+  ],
+  "latest": {
+    "completed_iterations": 8000,
+    "training_policy_steps": 192000,
+    "training_transitions": 786432000,
+    "simulated_time_per_environment_s": 3839.9999141693115,
+    "collection_s": 2.471194077283144,
+    "update_s": 0.6306090359576046,
+    "value_loss": 0.03785388227552176,
+    "surrogate_loss": -0.0025043985835509373,
+    "auxiliary_loss": 0.00028319903649389746,
+    "main_learning_rate": 0.00011390625000000003,
+    "auxiliary/base_velocity_loss": 8.380650870094541e-05,
+    "auxiliary/tcp_position_loss": 0.0001983816793654114,
+    "auxiliary/force_ee_loss": 4.4294937708855284e-07,
+    "auxiliary/force_base_loss": 5.678999542624297e-07,
+    "episode/episode_count": 80,
+    "episode/reward_rate": 4.05473070058009,
+    "episode/reward_return": 79.3516889974475,
+    "episode/steps": 967.15,
+    "episode/timeout_bootstrap_bonus": 7.612153661251068,
+    "episode/raw/tracking_ee_force_world": 0.8372414922807365,
+    "episode/raw/tracking_lin_vel": 0.579610763117671,
+    "episode/raw/tracking_ang_vel": 0.7038393802940845,
+    "episode/raw/alive": 1.0,
+    "episode/raw/torques_steering": 1038.0933700561523,
+    "episode/raw/torques_drive": 43.32658190727234,
+    "episode/raw/torques_arm": 841.1191879272461,
+    "episode/raw/action_rate_steering": 13.891475045681,
+    "episode/raw/action_rate_drive": 13.213720071315766,
+    "episode/raw/action_rate_arm": 4.793776249885559,
+    "episode/raw/dof_vel_steering": 9.109654104709625,
+    "episode/raw/dof_vel_arm": 85.43124656677246,
+    "episode/raw/dof_acc_steering": 23302.99055175781,
+    "episode/raw/dof_acc_drive": 74618.43896484375,
+    "episode/raw/dof_acc_arm": 256774.1841796875,
+    "episode/raw/torque_limits_steering": 0.7297478415071964,
+    "episode/raw/torque_limits_drive": 0.0,
+    "episode/raw/torque_limits_arm": 1.2705331318080426,
+    "episode/raw/dof_pos_limits": 0.0022779541223393097,
+    "episode/raw/lin_vel_z": 0.00040897990074881816,
+    "episode/raw/ang_vel_xy": 0.023522042913828044,
+    "episode/raw/base_height": 9.202173223457066e-05,
+    "episode/raw/collision": 0.0033849731538794004,
+    "episode/errors/tcp_geometric_l1_m/mean": 0.11498190173879266,
+    "episode/errors/tcp_geometric_l1_m/p95": 0.2281453208066523,
+    "episode/errors/tcp_geometric_l2_m/mean": 0.07676777350716293,
+    "episode/errors/tcp_geometric_l2_m/p95": 0.15618362883105874,
+    "episode/errors/base_planar_speed_m_s/mean": 0.3710065057501197,
+    "episode/errors/base_planar_speed_m_s/p95": 0.5524966143071651,
+    "episode/errors/base_yaw_rate_rad_s/mean": 0.27963070534169676,
+    "episode/errors/base_yaw_rate_rad_s/p95": 0.53934291228652,
+    "episode/errors/tcp_compensated_l1_m/mean": 0.11498190173879266,
+    "episode/errors/tcp_compensated_l1_m/p95": 0.2281453208066523,
+    "episode/errors/tcp_compensated_l2_m/mean": 0.07676777350716293,
+    "episode/errors/tcp_compensated_l2_m/p95": 0.15618362883105874
+  },
+  "sampling_total_s": 20153.12832630938,
+  "updates_total_s": 5196.554253730457
+}

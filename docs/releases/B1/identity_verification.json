@@ -1,0 +1,10 @@
+{
+  "branch": "B1",
+  "source_and_asset_match": true,
+  "source_manifest": 50,
+  "asset_manifest": 191,
+  "additional_runtime_files": 4,
+  "checkpoint_iteration": 17800,
+  "local_checkpoint_present": true,
+  "local_checkpoint_matches": true
+}

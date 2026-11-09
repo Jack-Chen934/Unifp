@@ -1,0 +1,11 @@
+{
+  "pid": 2002019,
+  "gpu": 3,
+  "started_at": "2026-11-08T19:25:35.000050+08:00",
+  "command": [
+    "/mnt/data_8THDD/conda_envs/unifp_v3_stage1/bin/python",
+    "/mnt/data_8THDD/myl_unifp_v3_stage1/validation/b_diagnostics_20261108_r01/action_execution/run_execution.py"
+  ],
+  "output": "/mnt/data_8THDD/myl_unifp_v3_stage1/validation/b_diagnostics_20261108_r01/action_execution",
+  "说明": "独立只读回放，无优化器，不触碰正式GPU1训练。"
+}

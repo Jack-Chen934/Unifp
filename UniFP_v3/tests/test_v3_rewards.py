@@ -7,6 +7,8 @@ import torch
 
 from legged_gym.envs.v3.legged_robot_v3 import V3PosForce
 from legged_gym.envs.v3.v3_pos_force_config import V3PosForceCfg
+from legged_gym.utils.v3_kinematics import V3TcpKinematics
+from pathlib import Path
 
 
 def make_reward_environment() -> V3PosForce:
@@ -39,13 +41,14 @@ def make_reward_environment() -> V3PosForce:
     environment.root_states[:, 2] = 0.32
     environment.root_states[:, 6] = 1.0
     environment.rpy = torch.zeros(2, 3)
-    environment.tcp_body_index = 0
-    environment.rigid_state = torch.zeros(2, 1, 13)
-    environment.rigid_state[:, 0, 6] = 1.0
-    # r=0.5, elevation=0: target world position [0.674, 0, 0.41535] m.
-    environment.rigid_state[:, 0, :3] = torch.tensor([0.674, 0.0, 0.33573794])
+    environment.tcp_kinematics = V3TcpKinematics(
+        Path(environment.cfg.asset.file),
+        [f'{corner}_{kind}_joint' for kind in ('steering', 'wheel_drive')
+         for corner in ('fl', 'fr', 'bl', 'br')] + [f'arm_joint{index}' for index in range(1, 7)],
+        'cpu')
     environment.commands = torch.zeros(2, 15)
-    environment.commands[:, 3] = 0.5
+    # Keep perfect tracking using the real FK seam rather than an injected body cache.
+    environment.commands[:, 3:6] = environment._tcp_spherical_position()
     environment.external_ee_force_y = torch.zeros(2, 3)
     environment.external_base_force_y = torch.zeros(2, 3)
     environment.gripper_force_kps = torch.full((2, 3), 200.0)
@@ -57,6 +60,54 @@ def make_reward_environment() -> V3PosForce:
 
 class V3RewardTests(unittest.TestCase):
     """Verify agreed physical formulas, signed sums, and single time scaling."""
+
+    def test_b_compensation_changes_only_privileged_target_and_separates_error_metrics(self) -> None:
+        """Check +20 N gives +0.1 m in world X, and opposite commands cancel it.
+
+        Raises:
+            AssertionError: The privileged target stays geometric, physical errors
+                share the wrong samples, or artificial truth leaks into the Actor.
+        """
+        environment = make_reward_environment()
+        environment.cfg.run.reproduction_part = "B"
+        environment.default_dof_pos = torch.zeros(1, 14)
+        environment.last_actions = torch.zeros(2, 14)
+        environment.mass_com_delta = torch.zeros(2, 5)
+        environment.friction = torch.ones(2, 1)
+        environment.execution_scale_delta = torch.zeros(2, 14)
+        environment.wheel_body_indices = torch.arange(19, 23)
+        environment.contact_valid = torch.ones(2, dtype=torch.bool)
+        ids = torch.arange(2)
+        actor_before, critic_before, _ = environment._build_frames(ids)
+        environment.external_ee_force_y[:, 0] = 20.
+        environment.commands[1, 9] = -20.
+        actor, critic, labels = environment._build_frames(ids)
+        # At yaw zero the independent worked displacement is exactly +0.1 m.
+        target_world = environment._geometric_target_world()
+        expected_world = target_world.clone()
+        expected_world[0, 0] += .1
+        torch.testing.assert_close(environment._compensated_target_world(), expected_world)
+        self.assertFalse(torch.allclose(critic[0, 95:98], critic_before[0, 95:98]))
+        torch.testing.assert_close(critic[1, 95:98], critic_before[1, 95:98])
+        torch.testing.assert_close(actor[0], actor_before[0])
+        torch.testing.assert_close(labels[:, 6:9], torch.tensor([[.2, 0., 0.]] * 2))
+        # Decode the privileged spherical point independently of the task helper.
+        spherical = critic[:, 95:98] / torch.tensor([.5, 1., 1.3])
+        radius, elevation, azimuth = spherical.unbind(dim=1)
+        recovered_world = torch.stack((.174 + radius * elevation.cos() * azimuth.cos(),
+                                       radius * elevation.cos() * azimuth.sin(),
+                                       .32 + .09535 + radius * elevation.sin()), dim=1)
+        torch.testing.assert_close(recovered_world, expected_world)
+        environment.max_episode_length = 1000
+        environment.completed_iterations = 8000
+        environment.training_policy_steps = 192000
+        environment.training_transitions = 384000
+        environment._initialize_episode_metrics()
+        environment.compute_reward()
+        rows = environment._accumulate_episode_metrics(ids, torch.zeros(2, dtype=torch.bool))
+        self.assertAlmostEqual(rows[0]["errors"]["tcp_geometric_l2_m"]["mean"], 0., places=5)
+        self.assertAlmostEqual(rows[0]["errors"]["tcp_compensated_l2_m"]["mean"], .1, places=5)
+        self.assertAlmostEqual(rows[1]["errors"]["tcp_compensated_l2_m"]["mean"], 0., places=5)
 
     def test_load_verifies_creation_properties_without_runtime_setters(self) -> None:
         """Restore mutable state without rewriting already prepared actor properties.
@@ -110,7 +161,7 @@ class V3RewardTests(unittest.TestCase):
         environment._initialize_episode_metrics()
         environment.compute_reward()
         environment._accumulate_episode_metrics(torch.empty(0, dtype=torch.long), torch.zeros(2, dtype=torch.bool))
-        environment.rigid_state[0, 0, 0] += 0.1
+        environment.commands[0, 3] += 0.1
         environment.compute_reward()
         records = environment._accumulate_episode_metrics(torch.tensor([0]), torch.zeros(2, dtype=torch.bool))
         self.assertEqual(len(records), 1)

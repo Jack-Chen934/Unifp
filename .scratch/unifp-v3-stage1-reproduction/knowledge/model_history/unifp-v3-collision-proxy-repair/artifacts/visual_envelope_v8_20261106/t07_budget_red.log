@@ -1,0 +1,23 @@
+test_clipping_retains_crossing_triangle (test_visual_envelope_candidate.VisualEnvelopeGeometryTests.test_clipping_retains_crossing_triangle)
+Keep the unit square crossed by a triangle whose vertices lie outside. ... ok
+test_detailed_reference_is_covered_within_vertex_budget (test_visual_envelope_candidate.VisualEnvelopeGeometryTests.test_detailed_reference_is_covered_within_vertex_budget)
+Keep all vertices of a detailed sphere while using at most 64 vertices. ... ERROR
+test_hull_covers_reference_with_half_millimeter_margin (test_visual_envelope_candidate.VisualEnvelopeGeometryTests.test_hull_covers_reference_with_half_millimeter_margin)
+Cover a 20 mm cube with the known 21 mm axis-aligned envelope. ... ok
+
+======================================================================
+ERROR: test_detailed_reference_is_covered_within_vertex_budget (test_visual_envelope_candidate.VisualEnvelopeGeometryTests.test_detailed_reference_is_covered_within_vertex_budget)
+Keep all vertices of a detailed sphere while using at most 64 vertices.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/sorry/python_ws/interactive/unifp_reproduction/.scratch/unifp-v3-collision-proxy-repair/knowledge/test_visual_envelope_candidate.py", line 50, in test_detailed_reference_is_covered_within_vertex_budget
+    hull, measurements = builder.rebuild_local_hull(reference_points_m, 0.0005)
+                         ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sorry/python_ws/interactive/unifp_reproduction/.scratch/unifp-v3-collision-proxy-repair/knowledge/build_visual_envelope_candidate.py", line 80, in rebuild_local_hull
+    raise ValueError(f'Covering hull has {len(mesh.vertices)} vertices, budget is 64')
+ValueError: Covering hull has 522 vertices, budget is 64
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.011s
+
+FAILED (errors=1)

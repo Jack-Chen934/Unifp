@@ -1,0 +1,15 @@
+test_all_shape_index_rules_preserve_source_identity (test_local_base_proxy_candidate.GroupedCandidateTests.test_all_shape_index_rules_preserve_source_identity)
+Keep mounting, retained and clearance rules attached to their original solids. ... ok
+test_fixed_groups_cover_every_source_component_once (test_local_base_proxy_candidate.GroupedCandidateTests.test_fixed_groups_cover_every_source_component_once)
+Require the approved 11 groups and the complete 19-part source mapping. ... ok
+test_group_geometry_matches_approved_fixture (test_local_base_proxy_candidate.GroupedCandidateTests.test_group_geometry_matches_approved_fixture)
+Keep grouped convex support within two micrometers of the tested fixture. ... ok
+test_meshes_are_self_contained_and_hashes_match (test_local_base_proxy_candidate.GroupedCandidateTests.test_meshes_are_self_contained_and_hashes_match)
+Require a movable asset with valid source identity and all mesh digests. ... ok
+test_only_target_collision_changes (test_local_base_proxy_candidate.GroupedCandidateTests.test_only_target_collision_changes)
+Preserve visual, inertial, joint and every non-target collision element. ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.265s
+
+OK

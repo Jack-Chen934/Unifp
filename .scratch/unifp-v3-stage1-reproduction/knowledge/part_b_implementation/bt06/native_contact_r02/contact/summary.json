@@ -1,0 +1,213 @@
+{
+  "protocol": "fixed_wall_contact",
+  "zero_control": false,
+  "episodes": [
+    {
+      "env_id": 0,
+      "episode_index": 0,
+      "peak_n": 10.0,
+      "end_type": "timeout",
+      "success": false,
+      "trace_samples": 1000,
+      "missing_measurement_samples": 0,
+      "ambiguous_samples": 0,
+      "steady_samples": 100,
+      "steady_valid_samples": 100,
+      "clean_contact_fraction": 0.0,
+      "normal_error_mean_n": 10.0,
+      "tangential_mean_n": 0.0,
+      "release_valid_samples": 50,
+      "release_abs_normal_mean_n": 0.0,
+      "zero_command_residual_normal_mean_n": 0.0
+    },
+    {
+      "env_id": 0,
+      "episode_index": 1,
+      "peak_n": 20.0,
+      "end_type": "timeout",
+      "success": false,
+      "trace_samples": 1000,
+      "missing_measurement_samples": 0,
+      "ambiguous_samples": 0,
+      "steady_samples": 100,
+      "steady_valid_samples": 100,
+      "clean_contact_fraction": 0.0,
+      "normal_error_mean_n": 20.0,
+      "tangential_mean_n": 0.0,
+      "release_valid_samples": 50,
+      "release_abs_normal_mean_n": 0.0,
+      "zero_command_residual_normal_mean_n": 0.0
+    }
+  ],
+  "amplitudes": {
+    "half": {
+      "peak_n": 10.0,
+      "expected_episodes": 1,
+      "observed_episodes": 1,
+      "successes": 0,
+      "success_rate": 0.0,
+      "physical_failures": 0,
+      "physical_failure_rate": 0.0,
+      "measurable_steady_episodes": 1,
+      "all_measurable_normal_error_mean_n": 10.0,
+      "passed": false
+    },
+    "full": {
+      "peak_n": 20.0,
+      "expected_episodes": 1,
+      "observed_episodes": 1,
+      "successes": 0,
+      "success_rate": 0.0,
+      "physical_failures": 0,
+      "physical_failure_rate": 0.0,
+      "measurable_steady_episodes": 1,
+      "all_measurable_normal_error_mean_n": 20.0,
+      "passed": false
+    }
+  },
+  "evidence_complete": true,
+  "policy_updates": 0,
+  "contact_decoder_generalization": {
+    "valid_samples": 1998,
+    "invalid_boundary_samples": 2,
+    "axis_mae_world_n": [
+      3.530896414149631,
+      5.486286607471195,
+      5.889384191912097
+    ],
+    "l2_mean_n": 8.805802470993035,
+    "说明": "动作前估力对齐上一个有效物理子步反力，仅作泛化诊断，不是人工注入力监督"
+  },
+  "threshold_version": "v3-b-contact-v1",
+  "assessment": "smoke_only",
+  "scene_readback": {
+    "robot_actor_indices": [
+      0
+    ],
+    "wall_body_indices": [
+      28
+    ],
+    "robot_body_names": [
+      "base_link",
+      "aluminum_profiles",
+      "arm_base",
+      "arm_seg1",
+      "arm_seg2",
+      "arm_seg3",
+      "arm_seg4",
+      "arm_seg5",
+      "arm_seg6",
+      "end_effector_link",
+      "gripper1",
+      "gripper2",
+      "wrist_camera_connector",
+      "wrist_camera",
+      "left_camera_connector",
+      "left_camera",
+      "rear_top_camera_connector",
+      "rear_top_camera",
+      "right_camera_connector",
+      "right_camera",
+      "bl_steering_link",
+      "bl_Link",
+      "br_steering_link",
+      "br_Link",
+      "fl_steering_link",
+      "fl_Link",
+      "fr_steering_link",
+      "fr_Link"
+    ],
+    "wall_root_states": [
+      [
+        0.6560652852058411,
+        4.1491030060569756e-06,
+        0.7790040373802185,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "mass_com_delta": [
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "friction": [
+      [
+        1.0
+      ]
+    ],
+    "execution_scale_delta": [
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "classification": "八点双侧力残差与保守AABB几何排除；待判不算成功，不等于完整原生接触对清单",
+    "wall_shape_properties": [
+      [
+        {
+          "friction": 1.0,
+          "restitution": 0.0,
+          "contact_offset_m": 0.009999999776482582,
+          "rest_offset_m": 0.0
+        }
+      ]
+    ]
+  },
+  "effective_quota": {
+    "num_envs": 1,
+    "episodes_per_env": 2
+  },
+  "evaluation_runtime": {
+    "python": "3.8.20",
+    "torch": "2.3.1+cu121",
+    "device": "cpu",
+    "gym_import_path": "/home/sorry/.cache/unifp/isaacgym_preview4/pkg/isaacgym/python/isaacgym/__init__.py",
+    "sim_device": "cuda:0",
+    "physx_use_gpu": true,
+    "use_gpu_pipeline": false,
+    "physics_dt_s": 0.0024999999441206455,
+    "decimation": 8,
+    "policy_dt_s": 0.019999999552965164
+  },
+  "checkpoint_sha256": "8b70105696f0237e03e02401808a9525e8bad9d0efbee50265e5637c8bba6775",
+  "source_compatibility": {
+    "allowed_source_changes": [
+      "legged_gym/b2_gym_learn/ppo_cse_pf/v3_evaluation.py",
+      "legged_gym/envs/v3/legged_robot_v3.py",
+      "legged_gym/envs/v3/v3_contact_evaluation.py",
+      "legged_gym/envs/v3/v3_force_evaluation.py",
+      "legged_gym/scripts/evaluate_v3.py",
+      "legged_gym/scripts/evaluate_v3_contact.py",
+      "legged_gym/scripts/v3_args.py"
+    ],
+    "source_reproduction_part": "A"
+  },
+  "source_completed_iterations": 8000,
+  "source_reproduction_part": "A",
+  "smoke": true
+}

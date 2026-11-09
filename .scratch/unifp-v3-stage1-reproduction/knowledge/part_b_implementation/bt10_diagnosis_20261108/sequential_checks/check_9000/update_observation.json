@@ -1,0 +1,678 @@
+{
+  "events": [
+    {
+      "kind": "main",
+      "mean_action_rms_change": 0.023010997101664543,
+      "latent_rms_change": 0.009998573921620846,
+      "gaussian_kl_mean": 0.013136090710759163,
+      "force_mae_before_n": [
+        5.5827484130859375,
+        4.015477180480957,
+        4.582009315490723
+      ],
+      "force_mae_after_n": [
+        5.591172218322754,
+        4.015446662902832,
+        4.579238414764404
+      ]
+    },
+    {
+      "kind": "auxiliary",
+      "mean_action_rms_change": 0.01151883415877819,
+      "latent_rms_change": 0.01286851055920124,
+      "gaussian_kl_mean": 0.005386178381741047,
+      "force_mae_before_n": [
+        5.591172218322754,
+        4.015446662902832,
+        4.579238414764404
+      ],
+      "force_mae_after_n": [
+        5.7660298347473145,
+        4.009456157684326,
+        4.608761787414551
+      ],
+      "encoder_gradient_cosine_with_preceding_main": -0.0010757707059383392
+    },
+    {
+      "kind": "main",
+      "mean_action_rms_change": 0.01041672844439745,
+      "latent_rms_change": 0.00530130323022604,
+      "gaussian_kl_mean": 0.0040312339551746845,
+      "force_mae_before_n": [
+        5.7660298347473145,
+        4.009456157684326,
+        4.608761787414551
+      ],
+      "force_mae_after_n": [
+        5.753772735595703,
+        4.013844013214111,
+        4.601944446563721
+      ]
+    },
+    {
+      "kind": "auxiliary",
+      "mean_action_rms_change": 0.016923028975725174,
+      "latent_rms_change": 0.017746713012456894,
+      "gaussian_kl_mean": 0.010503626428544521,
+      "force_mae_before_n": [
+        5.753772735595703,
+        4.013844013214111,
+        4.601944446563721
+      ],
+      "force_mae_after_n": [
+        6.244688034057617,
+        4.02390193939209,
+        4.702939987182617
+      ],
+      "encoder_gradient_cosine_with_preceding_main": -0.16640084981918335
+    },
+    {
+      "kind": "main",
+      "mean_action_rms_change": 0.012288027442991734,
+      "latent_rms_change": 0.005226098466664553,
+      "gaussian_kl_mean": 0.005940824281424284,
+      "force_mae_before_n": [
+        6.244688034057617,
+        4.02390193939209,
+        4.702939987182617
+      ],
+      "force_mae_after_n": [
+        6.140345573425293,
+        4.012881755828857,
+        4.671377658843994
+      ]
+    },
+    {
+      "kind": "auxiliary",
+      "mean_action_rms_change": 0.01775156892836094,
+      "latent_rms_change": 0.018001630902290344,
+      "gaussian_kl_mean": 0.010259373113512993,
+      "force_mae_before_n": [
+        6.140345573425293,
+        4.012881755828857,
+        4.671377658843994
+      ],
+      "force_mae_after_n": [
+        6.717033863067627,
+        4.033287048339844,
+        4.9079437255859375
+      ],
+      "encoder_gradient_cosine_with_preceding_main": -0.03430790454149246
+    },
+    {
+      "kind": "main",
+      "mean_action_rms_change": 0.013749929144978523,
+      "latent_rms_change": 0.0055917296558618546,
+      "gaussian_kl_mean": 0.007872061803936958,
+      "force_mae_before_n": [
+        6.717033863067627,
+        4.033287048339844,
+        4.9079437255859375
+      ],
+      "force_mae_after_n": [
+        6.547640323638916,
+        4.009965896606445,
+        4.850423336029053
+      ]
+    },
+    {
+      "kind": "auxiliary",
+      "mean_action_rms_change": 0.014797366224229336,
+      "latent_rms_change": 0.01542070135474205,
+      "gaussian_kl_mean": 0.0065212310291826725,
+      "force_mae_before_n": [
+        6.547640323638916,
+        4.009965896606445,
+        4.850423336029053
+      ],
+      "force_mae_after_n": [
+        7.021424293518066,
+        4.035097122192383,
+        5.04182767868042
+      ],
+      "encoder_gradient_cosine_with_preceding_main": 0.22274228930473328
+    },
+    {
+      "kind": "main",
+      "mean_action_rms_change": 0.011797774583101273,
+      "latent_rms_change": 0.005165571346879005,
+      "gaussian_kl_mean": 0.0062171234749257565,
+      "force_mae_before_n": [
+        7.021424293518066,
+        4.035097122192383,
+        5.04182767868042
+      ],
+      "force_mae_after_n": [
+        6.8541059494018555,
+        4.006359100341797,
+        4.9748854637146
+      ]
+    },
+    {
+      "kind": "auxiliary",
+      "mean_action_rms_change": 0.010954802855849266,
+      "latent_rms_change": 0.012328559532761574,
+      "gaussian_kl_mean": 0.0033303159289062023,
+      "force_mae_before_n": [
+        6.8541059494018555,
+        4.006359100341797,
+        4.9748854637146
+      ],
+      "force_mae_after_n": [
+        6.971848964691162,
+        4.05014181137085,
+        5.042683124542236
+      ],
+      "encoder_gradient_cosine_with_preceding_main": 0.45495784282684326
+    },
+    {
+      "kind": "main",
+      "mean_action_rms_change": 0.012519095093011856,
+      "latent_rms_change": 0.005866816267371178,
+      "gaussian_kl_mean": 0.00655263802036643,
+      "force_mae_before_n": [
+        6.971848964691162,
+        4.05014181137085,
+        5.042683124542236
+      ],
+      "force_mae_after_n": [
+        6.808704376220703,
+        4.021269798278809,
+        4.9584550857543945
+      ]
+    },
+    {
+      "kind": "auxiliary",
+      "mean_action_rms_change": 0.00949946977198124,
+      "latent_rms_change": 0.011034485884010792,
+      "gaussian_kl_mean": 0.003047482343390584,
+      "force_mae_before_n": [
+        6.808704376220703,
+        4.021269798278809,
+        4.9584550857543945
+      ],
+      "force_mae_after_n": [
+        6.647397041320801,
+        4.04068660736084,
+        4.917559623718262
+      ],
+      "encoder_gradient_cosine_with_preceding_main": 0.19537226855754852
+    },
+    {
+      "kind": "main",
+      "mean_action_rms_change": 0.010860434733331203,
+      "latent_rms_change": 0.005634046159684658,
+      "gaussian_kl_mean": 0.0039218636229634285,
+      "force_mae_before_n": [
+        6.647397041320801,
+        4.04068660736084,
+        4.917559623718262
+      ],
+      "force_mae_after_n": [
+        6.53010368347168,
+        4.009963035583496,
+        4.843932151794434
+      ]
+    },
+    {
+      "kind": "auxiliary",
+      "mean_action_rms_change": 0.008973770774900913,
+      "latent_rms_change": 0.010040822438895702,
+      "gaussian_kl_mean": 0.0030669744592159986,
+      "force_mae_before_n": [
+        6.53010368347168,
+        4.009963035583496,
+        4.843932151794434
+      ],
+      "force_mae_after_n": [
+        6.294833183288574,
+        3.999159812927246,
+        4.806477069854736
+      ],
+      "encoder_gradient_cosine_with_preceding_main": -0.043620187789201736
+    },
+    {
+      "kind": "main",
+      "mean_action_rms_change": 0.009775080718100071,
+      "latent_rms_change": 0.004937097895890474,
+      "gaussian_kl_mean": 0.002245011506602168,
+      "force_mae_before_n": [
+        6.294833183288574,
+        3.999159812927246,
+        4.806477069854736
+      ],
+      "force_mae_after_n": [
+        6.224895477294922,
+        3.9721245765686035,
+        4.75761604309082
+      ]
+    },
+    {
+      "kind": "auxiliary",
+      "mean_action_rms_change": 0.00809504184871912,
+      "latent_rms_change": 0.008881849236786366,
+      "gaussian_kl_mean": 0.002126057632267475,
+      "force_mae_before_n": [
+        6.224895477294922,
+        3.9721245765686035,
+        4.75761604309082
+      ],
+      "force_mae_after_n": [
+        6.138293266296387,
+        3.9708762168884277,
+        4.713813781738281
+      ],
+      "encoder_gradient_cosine_with_preceding_main": 0.1663755178451538
+    },
+    {
+      "kind": "main",
+      "mean_action_rms_change": 0.008545879274606705,
+      "latent_rms_change": 0.004298112355172634,
+      "gaussian_kl_mean": 0.001755670877173543,
+      "force_mae_before_n": [
+        6.138293266296387,
+        3.9708762168884277,
+        4.713813781738281
+      ],
+      "force_mae_after_n": [
+        6.091943264007568,
+        3.9501686096191406,
+        4.682832717895508
+      ]
+    },
+    {
+      "kind": "auxiliary",
+      "mean_action_rms_change": 0.007975240238010883,
+      "latent_rms_change": 0.009276865981519222,
+      "gaussian_kl_mean": 0.0019163027172908187,
+      "force_mae_before_n": [
+        6.091943264007568,
+        3.9501686096191406,
+        4.682832717895508
+      ],
+      "force_mae_after_n": [
+        6.0635833740234375,
+        3.9860312938690186,
+        4.701901435852051
+      ],
+      "encoder_gradient_cosine_with_preceding_main": 0.273960143327713
+    },
+    {
+      "kind": "main",
+      "mean_action_rms_change": 0.008325746282935143,
+      "latent_rms_change": 0.003949846141040325,
+      "gaussian_kl_mean": 0.0025141274090856314,
+      "force_mae_before_n": [
+        6.0635833740234375,
+        3.9860312938690186,
+        4.701901435852051
+      ],
+      "force_mae_after_n": [
+        6.043188095092773,
+        3.977058172225952,
+        4.685799598693848
+      ]
+    },
+    {
+      "kind": "auxiliary",
+      "mean_action_rms_change": 0.00845018308609724,
+      "latent_rms_change": 0.010240191593766212,
+      "gaussian_kl_mean": 0.0022438387386500835,
+      "force_mae_before_n": [
+        6.043188095092773,
+        3.977058172225952,
+        4.685799598693848
+      ],
+      "force_mae_after_n": [
+        6.0474853515625,
+        4.062730312347412,
+        4.7454986572265625
+      ],
+      "encoder_gradient_cosine_with_preceding_main": 0.2464766502380371
+    },
+    {
+      "kind": "main",
+      "mean_action_rms_change": 0.009929899126291275,
+      "latent_rms_change": 0.004004889167845249,
+      "gaussian_kl_mean": 0.004434207454323769,
+      "force_mae_before_n": [
+        6.0474853515625,
+        4.062730312347412,
+        4.7454986572265625
+      ],
+      "force_mae_after_n": [
+        6.052689552307129,
+        4.05966329574585,
+        4.739091873168945
+      ]
+    },
+    {
+      "kind": "auxiliary",
+      "mean_action_rms_change": 0.00988474115729332,
+      "latent_rms_change": 0.01124398224055767,
+      "gaussian_kl_mean": 0.003210126655176282,
+      "force_mae_before_n": [
+        6.052689552307129,
+        4.05966329574585,
+        4.739091873168945
+      ],
+      "force_mae_after_n": [
+        6.027044296264648,
+        4.134509086608887,
+        4.830023288726807
+      ],
+      "encoder_gradient_cosine_with_preceding_main": -0.11439433693885803
+    },
+    {
+      "kind": "main",
+      "mean_action_rms_change": 0.012195125222206116,
+      "latent_rms_change": 0.005205679684877396,
+      "gaussian_kl_mean": 0.006695674732327461,
+      "force_mae_before_n": [
+        6.027044296264648,
+        4.134509086608887,
+        4.830023288726807
+      ],
+      "force_mae_after_n": [
+        6.053137302398682,
+        4.139153480529785,
+        4.827174186706543
+      ]
+    },
+    {
+      "kind": "auxiliary",
+      "mean_action_rms_change": 0.010356016457080841,
+      "latent_rms_change": 0.01017063669860363,
+      "gaussian_kl_mean": 0.003392202779650688,
+      "force_mae_before_n": [
+        6.053137302398682,
+        4.139153480529785,
+        4.827174186706543
+      ],
+      "force_mae_after_n": [
+        6.087827682495117,
+        4.155034065246582,
+        4.841732501983643
+      ],
+      "encoder_gradient_cosine_with_preceding_main": -0.07365471124649048
+    },
+    {
+      "kind": "main",
+      "mean_action_rms_change": 0.01224529929459095,
+      "latent_rms_change": 0.005850041285157204,
+      "gaussian_kl_mean": 0.006517244502902031,
+      "force_mae_before_n": [
+        6.087827682495117,
+        4.155034065246582,
+        4.841732501983643
+      ],
+      "force_mae_after_n": [
+        6.112191677093506,
+        4.1674299240112305,
+        4.837522029876709
+      ]
+    },
+    {
+      "kind": "auxiliary",
+      "mean_action_rms_change": 0.01029378455132246,
+      "latent_rms_change": 0.009514433331787586,
+      "gaussian_kl_mean": 0.0035048280842602253,
+      "force_mae_before_n": [
+        6.112191677093506,
+        4.1674299240112305,
+        4.837522029876709
+      ],
+      "force_mae_after_n": [
+        6.067920684814453,
+        4.119626998901367,
+        4.825497150421143
+      ],
+      "encoder_gradient_cosine_with_preceding_main": -0.018226169049739838
+    },
+    {
+      "kind": "main",
+      "mean_action_rms_change": 0.012989740818738937,
+      "latent_rms_change": 0.006833820138126612,
+      "gaussian_kl_mean": 0.007249165326356888,
+      "force_mae_before_n": [
+        6.067920684814453,
+        4.119626998901367,
+        4.825497150421143
+      ],
+      "force_mae_after_n": [
+        6.100659370422363,
+        4.1328206062316895,
+        4.833001136779785
+      ]
+    },
+    {
+      "kind": "auxiliary",
+      "mean_action_rms_change": 0.01024380512535572,
+      "latent_rms_change": 0.009672580286860466,
+      "gaussian_kl_mean": 0.003939098212867975,
+      "force_mae_before_n": [
+        6.100659370422363,
+        4.1328206062316895,
+        4.833001136779785
+      ],
+      "force_mae_after_n": [
+        5.960448741912842,
+        4.040103435516357,
+        4.785562992095947
+      ],
+      "encoder_gradient_cosine_with_preceding_main": -0.05802119895815849
+    },
+    {
+      "kind": "main",
+      "mean_action_rms_change": 0.01422921009361744,
+      "latent_rms_change": 0.007657208945602179,
+      "gaussian_kl_mean": 0.008114774711430073,
+      "force_mae_before_n": [
+        5.960448741912842,
+        4.040103435516357,
+        4.785562992095947
+      ],
+      "force_mae_after_n": [
+        5.982832431793213,
+        4.054959297180176,
+        4.793006420135498
+      ]
+    },
+    {
+      "kind": "auxiliary",
+      "mean_action_rms_change": 0.011103837750852108,
+      "latent_rms_change": 0.010801569558680058,
+      "gaussian_kl_mean": 0.005049859173595905,
+      "force_mae_before_n": [
+        5.982832431793213,
+        4.054959297180176,
+        4.793006420135498
+      ],
+      "force_mae_after_n": [
+        5.79696798324585,
+        3.950944423675537,
+        4.7579345703125
+      ],
+      "encoder_gradient_cosine_with_preceding_main": 0.004237172193825245
+    },
+    {
+      "kind": "main",
+      "mean_action_rms_change": 0.015259936451911926,
+      "latent_rms_change": 0.008623456582427025,
+      "gaussian_kl_mean": 0.008641143329441547,
+      "force_mae_before_n": [
+        5.79696798324585,
+        3.950944423675537,
+        4.7579345703125
+      ],
+      "force_mae_after_n": [
+        5.809939861297607,
+        3.959449052810669,
+        4.760731220245361
+      ]
+    },
+    {
+      "kind": "auxiliary",
+      "mean_action_rms_change": 0.009978504851460457,
+      "latent_rms_change": 0.009631861932575703,
+      "gaussian_kl_mean": 0.003666350618004799,
+      "force_mae_before_n": [
+        5.809939861297607,
+        3.959449052810669,
+        4.760731220245361
+      ],
+      "force_mae_after_n": [
+        5.744025230407715,
+        3.8826868534088135,
+        4.722313404083252
+      ],
+      "encoder_gradient_cosine_with_preceding_main": -0.0784214660525322
+    },
+    {
+      "kind": "main",
+      "mean_action_rms_change": 0.014406652189791203,
+      "latent_rms_change": 0.00815508421510458,
+      "gaussian_kl_mean": 0.0071428739465773106,
+      "force_mae_before_n": [
+        5.744025230407715,
+        3.8826868534088135,
+        4.722313404083252
+      ],
+      "force_mae_after_n": [
+        5.742829322814941,
+        3.8875744342803955,
+        4.719007968902588
+      ]
+    },
+    {
+      "kind": "auxiliary",
+      "mean_action_rms_change": 0.00822997372597456,
+      "latent_rms_change": 0.00800899788737297,
+      "gaussian_kl_mean": 0.002203072654083371,
+      "force_mae_before_n": [
+        5.742829322814941,
+        3.8875744342803955,
+        4.719007968902588
+      ],
+      "force_mae_after_n": [
+        5.751784801483154,
+        3.847961187362671,
+        4.733858585357666
+      ],
+      "encoder_gradient_cosine_with_preceding_main": -0.18813081085681915
+    },
+    {
+      "kind": "main",
+      "mean_action_rms_change": 0.012255235575139523,
+      "latent_rms_change": 0.006927898153662682,
+      "gaussian_kl_mean": 0.005448111332952976,
+      "force_mae_before_n": [
+        5.751784801483154,
+        3.847961187362671,
+        4.733858585357666
+      ],
+      "force_mae_after_n": [
+        5.7546796798706055,
+        3.8520567417144775,
+        4.730598449707031
+      ]
+    },
+    {
+      "kind": "auxiliary",
+      "mean_action_rms_change": 0.007374266628175974,
+      "latent_rms_change": 0.007447808515280485,
+      "gaussian_kl_mean": 0.0015680920332670212,
+      "force_mae_before_n": [
+        5.7546796798706055,
+        3.8520567417144775,
+        4.730598449707031
+      ],
+      "force_mae_after_n": [
+        5.8132405281066895,
+        3.8397367000579834,
+        4.7712626457214355
+      ],
+      "encoder_gradient_cosine_with_preceding_main": -0.07287032157182693
+    },
+    {
+      "kind": "main",
+      "mean_action_rms_change": 0.010271865874528885,
+      "latent_rms_change": 0.005688680801540613,
+      "gaussian_kl_mean": 0.003822299651801586,
+      "force_mae_before_n": [
+        5.8132405281066895,
+        3.8397367000579834,
+        4.7712626457214355
+      ],
+      "force_mae_after_n": [
+        5.807688236236572,
+        3.8413450717926025,
+        4.7573561668396
+      ]
+    },
+    {
+      "kind": "auxiliary",
+      "mean_action_rms_change": 0.007737595587968826,
+      "latent_rms_change": 0.007799447048455477,
+      "gaussian_kl_mean": 0.0017391573637723923,
+      "force_mae_before_n": [
+        5.807688236236572,
+        3.8413450717926025,
+        4.7573561668396
+      ],
+      "force_mae_after_n": [
+        5.877252578735352,
+        3.8435142040252686,
+        4.8217597007751465
+      ],
+      "encoder_gradient_cosine_with_preceding_main": -0.0899246409535408
+    },
+    {
+      "kind": "main",
+      "mean_action_rms_change": 0.010235413908958435,
+      "latent_rms_change": 0.0053491718135774136,
+      "gaussian_kl_mean": 0.0034136390313506126,
+      "force_mae_before_n": [
+        5.877252578735352,
+        3.8435142040252686,
+        4.8217597007751465
+      ],
+      "force_mae_after_n": [
+        5.848511219024658,
+        3.844388961791992,
+        4.80476188659668
+      ]
+    },
+    {
+      "kind": "auxiliary",
+      "mean_action_rms_change": 0.008013375103473663,
+      "latent_rms_change": 0.008105850778520107,
+      "gaussian_kl_mean": 0.0018711587181314826,
+      "force_mae_before_n": [
+        5.848511219024658,
+        3.844388961791992,
+        4.80476188659668
+      ],
+      "force_mae_after_n": [
+        6.009281158447266,
+        3.8597052097320557,
+        4.85031795501709
+      ],
+      "encoder_gradient_cosine_with_preceding_main": -0.23689229786396027
+    }
+  ],
+  "losses": [
+    0.012462456291541458,
+    0.04508326747454703,
+    0.00964687429368496,
+    {
+      "base_velocity_loss": 0.0025654013501480223,
+      "tcp_position_loss": 0.00037396288607851604,
+      "force_ee_loss": 0.006695973267778754,
+      "force_base_loss": 1.1536733836692292e-05
+    }
+  ],
+  "diagnostic_iterations": 1,
+  "formal_policy_updates": 0,
+  "说明": "只在内存副本执行一轮原PPO，恢复双Adam；128环境的小rollout不是正式4096更新的效应量。"
+}

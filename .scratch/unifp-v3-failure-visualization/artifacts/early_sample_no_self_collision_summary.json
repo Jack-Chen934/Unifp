@@ -1,0 +1,40 @@
+{
+  "checkpoint": "/mnt/data_8THDD/myl_unifp_v3_stage1/runs/a8000_seed1_v3_v6r2_resume0767_20261105/checkpoints/model_001400.pt",
+  "checkpoint_sha256": "83c2784e52d0a89d5fc4b2e725a8df4c7c8e48de51add860e77e3186413d7102",
+  "checkpoint_iteration": 1400,
+  "action_mode": "sample",
+  "scenario": "training",
+  "seed": 1001,
+  "num_envs": 128,
+  "self_collision_disabled": true,
+  "policy_steps": 1000,
+  "seconds_per_environment": 19.999999552965164,
+  "completed_episodes": {
+    "timeout": 128
+  },
+  "failure_predicates_overlapping": {},
+  "action_std": [
+    0.9163087010383606,
+    0.8847324848175049,
+    0.8694848418235779,
+    0.8728775382041931,
+    0.6048445701599121,
+    0.6248438954353333,
+    0.6458113789558411,
+    0.6327691674232483,
+    0.5693799257278442,
+    0.3617255389690399,
+    0.29156574606895447,
+    0.5922232270240784,
+    0.4811200797557831,
+    0.4993436336517334
+  ],
+  "action_clip_fraction_steering_drive_arm": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "policy_updates": 0,
+  "source_identity_verified": true,
+  "note_zh": "新episode冻结推理，采用保存物性前N行；非训练历史重放，非正式评估，未修改终止阈值。"
+}

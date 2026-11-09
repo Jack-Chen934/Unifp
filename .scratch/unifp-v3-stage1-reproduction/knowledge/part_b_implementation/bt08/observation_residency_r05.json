@@ -1,0 +1,24 @@
+{
+  "passed": true,
+  "num_envs_training": 4096,
+  "num_envs_evaluation": 32,
+  "parent_and_children_share_gpu": true,
+  "scenarios": [
+    {
+      "scenario": "R2",
+      "policy_updates": 0,
+      "parent_state_unchanged": true
+    },
+    {
+      "scenario": "contact",
+      "policy_updates": 0,
+      "parent_state_unchanged": true
+    },
+    {
+      "scenario": "zero_control",
+      "policy_updates": 0,
+      "parent_state_unchanged": true
+    }
+  ],
+  "说明": "父真实更新一轮后驻留；子视频评估每组仅两策略步，验证图形／显存／状态隔离，不替代正式配额基准。"
+}

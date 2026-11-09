@@ -1,0 +1,959 @@
+[
+  {
+    "name": "static_half_M",
+    "episodes": {
+      "completed": 96,
+      "expected": 96,
+      "physical_failures": 1,
+      "failure_denominator": 96,
+      "physical_failure_rate": 0.010416666666666666
+    },
+    "tracking": {
+      "tcp_geometric_l1_m": {
+        "mean": 0.15430999759059796,
+        "p95": 0.5059303641319275,
+        "sample_count": 47426
+      },
+      "tcp_geometric_l2_m": {
+        "mean": 0.10045797384046397,
+        "p95": 0.32229576259851456,
+        "sample_count": 47426
+      },
+      "base_planar_speed_m_s": {
+        "mean": 0.01671789789703088,
+        "p95": 0.05257674027234316,
+        "sample_count": 47426
+      },
+      "base_yaw_rate_rad_s": {
+        "mean": 0.018376278491351827,
+        "p95": 0.06258047930896282,
+        "sample_count": 47426
+      },
+      "tcp_compensated_l1_m": {
+        "mean": 0.15430628004530342,
+        "p95": 0.505873441696167,
+        "sample_count": 47426
+      },
+      "tcp_compensated_l2_m": {
+        "mean": 0.1004563226263008,
+        "p95": 0.3223036751151085,
+        "sample_count": 47426
+      }
+    },
+    "force_nonzero": {
+      "sample_count": 47425,
+      "axis_mae_n": [
+        6.235590235658128,
+        6.295352217868537,
+        6.111599519322531
+      ],
+      "l2_mean_n": 18.08478710723805,
+      "zero_reference_l2_n": 18.06989980457861
+    },
+    "threshold_results": {
+      "tcp_geometric_l2_m": false,
+      "base_planar_speed_m_s": true,
+      "base_yaw_rate_rad_s": true,
+      "physical_failure_rate": true,
+      "force_nonzero_axis_mae_n": true,
+      "force_nonzero_zero_reference_ratio": false,
+      "force_zero_axis_mae_n": true,
+      "base_velocity_tcp_estimation": true
+    },
+    "cost": {
+      "scenario": "static_half_M",
+      "returncode": 0,
+      "wall_time_s": 410.5330090681091,
+      "peak_process_gpu_memory_mib": 8036,
+      "output_bytes": 486886093,
+      "cuda_visible_devices": "0"
+    }
+  },
+  {
+    "name": "static_half_E",
+    "episodes": {
+      "completed": 96,
+      "expected": 96,
+      "physical_failures": 1,
+      "failure_denominator": 96,
+      "physical_failure_rate": 0.010416666666666666
+    },
+    "tracking": {
+      "tcp_geometric_l1_m": {
+        "mean": 0.14901287440985062,
+        "p95": 0.4349360242486,
+        "sample_count": 47456
+      },
+      "tcp_geometric_l2_m": {
+        "mean": 0.09655509350171529,
+        "p95": 0.2790658101439476,
+        "sample_count": 47456
+      },
+      "base_planar_speed_m_s": {
+        "mean": 0.01690359605357892,
+        "p95": 0.05187670234590769,
+        "sample_count": 47456
+      },
+      "base_yaw_rate_rad_s": {
+        "mean": 0.018417289522555474,
+        "p95": 0.06100190803408623,
+        "sample_count": 47456
+      },
+      "tcp_compensated_l1_m": {
+        "mean": 0.14645959927376412,
+        "p95": 0.38452082872390747,
+        "sample_count": 47456
+      },
+      "tcp_compensated_l2_m": {
+        "mean": 0.09873342725511365,
+        "p95": 0.25493481755256653,
+        "sample_count": 47456
+      }
+    },
+    "force_nonzero": {
+      "sample_count": 47455,
+      "axis_mae_n": [
+        6.209774638796312,
+        6.298333031230139,
+        6.1068528996900815
+      ],
+      "l2_mean_n": 18.091597077489443,
+      "zero_reference_l2_n": 18.077441743536315
+    },
+    "threshold_results": {
+      "tcp_compensated_l2_m": true,
+      "base_planar_speed_m_s": true,
+      "base_yaw_rate_rad_s": true,
+      "physical_failure_rate": true,
+      "force_nonzero_axis_mae_n": true,
+      "force_nonzero_zero_reference_ratio": false,
+      "force_zero_axis_mae_n": true,
+      "base_velocity_tcp_estimation": true
+    },
+    "cost": {
+      "scenario": "static_half_E",
+      "returncode": 0,
+      "wall_time_s": 405.93703445233405,
+      "peak_process_gpu_memory_mib": 8036,
+      "output_bytes": 972755917,
+      "cuda_visible_devices": "0"
+    }
+  },
+  {
+    "name": "static_half_C",
+    "episodes": {
+      "completed": 96,
+      "expected": 96,
+      "physical_failures": 0,
+      "failure_denominator": 96,
+      "physical_failure_rate": 0.0
+    },
+    "tracking": {
+      "tcp_geometric_l1_m": {
+        "mean": 0.0312531284896641,
+        "p95": 0.07090116739273072,
+        "sample_count": 47808
+      },
+      "tcp_geometric_l2_m": {
+        "mean": 0.02057560484440466,
+        "p95": 0.04576526042073966,
+        "sample_count": 47808
+      },
+      "base_planar_speed_m_s": {
+        "mean": 0.011205455290198695,
+        "p95": 0.03277520127594471,
+        "sample_count": 47808
+      },
+      "base_yaw_rate_rad_s": {
+        "mean": 0.01461724082811032,
+        "p95": 0.04941086955368521,
+        "sample_count": 47808
+      },
+      "tcp_compensated_l1_m": {
+        "mean": 0.11243559225070274,
+        "p95": 0.18715835437178613,
+        "sample_count": 47808
+      },
+      "tcp_compensated_l2_m": {
+        "mean": 0.09467837885202894,
+        "p95": 0.16204315796494484,
+        "sample_count": 47808
+      }
+    },
+    "force_nonzero": {
+      "sample_count": 0,
+      "axis_mae_n": null,
+      "l2_mean_n": null,
+      "zero_reference_l2_n": null
+    },
+    "threshold_results": {
+      "tcp_compensated_l2_m": true,
+      "base_planar_speed_m_s": true,
+      "base_yaw_rate_rad_s": true,
+      "physical_failure_rate": true,
+      "force_zero_axis_mae_n": true,
+      "base_velocity_tcp_estimation": true
+    },
+    "cost": {
+      "scenario": "static_half_C",
+      "returncode": 0,
+      "wall_time_s": 400.71519542485476,
+      "peak_process_gpu_memory_mib": 8036,
+      "output_bytes": 1460953360,
+      "cuda_visible_devices": "0"
+    }
+  },
+  {
+    "name": "static_full_M",
+    "episodes": {
+      "completed": 96,
+      "expected": 96,
+      "physical_failures": 1,
+      "failure_denominator": 96,
+      "physical_failure_rate": 0.010416666666666666
+    },
+    "tracking": {
+      "tcp_geometric_l1_m": {
+        "mean": 0.25846522954438217,
+        "p95": 0.656037726998329,
+        "sample_count": 47390
+      },
+      "tcp_geometric_l2_m": {
+        "mean": 0.1708054761111062,
+        "p95": 0.4413303270936007,
+        "sample_count": 47390
+      },
+      "base_planar_speed_m_s": {
+        "mean": 0.02446993308538269,
+        "p95": 0.08121235556900498,
+        "sample_count": 47390
+      },
+      "base_yaw_rate_rad_s": {
+        "mean": 0.029365494212351878,
+        "p95": 0.11694203764200196,
+        "sample_count": 47390
+      },
+      "tcp_compensated_l1_m": {
+        "mean": 0.25847323936070066,
+        "p95": 0.6560108929872512,
+        "sample_count": 47390
+      },
+      "tcp_compensated_l2_m": {
+        "mean": 0.17080681065459938,
+        "p95": 0.44125366508960717,
+        "sample_count": 47390
+      }
+    },
+    "force_nonzero": {
+      "sample_count": 47389,
+      "axis_mae_n": [
+        13.082119146422892,
+        12.538066227835223,
+        12.248886549233077
+      ],
+      "l2_mean_n": 36.15567656779987,
+      "zero_reference_l2_n": 36.12433257975526
+    },
+    "threshold_results": {
+      "tcp_geometric_l2_m": false,
+      "base_planar_speed_m_s": true,
+      "base_yaw_rate_rad_s": true,
+      "physical_failure_rate": true,
+      "force_nonzero_axis_mae_n": false,
+      "force_nonzero_zero_reference_ratio": false,
+      "force_zero_axis_mae_n": true,
+      "base_velocity_tcp_estimation": true
+    },
+    "cost": {
+      "scenario": "static_full_M",
+      "returncode": 0,
+      "wall_time_s": 407.47565627098083,
+      "peak_process_gpu_memory_mib": 8036,
+      "output_bytes": 1947495533,
+      "cuda_visible_devices": "0"
+    }
+  },
+  {
+    "name": "static_full_E",
+    "episodes": {
+      "completed": 96,
+      "expected": 96,
+      "physical_failures": 1,
+      "failure_denominator": 96,
+      "physical_failure_rate": 0.010416666666666666
+    },
+    "tracking": {
+      "tcp_geometric_l1_m": {
+        "mean": 0.2628891442195733,
+        "p95": 0.6716643810272216,
+        "sample_count": 47389
+      },
+      "tcp_geometric_l2_m": {
+        "mean": 0.17285913381588305,
+        "p95": 0.44898928403854355,
+        "sample_count": 47389
+      },
+      "base_planar_speed_m_s": {
+        "mean": 0.024721775503174052,
+        "p95": 0.08272153884172437,
+        "sample_count": 47389
+      },
+      "base_yaw_rate_rad_s": {
+        "mean": 0.030307071368367012,
+        "p95": 0.1202803999185562,
+        "sample_count": 47389
+      },
+      "tcp_compensated_l1_m": {
+        "mean": 0.23592842209583212,
+        "p95": 0.49805757999420164,
+        "sample_count": 47389
+      },
+      "tcp_compensated_l2_m": {
+        "mean": 0.1597986296095526,
+        "p95": 0.3221228778362274,
+        "sample_count": 47389
+      }
+    },
+    "force_nonzero": {
+      "sample_count": 47388,
+      "axis_mae_n": [
+        13.148558867527205,
+        12.500403861901457,
+        12.249718086843231
+      ],
+      "l2_mean_n": 36.1564163959153,
+      "zero_reference_l2_n": 36.12409463036993
+    },
+    "threshold_results": {
+      "tcp_compensated_l2_m": false,
+      "base_planar_speed_m_s": true,
+      "base_yaw_rate_rad_s": true,
+      "physical_failure_rate": true,
+      "force_nonzero_axis_mae_n": false,
+      "force_nonzero_zero_reference_ratio": false,
+      "force_zero_axis_mae_n": true,
+      "base_velocity_tcp_estimation": true
+    },
+    "cost": {
+      "scenario": "static_full_E",
+      "returncode": 0,
+      "wall_time_s": 401.36718905810267,
+      "peak_process_gpu_memory_mib": 8036,
+      "output_bytes": 2432840666,
+      "cuda_visible_devices": "0"
+    }
+  },
+  {
+    "name": "static_full_C",
+    "episodes": {
+      "completed": 96,
+      "expected": 96,
+      "physical_failures": 0,
+      "failure_denominator": 96,
+      "physical_failure_rate": 0.0
+    },
+    "tracking": {
+      "tcp_geometric_l1_m": {
+        "mean": 0.03195158679682817,
+        "p95": 0.07067894786596299,
+        "sample_count": 47808
+      },
+      "tcp_geometric_l2_m": {
+        "mean": 0.02108058006415912,
+        "p95": 0.04576521459966902,
+        "sample_count": 47808
+      },
+      "base_planar_speed_m_s": {
+        "mean": 0.011308873535674484,
+        "p95": 0.03336759191006423,
+        "sample_count": 47808
+      },
+      "base_yaw_rate_rad_s": {
+        "mean": 0.014604127082751692,
+        "p95": 0.04855447802692652,
+        "sample_count": 47808
+      },
+      "tcp_compensated_l1_m": {
+        "mean": 0.2034711556660812,
+        "p95": 0.33659778237342836,
+        "sample_count": 47808
+      },
+      "tcp_compensated_l2_m": {
+        "mean": 0.18411875960499816,
+        "p95": 0.3122846782207489,
+        "sample_count": 47808
+      }
+    },
+    "force_nonzero": {
+      "sample_count": 0,
+      "axis_mae_n": null,
+      "l2_mean_n": null,
+      "zero_reference_l2_n": null
+    },
+    "threshold_results": {
+      "tcp_compensated_l2_m": false,
+      "base_planar_speed_m_s": true,
+      "base_yaw_rate_rad_s": true,
+      "physical_failure_rate": true,
+      "force_zero_axis_mae_n": true,
+      "base_velocity_tcp_estimation": true
+    },
+    "cost": {
+      "scenario": "static_full_C",
+      "returncode": 0,
+      "wall_time_s": 394.1567993299104,
+      "peak_process_gpu_memory_mib": 8036,
+      "output_bytes": 2920983525,
+      "cuda_visible_devices": "0"
+    }
+  },
+  {
+    "name": "moving_half_M",
+    "episodes": {
+      "completed": 96,
+      "expected": 96,
+      "physical_failures": 1,
+      "failure_denominator": 96,
+      "physical_failure_rate": 0.010416666666666666
+    },
+    "tracking": {
+      "tcp_geometric_l1_m": {
+        "mean": 0.13855853716966807,
+        "p95": 0.41183873265981674,
+        "sample_count": 47416
+      },
+      "tcp_geometric_l2_m": {
+        "mean": 0.09045813381607137,
+        "p95": 0.2646794617176056,
+        "sample_count": 47416
+      },
+      "base_planar_speed_m_s": {
+        "mean": 0.07018458627257144,
+        "p95": 0.19604140520095825,
+        "sample_count": 47416
+      },
+      "base_yaw_rate_rad_s": {
+        "mean": 0.08208646595566466,
+        "p95": 0.24044156447052956,
+        "sample_count": 47416
+      },
+      "tcp_compensated_l1_m": {
+        "mean": 0.13849991380865337,
+        "p95": 0.4119220972061157,
+        "sample_count": 47416
+      },
+      "tcp_compensated_l2_m": {
+        "mean": 0.09042546440380604,
+        "p95": 0.26475899666547775,
+        "sample_count": 47416
+      }
+    },
+    "force_nonzero": {
+      "sample_count": 47415,
+      "axis_mae_n": [
+        7.463542933755407,
+        7.774257783050138,
+        6.108255322618373
+      ],
+      "l2_mean_n": 18.065836793893197,
+      "zero_reference_l2_n": 18.067383812370228
+    },
+    "threshold_results": {
+      "tcp_geometric_l2_m": true,
+      "base_planar_speed_m_s": true,
+      "base_yaw_rate_rad_s": true,
+      "physical_failure_rate": true,
+      "force_nonzero_axis_mae_n": true,
+      "force_nonzero_zero_reference_ratio": false,
+      "force_zero_axis_mae_n": true,
+      "base_velocity_tcp_estimation": true
+    },
+    "cost": {
+      "scenario": "moving_half_M",
+      "returncode": 0,
+      "wall_time_s": 420.5890393140726,
+      "peak_process_gpu_memory_mib": 8036,
+      "output_bytes": 3410674661,
+      "cuda_visible_devices": "0"
+    }
+  },
+  {
+    "name": "moving_half_E",
+    "episodes": {
+      "completed": 96,
+      "expected": 96,
+      "physical_failures": 1,
+      "failure_denominator": 96,
+      "physical_failure_rate": 0.010416666666666666
+    },
+    "tracking": {
+      "tcp_geometric_l1_m": {
+        "mean": 0.13893284954952034,
+        "p95": 0.4075004756450653,
+        "sample_count": 47431
+      },
+      "tcp_geometric_l2_m": {
+        "mean": 0.0902083752662555,
+        "p95": 0.2637479901313782,
+        "sample_count": 47431
+      },
+      "base_planar_speed_m_s": {
+        "mean": 0.06958967888242878,
+        "p95": 0.18729915469884872,
+        "sample_count": 47431
+      },
+      "base_yaw_rate_rad_s": {
+        "mean": 0.07845943409412579,
+        "p95": 0.22889935970306396,
+        "sample_count": 47431
+      },
+      "tcp_compensated_l1_m": {
+        "mean": 0.1424652181356999,
+        "p95": 0.360400527715683,
+        "sample_count": 47431
+      },
+      "tcp_compensated_l2_m": {
+        "mean": 0.09669807604115613,
+        "p95": 0.23917026817798615,
+        "sample_count": 47431
+      }
+    },
+    "force_nonzero": {
+      "sample_count": 47430,
+      "axis_mae_n": [
+        7.492640053028754,
+        7.7415519570512865,
+        6.106302556865532
+      ],
+      "l2_mean_n": 18.069585982243353,
+      "zero_reference_l2_n": 18.071157567553858
+    },
+    "threshold_results": {
+      "tcp_compensated_l2_m": true,
+      "base_planar_speed_m_s": true,
+      "base_yaw_rate_rad_s": true,
+      "physical_failure_rate": true,
+      "force_nonzero_axis_mae_n": true,
+      "force_nonzero_zero_reference_ratio": false,
+      "force_zero_axis_mae_n": true,
+      "base_velocity_tcp_estimation": true
+    },
+    "cost": {
+      "scenario": "moving_half_E",
+      "returncode": 0,
+      "wall_time_s": 426.67694564303383,
+      "peak_process_gpu_memory_mib": 8554,
+      "output_bytes": 488365349,
+      "cuda_visible_devices": "3"
+    }
+  },
+  {
+    "name": "moving_half_C",
+    "episodes": {
+      "completed": 96,
+      "expected": 96,
+      "physical_failures": 0,
+      "failure_denominator": 96,
+      "physical_failure_rate": 0.0
+    },
+    "tracking": {
+      "tcp_geometric_l1_m": {
+        "mean": 0.031378301555197934,
+        "p95": 0.06843846142292023,
+        "sample_count": 47808
+      },
+      "tcp_geometric_l2_m": {
+        "mean": 0.02083620900268113,
+        "p95": 0.044612029381096374,
+        "sample_count": 47808
+      },
+      "base_planar_speed_m_s": {
+        "mean": 0.056801799607963006,
+        "p95": 0.16694232001900677,
+        "sample_count": 47808
+      },
+      "base_yaw_rate_rad_s": {
+        "mean": 0.06484417602023941,
+        "p95": 0.1874086171388628,
+        "sample_count": 47808
+      },
+      "tcp_compensated_l1_m": {
+        "mean": 0.11238785915953275,
+        "p95": 0.18638517856597903,
+        "sample_count": 47808
+      },
+      "tcp_compensated_l2_m": {
+        "mean": 0.09447731080077255,
+        "p95": 0.16085822731256486,
+        "sample_count": 47808
+      }
+    },
+    "force_nonzero": {
+      "sample_count": 0,
+      "axis_mae_n": null,
+      "l2_mean_n": null,
+      "zero_reference_l2_n": null
+    },
+    "threshold_results": {
+      "tcp_compensated_l2_m": true,
+      "base_planar_speed_m_s": true,
+      "base_yaw_rate_rad_s": true,
+      "physical_failure_rate": true,
+      "force_zero_axis_mae_n": true,
+      "base_velocity_tcp_estimation": true
+    },
+    "cost": {
+      "scenario": "moving_half_C",
+      "returncode": 0,
+      "wall_time_s": 426.4502587718889,
+      "peak_process_gpu_memory_mib": 8554,
+      "output_bytes": 979264951,
+      "cuda_visible_devices": "3"
+    }
+  },
+  {
+    "name": "moving_full_M",
+    "episodes": {
+      "completed": 96,
+      "expected": 96,
+      "physical_failures": 2,
+      "failure_denominator": 96,
+      "physical_failure_rate": 0.020833333333333332
+    },
+    "tracking": {
+      "tcp_geometric_l1_m": {
+        "mean": 0.25420030353516776,
+        "p95": 0.6539246320724486,
+        "sample_count": 47049
+      },
+      "tcp_geometric_l2_m": {
+        "mean": 0.16738509696510084,
+        "p95": 0.42633946537971495,
+        "sample_count": 47049
+      },
+      "base_planar_speed_m_s": {
+        "mean": 0.09264549557480911,
+        "p95": 0.26097751855850215,
+        "sample_count": 47049
+      },
+      "base_yaw_rate_rad_s": {
+        "mean": 0.10119791303252106,
+        "p95": 0.29432601332664465,
+        "sample_count": 47049
+      },
+      "tcp_compensated_l1_m": {
+        "mean": 0.2541707344229086,
+        "p95": 0.6540962934494018,
+        "sample_count": 47049
+      },
+      "tcp_compensated_l2_m": {
+        "mean": 0.16735270286261325,
+        "p95": 0.42612000703811637,
+        "sample_count": 47049
+      }
+    },
+    "force_nonzero": {
+      "sample_count": 47047,
+      "axis_mae_n": [
+        14.850339537926645,
+        15.56228318516469,
+        12.314242248794544
+      ],
+      "l2_mean_n": 36.13318431794392,
+      "zero_reference_l2_n": 36.13747968827197
+    },
+    "threshold_results": {
+      "tcp_geometric_l2_m": false,
+      "base_planar_speed_m_s": true,
+      "base_yaw_rate_rad_s": true,
+      "physical_failure_rate": true,
+      "force_nonzero_axis_mae_n": false,
+      "force_nonzero_zero_reference_ratio": false,
+      "force_zero_axis_mae_n": true,
+      "base_velocity_tcp_estimation": true
+    },
+    "cost": {
+      "scenario": "moving_full_M",
+      "returncode": 0,
+      "wall_time_s": 431.63626536587253,
+      "peak_process_gpu_memory_mib": 8554,
+      "output_bytes": 1465104576,
+      "cuda_visible_devices": "3"
+    }
+  },
+  {
+    "name": "moving_full_E",
+    "episodes": {
+      "completed": 96,
+      "expected": 96,
+      "physical_failures": 1,
+      "failure_denominator": 96,
+      "physical_failure_rate": 0.010416666666666666
+    },
+    "tracking": {
+      "tcp_geometric_l1_m": {
+        "mean": 0.26850454041438787,
+        "p95": 0.6757780075073239,
+        "sample_count": 47425
+      },
+      "tcp_geometric_l2_m": {
+        "mean": 0.17613821639123378,
+        "p95": 0.44660407304763694,
+        "sample_count": 47425
+      },
+      "base_planar_speed_m_s": {
+        "mean": 0.09552831015894611,
+        "p95": 0.26167684197425833,
+        "sample_count": 47425
+      },
+      "base_yaw_rate_rad_s": {
+        "mean": 0.10231595264309816,
+        "p95": 0.2932665109634399,
+        "sample_count": 47425
+      },
+      "tcp_compensated_l1_m": {
+        "mean": 0.23967142409684788,
+        "p95": 0.49508914947509736,
+        "sample_count": 47425
+      },
+      "tcp_compensated_l2_m": {
+        "mean": 0.16234231189300066,
+        "p95": 0.3230226337909698,
+        "sample_count": 47425
+      }
+    },
+    "force_nonzero": {
+      "sample_count": 47424,
+      "axis_mae_n": [
+        15.141137794480148,
+        15.564080742617557,
+        12.226434608144679
+      ],
+      "l2_mean_n": 36.13177784095153,
+      "zero_reference_l2_n": 36.139296710151285
+    },
+    "threshold_results": {
+      "tcp_compensated_l2_m": false,
+      "base_planar_speed_m_s": true,
+      "base_yaw_rate_rad_s": true,
+      "physical_failure_rate": true,
+      "force_nonzero_axis_mae_n": false,
+      "force_nonzero_zero_reference_ratio": false,
+      "force_zero_axis_mae_n": true,
+      "base_velocity_tcp_estimation": true
+    },
+    "cost": {
+      "scenario": "moving_full_E",
+      "returncode": 0,
+      "wall_time_s": 427.13291683001444,
+      "peak_process_gpu_memory_mib": 8554,
+      "output_bytes": 1953341225,
+      "cuda_visible_devices": "3"
+    }
+  },
+  {
+    "name": "moving_full_C",
+    "episodes": {
+      "completed": 96,
+      "expected": 96,
+      "physical_failures": 0,
+      "failure_denominator": 96,
+      "physical_failure_rate": 0.0
+    },
+    "tracking": {
+      "tcp_geometric_l1_m": {
+        "mean": 0.03207005876044143,
+        "p95": 0.06824878156185152,
+        "sample_count": 47808
+      },
+      "tcp_geometric_l2_m": {
+        "mean": 0.021359207271423382,
+        "p95": 0.04480850603431465,
+        "sample_count": 47808
+      },
+      "base_planar_speed_m_s": {
+        "mean": 0.05708958630424156,
+        "p95": 0.16681465804576875,
+        "sample_count": 47808
+      },
+      "base_yaw_rate_rad_s": {
+        "mean": 0.06501126029559982,
+        "p95": 0.1883349105715752,
+        "sample_count": 47808
+      },
+      "tcp_compensated_l1_m": {
+        "mean": 0.2034713649615442,
+        "p95": 0.335522210597992,
+        "sample_count": 47808
+      },
+      "tcp_compensated_l2_m": {
+        "mean": 0.18390112302916883,
+        "p95": 0.31097335666418074,
+        "sample_count": 47808
+      }
+    },
+    "force_nonzero": {
+      "sample_count": 0,
+      "axis_mae_n": null,
+      "l2_mean_n": null,
+      "zero_reference_l2_n": null
+    },
+    "threshold_results": {
+      "tcp_compensated_l2_m": false,
+      "base_planar_speed_m_s": true,
+      "base_yaw_rate_rad_s": true,
+      "physical_failure_rate": true,
+      "force_zero_axis_mae_n": true,
+      "base_velocity_tcp_estimation": true
+    },
+    "cost": {
+      "scenario": "moving_full_C",
+      "returncode": 0,
+      "wall_time_s": 416.2849940126762,
+      "peak_process_gpu_memory_mib": 8554,
+      "output_bytes": 2444209524,
+      "cuda_visible_devices": "3"
+    }
+  },
+  {
+    "name": "R0",
+    "episodes": {
+      "completed": 96,
+      "expected": 96,
+      "physical_failures": 3,
+      "failure_denominator": 96,
+      "physical_failure_rate": 0.03125
+    },
+    "tracking": {
+      "tcp_geometric_l1_m": {
+        "mean": 0.20048273887958393,
+        "p95": 0.6484435051679609,
+        "sample_count": 80458
+      },
+      "tcp_geometric_l2_m": {
+        "mean": 0.1298214770688662,
+        "p95": 0.4171139359474181,
+        "sample_count": 80458
+      },
+      "base_planar_speed_m_s": {
+        "mean": 0.02070875299706716,
+        "p95": 0.0716128818690776,
+        "sample_count": 80458
+      },
+      "base_yaw_rate_rad_s": {
+        "mean": 0.023733202315633188,
+        "p95": 0.09338518567383272,
+        "sample_count": 80458
+      },
+      "tcp_compensated_l1_m": {
+        "mean": 0.31733926138673585,
+        "p95": 0.718008530139923,
+        "sample_count": 80458
+      },
+      "tcp_compensated_l2_m": {
+        "mean": 0.20858793314558471,
+        "p95": 0.4569519355893135,
+        "sample_count": 80458
+      }
+    },
+    "force_nonzero": {
+      "sample_count": 56062,
+      "axis_mae_n": [
+        17.734548708385347,
+        18.442562021235002,
+        18.46642236551658
+      ],
+      "l2_mean_n": 35.31368708101705,
+      "zero_reference_l2_n": 35.28939863554856
+    },
+    "threshold_results": {
+      "tcp_compensated_l2_m": false,
+      "base_planar_speed_m_s": true,
+      "base_yaw_rate_rad_s": true,
+      "physical_failure_rate": true,
+      "force_nonzero_axis_mae_n": false,
+      "force_nonzero_zero_reference_ratio": false,
+      "force_zero_axis_mae_n": true,
+      "base_velocity_tcp_estimation": true
+    },
+    "cost": {
+      "scenario": "R0",
+      "returncode": 0,
+      "wall_time_s": 399.24553331779316,
+      "peak_process_gpu_memory_mib": 8554,
+      "output_bytes": 2938217424,
+      "cuda_visible_devices": "3"
+    }
+  },
+  {
+    "name": "R2",
+    "episodes": {
+      "completed": 96,
+      "expected": 96,
+      "physical_failures": 2,
+      "failure_denominator": 96,
+      "physical_failure_rate": 0.020833333333333332
+    },
+    "tracking": {
+      "tcp_geometric_l1_m": {
+        "mean": 0.22577265175517905,
+        "p95": 0.6965285390615462,
+        "sample_count": 78594
+      },
+      "tcp_geometric_l2_m": {
+        "mean": 0.14661615011414775,
+        "p95": 0.4493860527873039,
+        "sample_count": 78594
+      },
+      "base_planar_speed_m_s": {
+        "mean": 0.09061863420326943,
+        "p95": 0.24824131280183778,
+        "sample_count": 78594
+      },
+      "base_yaw_rate_rad_s": {
+        "mean": 0.09289525869600619,
+        "p95": 0.2914154738187785,
+        "sample_count": 78594
+      },
+      "tcp_compensated_l1_m": {
+        "mean": 0.323755891340505,
+        "p95": 0.6988603591918944,
+        "sample_count": 78594
+      },
+      "tcp_compensated_l2_m": {
+        "mean": 0.21354145586432027,
+        "p95": 0.45370274335145916,
+        "sample_count": 78594
+      }
+    },
+    "force_nonzero": {
+      "sample_count": 59055,
+      "axis_mae_n": [
+        17.281633850731584,
+        18.24716495566291,
+        18.687555772265874
+      ],
+      "l2_mean_n": 35.20248628790756,
+      "zero_reference_l2_n": 35.206979098851306
+    },
+    "threshold_results": {
+      "tcp_compensated_l2_m": false,
+      "base_planar_speed_m_s": true,
+      "base_yaw_rate_rad_s": true,
+      "physical_failure_rate": true,
+      "force_nonzero_axis_mae_n": false,
+      "force_nonzero_zero_reference_ratio": false,
+      "force_zero_axis_mae_n": true,
+      "base_velocity_tcp_estimation": true,
+      "push_recovery": true
+    },
+    "cost": {
+      "scenario": "R2",
+      "returncode": 0,
+      "wall_time_s": 420.71347351698205,
+      "peak_process_gpu_memory_mib": 8554,
+      "output_bytes": 3433914000,
+      "cuda_visible_devices": "3"
+    }
+  }
+]

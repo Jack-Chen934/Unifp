@@ -1,0 +1,415 @@
+{
+  "environment": {
+    "asset": {
+      "angular_damping": 0.0,
+      "armature": 0.0,
+      "collapse_fixed_joints": false,
+      "default_dof_drive_mode": 3,
+      "density": 0.005,
+      "disable_gravity": false,
+      "file": "/mnt/data_8THDD/myl_unifp_v3_stage1/validation/a8000_repairs_20261104_r03/source/UniFP_v3/resources/robots/v3_a1_desktop_train_v6_coplanar_r2/urdf/a1arm_rgm3_desktop_fixed_gripper.urdf",
+      "fix_base_link": false,
+      "flip_visual_attachments": true,
+      "foot_name": "_Link",
+      "linear_damping": 0.0,
+      "max_angular_velocity": 1000.0,
+      "max_linear_velocity": 1000.0,
+      "name": "v3_a1",
+      "penalize_contacts_on": [],
+      "replace_cylinder_with_capsule": false,
+      "self_collisions": 0,
+      "terminate_after_contacts_on": [
+        "base_link"
+      ],
+      "thickness": 0.01,
+      "thigh_name": "None"
+    },
+    "commands": {
+      "curriculum": false,
+      "heading_command": false,
+      "max_curriculum": 1.0,
+      "num_commands": 15,
+      "ranges": {
+        "ang_vel_yaw": [
+          -0.6,
+          0.6
+        ],
+        "lin_vel_x": [
+          -0.6,
+          0.6
+        ],
+        "lin_vel_y": [
+          -0.4,
+          0.4
+        ]
+      },
+      "resampling_time": 5.0
+    },
+    "control": {
+      "action_scale": 0.25,
+      "control_type": "P",
+      "damping": {
+        "fl_steering_joint": 0.664582,
+        "fr_steering_joint": 0.664582,
+        "bl_steering_joint": 0.664582,
+        "br_steering_joint": 0.664582,
+        "fl_wheel_drive_joint": 7.73109,
+        "fr_wheel_drive_joint": 7.73109,
+        "bl_wheel_drive_joint": 7.73109,
+        "br_wheel_drive_joint": 7.73109,
+        "arm_joint1": 1.48316,
+        "arm_joint2": 13.7176,
+        "arm_joint3": 4.75773,
+        "arm_joint4": 0.0249632,
+        "arm_joint5": 0.414412,
+        "arm_joint6": 0.0188456
+      },
+      "decimation": 8,
+      "stiffness": {
+        "fl_steering_joint": 49.8436,
+        "fr_steering_joint": 49.8436,
+        "bl_steering_joint": 49.8436,
+        "br_steering_joint": 49.8436,
+        "fl_wheel_drive_joint": 0.0,
+        "fr_wheel_drive_joint": 0.0,
+        "bl_wheel_drive_joint": 0.0,
+        "br_wheel_drive_joint": 0.0,
+        "arm_joint1": 27.8093,
+        "arm_joint2": 300.072,
+        "arm_joint3": 118.943,
+        "arm_joint4": 1.40418,
+        "arm_joint5": 12.9504,
+        "arm_joint6": 1.06007
+      },
+      "wheel_action_scale": 5.0,
+      "wheel_velocity_limit": 20.0
+    },
+    "domain_rand": {
+      "added_mass_range": [
+        -1.0,
+        1.0
+      ],
+      "base_com_range": [
+        -0.02,
+        0.02
+      ],
+      "base_mass_scale_range": [
+        0.9,
+        1.1
+      ],
+      "execution_scale_range": [
+        0.85,
+        1.15
+      ],
+      "friction_range": [
+        0.3,
+        2.0
+      ],
+      "max_push_vel_xy": 0.8,
+      "push_interval_s": 8.0,
+      "push_robots": true,
+      "randomize_base_com": true,
+      "randomize_base_mass": true,
+      "randomize_execution_scale": true,
+      "randomize_friction": true,
+      "randomize_tool_mass": true,
+      "tool_mass_scale_range": [
+        0.9,
+        1.1
+      ]
+    },
+    "env": {
+      "c_frame_stack": 3,
+      "env_spacing": 3.0,
+      "episode_length_s": 20.0,
+      "frame_stack": 32,
+      "num_actions": 14,
+      "num_envs": 2,
+      "num_observations": 1856,
+      "num_pred_obs": 12,
+      "num_privileged_obs": 294,
+      "num_single_obs": 58,
+      "send_timeouts": true,
+      "single_num_privileged_obs": 98,
+      "teleop_mode": false,
+      "test": false
+    },
+    "goal_ee": {
+      "azimuth": [
+        -1.0471975511965976,
+        1.0471975511965976
+      ],
+      "elevation": [
+        0.0,
+        1.0471975511965976
+      ],
+      "hold_time": [
+        0.5,
+        2.0
+      ],
+      "max_resamples": 10,
+      "min_tcp_height": 0.05,
+      "move_time": [
+        1.0,
+        3.0
+      ],
+      "num_path_check_samples": 10,
+      "radius": [
+        0.45,
+        0.7
+      ]
+    },
+    "init_member_classes": {},
+    "init_state": {
+      "ang_vel": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "default_joint_angles": {
+        "fl_steering_joint": 0.0,
+        "fr_steering_joint": 0.0,
+        "bl_steering_joint": 0.0,
+        "br_steering_joint": 0.0,
+        "fl_wheel_drive_joint": 0.0,
+        "fr_wheel_drive_joint": 0.0,
+        "bl_wheel_drive_joint": 0.0,
+        "br_wheel_drive_joint": 0.0,
+        "arm_joint1": 0.0,
+        "arm_joint2": 1.0,
+        "arm_joint3": -1.5,
+        "arm_joint4": 0.0,
+        "arm_joint5": 0.0,
+        "arm_joint6": 0.0
+      },
+      "lin_vel": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "pos": [
+        0.0,
+        0.0,
+        0.34
+      ],
+      "rot": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    },
+    "noise": {
+      "add_noise": true,
+      "noise_level": 1.0,
+      "noise_scales": {
+        "ang_vel": 0.2,
+        "dof_pos": 0.01,
+        "dof_vel": 1.5,
+        "gravity": 0.05,
+        "height_measurements": 0.1,
+        "lin_vel": 0.1
+      }
+    },
+    "normalization": {
+      "clip_actions": 100.0,
+      "clip_observations": 100.0,
+      "obs_scales": {
+        "ang_vel": 0.25,
+        "base_force": 0.01,
+        "dof_pos": 1.0,
+        "dof_vel": 0.05,
+        "ee_force": 0.01,
+        "ee_sphe_pitch_cmd": 1.0,
+        "ee_sphe_radius_cmd": 0.5,
+        "ee_sphe_yaw_cmd": 1.3,
+        "end_effector_pitch_cmd": 0.5,
+        "end_effector_roll_cmd": 0.5,
+        "end_effector_yaw_cmd": 0.5,
+        "height_measurements": 5.0,
+        "lin_vel": 2.0
+      }
+    },
+    "rewards": {
+      "base_height_target": 0.32,
+      "collision_force_threshold": 0.1,
+      "max_contact_force": 100.0,
+      "only_positive_rewards": false,
+      "scales": {
+        "action_rate_arm": -0.045,
+        "action_rate_drive": -0.02,
+        "action_rate_steering": -0.02,
+        "alive": 1.5,
+        "ang_vel_xy": -0.02,
+        "base_height": -2.0,
+        "collision": -5.0,
+        "dof_acc_arm": -4.5e-07,
+        "dof_acc_drive": -2.5e-07,
+        "dof_acc_steering": -2.5e-07,
+        "dof_pos_limits": -10.0,
+        "dof_vel_arm": -0.0002,
+        "dof_vel_steering": -0.0008,
+        "lin_vel_z": -1.5,
+        "torque_limits_arm": -0.005,
+        "torque_limits_drive": -0.005,
+        "torque_limits_steering": -0.005,
+        "torques_arm": -5e-06,
+        "torques_drive": -5e-06,
+        "torques_steering": -5e-06,
+        "tracking_ang_vel": 1.0,
+        "tracking_ee_force_world": 2.0,
+        "tracking_lin_vel": 2.0
+      },
+      "soft_dof_pos_limit": 0.95,
+      "soft_dof_vel_limit": 1.0,
+      "soft_torque_limit": 0.9,
+      "tracking_ee_sigma": 1.0,
+      "tracking_sigma": 0.25
+    },
+    "run": {
+      "reproduction_part": "A",
+      "run_purpose": "evaluation"
+    },
+    "seed": 1001,
+    "sim": {
+      "dt": 0.0025,
+      "gravity": [
+        0.0,
+        0.0,
+        -9.81
+      ],
+      "physx": {
+        "bounce_threshold_velocity": 0.5,
+        "contact_collection": 2,
+        "contact_offset": 0.01,
+        "default_buffer_size_multiplier": 5,
+        "max_depenetration_velocity": 1.0,
+        "max_gpu_contact_pairs": 33554432,
+        "num_position_iterations": 4,
+        "num_threads": 10,
+        "num_velocity_iterations": 0,
+        "rest_offset": 0.0,
+        "solver_type": 1
+      },
+      "substeps": 1,
+      "up_axis": 1
+    },
+    "terrain": {
+      "border_size": 25,
+      "curriculum": false,
+      "dynamic_friction": 1.0,
+      "horizontal_scale": 0.1,
+      "max_init_terrain_level": 5,
+      "measure_heights": false,
+      "measured_points_x": [
+        -0.8,
+        -0.7,
+        -0.6,
+        -0.5,
+        -0.4,
+        -0.3,
+        -0.2,
+        -0.1,
+        0.0,
+        0.1,
+        0.2,
+        0.3,
+        0.4,
+        0.5,
+        0.6,
+        0.7,
+        0.8
+      ],
+      "measured_points_y": [
+        -0.5,
+        -0.4,
+        -0.3,
+        -0.2,
+        -0.1,
+        0.0,
+        0.1,
+        0.2,
+        0.3,
+        0.4,
+        0.5
+      ],
+      "mesh_type": "plane",
+      "num_cols": 20,
+      "num_rows": 10,
+      "restitution": 0.0,
+      "selected": false,
+      "slope_treshold": 0.75,
+      "static_friction": 1.0,
+      "terrain_kwargs": null,
+      "terrain_length": 8.0,
+      "terrain_proportions": [
+        0.1,
+        0.1,
+        0.35,
+        0.25,
+        0.2
+      ],
+      "terrain_width": 8.0,
+      "vertical_scale": 0.005
+    },
+    "viewer": {
+      "lookat": [
+        11.0,
+        5,
+        3.0
+      ],
+      "pos": [
+        10,
+        0,
+        6
+      ],
+      "ref_env": 0
+    }
+  },
+  "training": {
+    "algorithm": {
+      "clip_param": 0.2,
+      "desired_kl": 0.01,
+      "entropy_coef": 0.01,
+      "gamma": 0.99,
+      "lam": 0.95,
+      "learning_rate": 0.001,
+      "max_grad_norm": 1.0,
+      "num_learning_epochs": 5,
+      "num_mini_batches": 4,
+      "schedule": "adaptive",
+      "use_clipped_value_loss": true,
+      "value_loss_coef": 1.0
+    },
+    "init_member_classes": {},
+    "policy": {
+      "activation": "elu",
+      "actor_hidden_dims": [
+        512,
+        256,
+        128
+      ],
+      "critic_hidden_dims": [
+        512,
+        256,
+        128
+      ],
+      "init_noise_std": 1.0
+    },
+    "runner": {
+      "algorithm_class_name": "V3PPO",
+      "checkpoint": -1,
+      "experiment_name": "v3_pos_force_stage_a",
+      "load_run": -1,
+      "max_iterations": 8000,
+      "num_steps_per_env": 24,
+      "policy_class_name": "V3ActorCritic",
+      "resume": false,
+      "resume_path": null,
+      "run_name": "",
+      "save_interval": 200
+    },
+    "runner_class_name": "V3OnPolicyRunner",
+    "seed": 1001
+  }
+}

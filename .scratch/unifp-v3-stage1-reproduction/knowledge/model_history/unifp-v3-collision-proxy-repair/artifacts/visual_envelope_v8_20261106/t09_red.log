@@ -1,0 +1,21 @@
+test_visual_envelope_regression (unittest.loader._FailedTest.test_visual_envelope_regression) ... ERROR
+
+======================================================================
+ERROR: test_visual_envelope_regression (unittest.loader._FailedTest.test_visual_envelope_regression)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_visual_envelope_regression
+Traceback (most recent call last):
+  File "/home/sorry/miniconda3/lib/python3.13/unittest/loader.py", line 396, in _find_test_path
+    module = self._get_module_from_name(name)
+  File "/home/sorry/miniconda3/lib/python3.13/unittest/loader.py", line 339, in _get_module_from_name
+    __import__(name)
+    ~~~~~~~~~~^^^^^^
+  File "/home/sorry/python_ws/interactive/unifp_reproduction/.scratch/unifp-v3-collision-proxy-repair/knowledge/test_visual_envelope_regression.py", line 5, in <module>
+    from audit_visual_envelope_regression import audit_geometry
+ModuleNotFoundError: No module named 'audit_visual_envelope_regression'
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (errors=1)

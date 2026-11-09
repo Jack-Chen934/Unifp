@@ -1,0 +1,236 @@
+{
+  "checked_at": "2026-11-05T10:11:14.100849+08:00",
+  "host": "gpuf3",
+  "run": "/mnt/data_8THDD/myl_unifp_v3_stage1/runs/a8000_seed1_v3_v6r2_20261104",
+  "process_exists": false,
+  "failure": {
+    "error_type": "RuntimeError",
+    "error": "观察协议暂停：本轮有1次物理失败，完整边界已保存",
+    "errno": null,
+    "checkpoint_save": {
+      "path": "/mnt/data_8THDD/myl_unifp_v3_stage1/runs/a8000_seed1_v3_v6r2_20261104/checkpoints/model_000767.pt",
+      "operation": "complete"
+    },
+    "completed_iterations": 767,
+    "last_saved_iteration": 767,
+    "rollout_step": 0,
+    "update_in_progress": false,
+    "episode_records": [
+      {
+        "completed_iterations": 766,
+        "training_policy_steps": 18386,
+        "training_transitions": 75309056,
+        "env_id": 4002,
+        "steps": 387,
+        "duration_s": 7.7399998269975185,
+        "end_type": "physical_failure",
+        "reward_return": 39.14950180053711,
+        "reward_rate": 5.058075281084843,
+        "raw_reward_means": {
+          "tracking_ee_force_world": 0.6676706075668335,
+          "tracking_lin_vel": 0.8841996192932129,
+          "tracking_ang_vel": 0.836139976978302,
+          "alive": 1,
+          "torques_steering": 283.2183837890625,
+          "torques_drive": 1068.0135498046875,
+          "torques_arm": 251.0866241455078,
+          "action_rate_steering": 2.878667116165161,
+          "action_rate_drive": 1.54228937625885,
+          "action_rate_arm": 1.1276130676269531,
+          "dof_vel_steering": 11.207566261291504,
+          "dof_vel_arm": 42.0147590637207,
+          "dof_acc_steering": 42404.984375,
+          "dof_acc_drive": 124985.7578125,
+          "dof_acc_arm": 112510.5234375,
+          "torque_limits_steering": 0.013431849889457226,
+          "torque_limits_drive": 0.14075133204460144,
+          "torque_limits_arm": 0.12046293169260025,
+          "dof_pos_limits": 0.009554648771882057,
+          "lin_vel_z": 0.00105291698127985,
+          "ang_vel_xy": 0.020026998594403267,
+          "base_height": 0.000024390590624534525,
+          "collision": 0.005167958792299032
+        },
+        "errors": {
+          "tcp_geometric_l1_m": {
+            "mean": 0.20920297503471375,
+            "p95": 0.36958760023117065
+          },
+          "tcp_geometric_l2_m": {
+            "mean": 0.1380714476108551,
+            "p95": 0.23246487975120544
+          },
+          "base_planar_speed_m_s": {
+            "mean": 0.16130654513835907,
+            "p95": 0.34562259912490845
+          },
+          "base_yaw_rate_rad_s": {
+            "mean": 0.18664102256298065,
+            "p95": 0.47283196449279785
+          },
+          "tcp_compensated_l1_m": {
+            "mean": 0.20920297503471375,
+            "p95": 0.36958760023117065
+          },
+          "tcp_compensated_l2_m": {
+            "mean": 0.1380714476108551,
+            "p95": 0.23246487975120544
+          }
+        },
+        "timeout_bootstrap_bonus": 0
+      }
+    ]
+  },
+  "failure_file_sha256": "77bc2a70f9bed1aadb4c182405af9a5e05453efa4bcea25a08070e9244edd266",
+  "last_iteration": {
+    "completed_iterations": 767,
+    "training_policy_steps": 18408,
+    "training_transitions": 75399168,
+    "simulated_time_per_environment_s": 368.15999177098274,
+    "collection_s": 10.698748863767833,
+    "update_s": 0.6849300721660256,
+    "value_loss": 0.015914453053846957,
+    "surrogate_loss": 0.003369189228396863,
+    "auxiliary_loss": 0.002507477207109332,
+    "main_learning_rate": 0.000033750000000000014,
+    "auxiliary/base_velocity_loss": 0.002407566795591265,
+    "auxiliary/tcp_position_loss": 0.0000895172925083898,
+    "auxiliary/force_ee_loss": 0.0000047916303174133645,
+    "auxiliary/force_base_loss": 0.000005601480006589555,
+    "episode/episode_count": 1,
+    "episode/reward_rate": 5.058075281084843,
+    "episode/reward_return": 39.14950180053711,
+    "episode/steps": 387,
+    "episode/timeout_bootstrap_bonus": 0,
+    "episode/raw/tracking_ee_force_world": 0.6676706075668335,
+    "episode/raw/tracking_lin_vel": 0.8841996192932129,
+    "episode/raw/tracking_ang_vel": 0.836139976978302,
+    "episode/raw/alive": 1,
+    "episode/raw/torques_steering": 283.2183837890625,
+    "episode/raw/torques_drive": 1068.0135498046875,
+    "episode/raw/torques_arm": 251.0866241455078,
+    "episode/raw/action_rate_steering": 2.878667116165161,
+    "episode/raw/action_rate_drive": 1.54228937625885,
+    "episode/raw/action_rate_arm": 1.1276130676269531,
+    "episode/raw/dof_vel_steering": 11.207566261291504,
+    "episode/raw/dof_vel_arm": 42.0147590637207,
+    "episode/raw/dof_acc_steering": 42404.984375,
+    "episode/raw/dof_acc_drive": 124985.7578125,
+    "episode/raw/dof_acc_arm": 112510.5234375,
+    "episode/raw/torque_limits_steering": 0.013431849889457226,
+    "episode/raw/torque_limits_drive": 0.14075133204460144,
+    "episode/raw/torque_limits_arm": 0.12046293169260025,
+    "episode/raw/dof_pos_limits": 0.009554648771882057,
+    "episode/raw/lin_vel_z": 0.00105291698127985,
+    "episode/raw/ang_vel_xy": 0.020026998594403267,
+    "episode/raw/base_height": 0.000024390590624534525,
+    "episode/raw/collision": 0.005167958792299032,
+    "episode/errors/tcp_geometric_l1_m/mean": 0.20920297503471375,
+    "episode/errors/tcp_geometric_l1_m/p95": 0.36958760023117065,
+    "episode/errors/tcp_geometric_l2_m/mean": 0.1380714476108551,
+    "episode/errors/tcp_geometric_l2_m/p95": 0.23246487975120544,
+    "episode/errors/base_planar_speed_m_s/mean": 0.16130654513835907,
+    "episode/errors/base_planar_speed_m_s/p95": 0.34562259912490845,
+    "episode/errors/base_yaw_rate_rad_s/mean": 0.18664102256298065,
+    "episode/errors/base_yaw_rate_rad_s/p95": 0.47283196449279785,
+    "episode/errors/tcp_compensated_l1_m/mean": 0.20920297503471375,
+    "episode/errors/tcp_compensated_l1_m/p95": 0.36958760023117065,
+    "episode/errors/tcp_compensated_l2_m/mean": 0.1380714476108551,
+    "episode/errors/tcp_compensated_l2_m/p95": 0.23246487975120544
+  },
+  "failure_file_modified_at": "2026-11-05T01:35:47.594827+08:00",
+  "checkpoint_sha256": "3b3e65c26c851ce743ef27c5c1620eb2ebc73459a72dd8f3158df669444fc8fc",
+  "checkpoint_matches_index": true,
+  "failure_criteria": [
+    {
+      "line": 495,
+      "text": "failed = (self.rpy[:, 0].abs() > 0.8) | (self.rpy[:, 1].abs() > 1.0)"
+    },
+    {
+      "line": 496,
+      "text": "base_contact = torch.linalg.vector_norm(self.contact_forces[:, self.base_body_index], dim=-1) > 1.0"
+    },
+    {
+      "line": 497,
+      "text": "terminated = failed | base_contact"
+    }
+  ],
+  "observations_exist": false,
+  "completion_exists": false,
+  "episode_aggregation_checked_at": "2026-11-05T10:10:16+08:00",
+  "aggregation_source": "episodes.jsonl; iterations.jsonl",
+  "aggregation_note_zh": "按 episode 完成所在训练轮次（日志 completed_iterations + 1）分组；误差按 episode 时长加权，reward_rate 按 episode 等权。表中1—766轮均为正常20秒timeout；第767轮的1次物理失败单独完整保留在 failure 中，不将它当作完整20秒回报比较。",
+  "windows": [
+    {
+      "iterations": [
+        1,
+        100
+      ],
+      "complete_episodes": 8192,
+      "reward_rate": 3.5901998262757377,
+      "tcp_l2_m": 0.36977222494351597,
+      "base_planar_error_m_s": 0.26785297337755776,
+      "yaw_error_rad_s": 0.2822789998481315
+    },
+    {
+      "iterations": [
+        101,
+        300
+      ],
+      "complete_episodes": 20480,
+      "reward_rate": 5.2775791210512155,
+      "tcp_l2_m": 0.11408055910724155,
+      "base_planar_error_m_s": 0.1504006028117151,
+      "yaw_error_rad_s": 0.1526929863088298
+    },
+    {
+      "iterations": [
+        301,
+        500
+      ],
+      "complete_episodes": 20480,
+      "reward_rate": 5.46693997039139,
+      "tcp_l2_m": 0.11197787758410438,
+      "base_planar_error_m_s": 0.13324340420476752,
+      "yaw_error_rad_s": 0.12531105966863842
+    },
+    {
+      "iterations": [
+        501,
+        700
+      ],
+      "complete_episodes": 16384,
+      "reward_rate": 5.364188443674279,
+      "tcp_l2_m": 0.1284811632954189,
+      "base_planar_error_m_s": 0.13134309822680754,
+      "yaw_error_rad_s": 0.13132977327677564
+    },
+    {
+      "iterations": [
+        701,
+        766
+      ],
+      "complete_episodes": 8192,
+      "reward_rate": 5.29760627690009,
+      "tcp_l2_m": 0.13581749444711022,
+      "base_planar_error_m_s": 0.13772887724098795,
+      "yaw_error_rad_s": 0.135904870498962
+    }
+  ],
+  "total_completed_episodes": 73729,
+  "timeout_episodes": 73728,
+  "physical_failure_episodes": 1,
+  "iteration_numeric_metrics_finite": true,
+  "mean_iteration_sampling_and_update_s": 11.155326975559916,
+  "losses": {
+    "first100": {
+      "value_loss": 0.027743306884309277,
+      "auxiliary_loss": 0.010186620924680027
+    },
+    "last100_before_failure": {
+      "value_loss": 0.013528954817913472,
+      "auxiliary_loss": 0.0005326997838419629
+    }
+  },
+  "actions_zh": "仅只读检查远程、汇总现有日志和本机留档；未重启训练、未修改阈值/资产/业务代码。"
+}

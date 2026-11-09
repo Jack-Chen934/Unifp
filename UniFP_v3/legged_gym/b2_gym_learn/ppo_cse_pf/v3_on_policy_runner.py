@@ -15,7 +15,7 @@ import torch
 from .v3_actor_critic import V3ActorCritic
 from .v3_episode_log import flush_episode_records, write_episode_metadata
 from .v3_ppo import V3PPO
-from .v3_run_identity import file_sha256
+from .v3_run_identity import file_sha256, validate_a_to_b_transition, validate_force_snapshot
 
 
 class V3OnPolicyRunner:
@@ -40,8 +40,8 @@ class V3OnPolicyRunner:
         self.env, self.cfg = env, train_cfg["runner"]
         self.identity, self.config_snapshot = identity, config_snapshot
         self.device = torch.device(device)
-        if self.cfg["num_steps_per_env"] != 24 or identity["reproduction_part"] != "A":
-            raise ValueError("This runner implements confirmed part A with T=24 only")
+        if self.cfg["num_steps_per_env"] != 24 or identity["reproduction_part"] not in {"A", "B"}:
+            raise ValueError("This runner requires an explicit A/B stage with T=24")
         if type(self.cfg["save_interval"]) is not int or self.cfg["save_interval"] < 1:
             raise ValueError("save_interval must be a positive integer")
         model = V3ActorCritic(env.num_obs, env.num_privileged_obs, env.cfg.env.num_pred_obs,
@@ -55,7 +55,7 @@ class V3OnPolicyRunner:
         self.training_policy_steps = 0
         self.training_transitions = 0
         self.last_saved_iteration: Optional[int] = None
-        self.lineage = {"run_id": self.log_dir.name, "reproduction_part": "A",
+        self.lineage = {"run_id": self.log_dir.name, "reproduction_part": identity["reproduction_part"],
                         "parent_checkpoint_path": None, "parent_checkpoint_sha256": None}
         self.at_boundary = True
         self.episodes_ready = False
@@ -64,14 +64,14 @@ class V3OnPolicyRunner:
         self.save_diagnostic: Dict[str, Any] = {}
 
     def learn(self, num_learning_iterations: int, init_at_random_ep_len: bool = False) -> None:
-        """Collect and update an explicit additional budget, never exceeding A8000.
+        """Collect complete additional updates within the A8000 or B40000 boundary.
 
         Args:
             num_learning_iterations: Additional complete updates, not a new total.
             init_at_random_ep_len: Must remain false; fictitious episode ages are unapproved.
 
         Raises:
-            ValueError: The budget exceeds A8000 or requests random initial ages.
+            ValueError: The budget exceeds its stage end or requests random initial ages.
             RuntimeError: A prior partial update makes this runner unusable.
             OSError: Logging or verified checkpoint publication fails.
 
@@ -79,12 +79,16 @@ class V3OnPolicyRunner:
             Commits progress only after all main/auxiliary updates and storage clear.
             On failure, preserves diagnostics and re-raises the original exception.
         """
-        if type(num_learning_iterations) is not int or num_learning_iterations < 0 or self.completed_iterations + num_learning_iterations > 8000 or init_at_random_ep_len:
-            raise ValueError("Invalid additional A-stage budget or unapproved initial episode ages")
+        stage_end = 8000 if self.identity["reproduction_part"] == "A" else 40000
+        stage_start = 0 if self.identity["reproduction_part"] == "A" else 8000
+        if (type(num_learning_iterations) is not int or num_learning_iterations < 0
+                or not stage_start <= self.completed_iterations <= stage_end
+                or self.completed_iterations + num_learning_iterations > stage_end or init_at_random_ep_len):
+            raise ValueError("Invalid additional stage budget or unapproved initial episode ages")
         self._require_boundary()
         if num_learning_iterations == 0:
-            if self.completed_iterations != 8000 or self.last_saved_iteration != 8000:
-                raise ValueError("Zero-budget completion requires a verified A8000 checkpoint")
+            if self.completed_iterations != stage_end or self.last_saved_iteration != stage_end:
+                raise ValueError("Zero-budget completion requires a verified stage-end checkpoint")
             return
         target = self.completed_iterations + num_learning_iterations
         records = []
@@ -144,7 +148,7 @@ class V3OnPolicyRunner:
                     for name, value in metrics.items():
                         self.writer.add_scalar(name, value, self.completed_iterations)
                     self.writer.flush()
-                print(f"V3 A: I={self.completed_iterations}, S={self.training_policy_steps}, transitions={self.training_transitions}, value={losses[0]:.5g}, aux={losses[2]:.5g}", flush=True)
+                print(f"V3 {self.identity['reproduction_part']}: I={self.completed_iterations}, S={self.training_policy_steps}, transitions={self.training_transitions}, value={losses[0]:.5g}, aux={losses[2]:.5g}", flush=True)
                 if self.completed_iterations % self.cfg["save_interval"] == 0 or self.completed_iterations == target:
                     self.save(self.log_dir / "checkpoints" / f"model_{self.completed_iterations:06d}.pt")
         except Exception as error:
@@ -248,11 +252,16 @@ class V3OnPolicyRunner:
             raise ValueError("Invalid checkpoint progress fields")
         iterations = progress["completed_iterations"]
         steps = progress["training_policy_steps"]
-        if not 0 <= iterations <= 8000 or steps != 24 * iterations or progress["training_transitions"] != num_envs * steps or progress["rollout_step"] != 0:
-            raise ValueError("Checkpoint progress is not a complete A boundary")
+        stage_start, stage_end = (0, 8000) if identity["reproduction_part"] == "A" else (8000, 40000)
+        if not stage_start <= iterations <= stage_end or steps != 24 * iterations or progress["training_transitions"] != num_envs * steps or progress["rollout_step"] != 0:
+            raise ValueError("Checkpoint progress is not a complete stage boundary")
         environment_state = payload["environment_training_state"]
+        if environment_state.get("num_envs") != num_envs or environment_state.get("reproduction_part") != identity["reproduction_part"]:
+            raise ValueError("Checkpoint environment count or stage identity mismatch")
         if any(environment_state.get(name) != progress[name] for name in ("completed_iterations", "training_policy_steps", "training_transitions")):
             raise ValueError("Environment and learning progress disagree")
+        if identity["reproduction_part"] == "B":
+            validate_force_snapshot(environment_state.get("force_state"), num_envs)
         current_model = algorithm.actor_critic.state_dict()
         saved_model = payload["model_state_dict"]
         if set(saved_model) != set(current_model):
@@ -362,11 +371,13 @@ class V3OnPolicyRunner:
             if temporary.exists():
                 temporary.unlink()
 
-    def load(self, path: Path) -> None:
+    def load(self, path: Path, *, transition_from_a: bool = False) -> None:
         """Strictly restore learning state, then start new episodes from restored RNG.
 
         Args:
             path: Explicit complete checkpoint; no automatic latest-file selection.
+            transition_from_a: Validate an A8000 parent against the approved B
+                differences. False requires the original strict same-stage identity.
 
         Raises:
             RuntimeError: This runner already holds partial learning state.
@@ -384,21 +395,39 @@ class V3OnPolicyRunner:
         if self.log_dir.resolve() in path.parents:
             raise ValueError("Resume requires an independent output run directory")
         payload = torch.load(path, map_location="cpu", weights_only=False)
-        self.validate_checkpoint(payload, self.alg, self.identity, self.env.num_envs)
+        transition_report = None
+        if transition_from_a:
+            transition_report = validate_a_to_b_transition(
+                payload["identity"], self.identity, payload["config_snapshot"], self.config_snapshot)
+            self.validate_checkpoint(payload, self.alg, payload["identity"], self.env.num_envs)
+            if payload["progress"]["completed_iterations"] != 8000:
+                raise ValueError("A-to-B migration requires the completed A8000 boundary")
+        else:
+            self.validate_checkpoint(payload, self.alg, self.identity, self.env.num_envs)
+        # Map only the approved stage field; creation samples and clocks stay intact.
+        environment_state = dict(payload["environment_training_state"])
+        if transition_from_a:
+            environment_state["reproduction_part"] = "B"
         self.alg.actor_critic.load_state_dict(payload["model_state_dict"], strict=True)
         self.alg.optimizer.load_state_dict(payload["main_optimizer_state_dict"])
         self.alg.adaptation_module_optimizer.load_state_dict(payload["auxiliary_optimizer_state_dict"])
         self.alg.learning_rate = payload["learning_rate_state"]["main"]
         for name in ("completed_iterations", "training_policy_steps", "training_transitions"):
             setattr(self, name, payload["progress"][name])
-        self.env.load_training_state(payload["environment_training_state"])
+        self.env.load_training_state(environment_state, transition_from_a=transition_from_a)
         self._restore_rng(payload["rng_state"])
         self.env.set_training_progress(self.completed_iterations, self.training_policy_steps)
-        # A verified completed A8000 needs no new episode or sample.
-        if self.completed_iterations < 8000:
+        # A verified completed stage needs no new episode or sample.
+        stage_end = 8000 if self.identity["reproduction_part"] == "A" else 40000
+        if transition_from_a or self.completed_iterations < stage_end:
             self.env.reset()
             self.episodes_ready = True
         self.last_saved_iteration = self.completed_iterations
         self.lineage["parent_checkpoint_path"] = str(path)
         self.lineage["parent_checkpoint_sha256"] = file_sha256(path)
+        self.lineage["restore_mode"] = "A_to_B" if transition_from_a else "same_stage"
+        if transition_report is not None:
+            self.lineage["stage_transition"] = transition_report
+            self.lineage["parent_identity"] = payload["identity"]
+            self.lineage["fresh_episodes_after_restore"] = True
         self._require_boundary()

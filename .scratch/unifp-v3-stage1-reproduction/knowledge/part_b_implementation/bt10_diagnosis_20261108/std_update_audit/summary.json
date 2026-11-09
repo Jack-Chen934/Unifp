@@ -1,0 +1,140 @@
+{
+  "rows": [
+    {
+      "iteration": 9000,
+      "original_mean_delta_by_shuffle": [
+        7.133185863494873e-05,
+        6.280413695744105e-05,
+        6.866455078125e-05
+      ],
+      "zero_entropy_mean_delta_by_shuffle": [
+        2.4005770683288574e-05,
+        2.255610057285854e-05,
+        3.162665026528495e-05
+      ],
+      "original_joint2_delta_by_shuffle": [
+        0.00012704730033874512,
+        0.00010326504707336426,
+        0.0001239776611328125
+      ],
+      "zero_entropy_joint2_delta_by_shuffle": [
+        8.088350296020508e-05,
+        6.198883056640625e-05,
+        8.794665336608887e-05
+      ],
+      "original_mean_delta": 6.76001821245466e-05,
+      "zero_entropy_mean_delta": 2.606284050714402e-05,
+      "original_joint2_delta": 0.00011809666951497395,
+      "zero_entropy_joint2_delta": 7.693966229756673e-05,
+      "conditional_mean_delta": {
+        "restored_momentum": 3.976014314399067e-05,
+        "rollout_surrogate": -1.4148962289839905e-05,
+        "rollout_entropy": 4.198915509004663e-05
+      },
+      "conditional_joint2_delta": {
+        "restored_momentum": 3.629984391048787e-05,
+        "rollout_surrogate": 3.928624977179229e-05,
+        "rollout_entropy": 4.250504765736755e-05
+      },
+      "cumulative_reconstruction_max_error": 1.9802782738099784e-07,
+      "event_reconstruction_max_error": 2.9797786650454736e-08,
+      "clip_factor_range": [
+        0.022896129832550273,
+        0.07778654356589078
+      ],
+      "restored_main_lr": 3.3750000000000014e-05,
+      "std_adam_step_before": 180000
+    },
+    {
+      "iteration": 10000,
+      "original_mean_delta_by_shuffle": [
+        5.4683004106794086e-05,
+        5.595173154558454e-05,
+        6.788969039916992e-05
+      ],
+      "zero_entropy_mean_delta_by_shuffle": [
+        -2.1346977778843472e-05,
+        -2.444216183253697e-05,
+        -2.194728170122419e-06
+      ],
+      "original_joint2_delta_by_shuffle": [
+        7.325410842895508e-05,
+        0.00010928511619567871,
+        0.00010117888450622559
+      ],
+      "zero_entropy_joint2_delta_by_shuffle": [
+        -4.410743713378906e-06,
+        2.3871660232543945e-05,
+        3.534555435180664e-05
+      ],
+      "original_mean_delta": 5.950814201718285e-05,
+      "zero_entropy_mean_delta": -1.5994622593834285e-05,
+      "original_joint2_delta": 9.45727030436198e-05,
+      "zero_entropy_joint2_delta": 1.8268823623657227e-05,
+      "conditional_mean_delta": {
+        "restored_momentum": 3.477467312135311e-05,
+        "rollout_surrogate": -5.222202475970059e-05,
+        "rollout_entropy": 7.694773785225782e-05
+      },
+      "conditional_joint2_delta": {
+        "restored_momentum": 5.02164566126058e-05,
+        "rollout_surrogate": -3.586921557692289e-05,
+        "rollout_entropy": 8.024366316043326e-05
+      },
+      "cumulative_reconstruction_max_error": 1.9260716962248253e-07,
+      "event_reconstruction_max_error": 2.9766912929887542e-08,
+      "clip_factor_range": [
+        0.029485807296711228,
+        0.1292375647700029
+      ],
+      "restored_main_lr": 3.3750000000000014e-05,
+      "std_adam_step_before": 200000
+    },
+    {
+      "iteration": 12000,
+      "original_mean_delta_by_shuffle": [
+        5.033612251281738e-05,
+        6.113733564104353e-05,
+        5.869354520525251e-05
+      ],
+      "zero_entropy_mean_delta_by_shuffle": [
+        -1.983983176095145e-05,
+        -9.072678429739816e-06,
+        3.193105970110212e-07
+      ],
+      "original_joint2_delta_by_shuffle": [
+        3.0100345611572266e-05,
+        8.428096771240234e-05,
+        8.356571197509766e-05
+      ],
+      "zero_entropy_joint2_delta_by_shuffle": [
+        -3.910064697265625e-05,
+        1.5914440155029297e-05,
+        2.5570392608642578e-05
+      ],
+      "original_mean_delta": 5.6722334453037805e-05,
+      "zero_entropy_mean_delta": -9.531066531226748e-06,
+      "original_joint2_delta": 6.598234176635742e-05,
+      "zero_entropy_joint2_delta": 7.947285970052084e-07,
+      "conditional_mean_delta": {
+        "restored_momentum": 4.147585423518827e-05,
+        "rollout_surrogate": -5.1596680392175034e-05,
+        "rollout_entropy": 6.681820597654231e-05
+      },
+      "conditional_joint2_delta": {
+        "restored_momentum": 4.1243102108405815e-05,
+        "rollout_surrogate": -4.058010147668958e-05,
+        "rollout_entropy": 6.529122335311563e-05
+      },
+      "cumulative_reconstruction_max_error": 2.849387984741529e-07,
+      "event_reconstruction_max_error": 5.9279047387168936e-08,
+      "clip_factor_range": [
+        0.018634358659238116,
+        0.0716705107840241
+      ],
+      "restored_main_lr": 1.5000000000000004e-05,
+      "std_adam_step_before": 240000
+    }
+  ],
+  "说明": "更新量是20次mini-batch后的参数变化；三种shuffle来自同一rollout，误差条仅为范围，不是统计置信区间。"
+}

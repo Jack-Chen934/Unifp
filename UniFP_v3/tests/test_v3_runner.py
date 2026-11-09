@@ -2,15 +2,19 @@
 
 import copy
 import random
+import subprocess
+import sys
 from pathlib import Path
 from types import SimpleNamespace
-from typing import Any, Dict, Tuple
+from typing import Any, Dict, Optional, Tuple
 
 import numpy as np
 import pytest
 import torch
 
 from legged_gym.b2_gym_learn.ppo_cse_pf.v3_on_policy_runner import V3OnPolicyRunner
+from legged_gym.b2_gym_learn.ppo_cse_pf.v3_run_identity import file_sha256
+from test_v3_run_identity import make_transition_identity_fixture
 
 
 class TensorEnvironment:
@@ -33,6 +37,9 @@ class TensorEnvironment:
         self.reset_calls = 0
         self.pending_episode_records = []
         self.fail_on_step = None
+        self.reproduction_part = "A"
+        self.loaded_state: Dict[str, Any] = {}
+        self.reset_samples: Tuple[float, float, float] = (0.0, 0.0, 0.0)
 
     def set_training_progress(self, completed_iterations: int, training_policy_steps: int) -> None:
         """Publish a training clock without advancing the fixture's simulator.
@@ -63,9 +70,7 @@ class TensorEnvironment:
             Consumes one value from each CPU RNG to verify restore/reset ordering.
         """
         self.reset_calls += 1
-        random.random()
-        np.random.random()
-        torch.rand(1)
+        self.reset_samples = (random.random(), np.random.random(), float(torch.rand(1)))
         return self.get_observations(), {}
 
     def step(self, actions: torch.Tensor) -> Tuple[Dict[str, torch.Tensor], torch.Tensor, torch.Tensor, Dict[str, Any]]:
@@ -96,25 +101,42 @@ class TensorEnvironment:
             Detached progress plus an independently copied creation-time property.
         """
         iterations, steps = self.progress
-        return {"reproduction_part": "A", "num_envs": 1, "completed_iterations": iterations,
+        state = {"reproduction_part": self.reproduction_part, "num_envs": 1, "completed_iterations": iterations,
                 "training_policy_steps": steps, "training_transitions": steps,
-                "friction": torch.tensor([[0.75]])}
+                "friction": torch.tensor([[0.75]]), "mass_com_delta": torch.tensor([[1.0, 0.01, 0.0, 0.0, -0.1]]),
+                "last_push_policy_step": 191600}
+        if self.reproduction_part == "B":
+            # Fixed simulator-boundary data, not an alternative event implementation.
+            event = {"peak": torch.tensor([[20., 0., 0.]]), "enabled": torch.ones(1, dtype=torch.bool),
+                     "start_tick": torch.zeros(1, dtype=torch.long),
+                     "next_start_tick": torch.tensor([200]), "ramp_ticks": torch.tensor([50.])}
+            state["force_state"] = {"command": copy.deepcopy(event), "external": copy.deepcopy(event),
+                                    "pending_ee_force_world": torch.tensor([[10., 0., 0.]]),
+                                    "applied_ee_force_world": torch.tensor([[20., 0., 0.]]),
+                                    "episode_tick": torch.tensor([25])}
+        return state
 
-    def load_training_state(self, state: Dict[str, Any]) -> None:
+    def load_training_state(self, state: Dict[str, Any], *, transition_from_a: bool = False) -> None:
         """Restore persistence without advancing or resetting the fixture.
 
         Args:
             state: Same-schema creation-time properties and published progress.
+            transition_from_a: Whether the Runner explicitly migrated an A checkpoint.
         """
         assert float(state["friction"][0, 0]) == 0.75
+        assert state["reproduction_part"] == self.reproduction_part
+        self.loaded_state = copy.deepcopy(state)
         self.progress = state["completed_iterations"], state["training_policy_steps"]
 
 
-def make_runner(directory: Path) -> V3OnPolicyRunner:
+def make_runner(directory: Path, *, identity: Optional[Dict[str, Any]] = None,
+                config_snapshot: Optional[Dict[str, Any]] = None) -> V3OnPolicyRunner:
     """Build a real CPU learner with file logging and TensorBoard explicitly disabled.
 
     Args:
         directory: New independent run directory under pytest's temporary root.
+        identity: Explicit fixture fingerprint; None uses the original minimal A identity.
+        config_snapshot: Full migration fixture config; None keeps the compact A config.
 
     Returns:
         Runner using the real fixed-schema V3 model and baseline optimizer counts.
@@ -122,9 +144,171 @@ def make_runner(directory: Path) -> V3OnPolicyRunner:
     torch.set_num_threads(2)
     configuration = {"runner": {"num_steps_per_env": 24, "save_interval": 200, "tensorboard": False},
                      "policy": {}, "algorithm": {}}
-    return V3OnPolicyRunner(TensorEnvironment(), configuration, directory,
-                           identity={"task": "v3_pos_force", "seed": 0, "reproduction_part": "A"},
-                           config_snapshot=configuration, device="cpu")
+    environment = TensorEnvironment()
+    if identity is None:
+        identity = {"task": "v3_pos_force", "seed": 0, "reproduction_part": "A"}
+    environment.reproduction_part = identity["reproduction_part"]
+    return V3OnPolicyRunner(environment, configuration, directory, identity=identity,
+                           config_snapshot=configuration if config_snapshot is None else config_snapshot, device="cpu")
+
+
+def test_a8000_migration_restores_learning_state_before_one_fresh_b_episode(tmp_path: Path) -> None:
+    """Carry real Adam state into B without changing the A parent or adding steps.
+
+    Args:
+        tmp_path: Independent temporary source and small tensor-environment runs.
+
+    Raises:
+        AssertionError: State is lost, RNG resets too early, or A/B resume is conflated.
+
+    Note:
+        Only the tensor fixture clock is moved to 8000 after one real update. This
+        is a boundary test, not an actual A8000 training or native capacity result.
+    """
+    parent_identity, target_identity, parent_config, target_config = make_transition_identity_fixture(tmp_path / "source")
+    parent = make_runner(tmp_path / "parent", identity=parent_identity, config_snapshot=parent_config)
+    parent.learn(1)
+    parent.alg.learning_rate = 0.000321
+    parent.alg.optimizer.param_groups[0]["lr"] = 0.000321
+    parent.completed_iterations, parent.training_policy_steps, parent.training_transitions = 8000, 192000, 192000
+    parent.env.set_training_progress(8000, 192000)
+    checkpoint = parent.log_dir / "checkpoints/fixture_a8000.pt"
+    parent.save(checkpoint)
+    parent_digest = file_sha256(checkpoint)
+    expected_reset_samples = (random.random(), np.random.random(), float(torch.rand(1)))
+    child = make_runner(tmp_path / "child", identity=target_identity, config_snapshot=target_config)
+    child.load(checkpoint, transition_from_a=True)
+    assert child.completed_iterations == 8000 and child.training_policy_steps == 192000
+    assert child.training_transitions == 192000 and child.env.step_calls == 0
+    assert child.env.reset_calls == 1 and child.episodes_ready
+    assert child.env.reset_samples == expected_reset_samples
+    assert child.alg.learning_rate == 0.000321 and child.alg.optimizer.param_groups[0]["lr"] == 0.000321
+    assert child.alg.adaptation_module_optimizer.param_groups[0]["lr"] == 1e-5
+    for name, parameter in child.alg.actor_critic.state_dict().items():
+        torch.testing.assert_close(parameter, parent.alg.actor_critic.state_dict()[name], rtol=0.0, atol=0.0)
+    for actual_optimizer, expected_optimizer in ((child.alg.optimizer, parent.alg.optimizer),
+                                                (child.alg.adaptation_module_optimizer, parent.alg.adaptation_module_optimizer)):
+        actual_state, expected_state = actual_optimizer.state_dict(), expected_optimizer.state_dict()
+        assert actual_state["param_groups"] == expected_state["param_groups"]
+        for parameter_id, slots in expected_state["state"].items():
+            for name, value in slots.items():
+                torch.testing.assert_close(actual_state["state"][parameter_id][name], value, rtol=0.0, atol=0.0)
+    assert child.env.loaded_state["reproduction_part"] == "B"
+    assert child.env.loaded_state["last_push_policy_step"] == 191600
+    torch.testing.assert_close(child.env.loaded_state["mass_com_delta"], parent.env.get_training_state()["mass_com_delta"])
+    assert file_sha256(checkpoint) == parent_digest
+    assert child.lineage["parent_checkpoint_sha256"] == parent_digest
+    assert child.lineage["restore_mode"] == "A_to_B"
+    assert child.lineage["stage_transition"]["source_changes"] == ["legged_gym/scripts/train_v3.py"]
+    with pytest.raises(ValueError, match="identity"):
+        make_runner(tmp_path / "strict", identity=target_identity, config_snapshot=target_config).load(checkpoint)
+    completed_a = make_runner(tmp_path / "completed_a", identity=parent_identity, config_snapshot=parent_config)
+    completed_a.load(checkpoint)
+    completed_a.learn(0)
+    assert completed_a.env.reset_calls == 0 and completed_a.env.step_calls == 0
+
+
+def test_migration_entry_rejects_wrong_parent_digest_before_loading_or_creating_gym(tmp_path: Path) -> None:
+    """Reject an incorrectly named parent at the real CLI before unpickling it.
+
+    Args:
+        tmp_path: Temporary invalid checkpoint and unused output directory.
+
+    Raises:
+        AssertionError: CLI misses the explicit migration mode or opens invalid data.
+    """
+    checkpoint = tmp_path / "not_a_checkpoint.pt"
+    checkpoint.write_bytes(b"not a pickle; its hash must be checked first")
+    output_directory = tmp_path / "must_not_be_created"
+    result = subprocess.run(
+        [sys.executable, "-m", "legged_gym.scripts.train_v3", "--reproduction_part", "B",
+         "--run_purpose", "development", "--seed", "0", "--num_envs", "1", "--max_iterations", "1",
+         "--sim_device", "cpu", "--rl_device", "cpu", "--headless", "--resume", str(checkpoint),
+         "--transition_from_a", "--parent_sha256", "0" * 64, "--output_dir", str(output_directory)],
+        capture_output=True, text=True, check=False)
+    assert result.returncode != 0
+    assert "Parent checkpoint SHA256 mismatch" in result.stderr, result.stderr
+    assert not output_directory.exists()
+
+
+def test_b_migrates_updates_and_resumes_both_adams_before_one_new_episode(tmp_path: Path) -> None:
+    """Run real A-to-B-to-B learning while keeping event snapshots diagnostic only.
+
+    Args:
+        tmp_path: Independent small tensor-environment checkpoints, never formal A data.
+
+    Raises:
+        AssertionError: B rejects its budget, loses Adam slots, resets twice, or
+            accepts a B checkpoint missing its required force snapshot.
+    """
+    parent_identity, identity, parent_config, config = make_transition_identity_fixture(tmp_path / "source")
+    parent = make_runner(tmp_path / "parent", identity=parent_identity, config_snapshot=parent_config)
+    parent.learn(1)
+    parent.completed_iterations = 8000
+    parent.training_policy_steps = parent.training_transitions = 192000
+    parent.env.set_training_progress(8000, 192000)
+    checkpoint = parent.log_dir / "checkpoints/fixture_a8000.pt"
+    parent.save(checkpoint)
+    child = make_runner(tmp_path / "child", identity=identity, config_snapshot=config)
+    child.load(checkpoint, transition_from_a=True)
+    child.learn(1)
+    assert child.completed_iterations == 8001 and child.env.step_calls == 24
+    assert child.env.reset_calls == 1
+    saved_path = child.log_dir / "checkpoints/model_008001.pt"
+    saved = torch.load(saved_path, map_location="cpu", weights_only=False)
+    assert "force_state" in saved["environment_training_state"]
+    restored = make_runner(tmp_path / "restored_b", identity=identity, config_snapshot=config)
+    restored.load(saved_path)
+    assert restored.env.reset_calls == 1 and restored.env.step_calls == 0
+    assert restored.env.loaded_state["last_push_policy_step"] == 191600
+    assert restored.lineage["parent_checkpoint_sha256"] == file_sha256(saved_path)
+    restored.learn(1)
+    assert restored.completed_iterations == 8002 and restored.env.reset_calls == 1
+    for optimizer in (restored.alg.optimizer, restored.alg.adaptation_module_optimizer):
+        assert all(int(slots["step"]) == 60 for slots in optimizer.state.values())
+    broken = copy.deepcopy(saved)
+    del broken["environment_training_state"]["force_state"]
+    broken_path = tmp_path / "incomplete_b.pt"
+    torch.save(broken, broken_path)
+    rejected = make_runner(tmp_path / "rejected_b", identity=identity, config_snapshot=config)
+    with pytest.raises(ValueError, match="force"):
+        rejected.load(broken_path)
+    assert rejected.env.reset_calls == 0
+
+
+def test_migration_rejects_wrong_boundary_missing_adam_and_environment_count(tmp_path: Path) -> None:
+    """Reject unusable parents before touching learner parameters or episode state.
+
+    Args:
+        tmp_path: Source fixture plus deliberately incomplete checkpoint variants.
+
+    Raises:
+        AssertionError: A rejected parent changes the new learner or starts an episode.
+    """
+    parent_identity, target_identity, parent_config, target_config = make_transition_identity_fixture(tmp_path / "source")
+    parent = make_runner(tmp_path / "parent", identity=parent_identity, config_snapshot=parent_config)
+    parent.learn(1)
+    saved = torch.load(parent.log_dir / "checkpoints/model_000001.pt", map_location="cpu", weights_only=False)
+    child = make_runner(tmp_path / "child", identity=target_identity, config_snapshot=target_config)
+    initial_parameters = copy.deepcopy(child.alg.actor_critic.state_dict())
+    invalid_cases = [("wrong_boundary", saved, "A8000")]
+    complete_fixture = copy.deepcopy(saved)
+    complete_fixture["progress"].update(completed_iterations=8000, training_policy_steps=192000, training_transitions=192000)
+    complete_fixture["environment_training_state"].update(completed_iterations=8000, training_policy_steps=192000, training_transitions=192000)
+    missing_adam = copy.deepcopy(complete_fixture)
+    missing_adam["auxiliary_optimizer_state_dict"]["state"].popitem()
+    invalid_cases.append(("missing_adam", missing_adam, "Incomplete auxiliary Adam"))
+    wrong_count = copy.deepcopy(complete_fixture)
+    wrong_count["environment_training_state"]["num_envs"] = 2
+    invalid_cases.append(("wrong_count", wrong_count, "environment count"))
+    for name, payload, message in invalid_cases:
+        checkpoint = tmp_path / (name + ".pt")
+        torch.save(payload, checkpoint)
+        with pytest.raises(ValueError, match=message):
+            child.load(checkpoint, transition_from_a=True)
+        assert child.env.reset_calls == 0 and child.env.loaded_state == {}
+        for parameter_name, value in child.alg.actor_critic.state_dict().items():
+            torch.testing.assert_close(value, initial_parameters[parameter_name], rtol=0.0, atol=0.0)
 
 
 def test_checkpoint_round_trip_restores_both_adams_rng_and_next_update(tmp_path: Path) -> None:
@@ -188,24 +372,28 @@ def test_checkpoint_round_trip_restores_both_adams_rng_and_next_update(tmp_path:
         make_runner(tmp_path / "rejected_momentum").load(missing_momentum_path)
 
 
-def test_7999_to_8000_stops_without_an_extra_transition(tmp_path: Path) -> None:
-    """Exercise the budget boundary without pretending to have trained 7999 real rounds.
+@pytest.mark.parametrize("part,start,end", [("A", 7999, 8000), ("B", 39999, 40000)])
+def test_stage_end_stops_without_an_extra_transition(tmp_path: Path, part: str, start: int, end: int) -> None:
+    """Exercise the stage budget without pretending to have trained preceding rounds.
 
     Args:
         tmp_path: Pytest-managed temporary filesystem directory.
+        part: A or B stage whose cumulative endpoint is under test.
+        start: Synthetic fixture counter one complete update before the endpoint.
+        end: Approved cumulative endpoint, 8000 or 40000.
 
     Raises:
         AssertionError: A new action/reset is requested after the completed A boundary.
     """
-    runner = make_runner(tmp_path / "stop")
-    runner.completed_iterations = 7999
-    runner.training_policy_steps = 191976
-    runner.training_transitions = 191976
-    runner.env.set_training_progress(7999, 191976)
+    runner = make_runner(tmp_path / "stop", identity={"reproduction_part": part})
+    runner.completed_iterations = start
+    runner.training_policy_steps = start * 24
+    runner.training_transitions = start * 24
+    runner.env.set_training_progress(start, start * 24)
     runner.learn(1)
-    assert runner.completed_iterations == 8000
+    assert runner.completed_iterations == end
     assert runner.env.step_calls == 24
-    assert runner.training_policy_steps == 192000 and runner.training_transitions == 192000
+    assert runner.training_policy_steps == end * 24 and runner.training_transitions == end * 24
     assert len(list((tmp_path / "stop/checkpoints").glob("*.pt"))) == 1
     resets = runner.env.reset_calls
     runner.learn(0)

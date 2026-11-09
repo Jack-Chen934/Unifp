@@ -1,0 +1,11 @@
+test_clipping_retains_crossing_triangle (test_visual_envelope_candidate.VisualEnvelopeGeometryTests.test_clipping_retains_crossing_triangle)
+Keep the unit square crossed by a triangle whose vertices lie outside. ... ok
+test_detailed_reference_is_covered_within_vertex_budget (test_visual_envelope_candidate.VisualEnvelopeGeometryTests.test_detailed_reference_is_covered_within_vertex_budget)
+Keep all vertices of a detailed sphere while using at most 64 vertices. ... ok
+test_hull_covers_reference_with_half_millimeter_margin (test_visual_envelope_candidate.VisualEnvelopeGeometryTests.test_hull_covers_reference_with_half_millimeter_margin)
+Cover a 20 mm cube with the known 21 mm axis-aligned envelope. ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.038s
+
+OK

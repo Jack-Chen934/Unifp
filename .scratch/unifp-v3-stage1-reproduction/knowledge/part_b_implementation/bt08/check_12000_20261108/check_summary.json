@@ -1,0 +1,140 @@
+{
+  "checked_date_beijing": "2026-11-08",
+  "training_status": "exited_after_evaluation_error",
+  "completed_iterations": 12000,
+  "b_completed_iterations": 4000,
+  "b_budget_iterations": 32000,
+  "checkpoint_sha256": "273d4269bc37e95f879d21b178bc0380e20d2539e2d9cfd7488296f049c3146c",
+  "checkpoint_integrity_verified": true,
+  "zero_force_archives_all_artifact_hashes_verified": true,
+  "all_iteration_scalar_metrics_finite": true,
+  "sampling_and_update_hours": 13.056908512095946,
+  "zero_force_comparison": {
+    "S0": {
+      "episodes": {
+        "completed": 96,
+        "expected": 96,
+        "completion_rate": 1.0,
+        "physical_failures": 0,
+        "timeouts": 96,
+        "failure_denominator": 96,
+        "physical_failure_rate": 0.0
+      },
+      "a8000_tcp_l2_cm": 2.0612114150951735,
+      "b12000_tcp_l2_cm": 9.633611271535846,
+      "b12000_base_speed_error_m_s": 0.03034818483775309,
+      "failed_thresholds": [
+        "tcp_geometric_l2_m",
+        "tcp_geometric_l1_m"
+      ],
+      "evidence_complete": true
+    },
+    "S1": {
+      "episodes": {
+        "completed": 96,
+        "expected": 96,
+        "completion_rate": 1.0,
+        "physical_failures": 0,
+        "timeouts": 96,
+        "failure_denominator": 96,
+        "physical_failure_rate": 0.0
+      },
+      "a8000_tcp_l2_cm": 2.094735014438144,
+      "b12000_tcp_l2_cm": 7.505022023462152,
+      "b12000_base_speed_error_m_s": 0.18211445822334402,
+      "failed_thresholds": [
+        "base_planar_speed_m_s",
+        "state_estimation/base_vx_m_s_mae"
+      ],
+      "evidence_complete": true
+    },
+    "S2": {
+      "episodes": {
+        "completed": 96,
+        "expected": 96,
+        "completion_rate": 1.0,
+        "physical_failures": 0,
+        "timeouts": 96,
+        "failure_denominator": 96,
+        "physical_failure_rate": 0.0
+      },
+      "a8000_tcp_l2_cm": 2.2721704121276463,
+      "b12000_tcp_l2_cm": 7.538217381953655,
+      "b12000_base_speed_error_m_s": 0.18513796045659667,
+      "failed_thresholds": [
+        "state_estimation/base_vx_m_s_mae"
+      ],
+      "evidence_complete": true
+    }
+  },
+  "training_windows": [
+    {
+      "start": 8001,
+      "end": 8500,
+      "episode_count": 49262,
+      "physical_failure_count": 1288,
+      "physical_failure_fraction": 0.02614591368600544,
+      "reward_rate_mean": 4.552015206197671,
+      "compensated_tcp_l2_cm_mean_of_iteration_means": 29.836528648454614,
+      "main_learning_rate_mean": 1.3942500000000002e-05
+    },
+    {
+      "start": 8501,
+      "end": 9000,
+      "episode_count": 49285,
+      "physical_failure_count": 719,
+      "physical_failure_fraction": 0.014588617226336614,
+      "reward_rate_mean": 5.199220536572923,
+      "compensated_tcp_l2_cm_mean_of_iteration_means": 15.267561181064293,
+      "main_learning_rate_mean": 2.6931250000000007e-05
+    },
+    {
+      "start": 9001,
+      "end": 10000,
+      "episode_count": 98561,
+      "physical_failure_count": 1054,
+      "physical_failure_fraction": 0.01069388500522519,
+      "reward_rate_mean": 4.84663268253066,
+      "compensated_tcp_l2_cm_mean_of_iteration_means": 15.270854696890531,
+      "main_learning_rate_mean": 3.054687500000001e-05
+    },
+    {
+      "start": 10001,
+      "end": 11000,
+      "episode_count": 100363,
+      "physical_failure_count": 4899,
+      "physical_failure_fraction": 0.04881280950150952,
+      "reward_rate_mean": 4.2168816861499945,
+      "compensated_tcp_l2_cm_mean_of_iteration_means": 22.654585079986866,
+      "main_learning_rate_mean": 2.816656250000001e-05
+    },
+    {
+      "start": 11001,
+      "end": 12000,
+      "episode_count": 103943,
+      "physical_failure_count": 10985,
+      "physical_failure_fraction": 0.10568292237091483,
+      "reward_rate_mean": 3.5317695160496605,
+      "compensated_tcp_l2_cm_mean_of_iteration_means": 30.544800905257873,
+      "main_learning_rate_mean": 2.672937500000001e-05
+    }
+  ],
+  "evaluation_root_cause": "新增12000观察点使整个force manifest哈希与A8000归档不同，原参考校验在完整仿真后拒绝；去除唯一观察数组差异则协议完全相同。实际源码guard两次稳定复现。",
+  "uncompleted_evaluations": [
+    "R2归档与A8000比较",
+    "contact",
+    "zero_control"
+  ],
+  "automatic_retry_or_resume_performed": false,
+  "说明": "训练退化独立于评估报错；受力采样分布、辅助损失及PPO稳定性原因尚未定位。未调整训练参数、资产、阈值，也未自动重试评估或恢复长训。",
+  "artifact_sha256": {
+    "zero_force_comparison.png": "1000c5c2531730186a9e2eadc9316a43ed4c6b73fbf12dd433d53b95e6eafcad",
+    "S1_summary.json": "dd0db719805275b8462d350b2b8d94f7d6643ba12d616a77c5cd81aa1690aa57",
+    "S0_summary.json": "649b28e7080d66012e29b940380c505c95ce4c166d551493ac9f99c698ff3a47",
+    "training_trends.png": "046e9f4443ab1f3adce856553c70470a39b78f66d8ea3721fdf7f575cb50c8aa",
+    "R2.console.log": "508c2da20e4a54d8b909f83e3b1b59af47f5895b8272acd33be18cecfaa27a2d",
+    "plot_check.py": "379335ae7cd0f2f2faffcb50a95da7a2caa922079efa98ee7e0ae16e0effcdba",
+    "iterations.jsonl": "3f8b477778472642523adaa7b5fc945247f71f962f0066cd408700be29b61d69",
+    "S2_summary.json": "967a07ee604f4670c69d51f52efb8d1fe6fe50c50cf056eb967106d3580959f6"
+  }
+}

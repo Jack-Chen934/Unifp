@@ -1,0 +1,56 @@
+{
+  "scope_zh": "URDF轮轴局部Y轴旋转时的顶点支撑包络；几何量级估算，不是PhysX阻力矩实测。",
+  "urdf_sha256": "4d630421d10e7296a39bbca28ef082628423e8068e185caee1930102f8e439b2",
+  "angle_samples": 1441,
+  "assumed_normal_load_N": 400.0,
+  "wheels": {
+    "fl_Link": {
+      "mesh_sha256": {
+        "fl_Link_proxy_0.glb": "7cb0ce86e88064ddd38bf2800df7a7ed938ab333a4bf2d0e57e585cbdbc13b7e",
+        "fl_Link_solid_4.glb": "79392188c6f9f64ecbf8727a719d53250bd38eb54846fcd6e6240faa496bddac"
+      },
+      "support_min_m": 0.1013139504762446,
+      "support_max_m": 0.1042202755589279,
+      "support_variation_m": 0.002906325082683306,
+      "max_abs_support_slope_m_per_rad": 0.022956191489202027,
+      "quasistatic_lift_torque_scale_Nm": 9.18247659568081
+    },
+    "fr_Link": {
+      "mesh_sha256": {
+        "fr_Link_proxy_0.glb": "9f221af19e8c25b3f778fc6fcea160ade2ce07cf61bee8c3df89c103a42cf4ee",
+        "fr_Link_solid_4.glb": "eb0c80723cd7c2bd51342913876f09b453b3901235716fffed93ffb980a6815b"
+      },
+      "support_min_m": 0.10137646892951731,
+      "support_max_m": 0.10441648728398739,
+      "support_variation_m": 0.0030400183544700837,
+      "max_abs_support_slope_m_per_rad": 0.024034633159143226,
+      "quasistatic_lift_torque_scale_Nm": 9.61385326365729
+    },
+    "bl_Link": {
+      "mesh_sha256": {
+        "bl_Link_proxy_0.glb": "7cb0ce86e88064ddd38bf2800df7a7ed938ab333a4bf2d0e57e585cbdbc13b7e",
+        "bl_Link_solid_4.glb": "79392188c6f9f64ecbf8727a719d53250bd38eb54846fcd6e6240faa496bddac"
+      },
+      "support_min_m": 0.1013139504762446,
+      "support_max_m": 0.1042202755589279,
+      "support_variation_m": 0.002906325082683306,
+      "max_abs_support_slope_m_per_rad": 0.022956191489202027,
+      "quasistatic_lift_torque_scale_Nm": 9.18247659568081
+    },
+    "br_Link": {
+      "mesh_sha256": {
+        "br_Link_proxy_0.glb": "9f221af19e8c25b3f778fc6fcea160ade2ce07cf61bee8c3df89c103a42cf4ee",
+        "br_Link_solid_4.glb": "eb0c80723cd7c2bd51342913876f09b453b3901235716fffed93ffb980a6815b"
+      },
+      "support_min_m": 0.10137646892951731,
+      "support_max_m": 0.10441648728398739,
+      "support_variation_m": 0.0030400183544700837,
+      "max_abs_support_slope_m_per_rad": 0.024034633159143226,
+      "quasistatic_lift_torque_scale_Nm": 9.61385326365729
+    }
+  },
+  "nominal_zero_speed_feedback_Nm": {
+    "target_2_9527559_rad_s": 0.6714124003215001,
+    "target_20_rad_s": 4.5477
+  }
+}

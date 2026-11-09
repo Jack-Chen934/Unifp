@@ -1,0 +1,87 @@
+{
+  "checked_at": "2026-11-08T20:43:20.516224+08:00",
+  "passed": true,
+  "native_trials": {
+    "smoke_control": {
+      "completion": {
+        "completed_iterations": 9010,
+        "additional_iterations": 10,
+        "last_saved_iteration": 9010,
+        "entropy_coef": 0.01,
+        "origin_sha256": "d0c64674c852300776662b389e14047e998f8444486f74db5fabea684f089b1f"
+      },
+      "restored_learning_state_equal": true,
+      "iteration_records": 10,
+      "all_substeps_covered": true,
+      "metrics_finite": true,
+      "checkpoint_sha256": "240f7cb9ec58077947cd48fa1ceb7028b8728bd4fedc7bc4c88373cde59e71f1",
+      "checkpoint_original_validator_passed": true,
+      "restore_mode": "diagnostic_intervention"
+    },
+    "smoke_no_entropy": {
+      "completion": {
+        "completed_iterations": 9010,
+        "additional_iterations": 10,
+        "last_saved_iteration": 9010,
+        "entropy_coef": 0.0,
+        "origin_sha256": "d0c64674c852300776662b389e14047e998f8444486f74db5fabea684f089b1f"
+      },
+      "restored_learning_state_equal": true,
+      "iteration_records": 10,
+      "all_substeps_covered": true,
+      "metrics_finite": true,
+      "checkpoint_sha256": "0687af92b698f1f9e34dc859ee79afc342f9193c848e1b740523991353d63e9c",
+      "checkpoint_original_validator_passed": true,
+      "restore_mode": "diagnostic_intervention"
+    },
+    "smoke_control_resume": {
+      "completion": {
+        "completed_iterations": 9011,
+        "additional_iterations": 1,
+        "last_saved_iteration": 9011,
+        "entropy_coef": 0.01,
+        "origin_sha256": "d0c64674c852300776662b389e14047e998f8444486f74db5fabea684f089b1f"
+      },
+      "restored_learning_state_equal": true,
+      "iteration_records": 1,
+      "all_substeps_covered": true,
+      "metrics_finite": true,
+      "checkpoint_sha256": "c59c6a1941b7402b8959467f2bb88fb7aeb2ae7a28ec891920a7cbca8866ce08",
+      "checkpoint_original_validator_passed": true,
+      "restore_mode": "same_stage"
+    },
+    "smoke_no_entropy_resume": {
+      "completion": {
+        "completed_iterations": 9011,
+        "additional_iterations": 1,
+        "last_saved_iteration": 9011,
+        "entropy_coef": 0.0,
+        "origin_sha256": "d0c64674c852300776662b389e14047e998f8444486f74db5fabea684f089b1f"
+      },
+      "restored_learning_state_equal": true,
+      "iteration_records": 1,
+      "all_substeps_covered": true,
+      "metrics_finite": true,
+      "checkpoint_sha256": "81aa4b5327c171ca1b74c83c3ba7174bc6908e7378ec690e3caf03800ee65c8b",
+      "checkpoint_original_validator_passed": true,
+      "restore_mode": "same_stage"
+    }
+  },
+  "initial_state_digests_equal": true,
+  "only_learning_config_difference": "entropy_coef:0.01 versus 0.0",
+  "frozen_source_files_rehashed": 50,
+  "scripts_sha256": {
+    "experiment_contract.py": "e52a05de6ec659d2a7c992308d7415c981219f75bcf92b2ea00cefbbd0bd7599",
+    "run_experiment.py": "7bb261dc9e687f382d8bd720becdac74850f8bf488c6717b15c45e8ae2e44014",
+    "test_experiment_contract.py": "373e6593fbf531fa046c393e68931235256a7295b1258b63e2f4efe1dfab6eea",
+    "run_entropy_trial.py": "21a979e7bba093ccd3311fe5dca393a84bf6c6a6a9f20cbaeaea204041eccb00"
+  },
+  "formal_training": {
+    "pid": 1981990,
+    "alive": true,
+    "completed_iterations": 12698,
+    "failure_json_exists": false
+  },
+  "full_200_trials_complete": false,
+  "all_frozen_evaluations_complete": false
+}

@@ -1,0 +1,35 @@
+{
+  "parent_run": "/mnt/data_8THDD/myl_unifp_v3_stage1/runs/a8000_seed1_v3_v6r2_20261104",
+  "training_run": "/mnt/data_8THDD/myl_unifp_v3_stage1/runs/a8000_seed1_v3_v6r2_resume0767_20261105",
+  "resume_checkpoint": "/mnt/data_8THDD/myl_unifp_v3_stage1/runs/a8000_seed1_v3_v6r2_20261104/checkpoints/model_000767.pt",
+  "parent_checkpoint_sha256": "3b3e65c26c851ce743ef27c5c1620eb2ebc73459a72dd8f3158df669444fc8fc",
+  "resume_iteration": 767,
+  "target_completed_iterations": 8000,
+  "additional_iterations": 7233,
+  "deployment_directory": "/mnt/data_8THDD/myl_unifp_v3_stage1/validation/a8000_repairs_20261104_r03/observer_official_reset_20261105",
+  "physical_failure_action": "record_episode_reset_environment_continue",
+  "health_physical_failure_scope": "current_run",
+  "parent_run_physical_failures": 1,
+  "nan_action": "original_failure_exit",
+  "evaluation_process_error_action": "original_failure_exit",
+  "health_interval": 1000,
+  "evaluation_iterations": [
+    2000,
+    4000,
+    6000,
+    8000
+  ],
+  "evaluation_num_envs": 32,
+  "evaluation_episodes_per_env": 3,
+  "training_seed": 1,
+  "evaluation_seed": 1001,
+  "evaluation_push_seed": 2001,
+  "source_commit": "6f93215118373445edd38c96b70aa5c88f17829d",
+  "notes_zh": "仅取消观察层额外全局停训；不改业务源码、资产、PPO、终止判据、局部reset或最终验收阈值。恢复后新episode，不声称物理轨迹位级连续。",
+  "scripts": {
+    "train_observed.py": "9c84a9d885b00079a0784541946e8bd0eaffb4fcb5e2c168838e178e86d4e09c",
+    "evaluate_observation.py": "7282af04f895620c1c839ce34b66a3c7a0cc9e9a9c92bec0889f3d35c634f811",
+    "test_training_observer.py": "633622000e561c7f890f7255763e5c4143ad8e68413b7f83858dff07d9f54d5d",
+    "run_a8000_resume0767.sh": "9c948a34f57ad49f96f0e74d1155243cc5eaaea83aa49f8d4b7aeb01bc82199d"
+  }
+}

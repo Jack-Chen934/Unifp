@@ -1,0 +1,11 @@
+{
+  "source_root": "/mnt/data_8THDD/myl_unifp_v3_stage1/validation/collision_optimization_20261103_r02/source/UniFP_v3",
+  "scope_zh": "与正式S1归档的源码及活动资产摘要逐项比较；另验证A8000检查点。",
+  "groups": {
+    "source_manifest": 45,
+    "asset_manifest": 113
+  },
+  "mismatches": [],
+  "checkpoint_sha256": "afa062c97b6090bad076d2888ee9f39ef5c2dc3958c624485450f8c2f8b45eef",
+  "passed": true
+}

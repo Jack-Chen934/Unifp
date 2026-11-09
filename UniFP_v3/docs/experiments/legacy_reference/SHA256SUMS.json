@@ -1,0 +1,589 @@
+{
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 4269,
+      "sha256": "b63cdd95065ace28ced4b6f6e275df114b800f7f245ec0b749618cbc8737b60f"
+    },
+    {
+      "path": "consolidation_manifest.json",
+      "bytes": 98170,
+      "sha256": "15641eafb24d93f8bd333d581a19c5013673611695f683f281f9124d4a2c4474"
+    },
+    {
+      "path": "evidence/README.md",
+      "bytes": 509,
+      "sha256": "c86680a3fb037ee8b4a169c7d6efa9c8ea569e65455f4833d96fa96426470cb6"
+    },
+    {
+      "path": "evidence/v3_reference_20261030/PROJECT_REPORT.md",
+      "bytes": 3418,
+      "sha256": "cf9e7fedfab22db12fabe6ecbc98db107ed225b2673ea4b360654c1c08f3cb8a"
+    },
+    {
+      "path": "evidence/v3_reference_20261030/README.md",
+      "bytes": 1184,
+      "sha256": "b7ddae9ec19d9f4f42cda50f4339ef9d3a042dff6f4932073920cb22df3dd59d"
+    },
+    {
+      "path": "evidence/v3_reference_20261030/assets/b2z1/.asset_hash",
+      "bytes": 32,
+      "sha256": "3c4b70bbecea510b4a0ee0dec69ba162756a6bac618a03c1862dba5814cb3d57"
+    },
+    {
+      "path": "evidence/v3_reference_20261030/assets/b2z1/config.yaml",
+      "bytes": 658,
+      "sha256": "1eaf99ba0724166f195c175b366eb4f9c782014344819457cbfb17d8e3613605"
+    },
+    {
+      "path": "evidence/v3_reference_20261030/assets/b2z1_merged/.asset_hash",
+      "bytes": 32,
+      "sha256": "fc51d69ed1e5984b06c73dd80d3c8bab1c8eff7d807f3628d9588f43b2bb703c"
+    },
+    {
+      "path": "evidence/v3_reference_20261030/assets/b2z1_merged/config.yaml",
+      "bytes": 664,
+      "sha256": "f24361f6b05895ff9ef118c05bee3e47469ee6f1122f971c847a66f31c874303"
+    },
+    {
+      "path": "evidence/v3_reference_20261030/evaluate_unifp_policy.py",
+      "bytes": 16663,
+      "sha256": "74decbf71bd06c957e072c933fe137372ca05389a67a7d16c8b0987c60a68986"
+    },
+    {
+      "path": "evidence/v3_reference_20261030/manifest.json",
+      "bytes": 72182,
+      "sha256": "ec2d064cd5538db0f17729fc4df12114c98380f81adb3828934db468e29dbf7b"
+    },
+    {
+      "path": "evidence/v3_reference_20261030/official_baseline.json",
+      "bytes": 10805,
+      "sha256": "e64a22e8170a8d7b786b706d0380a660c970272e665303375ee16facbf08dd0f"
+    },
+    {
+      "path": "evidence/v3_reference_20261030/play_unifp_policy.py",
+      "bytes": 17327,
+      "sha256": "3418392bf737ae5ba7a358d23b4711222985cde4377f61cb9a611735805888b3"
+    },
+    {
+      "path": "evidence/v3_reference_20261030/plot_unifp_trace.py",
+      "bytes": 4399,
+      "sha256": "c416304d126d129b04fe8da7edbdcd0ac938ffa493276562129136b3c8c33b80"
+    },
+    {
+      "path": "evidence/v3_reference_20261030/ranger_512_migration/SUMMARY.json",
+      "bytes": 4090,
+      "sha256": "68422f58bf86ba581de4cab2b115544301cd90e618e9a2bed57b7a4c326a367d"
+    },
+    {
+      "path": "evidence/v3_reference_20261030/ranger_512_migration/checkpoints/model_iter_008000.pt",
+      "bytes": 29298178,
+      "sha256": "3ed0adc13c3dc84b87f82606160c3eb0df6e52727fb34ea089f96c686b40110e"
+    },
+    {
+      "path": "evidence/v3_reference_20261030/ranger_512_migration/checkpoints/model_iter_016000.pt",
+      "bytes": 29264194,
+      "sha256": "498f039122bf33075d4144ebcd7a05adcd91fde9214ac761aed9def79ebabb25"
+    },
+    {
+      "path": "evidence/v3_reference_20261030/ranger_512_migration/environment-freeze.txt",
+      "bytes": 5726,
+      "sha256": "8dc35e6b7f0b219d5428ba310acab5240147493d10f51f1abda0c3c61f5c520e"
+    },
+    {
+      "path": "evidence/v3_reference_20261030/ranger_512_migration/hardware-summary.txt",
+      "bytes": 91,
+      "sha256": "1c1ed5b55025e9722bac52b0951d98babacba60a82af4e7c86e826e139acfac2"
+    },
+    {
+      "path": "evidence/v3_reference_20261030/ranger_512_migration/logic/audit_snapshot.py",
+      "bytes": 1295485,
+      "sha256": "1a23960e6c9f6fbd0b7cf819c29d20be76ecd5b7f976e32d8be0ea5e85304889"
+    },
+    {
+      "path": "evidence/v3_reference_20261030/ranger_512_migration/logic/backend_envelope.py",
+      "bytes": 21572,
+      "sha256": "6a825e2a49428d68660967c30621be57abe2e273b36f80e7b7448254641af659"
+    },
+    {
+      "path": "evidence/v3_reference_20261030/ranger_512_migration/logic/baseline_plan.json",
+      "bytes": 32757,
+      "sha256": "aaa093f8f3e1ba674c8aee4ef6712a66d924b652cdb5fb24ba21490261855437"
+    },
+    {
+      "path": "evidence/v3_reference_20261030/ranger_512_migration/logic/evaluate_stage_verified.py",
+      "bytes": 13190,
+      "sha256": "84618378dbce78a08d93fd58b08b5f14fb124d1e28a2dcc56fa7e1f74dfa4045"
+    },
+    {
+      "path": "evidence/v3_reference_20261030/ranger_512_migration/logic/final_plan.json",
+      "bytes": 37648,
+      "sha256": "22326e082ace2fd8178a38683bc8feffc70ded3ff058ea870505cef7d0d1dfcf"
+    },
+    {
+      "path": "evidence/v3_reference_20261030/ranger_512_migration/logic/force_stage_plan.json",
+      "bytes": 3773,
+      "sha256": "328fa12a58f61ab8e417be3859f8ccd988fb8a550c5ef49b824debdc830fc93f"
+    },
+    {
+      "path": "evidence/v3_reference_20261030/ranger_512_migration/logic/force_stage_runner.py",
+      "bytes": 13761,
+      "sha256": "0962d6481245ba9897b370156db007a02e7eaf99967ab3a1fe7eb0508346eb5d"
+    },
+    {
+      "path": "evidence/v3_reference_20261030/ranger_512_migration/logic/ranger_512_fixedcom_baseline.py",
+      "bytes": 34437,
+      "sha256": "fe7825f6d423e2096096d24374623626f503137abc393fcc8f9dc056cd0c587e"
+    },
+    {
+      "path": "evidence/v3_reference_20261030/ranger_512_migration/logic/ranger_force_continue_13000_to_16000.py",
+      "bytes": 27002,
+      "sha256": "f6101620dff058241fe69ee6d32471d6e85e2448d423c47f0e7a5aee680130b0"
+    },
+    {
+      "path": "evidence/v3_reference_20261030/ranger_512_migration/logic/shape_properties.pt",
+      "bytes": 4289,
+      "sha256": "0d0a5347debba0db0ccfc709b809d5233bef6dcfe24672f392be67a48a9a0fa1"
+    },
+    {
+      "path": "evidence/v3_reference_20261030/ranger_512_migration/logic/shape_properties_result.json",
+      "bytes": 7970,
+      "sha256": "6fc547223348698307be36d2a3fdcfa8854488d201b76c2b84617db1786337ea"
+    },
+    {
+      "path": "evidence/v3_reference_20261030/ranger_512_migration/logic/verify_boundary.py",
+      "bytes": 7783,
+      "sha256": "abd624ff79f3645e5b2b3a3d5a4e2d71c811dcf8b7b07e68b80145e6d75cd2ae"
+    },
+    {
+      "path": "evidence/v3_reference_20261030/ranger_512_migration/protected_log_sources/logs/ranger-unifp-v3-original-force-to10000-resume9500/model_iter_010000.pt",
+      "bytes": 29254683,
+      "sha256": "5d6fffb2ed30e68a13a77e36ebe33fe2c19b5aace396fe25c223c989f0530690"
+    },
+    {
+      "path": "evidence/v3_reference_20261030/ranger_512_migration/protected_log_sources/logs/ranger-unifp-v3-original-force-to10000-resume9500/supervision_audit/gym_ranger_force_continue12000_to13000_20261028_v1/dispatch.json",
+      "bytes": 678,
+      "sha256": "cce9fe2462cbaf8990c83a6688ea55dc5aef6843571dc150c78317a174177070"
+    },
+    {
+      "path": "evidence/v3_reference_20261030/ranger_512_migration/protected_log_sources/logs/ranger-unifp-v3-original-force-to10000-resume9500/supervision_audit/gym_ranger_force_continue12000_to13000_20261028_v1/plan.json",
+      "bytes": 36286,
+      "sha256": "242a56a9a5a5cb86bcf9ea3872b2b1f9174cf87fdd65e2ed17f95cd6020d8870"
+    },
+    {
+      "path": "evidence/v3_reference_20261030/ranger_512_migration/protected_log_sources/logs/ranger-unifp-v3-original-force-to10000-resume9500/supervision_audit/gym_ranger_force_continue12000_to13000_20261028_v1/preflight.json",
+      "bytes": 415,
+      "sha256": "c21166bb1840097cacaff34d56476b2d3baba7f3f5977dee18ab809f95fb69eb"
+    },
+    {
+      "path": "evidence/v3_reference_20261030/ranger_512_migration/protected_log_sources/logs/ranger-unifp-v3-original-force-to10000-resume9500/supervision_audit/gym_ranger_force_continue12000_to13000_20261028_v1/restoration_verification.json",
+      "bytes": 654,
+      "sha256": "537338bb3cf0a930c94a893040b4eb9b4805b5292781f1e5183713f3dcc48af3"
+    },
+    {
+      "path": "evidence/v3_reference_20261030/ranger_512_migration/protected_log_sources/logs/ranger-unifp-v3-original-force-to10000-resume9500/supervision_audit/gym_ranger_force_continue12000_to13000_20261028_v1/run.py",
+      "bytes": 27002,
+      "sha256": "b1864fbaa8255933155b932b10918e14e7ec5433a1ec661c5e6922dad189e2df"
+    },
+    {
+      "path": "evidence/v3_reference_20261030/ranger_512_migration/protected_log_sources/logs/ranger-unifp-v3-original-force-to10000-resume9500/supervision_audit/gym_ranger_force_continue9000_to12000_20261028_v1/dispatch.json",
+      "bytes": 671,
+      "sha256": "f6dcdb7be24668f98cd2ea270ec9ba56b99f853a11cc4fb87290f490f1759684"
+    },
+    {
+      "path": "evidence/v3_reference_20261030/ranger_512_migration/protected_log_sources/logs/ranger-unifp-v3-original-force-to10000-resume9500/supervision_audit/gym_ranger_force_continue9000_to12000_20261028_v1/plan.json",
+      "bytes": 34611,
+      "sha256": "b60d894a7617f23b0689fd5df7341a63f8c00184d1d5e3f3fe1120a5f429dbbb"
+    },
+    {
+      "path": "evidence/v3_reference_20261030/ranger_512_migration/protected_log_sources/logs/ranger-unifp-v3-original-force-to10000-resume9500/supervision_audit/gym_ranger_force_continue9000_to12000_20261028_v1/preflight.json",
+      "bytes": 414,
+      "sha256": "246640f810af96e2a00465c53e230aaf6f0e634984699a8f1a99b87ffbe8ea64"
+    },
+    {
+      "path": "evidence/v3_reference_20261030/ranger_512_migration/protected_log_sources/logs/ranger-unifp-v3-original-force-to10000-resume9500/supervision_audit/gym_ranger_force_continue9000_to12000_20261028_v1/restoration_verification.json",
+      "bytes": 654,
+      "sha256": "59ed2c8dd9b888052dbb693b49050cb5c746fc4f3ac86322625a3a733582ca4e"
+    },
+    {
+      "path": "evidence/v3_reference_20261030/ranger_512_migration/protected_log_sources/logs/ranger-unifp-v3-original-force-to10000-resume9500/supervision_audit/gym_ranger_force_continue9000_to12000_20261028_v1/run.py",
+      "bytes": 26985,
+      "sha256": "0610e53ea0825dddb4ddcdebb14ea2671f7307cb9cc5d17811c6ec2a00afe684"
+    },
+    {
+      "path": "evidence/v3_reference_20261030/ranger_512_migration/protected_log_sources/logs/ranger-unifp-v3-original-force-to10000-resume9500/supervision_audit/gym_ranger_force_stage_20261028_v1/completion.json",
+      "bytes": 705,
+      "sha256": "4c2130be5f6fc159883ccc6424d4500766a1c2c304cf4e4c21fcdd06a05ca8bd"
+    },
+    {
+      "path": "evidence/v3_reference_20261030/ranger_512_migration/protected_log_sources/logs/ranger-unifp-v3-original-force-to10000-resume9500/supervision_audit/gym_ranger_force_stage_20261028_v1/evaluation_summary.json",
+      "bytes": 33320,
+      "sha256": "fe9288eff15f470ea4284119f094d6f429619fd51516e65ac084f3913b700d8e"
+    },
+    {
+      "path": "evidence/v3_reference_20261030/ranger_512_migration/protected_log_sources/logs/ranger-unifp-v3-original-force-to10000-resume9500/supervision_audit/gym_ranger_force_stage_20261028_v1/train/model_iter_009000.pt",
+      "bytes": 29264194,
+      "sha256": "bcf1a28f1073587338c7be85125a63535ed8702acff4f1721e53754bf622786b"
+    },
+    {
+      "path": "evidence/v3_reference_20261030/ranger_512_migration/source_manifest.json",
+      "bytes": 65037,
+      "sha256": "659e0b05fea51ce71479c5c2f15b8671953731b4c3b3aad47504c094c621da30"
+    },
+    {
+      "path": "evidence/v3_reference_20261030/ranger_force_experiment_config.py",
+      "bytes": 603,
+      "sha256": "c8852fc0969c83af76bb91a2f0a40713a022b5e61395aa4c052650d64f9fd78a"
+    },
+    {
+      "path": "evidence/v3_reference_20261030/ranger_unifp_vec_env.py",
+      "bytes": 15785,
+      "sha256": "0f2db9583ffa59cfb1e0bd474dfae3ba4028f41fe274803c20f64576db9bbe1e"
+    },
+    {
+      "path": "evidence/v3_reference_20261030/robot_description/a1arm_description/README_approx_sim.md",
+      "bytes": 20725,
+      "sha256": "e7fa04a8fd5ad05c6f33de358a1522c4e7374df7ea2ee6e5076219f2de71709d"
+    },
+    {
+      "path": "evidence/v3_reference_20261030/robot_description/a1arm_description/assets/.asset_hash",
+      "bytes": 32,
+      "sha256": "5a4cf8762c6270ebfd3b4b2a6d29487a012c3ae2b482c0edcbc305608a329aa7"
+    },
+    {
+      "path": "evidence/v3_reference_20261030/robot_description/a1arm_description/assets/config.yaml",
+      "bytes": 739,
+      "sha256": "289b2861006963b32c4f2ffa3b9278bfdb37a5047bd82df02f479c944c1ee336"
+    },
+    {
+      "path": "evidence/v3_reference_20261030/robot_description/a1arm_description/assets/v3/.asset_hash",
+      "bytes": 32,
+      "sha256": "f87ecd1186c233e1798c8cfa393cc204a87b453ec74b43f3c75763fbe83702af"
+    },
+    {
+      "path": "evidence/v3_reference_20261030/robot_description/a1arm_description/assets/v3/config.yaml",
+      "bytes": 742,
+      "sha256": "f6c177c5211754a79eb4add44c6abc85d3c8db6492a53366880ed709e226df1d"
+    },
+    {
+      "path": "evidence/v3_reference_20261030/robot_description/a1arm_description/assets/v3_original/.asset_hash",
+      "bytes": 32,
+      "sha256": "a9e4359bba37f11d35e3080651c268c5df201f6b7c872698ffe08efab747db02"
+    },
+    {
+      "path": "evidence/v3_reference_20261030/robot_description/a1arm_description/assets/v3_original/config.yaml",
+      "bytes": 757,
+      "sha256": "5a9d799dd01a62b9cc22270654dad6985afed03e2fd7d177d1c772c874d9319a"
+    },
+    {
+      "path": "evidence/v3_reference_20261030/robot_description/a1arm_description/configs/collision_spheres.json",
+      "bytes": 14928,
+      "sha256": "afbf4a3ebb746034e3ed5591f5f907fb037a423bada2d024e8bf3753d244457b"
+    },
+    {
+      "path": "evidence/v3_reference_20261030/robot_description/a1arm_description/configs/curobo_config.yml",
+      "bytes": 24243,
+      "sha256": "667d9c77bda4918584fe92e2f2bca8e49edc710ae05583d48f508aa211f816d9"
+    },
+    {
+      "path": "evidence/v3_reference_20261030/robot_description/a1arm_description/meshes/aluminum_profiles_modified.STL",
+      "bytes": 613084,
+      "sha256": "39ea1deb201c86260603c96069d22ae954a9bc6738e5df4e36158e0c5513ea1a"
+    },
+    {
+      "path": "evidence/v3_reference_20261030/robot_description/a1arm_description/meshes/arm_base.STL",
+      "bytes": 608084,
+      "sha256": "be3d34b3244d745f527273f2005ca4ae9b08118c7778c4f3fae88a6e361203a0"
+    },
+    {
+      "path": "evidence/v3_reference_20261030/robot_description/a1arm_description/meshes/arm_seg1.STL",
+      "bytes": 1924784,
+      "sha256": "b80652f37e0d2d4b59d5127cbd97b404ddf661cd421d2ea47c100cc991bedcae"
+    },
+    {
+      "path": "evidence/v3_reference_20261030/robot_description/a1arm_description/meshes/arm_seg2.STL",
+      "bytes": 539684,
+      "sha256": "98d224d819f1ecbbd19c979e4f18409bd16e277bd752c4bb3fd913182bee41d8"
+    },
+    {
+      "path": "evidence/v3_reference_20261030/robot_description/a1arm_description/meshes/arm_seg3.STL",
+      "bytes": 1976034,
+      "sha256": "dbfd8fea24de4480195d62096b63c206c002ba122021dbdab71ccfe4ea1a56f0"
+    },
+    {
+      "path": "evidence/v3_reference_20261030/robot_description/a1arm_description/meshes/arm_seg4.STL",
+      "bytes": 251384,
+      "sha256": "df203b499f3c2eff565b2078a9b8b0888552c9453b97d7734f82b0689208a6bf"
+    },
+    {
+      "path": "evidence/v3_reference_20261030/robot_description/a1arm_description/meshes/arm_seg5.STL",
+      "bytes": 306684,
+      "sha256": "cf71a6682a3a702d92ff6278742549a9fe2620f6edc338c4d5b45621743d2ff6"
+    },
+    {
+      "path": "evidence/v3_reference_20261030/robot_description/a1arm_description/meshes/arm_seg6.STL",
+      "bytes": 1134584,
+      "sha256": "c0073262d2cc5f950eb66ef4bec90662f30791c4be8ba6b88e0a6b5584f4153f"
+    },
+    {
+      "path": "evidence/v3_reference_20261030/robot_description/a1arm_description/meshes/camera.STL",
+      "bytes": 5595484,
+      "sha256": "143e9a11d60f1c05c7bce39a83a81a5b128abdd2886ab02e42791e4f0582ffae"
+    },
+    {
+      "path": "evidence/v3_reference_20261030/robot_description/a1arm_description/meshes/gripper1.STL",
+      "bytes": 567484,
+      "sha256": "e888cc5f0cd77a8e1abef7b436378a38a2d0ee7268cc739fb51f9913d4ce5a1d"
+    },
+    {
+      "path": "evidence/v3_reference_20261030/robot_description/a1arm_description/meshes/gripper2.STL",
+      "bytes": 567484,
+      "sha256": "393dfe556f193ff31694e765e01161c00e2a2bb563ed1f5ea2f28d4c00048a47"
+    },
+    {
+      "path": "evidence/v3_reference_20261030/robot_description/a1arm_description/meshes/left_camera.STL",
+      "bytes": 5595484,
+      "sha256": "c319d553da8e0eab8a15a69bfe15e30d70981f925c1cb2c4d792fa2086690138"
+    },
+    {
+      "path": "evidence/v3_reference_20261030/robot_description/a1arm_description/meshes/left_camera_connector.STL",
+      "bytes": 30084,
+      "sha256": "af9bd1d798f5f347e1a4baff8123bc3a608b405e61015256f8ba8204c27417b0"
+    },
+    {
+      "path": "evidence/v3_reference_20261030/robot_description/a1arm_description/meshes/official_v3/ranger_base.glb",
+      "bytes": 12268024,
+      "sha256": "2f190f32211807ad4ab0218a561681b40e97ee6eded0e70473a5a4330fb549aa"
+    },
+    {
+      "path": "evidence/v3_reference_20261030/robot_description/a1arm_description/meshes/official_v3/steering_wheel.glb",
+      "bytes": 90584,
+      "sha256": "ff5d60bb48e5b46e0d147585bd95b008e6fb1505e2788042c10f3ff545846dc7"
+    },
+    {
+      "path": "evidence/v3_reference_20261030/robot_description/a1arm_description/meshes/official_v3/wheel_v3.glb",
+      "bytes": 412524,
+      "sha256": "71bdb2721051607733b3fdf4126024d18f60bf9123ec81f5a9bfcd4217b43f02"
+    },
+    {
+      "path": "evidence/v3_reference_20261030/robot_description/a1arm_description/meshes/original_movable/bl_fixed.glb",
+      "bytes": 4610896,
+      "sha256": "2dba162718f237cbeab8aee05aa54d652c823a61d8c685cdced0953da1994e9f"
+    },
+    {
+      "path": "evidence/v3_reference_20261030/robot_description/a1arm_description/meshes/original_movable/bl_rolling.glb",
+      "bytes": 4043328,
+      "sha256": "c4984866a6610248a15af59fc6f35624db531cc1ea09665f50f5712745bb84b8"
+    },
+    {
+      "path": "evidence/v3_reference_20261030/robot_description/a1arm_description/meshes/original_movable/bl_steering.glb",
+      "bytes": 3820148,
+      "sha256": "a38e541c747c9d8a7f6b82cdd665f377808857969f55c3899a01e040ef8fefa4"
+    },
+    {
+      "path": "evidence/v3_reference_20261030/robot_description/a1arm_description/meshes/original_movable/br_fixed.glb",
+      "bytes": 4766512,
+      "sha256": "c03d86427baa44c8de001f1a9519e2464c2ba2c9c3fa7c068e27a5ced39e423a"
+    },
+    {
+      "path": "evidence/v3_reference_20261030/robot_description/a1arm_description/meshes/original_movable/br_rolling.glb",
+      "bytes": 4263700,
+      "sha256": "482fcbfd6cecca1458882cf85e4ad9e6a654fbf7f58291af91ae9b2fb638f783"
+    },
+    {
+      "path": "evidence/v3_reference_20261030/robot_description/a1arm_description/meshes/original_movable/br_steering.glb",
+      "bytes": 3981772,
+      "sha256": "31c4dee422dcff0608bf409444c021abe6e231a1ae3ad04eaec4931ae5e089b8"
+    },
+    {
+      "path": "evidence/v3_reference_20261030/robot_description/a1arm_description/meshes/original_movable/fl_fixed.glb",
+      "bytes": 4610892,
+      "sha256": "009593cb6aa00fdf7b3e9a532fe5c1329de5844d6adf6a5e5ceb67d026c2708e"
+    },
+    {
+      "path": "evidence/v3_reference_20261030/robot_description/a1arm_description/meshes/original_movable/fr_fixed.glb",
+      "bytes": 4766508,
+      "sha256": "0a603e9d75ff3ab9023e6fa2f29aa7860550b06752b5d5030eafb868d7056be3"
+    },
+    {
+      "path": "evidence/v3_reference_20261030/robot_description/a1arm_description/meshes/original_movable/provenance.json",
+      "bytes": 1854,
+      "sha256": "e6b71adef7212c11e45919e3fcf28b4a9bfd521f14dac547d6ee209e5bba65f7"
+    },
+    {
+      "path": "evidence/v3_reference_20261030/robot_description/a1arm_description/meshes/ranger_mini3_decimate.stl",
+      "bytes": 1746684,
+      "sha256": "0757cd5f6d0134d81fc1807adeba9e7a31978fdb9b7fb9b6fc0df4d8fa19eda6"
+    },
+    {
+      "path": "evidence/v3_reference_20261030/robot_description/a1arm_description/meshes/ranger_mini_v3_wheel.stl",
+      "bytes": 5196734,
+      "sha256": "b90bf4e2772d5471f8e6bc60d7b97ffef076a06950f494f869e0eee5b70df927"
+    },
+    {
+      "path": "evidence/v3_reference_20261030/robot_description/a1arm_description/meshes/ranger_mini_v3_wheel_right.stl",
+      "bytes": 5420734,
+      "sha256": "ab295109861bb10a92e91041641e688158f95bbd08b760d8725e22a468175c55"
+    },
+    {
+      "path": "evidence/v3_reference_20261030/robot_description/a1arm_description/meshes/rear_top_camera_connector.STL",
+      "bytes": 18384,
+      "sha256": "827f4226336a831fed43848fe717217aca1a36a85b0076d85fe4aa7c6977b1a3"
+    },
+    {
+      "path": "evidence/v3_reference_20261030/robot_description/a1arm_description/meshes/right_camera.STL",
+      "bytes": 5595484,
+      "sha256": "656c20497e3f780c5c1b3ae45d760b2d32944fec377319a4250170f0fca4782b"
+    },
+    {
+      "path": "evidence/v3_reference_20261030/robot_description/a1arm_description/meshes/right_camera_connector.STL",
+      "bytes": 29684,
+      "sha256": "e6f32c78a847eee738fbb9365f33cff87fd5e7d9d4a92f298b003f23d7f2acee"
+    },
+    {
+      "path": "evidence/v3_reference_20261030/robot_description/a1arm_description/meshes/wrist_camera_connector.STL",
+      "bytes": 53084,
+      "sha256": "db3b1c84b9d742335e8b8e92eb5dddaf9423bdaa672477c8eb184322b98ad58a"
+    },
+    {
+      "path": "evidence/v3_reference_20261030/robot_description/a1arm_description/scripts/build_ranger_mini3_approx_sim_urdf.py",
+      "bytes": 9624,
+      "sha256": "26db62ebb0e98a739228fb3567cfcbd5a5524684c1427958b4d43449c0d23fd8"
+    },
+    {
+      "path": "evidence/v3_reference_20261030/robot_description/a1arm_description/scripts/build_ranger_visual_usd.py",
+      "bytes": 17328,
+      "sha256": "e290f901c4eac918b7bde309a07ba257e5f7631f74837e925e8f46689f11067b"
+    },
+    {
+      "path": "evidence/v3_reference_20261030/robot_description/a1arm_description/urdf/a1arm_gripper.urdf",
+      "bytes": 3178,
+      "sha256": "3f181819139147b830c3b2d33a13b2a2a63f52bdf953f9c841d7b2d9a2448587"
+    },
+    {
+      "path": "evidence/v3_reference_20261030/robot_description/a1arm_description/urdf/a1arm_rgm3.urdf",
+      "bytes": 28896,
+      "sha256": "a3eacf4b991ba7bfa4be5e57e229adeb918c71a741f17be53d4f4ba799471f2c"
+    },
+    {
+      "path": "evidence/v3_reference_20261030/robot_description/a1arm_description/urdf/a1arm_rgm3_approx_sim.urdf",
+      "bytes": 26237,
+      "sha256": "a1f1536490f6599ade598ad4cde9d15b29c7a69ccc9a544de8287628697d7293"
+    },
+    {
+      "path": "evidence/v3_reference_20261030/robot_description/a1arm_description/urdf/a1arm_rgm3_approx_sim_v2.urdf",
+      "bytes": 26174,
+      "sha256": "a79f5f6b3ab2c25d1e7b5757e9b020dad5e406b1c0051fd50d3049c8a3bc2b81"
+    },
+    {
+      "path": "evidence/v3_reference_20261030/robot_description/a1arm_description/urdf/a1arm_rgm3_approx_sim_v3.urdf",
+      "bytes": 26462,
+      "sha256": "a5b019bdd78caa2bcb77fb3a41a1a303ddd8fdd944ce4a1ae34510392eb75a28"
+    },
+    {
+      "path": "evidence/v3_reference_20261030/robot_description/a1arm_description/vendor/agilex_ranger_mini_v3/package.xml",
+      "bytes": 651,
+      "sha256": "0c4b1cca134c534baed836130bd21e090ee039e97cbc8230ff3a9991f5442db4"
+    },
+    {
+      "path": "evidence/v3_reference_20261030/robot_description/a1arm_description/vendor/agilex_ranger_mini_v3/provenance.json",
+      "bytes": 1841,
+      "sha256": "b76e5ec39171c510e692ad3452a03830a3c975b763e41725f31a51ec3819d7ba"
+    },
+    {
+      "path": "evidence/v3_reference_20261030/robot_description/a1arm_description/vendor/agilex_ranger_mini_v3/ranger_base.dae",
+      "bytes": 38454037,
+      "sha256": "cf8d73c2d048b781f7dcd6d63122a79114836961ee347a9c5be716f5eef5501e"
+    },
+    {
+      "path": "evidence/v3_reference_20261030/robot_description/a1arm_description/vendor/agilex_ranger_mini_v3/ranger_mini.xacro",
+      "bytes": 14239,
+      "sha256": "925fa108e23a931d5c98b27a3eda0d0056a50e0889a8fcbdaea97d5090f7675e"
+    },
+    {
+      "path": "evidence/v3_reference_20261030/robot_description/a1arm_description/vendor/agilex_ranger_mini_v3/steering_wheel.dae",
+      "bytes": 171983,
+      "sha256": "d8448b8856920bbdc74b21c36114cab3782a840e276511969f1ee91f8d443028"
+    },
+    {
+      "path": "evidence/v3_reference_20261030/robot_description/a1arm_description/vendor/agilex_ranger_mini_v3/wheel_v3.dae",
+      "bytes": 1041026,
+      "sha256": "d45ddac792ac54ba44cf516cf575a3b768cf7e95fd65c2c14af8b1061878253f"
+    },
+    {
+      "path": "evidence/v3_reference_20261030/smoke_b2z1.py",
+      "bytes": 3289,
+      "sha256": "be178ff6199108220fa5472e89800b0b4abb593e9d43b0be95043f73e8b7a47b"
+    },
+    {
+      "path": "evidence/v3_reference_20261030/smoke_unifp_eval_contract.py",
+      "bytes": 4121,
+      "sha256": "b8b88a016fb32dafc95c655833f3f71593612a9a698a6b1f4d5f757efcd0a234"
+    },
+    {
+      "path": "evidence/v3_reference_20261030/smoke_unifp_vec_env.py",
+      "bytes": 7300,
+      "sha256": "296a51528269f48c0b381285602b488918b766bbdd17581e2f9e14af809bee63"
+    },
+    {
+      "path": "evidence/v3_reference_20261030/test_ranger_approx_drive.py",
+      "bytes": 11001,
+      "sha256": "fb1d3887c174772558fdc8d480bdb76decbee8226d8c61cb11ee1427d8082ec0"
+    },
+    {
+      "path": "evidence/v3_reference_20261030/train_unifp_ppo_smoke.py",
+      "bytes": 13424,
+      "sha256": "b71270edae7e66b287db7ad53226a7130aeb07371f763cedd412f9fe310b68a0"
+    },
+    {
+      "path": "evidence/v3_reference_20261030/unifp_domain_randomization.py",
+      "bytes": 5503,
+      "sha256": "5528c7d506b53dd0b810f36758c3aca4da39913ed541eb29b3ca781874e20adf"
+    },
+    {
+      "path": "evidence/v3_reference_20261030/unifp_eval_protocol.py",
+      "bytes": 5828,
+      "sha256": "fa70183fafecc431dcd1a81bcb81b246c13af47d498ea70ade3e98f1a6e40177"
+    },
+    {
+      "path": "evidence/v3_reference_20261030/unifp_force_curriculum.py",
+      "bytes": 5845,
+      "sha256": "6e9aaa1105aa8981604ece6f23863d3718f7052f4434c43aec1618e8b6afbddf"
+    },
+    {
+      "path": "evidence/v3_reference_20261030/unifp_observations.py",
+      "bytes": 4621,
+      "sha256": "e0579b3045f4a79b6084d0a1e02305100ebd93b562a4d0efe3030eb2711a220b"
+    },
+    {
+      "path": "evidence/v3_reference_20261030/unifp_stage1_control.py",
+      "bytes": 5092,
+      "sha256": "0739b871eacf65e1cfb6aa0ef19e08656ac8d6527a668b9fe32016c28f827084"
+    },
+    {
+      "path": "evidence/v3_reference_20261030/unifp_task_rewards.py",
+      "bytes": 11888,
+      "sha256": "063e29401dfe8b214cbdce7e39d72c8106ee7d0546ef01994f64c19cf9b7573f"
+    },
+    {
+      "path": "evidence/v3_reference_20261030/unifp_task_signals.py",
+      "bytes": 12711,
+      "sha256": "e95613d04a6752effe5c50a5b09607f3e525aaed636c351a6d6e7de60e085312"
+    },
+    {
+      "path": "evidence/v3_reference_20261030/unifp_vec_env.py",
+      "bytes": 20366,
+      "sha256": "90b631a49947520ebe7b908efcb8ccd4c3172f924c17f0b3e0d2e8b9edf0511d"
+    },
+    {
+      "path": "evidence/v3_reference_20261030/verification.json",
+      "bytes": 367,
+      "sha256": "a1377d317ec71420928cb86042babb44b067f73a95b38800234c91b73f9d5648"
+    },
+    {
+      "path": "evidence/v3_reference_20261030/归档说明.md",
+      "bytes": 2271,
+      "sha256": "9a8c8de0c303af58ea828a4a520315d0ae4752d9e325e2be1494168705af6817"
+    }
+  ]
+}

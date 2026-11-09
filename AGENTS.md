@@ -66,15 +66,15 @@ Strong success criteria let you loop independently. Weak criteria ("make it work
 
 ### Issue tracker
 
-Issues 使用仓库内的 Local Markdown 工作流，存放在 `.scratch/<feature-slug>/`。见 `docs/agents/issue-tracker.md`。
+Issues 使用仓库内的 Local Markdown 工作流，存放在本项目根目录下的 `.scratch/<feature-slug>/`；知识库、设计与实施票据分别放在 `knowledge/`、`design/`、`tickets/`，执行入口为各任务的 `tickets/overview.md`。路径均相对于本项目根目录。
 
 ### Triage labels
 
-Triage 使用默认五项标签：`needs-triage`、`needs-info`、`ready-for-agent`、`ready-for-human`、`wontfix`。见 `docs/agents/triage-labels.md`。
+Triage 使用默认五项标签：`needs-triage`、`needs-info`、`ready-for-agent`、`ready-for-human`、`wontfix`，记录在对应本地任务文档中。
 
 ### Domain docs
 
-Domain docs 使用 single-context 布局：根目录 `CONTEXT.md` 与 `docs/adr/`。见 `docs/agents/domain.md`。
+Domain docs 的入口为根目录 `CONTEXT.md`；已确认决策保存在对应任务的 `.scratch/<feature-slug>/design/`，V3实验记录位于 `UniFP_v3/docs/experiments/`，Go2-W实验记录自2026-11-08起位于 `UniFP_go2w/docs/experiments/`。`CONTEXT.md` 中按日期追加的内容应区分历史状态与最新结论。本仓库目前没有 `docs/agents/` 或 `docs/adr/`，不得将其作为现有文档入口。
 
 ---
 
@@ -125,4 +125,53 @@ Domain docs 使用 single-context 布局：根目录 `CONTEXT.md` 与 `docs/adr/
 
 ## 项目相关
 
-目前在名为tavis的conda虚拟环境进行开发
+### 本地默认路径
+
+本项目的唯一开发根目录为 `/home/sorry/python_ws/interactive/unifp_reproduction`。即使客户端初始工作目录是 `/home/sorry/python_ws/interactive/research`，执行本项目命令时也必须显式指定本项目工作目录；不得把 `research`、`gaze_vr_isaaclab` 或上级目录当成本项目根目录。
+
+| 用途 | 默认路径（相对于本项目根目录） |
+|---|---|
+| 原始官方代码副本，保留作为对照 | `UniFP/` |
+| V3 迁移开发代码及其命令工作目录 | `UniFP_v3/` |
+| Go2-W＋Piper独立迁移目录（当前为讨论准备，尚无训练入口） | `UniFP_go2w/` |
+| Go2-W迁移知识库、设计与执行入口 | `.scratch/go2w-unifp-migration-v1/tickets/overview.md` |
+| Go2-W迁移可行性与方案 | `UniFP_go2w/docs/experiments/迁移可行性与讨论方案.md` |
+| 官方流程讲解与参考资料 | `introduction/` |
+| 项目术语、阶段边界与按日期追加的状态 | `CONTEXT.md` |
+| V3统一进度、修复结论、复跑命令与下一步计划 | `docs/progress/2026-11-06_v3_status.md` |
+| A／B 复现知识库、分模块设计与实施计划 | `.scratch/unifp-v3-stage1-reproduction/` |
+| 已结束的模型创建、控制修复与A训练记录 | `.scratch/unifp-v3-stage1-reproduction/knowledge/model_history/README.md` |
+| 保留的r3／V8原始碰撞诊断证据 | `.scratch/unifp-v3-stage1-reproduction/knowledge/model_history/unifp-v3-collision-proxy-repair/` |
+| 当前B设计与实施准备 | `.scratch/unifp-v3-stage1-reproduction/design/part-b/`、`.scratch/unifp-v3-stage1-reproduction/tickets/part-b/overview.md` |
+| 实验记录 | `UniFP_v3/docs/experiments/` |
+| 项目进度与版本归档说明 | `docs/progress/` |
+| 机器人资产 | `UniFP_v3/resources/robots/` |
+
+2026-11-08用户要求开始Go2-W迁移讨论并建立独立目录，原 `UniFP_v3/docs/experiments/go2w/` 已整体迁至 `UniFP_go2w/docs/experiments/go2w/`，20个文件搬迁前后SHA256一致。资产和业务源码本轮未迁移；当前唯一Go2-W组合模型仍为 `UniFP_v3/resources/robots/go2w_piper_unifp_v3/`。新任务记录 `.scratch/go2w-unifp-migration-v1/` 用于当前迁移设计，不是此前已删除的旧模型创建任务。方案尚待讨论，不把旧候选的运动结果视为最终41-shape资产训练准入。
+
+当前 V3 A 配置引用的活动资产为 `UniFP_v3/resources/robots/v3_a1_desktop_train_v6_coplanar_r2/`，具体路径以 `UniFP_v3/legged_gym/envs/v3/v3_pos_force_config.py` 为准。`v3_a1_desktop/` 是冻结桌面基准；其他候选资产、失败实验与旧训练记录须按各自说明阅读，不得仅因不再活动就认定为无用文件。
+
+2026-11-07用户已明确选择V6→B，授权删除旧中间资产和已结束创建任务目录，保留r3／V8诊断证据。V1—V5、失败V7候选及旧v3_a1已删除，来源记录在主线`knowledge/model_history/asset_sources/`；五个旧独立任务的设计／票据合并为历史创建记录，原目录不再作为活动入口。诊断可视化工具仍位于`.scratch/unifp-v3-failure-visualization/`。这些删除是本轮明确授权的处置，不授权删除Go2W/Piper内容。
+
+### 环境与远程运行路径
+
+- 正式训练只在远程服务器执行；本机可做代码开发、单元测试和已授权的 CPU／GPU 仿真短测。
+- `tavis` 是已有的通用环境，不是为本项目创建的 Isaac Gym 环境，不能作为本项目默认训练环境；不得为解决 Gym 导入问题擅自修改其依赖。
+- 本机已有 Isaac Gym Preview4 短测缓存位于 `/home/sorry/.cache/unifp/isaacgym_preview4/`。使用前核对其中的解释器、SDK 与依赖，不因目录存在就假定任意 Python 环境可导入 Gym。
+- 已记录的远程服务器为 `gpuf3`，校园网 SSH 入口为 `ssh myl@10.106.11.248`。每次操作须确认实际远程身份和目标路径，历史连接记录不代表实时可达性。
+
+| 远程用途 | 路径 |
+|---|---|
+| 项目运行根目录 | `/mnt/data_8THDD/myl_unifp_v3_stage1/` |
+| 项目 Python 解释器 | `/mnt/data_8THDD/conda_envs/unifp_v3_stage1/bin/python` |
+| Isaac Gym Python SDK | `/mnt/data_8THDD/myl_unifp/isaacgym/python` |
+| Torch 扩展缓存 | `/mnt/data_8THDD/myl_unifp_v3_stage1/cache/torch_extensions` |
+| 独立源码与验证快照 | `/mnt/data_8THDD/myl_unifp_v3_stage1/validation/` |
+| 训练输出 | `/mnt/data_8THDD/myl_unifp_v3_stage1/runs/` |
+| 正式评估输出 | `/mnt/data_8THDD/myl_unifp_v3_stage1/evaluations/` |
+
+具体训练使用的冻结源码、run 目录、启动参数与观察安排，以 `docs/progress/2026-11-06_v3_status.md` 和对应运行身份记录为准；不得覆盖正在使用的远程源码快照、资产、检查点或输出目录。
+
+### 工作区维护
+
+清理仅针对已确认可再生成的缓存、一次性临时文件及经 SHA256 核验的重复副本；清理重复证据时记录保留位置。保留官方副本、有效资产、知识库、已确认设计、tickets、训练数据及必要失败证据。Go2W／Piper 等其他任务的未提交内容不得随 V3 清理而删除、回滚或批量提交。Git 中存在真实开发改动不等于工作区存在垃圾文件，不用 `git clean` 或 `git reset --hard` 制造表面干净。

@@ -1,0 +1,2925 @@
+{
+  "iteration": 12000,
+  "snapshot_count": 12800,
+  "static_required_over_limit_fraction_by_arm_joint": [
+    0.0,
+    0.003359375,
+    0.000703125,
+    0.000703125,
+    0.00546875,
+    0.0
+  ],
+  "static_required_over_limit_any_fraction": 0.0096875,
+  "actual_substep_saturation_mean_in_same_snapshots": [
+    0.02236328087747097,
+    0.4424804747104645,
+    0.0952441394329071,
+    0.00015624999650754035,
+    0.03140624985098839,
+    0.0
+  ],
+  "targets": {
+    "geometric_target": {
+      "outside_chain_bound_count": 0,
+      "outside_chain_bound_fraction": 0.0,
+      "distance_p95_m": 0.6730694697241463,
+      "ik_sample_count": 96,
+      "ik_outside_bound": 0,
+      "ik_found_position_solution": 96,
+      "ik_unresolved_inside_bound": 0,
+      "ik_samples": [
+        {
+          "snapshot_index": 0,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.7156629805447188,
+          "residual_m": 5.88521694773781e-12,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            0.023856872973216557,
+            0.9975185152018756,
+            -1.50278584134315,
+            0.0138564753537764,
+            -0.011087304267395745,
+            0.2187974056341618
+          ]
+        },
+        {
+          "snapshot_index": 134,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.7130817389244931,
+          "residual_m": 3.385090472091466e-09,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            -0.39625931905608514,
+            1.3586688756366918,
+            -1.2266055601346262,
+            -2.013777455673303,
+            -1.469891376639373,
+            -1.0344878034447023
+          ]
+        },
+        {
+          "snapshot_index": 269,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.6717786631417177,
+          "residual_m": 2.811119044136883e-10,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            0.20968657959080791,
+            1.1397500554532694,
+            -0.9706208059796967,
+            -1.4783079831571484,
+            -1.1931737901754378,
+            0.7347992970795729
+          ]
+        },
+        {
+          "snapshot_index": 404,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.5445278230109993,
+          "residual_m": 7.964133938870389e-09,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            -0.9589036054741048,
+            0.9598894419619318,
+            -0.6247308201984698,
+            -2.1618662596415037,
+            -1.0991283934329485,
+            2.7778348373043666
+          ]
+        },
+        {
+          "snapshot_index": 538,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.49354371634752586,
+          "residual_m": 2.0339660594293004e-09,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            0.3367589466842099,
+            0.9174857319734481,
+            -0.6879686924738514,
+            0.9589679407309831,
+            0.3702069726616607,
+            0.7946010839124756
+          ]
+        },
+        {
+          "snapshot_index": 673,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.6264368729536403,
+          "residual_m": 3.1639820501722743e-09,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            -0.49284386630927496,
+            1.2734391974660229,
+            -0.9608858977234203,
+            -2.3312102515248365,
+            -1.2293467619262683,
+            -2.779642048129218
+          ]
+        },
+        {
+          "snapshot_index": 808,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.6201481960154324,
+          "residual_m": 2.135153939227971e-09,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            -0.4157673687986199,
+            1.5422360911267872,
+            -0.8856361087198256,
+            -2.0810093043495517,
+            -1.3721719313695542,
+            2.7857535242167044
+          ]
+        },
+        {
+          "snapshot_index": 943,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.6529826865001138,
+          "residual_m": 3.2622408225087818e-09,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            -0.928493451409133,
+            1.2185797408098389,
+            -1.0268012453776976,
+            -2.2617847327502294,
+            -1.2501947687957182,
+            -2.538672714995413
+          ]
+        },
+        {
+          "snapshot_index": 1077,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.5478422792024975,
+          "residual_m": 3.658660345780148e-10,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            0.4991922347501522,
+            1.8196886997887123,
+            -1.1409235571063812,
+            1.2253208001490694,
+            -0.07776321721414454,
+            -2.8797670431179068
+          ]
+        },
+        {
+          "snapshot_index": 1212,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.6230799360181558,
+          "residual_m": 2.397996084486794e-09,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            0.556617521078936,
+            1.9159378837990706,
+            -1.1828623000969822,
+            0.5281267745635407,
+            0.8983746154406044,
+            -2.4805094566439725
+          ]
+        },
+        {
+          "snapshot_index": 1347,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.6015118705986228,
+          "residual_m": 2.614055512236202e-09,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            -0.31622192081421213,
+            2.835684852173601,
+            -1.520776562080549,
+            -2.7637364529627177,
+            -1.6400808895717949,
+            2.8755715147112144
+          ]
+        },
+        {
+          "snapshot_index": 1481,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.6083699544476947,
+          "residual_m": 2.3951944453641734e-09,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            -0.560423001436361,
+            2.0070549381192224,
+            -1.0440320788195872,
+            -1.6330510296861116,
+            -0.5920988764140526,
+            -0.29234201413664285
+          ]
+        },
+        {
+          "snapshot_index": 1616,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.4430285845222369,
+          "residual_m": 9.151848685711735e-10,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            -0.5081226416607341,
+            1.5502919349871962,
+            -0.45758420733896643,
+            -2.6221659732131877,
+            -1.473476737661623,
+            -2.3518030643463135
+          ]
+        },
+        {
+          "snapshot_index": 1751,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.5922239598022174,
+          "residual_m": 2.0897277279396825e-09,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            -1.0449629238292988,
+            2.4231195303739814,
+            -1.081171680955275,
+            -2.29709354535118,
+            -0.8587607908366366,
+            2.8746335522281674
+          ]
+        },
+        {
+          "snapshot_index": 1886,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.4867866569960496,
+          "residual_m": 3.4357022721389067e-09,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            -0.5961679456811049,
+            1.6293208172105793,
+            -1.1217507296907137,
+            -0.5297295681167926,
+            0.7176130338187197,
+            1.4956601858139038
+          ]
+        },
+        {
+          "snapshot_index": 2020,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.5836988857749892,
+          "residual_m": 1.0451444326385147e-09,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            0.30830720080622404,
+            1.6707142512704223,
+            -1.017317625390929,
+            -2.0818761114659643,
+            -0.3901340663297753,
+            1.3870589663427086
+          ]
+        },
+        {
+          "snapshot_index": 2155,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.40507437999161844,
+          "residual_m": 6.242761550791205e-11,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            -0.608387454035272,
+            1.213128437966683,
+            -0.38934593396012296,
+            -2.5386636194382683,
+            -0.9180271959861841,
+            2.879787330185611
+          ]
+        },
+        {
+          "snapshot_index": 2290,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.6161747546786007,
+          "residual_m": 1.5705217202751865e-09,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            0.15262831686191639,
+            1.3377728078761433,
+            -1.114849259393903,
+            1.758178299137534,
+            0.21920983295977714,
+            1.0159074941568205
+          ]
+        },
+        {
+          "snapshot_index": 2425,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.4706092229501741,
+          "residual_m": 5.34674982793345e-15,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            0.6449621955319365,
+            1.027087121423749,
+            -0.418485461798014,
+            -1.8875278061079577,
+            -0.9333790163936478,
+            2.1587000684489683
+          ]
+        },
+        {
+          "snapshot_index": 2559,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.4911955162132152,
+          "residual_m": 1.593434770336854e-09,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            -0.44118521764627294,
+            2.01568236480728,
+            -0.8928811179835398,
+            1.508006530497738,
+            0.1818819954277609,
+            -0.5958201050083152
+          ]
+        },
+        {
+          "snapshot_index": 2694,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.5595701865884309,
+          "residual_m": 2.9280823630369786e-09,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            -0.18123301007753703,
+            2.1895357600176193,
+            -1.268295119869061,
+            1.5655243313853524,
+            -0.13133523739734101,
+            -2.87772461063
+          ]
+        },
+        {
+          "snapshot_index": 2829,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.5321164242435952,
+          "residual_m": 2.10227170724949e-09,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            -0.41653845571547865,
+            0.9992382206529518,
+            -0.9942490915857434,
+            1.8961601862331285,
+            -0.1000874116982303,
+            -1.4430476543775947
+          ]
+        },
+        {
+          "snapshot_index": 2963,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.5397057060533884,
+          "residual_m": 2.5780792916788526e-09,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            0.02050635818819615,
+            1.9903506243029911,
+            -0.8333129163864773,
+            -2.3352275741001685,
+            -0.9382567696330048,
+            -0.9588446943596325
+          ]
+        },
+        {
+          "snapshot_index": 3098,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.6003571293394532,
+          "residual_m": 8.835938376238611e-10,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            0.5361734766450464,
+            2.1198606669573876,
+            -1.2393245168439402,
+            0.41377783744087643,
+            0.35917433598769877,
+            0.25236554324586175
+          ]
+        },
+        {
+          "snapshot_index": 3233,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.6085012316560631,
+          "residual_m": 7.966262982433225e-10,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            -2.0909153039265593,
+            0.2929139947304371,
+            -1.3298480850451575,
+            -2.8757162329829677,
+            -1.6410377144211972,
+            -2.647958781233295
+          ]
+        },
+        {
+          "snapshot_index": 3368,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.5766142369788967,
+          "residual_m": 7.965221566283143e-15,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            0.9134339939692577,
+            1.187509754464521,
+            -1.0889977066878054,
+            2.005422376076502,
+            -0.0005941534531982857,
+            -1.6239228397087566
+          ]
+        },
+        {
+          "snapshot_index": 3502,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.6226356804942784,
+          "residual_m": 6.028582201266868e-13,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            -0.6350397185091323,
+            1.8769715919793115,
+            -0.8976227035600107,
+            -1.5773443805957603,
+            -1.261647789074318,
+            2.8797281996448936
+          ]
+        },
+        {
+          "snapshot_index": 3637,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.497585064696966,
+          "residual_m": 1.2688392910841148e-09,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            0.8366534990233112,
+            1.1545759184665467,
+            -0.9137681542446562,
+            0.12882158691380222,
+            -0.5199834345228013,
+            0.34246459774820043
+          ]
+        },
+        {
+          "snapshot_index": 3772,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.631106625534678,
+          "residual_m": 4.054354160428333e-09,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            -0.27670652492688996,
+            2.5383851067452277,
+            -1.1727158392195842,
+            -2.2145371673391057,
+            -1.3385598174314501,
+            2.688938580165992
+          ]
+        },
+        {
+          "snapshot_index": 3907,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.5896537620027893,
+          "residual_m": 9.137081802499543e-13,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            -0.8476937329904312,
+            1.7646138117918115,
+            -0.9319297240605331,
+            -2.3357334086264174,
+            -1.0281640130783936,
+            1.3634415995985363
+          ]
+        },
+        {
+          "snapshot_index": 4041,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.5972881859274461,
+          "residual_m": 3.171527743151147e-09,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            -0.6504583943934683,
+            2.441373550445787,
+            -1.7726279436771928,
+            1.086923708683938,
+            -0.7321578002584048,
+            2.6515174088284987
+          ]
+        },
+        {
+          "snapshot_index": 4176,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.6586686939221216,
+          "residual_m": 2.7773193879887026e-11,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            0.6024048431842334,
+            2.269150994157197,
+            -1.1473704301020584,
+            -1.2038777475636935,
+            -1.172574049074761,
+            2.002202398714088
+          ]
+        },
+        {
+          "snapshot_index": 4311,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.606076400949737,
+          "residual_m": 1.0790760550623393e-09,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            0.3575012526192007,
+            2.1593085238379572,
+            -0.9947009794490808,
+            -2.21981779852562,
+            -1.307467751464101,
+            -2.5937009167442007
+          ]
+        },
+        {
+          "snapshot_index": 4445,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.6173937036578087,
+          "residual_m": 1.132192047365816e-09,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            0.016500587181247365,
+            2.514666077770391,
+            -1.8816922527732878,
+            2.2201559136225884,
+            -0.8212410568469349,
+            2.4655060135086044
+          ]
+        },
+        {
+          "snapshot_index": 4580,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.4732133827016282,
+          "residual_m": 2.114340579395663e-09,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            -0.4252659234088235,
+            1.726882802963261,
+            -0.78594242082823,
+            2.127980217717782,
+            0.24954138918620322,
+            -2.6496409140391886
+          ]
+        },
+        {
+          "snapshot_index": 4715,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.45259796669058744,
+          "residual_m": 1.0013796202868613e-09,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            -0.23740917549021717,
+            1.4881394782740385,
+            -1.191887880433096,
+            2.5710391319766708,
+            -1.1982851684772677,
+            -2.131958516775542
+          ]
+        },
+        {
+          "snapshot_index": 4850,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.44447326518351943,
+          "residual_m": 5.237631304991098e-11,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            -0.08633692902288577,
+            1.0485251879755282,
+            -0.6315538194344669,
+            -1.208225010114992,
+            -0.191173633338306,
+            2.0493594938509285
+          ]
+        },
+        {
+          "snapshot_index": 4984,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.5453891819408595,
+          "residual_m": 4.907578453787822e-12,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            0.24372333395173582,
+            1.208646866957175,
+            -0.9170926593649362,
+            0.9528622853997195,
+            0.22003496753108798,
+            0.40784412207240345
+          ]
+        },
+        {
+          "snapshot_index": 5119,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.610693460466029,
+          "residual_m": 9.906208006370237e-09,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            -0.035094741291067925,
+            2.0809520124061436,
+            -0.9930219443718667,
+            -2.1781691736336057,
+            -1.180005168615637,
+            -0.9607708454132079
+          ]
+        },
+        {
+          "snapshot_index": 5254,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.6411966695827699,
+          "residual_m": 1.1497908077442866e-09,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            1.133563169465367,
+            2.0936202733559073,
+            -1.1567704882199252,
+            -0.8064043414125633,
+            -1.306035608184095,
+            2.4288170337677
+          ]
+        },
+        {
+          "snapshot_index": 5389,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.5653290305454243,
+          "residual_m": 3.923649795700967e-12,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            0.2970098544856658,
+            1.0974997154654424,
+            -1.0653056566000454,
+            -0.04494882295937588,
+            -0.7026659947419568,
+            -1.5033928041163076
+          ]
+        },
+        {
+          "snapshot_index": 5523,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.5118057554882833,
+          "residual_m": 1.5276303893684663e-09,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            -0.04270711227520277,
+            1.4259398150103741,
+            -0.9988365374262531,
+            0.8932340439819925,
+            -0.13198789876626954,
+            2.418879985809326
+          ]
+        },
+        {
+          "snapshot_index": 5658,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.5846901757320629,
+          "residual_m": 1.9243925253647136e-09,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            0.9272454864594492,
+            1.6159267927218814,
+            -1.2638369516096846,
+            1.109073056221345,
+            -0.18762168048687003,
+            2.4757328033447266
+          ]
+        },
+        {
+          "snapshot_index": 5793,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.39353505871040645,
+          "residual_m": 2.4307854315417245e-10,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            -0.6462358131587667,
+            1.2576346105496927,
+            -0.18025026084268636,
+            -2.2011882296783933,
+            -1.2929547508088475,
+            -1.5927899487006838
+          ]
+        },
+        {
+          "snapshot_index": 5927,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.42586226936107247,
+          "residual_m": 1.506739389542505e-10,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            -0.7416087949245036,
+            1.197647769318807,
+            -0.6041846345390037,
+            1.1348078321525166,
+            0.19638084286760452,
+            -1.4096051985172318
+          ]
+        },
+        {
+          "snapshot_index": 6062,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.6266531297132493,
+          "residual_m": 8.389855257678279e-10,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            0.39211919934705824,
+            1.326091268243983,
+            -1.0962275408853221,
+            0.977379263503102,
+            0.40116715585188273,
+            -1.4676425590780173
+          ]
+        },
+        {
+          "snapshot_index": 6197,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.5736616656145735,
+          "residual_m": 1.9043396922964467e-09,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            0.28838657563110615,
+            1.8991958617210902,
+            -0.8294953209163999,
+            -1.2231544222733859,
+            -0.965456992553777,
+            1.7420427488419825
+          ]
+        },
+        {
+          "snapshot_index": 6332,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.6017169661638796,
+          "residual_m": 1.8446343400878941e-09,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            -0.37494140700215584,
+            1.708681221928891,
+            -0.9350319590239662,
+            -2.295151496983514,
+            -1.12832127826396,
+            -0.4747213767485503
+          ]
+        },
+        {
+          "snapshot_index": 6466,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.4335627817671138,
+          "residual_m": 1.7765207739129914e-09,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            0.9472596490960715,
+            1.7435735237644179,
+            -0.26245294185420626,
+            -1.2748423251426764,
+            -1.5523474150513707,
+            2.8070934163584838
+          ]
+        },
+        {
+          "snapshot_index": 6601,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.5857706407306401,
+          "residual_m": 2.3192243509465136e-11,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            -1.1866456097053466,
+            1.9924146301938532,
+            -0.9022622960799975,
+            -2.173093821528758,
+            -1.1051609311193196,
+            1.4262702761819503
+          ]
+        },
+        {
+          "snapshot_index": 6736,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.5298318212680181,
+          "residual_m": 2.031133259270742e-12,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            -0.8738735186021224,
+            1.9090108390480844,
+            -0.690830087736063,
+            -2.1981749320412693,
+            -1.2588713534135239,
+            -2.879799632991744
+          ]
+        },
+        {
+          "snapshot_index": 6871,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.4875395623664875,
+          "residual_m": 3.106670959623826e-09,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            0.5149054307193255,
+            1.5853370675832827,
+            -0.6318178173149128,
+            -1.6009383222783369,
+            -0.6151548185898355,
+            0.9161971620877564
+          ]
+        },
+        {
+          "snapshot_index": 7005,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.5132070381361875,
+          "residual_m": 1.0631943969848437e-10,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            0.24928358034872167,
+            2.3866699381372283,
+            -2.142980837165189,
+            1.151848281392948,
+            -1.5717435187637916,
+            2.8621485392629715
+          ]
+        },
+        {
+          "snapshot_index": 7140,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.5440690927402851,
+          "residual_m": 3.387880769641039e-09,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            -0.6204941997694631,
+            2.15884671515928,
+            -0.8251506032991341,
+            -2.0428551433470328,
+            -0.8901890127043756,
+            -2.878338045253943
+          ]
+        },
+        {
+          "snapshot_index": 7275,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.54338046866893,
+          "residual_m": 4.344649266606575e-09,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            -0.004294922782717985,
+            1.4923423132166675,
+            -0.6978003567506936,
+            -1.6461544138733517,
+            -0.8201195601301806,
+            2.3428750038146973
+          ]
+        },
+        {
+          "snapshot_index": 7409,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.5290557936321209,
+          "residual_m": 1.37530947315961e-09,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            -0.469633388149967,
+            1.8780994657454733,
+            -1.2847272008406343,
+            -2.10387296301154,
+            0.4570232870628623,
+            2.68480971484958
+          ]
+        },
+        {
+          "snapshot_index": 7544,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.4847261206263611,
+          "residual_m": 6.923649286937295e-10,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            0.2546606214273482,
+            0.8701703293375884,
+            -0.5932207667723776,
+            -2.2383675086151693,
+            -0.5877246086701725,
+            2.8163700479874185
+          ]
+        },
+        {
+          "snapshot_index": 7679,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.6685384036906807,
+          "residual_m": 4.9162201944267866e-12,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            0.4551257798681442,
+            2.3439775368404137,
+            -1.1597180400490916,
+            -1.6326060881267783,
+            -1.4139918597741807,
+            2.75137831078138
+          ]
+        },
+        {
+          "snapshot_index": 7814,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.5730170704876817,
+          "residual_m": 3.511122338244932e-10,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            0.1287151715182944,
+            1.0653318865416965,
+            -0.8897880544330272,
+            0.949564529389011,
+            0.4687916337159069,
+            1.5810582539419527
+          ]
+        },
+        {
+          "snapshot_index": 7948,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.5088011048089484,
+          "residual_m": 6.582465289094287e-10,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            -0.1857099036340947,
+            1.1115954680287552,
+            -0.514584912427368,
+            -1.4851784093552296,
+            -0.9445572190476741,
+            -1.151340167723757
+          ]
+        },
+        {
+          "snapshot_index": 8083,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.5203441144010793,
+          "residual_m": 1.0447785079435317e-10,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            0.2749981723646823,
+            1.4459846005783763,
+            -0.9992869724635292,
+            0.6965118726665066,
+            -0.08649535174249534,
+            2.090518642773908
+          ]
+        },
+        {
+          "snapshot_index": 8218,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.6813928886632262,
+          "residual_m": 3.474297990571129e-09,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            -0.6730260361450882,
+            2.6149074398461947,
+            -1.514939481526631,
+            -0.8030656565327047,
+            -1.5010807159037514,
+            1.6642428986723268
+          ]
+        },
+        {
+          "snapshot_index": 8353,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.5808706828739955,
+          "residual_m": 1.0814765897568459e-09,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            -0.8933371717871862,
+            1.4297965301731095,
+            -0.8392165037279243,
+            -1.9404176528848487,
+            -0.7420842734685569,
+            1.425784707069397
+          ]
+        },
+        {
+          "snapshot_index": 8487,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.5504201076015062,
+          "residual_m": 1.4781481965708441e-09,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            0.06882569496833409,
+            2.0334103133380297,
+            -1.1304533935061034,
+            0.3685872431001168,
+            0.08364446756288058,
+            1.0472534702248144
+          ]
+        },
+        {
+          "snapshot_index": 8622,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.42967158917631276,
+          "residual_m": 3.310940568744332e-10,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            -1.045365430256568,
+            0.94247539654999,
+            -0.5845272125892192,
+            0.5910413906877466,
+            0.30664046568171266,
+            1.8140489983784398
+          ]
+        },
+        {
+          "snapshot_index": 8757,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.5761114413528863,
+          "residual_m": 3.031616102406973e-09,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            0.23161164800562667,
+            2.1355081323007497,
+            -0.9735315573089339,
+            0.8643823315430916,
+            0.8521555423402433,
+            2.1673287988191423
+          ]
+        },
+        {
+          "snapshot_index": 8891,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.4909969949408292,
+          "residual_m": 1.5171240628605282e-09,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            -0.034792612199409635,
+            1.2797054095531073,
+            -0.483273993927722,
+            -1.1669261708945242,
+            -1.0485149570500718,
+            2.879222159628371
+          ]
+        },
+        {
+          "snapshot_index": 9026,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.5068210909971975,
+          "residual_m": 2.9085426510241873e-09,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            1.0638169809008076,
+            1.934536280680266,
+            -0.687752878966442,
+            -0.9019518291221055,
+            -1.007859953282547,
+            1.7854384764466202
+          ]
+        },
+        {
+          "snapshot_index": 9161,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.6363333494434825,
+          "residual_m": 1.1601803065150679e-10,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            0.8761088566433033,
+            2.688302205414464,
+            -1.1606264198672251,
+            -1.9359693881952647,
+            -1.520293050930097,
+            1.7856641108355666
+          ]
+        },
+        {
+          "snapshot_index": 9296,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.47297346632464793,
+          "residual_m": 5.21630414122275e-10,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            0.7612081208151463,
+            1.2052408354457336,
+            -0.4061342075215407,
+            -2.029624326828429,
+            -1.1457095569958664,
+            2.816070264914145
+          ]
+        },
+        {
+          "snapshot_index": 9430,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.6227926758866187,
+          "residual_m": 1.2615741560827282e-09,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            1.065872464957614,
+            1.5559294014400076,
+            -1.3556063280392971,
+            -0.24410619466989664,
+            -1.4827098105140046,
+            2.562810740790664
+          ]
+        },
+        {
+          "snapshot_index": 9565,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.5108148202728396,
+          "residual_m": 1.3659437579867888e-10,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            -0.888729253519577,
+            1.5766732288214085,
+            -0.7675442831297753,
+            0.6170294938684933,
+            0.7783644202177803,
+            1.673327111031054
+          ]
+        },
+        {
+          "snapshot_index": 9700,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.4131611581852808,
+          "residual_m": 5.2340602300733035e-09,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            0.9623526683862323,
+            0.8006343474247456,
+            -0.3956037507771948,
+            -1.5525844693901172,
+            -0.4669331299627261,
+            2.3567538261413574
+          ]
+        },
+        {
+          "snapshot_index": 9835,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.5160898522633589,
+          "residual_m": 2.2978206926238126e-09,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            1.1187180102459116,
+            2.2483447186337098,
+            -1.1681370011578258,
+            0.00014546023572119672,
+            -1.2110369703971937,
+            2.0120988864928484
+          ]
+        },
+        {
+          "snapshot_index": 9969,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.5290183417282411,
+          "residual_m": 1.9566129440439493e-09,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            -0.541994925904988,
+            1.310064273588957,
+            -0.7239070511652486,
+            -2.5907977537133604,
+            -1.3595970340164951,
+            -2.165719747543335
+          ]
+        },
+        {
+          "snapshot_index": 10104,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.5768359748384077,
+          "residual_m": 5.539612397151949e-14,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            -0.10146281747090341,
+            1.7786218585908538,
+            -1.0012257872008015,
+            -1.217796864413136,
+            -0.3963561195435854,
+            0.5233718830766436
+          ]
+        },
+        {
+          "snapshot_index": 10239,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.5886073304867234,
+          "residual_m": 2.9285787937052983e-12,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            0.5974857399829154,
+            1.7579263907419262,
+            -1.0539415178000566,
+            -0.5916609157659535,
+            -0.6556055173035421,
+            0.08749551746280688
+          ]
+        },
+        {
+          "snapshot_index": 10373,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.6622182786075409,
+          "residual_m": 1.332080384032593e-11,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            0.16791620187716547,
+            1.9501594307081704,
+            -1.4080611816428295,
+            0.39606163363222663,
+            0.3125675145393753,
+            0.42216737344356275
+          ]
+        },
+        {
+          "snapshot_index": 10508,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.5857714240371453,
+          "residual_m": 2.9282512707467015e-09,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            -0.22414808592367552,
+            2.206729887950096,
+            -0.9786030350379191,
+            -2.3036622506737436,
+            -1.1210588760841602,
+            -2.8751626277960285
+          ]
+        },
+        {
+          "snapshot_index": 10643,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.6679171846982881,
+          "residual_m": 5.714328582334881e-12,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            0.08578532405935993,
+            2.6590612129802356,
+            -1.3337424534067388,
+            -1.972458769063162,
+            -1.6303116956519514,
+            -2.726556738306818
+          ]
+        },
+        {
+          "snapshot_index": 10778,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.5596073910343873,
+          "residual_m": 1.9081645185020967e-09,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            0.7479877406293916,
+            1.0501470730377882,
+            -0.9359303194453396,
+            0.4820440319096039,
+            0.43009557993092773,
+            2.805869294857916
+          ]
+        },
+        {
+          "snapshot_index": 10912,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.5406118062799365,
+          "residual_m": 1.84625377197909e-09,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            -0.3495289123270929,
+            1.7968834427089568,
+            -0.6799091173146307,
+            -2.148792416323129,
+            -1.3399693225679712,
+            2.405233463331108
+          ]
+        },
+        {
+          "snapshot_index": 11047,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.3846957426508823,
+          "residual_m": 1.2077291054097585e-11,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            0.5346566992888934,
+            0.6062905965691056,
+            -0.5109370007756852,
+            -0.8243643641268045,
+            -0.017350651550937773,
+            2.213450163554236
+          ]
+        },
+        {
+          "snapshot_index": 11182,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.44559777001381307,
+          "residual_m": 4.3122804468161056e-14,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            0.5914832292999431,
+            1.091295667374533,
+            -0.7034977277677612,
+            0.24861216715369316,
+            0.19635481533564286,
+            -2.443739070433596
+          ]
+        },
+        {
+          "snapshot_index": 11317,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.6082177731187972,
+          "residual_m": 7.491764624079809e-10,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            -0.6631403907046587,
+            1.5285887572111072,
+            -0.8262666318942128,
+            -1.519847124618362,
+            -1.068534153744819,
+            1.4469657540252583
+          ]
+        },
+        {
+          "snapshot_index": 11451,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.4459356225118969,
+          "residual_m": 2.0475907766017112e-10,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            0.4487666598344121,
+            1.3181008189198953,
+            -0.8251870434457613,
+            0.9826564413591345,
+            -0.15301766421994606,
+            -0.6568452152434291
+          ]
+        },
+        {
+          "snapshot_index": 11586,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.4739272021628329,
+          "residual_m": 8.710653952843633e-11,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            0.004426882026160751,
+            1.823584250474704,
+            -0.9492925455835888,
+            0.21478065448329334,
+            -0.362304884530631,
+            0.8575846042421718
+          ]
+        },
+        {
+          "snapshot_index": 11721,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.6309908395643175,
+          "residual_m": 1.4654163665881722e-09,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            -0.43716487779178115,
+            2.23168620864965,
+            -2.153264372448395,
+            1.1312626636820866,
+            -1.1038038751641313,
+            0.6221539892849617
+          ]
+        },
+        {
+          "snapshot_index": 11855,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.5268340395851439,
+          "residual_m": 8.002337250369744e-10,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            -1.0907149545675714,
+            1.3554669823937548,
+            -0.6044171289696102,
+            -2.0464993407404397,
+            -1.0533060682874917,
+            2.1411126542401924
+          ]
+        },
+        {
+          "snapshot_index": 11990,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.5316414282327725,
+          "residual_m": 2.97252718577221e-10,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            0.628267321276443,
+            2.1853690531066845,
+            -1.669827227019856,
+            2.2538935829531743,
+            -1.064565296504951,
+            2.865999727457413
+          ]
+        },
+        {
+          "snapshot_index": 12125,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.5434020665017499,
+          "residual_m": 9.931576378422548e-14,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            -0.5628970161934816,
+            1.5591144652292528,
+            -1.0222167065306325,
+            1.5241224834776952,
+            0.05181708504741994,
+            -0.2650377000990459
+          ]
+        },
+        {
+          "snapshot_index": 12260,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.6003952474073883,
+          "residual_m": 2.057302604484934e-09,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            0.28108106817685363,
+            1.2133326356160516,
+            -0.9036756039380294,
+            -2.339495852624643,
+            -0.9251031054368483,
+            -0.4191485578301264
+          ]
+        },
+        {
+          "snapshot_index": 12394,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.5910992169399369,
+          "residual_m": 1.9903629967999557e-09,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            0.46989829174371606,
+            1.891013331877996,
+            -1.3108214603682866,
+            2.4696212818244785,
+            -0.21771009571278988,
+            -2.7915123331533356
+          ]
+        },
+        {
+          "snapshot_index": 12529,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.39758014090464305,
+          "residual_m": 2.878488774519602e-09,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            -0.8230885128570925,
+            0.9012027531680074,
+            -0.3277799995197048,
+            -2.8414684231828793,
+            -1.4553433222862888,
+            2.875354805278996
+          ]
+        },
+        {
+          "snapshot_index": 12664,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.5768531913836596,
+          "residual_m": 2.1740262807512406e-12,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            0.34924039602764123,
+            1.4740478868892994,
+            -0.7102342002550355,
+            -1.620570881439964,
+            -1.124528526286329,
+            0.9219094264400282
+          ]
+        },
+        {
+          "snapshot_index": 12799,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.39989630893767336,
+          "residual_m": 5.190084795049337e-09,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            -1.3313032444005344,
+            1.004213325110757,
+            -0.3193332407868871,
+            -2.4793057735378725,
+            -0.9673240855575777,
+            -2.876931589649454
+          ]
+        }
+      ]
+    },
+    "compensated_target": {
+      "outside_chain_bound_count": 112,
+      "outside_chain_bound_fraction": 0.00875,
+      "distance_p95_m": 0.8428400313316262,
+      "ik_sample_count": 96,
+      "ik_outside_bound": 0,
+      "ik_found_position_solution": 95,
+      "ik_unresolved_inside_bound": 1,
+      "ik_samples": [
+        {
+          "snapshot_index": 0,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.7156629805447188,
+          "residual_m": 5.88521694773781e-12,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            0.023856872973216557,
+            0.9975185152018756,
+            -1.50278584134315,
+            0.0138564753537764,
+            -0.011087304267395745,
+            0.2187974056341618
+          ]
+        },
+        {
+          "snapshot_index": 134,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.6815055149976733,
+          "residual_m": 3.067482440331919e-14,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            -0.45153767978942366,
+            1.300133424799611,
+            -1.2084796621634877,
+            -2.3487744603599268,
+            -1.447494169713821,
+            1.8000954019993425
+          ]
+        },
+        {
+          "snapshot_index": 269,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.6836827077481329,
+          "residual_m": 1.2883161644017413e-09,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            0.3170527292082208,
+            1.127726025722213,
+            -1.0121424308145457,
+            -1.5817993950569993,
+            -1.1810720696265489,
+            1.4451850652694702
+          ]
+        },
+        {
+          "snapshot_index": 404,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.5607351097735582,
+          "residual_m": 5.0654583514207355e-09,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            -1.4333514082598227,
+            1.047231188676226,
+            -0.6822619793490723,
+            -2.319085065055795,
+            -1.6451762150750107,
+            -2.039784173956299
+          ]
+        },
+        {
+          "snapshot_index": 538,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.5804944540802738,
+          "residual_m": 1.7338945198229853e-11,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            0.3934812518863499,
+            1.360627434735778,
+            -0.9475842657094867,
+            1.2795838983700083,
+            0.3873603194304649,
+            0.621955471274053
+          ]
+        },
+        {
+          "snapshot_index": 673,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.48165867023919584,
+          "residual_m": 5.51371351203122e-10,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            -1.6148281956528634,
+            0.8590948712110289,
+            -0.4394154885921602,
+            -2.4873766504810133,
+            -1.64823991887688,
+            0.22117699917139966
+          ]
+        },
+        {
+          "snapshot_index": 808,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.3095511606523175,
+          "residual_m": 1.651696610185185e-11,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            -1.6997167274681395,
+            0.3503785257906028,
+            -0.0019316587666183623,
+            -2.64224216829611,
+            -1.0802935162782268,
+            2.8797753321015924
+          ]
+        },
+        {
+          "snapshot_index": 943,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.36522341181367163,
+          "residual_m": 3.752127750224545e-12,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            -0.6981663455932621,
+            0.22060113546765708,
+            -0.004766833853419038,
+            -1.9021870839558774,
+            -1.1702091948846807,
+            -2.8465067209659787
+          ]
+        },
+        {
+          "snapshot_index": 1077,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.4879273137770223,
+          "residual_m": 1.0890661160371424e-13,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            0.2048433050509176,
+            1.979398105195203,
+            -1.1499183646770759,
+            1.1808979960003625,
+            -0.3572801970205613,
+            2.415560575992813
+          ]
+        },
+        {
+          "snapshot_index": 1212,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.29380500980251456,
+          "residual_m": 1.6458619904200222e-09,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            0.9770657709236962,
+            2.0479168706615036,
+            -0.18010874108976974,
+            -2.147724628383038,
+            -0.7932072700510806,
+            1.27133851538826
+          ]
+        },
+        {
+          "snapshot_index": 1347,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.8128744241257106,
+          "residual_m": 4.32719105186476e-09,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            0.1543621721771485,
+            3.0823419824354072,
+            -2.271999949000946,
+            -2.071127092824011,
+            -0.9904374757971558,
+            2.743361006049881
+          ]
+        },
+        {
+          "snapshot_index": 1481,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.7928376184766232,
+          "residual_m": 4.663175561296425e-09,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            -0.9987443735652014,
+            2.810567745247478,
+            -3.057106218077788,
+            -2.3180147390667316,
+            -1.2351939285908118,
+            0.6111987829208374
+          ]
+        },
+        {
+          "snapshot_index": 1616,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.28567680213277225,
+          "residual_m": 5.965162423687201e-10,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            -0.12428284306120509,
+            0.21840198031461874,
+            -4.706303549034314e-06,
+            -2.8539150456980638,
+            -1.0151227827740814,
+            1.09136793779573
+          ]
+        },
+        {
+          "snapshot_index": 1751,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.42725829779980334,
+          "residual_m": 3.504782078578782e-11,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            -0.8684836361564063,
+            2.392326282635191,
+            -0.5544732413407929,
+            -2.3667750147775393,
+            -1.0488011885962063,
+            -1.6560695213432763
+          ]
+        },
+        {
+          "snapshot_index": 1886,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.8566901720349138,
+          "residual_m": 9.495935100686634e-10,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            -0.5283679430084163,
+            2.4673117752815865,
+            -2.331901510414862,
+            0.9950776395164478,
+            0.18382688326294783,
+            2.6162525111924055
+          ]
+        },
+        {
+          "snapshot_index": 2020,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.5734628301827733,
+          "residual_m": 2.325244826584789e-09,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            -0.037780604229973196,
+            1.0723787004715335,
+            -0.829869223347113,
+            -2.0852653719482137,
+            -0.6167144255701199,
+            2.841543252040363
+          ]
+        },
+        {
+          "snapshot_index": 2155,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.40507437999161844,
+          "residual_m": 6.242761550791205e-11,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            -0.608387454035272,
+            1.213128437966683,
+            -0.38934593396012296,
+            -2.5386636194382683,
+            -0.9180271959861841,
+            2.879787330185611
+          ]
+        },
+        {
+          "snapshot_index": 2290,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.4892808009962695,
+          "residual_m": 3.8033843215117395e-10,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            0.19439361889350307,
+            1.2514138249610156,
+            -0.9289997521439698,
+            1.9951488552108412,
+            -0.1425132746443974,
+            0.3245170597067954
+          ]
+        },
+        {
+          "snapshot_index": 2425,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.5142346384193164,
+          "residual_m": 2.0965193276065358e-09,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            0.7092347711186985,
+            1.4611501561508493,
+            -0.8970150337759464,
+            -1.9242029180679334,
+            -0.1250042197803871,
+            -0.5298276126235479
+          ]
+        },
+        {
+          "snapshot_index": 2559,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.3472706621494061,
+          "residual_m": 2.6679663359628558e-09,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            -0.31728825863447374,
+            1.153373709651749,
+            -0.5850464648864564,
+            1.5031283627685925,
+            -0.1830248904254229,
+            -2.8773816449345686
+          ]
+        },
+        {
+          "snapshot_index": 2694,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.5595701865884309,
+          "residual_m": 2.9280823630369786e-09,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            -0.18123301007753703,
+            2.1895357600176193,
+            -1.268295119869061,
+            1.5655243313853524,
+            -0.13133523739734101,
+            -2.87772461063
+          ]
+        },
+        {
+          "snapshot_index": 2829,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.559849327719295,
+          "residual_m": 2.4772712790937113e-11,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            -0.37557431785259926,
+            1.4965697277817709,
+            -1.0833393006356422,
+            2.471752412716193,
+            0.001410711503297528,
+            1.6428683437337352
+          ]
+        },
+        {
+          "snapshot_index": 2963,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.4369298383995251,
+          "residual_m": 1.8572162292072e-09,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            0.2457438043909167,
+            2.035081811911366,
+            -0.5351182009812506,
+            -2.4806011606743614,
+            -1.138369714063234,
+            -2.1207809448242188
+          ]
+        },
+        {
+          "snapshot_index": 3098,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.6879041603466047,
+          "residual_m": 1.6547965612683038e-10,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            0.4499835998021615,
+            2.1483585993346597,
+            -1.4199380981404117,
+            1.6955661863448224,
+            0.33555237971467927,
+            1.1703771301317039
+          ]
+        },
+        {
+          "snapshot_index": 3233,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.5470253363451404,
+          "residual_m": 4.645939419528038e-09,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            -1.9889916725770562,
+            0.38422501482652455,
+            -0.977386341916788,
+            -2.8775869474723494,
+            -1.6336063836959074,
+            2.7884852736468417
+          ]
+        },
+        {
+          "snapshot_index": 3368,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.8140197873191984,
+          "residual_m": 1.6795227913327441e-07,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            0.5364715137218263,
+            2.1246876288347014,
+            -1.8463240225482977,
+            1.2832195930922528,
+            0.5287809089520571,
+            -2.804314971657455
+          ]
+        },
+        {
+          "snapshot_index": 3502,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.635134049079361,
+          "residual_m": 2.3385433931674686e-09,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            -0.6410557360608297,
+            1.9268477927165928,
+            -0.9504156710305377,
+            -1.6174069900657955,
+            -1.2584995125171619,
+            2.5325310559601135
+          ]
+        },
+        {
+          "snapshot_index": 3637,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.546869500646014,
+          "residual_m": 1.1705455585592085e-09,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            0.23631249363156404,
+            1.5537360126989872,
+            -0.8690122138019575,
+            1.646266327877679,
+            0.40304549656049293,
+            -1.0797882196394977
+          ]
+        },
+        {
+          "snapshot_index": 3772,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.7326919682550691,
+          "residual_m": 7.96702961761515e-12,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            -0.5322361975919744,
+            2.905983612291077,
+            -1.6190259125137367,
+            -1.8947339029186452,
+            -0.9256588202505807,
+            2.879794295932676
+          ]
+        },
+        {
+          "snapshot_index": 3907,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.5896537620027893,
+          "residual_m": 9.137081802499543e-13,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            -0.8476937329904312,
+            1.7646138117918115,
+            -0.9319297240605331,
+            -2.3357334086264174,
+            -1.0281640130783936,
+            1.3634415995985363
+          ]
+        },
+        {
+          "snapshot_index": 4041,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.5307932790887077,
+          "residual_m": 2.6220310060969024e-09,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            -1.0764516432957474,
+            2.6594467292695603,
+            -1.7321932342911293,
+            1.1639740567357135,
+            -0.9052453958100096,
+            2.766792310186755
+          ]
+        },
+        {
+          "snapshot_index": 4176,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.6586686939221216,
+          "residual_m": 2.7773193879887026e-11,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            0.6024048431842334,
+            2.269150994157197,
+            -1.1473704301020584,
+            -1.2038777475636935,
+            -1.172574049074761,
+            2.002202398714088
+          ]
+        },
+        {
+          "snapshot_index": 4311,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.606076400949737,
+          "residual_m": 1.0790760550623393e-09,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            0.3575012526192007,
+            2.1593085238379572,
+            -0.9947009794490808,
+            -2.21981779852562,
+            -1.307467751464101,
+            -2.5937009167442007
+          ]
+        },
+        {
+          "snapshot_index": 4445,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.36694939704047924,
+          "residual_m": 1.442813670213336e-09,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            0.02146205984967298,
+            2.150343261431352,
+            -1.5459327580416122,
+            2.042903978166172,
+            -1.6304260936001653,
+            2.4655046463012695
+          ]
+        },
+        {
+          "snapshot_index": 4580,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.7612153148490425,
+          "residual_m": 1.607731884230016e-09,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            -0.5553876950409363,
+            2.570933975513016,
+            -1.8327857670845666,
+            2.4504157170921705,
+            0.9257470030708018,
+            -0.19542449299527007
+          ]
+        },
+        {
+          "snapshot_index": 4715,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.24668799940172115,
+          "residual_m": 9.096303688436966e-10,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            -0.6352403428390175,
+            2.4161651999697074,
+            -1.123474440539355,
+            2.00555766212256,
+            -1.4492716432298878,
+            -1.3294269578995848
+          ]
+        },
+        {
+          "snapshot_index": 4850,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.4535749849169714,
+          "residual_m": 4.4027386955032466e-10,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            0.11090073947065539,
+            1.311925695727553,
+            -0.6792302840450691,
+            -1.2672976124633757,
+            -0.21044728679531555,
+            2.1826302923219267
+          ]
+        },
+        {
+          "snapshot_index": 4984,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.9132723381439959,
+          "residual_m": 0.005790103241675509,
+          "position_solution_within_1mm": false,
+          "joint_solution_rad": [
+            0.2777343554696965,
+            2.4444729009532082,
+            -2.833970430767381,
+            1.57473142863247,
+            0.2504295580828291,
+            1.1051822725123976
+          ]
+        },
+        {
+          "snapshot_index": 5119,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.5121153901465302,
+          "residual_m": 1.6201707364268223e-09,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            -0.5102741623817914,
+            1.354003121631125,
+            -0.7211171753479759,
+            -2.641602483125389,
+            -1.1220160009781506,
+            -2.8778825295825743
+          ]
+        },
+        {
+          "snapshot_index": 5254,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.6324262870860989,
+          "residual_m": 1.0394390122519438e-09,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            1.1901872551613428,
+            2.101101907484276,
+            -1.1228314973973679,
+            -0.8094938073826636,
+            -1.2790674194688527,
+            2.4288170337677
+          ]
+        },
+        {
+          "snapshot_index": 5389,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.7954807583379179,
+          "residual_m": 5.2300277514754955e-12,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            -0.4980111765282874,
+            2.056563550745748,
+            -1.709003915773853,
+            1.528939353844853,
+            0.6042148003474089,
+            -1.4054671558339322
+          ]
+        },
+        {
+          "snapshot_index": 5523,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.5858895227766148,
+          "residual_m": 1.1324735302052989e-12,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            -0.310610702272436,
+            1.072350160981819,
+            -1.1394625991024538,
+            0.31115108921454965,
+            -0.2072906624270498,
+            2.404436768072997
+          ]
+        },
+        {
+          "snapshot_index": 5658,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.8257390367712634,
+          "residual_m": 1.8614664505979905e-10,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            1.091841722742226,
+            2.1336906074011517,
+            -2.0282581146094576,
+            2.225522220887337,
+            0.2516404601391833,
+            -2.7879427311069924
+          ]
+        },
+        {
+          "snapshot_index": 5793,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.6442270295486656,
+          "residual_m": 7.159364609126766e-10,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            -0.48187052218552223,
+            1.7597930488928213,
+            -0.9438923082139696,
+            -1.647266465525119,
+            -1.5973715225368594,
+            1.7431912422180176
+          ]
+        },
+        {
+          "snapshot_index": 5927,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.8730041561971729,
+          "residual_m": 2.0745158498447513e-09,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            -0.1767464675264933,
+            2.20117849278861,
+            -2.203719688685756,
+            1.6010479445310206,
+            0.8496736455900714,
+            -1.2484484291981743
+          ]
+        },
+        {
+          "snapshot_index": 6062,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.7220277863176288,
+          "residual_m": 2.405337721249295e-14,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            0.16397648165943207,
+            1.946930649545139,
+            -1.6892189751793663,
+            1.0642125739001362,
+            -0.062441729694138685,
+            -1.2915975153681443
+          ]
+        },
+        {
+          "snapshot_index": 6197,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.5670176410713254,
+          "residual_m": 3.194657936729123e-11,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            0.19439694581696135,
+            1.9501364619084964,
+            -0.8039818886442526,
+            -1.2060840457620219,
+            -1.0372036822521813,
+            1.7496126497670192
+          ]
+        },
+        {
+          "snapshot_index": 6332,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.5217939638700141,
+          "residual_m": 1.1648008097885586e-09,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            -0.956601290122427,
+            1.8150913114866754,
+            -0.7497749054264561,
+            -2.5639121507208693,
+            -1.5646325724965242,
+            -0.8881164193153381
+          ]
+        },
+        {
+          "snapshot_index": 6466,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.6570673100946884,
+          "residual_m": 1.5622715832796347e-14,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            0.6896384653452042,
+            2.4475948866621478,
+            -1.174044561503758,
+            -1.3767270927969422,
+            -1.6316674305720342,
+            -2.8407968414862403
+          ]
+        },
+        {
+          "snapshot_index": 6601,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.5857706407306401,
+          "residual_m": 2.3192243509465136e-11,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            -1.1866456097053466,
+            1.9924146301938532,
+            -0.9022622960799975,
+            -2.173093821528758,
+            -1.1051609311193196,
+            1.4262702761819503
+          ]
+        },
+        {
+          "snapshot_index": 6736,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.4819561768661887,
+          "residual_m": 1.948066814662794e-09,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            -1.124840079016016,
+            1.7595632900136033,
+            -0.7267190475729272,
+            -2.4785702078607814,
+            -0.6765002029691183,
+            -1.63680141337545
+          ]
+        },
+        {
+          "snapshot_index": 6871,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.4875395623664875,
+          "residual_m": 3.106670959623826e-09,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            0.5149054307193255,
+            1.5853370675832827,
+            -0.6318178173149128,
+            -1.6009383222783369,
+            -0.6151548185898355,
+            0.9161971620877564
+          ]
+        },
+        {
+          "snapshot_index": 7005,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.5229182637319252,
+          "residual_m": 6.242771715711522e-10,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            0.25777794318521463,
+            2.28489562171092,
+            -1.9607077618522102,
+            1.442130956189993,
+            -1.2764313750348752,
+            2.8027955127214192
+          ]
+        },
+        {
+          "snapshot_index": 7140,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.4733950143461091,
+          "residual_m": 3.6848792141900046e-09,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            -0.5791816302957054,
+            1.9859644039153306,
+            -0.6529791328308585,
+            -2.0705888778857164,
+            -0.7200126823841259,
+            -2.6152910287119084
+          ]
+        },
+        {
+          "snapshot_index": 7275,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.5556311846972704,
+          "residual_m": 3.4522019505739727e-09,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            0.009877668842100625,
+            1.392000388438428,
+            -0.7175600684724371,
+            -1.6439689315780084,
+            -0.8200073901576543,
+            2.3428750038146973
+          ]
+        },
+        {
+          "snapshot_index": 7409,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.6131204750144134,
+          "residual_m": 2.726044210067409e-09,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            -0.3926566481494458,
+            1.9814184524648162,
+            -1.4968261867305752,
+            -2.502692570694296,
+            0.48706229615967256,
+            2.7795898740103193
+          ]
+        },
+        {
+          "snapshot_index": 7544,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.4847261206263611,
+          "residual_m": 6.923649286937295e-10,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            0.2546606214273482,
+            0.8701703293375884,
+            -0.5932207667723776,
+            -2.2383675086151693,
+            -0.5877246086701725,
+            2.8163700479874185
+          ]
+        },
+        {
+          "snapshot_index": 7679,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.6685384036906807,
+          "residual_m": 4.9162201944267866e-12,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            0.4551257798681442,
+            2.3439775368404137,
+            -1.1597180400490916,
+            -1.6326060881267783,
+            -1.4139918597741807,
+            2.75137831078138
+          ]
+        },
+        {
+          "snapshot_index": 7814,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.7514624752739926,
+          "residual_m": 2.5180973909819654e-10,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            0.13949238678057685,
+            1.4274783967106741,
+            -1.4188710380546188,
+            1.1439199729636467,
+            0.703326498515977,
+            -2.027372504193902
+          ]
+        },
+        {
+          "snapshot_index": 7948,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.4322958548850782,
+          "residual_m": 2.4206471711123676e-10,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            -0.23097579862749876,
+            0.9887956298045312,
+            -0.5261925383870423,
+            -1.9164781958784571,
+            -0.345218699183515,
+            -2.87972985876848
+          ]
+        },
+        {
+          "snapshot_index": 8083,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.5836631038165937,
+          "residual_m": 6.987642617853637e-10,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            0.4690339054950707,
+            1.3549143141663986,
+            -1.1026405326048065,
+            0.8264133630531285,
+            0.07474910645375216,
+            2.056330442428589
+          ]
+        },
+        {
+          "snapshot_index": 8218,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.8305040389602596,
+          "residual_m": 1.2345762827051818e-08,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            -1.1316799871383183,
+            2.634024415903371,
+            -2.0694181939118694,
+            -1.3908015963420415,
+            -0.9385037607735894,
+            -0.8861053014317397
+          ]
+        },
+        {
+          "snapshot_index": 8353,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.5697378288436045,
+          "residual_m": 2.9456556417432905e-09,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            -0.8860427245670327,
+            1.4059877957569946,
+            -0.8085561155291022,
+            -1.9437628994388787,
+            -0.7280327678858044,
+            1.425784707069397
+          ]
+        },
+        {
+          "snapshot_index": 8487,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.6019197938821377,
+          "residual_m": 8.83436915191624e-10,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            0.3490558582823697,
+            1.8760310341610804,
+            -1.2381647332464676,
+            0.5350207341135748,
+            0.1017707325032043,
+            -0.5707999585570223
+          ]
+        },
+        {
+          "snapshot_index": 8622,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.48176423007017355,
+          "residual_m": 2.7634965800007512e-11,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            -0.8103816249941208,
+            0.9520324595044056,
+            -0.6724483053340541,
+            0.59049619321744,
+            0.5066418282105666,
+            1.0542029519038556
+          ]
+        },
+        {
+          "snapshot_index": 8757,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.4030522858550257,
+          "residual_m": 7.234565584562464e-09,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            -0.06028838049316969,
+            1.520719938070485,
+            -0.2606527752627894,
+            -2.549553220094964,
+            -1.5836970387089466,
+            2.861709330379812
+          ]
+        },
+        {
+          "snapshot_index": 8891,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.41325424642187875,
+          "residual_m": 1.7177880735544048e-11,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            0.11658224475472398,
+            0.4361517192084999,
+            -0.1453486751604502,
+            -1.2479763803811303,
+            -1.181988750245952,
+            2.8797521968310567
+          ]
+        },
+        {
+          "snapshot_index": 9026,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.5001173996675092,
+          "residual_m": 9.411044266918608e-10,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            1.058408609411156,
+            1.9002278151458725,
+            -0.6612819993704552,
+            -0.8886300153903955,
+            -1.0262170045876755,
+            1.7868156790913887
+          ]
+        },
+        {
+          "snapshot_index": 9161,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.7407649558517718,
+          "residual_m": 7.340309616191862e-09,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            0.7904024007743458,
+            2.8577743982206565,
+            -1.6123767990271902,
+            -1.5897406694152578,
+            -1.1246522635818006,
+            -1.0149237212255429
+          ]
+        },
+        {
+          "snapshot_index": 9296,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.47297346632464793,
+          "residual_m": 5.21630414122275e-10,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            0.7612081208151463,
+            1.2052408354457336,
+            -0.4061342075215407,
+            -2.029624326828429,
+            -1.1457095569958664,
+            2.816070264914145
+          ]
+        },
+        {
+          "snapshot_index": 9430,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.5631210647859984,
+          "residual_m": 3.7011569575099975e-09,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            0.8442221003686641,
+            1.486105246029191,
+            -1.2210355369899664,
+            -0.09421041428079555,
+            -1.5675305122391943,
+            2.5525381005935492
+          ]
+        },
+        {
+          "snapshot_index": 9565,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.5473243047042403,
+          "residual_m": 1.3492590570785216e-11,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            -0.4636842468485682,
+            1.1979394237239867,
+            -0.7861778190431788,
+            0.5551485878339861,
+            1.1934696241821094,
+            1.3550244014281052
+          ]
+        },
+        {
+          "snapshot_index": 9700,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.4285554324713124,
+          "residual_m": 1.5582491415279901e-09,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            1.0698618228052221,
+            0.8532904596061377,
+            -0.4232731813655108,
+            -1.5970403898668324,
+            -0.5103468495865233,
+            2.8795823282103257
+          ]
+        },
+        {
+          "snapshot_index": 9835,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.3329020143777966,
+          "residual_m": 1.409180607820282e-09,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            1.1743165295593045,
+            2.279076980833723,
+            -0.8425163964592505,
+            0.45691259071052326,
+            -1.1925068403165415,
+            2.011915922164917
+          ]
+        },
+        {
+          "snapshot_index": 9969,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.48885373498852147,
+          "residual_m": 3.5903559737924672e-09,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            -0.9065697148763233,
+            2.186280759801272,
+            -0.717568729435569,
+            -2.3795805429319024,
+            -0.9913575229267919,
+            -2.7616605098012963
+          ]
+        },
+        {
+          "snapshot_index": 10104,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.3895062343837482,
+          "residual_m": 1.2793120960389514e-09,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            -1.044567933178308,
+            2.6097264304468117,
+            -0.43453886314668366,
+            -2.622071616263371,
+            -1.593054317477714,
+            -2.8729822999470893
+          ]
+        },
+        {
+          "snapshot_index": 10239,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.7519002176177872,
+          "residual_m": 5.3639855838096407e-11,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            -0.46226071818612663,
+            2.3986472871619284,
+            -1.6628512786049072,
+            1.4371990286800238,
+            0.44602105154065913,
+            -1.1665535798476891
+          ]
+        },
+        {
+          "snapshot_index": 10373,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.6784152225310129,
+          "residual_m": 2.1296942783807202e-11,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            -0.27487834774234976,
+            1.6777308695557087,
+            -1.2354389027325712,
+            0.9776959172957247,
+            0.6578278478683453,
+            -1.0828688631839087
+          ]
+        },
+        {
+          "snapshot_index": 10508,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.6502884363127415,
+          "residual_m": 8.22006047847366e-13,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            -0.5811500520636501,
+            2.3599987648742116,
+            -1.1169395346992224,
+            -1.8088206969768732,
+            -1.1736897897597736,
+            -2.7519030741649133
+          ]
+        },
+        {
+          "snapshot_index": 10643,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.5775756429378386,
+          "residual_m": 9.22050553889618e-13,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            -0.2037121347630449,
+            2.4558939222723293,
+            -1.0391275961465483,
+            -2.41031808207239,
+            -1.6356964140529273,
+            -0.8687703162699019
+          ]
+        },
+        {
+          "snapshot_index": 10778,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.5211920487846582,
+          "residual_m": 4.5900285400877385e-09,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            0.11310762955604876,
+            0.9641349366265219,
+            -0.7299760039165549,
+            1.2037324410393988,
+            0.4144791813208891,
+            -0.776007695170744
+          ]
+        },
+        {
+          "snapshot_index": 10912,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.3677244276483066,
+          "residual_m": 1.5093061089096912e-09,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            -0.6761359121022059,
+            1.3583498928545115,
+            -0.14853140734014536,
+            -2.6454330845419576,
+            -1.5623773000274046,
+            2.6668176346130164
+          ]
+        },
+        {
+          "snapshot_index": 11047,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.5550506107959278,
+          "residual_m": 1.3576827443493554e-09,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            -0.5104869855113563,
+            1.0809307483709247,
+            -0.8918202084085808,
+            0.5210680186039276,
+            0.5769670978939995,
+            0.9777319989475061
+          ]
+        },
+        {
+          "snapshot_index": 11182,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.7201470000600573,
+          "residual_m": 7.381039884256048e-13,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            0.7306060976929777,
+            1.7230180492445515,
+            -1.5067516367743372,
+            1.1491633561267685,
+            0.2247347995919799,
+            -2.080590847082983
+          ]
+        },
+        {
+          "snapshot_index": 11317,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.6516986172487275,
+          "residual_m": 4.290050750015342e-12,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            -0.6696051957160123,
+            1.652124032437833,
+            -1.058518158576121,
+            -1.5018942686461412,
+            -0.7645042456655917,
+            1.6091840289579524
+          ]
+        },
+        {
+          "snapshot_index": 11451,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.3952659187905371,
+          "residual_m": 1.150226141275101e-12,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            1.1900407573804594,
+            1.0607421751982784,
+            -0.7460735506052806,
+            0.6674963155554074,
+            -0.45983045978700615,
+            -0.5462863217821748
+          ]
+        },
+        {
+          "snapshot_index": 11586,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.813592801661984,
+          "residual_m": 9.914496744795196e-12,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            -0.6862848374513338,
+            2.181169031260247,
+            -1.9298300543999587,
+            -1.2195427876385958,
+            -0.3270033040506687,
+            0.01694934954179289
+          ]
+        },
+        {
+          "snapshot_index": 11721,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.43927809739979373,
+          "residual_m": 8.224659864323636e-10,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            -0.5426503939209665,
+            2.6182727893591813,
+            -1.7881273509689672,
+            1.9834467773195326,
+            -1.4153811774453249,
+            2.0393869897482317
+          ]
+        },
+        {
+          "snapshot_index": 11855,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.5268340395851439,
+          "residual_m": 8.002337250369744e-10,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            -1.0907149545675714,
+            1.3554669823937548,
+            -0.6044171289696102,
+            -2.0464993407404397,
+            -1.0533060682874917,
+            2.1411126542401924
+          ]
+        },
+        {
+          "snapshot_index": 11990,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.5772412159265797,
+          "residual_m": 2.600221947785972e-09,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            1.106040835225979,
+            2.6047097374877852,
+            -1.6862987344370606,
+            2.5463130265074905,
+            -0.891581620758684,
+            2.7105696201324463
+          ]
+        },
+        {
+          "snapshot_index": 12125,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.7668948918201023,
+          "residual_m": 3.517896373659594e-14,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            -0.15751045589771942,
+            1.8822372793934767,
+            -1.5320947259211055,
+            1.2029866546710797,
+            0.7942327635472429,
+            0.48747583479691886
+          ]
+        },
+        {
+          "snapshot_index": 12260,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.6003952474073883,
+          "residual_m": 2.057302604484934e-09,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            0.28108106817685363,
+            1.2133326356160516,
+            -0.9036756039380294,
+            -2.339495852624643,
+            -0.9251031054368483,
+            -0.4191485578301264
+          ]
+        },
+        {
+          "snapshot_index": 12394,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.32842958385986243,
+          "residual_m": 4.3645607438595483e-10,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            1.1729461593198842,
+            1.5132381620096425,
+            -0.4104127515404171,
+            0.581914828147722,
+            0.30581146510378804,
+            -0.9664246785496177
+          ]
+        },
+        {
+          "snapshot_index": 12529,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.369767589670934,
+          "residual_m": 3.15461822788176e-09,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            -1.013560646996768,
+            0.9486048472799532,
+            -0.18966455193437434,
+            -2.8436382200529255,
+            -1.5878119378352786,
+            2.4078695642078043
+          ]
+        },
+        {
+          "snapshot_index": 12664,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.5768531913836596,
+          "residual_m": 2.1740262807512406e-12,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            0.34924039602764123,
+            1.4740478868892994,
+            -0.7102342002550355,
+            -1.620570881439964,
+            -1.124528526286329,
+            0.9219094264400282
+          ]
+        },
+        {
+          "snapshot_index": 12799,
+          "outside_chain_bound": false,
+          "distance_from_joint1_m": 0.39989630893767336,
+          "residual_m": 5.190084795049337e-09,
+          "position_solution_within_1mm": true,
+          "joint_solution_rad": [
+            -1.3313032444005344,
+            1.004213325110757,
+            -0.3193332407868871,
+            -2.4793057735378725,
+            -0.9673240855575777,
+            -2.876931589649454
+          ]
+        }
+      ]
+    }
+  }
+}

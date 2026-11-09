@@ -1,4 +1,4 @@
-"""Read-only evidence checks for the V3 A long-training start gate."""
+"""Read-only evidence checks for the V3 A/B long-training start gates."""
 
 import hashlib
 import json
@@ -10,13 +10,17 @@ from .v3_evaluation import validate_evaluation_manifest
 
 IDENTITY_FIELDS = ("official_commit", "source_manifest", "asset_manifest", "schema_sha256", "runtime")
 REQUIRED_STAGES = ("unit_tests", "gym_smoke", "training_resume", "capacity")
+B_REQUIRED_STAGES = ("unit_tests", "force_smoke", "contact_smoke", "zero_force_regression",
+                     "training_resume", "capacity", "evaluation_baseline")
 
 
-def validate_stage_artifacts(evidence: Dict[str, Any]) -> List[str]:
+def validate_stage_artifacts(evidence: Dict[str, Any], *,
+                             required_stages: tuple = REQUIRED_STAGES) -> List[str]:
     """Verify that each declared stage matches a hash-pinned JSON report.
 
     Args:
         evidence: A-start evidence containing stage records and absolute report paths.
+        required_stages: Explicit stage names; defaults to the unchanged A contract.
 
     Returns:
         Blocker messages for absent, unreadable, stale, or mismatched stage reports.
@@ -29,7 +33,7 @@ def validate_stage_artifacts(evidence: Dict[str, Any]) -> List[str]:
     if not isinstance(stages, dict):
         return ["缺少阶段报告：stages"]
 
-    for name in REQUIRED_STAGES:
+    for name in required_stages:
         stage = stages.get(name)
         artifact = stage.get("artifact") if isinstance(stage, dict) else None
         if not isinstance(artifact, dict):
@@ -56,6 +60,93 @@ def validate_stage_artifacts(evidence: Dict[str, Any]) -> List[str]:
         if report != {"stage": name, "result": stage_record}:
             blockers.append(f"阶段报告内容与证据字段不一致：{name}")
     return blockers
+
+
+def assess_b_start_gate(
+    evidence: Dict[str, Any], active_identity: Dict[str, Any], parent_metadata: Dict[str, Any],
+    force_manifest: Dict[str, Any], contact_manifest: Dict[str, Any],
+    zero_force_manifest: Dict[str, Any], *, formal_num_envs: int = 4096,
+) -> Dict[str, Any]:
+    """Require complete B engineering evidence before any formal Gym creation.
+
+    Args:
+        evidence: Schema-1 reports, exact parent digest and canonical manifest hashes.
+        active_identity: Recomputed formal B source, V6 asset, schema and runtime.
+        parent_metadata: Actual A8000 digest, stage, seed, count and asset/schema IDs.
+        force_manifest: Frozen 14-condition protocol with force range in N.
+        contact_manifest: Frozen wall protocol with geometry and SI force thresholds.
+        zero_force_manifest: Unchanged A three-scenario protocol and thresholds.
+        formal_num_envs: Confirmed complete-parent count, fixed at 4096 for B.
+
+    Returns:
+        Readiness, actionable blockers and diagnostics; A's B tracking performance
+        and ordinary physical failures are not engineering blockers.
+
+    Raises:
+        ValueError: The evidence container has an unsupported schema.
+
+    Note:
+        Reads hash-pinned report files once at startup; never creates simulation,
+        rewrites reports or changes training/evaluation thresholds.
+    """
+    if evidence.get("schema_version") != 1:
+        raise ValueError("B-start evidence must use schema_version 1")
+    blockers = validate_stage_artifacts(evidence, required_stages=B_REQUIRED_STAGES)
+    if formal_num_envs != 4096 or active_identity.get("reproduction_part") != "B":
+        blockers.append("B正式配置须为4096环境和显式B阶段")
+    for field in IDENTITY_FIELDS:
+        if not active_identity.get(field) or evidence.get("identity", {}).get(field) != active_identity[field]:
+            blockers.append(f"B源码／资产／schema／运行身份不匹配：{field}")
+    if evidence.get("formal_config_sha256") != active_identity.get("learning_config_sha256"):
+        blockers.append("B正式学习配置摘要不匹配")
+    if (evidence.get("parent_sha256") != parent_metadata.get("sha256")
+            or parent_metadata.get("reproduction_part") != "A"
+            or parent_metadata.get("completed_iterations") != 8000
+            or parent_metadata.get("num_envs") != formal_num_envs
+            or parent_metadata.get("seed") != active_identity.get("seed")
+            or parent_metadata.get("asset_manifest") != active_identity.get("asset_manifest")
+            or parent_metadata.get("schema_sha256") != active_identity.get("schema_sha256")):
+        blockers.append("B正式父SHA／A8000／seed／4096／V6资产或schema不匹配")
+    # Hashes bind the complete protocol and thresholds, not merely its version label.
+    for name, manifest in (("force", force_manifest), ("contact", contact_manifest), ("zero_force", zero_force_manifest)):
+        digest = hashlib.sha256(json.dumps(manifest, sort_keys=True).encode()).hexdigest()
+        if evidence.get("manifest_sha256", {}).get(name) != digest:
+            blockers.append(f"B评估协议摘要不匹配：{name}")
+    if (not force_manifest.get("range_frozen") or not contact_manifest.get("range_frozen")
+            or force_manifest.get("max_force_n") != 60.0 or contact_manifest.get("max_force_n") != 60.0
+            or contact_manifest.get("contact_peak_n") != 20.0
+            or len(force_manifest.get("scenarios", {})) != 14
+            or force_manifest.get("thresholds") is None or contact_manifest.get("thresholds") is None):
+        blockers.append("B力范围／接触幅值或完整评估协议尚未冻结")
+    try:
+        validate_evaluation_manifest(zero_force_manifest)
+    except ValueError as error:
+        blockers.append(f"A零力回归协议不完整：{error}")
+    stages = evidence.get("stages", {})
+    for name in B_REQUIRED_STAGES:
+        fields = IDENTITY_FIELDS[:-1] if name == "unit_tests" else IDENTITY_FIELDS
+        for field in fields:
+            if stages.get(name, {}).get("identity", {}).get(field) != active_identity.get(field):
+                blockers.append(f"B阶段报告身份不匹配：{name}（{field}）")
+    _check_stage(stages, "unit_tests", blockers, passed=True)
+    _check_stage(stages, "force_smoke", blockers, passed=True, two_runtimes=True,
+                 com_force_verified=True, reset_isolated=True)
+    _check_stage(stages, "contact_smoke", blockers, passed=True, two_runtimes=True,
+                 measurement_verified=True, reset_isolated=True)
+    _check_stage(stages, "zero_force_regression", blockers, passed=True,
+                 scenarios=["S0", "S1", "S2"], num_envs=32, episodes_per_env=3, policy_updates=0)
+    _check_stage(stages, "training_resume", blockers, passed=True, num_envs=4096,
+                 iterations=10, resumed_iterations=1, completed_iterations=8011,
+                 counters_consistent=True, full_state_restored=True, nonzero_force_learned=True)
+    _check_stage(stages, "capacity", blockers, passed=True, num_envs=4096,
+                 rollout_update=True, stress_verified=True, physics_warnings_absent=True)
+    _check_stage(stages, "evaluation_baseline", blockers, passed=True, force_scenarios=14,
+                 force_episodes=1344, contact_episodes=96, zero_control_episodes=32,
+                 policy_updates=0, cost_recorded=True)
+    return {"ready": not blockers, "blockers": blockers, "formal_num_envs": formal_num_envs,
+            "diagnostics": {"max_force_n": force_manifest.get("max_force_n"),
+                            "ordinary_physical_failures_are_blockers": False,
+                            "b_performance_required_of_a_parent": False}}
 
 
 def assess_a_start_gate(

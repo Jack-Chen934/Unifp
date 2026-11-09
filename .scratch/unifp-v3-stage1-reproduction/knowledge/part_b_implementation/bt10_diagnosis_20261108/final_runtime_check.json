@@ -1,0 +1,226 @@
+{
+  "checked_at": "2026-11-08T18:24:20.156500+08:00",
+  "run": "/mnt/data_8THDD/myl_unifp_v3_stage1/runs/b32000_seed1_v3_v6r2_resume12000_20261108",
+  "processes": {
+    "1981990": {
+      "exists": true,
+      "cmdline": "/mnt/data_8THDD/conda_envs/unifp_v3_stage1/bin/python tools/train_v3_b_observed.py --reproduction_part B --run_purpose formal --seed 1 --num_envs 4096 --resume /mnt/data_8THDD/myl_unifp_v3_stage1/runs/b32000_seed1_v3_v6r2_from_a8000_20261108/checkpoints/model_012000.pt --start_evidence /mnt/data_8THDD/myl_unifp_v3_stage1/validation/b_stage_20261107_r01/resume_evidence12000_20261108/start_evidence.json --manifest configs/v3_b_initial_v1.json --output_dir /mnt/data_8THDD/myl_unifp_v3_stage1/runs/b32000_seed1_v3_v6r2_resume12000_20261108 --sim_device cuda:0 --rl_device cuda:0 --pipeline gpu --num_threads 4 --headless "
+    },
+    "1985562": {
+      "exists": false,
+      "cmdline": null
+    },
+    "1988279": {
+      "exists": false,
+      "cmdline": null
+    }
+  },
+  "last_iteration": {
+    "completed_iterations": 12206,
+    "training_policy_steps": 292944,
+    "training_transitions": 1199898624,
+    "simulated_time_per_environment_s": 5858.879869043827,
+    "collection_s": 16.189064209815115,
+    "update_s": 1.0870020501315594,
+    "value_loss": 0.21101346462965012,
+    "surrogate_loss": -0.00020714748825412244,
+    "auxiliary_loss": 0.010045139165595175,
+    "main_learning_rate": 2.2500000000000005e-05,
+    "auxiliary/base_velocity_loss": 0.0015123172255698592,
+    "auxiliary/tcp_position_loss": 0.0010673904442228376,
+    "auxiliary/force_ee_loss": 0.007455290853977203,
+    "auxiliary/force_base_loss": 1.0140687709281338e-05,
+    "episode/episode_count": 108,
+    "episode/reward_rate": 3.0453794613787966,
+    "episode/reward_return": 55.42937950403602,
+    "episode/steps": 860.7314814814815,
+    "episode/timeout_bootstrap_bonus": 4.703645463894914,
+    "episode/raw/tracking_ee_force_world": 0.49536089571537795,
+    "episode/raw/tracking_lin_vel": 0.7456279352859214,
+    "episode/raw/tracking_ang_vel": 0.682693499105948,
+    "episode/raw/alive": 0.9999999988962103,
+    "episode/raw/torques_steering": 1485.7785248933014,
+    "episode/raw/torques_drive": 4984.35566993996,
+    "episode/raw/torques_arm": 1244.0559308087384,
+    "episode/raw/action_rate_steering": 12.060608395823726,
+    "episode/raw/action_rate_drive": 8.917610530500058,
+    "episode/raw/action_rate_arm": 7.041442456068816,
+    "episode/raw/dof_vel_steering": 14.394183900621202,
+    "episode/raw/dof_vel_arm": 113.61989000108507,
+    "episode/raw/dof_acc_steering": 43560.86027922454,
+    "episode/raw/dof_acc_drive": 658414.1429398148,
+    "episode/raw/dof_acc_arm": 311333.25434027775,
+    "episode/raw/torque_limits_steering": 2.101460771428214,
+    "episode/raw/torque_limits_drive": 3.0106498334142895,
+    "episode/raw/torque_limits_arm": 2.007740173074934,
+    "episode/raw/dof_pos_limits": 0.03990155236830038,
+    "episode/raw/lin_vel_z": 0.0036184065732716895,
+    "episode/raw/ang_vel_xy": 0.09312407168801184,
+    "episode/raw/base_height": 6.391662661068646e-05,
+    "episode/raw/collision": 0.010485169005631987,
+    "episode/errors/tcp_geometric_l1_m/mean": 0.5505911001452694,
+    "episode/errors/tcp_geometric_l1_m/p95": 1.1705474665871374,
+    "episode/errors/tcp_geometric_l2_m/mean": 0.36873415760971884,
+    "episode/errors/tcp_geometric_l2_m/p95": 0.7795744703875648,
+    "episode/errors/base_planar_speed_m_s/mean": 0.26446031365129685,
+    "episode/errors/base_planar_speed_m_s/p95": 0.6331496572604886,
+    "episode/errors/base_yaw_rate_rad_s/mean": 0.3378781005050297,
+    "episode/errors/base_yaw_rate_rad_s/p95": 0.9621619317266676,
+    "episode/errors/tcp_compensated_l1_m/mean": 0.4742547902796004,
+    "episode/errors/tcp_compensated_l1_m/p95": 1.0889669665031962,
+    "episode/errors/tcp_compensated_l2_m/mean": 0.3205385594456284,
+    "episode/errors/tcp_compensated_l2_m/p95": 0.7401923262686642
+  },
+  "failure_json_exists": false,
+  "assessment_status": {
+    "pid": 1985562,
+    "gpu": "3",
+    "source": "/mnt/data_8THDD/myl_unifp_v3_stage1/validation/b_stage_20261107_r01/source_resume12000_20261108/UniFP_v3",
+    "checkpoint": "/mnt/data_8THDD/myl_unifp_v3_stage1/runs/b32000_seed1_v3_v6r2_from_a8000_20261108/checkpoints/model_012000.pt",
+    "output": "/mnt/data_8THDD/myl_unifp_v3_stage1/evaluations/b12000_supplement_20261108_r01",
+    "commands": [
+      [
+        "R2",
+        [
+          "/mnt/data_8THDD/conda_envs/unifp_v3_stage1/bin/python",
+          "-m",
+          "legged_gym.scripts.evaluate_v3",
+          "--reproduction_part",
+          "B",
+          "--run_purpose",
+          "evaluation",
+          "--checkpoint",
+          "/mnt/data_8THDD/myl_unifp_v3_stage1/runs/b32000_seed1_v3_v6r2_from_a8000_20261108/checkpoints/model_012000.pt",
+          "--num_envs",
+          "32",
+          "--sim_device",
+          "cuda:0",
+          "--rl_device",
+          "cuda:0",
+          "--pipeline",
+          "gpu",
+          "--num_threads",
+          "4",
+          "--headless",
+          "--seed",
+          "1001",
+          "--protocol",
+          "force_tracking",
+          "--manifest",
+          "/mnt/data_8THDD/myl_unifp_v3_stage1/validation/b_stage_20261107_r01/bt08_baseline_second_r04/R2/R2/evaluation_manifest.json",
+          "--scenario",
+          "R2",
+          "--output_dir",
+          "/mnt/data_8THDD/myl_unifp_v3_stage1/evaluations/b12000_supplement_20261108_r01/R2",
+          "--video",
+          "--reference_archive",
+          "/mnt/data_8THDD/myl_unifp_v3_stage1/validation/b_stage_20261107_r01/bt08_baseline_second_r04/R2"
+        ]
+      ],
+      [
+        "contact",
+        [
+          "/mnt/data_8THDD/conda_envs/unifp_v3_stage1/bin/python",
+          "-m",
+          "legged_gym.scripts.evaluate_v3_contact",
+          "--reproduction_part",
+          "B",
+          "--run_purpose",
+          "evaluation",
+          "--checkpoint",
+          "/mnt/data_8THDD/myl_unifp_v3_stage1/runs/b32000_seed1_v3_v6r2_from_a8000_20261108/checkpoints/model_012000.pt",
+          "--num_envs",
+          "32",
+          "--sim_device",
+          "cuda:0",
+          "--rl_device",
+          "cuda:0",
+          "--pipeline",
+          "gpu",
+          "--num_threads",
+          "4",
+          "--headless",
+          "--seed",
+          "1001",
+          "--protocol",
+          "fixed_wall_contact",
+          "--manifest",
+          "/mnt/data_8THDD/myl_unifp_v3_stage1/validation/b_stage_20261107_r01/source_resume12000_20261108/UniFP_v3/configs/v3_b_contact_v1.json",
+          "--output_dir",
+          "/mnt/data_8THDD/myl_unifp_v3_stage1/evaluations/b12000_supplement_20261108_r01/contact",
+          "--video"
+        ]
+      ]
+    ],
+    "results": [
+      {
+        "name": "R2",
+        "returncode": 0,
+        "started_at": "2026-11-08T17:57:06.113197+08:00",
+        "ended_at": "2026-11-08T18:04:09.182246+08:00"
+      },
+      {
+        "name": "contact",
+        "returncode": 0,
+        "started_at": "2026-11-08T18:04:09.182998+08:00",
+        "ended_at": "2026-11-08T18:15:08.696284+08:00"
+      }
+    ],
+    "started_at": "2026-11-08T17:57:06.112842+08:00",
+    "state": "completed"
+  },
+  "probe_status": {
+    "state": "completed",
+    "pid": 1988279,
+    "results": [
+      {
+        "name": "probe_9000_mean",
+        "returncode": 0,
+        "started_at": "2026-11-08T18:04:10.187484+08:00",
+        "ended_at": "2026-11-08T18:06:45.992555+08:00"
+      },
+      {
+        "name": "probe_9000_sample",
+        "returncode": 0,
+        "started_at": "2026-11-08T18:06:45.993451+08:00",
+        "ended_at": "2026-11-08T18:09:15.898601+08:00"
+      },
+      {
+        "name": "probe_10000_mean",
+        "returncode": 0,
+        "started_at": "2026-11-08T18:09:15.899335+08:00",
+        "ended_at": "2026-11-08T18:11:49.279171+08:00"
+      },
+      {
+        "name": "probe_10000_sample",
+        "returncode": 0,
+        "started_at": "2026-11-08T18:11:49.280515+08:00",
+        "ended_at": "2026-11-08T18:14:20.406459+08:00"
+      },
+      {
+        "name": "probe_12000_mean",
+        "returncode": 0,
+        "started_at": "2026-11-08T18:14:20.407499+08:00",
+        "ended_at": "2026-11-08T18:16:52.159311+08:00"
+      },
+      {
+        "name": "probe_12000_sample",
+        "returncode": 0,
+        "started_at": "2026-11-08T18:16:52.161328+08:00",
+        "ended_at": "2026-11-08T18:19:22.873744+08:00"
+      },
+      {
+        "name": "probe_12000_sample_std9000",
+        "returncode": 0,
+        "started_at": "2026-11-08T18:19:22.874588+08:00",
+        "ended_at": "2026-11-08T18:21:58.115218+08:00"
+      }
+    ]
+  },
+  "remote_script_sha256": {
+    "probe_policy.py": "3ce77cdd36b70063c611ccc0a18464021d51ca1cfb1e13fcb3940c2470b7b145",
+    "run_probes.py": "49369ee1ece244fdda9099d42b1f7cc9d6b009d3ea5ba99520fd83ad2091f609",
+    "run_assessments.py": "15587a3cd8a01a97c8cc70f02e6cc14929bf3656d838c20a36bc61da6a57b47e",
+    "inspect_checkpoints.py": "925db8d352415ebd346073a38d91aed74000c895bf624140531736ace340b261"
+  }
+}

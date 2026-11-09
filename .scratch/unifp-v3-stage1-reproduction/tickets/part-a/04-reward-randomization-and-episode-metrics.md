@@ -27,7 +27,7 @@
 - 随机化：创建时实际回读摩擦、base／臂端质量和base COM；质量变化同比缩放中央惯量；14维执行系数局部reset采样、在动作目标硬裁剪前使用。push按Runner发布时钟同步触发，每环境独立采速度，用途标签不隐改物理，A力通道保持零。
 - episode：真实样本mean/P95与时长，逐episode记录、等权汇总；只清done行；先保存完成记录再执行可能失败的目标采样／reset。`v3_episode_log.py`提供批量JSONL和不可覆盖metadata，空batch不补零。
 - 状态：`get_training_state`／`load_training_state`覆盖实际物性、执行系数、push、I/S/N×S和各RNG，不是PhysX全状态快照；恢复后由05启动新episode。
-- 验证：模型／日志／资产10项，奖励4项，8环境27步随机化短测，32环境25步名义合同短测均通过相应断言；类型标注／docstring、语法和diff检查通过。详细命令、官方对照及失败证据见[实验记录](../../../../UniFP_v3/docs/experiments/2026-10-31_v3_rewards_randomization.md)。
+- 验证：模型／日志／资产10项，奖励4项，8环境27步随机化短测，32环境25步名义合同短测均通过相应断言；类型标注／docstring、语法和diff检查通过。详细命令、官方对照及失败证据见[实验记录](../../../../UniFP_v3/docs/experiments/v3/实验汇总.md)。
 
 ## 05衔接与剩余验收
 

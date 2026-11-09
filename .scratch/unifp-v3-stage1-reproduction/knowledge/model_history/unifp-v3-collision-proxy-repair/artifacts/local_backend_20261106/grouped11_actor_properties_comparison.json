@@ -1,0 +1,152 @@
+{
+  "baseline": "/home/sorry/python_ws/interactive/unifp_reproduction/.scratch/unifp-v3-a8000-diagnosis/artifacts/t04/final_nominal32.json",
+  "candidate": "/home/sorry/python_ws/interactive/unifp_reproduction/.scratch/unifp-v3-collision-proxy-repair/artifacts/local_backend_20261106/remote_grouped11_gpu_pipeline_4env_r1.json",
+  "body_count": 28,
+  "max_difference": {
+    "mass": 0.0,
+    "com": 0.0,
+    "inertia": 0.0
+  },
+  "bodies": {
+    "base_link": {
+      "mass": 0.0,
+      "com": 0.0,
+      "inertia": 0.0
+    },
+    "aluminum_profiles": {
+      "mass": 0.0,
+      "com": 0.0,
+      "inertia": 0.0
+    },
+    "arm_base": {
+      "mass": 0.0,
+      "com": 0.0,
+      "inertia": 0.0
+    },
+    "arm_seg1": {
+      "mass": 0.0,
+      "com": 0.0,
+      "inertia": 0.0
+    },
+    "arm_seg2": {
+      "mass": 0.0,
+      "com": 0.0,
+      "inertia": 0.0
+    },
+    "arm_seg3": {
+      "mass": 0.0,
+      "com": 0.0,
+      "inertia": 0.0
+    },
+    "arm_seg4": {
+      "mass": 0.0,
+      "com": 0.0,
+      "inertia": 0.0
+    },
+    "arm_seg5": {
+      "mass": 0.0,
+      "com": 0.0,
+      "inertia": 0.0
+    },
+    "arm_seg6": {
+      "mass": 0.0,
+      "com": 0.0,
+      "inertia": 0.0
+    },
+    "end_effector_link": {
+      "mass": 0.0,
+      "com": 0.0,
+      "inertia": 0.0
+    },
+    "gripper1": {
+      "mass": 0.0,
+      "com": 0.0,
+      "inertia": 0.0
+    },
+    "gripper2": {
+      "mass": 0.0,
+      "com": 0.0,
+      "inertia": 0.0
+    },
+    "wrist_camera_connector": {
+      "mass": 0.0,
+      "com": 0.0,
+      "inertia": 0.0
+    },
+    "wrist_camera": {
+      "mass": 0.0,
+      "com": 0.0,
+      "inertia": 0.0
+    },
+    "left_camera_connector": {
+      "mass": 0.0,
+      "com": 0.0,
+      "inertia": 0.0
+    },
+    "left_camera": {
+      "mass": 0.0,
+      "com": 0.0,
+      "inertia": 0.0
+    },
+    "rear_top_camera_connector": {
+      "mass": 0.0,
+      "com": 0.0,
+      "inertia": 0.0
+    },
+    "rear_top_camera": {
+      "mass": 0.0,
+      "com": 0.0,
+      "inertia": 0.0
+    },
+    "right_camera_connector": {
+      "mass": 0.0,
+      "com": 0.0,
+      "inertia": 0.0
+    },
+    "right_camera": {
+      "mass": 0.0,
+      "com": 0.0,
+      "inertia": 0.0
+    },
+    "bl_steering_link": {
+      "mass": 0.0,
+      "com": 0.0,
+      "inertia": 0.0
+    },
+    "bl_Link": {
+      "mass": 0.0,
+      "com": 0.0,
+      "inertia": 0.0
+    },
+    "br_steering_link": {
+      "mass": 0.0,
+      "com": 0.0,
+      "inertia": 0.0
+    },
+    "br_Link": {
+      "mass": 0.0,
+      "com": 0.0,
+      "inertia": 0.0
+    },
+    "fl_steering_link": {
+      "mass": 0.0,
+      "com": 0.0,
+      "inertia": 0.0
+    },
+    "fl_Link": {
+      "mass": 0.0,
+      "com": 0.0,
+      "inertia": 0.0
+    },
+    "fr_steering_link": {
+      "mass": 0.0,
+      "com": 0.0,
+      "inertia": 0.0
+    },
+    "fr_Link": {
+      "mass": 0.0,
+      "com": 0.0,
+      "inertia": 0.0
+    }
+  }
+}

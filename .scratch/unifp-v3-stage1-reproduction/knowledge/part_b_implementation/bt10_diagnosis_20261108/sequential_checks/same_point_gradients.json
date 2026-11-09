@@ -1,0 +1,92 @@
+{
+  "results": [
+    {
+      "iteration": 9000,
+      "subsets": [
+        {
+          "samples": 1024,
+          "max_old_logp_difference": 4.9591064453125e-05,
+          "same_point_encoder_gradient_cosine": -0.11354195326566696,
+          "policy_gradient_l2": 10.86429500579834,
+          "auxiliary_gradient_l2": 0.1606464385986328,
+          "auxiliary_loss": 0.012007709592580795
+        },
+        {
+          "samples": 1024,
+          "max_old_logp_difference": 3.147125244140625e-05,
+          "same_point_encoder_gradient_cosine": 0.39427700638771057,
+          "policy_gradient_l2": 13.089593887329102,
+          "auxiliary_gradient_l2": 0.1608082354068756,
+          "auxiliary_loss": 0.011795253492891788
+        },
+        {
+          "samples": 1024,
+          "max_old_logp_difference": 4.1961669921875e-05,
+          "same_point_encoder_gradient_cosine": 0.03979715332388878,
+          "policy_gradient_l2": 10.16659164428711,
+          "auxiliary_gradient_l2": 0.1624803990125656,
+          "auxiliary_loss": 0.011858171783387661
+        }
+      ]
+    },
+    {
+      "iteration": 10000,
+      "subsets": [
+        {
+          "samples": 1024,
+          "max_old_logp_difference": 4.00543212890625e-05,
+          "same_point_encoder_gradient_cosine": 0.028905251994729042,
+          "policy_gradient_l2": 9.252564430236816,
+          "auxiliary_gradient_l2": 0.09435825049877167,
+          "auxiliary_loss": 0.011499193497002125
+        },
+        {
+          "samples": 1024,
+          "max_old_logp_difference": 3.814697265625e-05,
+          "same_point_encoder_gradient_cosine": 0.011631891131401062,
+          "policy_gradient_l2": 10.814306259155273,
+          "auxiliary_gradient_l2": 0.09176534414291382,
+          "auxiliary_loss": 0.011358280666172504
+        },
+        {
+          "samples": 1024,
+          "max_old_logp_difference": 5.340576171875e-05,
+          "same_point_encoder_gradient_cosine": -0.03047635592520237,
+          "policy_gradient_l2": 9.800848007202148,
+          "auxiliary_gradient_l2": 0.0888611376285553,
+          "auxiliary_loss": 0.011403973214328289
+        }
+      ]
+    },
+    {
+      "iteration": 12000,
+      "subsets": [
+        {
+          "samples": 1024,
+          "max_old_logp_difference": 8.7738037109375e-05,
+          "same_point_encoder_gradient_cosine": 0.03535212576389313,
+          "policy_gradient_l2": 11.259960174560547,
+          "auxiliary_gradient_l2": 0.403442919254303,
+          "auxiliary_loss": 0.012573583982884884
+        },
+        {
+          "samples": 1024,
+          "max_old_logp_difference": 9.72747802734375e-05,
+          "same_point_encoder_gradient_cosine": 0.017414437606930733,
+          "policy_gradient_l2": 13.38365650177002,
+          "auxiliary_gradient_l2": 0.42361870408058167,
+          "auxiliary_loss": 0.012635373510420322
+        },
+        {
+          "samples": 1024,
+          "max_old_logp_difference": 8.392333984375e-05,
+          "same_point_encoder_gradient_cosine": 0.07324035465717316,
+          "policy_gradient_l2": 7.169543743133545,
+          "auxiliary_gradient_l2": 0.4193480908870697,
+          "auxiliary_loss": 0.012529653497040272
+        }
+      ]
+    }
+  ],
+  "说明": "同参数点、同批次真实观测监督；梯度cos负值表示局部方向冲突，非退化唯一根因。梯度范数不能忽略Adam历史而直接换算参数更新比。"
+}

@@ -1,0 +1,59 @@
+{
+  "iterations": [
+    {
+      "iteration": 8001,
+      "collection_s": 8.736293507739902,
+      "update_s": 0.7734802742488682
+    },
+    {
+      "iteration": 8002,
+      "collection_s": 7.919672213029116,
+      "update_s": 0.5898870257660747
+    },
+    {
+      "iteration": 8003,
+      "collection_s": 8.201486945617944,
+      "update_s": 0.6274756621569395
+    },
+    {
+      "iteration": 8004,
+      "collection_s": 8.705415231641382,
+      "update_s": 0.6132138622924685
+    },
+    {
+      "iteration": 8005,
+      "collection_s": 9.558916192967445,
+      "update_s": 0.6277614398859441
+    },
+    {
+      "iteration": 8006,
+      "collection_s": 8.908391163684428,
+      "update_s": 0.6263453001156449
+    },
+    {
+      "iteration": 8007,
+      "collection_s": 9.164362404961139,
+      "update_s": 0.6406801058910787
+    },
+    {
+      "iteration": 8008,
+      "collection_s": 9.029848366044462,
+      "update_s": 0.6106372568756342
+    },
+    {
+      "iteration": 8009,
+      "collection_s": 9.115227258764207,
+      "update_s": 0.6299573672004044
+    },
+    {
+      "iteration": 8010,
+      "collection_s": 9.051320120226592,
+      "update_s": 0.6260108607821167
+    }
+  ],
+  "warmup_first3_mean_s": 8.949431876186281,
+  "remaining7_mean_s": 9.701155275904707,
+  "remaining7_median_s": 9.677330981008708,
+  "training_only_32000_hours_from_last7": 86.23249134137517,
+  "说明": "仅10轮短测，包含诊断观察器逐步同步且远程有并行评估；不含初始化、完整存档和中末期评估成本，不是长期速度保证。"
+}

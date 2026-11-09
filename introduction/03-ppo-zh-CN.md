@@ -4,6 +4,8 @@
 
 配套阅读：[总体训练流程](/home/sorry/python_ws/interactive/unifp_reproduction/introduction/00-training-flow-zh-CN.md)、[Actor 详解](/home/sorry/python_ws/interactive/unifp_reproduction/introduction/01-actor-zh-CN.md)、[Critic 详解](/home/sorry/python_ws/interactive/unifp_reproduction/introduction/02-critic-zh-CN.md)。
 
+阅读主线是：**先让机器人实际尝试，再判断哪些尝试相对更好，最后让这些动作在类似观测下更容易出现，并限制单次改动。** 下文先讲这条因果关系，再对应到数据缓存、GAE、概率比和代码。所有手算均为教学例子，不代表实测训练结果。
+
 ## 1. 先回答：PPO 到底是哪个东西
 
 **PPO 是利用机器人交互数据更新神经网络参数的训练算法，不是一个输出高层命令的网络。** 在这份代码中，`PPO` 是 Python 类；它持有 ActorCritic 模型、经验缓存和两个优化器。
@@ -17,6 +19,59 @@
 所以用户的理解“PPO 用来改变 Actor 的神经网络参数”是对的，但还不完整：这里 PPO 的主损失也训练 Critic、历史编码器和动作标准差；同一训练循环还有一项单独的状态估计监督学习更新。
 
 证据：[PPO 对象和优化器创建，ppo.py:44](/home/sorry/python_ws/interactive/unifp_reproduction/UniFP/legged_gym/b2_gym_learn/ppo_cse_pf/ppo.py:44)、[实际更新，ppo.py:164](/home/sorry/python_ws/interactive/unifp_reproduction/UniFP/legged_gym/b2_gym_learn/ppo_cse_pf/ppo.py:164)。
+
+### 1.1 为什么知道目标位置，仍然需要PPO
+
+“末端应到哪里、底盘应怎样运动”是任务要求，并没有直接给出所有关节该怎样配合。相同末端目标可由不同底盘位置、转向姿态和机械臂姿态实现；动作还会受惯性、摩擦、限幅、外力与历史状态影响。PPO利用真实尝试得到的奖励，逐步学习这种任务到动作的映射。
+
+它不需要提前给每帧标注唯一正确的关节角度，也不需要对PhysX求导。它要保存的是：“当时看到了什么、尝试了哪个动作、动作当时有多常见、后来发生了什么、原来预计会怎样”。这些字段齐全，才可以重新评价旧经验并改进策略。
+
+例如同一类观测下，两次尝试得到不同后果：一个动作减小补偿误差且没有大幅限幅，另一个动作使机械臂过冲。若前者的综合长期结果相对更好，策略更新就倾向于提高前者的概率密度。这里的好坏最终由已定义奖励和优势决定，不能仅凭“动作向目标方向转了一点”代替计算。
+
+### 1.2 三个学习问题，三条监督路径
+
+| 问题 | 用什么数据回答 | 更新谁 |
+|---|---|---|
+| 这次动作相对当前处境是否更好 | 环境奖励、旧价值、GAE优势和动作概率比 | Actor、历史编码器、std |
+| 当前处境未来大约值多少回报 | 真实奖励与bootstrap组成的return目标 | Critic |
+| 历史能否表达速度、位置和外力 | 仿真提供的12维状态标签 | 编码器、解码器 |
+
+第一、二条合在PPO主损失中优化，第三条紧接着做辅助更新。它们共享部分参数或同批样本，但监督目标不同；“估力准确”不自动等于“动作正确”。
+
+```mermaid
+flowchart TD
+    H[当前观测历史] --> A[Actor动作分布]
+    A --> ACT[采样动作]
+    ACT --> ENV[机器人与环境实际执行]
+    ENV --> R[奖励、done、下一状态]
+    C[旧Critic价值] --> G[GAE：return与优势]
+    R --> G
+    G --> AD[固定优势]
+    AD --> P[PPO策略目标]
+    H --> NP[当前网络重新计算旧动作概率]
+    ACT --> NP
+    OP[采样时保存的旧动作概率] --> P
+    NP --> P
+    P --> U[反向传播，改变下一轮动作分布]
+    G --> V[return监督Critic]
+```
+
+图中的仿真只负责产生经验，不在反向传播路径中。更新期间重新计算旧观测下的分布，不是用新动作重新执行一遍环境来替换旧奖励。
+
+### 1.3 统一记号，避免把奖励和概率比混淆
+
+| 记号 | 含义 | 代码字段 |
+|---|---|---|
+| $H_t$ | Actor当前历史输入 | `obs`，官方2336维 |
+| $c_t$ | Critic当前特权历史 | `critic_obs`，官方447维 |
+| $a_t$ | 已执行的原始采样动作 | `actions_batch` |
+| $r_t$ | 环境即时奖励，超时入库前可有校正 | `rewards` |
+| $\hat R_t$ | Critic的拟合目标 | `returns_batch` |
+| $A_t^{raw}$ | 未标准化的GAE优势 | `returns - values` |
+| $\hat A_t$ | 整批标准化后的优势 | `advantages_batch` |
+| $\rho_t$ | 同一旧动作的新／旧概率密度比 | `ratio` |
+
+下文涉及概率比时统一用 $\rho_t$；奖励仍用 $r_t$。源码中的变量名保持原样，方便逐项对照。
 
 ## 2. 一轮训练的完整顺序和数据量
 
@@ -188,16 +243,18 @@ self.returns[step] = advantage + self.values[step]
 
 用公式表示：
 
-\[
-\delta_t = r_t + (1-d_t)\gamma V_{old}(s_{t+1})-V_{old}(s_t)
-\]
+$$
+\delta_t = r_t + (1-d_t)\gamma V_{old}(c_{t+1})-V_{old}(c_t)
+$$
 
-\[
+$$
 A_t^{raw}=\delta_t+(1-d_t)\gamma\lambda A_{t+1}^{raw},\qquad
-R_t=A_t^{raw}+V_{old}(s_t)
-\]
+\hat R_t=A_t^{raw}+V_{old}(c_t)
+$$
 
-`R_t` 就是代码里的 `returns`，用于训练 Critic；`A_t` 表示相对旧 Critic 基准，这段实际经历是更好还是更差，用于训练 Actor。这里的 `R_t` 是带 bootstrap 的 GAE / λ-return 目标，不是简单把 24 个奖励机械相加。
+$\hat R_t$就是代码里的 `returns`，用于训练Critic；$A_t^{raw}$表示相对旧Critic基准，这段实际经历是更好还是更差。这里的return是带bootstrap的GAE／λ-return目标，不是简单把24个奖励机械相加。
+
+可以把TD残差读成：“眼前得到的奖励＋下一状态预计的剩余回报，减去行动前原本的预期”。GAE再把后续多步的残差向前传递，让一次过冲或失稳能影响此前的动作，而不是只影响最后一步。详细展开见 [Critic的GAE解释](/home/sorry/python_ws/interactive/unifp_reproduction/introduction/02-critic-zh-CN.md)。
 
 随后代码用整批数据的均值和标准差标准化优势：
 
@@ -206,7 +263,14 @@ self.advantages = self.returns - self.values
 self.advantages = (self.advantages - self.advantages.mean()) / (self.advantages.std() + 1e-8)
 ```
 
-**Critic 的 return 目标不被这一步标准化。** Actor 损失使用标准化后的优势；因此不要把最终优势的正负无条件解释为原始 `R_t−V_old` 的正负，减去全批均值可能改变个别样本的符号。
+**Critic 的 return 目标不被这一步标准化。** Actor损失使用标准化后的优势；因此不要把最终优势的正负无条件解释为原始 $\hat R_t-V_{old}(c_t)$的正负，减去全批均值可能改变个别样本的符号。
+
+$$
+\hat A_t=\frac{A_t^{raw}-\operatorname{mean}(A^{raw})}
+{\operatorname{std}(A^{raw})+10^{-8}}.
+$$
+
+标准化把本批优势的整体偏移与尺度消掉，使策略梯度不必随奖励数值大小同比放大。它也带来一个解释边界：最终正优势表示相对**本批中心化基准**更好，不能不加条件地读成“这个动作的绝对回报很高”。
 
 证据：[末端估值，ppo.py:102](/home/sorry/python_ws/interactive/unifp_reproduction/UniFP/legged_gym/b2_gym_learn/ppo_cse_pf/ppo.py:102)、[GAE 和标准化，rollout_storage.py:72](/home/sorry/python_ws/interactive/unifp_reproduction/UniFP/legged_gym/b2_gym_learn/ppo_cse_pf/rollout_storage.py:72)。
 
@@ -222,17 +286,19 @@ self.advantages = (self.advantages - self.advantages.mean()) / (self.advantages.
 
 从后往前：
 
-```text
-δ1 = 0.3 + 0.99×0.9 − 0.7 = 0.491
-A1(raw) = 0.491
-R1 = 0.491 + 0.7 = 1.191
-
-δ0 = 0.2 + 0.99×0.7 − 0.8 = 0.093
-A0(raw) = 0.093 + 0.99×0.95×0.491 = 0.5547855
-R0 = 0.5547855 + 0.8 = 1.3547855
-```
+$$
+\begin{aligned}
+\delta_1&=0.3+0.99\times0.9-0.7=0.491,\\
+A_1^{raw}&=0.491,\qquad \hat R_1=0.491+0.7=1.191,\\
+\delta_0&=0.2+0.99\times0.7-0.8=0.093,\\
+A_0^{raw}&=0.093+0.99\times0.95\times0.491=0.5547855,\\
+\hat R_0&=0.5547855+0.8=1.3547855.
+\end{aligned}
+$$
 
 之后将这些 raw advantages 与同批全部样本一起标准化，再送入 Actor 损失。若某时刻 `done=1`，公式里的 `(1−done)` 变成 0，不能把 reset 后另一个 episode 的价值混进来。
+
+如果教学批次只有这两个样本，两者原始优势虽都为正，标准化后却是一正一负：0.5547855高于批均值，0.491低于批均值。按源码默认的样本标准差计算，约为＋0.7071和−0.7071。真实训练按全部98304条样本标准化，不能只用某一个minibatch或这两条代替。
 
 ## 6. 第四步：切 minibatch，同一旧动作重新计算新概率
 
@@ -282,27 +348,28 @@ surrogate_loss = torch.max(surrogate, surrogate_clipped).mean()
 
 等价于最小化：
 
-\[
-L_{actor}=-\operatorname{mean}\left[\min\left(r_t A_t,
-\operatorname{clip}(r_t,0.8,1.2)A_t\right)\right]
-\]
+$$
+L_{actor}=-\operatorname{mean}\left[\min\left(\rho_t\hat A_t,
+\operatorname{clip}(\rho_t,0.8,1.2)\hat A_t\right)\right]
+$$
 
-\[
-r_t=\exp(\log\pi_{new}(a_t|o_t)-\log\pi_{old}(a_t|o_t))
-\]
+$$
+\rho_t=\frac{\pi_{new}(a_t\mid H_t)}{\pi_{old}(a_t\mid H_t)}
+=\exp\left(\log\pi_{new}(a_t\mid H_t)-\log\pi_{old}(a_t\mid H_t)\right)
+$$
 
-代码变量 `ratio` 对应这里的 (r_t)，与奖励 (r_t^{reward}) 不是同一个东西。`A_t` 此处指标准化后的优势。
+代码变量 `ratio` 对应 $\rho_t$，与奖励 $r_t$是不同量；$\hat A_t$指标准化后的优势。连续动作使用概率**密度**，不是“恰好采到一个实数点的概率”；比较同一动作附近等大小小区间时，密度比反映其相对常见程度。
+
+在本轮第一次更新之前，新旧策略相同，概率比约为1；随着参数变化，比值才偏离1。分母固定为采样时的旧策略概率，不会在每个epoch重新把当前策略当成新的基准，否则会丢失对本批累计变化的衡量。
 
 ### 7.1 正优势样本
 
 假设 `A=+2`，旧 log_prob 为 −10，新 log_prob 为 −9.664，差约 `log(1.4)`，所以 `ratio=1.4`。新策略把这条好经验里的动作变得更常见：
 
-```text
-未裁剪目标 = 1.4×2 = 2.8
-裁剪目标   = 1.2×2 = 2.4
-取 min     = 2.4
-该样本 Actor loss = −2.4
-```
+$$
+J=\min(1.4\times2,1.2\times2)=\min(2.8,2.4)=2.4,
+\qquad L_{actor,t}=-2.4.
+$$
 
 继续让 ratio 超过 1.2 不再从这一样本获得更多代理目标收益。相反，若正优势样本 ratio 降到 0.6，目标是 `min(1.2,1.6)=1.2`，仍会惩罚把好动作变得更少见的方向。
 
@@ -310,12 +377,10 @@ r_t=\exp(\log\pi_{new}(a_t|o_t)-\log\pi_{old}(a_t|o_t))
 
 假设 `A=−2`，策略应减少这条相对较差经验中的动作概率。若 `ratio=0.6`：
 
-```text
-未裁剪目标 = 0.6×(−2) = −1.2
-裁剪目标   = 0.8×(−2) = −1.6
-取 min     = −1.6
-该样本 Actor loss = +1.6
-```
+$$
+J=\min(0.6\times(-2),0.8\times(-2))=\min(-1.2,-1.6)=-1.6,
+\qquad L_{actor,t}=+1.6.
+$$
 
 已经降到 0.8 以下后，进一步降低没有额外代理目标收益；若反而 ratio 升到 1.4，目标变成 `min(−2.8,−2.4)=−2.8`，loss 为 +2.8，仍惩罚增加坏动作概率。
 
@@ -338,6 +403,44 @@ r_t=\exp(\log\pi_{new}(a_t|o_t)-\log\pi_{old}(a_t|o_t))
 
 因此更新能改变 Actor 均值和标准差，让有利动作在类似观测下更容易出现。这是基于对数概率的策略梯度；并不是对“正确关节角度标签”做 MSE，也不是通过物理引擎反向传播。
 
+### 7.4 概率梯度怎样真正改变动作均值
+
+先看单个关节、固定标准差，并暂时忽略裁剪、熵及其他样本。高斯分布的对数密度对均值的导数是：
+
+$$
+\frac{\partial\log\pi(a\mid H)}{\partial\mu}
+=\frac{a-\mu}{\sigma^2}.
+$$
+
+假设旧均值为0，标准差为0.5，曾采样动作0.4。这个固定动作比当前均值偏正；在新旧策略尚相同时，取标准化优势＋2，则：
+
+$$
+\frac{\partial L_{actor}}{\partial\mu}
+=-\hat A\,\rho\,\frac{a-\mu}{\sigma^2}
+=-2\times1\times\frac{0.4}{0.25}=-3.2.
+$$
+
+梯度下降倾向于提高均值，向这次相对有利的0.4靠近。若该动作优势为−2，梯度符号反过来，均值倾向于远离它。这就是“好动作更常见、差动作更少见”如何落到可微参数上，而不是把网络输出直接改写成奖励值。
+
+真实任务有17个动作维度，log概率先逐维求和，概率比针对整个联合动作。不是独立给17个关节各打一个分；一条优势评价这次整组动作及其后果。均值经神经网络由多层参数共同决定，Adam实际更新的是权重和偏置，上面只是在输出层面解释梯度方向。
+
+std也可被策略损失训练：更有利的样本离均值很远或很近时，可能对探索宽度产生不同影响。因此修改熵系数并不等于冻结std，减小std也不能保证动作均值已经正确。
+
+### 7.5 为什么裁剪能减缓更新，但不能保证绝不退化
+
+下表列的是要最大化的单样本代理目标 $J=\min(\rho\hat A,\operatorname{clip}(\rho,0.8,1.2)\hat A)$，Actor损失取其负号：
+
+| 优势 | 概率比 | 代理目标J | 当前样本提供的含义 |
+|---:|---:|---:|---|
+| ＋2 | 0.6 | 1.2 | 好动作反而变少，仍有提高其概率的梯度 |
+| ＋2 | 1.0 | 2.0 | 仍可提高好动作的概率 |
+| ＋2 | 1.4 | 2.4 | 超过1.2后进入平台，不继续奖励增大概率 |
+| −2 | 0.6 | −1.6 | 低于0.8后进入平台，不继续奖励减小概率 |
+| −2 | 1.0 | −2.0 | 仍可降低差动作的概率 |
+| −2 | 1.4 | −2.8 | 差动作反而变多，仍有降低其概率的梯度 |
+
+它只在“已经朝有利方向改得较多”时停止追加本样本的代理收益；朝不利方向变化仍受约束。由于很多样本共享参数，编码器还接受辅助更新，某个样本即使进入平台，也可能因其他梯度继续改变概率。PPO因此是保守的代理优化方法，不是对真实机器人性能单调提升的证明。
+
 ## 8. 第六步：Critic 怎样同时训练
 
 代码中的 `target_values_batch` 名字容易误导：它来自缓存的 `values`，实际是**旧 Critic 预测**，不是 returns。真正的价值监督目标叫 `returns_batch`。
@@ -353,15 +456,30 @@ value_loss = torch.max(value_losses, value_losses_clipped).mean()
 
 输入：新 Critic 预测 `value_batch`、旧预测 `target_values_batch`、GAE return `returns_batch`，三者均为 `[24576,1]`。输出：一个标量 `value_loss`。
 
+数学上，先限制相对旧预测的变化，再对两种预测误差取较大者：
+
+$$
+V_t^{clip}=V_{old}(c_t)+\operatorname{clip}
+\left(V_\phi(c_t)-V_{old}(c_t),-0.2,0.2\right),
+$$
+
+$$
+L_V=\operatorname{mean}\left[
+\max\left((V_\phi(c_t)-\hat R_t)^2,(V_t^{clip}-\hat R_t)^2\right)
+\right].
+$$
+
+这条损失调整“对未来的预测”；策略损失调整“在同类观测下尝试哪些动作”。它们加在一个主loss里，但各自反向传播到不同网络分支。Actor更新时的优势已固定，不会通过这批优势再给旧Critic反传梯度。
+
 例如旧预测 0.8、return 目标 1.3、新预测 1.1：
 
-```text
-新旧预测差 = 1.1 − 0.8 = 0.3
-裁剪预测   = 0.8 + clip(0.3,−0.2,0.2) = 1.0
-普通平方误差 = (1.1−1.3)² = 0.04
-裁剪平方误差 = (1.0−1.3)² = 0.09
-该样本采用 max(0.04,0.09) = 0.09
-```
+| 计算步骤 | 演算结果 |
+|---|---|
+| 相对旧预测的变化 | $1.1-0.8=0.3$ |
+| 裁剪后的预测 | $0.8+0.2=1.0$ |
+| 普通平方误差 | $(1.1-1.3)^2=0.04$ |
+| 裁剪平方误差 | $(1.0-1.3)^2=0.09$ |
+| 本样本价值损失 | $\max(0.04,0.09)=0.09$ |
 
 这里 ±0.2 是**价值预测差的绝对裁剪量**，与策略概率比值的 ±20% 是不同用法；它也不是强制新 Critic 输出永远离旧输出不超过 0.2。
 
@@ -376,6 +494,15 @@ loss = surrogate_loss + self.value_loss_coef * value_loss - self.entropy_coef * 
 ```
 
 默认系数是 `1.0` 和 `0.01`。最小化损失时，负号使更高的分布熵更有利，避免动作分布过早变得非常窄。这里各关节高斯分布的熵先求和；高斯熵取决于标准差，因此这项直接作用于可训练 `std`，不是给关节均值加一组“随机目标角度”。
+
+$$
+L_{main}=L_{actor}+1.0\,L_V-0.01\,\mathcal{H}(\pi),\qquad
+\mathcal{H}(\pi)=\sum_{j=1}^{17}\frac12\log(2\pi e\,\sigma_j^2).
+$$
+
+对一个关节，熵项损失的导数为 $-0.01/\sigma_j$，梯度下降倾向于增大std；策略代理损失也影响std，Adam还继承过去的动量，所以最后std的增减取决于这些作用的合成。熵有助于继续探索，也可能增加控制扰动，不能只看“熵越高越好”或“std越低越好”。
+
+这里是连续分布的微分熵，数值可能为负；负值本身不是概率出错。正式训练中系数由任务有效配置传入，不能拿 `PPO.__init__` 的默认0替代官方实际0.01。
 
 证据：[总损失，ppo.py:164](/home/sorry/python_ws/interactive/unifp_reproduction/UniFP/legged_gym/b2_gym_learn/ppo_cse_pf/ppo.py:164)、[标准差和熵，actor_critic.py:112](/home/sorry/python_ws/interactive/unifp_reproduction/UniFP/legged_gym/b2_gym_learn/ppo_cse_pf/actor_critic.py:112)。
 
@@ -401,6 +528,15 @@ self.optimizer.step()
 ```
 
 `zero_grad()` 清掉之前的梯度；`backward()` 沿当前计算图求梯度；`clip_grad_norm_` 把主更新的全局梯度范数限制到 1；Adam 根据梯度和动量更新参数。**梯度范数裁剪与 PPO ratio 裁剪也是两件不同的事。**
+
+| 机制 | 控制的对象 | 并不直接限制什么 |
+|---|---|---|
+| PPO概率比裁剪 | 单样本代理目标中的收益 | 不直接裁剪关节动作 |
+| KL自适应学习率 | 根据整批分布变化调节主Adam步长 | 不保证每次更新后的KL都低于阈值 |
+| 梯度范数裁剪 | 主更新梯度向量的总范数 | 不等于限制每个参数或每个动作的绝对值 |
+| 环境动作／力矩限幅 | 实际送入控制和仿真的执行量 | 不保证策略输出的均值或std已经合理 |
+
+这些机制发生在不同位置。动作在控制端被限幅后，PPO仍按缓存的原始采样动作计算概率；限幅会改变原始动作到实际后果的映射，不能把“执行量没有超过上限”当成策略已经学好。
 
 主损失实际的梯度路径：
 
@@ -456,6 +592,15 @@ self.adaptation_module_optimizer.step()
 ```
 
 因此损失是 `MSE(w×pred, w×label) = w²×MSE(pred,label)`，**不是** `w×MSE(pred,label)`。例如速度某一分量预测比真值多 1，乘数 0.2 后，该分量平方误差为 0.04；每组还会对样本和三个分量取 mean。
+
+$$
+L_{aux}=\sum_{g=1}^{4}w_g^2\operatorname{mean}
+\left[(\hat y_g-y_g)^2\right],\qquad w=(0.2,0.2,1,1).
+$$
+
+例如注入力为20N，标签乘0.01后为0.20，解码预测为0.15，对应15N。该分量缩放后的平方误差为0.0025，而物理绝对误差为5N。最终辅助loss还会按样本和分量求均值、分组求和，并受日志归一化影响，所以它不等于以N为单位的估力MAE。
+
+辅助任务促使历史表示保留可解释的物理信息；主任务再学习如何利用表示产生动作。两者的共享编码器形成联系，但没有一条硬规则强制“估计到＋20N就必须输出某个关节角度”。是否真正形成正确闭环，仍要用补偿误差、底盘跟踪、限幅和真实接触评估验证。
 
 证据：[分组权重，actor_critic.py:13](/home/sorry/python_ws/interactive/unifp_reproduction/UniFP/legged_gym/b2_gym_learn/ppo_cse_pf/actor_critic.py:13)、[预测方法，actor_critic.py:177](/home/sorry/python_ws/interactive/unifp_reproduction/UniFP/legged_gym/b2_gym_learn/ppo_cse_pf/actor_critic.py:177)、[辅助更新，ppo.py:178](/home/sorry/python_ws/interactive/unifp_reproduction/UniFP/legged_gym/b2_gym_learn/ppo_cse_pf/ppo.py:178)。
 

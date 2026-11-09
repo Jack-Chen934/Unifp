@@ -1,0 +1,18 @@
+{
+  "ticket": "B-T03",
+  "passed": 45,
+  "runtime": "CPU Torch231 / Preview4 bindings",
+  "sha256": {
+    "legged_gym/envs/v3/legged_robot_v3.py": "dad2e4ea6cb5f561777e62c26818e603f046970f93707e35c959a0ea60826553",
+    "tests/test_v3_rewards.py": "c6a5ffd3426b8776fad462f995d5d1ad9616966f351215ef9223e40206d8d737",
+    "tests/test_v3_ppo.py": "7dc415e83157dd6c3b019a22f57cad1c59ab79a72b9a0236dd152ee863ab1805"
+  },
+  "review": [
+    "Actor无新增人工力真值；Critic补偿仅填95:98",
+    "世界补偿后逆yaw转球坐标；零合力精确保留几何三元组",
+    "几何／补偿各自保存样本与P95，不再复制别名",
+    "23项reward和PPO算法／双Adam未改；主后辅重新前向沿用已有实现",
+    "policy trace按当前转移重新构建clean监督标签，避免沿用上一发布obs_pred"
+  ],
+  "limits": "未运行原生仿真，非零标签通过不等于估力已学会"
+}

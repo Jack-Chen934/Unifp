@@ -1,0 +1,379 @@
+{
+  "variant": "v8",
+  "seed": 1001,
+  "directory": ".scratch/unifp-v3-collision-proxy-repair/artifacts/visual_envelope_v8_20261106/v8_seed1001_20s",
+  "physical_failures": 3,
+  "completed_episodes": {
+    "physical_failure": 3,
+    "timeout": 125
+  },
+  "failure_predicates_overlapping": {
+    "base_contact": 3
+  },
+  "counterpart_counts": {
+    "gripper1+gripper2": 1,
+    "wrist_camera": 2
+  },
+  "target_counterpart_failures": 2,
+  "exposure_environment_seconds": 2559.999942779541,
+  "failures_per_1000_environment_seconds": 1.171875026193448,
+  "events": [
+    {
+      "policy_step": 296,
+      "env_id": 11,
+      "predicates": {
+        "roll": false,
+        "pitch": false,
+        "base_contact": true
+      },
+      "base_contact_norm_n": 547.7451387279698,
+      "counterforce_residual_n": 1.5728399755926745e-05,
+      "counterpart_bodies": [
+        "gripper1",
+        "gripper2"
+      ],
+      "counterpart_geometry": {
+        "gripper1": {
+          "other_pose_in_base_m": [
+            [
+              0.01204448142838335,
+              0.09031454283542875,
+              -0.9958404560066584,
+              -0.13430064501442907
+            ],
+            [
+              0.6101596502561694,
+              -0.7896700771186766,
+              -0.06423683135594964,
+              -0.19260773704656542
+            ],
+            [
+              -0.7921869297497851,
+              -0.606847965025682,
+              -0.06461745644791698,
+              0.07253884776506542
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "collision": {
+            "surface_intersection": true,
+            "intersecting_pairs": [
+              [
+                "base_link_local_1_group_5",
+                "gripper1_proxy_1"
+              ]
+            ],
+            "minimum_surface_distance_m": 0.0,
+            "closest_disjoint_pair": {
+              "distance_m": 0.0173180167665685,
+              "base_surface": "base_link_local_1_group_0",
+              "other_surface": "gripper1_proxy_1",
+              "nearest_points_in_base_m": [
+                [
+                  -0.14687226066550588,
+                  -0.14919210970401764,
+                  0.004982243714447761
+                ],
+                [
+                  -0.14687095335286549,
+                  -0.14077379983372484,
+                  0.020116501606588108
+                ]
+              ]
+            }
+          },
+          "visual": {
+            "surface_intersection": false,
+            "intersecting_pairs": [],
+            "minimum_surface_distance_m": 0.00048142667672885353,
+            "closest_disjoint_pair": {
+              "distance_m": 0.00048142667672885353,
+              "base_surface": "base_link_visual",
+              "other_surface": "gripper1_visual_0",
+              "nearest_points_in_base_m": [
+                [
+                  -0.1467931272173923,
+                  -0.1345315713515359,
+                  0.020192983971808624
+                ],
+                [
+                  -0.14679304658812692,
+                  -0.1348249171915773,
+                  0.020574716675012733
+                ]
+              ]
+            }
+          }
+        },
+        "gripper2": {
+          "other_pose_in_base_m": [
+            [
+              0.012044219812791227,
+              -0.09032185872688181,
+              0.9958397956525048,
+              -0.1605558897770898
+            ],
+            [
+              0.6101595984040585,
+              0.7896696319768601,
+              0.0642427957745363,
+              -0.17202593973761382
+            ],
+            [
+              -0.7921869736649927,
+              0.6068474554364152,
+              0.06462170367491762,
+              0.08799242222491477
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "collision": {
+            "surface_intersection": true,
+            "intersecting_pairs": [
+              [
+                "base_link_local_1_group_5",
+                "gripper2_proxy_1"
+              ]
+            ],
+            "minimum_surface_distance_m": 0.0,
+            "closest_disjoint_pair": {
+              "distance_m": 0.01762442371728234,
+              "base_surface": "base_link_local_1_group_0",
+              "other_surface": "gripper2_proxy_1",
+              "nearest_points_in_base_m": [
+                [
+                  -0.14556682358430081,
+                  -0.14919210970401764,
+                  0.004982130949460562
+                ],
+                [
+                  -0.14556547786867977,
+                  -0.14095073692272447,
+                  0.020560965444862134
+                ]
+              ]
+            }
+          },
+          "visual": {
+            "surface_intersection": false,
+            "intersecting_pairs": [],
+            "minimum_surface_distance_m": 0.0004858546373469758,
+            "closest_disjoint_pair": {
+              "distance_m": 0.0004858546373469758,
+              "base_surface": "base_link_visual",
+              "other_surface": "gripper2_visual_0",
+              "nearest_points_in_base_m": [
+                [
+                  -0.1464441236548515,
+                  -0.13453152940995103,
+                  0.02019294248594358
+                ],
+                [
+                  -0.1464440422839935,
+                  -0.13482757327011843,
+                  0.020578186246266218
+                ]
+              ]
+            }
+          }
+        }
+      }
+    },
+    {
+      "policy_step": 479,
+      "env_id": 51,
+      "predicates": {
+        "roll": false,
+        "pitch": false,
+        "base_contact": true
+      },
+      "base_contact_norm_n": 179.88336022586392,
+      "counterforce_residual_n": 0.0,
+      "counterpart_bodies": [
+        "wrist_camera"
+      ],
+      "counterpart_geometry": {
+        "wrist_camera": {
+          "other_pose_in_base_m": [
+            [
+              -0.20357447277343327,
+              0.29116963313906347,
+              -0.9347607601802089,
+              -0.09627042204600533
+            ],
+            [
+              0.32562337317900564,
+              0.9205375304462542,
+              0.21582417352891312,
+              -0.20313410890056005
+            ],
+            [
+              0.9233238071633079,
+              -0.26044365950734066,
+              -0.2822095805387898,
+              0.07408433748914878
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "collision": {
+            "surface_intersection": true,
+            "intersecting_pairs": [
+              [
+                "base_link_local_1_group_0",
+                "wrist_camera_proxy_0"
+              ]
+            ],
+            "minimum_surface_distance_m": 0.0,
+            "closest_disjoint_pair": {
+              "distance_m": 0.02420366599929466,
+              "base_surface": "base_link_local_1_group_10",
+              "other_surface": "wrist_camera_proxy_0",
+              "nearest_points_in_base_m": [
+                [
+                  -0.07909604316756122,
+                  -0.22752991550977966,
+                  -0.018731389633877077
+                ],
+                [
+                  -0.07909604313741794,
+                  -0.22749136738408948,
+                  0.005472245668436876
+                ]
+              ]
+            }
+          },
+          "visual": {
+            "surface_intersection": false,
+            "intersecting_pairs": [],
+            "minimum_surface_distance_m": 0.00018224598213662007,
+            "closest_disjoint_pair": {
+              "distance_m": 0.00018224598213662007,
+              "base_surface": "base_link_visual",
+              "other_surface": "wrist_camera_visual_0",
+              "nearest_points_in_base_m": [
+                [
+                  -0.07813457545802949,
+                  -0.22553234749886647,
+                  0.0053294290597320805
+                ],
+                [
+                  -0.0781345929913553,
+                  -0.22553054184306218,
+                  0.005511666095772069
+                ]
+              ]
+            }
+          }
+        }
+      }
+    },
+    {
+      "policy_step": 838,
+      "env_id": 117,
+      "predicates": {
+        "roll": false,
+        "pitch": false,
+        "base_contact": true
+      },
+      "base_contact_norm_n": 7.327118960162864,
+      "counterforce_residual_n": 0.0,
+      "counterpart_bodies": [
+        "wrist_camera"
+      ],
+      "counterpart_geometry": {
+        "wrist_camera": {
+          "other_pose_in_base_m": [
+            [
+              0.18599046061980598,
+              0.17728920176102092,
+              -0.9664243827105008,
+              -0.12254946392670263
+            ],
+            [
+              0.4443780247938428,
+              0.8620644066622102,
+              0.2436660211159004,
+              -0.21890523141898477
+            ],
+            [
+              0.8763194164451427,
+              -0.4747773138062429,
+              0.0815523307832047,
+              0.07604549889421064
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "collision": {
+            "surface_intersection": false,
+            "intersecting_pairs": [],
+            "minimum_surface_distance_m": 2.2695457152113083e-05,
+            "closest_disjoint_pair": {
+              "distance_m": 2.2695457152113083e-05,
+              "base_surface": "base_link_local_1_group_0",
+              "other_surface": "wrist_camera_proxy_0",
+              "nearest_points_in_base_m": [
+                [
+                  -0.12243429475188027,
+                  -0.24886938799915423,
+                  0.006243488268394702
+                ],
+                [
+                  -0.12243429279597012,
+                  -0.24886981258864507,
+                  0.0062661797534779235
+                ]
+              ]
+            }
+          },
+          "visual": {
+            "surface_intersection": false,
+            "intersecting_pairs": [],
+            "minimum_surface_distance_m": 1.1496856727728326e-05,
+            "closest_disjoint_pair": {
+              "distance_m": 1.1496856727728326e-05,
+              "base_surface": "base_link_visual",
+              "other_surface": "wrist_camera_visual_0",
+              "nearest_points_in_base_m": [
+                [
+                  -0.11583966028763734,
+                  -0.2485645124586875,
+                  0.00573965979675578
+                ],
+                [
+                  -0.11583965798499507,
+                  -0.24856785029025652,
+                  0.005750661459799727
+                ]
+              ]
+            }
+          }
+        }
+      }
+    }
+  ],
+  "input_sha256": {
+    ".scratch/unifp-v3-collision-proxy-repair/artifacts/visual_envelope_v8_20261106/v8_seed1001_20s/summary.json": "4b33462cbf14a9c0cb318d0169c6c39a2239af8dfd57b318bc6bbd90b0b6ce6a",
+    ".scratch/unifp-v3-collision-proxy-repair/artifacts/visual_envelope_v8_20261106/v8_seed1001_20s/failures.json": "fda27c834308a1f624b8f30a6c5e2a2c93a3b83260e79658fa8666d7e0e8f282",
+    "UniFP_v3/resources/robots/v3_a1_desktop_train_v8_visual_envelope_r1/urdf/a1arm_rgm3_desktop_fixed_gripper.urdf": "cf1644b782d66aa903ff4c75491cc1e08fa4feaffcc448dea1183ab49524af21"
+  }
+}

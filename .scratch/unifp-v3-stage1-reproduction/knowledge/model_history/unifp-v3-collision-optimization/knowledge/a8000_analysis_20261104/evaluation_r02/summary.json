@@ -1,0 +1,17 @@
+{
+  "assessment": "ungraded_or_incomplete",
+  "scenarios": {
+    "S0": "pass",
+    "S1": "ungraded_or_incomplete",
+    "S2": "ungraded_or_incomplete"
+  },
+  "checkpoint_sha256": "afa062c97b6090bad076d2888ee9f39ef5c2dc3958c624485450f8c2f8b45eef",
+  "evaluation_manifest_sha256": "c29c77a629af283f0899caef144d86f4e0c945d21b4913ad5484582415b2fb17",
+  "threshold_version": "v3-a-initial-v1",
+  "scenario_archive_manifest_sha256": {
+    "S0": "13c744bfd26599b331512b73c1e4714ea0f285a733f47d2759fb4a8c358ce335",
+    "S1": "5cc57002566cc218e117ee08142503ecad4178289899b4feae2ccace0875b5b7",
+    "S2": "1eb6ca8c3771e2b7ef1940724a5851e0d299b20a2db525e785c3f707978a3c84"
+  },
+  "policy_updates": 0
+}

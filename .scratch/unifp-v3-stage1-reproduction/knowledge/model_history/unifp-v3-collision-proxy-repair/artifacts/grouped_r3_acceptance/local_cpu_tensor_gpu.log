@@ -1,0 +1,23 @@
+Importing module 'gym_38' (/home/sorry/.cache/unifp/isaacgym_preview4/pkg/isaacgym/python/isaacgym/_bindings/linux-x86_64/gym_38.so)
+Setting GYM_USD_PLUG_INFO_PATH to /home/sorry/.cache/unifp/isaacgym_preview4/pkg/isaacgym/python/isaacgym/_bindings/linux-x86_64/usd/plugInfo.json
+PyTorch version 2.0.1+cu117
+Device count 1
+/home/sorry/.cache/unifp/isaacgym_preview4/pkg/isaacgym/python/isaacgym/_bindings/src/gymtorch
+Using /home/sorry/.cache/torch_extensions/py38_cu117 as PyTorch extensions root...
+Emitting ninja build file /home/sorry/.cache/torch_extensions/py38_cu117/gymtorch/build.ninja...
+Building extension module gymtorch...
+Allowing ninja to set a default number of workers... (overridable by setting the environment variable MAX_JOBS=N)
+ninja: no work to do.
+Setting seed: 1
+[cpu-tensor-probe] constructing
+Not connected to PVD
++++ Using GPU PhysX
+Physics Engine: PhysX
+Physics Device: cuda:0
+GPU Pipeline: disabled
+[cpu-tensor-probe] destroying
+[cpu-tensor-probe] destroyed
+{"asset": "/home/sorry/python_ws/interactive/unifp_reproduction/UniFP_v3/resources/robots/v3_a1_desktop_train_v7_local_base_proxy_r3/urdf/a1arm_rgm3_desktop_fixed_gripper.urdf", "backend": "gpu", "tensor_device": "cpu", "num_envs": 4, "shape_count": 168, "segments": [{"name": "stationary", "steps": 250, "physical_failures": 0, "peak_base_contact_n": 0.0, "mean_drive_velocity_rad_s": [-0.021465782076120377, -0.004026718903332949, -0.00015703978715464473, 0.00858411192893982]}, {"name": "wheel_motion", "steps": 250, "physical_failures": 0, "peak_base_contact_n": 0.0, "mean_drive_velocity_rad_s": [0.4434804916381836, 0.48708122968673706, 0.45288634300231934, 0.5315799713134766]}], "local_reset_other_rows_max_difference": {"root_states": 0.0, "commands": 0.0, "obs_history": 0.0, "episode_length_buf": 0.0, "dof_state": 0.0}, "finite": true, "note_zh": "名义短测，无PPO；不代替长时间运动与策略验收。"}
+Loading extension module gymtorch...
+/home/sorry/.cache/unifp/isaacgym_preview4/py38/lib/python3.8/site-packages/torch/functional.py:504: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3483.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]

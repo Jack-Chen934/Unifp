@@ -1,0 +1,43 @@
+{
+  "scope": "等待B08-Q3d期间修正已确认B10范围内的评估统计遗漏；不包含墙创建",
+  "tests_passed": 49,
+  "unit_log": "evaluation_followup_unit.log",
+  "red_log": "base_bias_red.log",
+  "sha256": {
+    "legged_gym/scripts/evaluate_v3.py": "049f3fe22716ca6ffabfabbc0b889f7100613a20394c8d31514d203c5bcfb76a",
+    "legged_gym/b2_gym_learn/ppo_cse_pf/v3_evaluation.py": "86f8b6fac1a4965f766b256b53a828c7df590f3db712ef9ae4bb012518c606cd",
+    "tests/test_v3_force_evaluation.py": "11e2a07ad03e5a12310eb587c2ecfff59bfb892ddef128e035bc266bef1ec9ff"
+  },
+  "changes": [
+    "保持段末0.5秒估力按上一已执行转移的布尔标记统计，并在局部reset后清零",
+    "底盘人工力槽精确零输入的XYZ有符号偏置与MAE，单位N，不新增阈值",
+    "实际sim_device、PhysX GPU与GPU pipeline状态进入归档"
+  ],
+  "native_smoke": {
+    "synthetic_fixture_only": true,
+    "policy_steps": 1000,
+    "num_envs": 1,
+    "physical_failures": 0,
+    "policy_updates": 0,
+    "hold_tail_task_samples": 50,
+    "hold_tail_estimator_samples": 50,
+    "previous_transition_pairing_verified": true,
+    "base_zero_input_samples": 1000,
+    "runtime": {
+      "python": "3.8.20",
+      "torch": "2.3.1+cu121",
+      "device": "cpu",
+      "gym_import_path": "/home/sorry/.cache/unifp/isaacgym_preview4/pkg/isaacgym/python/isaacgym/__init__.py",
+      "sim_device": "cuda:0",
+      "physx_use_gpu": true,
+      "use_gpu_pipeline": false
+    },
+    "archive": "evaluation_followup/static_half_E"
+  },
+  "limits": [
+    "保留B-T05旧验证身份及只读归档，本修正以新身份单独留证",
+    "合成权重smoke仅说明接口与统计可运行，不能用其误差宣称A／B复现效果",
+    "真实墙场景仍待B08-Q3d确认；B-T06未完成",
+    "R组独立命令／外力phase诊断仍在后续审查范围，尚不能把当前单外力phase称作两流独立分段统计"
+  ]
+}

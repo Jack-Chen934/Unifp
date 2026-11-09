@@ -1,0 +1,42 @@
+{
+  "asset": "/home/sorry/python_ws/interactive/unifp_reproduction/UniFP_v3/resources/robots/v3_a1_desktop_train_v6_coplanar_r2/urdf/a1arm_rgm3_desktop_fixed_gripper.urdf",
+  "backend": "gpu",
+  "tensor_device": "cpu",
+  "num_envs": 4,
+  "shape_count": 158,
+  "segments": [
+    {
+      "name": "stationary",
+      "steps": 25,
+      "physical_failures": 0,
+      "peak_base_contact_n": 0.0,
+      "mean_drive_velocity_rad_s": [
+        0.050127480179071426,
+        0.019317124038934708,
+        0.08296781033277512,
+        0.042611852288246155
+      ]
+    },
+    {
+      "name": "wheel_motion",
+      "steps": 25,
+      "physical_failures": 0,
+      "peak_base_contact_n": 0.0,
+      "mean_drive_velocity_rad_s": [
+        0.5028958320617676,
+        0.5247943997383118,
+        0.5942782759666443,
+        0.49995243549346924
+      ]
+    }
+  ],
+  "local_reset_other_rows_max_difference": {
+    "root_states": 0.0,
+    "commands": 0.0,
+    "obs_history": 0.0,
+    "episode_length_buf": 0.0,
+    "dof_state": 0.0
+  },
+  "finite": true,
+  "note_zh": "名义短测，无PPO；不代替长时间运动与策略验收。"
+}

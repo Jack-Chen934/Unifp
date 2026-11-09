@@ -1,0 +1,19 @@
+{
+  "pid": 2017242,
+  "sid": 2017242,
+  "gpu": 3,
+  "command": [
+    "/mnt/data_8THDD/conda_envs/unifp_v3_stage1/bin/python",
+    "/mnt/data_8THDD/myl_unifp_v3_stage1/validation/b_entropy_closed_loop_20261108_r01/resume_after_archive_error.py"
+  ],
+  "started_at": "2026-11-08T21:36:03.730138+08:00",
+  "archive_move_verification": {
+    "checked_at": "2026-11-08T21:36:03.727481+08:00",
+    "cross_disk_readonly_failure_reproduced": true,
+    "same_disk_sealed_directory_move_passed": true,
+    "TMPDIR": "/mnt/data_8THDD/myl_unifp_v3_stage1/validation/b_entropy_closed_loop_20261108_r01/tmp_same_disk",
+    "same_device_as_output": true,
+    "business_source_modified": false
+  },
+  "resume_script_sha256": "d542b12b5d5eab053223a8e62c041dcba58b369c43c048e0282913ec63673368"
+}

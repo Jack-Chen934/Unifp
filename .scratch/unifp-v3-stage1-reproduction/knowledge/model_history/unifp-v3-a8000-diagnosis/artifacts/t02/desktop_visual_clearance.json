@@ -1,0 +1,140 @@
+{
+  "source_urdf": "UniFP_v3/resources/robots/v3_a1_desktop/urdf/a1arm_rgm3_desktop_fixed_gripper.urdf",
+  "source_sha256": "1dc2f47cf62baf707d9f1e7595b9df6b4455193feabedbd0b46e940ddffb9c0d",
+  "units": "m/rad",
+  "method_zh": "URDF origin/FK转换至base坐标；视觉距离使用三角网格signed_distance（正为内部），碰撞相交半径使用两凸体交集的最大内切球（正为重叠）。有限角度检查不代表全域无碰撞。",
+  "wheels": {
+    "fl": {
+      "visual_max_radius_m": 0.10001133390115902,
+      "source_collision_max_radius_m": 0.10422040479418025,
+      "retained_nominal_radius_m": 0.1016,
+      "visual_tread_axial_extent_m": [
+        -0.015374929644167423,
+        0.05537481606006622
+      ],
+      "source_collision_axial_extent_m": [
+        -0.01677696965634823,
+        0.057558417320251465
+      ]
+    },
+    "fr": {
+      "visual_max_radius_m": 0.10011818477019135,
+      "source_collision_max_radius_m": 0.10441654028925013,
+      "retained_nominal_radius_m": 0.1016,
+      "visual_tread_axial_extent_m": [
+        -0.05532999709248543,
+        0.015419291332364082
+      ],
+      "source_collision_axial_extent_m": [
+        -0.05783713608980179,
+        0.017829272896051407
+      ]
+    },
+    "bl": {
+      "visual_max_radius_m": 0.10001133390115902,
+      "source_collision_max_radius_m": 0.10422040479418025,
+      "retained_nominal_radius_m": 0.1016,
+      "visual_tread_axial_extent_m": [
+        -0.015374929644167423,
+        0.05537481606006622
+      ],
+      "source_collision_axial_extent_m": [
+        -0.01677696965634823,
+        0.057558417320251465
+      ]
+    },
+    "br": {
+      "visual_max_radius_m": 0.10011818477019135,
+      "source_collision_max_radius_m": 0.10441654028925013,
+      "retained_nominal_radius_m": 0.1016,
+      "visual_tread_axial_extent_m": [
+        -0.05532999709248543,
+        0.015419291332364082
+      ],
+      "source_collision_axial_extent_m": [
+        -0.05783713608980179,
+        0.017829272896051407
+      ]
+    }
+  },
+  "rear_clearance": {
+    "bl": {
+      "base_source_component": 71,
+      "nearest_base_visual_part": 312,
+      "contact_to_visual_distance_m": 0.0029489603260084516,
+      "samples": [
+        {
+          "steering_rad": -1.57,
+          "drive_rad": 0.0,
+          "visual_vertices_inside_shell": 0,
+          "visual_min_separation_m": 0.0028355380887158358,
+          "source_collision_intersection_radius_m": 0.0006649671216705902,
+          "visual_edge_surface_crossings": 0
+        },
+        {
+          "steering_rad": -1.0,
+          "drive_rad": 0.0,
+          "visual_vertices_inside_shell": 0,
+          "visual_min_separation_m": 0.004499221122429859,
+          "source_collision_intersection_radius_m": -0.00023560219384732617,
+          "visual_edge_surface_crossings": 0
+        },
+        {
+          "steering_rad": 1.0,
+          "drive_rad": 0.0,
+          "visual_vertices_inside_shell": 0,
+          "visual_min_separation_m": 0.004499302618851036,
+          "source_collision_intersection_radius_m": -6.227369693101979e-05,
+          "visual_edge_surface_crossings": 0
+        },
+        {
+          "steering_rad": 1.57,
+          "drive_rad": 0.0,
+          "visual_vertices_inside_shell": 0,
+          "visual_min_separation_m": 0.0028355527127985145,
+          "source_collision_intersection_radius_m": 0.0008073114541489528,
+          "visual_edge_surface_crossings": 0
+        }
+      ]
+    },
+    "br": {
+      "base_source_component": 61,
+      "nearest_base_visual_part": 312,
+      "contact_to_visual_distance_m": 0.0032144373442314707,
+      "samples": [
+        {
+          "steering_rad": -1.57,
+          "drive_rad": 0.0,
+          "visual_vertices_inside_shell": 0,
+          "visual_min_separation_m": 0.000545176400778985,
+          "source_collision_intersection_radius_m": 0.0020474936866997353,
+          "visual_edge_surface_crossings": 0
+        },
+        {
+          "steering_rad": -1.0,
+          "drive_rad": 0.0,
+          "visual_vertices_inside_shell": 0,
+          "visual_min_separation_m": 0.0022582389524120013,
+          "source_collision_intersection_radius_m": 0.0011226875541036616,
+          "visual_edge_surface_crossings": 0
+        },
+        {
+          "steering_rad": 1.0,
+          "drive_rad": 0.0,
+          "visual_vertices_inside_shell": 0,
+          "visual_min_separation_m": 0.0023149684629254364,
+          "source_collision_intersection_radius_m": 0.0010965265614816169,
+          "visual_edge_surface_crossings": 0
+        },
+        {
+          "steering_rad": 1.57,
+          "drive_rad": 0.0,
+          "visual_vertices_inside_shell": 0,
+          "visual_min_separation_m": 0.0005456242709552822,
+          "source_collision_intersection_radius_m": 0.002030415676181427,
+          "visual_edge_surface_crossings": 0
+        }
+      ]
+    }
+  }
+}

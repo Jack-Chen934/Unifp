@@ -1,0 +1,7 @@
+test_clipping_retains_crossing_triangle (test_visual_envelope_candidate.VisualEnvelopeGeometryTests.test_clipping_retains_crossing_triangle)
+Keep the unit square crossed by a triangle whose vertices lie outside. ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+OK

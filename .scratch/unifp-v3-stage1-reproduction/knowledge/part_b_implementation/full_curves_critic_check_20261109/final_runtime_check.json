@@ -1,0 +1,101 @@
+{
+  "checked_at": "2026-11-09T14:14:01.002230+08:00",
+  "hostname": "gpuf3",
+  "pid": 1981990,
+  "process_alive": true,
+  "run": "/mnt/data_8THDD/myl_unifp_v3_stage1/runs/b32000_seed1_v3_v6r2_resume12000_20261108",
+  "failure_json_exists": false,
+  "last_iteration": {
+    "completed_iterations": 16330,
+    "training_policy_steps": 391920,
+    "training_transitions": 1605304320,
+    "simulated_time_per_environment_s": 7838.399824798107,
+    "collection_s": 13.252116073388606,
+    "update_s": 0.6292657037265599,
+    "value_loss": 0.10609338991343975,
+    "surrogate_loss": -0.00019281481290818193,
+    "auxiliary_loss": 0.008165961503982544,
+    "main_learning_rate": 1.5000000000000002e-05,
+    "auxiliary/base_velocity_loss": 0.0014750973205082119,
+    "auxiliary/tcp_position_loss": 0.0005438818334368989,
+    "auxiliary/force_ee_loss": 0.006142902676947415,
+    "auxiliary/force_base_loss": 4.079716154592461e-06,
+    "episode/episode_count": 89,
+    "episode/reward_rate": 2.999201407336453,
+    "episode/reward_return": 59.19356263889355,
+    "episode/steps": 983.5393258426966,
+    "episode/timeout_bootstrap_bonus": 6.310070090079575,
+    "episode/raw/tracking_ee_force_world": 0.5264573154154788,
+    "episode/raw/tracking_lin_vel": 0.7648403808641969,
+    "episode/raw/tracking_ang_vel": 0.7086426659246509,
+    "episode/raw/alive": 0.9999999993302849,
+    "episode/raw/torques_steering": 1772.332546962781,
+    "episode/raw/torques_drive": 5484.353320861131,
+    "episode/raw/torques_arm": 1391.7710852462253,
+    "episode/raw/action_rate_steering": 16.125012162026394,
+    "episode/raw/action_rate_drive": 12.102453992607888,
+    "episode/raw/action_rate_arm": 9.578231061442514,
+    "episode/raw/dof_vel_steering": 15.112503255351205,
+    "episode/raw/dof_vel_arm": 122.65107778484902,
+    "episode/raw/dof_acc_steering": 46088.24051966292,
+    "episode/raw/dof_acc_drive": 781230.2622893258,
+    "episode/raw/dof_acc_arm": 328005.377633427,
+    "episode/raw/torque_limits_steering": 2.7091706763492542,
+    "episode/raw/torque_limits_drive": 3.4118580402952903,
+    "episode/raw/torque_limits_arm": 2.4717333490928906,
+    "episode/raw/dof_pos_limits": 0.030722384462708585,
+    "episode/raw/lin_vel_z": 0.001999398722219166,
+    "episode/raw/ang_vel_xy": 0.06157684296871839,
+    "episode/raw/base_height": 4.210864091383586e-05,
+    "episode/raw/collision": 0.0015339159977025866,
+    "episode/errors/tcp_geometric_l1_m/mean": 0.4834545090627135,
+    "episode/errors/tcp_geometric_l1_m/p95": 1.0718313606267564,
+    "episode/errors/tcp_geometric_l2_m/mean": 0.3204651079820783,
+    "episode/errors/tcp_geometric_l2_m/p95": 0.7024497225713194,
+    "episode/errors/base_planar_speed_m_s/mean": 0.24320851274755564,
+    "episode/errors/base_planar_speed_m_s/p95": 0.5621247343467862,
+    "episode/errors/base_yaw_rate_rad_s/mean": 0.2942778432971976,
+    "episode/errors/base_yaw_rate_rad_s/p95": 0.8088951207948535,
+    "episode/errors/tcp_compensated_l1_m/mean": 0.4088271539867594,
+    "episode/errors/tcp_compensated_l1_m/p95": 0.9837157622482,
+    "episode/errors/tcp_compensated_l2_m/mean": 0.27168627292587516,
+    "episode/errors/tcp_compensated_l2_m/p95": 0.6509925851996026
+  },
+  "historical_stop_records": {
+    "a8000_seed1_v3_v6r2_20261104": {
+      "error_type": "RuntimeError",
+      "error": "观察协议暂停：本轮有1次物理失败，完整边界已保存",
+      "completed_iterations": 767,
+      "last_saved_iteration": 767
+    },
+    "b32000_seed1_v3_v6r2_from_a8000_20261108": {
+      "error_type": "CalledProcessError",
+      "error": "Command '['/mnt/data_8THDD/conda_envs/unifp_v3_stage1/bin/python', '-m', 'legged_gym.scripts.evaluate_v3', '--reproduction_part', 'B', '--run_purpose', 'evaluation', '--checkpoint', '/mnt/data_8THDD/myl_unifp_v3_stage1/runs/b32000_seed1_v3_v6r2_from_a8000_20261108/checkpoints/model_012000.pt', '--num_envs', '32', '--sim_device', 'cuda:0', '--rl_device', 'cuda:0', '--pipeline', 'gpu', '--num_threads', '4', '--headless', '--seed', '1001', '--protocol', 'force_tracking', '--manifest', '/mnt/data_8THDD/myl_unifp_v3_stage1/validation/b_stage_20261107_r01/source_launch12000_20261108/UniFP_v3/configs/v3_b_initial_v1.json', '--scenario', 'R2', '--output_dir', '/mnt/data_8THDD/myl_unifp_v3_stage1/runs/b32000_seed1_v3_v6r2_from_a8000_20261108/observations/iteration_012000/R2', '--video', '--reference_archive', '/mnt/data_8THDD/myl_unifp_v3_stage1/validation/b_stage_20261107_r01/bt08_baseline_second_r04/R2']' returned non-zero exit status 1.",
+      "completed_iterations": 12000,
+      "last_saved_iteration": 12000
+    }
+  },
+  "diagnostic_status": {
+    "state": "completed",
+    "pid": 2129396,
+    "gpu": 3,
+    "results": [
+      {
+        "iteration": 9000,
+        "returncode": 0,
+        "ended_at": "2026-11-09T14:03:09.188818+08:00"
+      },
+      {
+        "iteration": 12000,
+        "returncode": 0,
+        "ended_at": "2026-11-09T14:07:20.213905+08:00"
+      },
+      {
+        "iteration": 16000,
+        "returncode": 0,
+        "ended_at": "2026-11-09T14:11:30.662471+08:00"
+      }
+    ],
+    "active_iteration": null
+  }
+}

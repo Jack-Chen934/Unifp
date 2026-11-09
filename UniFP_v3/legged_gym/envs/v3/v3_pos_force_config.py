@@ -25,7 +25,7 @@ class V3PosForceCfg(LeggedRobotCfg):
     class asset(LeggedRobotCfg.asset):
         file = os.path.join(
             LEGGED_GYM_ROOT_DIR,
-            "resources/robots/v3_a1_desktop_train_v1/urdf/a1arm_rgm3_desktop_fixed_gripper.urdf",
+            "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/urdf/a1arm_rgm3_desktop_fixed_gripper.urdf",
         )
         name = "v3_a1"
         foot_name = "_Link"
@@ -54,17 +54,17 @@ class V3PosForceCfg(LeggedRobotCfg):
         }
 
     class control(LeggedRobotCfg.control):
-        decimation = 4
+        decimation = 8
         control_type = "P"
         action_scale = 0.25
         wheel_action_scale = 5.0
         wheel_velocity_limit = 20.0
         # A03 short-test candidates; these are not frozen long-training values.
         stiffness = {
-            "fl_steering_joint": 24.9218,
-            "fr_steering_joint": 24.9218,
-            "bl_steering_joint": 24.9218,
-            "br_steering_joint": 24.9218,
+            "fl_steering_joint": 49.8436,
+            "fr_steering_joint": 49.8436,
+            "bl_steering_joint": 49.8436,
+            "br_steering_joint": 49.8436,
             "fl_wheel_drive_joint": 0.0,
             "fr_wheel_drive_joint": 0.0,
             "bl_wheel_drive_joint": 0.0,
@@ -81,10 +81,11 @@ class V3PosForceCfg(LeggedRobotCfg):
             "fr_steering_joint": 0.664582,
             "bl_steering_joint": 0.664582,
             "br_steering_joint": 0.664582,
-            "fl_wheel_drive_joint": 0.227385,
-            "fr_wheel_drive_joint": 0.227385,
-            "bl_wheel_drive_joint": 0.227385,
-            "br_wheel_drive_joint": 0.227385,
+            # Validated with 2.5 ms explicit feedback; simulation-only calibration.
+            "fl_wheel_drive_joint": 7.73109,
+            "fr_wheel_drive_joint": 7.73109,
+            "bl_wheel_drive_joint": 7.73109,
+            "br_wheel_drive_joint": 7.73109,
             "arm_joint1": 1.48316,
             "arm_joint2": 13.7176,
             "arm_joint3": 4.75773,
@@ -97,10 +98,19 @@ class V3PosForceCfg(LeggedRobotCfg):
         num_commands = 15
         heading_command = False
         resampling_time = 5.0
+        zero_vel_cmd_prob = 0.0
         class ranges:
             lin_vel_x = [-0.6, 0.6]
             lin_vel_y = [-0.4, 0.4]
             ang_vel_yaw = [-0.6, 0.6]
+
+    class force_events:
+        # B09: target range, pending native load validation before formal freezing.
+        max_force_n = 60.0
+        enabled_probability = 0.8
+        interval_s = [3.5, 9.0]
+        ramp_s = [1.0, 3.0]
+        hold_s = 1.0
 
     class goal_ee:
         # A08 candidate domain for validation; workspace margins are not frozen.
@@ -173,7 +183,7 @@ class V3PosForceCfg(LeggedRobotCfg):
         max_push_vel_xy = 0.8
 
     class sim(LeggedRobotCfg.sim):
-        dt = 0.005
+        dt = 0.0025
         substeps = 1
 
         class physx(LeggedRobotCfg.sim.physx):

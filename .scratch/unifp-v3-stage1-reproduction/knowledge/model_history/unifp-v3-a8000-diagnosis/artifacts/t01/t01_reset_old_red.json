@@ -1,0 +1,55 @@
+{
+  "passed": false,
+  "num_envs": 4,
+  "seed": 1,
+  "records": [
+    {
+      "boundary": "constructor_reset",
+      "tcp_world_m": [
+        1.1148685216903687,
+        -0.9453238248825073,
+        0.340795636177063
+      ],
+      "tcp_fk_error_m": 1.454375388393674,
+      "raw_cache_fk_error_m": 1.454375388393674,
+      "target_fk_error_m": 1.4543754271360323,
+      "label_error": 0.0,
+      "critic_label_error": 0.0
+    },
+    {
+      "boundary": "local_reset",
+      "tcp_world_m": [
+        1.1473519802093506,
+        0.027310771867632866,
+        1.1681393384933472
+      ],
+      "tcp_fk_error_m": 0.732637337868323,
+      "raw_cache_fk_error_m": 0.732637337868323,
+      "target_fk_error_m": 0.732637337868323,
+      "label_error": 0.0,
+      "critic_label_error": 0.0
+    },
+    {
+      "boundary": "after_physics",
+      "tcp_world_m": [
+        0.4157874584197998,
+        3.7141392112971516e-06,
+        1.1944091320037842
+      ],
+      "tcp_fk_error_m": 4.7034860946059186e-07,
+      "raw_cache_fk_error_m": 4.7034860946059186e-07,
+      "target_fk_error_m": 0.7325452893916851,
+      "label_error": 0.0,
+      "critic_label_error": 0.0
+    }
+  ],
+  "other_row_differences": {
+    "root_states": 0.0,
+    "dof_pos": 0.0,
+    "dof_vel": 0.0,
+    "obs_history": 0.0,
+    "critic_history": 0.0,
+    "episode_length_buf": 0.0
+  },
+  "training_counters_unchanged": true
+}

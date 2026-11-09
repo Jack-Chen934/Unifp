@@ -1,0 +1,185 @@
+{
+  "checked_at": "2026-11-09T13:43:25.827495+08:00",
+  "passed": true,
+  "frozen_evaluation_scenarios": 24,
+  "archive_artifact_checks_including_checkpoint": 344,
+  "checkpoint_copies_independently_rehashed": 24,
+  "source_files_rehashed": 50,
+  "source_all_match": true,
+  "configuration_only_diff": "entropy_coef 0.01 -> 0.0",
+  "two_trials_each_200": true,
+  "each_iteration_physical_substeps": 192,
+  "evaluation_quota_and_policy_updates": [
+    {
+      "label": "parent9000",
+      "scenario": "zero_force/S0/summary.json",
+      "episodes": 96,
+      "policy_updates": 0,
+      "checkpoint_sha256": "d0c64674c852300776662b389e14047e998f8444486f74db5fabea684f089b1f"
+    },
+    {
+      "label": "parent9000",
+      "scenario": "zero_force/S1/summary.json",
+      "episodes": 96,
+      "policy_updates": 0,
+      "checkpoint_sha256": "d0c64674c852300776662b389e14047e998f8444486f74db5fabea684f089b1f"
+    },
+    {
+      "label": "parent9000",
+      "scenario": "zero_force/S2/summary.json",
+      "episodes": 96,
+      "policy_updates": 0,
+      "checkpoint_sha256": "d0c64674c852300776662b389e14047e998f8444486f74db5fabea684f089b1f"
+    },
+    {
+      "label": "parent9000",
+      "scenario": "R2/R2/summary.json",
+      "episodes": 96,
+      "policy_updates": 0,
+      "checkpoint_sha256": "d0c64674c852300776662b389e14047e998f8444486f74db5fabea684f089b1f"
+    },
+    {
+      "label": "parent9000",
+      "scenario": "contact/contact/summary.json",
+      "episodes": 96,
+      "policy_updates": 0,
+      "checkpoint_sha256": "d0c64674c852300776662b389e14047e998f8444486f74db5fabea684f089b1f"
+    },
+    {
+      "label": "parent9000",
+      "scenario": "contact/zero_control/summary.json",
+      "episodes": 32,
+      "policy_updates": 0,
+      "checkpoint_sha256": "d0c64674c852300776662b389e14047e998f8444486f74db5fabea684f089b1f"
+    },
+    {
+      "label": "control9200",
+      "scenario": "zero_force/S0/summary.json",
+      "episodes": 96,
+      "policy_updates": 0,
+      "checkpoint_sha256": "bacab2e8fd0ff0d5cc88ba366d787ad1da22e9018e978c80e1cdbed899bf4686"
+    },
+    {
+      "label": "control9200",
+      "scenario": "zero_force/S1/summary.json",
+      "episodes": 96,
+      "policy_updates": 0,
+      "checkpoint_sha256": "bacab2e8fd0ff0d5cc88ba366d787ad1da22e9018e978c80e1cdbed899bf4686"
+    },
+    {
+      "label": "control9200",
+      "scenario": "zero_force/S2/summary.json",
+      "episodes": 96,
+      "policy_updates": 0,
+      "checkpoint_sha256": "bacab2e8fd0ff0d5cc88ba366d787ad1da22e9018e978c80e1cdbed899bf4686"
+    },
+    {
+      "label": "control9200",
+      "scenario": "R2/R2/summary.json",
+      "episodes": 96,
+      "policy_updates": 0,
+      "checkpoint_sha256": "bacab2e8fd0ff0d5cc88ba366d787ad1da22e9018e978c80e1cdbed899bf4686"
+    },
+    {
+      "label": "control9200",
+      "scenario": "contact/contact/summary.json",
+      "episodes": 96,
+      "policy_updates": 0,
+      "checkpoint_sha256": "bacab2e8fd0ff0d5cc88ba366d787ad1da22e9018e978c80e1cdbed899bf4686"
+    },
+    {
+      "label": "control9200",
+      "scenario": "contact/zero_control/summary.json",
+      "episodes": 32,
+      "policy_updates": 0,
+      "checkpoint_sha256": "bacab2e8fd0ff0d5cc88ba366d787ad1da22e9018e978c80e1cdbed899bf4686"
+    },
+    {
+      "label": "no_entropy9200",
+      "scenario": "zero_force/S0/summary.json",
+      "episodes": 96,
+      "policy_updates": 0,
+      "checkpoint_sha256": "c67da081ac6d49da389c47ed2afed10b902813d3a9375a9cb8f40d6848c66268"
+    },
+    {
+      "label": "no_entropy9200",
+      "scenario": "zero_force/S1/summary.json",
+      "episodes": 96,
+      "policy_updates": 0,
+      "checkpoint_sha256": "c67da081ac6d49da389c47ed2afed10b902813d3a9375a9cb8f40d6848c66268"
+    },
+    {
+      "label": "no_entropy9200",
+      "scenario": "zero_force/S2/summary.json",
+      "episodes": 96,
+      "policy_updates": 0,
+      "checkpoint_sha256": "c67da081ac6d49da389c47ed2afed10b902813d3a9375a9cb8f40d6848c66268"
+    },
+    {
+      "label": "no_entropy9200",
+      "scenario": "R2/R2/summary.json",
+      "episodes": 96,
+      "policy_updates": 0,
+      "checkpoint_sha256": "c67da081ac6d49da389c47ed2afed10b902813d3a9375a9cb8f40d6848c66268"
+    },
+    {
+      "label": "no_entropy9200",
+      "scenario": "contact/contact/summary.json",
+      "episodes": 96,
+      "policy_updates": 0,
+      "checkpoint_sha256": "c67da081ac6d49da389c47ed2afed10b902813d3a9375a9cb8f40d6848c66268"
+    },
+    {
+      "label": "no_entropy9200",
+      "scenario": "contact/zero_control/summary.json",
+      "episodes": 32,
+      "policy_updates": 0,
+      "checkpoint_sha256": "c67da081ac6d49da389c47ed2afed10b902813d3a9375a9cb8f40d6848c66268"
+    },
+    {
+      "label": "formal16000",
+      "scenario": "zero_force/S0/summary.json",
+      "episodes": 96,
+      "policy_updates": 0,
+      "checkpoint_sha256": "f02d48b7ef3eccbf3454244291074824ae179ad61f8ea4d048a4b8947fec6b5f"
+    },
+    {
+      "label": "formal16000",
+      "scenario": "zero_force/S1/summary.json",
+      "episodes": 96,
+      "policy_updates": 0,
+      "checkpoint_sha256": "f02d48b7ef3eccbf3454244291074824ae179ad61f8ea4d048a4b8947fec6b5f"
+    },
+    {
+      "label": "formal16000",
+      "scenario": "zero_force/S2/summary.json",
+      "episodes": 96,
+      "policy_updates": 0,
+      "checkpoint_sha256": "f02d48b7ef3eccbf3454244291074824ae179ad61f8ea4d048a4b8947fec6b5f"
+    },
+    {
+      "label": "formal16000",
+      "scenario": "R2/R2/summary.json",
+      "episodes": 96,
+      "policy_updates": 0,
+      "checkpoint_sha256": "f02d48b7ef3eccbf3454244291074824ae179ad61f8ea4d048a4b8947fec6b5f"
+    },
+    {
+      "label": "formal16000",
+      "scenario": "contact/contact/summary.json",
+      "episodes": 96,
+      "policy_updates": 0,
+      "checkpoint_sha256": "f02d48b7ef3eccbf3454244291074824ae179ad61f8ea4d048a4b8947fec6b5f"
+    },
+    {
+      "label": "formal16000",
+      "scenario": "contact/zero_control/summary.json",
+      "episodes": 32,
+      "policy_updates": 0,
+      "checkpoint_sha256": "f02d48b7ef3eccbf3454244291074824ae179ad61f8ea4d048a4b8947fec6b5f"
+    }
+  ],
+  "full_policy_traces_rehashed": false,
+  "scope_note": "核对原归档中除大体积policy_trace外的文件；本机保存摘要和日志快照，大trace继续保留远程。未重新执行仿真。",
+  "snapshot_sha256": "d8a4f592735b77e080246a5cca217c90f9b2698c6ee0e888e3544a07dfd37cb3"
+}

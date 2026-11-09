@@ -1,0 +1,76 @@
+{
+  "asset_urdf_sha256": "0f94cea2bad8b3cf2fa7c5b422348adb2e0345b899df2fddebffaa8d6d7a5e45",
+  "asset_manifest_sha256": "3174b486bb12e7a103bb0e18815af329b11a7308b6f7074e8e5f50728e6db1c2",
+  "static_contract_passed": true,
+  "target_step454_geometry_repair_passed": true,
+  "local_cpu_tensor_gpu_physx_passed": true,
+  "remote_gpu_tensor_physx_passed": true,
+  "movement_gate_passed": true,
+  "physical_failure_reduction_demonstrated": false,
+  "training_asset_switched": false,
+  "policy_updates": 0,
+  "process_exit_codes": {
+    "unit_tests": 0,
+    "nine_pose_fcl": 0,
+    "native_pose_fcl": 0,
+    "local_cpu_tensor_gpu_physx": 0,
+    "remote_nominal4": 0,
+    "remote_wheels_and_two_policy_samples": 0,
+    "new_failures_fcl": 0
+  },
+  "policy_samples": [
+    {
+      "scenario": "S1",
+      "policy_steps": 1000,
+      "physical_failures": 3,
+      "v6_first20s_physical_failures": 2,
+      "predicates": {
+        "base_contact": 3
+      },
+      "events": [
+        {
+          "policy_step": 423,
+          "env_id": 41,
+          "base_contact_norm_n": 76.30519182192052
+        },
+        {
+          "policy_step": 480,
+          "env_id": 51,
+          "base_contact_norm_n": 14.298079985629018
+        },
+        {
+          "policy_step": 766,
+          "env_id": 96,
+          "base_contact_norm_n": 12.345142155040406
+        }
+      ]
+    },
+    {
+      "scenario": "training",
+      "policy_steps": 1000,
+      "physical_failures": 3,
+      "v6_first20s_physical_failures": 2,
+      "predicates": {
+        "base_contact": 3
+      },
+      "events": [
+        {
+          "policy_step": 423,
+          "env_id": 41,
+          "base_contact_norm_n": 5.135888059816994
+        },
+        {
+          "policy_step": 481,
+          "env_id": 51,
+          "base_contact_norm_n": 12.777601702660775
+        },
+        {
+          "policy_step": 765,
+          "env_id": 96,
+          "base_contact_norm_n": 30.244668922544403
+        }
+      ]
+    }
+  ],
+  "note_zh": "完成本任务范围内独立候选生成和检查交付；不代表所有物理失败已修复或正式训练准入。"
+}

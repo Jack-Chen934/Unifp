@@ -1,0 +1,25 @@
+{
+  "removed": [
+    {
+      "removed": "geometry_9000_first",
+      "reason": "本次诊断的中间预览，最终原始事件和代表图保留",
+      "bytes": 66657423
+    },
+    {
+      "removed": "geometry_9000_pair",
+      "reason": "本次诊断的中间预览，最终原始事件和代表图保留",
+      "bytes": 42207399
+    },
+    {
+      "removed": "geometry_final",
+      "reason": "本次诊断的中间预览，最终原始事件和代表图保留",
+      "bytes": 221866072
+    },
+    {
+      "removed": "R2_frames.png",
+      "reason": "本次诊断的中间预览，最终原始事件和代表图保留",
+      "bytes": 75720
+    }
+  ],
+  "retained": "geometry_final、全部probe原始数据、正式补评估摘要／视频／曲线；远程原始trace保留"
+}

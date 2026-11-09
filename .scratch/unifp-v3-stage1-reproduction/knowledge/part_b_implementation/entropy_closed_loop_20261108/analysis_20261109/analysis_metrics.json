@@ -1,0 +1,208 @@
+{
+  "windows": [
+    {
+      "first_iteration": 8001,
+      "last_iteration": 9000,
+      "record_count": 1000,
+      "episodes": 98547,
+      "physical_failures": 2007,
+      "failure_pct": 2.036591677067795,
+      "tcp_cm_step_weighted": 22.034452203684527,
+      "reward_rate_time_weighted": 4.938610761598766,
+      "mean_value_loss": 0.045922177046898285,
+      "mean_main_lr": 2.0436875000000002e-05
+    },
+    {
+      "first_iteration": 9001,
+      "last_iteration": 10000,
+      "record_count": 1000,
+      "episodes": 98561,
+      "physical_failures": 1054,
+      "failure_pct": 1.069388500522519,
+      "tcp_cm_step_weighted": 15.278655285207634,
+      "reward_rate_time_weighted": 4.846967542259671,
+      "mean_value_loss": 0.0329599639473483,
+      "mean_main_lr": 3.054687500000001e-05
+    },
+    {
+      "first_iteration": 10001,
+      "last_iteration": 11000,
+      "record_count": 1000,
+      "episodes": 100363,
+      "physical_failures": 4899,
+      "failure_pct": 4.881280950150952,
+      "tcp_cm_step_weighted": 22.15849766613393,
+      "reward_rate_time_weighted": 4.267378334676448,
+      "mean_value_loss": 0.06872411876674742,
+      "mean_main_lr": 2.816656250000001e-05
+    },
+    {
+      "first_iteration": 11001,
+      "last_iteration": 12000,
+      "record_count": 1000,
+      "episodes": 103943,
+      "physical_failures": 10985,
+      "failure_pct": 10.568292237091482,
+      "tcp_cm_step_weighted": 29.35313805172913,
+      "reward_rate_time_weighted": 3.6191698957836684,
+      "mean_value_loss": 0.13166982287541032,
+      "mean_main_lr": 2.672937500000001e-05
+    },
+    {
+      "first_iteration": 12001,
+      "last_iteration": 13000,
+      "record_count": 1000,
+      "episodes": 106452,
+      "physical_failures": 17693,
+      "failure_pct": 16.620636531018675,
+      "tcp_cm_step_weighted": 30.206079426858892,
+      "reward_rate_time_weighted": 2.8570313533147904,
+      "mean_value_loss": 0.21452628195211293,
+      "mean_main_lr": 2.1567500000000007e-05
+    },
+    {
+      "first_iteration": 13001,
+      "last_iteration": 14000,
+      "record_count": 1000,
+      "episodes": 102431,
+      "physical_failures": 8122,
+      "failure_pct": 7.929240171432476,
+      "tcp_cm_step_weighted": 32.39210442772321,
+      "reward_rate_time_weighted": 2.4954353057408816,
+      "mean_value_loss": 0.17854180363416672,
+      "mean_main_lr": 2.0865625000000004e-05
+    },
+    {
+      "first_iteration": 14001,
+      "last_iteration": 15000,
+      "record_count": 1000,
+      "episodes": 101217,
+      "physical_failures": 6012,
+      "failure_pct": 5.93971368446012,
+      "tcp_cm_step_weighted": 29.339700101926578,
+      "reward_rate_time_weighted": 2.7748688919826163,
+      "mean_value_loss": 0.1392941086586565,
+      "mean_main_lr": 1.8705e-05
+    },
+    {
+      "first_iteration": 15001,
+      "last_iteration": 16000,
+      "record_count": 1000,
+      "episodes": 101708,
+      "physical_failures": 7668,
+      "failure_pct": 7.539229952412789,
+      "tcp_cm_step_weighted": 28.790074877505738,
+      "reward_rate_time_weighted": 2.8821576891040253,
+      "mean_value_loss": 0.12833827258497477,
+      "mean_main_lr": 1.5036250000000002e-05
+    },
+    {
+      "first_iteration": 16001,
+      "last_iteration": 16218,
+      "record_count": 218,
+      "episodes": 21637,
+      "physical_failures": 635,
+      "failure_pct": 2.934787632296529,
+      "tcp_cm_step_weighted": 27.394497398871778,
+      "reward_rate_time_weighted": 2.986379104272169,
+      "mean_value_loss": 0.09842062815852942,
+      "mean_main_lr": 1.3755733944954132e-05
+    }
+  ],
+  "trial_summary": {
+    "control_200": {
+      "completion": {
+        "completed_iterations": 9200,
+        "additional_iterations": 200,
+        "last_saved_iteration": 9200,
+        "entropy_coef": 0.01,
+        "origin_sha256": "d0c64674c852300776662b389e14047e998f8444486f74db5fabea684f089b1f"
+      },
+      "std_initial": [
+        0.7303501963615417,
+        0.7252022624015808,
+        0.7145181894302368,
+        0.7180704474449158,
+        0.536534309387207,
+        0.5331368446350098,
+        0.522810161113739,
+        0.5391896963119507,
+        0.39775049686431885,
+        0.31562986969947815,
+        0.2833045423030853,
+        0.4716966450214386,
+        0.38908231258392334,
+        0.4349857270717621
+      ],
+      "std_final": [
+        0.7908034920692444,
+        0.7830497026443481,
+        0.7725017070770264,
+        0.7753628492355347,
+        0.5867906808853149,
+        0.5757265090942383,
+        0.5772942304611206,
+        0.5794693827629089,
+        0.42067575454711914,
+        0.3484184443950653,
+        0.3077399730682373,
+        0.5074533820152283,
+        0.4330603778362274,
+        0.46821948885917664
+      ],
+      "iterations": 200,
+      "completed_episodes": 16747,
+      "failure_fraction_of_completed": 0.02603451364423479,
+      "completed_episode_step_weighted_tcp_m": 0.12701511411123645,
+      "last_50_joint2_saturation": 0.12107844322919846,
+      "mean_iteration_s": 11.038194720838218
+    },
+    "no_entropy_200": {
+      "completion": {
+        "completed_iterations": 9200,
+        "additional_iterations": 200,
+        "last_saved_iteration": 9200,
+        "entropy_coef": 0.0,
+        "origin_sha256": "d0c64674c852300776662b389e14047e998f8444486f74db5fabea684f089b1f"
+      },
+      "std_initial": [
+        0.7303501963615417,
+        0.7252022624015808,
+        0.7145181894302368,
+        0.7180704474449158,
+        0.536534309387207,
+        0.5331368446350098,
+        0.522810161113739,
+        0.5391896963119507,
+        0.39775049686431885,
+        0.31562986969947815,
+        0.2833045423030853,
+        0.4716966450214386,
+        0.38908231258392334,
+        0.4349857270717621
+      ],
+      "std_final": [
+        0.6847808957099915,
+        0.6728082895278931,
+        0.6625322103500366,
+        0.6701397895812988,
+        0.4847410321235657,
+        0.4804621636867523,
+        0.4746028780937195,
+        0.48091739416122437,
+        0.3288607597351074,
+        0.2562759816646576,
+        0.22230146825313568,
+        0.4147433936595917,
+        0.33883941173553467,
+        0.3762596547603607
+      ],
+      "iterations": 200,
+      "completed_episodes": 16631,
+      "failure_fraction_of_completed": 0.017076543803740005,
+      "completed_episode_step_weighted_tcp_m": 0.12493760134509253,
+      "last_50_joint2_saturation": 0.06652506694197655,
+      "mean_iteration_s": 10.817220796677283
+    }
+  }
+}

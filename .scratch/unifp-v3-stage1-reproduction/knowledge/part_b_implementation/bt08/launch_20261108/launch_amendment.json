@@ -1,0 +1,19 @@
+{
+  "说明": "用户明确授权正式开训，并增加累计12000轮中期检查。只改观察时间，原范围、阈值、训练源码、资产、配置、runtime和七阶段原证据不变；旧封存manifest原样保留，不冒称新评估。",
+  "first_check_cumulative_iteration": 12000,
+  "training_budget_additional_iterations": 32000,
+  "final_cumulative_iteration": 40000,
+  "source": "/mnt/data_8THDD/myl_unifp_v3_stage1/validation/b_stage_20261107_r01/source_launch12000_20261108/UniFP_v3",
+  "original_source": "/mnt/data_8THDD/myl_unifp_v3_stage1/validation/b_stage_20261107_r01/source_r06/UniFP_v3",
+  "changed_files": [
+    "configs/v3_b_initial_v1.json",
+    "tests/test_v3_b_observer.py"
+  ],
+  "source_and_asset_identity_unchanged": true,
+  "original_force_manifest_sha256": "410833d8f87f9aac55d01832ef33ed762cdfc86d08784e79f9c315749b56f0a3",
+  "new_force_manifest_sha256": "69341a52cdbc21c5eb91ddf78cea9b8ec581e0c1c2d075f3632de315b2776763",
+  "tests": {
+    "first_red": "新增12000测试1失败1通过，失败因原安排无12000命令",
+    "green": "本机观察／门控12项通过"
+  }
+}

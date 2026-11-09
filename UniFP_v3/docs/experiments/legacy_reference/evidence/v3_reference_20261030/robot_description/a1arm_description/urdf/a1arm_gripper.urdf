@@ -1,0 +1,95 @@
+<?xml version="1.0"?>
+<robot name="a1arm_gripper">
+  <link name="arm_seg6">
+      <inertial>
+          <origin xyz="2.406E-06 -9.4582E-08 -0.038796" rpy="0 0 0" />
+          <mass value="0.35" />
+          <inertia
+              ixx="0.00011445" ixy="3.336E-10" ixz="1.4799E-08"
+              iyy="0.00011239" iyz="-6.1057E-10"
+              izz="7.4519E-05" />
+      </inertial>
+      <visual>
+          <origin xyz="0 0 0" rpy="0 0 0" />
+          <geometry>
+              <mesh filename="../meshes/arm_seg6.visual.glb" />
+          </geometry>
+          <material name="arm_seg6">
+              <color rgba="0.04 0.04 0.04 1" />
+          </material>
+      </visual>
+      <collision>
+          <origin xyz="0 0 0" rpy="0 0 0" />
+          <geometry>
+              <mesh filename="../meshes/arm_seg6.collision.glb" />
+          </geometry>
+      </collision>
+  </link>
+
+  <link name="gripper1">
+      <inertial>
+          <origin xyz="0.022575 -0.01276 0.015787" rpy="0 0 0" />
+          <mass value="0.020333" />
+          <inertia
+              ixx="1.7676E-06" ixy="8.2594E-08" ixz="2.5995E-07"
+              iyy="4.7258E-06" iyz="1.2291E-07"
+              izz="5.2672E-06" />
+      </inertial>
+      <visual>
+          <origin xyz="0 0 0" rpy="0 0 0" />
+          <geometry>
+              <mesh filename="../meshes/gripper1.visual.glb" />
+          </geometry>
+          <material name="gripper1">
+              <color rgba="0.04 0.04 0.04 1" />
+          </material>
+      </visual>
+      <collision>
+          <origin xyz="0 0 0" rpy="0 0 0" />
+          <geometry>
+              <mesh filename="../meshes/gripper1.collision.glb" />
+          </geometry>
+      </collision>
+  </link>
+  <joint name="gripper1_axis" type="prismatic">
+      <origin xyz="0.014 -0.011914 0.003125" rpy="1.5708 -1.5708 3.1415" />
+      <parent link="arm_seg6" />
+      <child link="gripper1" />
+      <axis xyz="0 0 1" />
+      <limit lower="0" upper="0.03" effort="200" velocity="0.25" />
+  </joint>
+
+  <link name="gripper2">
+      <inertial>
+          <origin xyz="0.022575 -0.01276 0.015787" rpy="0 0 0" />
+          <mass value="0.020333" />
+          <inertia
+              ixx="1.7676E-06" ixy="8.2594E-08" ixz="2.5995E-07"
+              iyy="4.7258E-06" iyz="1.2291E-07"
+              izz="5.2672E-06" />
+      </inertial>
+      <visual>
+          <origin xyz="0 0 0" rpy="0 0 0" />
+          <geometry>
+              <mesh filename="../meshes/gripper2.visual.glb" />
+          </geometry>
+          <material name="gripper2">
+              <color rgba="0.04 0.04 0.04 1" />
+          </material>
+      </visual>
+      <collision>
+          <origin xyz="0 0 0" rpy="0 0 0" />
+          <geometry>
+              <mesh filename="../meshes/gripper2.collision.glb" />
+          </geometry>
+      </collision>
+  </link>
+  <joint name="gripper2_axis" type="prismatic">
+      <origin xyz="-0.014 0.011914 0.003125" rpy="-1.5708 -1.5708 3.1415" />
+      <parent link="arm_seg6" />
+      <child link="gripper2" />
+      <axis xyz="0 0 1" />
+      <limit lower="0" upper="0.03" effort="200" velocity="0.25" />
+      <mimic joint="gripper1_axis" multiplier="1" offset="0" />
+  </joint>
+</robot>

@@ -1,0 +1,18 @@
+{
+  "checks": {
+    "identity_equal": true,
+    "progress_equal": true,
+    "model_exact_equal": true,
+    "rng_torch_equal": true,
+    "rng_cuda_equal": true,
+    "finite_model": true
+  },
+  "passed": true,
+  "progress": {
+    "completed_iterations": 1,
+    "training_policy_steps": 24,
+    "training_transitions": 768,
+    "rollout_step": 0
+  },
+  "observer_hashes_verified": true
+}

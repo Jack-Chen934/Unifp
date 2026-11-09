@@ -1,0 +1,26 @@
+{
+  "source_changes": [
+    "legged_gym/b2_gym_learn/ppo_cse_pf/v3_on_policy_runner.py",
+    "legged_gym/b2_gym_learn/ppo_cse_pf/v3_run_identity.py",
+    "legged_gym/scripts/train_v3.py",
+    "legged_gym/scripts/v3_args.py",
+    "legged_gym/utils/v3_config.py"
+  ],
+  "config_changes": {
+    "environment.run.reproduction_part": {
+      "parent": "A",
+      "target": "B"
+    },
+    "environment.run.run_purpose": {
+      "parent": "formal",
+      "target": "development"
+    },
+    "training.runner.experiment_name": {
+      "parent": "v3_pos_force_stage_a",
+      "target": "v3_pos_force_stage_b"
+    }
+  },
+  "runtime_changes": {},
+  "说明": "使用本机归档A身份与当前真实B配置做离线兼容核对；runtime沿用归档输入用于配置比较，不代表本机或远程原生运行通过。未读取远程父检查点。",
+  "passed": true
+}

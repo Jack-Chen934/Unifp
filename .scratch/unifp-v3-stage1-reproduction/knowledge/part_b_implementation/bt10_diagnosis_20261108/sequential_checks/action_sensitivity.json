@@ -1,0 +1,26 @@
+{
+  "position_action_scale": 0.25,
+  "arm_joint2_kp_nm_rad": 300.072,
+  "arm_joint2_effort_limit_nm": 40.0,
+  "rows": [
+    {
+      "iteration": 9000,
+      "arm_joint2_action_std": 0.31562986969947815,
+      "arm_joint2_position_target_std_before_limits_rad": 0.07890746742486954,
+      "arm_joint2_p_torque_sensitivity_std_before_limits_nm": 23.67792156511545
+    },
+    {
+      "iteration": 10000,
+      "arm_joint2_action_std": 0.43868911266326904,
+      "arm_joint2_position_target_std_before_limits_rad": 0.10967227816581726,
+      "arm_joint2_p_torque_sensitivity_std_before_limits_nm": 32.90957985377312
+    },
+    {
+      "iteration": 12000,
+      "arm_joint2_action_std": 0.8072143197059631,
+      "arm_joint2_position_target_std_before_limits_rad": 0.20180357992649078,
+      "arm_joint2_p_torque_sensitivity_std_before_limits_nm": 60.555603835701945
+    }
+  ],
+  "说明": "固定状态、忽略执行系数及关节目标和力矩限幅前的局部线性量级，不是实际电机力矩噪声或不可行概率。"
+}

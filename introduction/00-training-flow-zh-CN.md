@@ -9,8 +9,15 @@
 | [01 · Actor](/home/sorry/python_ws/interactive/unifp_reproduction/introduction/01-actor-zh-CN.md) | 观测如何变成 17 个动作，动作如何变成目标角度和关节力矩，默认角度为什么固定 |
 | [02 · Critic](/home/sorry/python_ws/interactive/unifp_reproduction/introduction/02-critic-zh-CN.md) | 447 维特权状态如何变成价值估计，它与即时奖励有什么区别 |
 | [03 · PPO](/home/sorry/python_ws/interactive/unifp_reproduction/introduction/03-ppo-zh-CN.md) | rollout、GAE、概率比、裁剪损失和反向传播如何更新网络 |
+| [04 · 两阶段训练逐步展开](/home/sorry/python_ws/interactive/unifp_reproduction/introduction/04-two-stage-training-details-zh-CN.md) | 目标具体长什么样、如何随时间变化，命令／真值／估计／奖励之间如何对应，以及一条样本的完整流向 |
+| [05 · 当前 V3 的 A／B 实施对应](/home/sorry/python_ws/interactive/unifp_reproduction/introduction/05-v3-two-stage-training-zh-CN.md) | 官方流程迁移到轮式机器人后保留与修改了什么，A8000如何衔接B32000，如何解读零力、受力和接触评估 |
+| [06 · 神经网络训练入门](/home/sorry/python_ws/interactive/unifp_reproduction/introduction/06-neural-network-training-zh-CN.md) | 从手算线性回归理解权重、梯度、反向传播与Adam，再对应Actor–Critic和PPO |
 
 建议顺序：先读本文的总流程，再读 Actor → Critic → PPO，最后回来看两个阶段的区别。
+
+如果对权重、损失、梯度和优化器还不熟悉，可先读06的基础例子，再回到01—03。06与Critic补充内容于2026-11-09整理；优化器执行是训练的一环，本身不等于PPO。
+
+如果希望先理解“训练时究竟给机器人什么任务”，可先读 04，再按需要查阅 01—03；05 单独说明当前 V3，避免把项目修改误认为官方设置。04／05于2026-11-08对照当前源码补充，文中演算不代表实测训练成绩。
 
 ## 1. 分析对象与证据范围
 
@@ -157,9 +164,9 @@ if self.global_steps > self.cfg.commands.force_start_step * 24:
 
 末端的统一奖励目标为：
 
-\[
+$$
 x_{target}^{world}=x_{cmd}^{world}+\frac{F_{ext}^{world}+R_{yaw}F_{cmd}^{local}}{K_{ee}}
-\]
+$$
 
 此时 `F_ext=0, F_cmd=0`，因此退化为 `x_target=x_cmd`。注意这里的 `K_ee` 是末端任务的虚拟刚度参数，不是关节 PD 增益。
 

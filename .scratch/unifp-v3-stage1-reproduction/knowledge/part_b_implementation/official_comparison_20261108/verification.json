@@ -1,0 +1,21 @@
+{
+  "checks": {
+    "python_ast_valid": true,
+    "report_links_exist": true,
+    "all_source_hashes_rechecked": true,
+    "iteration_alignment_and_reward_closure_assertions_passed": true,
+    "official_raw_npz_matches_summary": true,
+    "charts_visually_checked": true
+  },
+  "说明": "只读分析与归档校验；未运行Gym，未改变训练、资产、超参数或观察门槛。",
+  "artifact_sha256": {
+    "aggregate_remote_episodes.py": "a2b11e5c13b6342875b2efae3a567a9a9a036110e82305dcdcc178ca299bc936",
+    "compare.py": "bdf0e05155384fa71863841e00ca74cb4f788ed31da13446157b4a803c925015",
+    "comparison_summary.json": "7e9558e5b0703470a37e53a89cf0fdaf17e3865cfd7fba9d055c3fd462c8e562",
+    "live_training_snapshot.json": "485ce487841b2b5343e830fffaf3f703297f37d0d18f0a4ab94618badc3568cc",
+    "training_comparison.png": "c194f7b04f3b524d17a4e1efec32565c4ee17f77860056b733efcee268fc87a9",
+    "v3_episode_blocks100.json": "553fa75c54f6f8313134390b0449e3da46347c97624834ed60f42ab2b860950a",
+    "zero_force_retention.png": "b67a9663d36cffacaab5c80c8f4955d827756c78ed6c4c79fa228953f9af200d",
+    "实验对比报告.md": "5aeb95a428169347c1e7c37a1c7608c31593ce3e8197a9fa612594450647a814"
+  }
+}

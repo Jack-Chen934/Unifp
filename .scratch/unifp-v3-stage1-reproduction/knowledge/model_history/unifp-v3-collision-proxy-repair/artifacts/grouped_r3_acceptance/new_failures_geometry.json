@@ -1,0 +1,570 @@
+{
+  "urdf": "/home/sorry/python_ws/interactive/unifp_reproduction/UniFP_v3/resources/robots/v3_a1_desktop_train_v7_local_base_proxy_r3/urdf/a1arm_rgm3_desktop_fixed_gripper.urdf",
+  "dof_names": [
+    "arm_joint1",
+    "arm_joint2",
+    "arm_joint3",
+    "arm_joint4",
+    "arm_joint5",
+    "arm_joint6",
+    "bl_steering_joint",
+    "bl_wheel_drive_joint",
+    "br_steering_joint",
+    "br_wheel_drive_joint",
+    "fl_steering_joint",
+    "fl_wheel_drive_joint",
+    "fr_steering_joint",
+    "fr_wheel_drive_joint"
+  ],
+  "python_fcl_version": "0.7.0.11",
+  "events": [
+    {
+      "policy_step": 423,
+      "env_id": 41,
+      "other_body": "wrist_camera",
+      "joint_positions_rad": {
+        "arm_joint1": -2.2051520347595215,
+        "arm_joint2": 2.58370041847229,
+        "arm_joint3": -1.0666608810424805,
+        "arm_joint4": 0.1462162882089615,
+        "arm_joint5": -1.22061288356781,
+        "arm_joint6": -1.1458103656768799,
+        "bl_steering_joint": 0.4888714551925659,
+        "bl_wheel_drive_joint": 1.734703540802002,
+        "br_steering_joint": 0.8072022199630737,
+        "br_wheel_drive_joint": -1.7480034828186035,
+        "fl_steering_joint": 1.2315553426742554,
+        "fl_wheel_drive_joint": 4.536558151245117,
+        "fr_steering_joint": 0.9112616181373596,
+        "fr_wheel_drive_joint": -4.656012058258057
+      },
+      "pose_source": "native_terminal_body_pose",
+      "fk_position_error_m": 8.379810021914604e-07,
+      "other_pose_in_base_m": [
+        [
+          0.09493185446271005,
+          0.45250706108878236,
+          -0.8866934660146445,
+          -0.09130806124746016
+        ],
+        [
+          0.5493878396116095,
+          0.7189741467141272,
+          0.4257336938082074,
+          -0.19826673317404442
+        ],
+        [
+          0.8301571807164948,
+          -0.5275542967519885,
+          -0.18034832764224812,
+          0.07321950510381764
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "base_contact_norm_n": 76.30519182192052,
+      "visual": {
+        "surface_intersection": false,
+        "intersecting_pairs": [],
+        "minimum_surface_distance_m": 0.004431664730883998,
+        "closest_disjoint_pair": {
+          "distance_m": 0.004431664730883998,
+          "base_surface": "base_link_visual",
+          "other_surface": "wrist_camera_visual_0",
+          "nearest_points_in_base_m": [
+            [
+              -0.08778849276332135,
+              -0.23912285736902097,
+              0.00546315883432891
+            ],
+            [
+              -0.08778891912016469,
+              -0.23907894934399787,
+              0.009894606023512095
+            ]
+          ]
+        }
+      },
+      "collision": {
+        "surface_intersection": true,
+        "intersecting_pairs": [
+          [
+            "base_link_local_1_group_0",
+            "wrist_camera_proxy_0"
+          ]
+        ],
+        "minimum_surface_distance_m": 0.0,
+        "closest_disjoint_pair": {
+          "distance_m": 0.028387326219846524,
+          "base_surface": "base_link_local_1_group_10",
+          "other_surface": "wrist_camera_proxy_0",
+          "nearest_points_in_base_m": [
+            [
+              -0.08364835760691879,
+              -0.2382612421875028,
+              -0.018714298289471576
+            ],
+            [
+              -0.08364835757156518,
+              -0.23821603092821825,
+              0.009672991927349398
+            ]
+          ]
+        }
+      },
+      "desktop_collision": {
+        "surface_intersection": true,
+        "intersecting_pairs": [
+          [
+            "base_link_solid_8",
+            "wrist_camera_solid_4"
+          ]
+        ],
+        "minimum_surface_distance_m": 0.0,
+        "closest_disjoint_pair": {
+          "distance_m": 1.7356843225496187e-05,
+          "base_surface": "base_link_solid_8",
+          "other_surface": "wrist_camera_solid_2",
+          "nearest_points_in_base_m": [
+            [
+              -0.08072456961397743,
+              -0.24167430665160322,
+              0.009735855798087372
+            ],
+            [
+              -0.08072457091497466,
+              -0.2416742654356,
+              0.009753212592327754
+            ]
+          ]
+        }
+      },
+      "train_base_desktop_other": {
+        "surface_intersection": true,
+        "intersecting_pairs": [
+          [
+            "base_link_local_1_group_0",
+            "wrist_camera_solid_4"
+          ]
+        ],
+        "minimum_surface_distance_m": 0.0,
+        "closest_disjoint_pair": {
+          "distance_m": 1.9317489600734963e-05,
+          "base_surface": "base_link_local_1_group_0",
+          "other_surface": "wrist_camera_solid_2",
+          "nearest_points_in_base_m": [
+            [
+              -0.08072456986503128,
+              -0.24167431130738526,
+              0.009733895157219763
+            ],
+            [
+              -0.08072457091497466,
+              -0.2416742654356,
+              0.009753212592327754
+            ]
+          ]
+        }
+      },
+      "desktop_base_train_other": {
+        "surface_intersection": true,
+        "intersecting_pairs": [
+          [
+            "base_link_solid_8",
+            "wrist_camera_proxy_0"
+          ]
+        ],
+        "minimum_surface_distance_m": 0.0,
+        "closest_disjoint_pair": {
+          "distance_m": 0.028387326797071268,
+          "base_surface": "base_link_solid_18",
+          "other_surface": "wrist_camera_proxy_0",
+          "nearest_points_in_base_m": [
+            [
+              -0.08364835757156518,
+              -0.23826124208703287,
+              -0.01871429886685707
+            ],
+            [
+              -0.08364835757156518,
+              -0.23821603092821825,
+              0.009672991927349398
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "policy_step": 480,
+      "env_id": 51,
+      "other_body": "wrist_camera",
+      "joint_positions_rad": {
+        "arm_joint1": -2.247044563293457,
+        "arm_joint2": 2.7082388401031494,
+        "arm_joint3": -1.1034818887710571,
+        "arm_joint4": -0.037014685571193695,
+        "arm_joint5": -1.3841838836669922,
+        "arm_joint6": -1.6025285720825195,
+        "bl_steering_joint": -0.9020987153053284,
+        "bl_wheel_drive_joint": -0.9200705289840698,
+        "br_steering_joint": -0.22900570929050446,
+        "br_wheel_drive_joint": 1.0423195362091064,
+        "fl_steering_joint": -0.9873532652854919,
+        "fl_wheel_drive_joint": -2.4904677867889404,
+        "fr_steering_joint": -0.5877215266227722,
+        "fr_wheel_drive_joint": -1.3961315155029297
+      },
+      "pose_source": "native_terminal_body_pose",
+      "fk_position_error_m": 2.5979254213853898e-06,
+      "other_pose_in_base_m": [
+        [
+          -0.1886052837433184,
+          0.2865226051447332,
+          -0.939325738860156,
+          -0.12406313028786631
+        ],
+        [
+          0.059167315061707595,
+          0.9580696773735891,
+          0.28035998667009576,
+          -0.17266487054499535
+        ],
+        [
+          0.9802689813375159,
+          -0.002700007100523784,
+          -0.19764977659781485,
+          0.08233291316988112
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "base_contact_norm_n": 14.298079985629018,
+      "visual": {
+        "surface_intersection": false,
+        "intersecting_pairs": [],
+        "minimum_surface_distance_m": 0.004564362944896374,
+        "closest_disjoint_pair": {
+          "distance_m": 0.004564362944896374,
+          "base_surface": "base_link_visual",
+          "other_surface": "wrist_camera_visual_0",
+          "nearest_points_in_base_m": [
+            [
+              -0.10116808980834029,
+              -0.17976246385738284,
+              0.004873712088167281
+            ],
+            [
+              -0.10116852893167096,
+              -0.17971724108567758,
+              0.009437850977468645
+            ]
+          ]
+        }
+      },
+      "collision": {
+        "surface_intersection": true,
+        "intersecting_pairs": [
+          [
+            "base_link_local_1_group_0",
+            "wrist_camera_proxy_0"
+          ]
+        ],
+        "minimum_surface_distance_m": 0.0,
+        "closest_disjoint_pair": {
+          "distance_m": 0.02001005157080283,
+          "base_surface": "base_link_local_1_group_5",
+          "other_surface": "wrist_camera_proxy_0",
+          "nearest_points_in_base_m": [
+            [
+              -0.10696186214776837,
+              -0.14967585504905245,
+              0.009499572099244114
+            ],
+            [
+              -0.10696086754191234,
+              -0.16764234646921383,
+              0.018309075429524174
+            ]
+          ]
+        }
+      },
+      "desktop_collision": {
+        "surface_intersection": true,
+        "intersecting_pairs": [
+          [
+            "base_link_solid_8",
+            "wrist_camera_solid_2"
+          ],
+          [
+            "base_link_solid_8",
+            "wrist_camera_solid_4"
+          ]
+        ],
+        "minimum_surface_distance_m": 0.0,
+        "closest_disjoint_pair": {
+          "distance_m": 0.0001712786466955216,
+          "base_surface": "base_link_solid_8",
+          "other_surface": "wrist_camera_solid_3",
+          "nearest_points_in_base_m": [
+            [
+              -0.09166276537704907,
+              -0.182090475690949,
+              0.009592884203711512
+            ],
+            [
+              -0.09166277230606656,
+              -0.18209005710890475,
+              0.009764162338786922
+            ]
+          ]
+        }
+      },
+      "train_base_desktop_other": {
+        "surface_intersection": true,
+        "intersecting_pairs": [
+          [
+            "base_link_local_1_group_0",
+            "wrist_camera_solid_2"
+          ],
+          [
+            "base_link_local_1_group_0",
+            "wrist_camera_solid_4"
+          ]
+        ],
+        "minimum_surface_distance_m": 0.0,
+        "closest_disjoint_pair": {
+          "distance_m": 0.0001723518424027937,
+          "base_surface": "base_link_local_1_group_0",
+          "other_surface": "wrist_camera_solid_3",
+          "nearest_points_in_base_m": [
+            [
+              -0.09166276293840651,
+              -0.18209046637982293,
+              0.009591810982571777
+            ],
+            [
+              -0.09166277230606656,
+              -0.18209005710890475,
+              0.009764162338786922
+            ]
+          ]
+        }
+      },
+      "desktop_base_train_other": {
+        "surface_intersection": true,
+        "intersecting_pairs": [
+          [
+            "base_link_solid_8",
+            "wrist_camera_proxy_0"
+          ]
+        ],
+        "minimum_surface_distance_m": 0.0,
+        "closest_disjoint_pair": {
+          "distance_m": 0.020008002720621035,
+          "base_surface": "base_link_solid_99",
+          "other_surface": "wrist_camera_proxy_0",
+          "nearest_points_in_base_m": [
+            [
+              -0.10696132501565539,
+              -0.14967584482646756,
+              0.0095042476980866
+            ],
+            [
+              -0.10696086754191234,
+              -0.16764234646921383,
+              0.018309075429524174
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "policy_step": 766,
+      "env_id": 96,
+      "other_body": "wrist_camera",
+      "joint_positions_rad": {
+        "arm_joint1": -2.1366336345672607,
+        "arm_joint2": 2.649919033050537,
+        "arm_joint3": -1.1705108880996704,
+        "arm_joint4": 0.36304330825805664,
+        "arm_joint5": -1.3151801824569702,
+        "arm_joint6": -1.4029723405838013,
+        "bl_steering_joint": -0.05049441009759903,
+        "bl_wheel_drive_joint": 4.80382776260376,
+        "br_steering_joint": 0.329858660697937,
+        "br_wheel_drive_joint": 6.219287395477295,
+        "fl_steering_joint": -0.1740020364522934,
+        "fl_wheel_drive_joint": 0.08517961949110031,
+        "fr_steering_joint": 0.024679841473698616,
+        "fr_wheel_drive_joint": 5.925695419311523
+      },
+      "pose_source": "native_terminal_body_pose",
+      "fk_position_error_m": 2.5126306364439592e-06,
+      "other_pose_in_base_m": [
+        [
+          0.03066097211258359,
+          0.5538556561713154,
+          -0.8320479655141001,
+          -0.06444424866364784
+        ],
+        [
+          0.3722954918221724,
+          0.7662121489481327,
+          0.5237509041263522,
+          -0.21710837703309327
+        ],
+        [
+          0.9276076603597008,
+          -0.3258264184060683,
+          -0.18270515458157027,
+          0.07747855488569866
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "base_contact_norm_n": 12.345142155040406,
+      "visual": {
+        "surface_intersection": false,
+        "intersecting_pairs": [],
+        "minimum_surface_distance_m": 0.002150734082882365,
+        "closest_disjoint_pair": {
+          "distance_m": 0.002150734082882365,
+          "base_surface": "base_link_visual",
+          "other_surface": "wrist_camera_visual_0",
+          "nearest_points_in_base_m": [
+            [
+              -0.05678805714736547,
+              -0.24707528587255756,
+              0.005698265050067232
+            ],
+            [
+              -0.05678807003624074,
+              -0.24699607320469769,
+              0.007847539915773395
+            ]
+          ]
+        }
+      },
+      "collision": {
+        "surface_intersection": false,
+        "intersecting_pairs": [],
+        "minimum_surface_distance_m": 1.1604832528055173e-05,
+        "closest_disjoint_pair": {
+          "distance_m": 1.1604832528055173e-05,
+          "base_surface": "base_link_local_1_group_0",
+          "other_surface": "wrist_camera_proxy_0",
+          "nearest_points_in_base_m": [
+            [
+              -0.053742692697128,
+              -0.24231886311699727,
+              0.00973689225207852
+            ],
+            [
+              -0.053742693128412095,
+              -0.24232438674632503,
+              0.00974709821390814
+            ]
+          ]
+        }
+      },
+      "desktop_collision": {
+        "surface_intersection": true,
+        "intersecting_pairs": [
+          [
+            "base_link_solid_8",
+            "wrist_camera_solid_2"
+          ],
+          [
+            "base_link_solid_8",
+            "wrist_camera_solid_4"
+          ]
+        ],
+        "minimum_surface_distance_m": 0.0,
+        "closest_disjoint_pair": {
+          "distance_m": 1.0797258864483363e-05,
+          "base_surface": "base_link_solid_8",
+          "other_surface": "wrist_camera_solid_3",
+          "nearest_points_in_base_m": [
+            [
+              -0.04609256793188579,
+              -0.2475191296984234,
+              0.009239506683805384
+            ],
+            [
+              -0.04609256869430416,
+              -0.24752380448569777,
+              0.009249239471810103
+            ]
+          ]
+        }
+      },
+      "train_base_desktop_other": {
+        "surface_intersection": true,
+        "intersecting_pairs": [
+          [
+            "base_link_local_1_group_0",
+            "wrist_camera_solid_4"
+          ]
+        ],
+        "minimum_surface_distance_m": 0.0,
+        "closest_disjoint_pair": {
+          "distance_m": 0.001389714306385606,
+          "base_surface": "base_link_local_1_group_0",
+          "other_surface": "wrist_camera_solid_8",
+          "nearest_points_in_base_m": [
+            [
+              -0.06377928572590377,
+              -0.24231908641589853,
+              0.009736347272312687
+            ],
+            [
+              -0.06377935121889515,
+              -0.24266213487968663,
+              0.011083055704222177
+            ]
+          ]
+        }
+      },
+      "desktop_base_train_other": {
+        "surface_intersection": true,
+        "intersecting_pairs": [
+          [
+            "base_link_solid_8",
+            "wrist_camera_proxy_0"
+          ]
+        ],
+        "minimum_surface_distance_m": 0.0,
+        "closest_disjoint_pair": {
+          "distance_m": 0.02702551895667669,
+          "base_surface": "base_link_solid_18",
+          "other_surface": "wrist_camera_proxy_0",
+          "nearest_points_in_base_m": [
+            [
+              -0.06486796018626274,
+              -0.24566775955209746,
+              -0.01870250284025475
+            ],
+            [
+              -0.06486796018626274,
+              -0.24562471728051155,
+              0.008322981840700516
+            ]
+          ]
+        }
+      }
+    }
+  ],
+  "note_zh": "终止策略边界的独立三角表面核验；不重建历史子步／PhysX接触余量，不排除实体包含。"
+}

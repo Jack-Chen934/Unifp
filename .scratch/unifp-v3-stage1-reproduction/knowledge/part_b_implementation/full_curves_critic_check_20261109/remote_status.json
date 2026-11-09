@@ -1,0 +1,23 @@
+{
+  "state": "completed",
+  "pid": 2129396,
+  "gpu": 3,
+  "results": [
+    {
+      "iteration": 9000,
+      "returncode": 0,
+      "ended_at": "2026-11-09T14:03:09.188818+08:00"
+    },
+    {
+      "iteration": 12000,
+      "returncode": 0,
+      "ended_at": "2026-11-09T14:07:20.213905+08:00"
+    },
+    {
+      "iteration": 16000,
+      "returncode": 0,
+      "ended_at": "2026-11-09T14:11:30.662471+08:00"
+    }
+  ],
+  "active_iteration": null
+}

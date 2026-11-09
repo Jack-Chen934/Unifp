@@ -207,6 +207,6 @@ def check_runtime() -> Dict[str, Any]:
 
 if __name__ == '__main__':
     report = check_runtime()
-    output = Path(__file__).resolve().parents[2] / '.scratch/v3-desktop-model-repair/knowledge/v3_runtime_check.json'
+    output = Path(__file__).resolve().parents[2] / '.scratch/unifp-v3-stage1-reproduction/knowledge/model_history/v3-desktop-model-repair/knowledge/v3_runtime_check.json'
     output.write_text(json.dumps(report, ensure_ascii=False, indent=2) + '\n')
     print(json.dumps(report, ensure_ascii=False))

@@ -1,0 +1,58 @@
+Importing module 'gym_38' (/home/sorry/.cache/unifp/isaacgym_preview4/pkg/isaacgym/python/isaacgym/_bindings/linux-x86_64/gym_38.so)
+Setting GYM_USD_PLUG_INFO_PATH to /home/sorry/.cache/unifp/isaacgym_preview4/pkg/isaacgym/python/isaacgym/_bindings/linux-x86_64/usd/plugInfo.json
+F                                                                        [100%]
+=================================== FAILURES ===================================
+________ test_wall_is_created_in_the_current_environment_before_mapping ________
+
+    def test_wall_is_created_in_the_current_environment_before_mapping() -> None:
+        """Create a wall through the existing per-robot native callback.
+    
+        Raises:
+            AssertionError: The callback changes robot properties or creates the wall
+                in a previous environment, with a different collision group or pose.
+        """
+        environment = V3ContactEvaluation.__new__(V3ContactEvaluation)
+        environment.gym, environment.sim = Mock(), object()
+        environment.wall_asset = object()
+        environment.wall_handles = []
+        environment.contact_manifest = {"scene": {"wall_center_relative_m": [.656, 0., .779]},
+                                        "nominal_friction": 1., "contact_offset_m": .01, "rest_offset_m": 0.}
+        environment.env_origins = torch.tensor([[4., 6., 0.]])
+        environment.gym.get_actor_rigid_shape_properties.return_value = [Mock()]
+        properties = [object()]
+        assert environment._process_rigid_body_props(properties, 0) is properties
+>       environment.gym.get_env.assert_called_once_with(environment.sim, 0)
+
+tests/test_v3_contact_evaluation.py:29: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <Mock name='mock.get_env' id='124582310145568'>
+args = (<object object at 0x714e947c5420>, 0), kwargs = {}
+msg = "Expected 'get_env' to be called once. Called 0 times."
+
+    def assert_called_once_with(self, /, *args, **kwargs):
+        """assert that the mock was called exactly once and that that call was
+        with the specified arguments."""
+        if not self.call_count == 1:
+            msg = ("Expected '%s' to be called once. Called %s times.%s"
+                   % (self._mock_name or 'mock',
+                      self.call_count,
+                      self._calls_repr()))
+>           raise AssertionError(msg)
+E           AssertionError: Expected 'get_env' to be called once. Called 0 times.
+
+/home/sorry/.cache/unifp/isaacgym_preview4/py38/lib/python3.8/unittest/mock.py:924: AssertionError
+=============================== warnings summary ===============================
+../../../../.cache/unifp/isaacgym_preview4/pkg/isaacgym/python/isaacgym/torch_utils.py:135
+  /home/sorry/.cache/unifp/isaacgym_preview4/pkg/isaacgym/python/isaacgym/torch_utils.py:135: DeprecationWarning: `np.float` is a deprecated alias for the builtin `float`. To silence this warning, use `float` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.float64` here.
+  Deprecated in NumPy 1.20; for more details and guidance: https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+    def get_axis_params(value, axis_idx, x_value=0., dtype=np.float, n_dims=3):
+
+../../../../.cache/unifp/isaacgym_preview4/py38/lib/python3.8/site-packages/wandb/analytics/sentry.py:90
+  /home/sorry/.cache/unifp/isaacgym_preview4/py38/lib/python3.8/site-packages/wandb/analytics/sentry.py:90: SentryHubDeprecationWarning: `sentry_sdk.Hub` is deprecated and will be removed in a future major release. Please consult our 1.x to 2.x migration guide for details on how to migrate `Hub` usage to the new API: https://docs.sentry.io/platforms/python/migration/1.x-to-2.x
+    self.hub = sentry_sdk.Hub(client)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED tests/test_v3_contact_evaluation.py::test_wall_is_created_in_the_current_environment_before_mapping
+1 failed, 2 warnings in 1.77s

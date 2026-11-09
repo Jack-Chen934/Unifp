@@ -1,0 +1,7 @@
+test_single_and_dual_gripper_counterforces (test_visual_envelope_comparison.CounterforceAttributionTests.test_single_and_dual_gripper_counterforces)
+Identify the two grippers jointly and two isolated camera contacts. ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+OK

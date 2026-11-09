@@ -9,11 +9,14 @@ from typing import Any, Dict, List, Optional, Tuple
 
 import torch
 from isaacgym import gymapi, gymtorch
-from isaacgym.torch_utils import quat_apply, quat_rotate_inverse
+from isaacgym.torch_utils import get_axis_params, quat_rotate_inverse, to_torch
 
 from legged_gym.envs.base.legged_robot import LeggedRobot
 from legged_gym.utils.helpers import class_to_dict
+from legged_gym.utils.isaacgym_utils import get_euler_xyz as get_euler_xyz_in_tensor
 from legged_gym.utils.v3_asset_collision import apply_desktop_assembly_filters
+from legged_gym.utils.v3_kinematics import V3TcpKinematics
+from legged_gym.b2_gym_learn.ppo_cse_pf.v3_run_identity import validate_force_snapshot
 
 
 ACTION_JOINT_NAMES = (
@@ -48,6 +51,7 @@ COLLISION_BODY_NAMES = (
 )
 ERROR_METRIC_NAMES = (
     "tcp_geometric_l1_m", "tcp_geometric_l2_m", "base_planar_speed_m_s", "base_yaw_rate_rad_s",
+    "tcp_compensated_l1_m", "tcp_compensated_l2_m",
 )
 
 
@@ -226,7 +230,7 @@ class V3PosForce(LeggedRobot):
 
         Note:
             Reads Runner's clock without advancing it. Explicit domain configuration
-            controls pushes in every run purpose; EE force stays zero.
+            controls pushes in every run purpose, independently of B EE forces.
         """
         interval = int(round(self.cfg.domain_rand.push_interval_s / self.dt))
         evaluation_active = self.evaluation_policy_step is not None
@@ -284,7 +288,7 @@ class V3PosForce(LeggedRobot):
             Independent CPU tensors for properties, episode execution samples, push,
             training progress and Python/NumPy/Torch RNG states. No simulator snapshot.
         """
-        return {
+        state = {
             "reproduction_part": self.cfg.run.reproduction_part,
             "num_envs": self.num_envs,
             "completed_iterations": self.completed_iterations,
@@ -299,12 +303,22 @@ class V3PosForce(LeggedRobot):
             "torch_rng": torch.get_rng_state().clone(),
             "cuda_rng": [state.clone() for state in torch.cuda.get_rng_state_all()],
         }
+        if self.cfg.run.reproduction_part == "B":
+            snapshot = {stream: {key: value.detach().cpu().clone() for key, value in event.items()}
+                        for stream, event in self.force_state.items()}
+            snapshot.update(pending_ee_force_world=self.pending_ee_force_world.detach().cpu().clone(),
+                            applied_ee_force_world=self.applied_ee_force_world.detach().cpu().clone(),
+                            episode_tick=self.episode_length_buf.detach().cpu().clone())
+            state["force_state"] = snapshot
+        return state
 
-    def load_training_state(self, state: Dict[str, Any]) -> None:
+    def load_training_state(self, state: Dict[str, Any], *, transition_from_a: bool = False) -> None:
         """Verify creation-time physics and restore mutable state before fresh episodes.
 
         Args:
             state: Complete dictionary returned by get_training_state, with matching N/part.
+            transition_from_a: Explicit migration permits absent B event diagnostics;
+                ordinary B resume requires them. Neither mode resumes old episodes.
 
         Raises:
             ValueError: Creation physics, identity, dimensions or training counters differ.
@@ -317,6 +331,8 @@ class V3PosForce(LeggedRobot):
         """
         if state["num_envs"] != self.num_envs or state["reproduction_part"] != self.cfg.run.reproduction_part:
             raise ValueError("V3 training state identity mismatch")
+        if self.cfg.run.reproduction_part == "B" and not transition_from_a:
+            validate_force_snapshot(state.get("force_state"), self.num_envs)
         iterations, steps = state["completed_iterations"], state["training_policy_steps"]
         if (type(iterations) is not int or type(steps) is not int or iterations < 0
                 or not iterations * 24 <= steps <= (iterations + 1) * 24
@@ -402,6 +418,7 @@ class V3PosForce(LeggedRobot):
             device=self.device,
             dtype=torch.long,
         )
+        self.tcp_kinematics = V3TcpKinematics(Path(self.cfg.asset.file), self.dof_names, self.device)
         body_names = self.gym.get_actor_rigid_body_names(self.envs[0], self.actor_handles[0])
         self.base_body_index = body_names.index("base_link")
         self.tcp_body_index = body_names.index("arm_seg6")
@@ -422,9 +439,7 @@ class V3PosForce(LeggedRobot):
         self.soft_position_limits = torch.stack(
             (position_midpoint - soft_half_width, position_midpoint + soft_half_width), dim=1
         )
-        self.rigid_state = gymtorch.wrap_tensor(self.gym.acquire_rigid_body_state_tensor(self.sim))
-        self.rigid_state = self.rigid_state.view(self.num_envs, self.num_bodies, 13)
-        self.gym.refresh_rigid_body_state_tensor(self.sim)
+        self._bind_robot_rigid_state()
         self.obs_history = torch.zeros(self.num_envs, 32, 58, device=self.device)
         self.critic_history = torch.zeros(self.num_envs, 3, 98, device=self.device)
         self.obs_pred = torch.zeros(self.num_envs, 12, device=self.device)
@@ -444,9 +459,211 @@ class V3PosForce(LeggedRobot):
         self.contact_valid = torch.zeros(self.num_envs, device=self.device, dtype=torch.bool)
         self._published_observations: Dict[str, torch.Tensor] = {}
         self.policy_trace_enabled = False
+        if self.cfg.run.reproduction_part == "B":
+            self._initialize_force_events()
         self._initialize_episode_metrics()
         self.reset_idx(torch.arange(self.num_envs, device=self.device))
         self._publish_observations(torch.arange(self.num_envs, device=self.device), initial=True)
+
+    def _init_buffers(self) -> None:
+        """Retain inherited allocation while exposing the V3 native-binding seam.
+
+        Note:
+            Copies the existing allocation order without touching shared base/B2.
+            Allocations consume no randomness; derived V3 buffers remain in __init__.
+        """
+        self._bind_simulation_tensors()
+        # initialize some data used later on
+        self.common_step_counter = 0
+        self.extras = {}
+        self.noise_scale_vec = self._get_noise_scale_vec(self.cfg)
+        self.gravity_vec = to_torch(get_axis_params(-1., self.up_axis_idx), device=self.device).repeat((self.num_envs, 1))
+        self.forward_vec = to_torch([1., 0., 0.], device=self.device).repeat((self.num_envs, 1))
+        self.torques = torch.zeros(self.num_envs, self.num_actions, dtype=torch.float, device=self.device, requires_grad=False)
+        self.p_gains = torch.zeros(self.num_actions, dtype=torch.float, device=self.device, requires_grad=False)
+        self.d_gains = torch.zeros(self.num_actions, dtype=torch.float, device=self.device, requires_grad=False)
+        self.actions = torch.zeros(self.num_envs, self.num_actions, dtype=torch.float, device=self.device, requires_grad=False)
+        self.last_actions = torch.zeros(self.num_envs, self.num_actions, dtype=torch.float, device=self.device, requires_grad=False)
+        self.last_dof_vel = torch.zeros_like(self.dof_vel)
+        self.last_root_vel = torch.zeros_like(self.root_states[:, 7:13])
+        self.commands = torch.zeros(self.num_envs, self.cfg.commands.num_commands, dtype=torch.float, device=self.device, requires_grad=False) # x vel, y vel, yaw vel, heading
+        self.commands_scale = torch.tensor([self.obs_scales.lin_vel, self.obs_scales.lin_vel, self.obs_scales.ang_vel], device=self.device, requires_grad=False,) # TODO change this
+        self.feet_air_time = torch.zeros(self.num_envs, self.feet_indices.shape[0], dtype=torch.float, device=self.device, requires_grad=False)
+        self.last_contacts = torch.zeros(self.num_envs, len(self.feet_indices), dtype=torch.bool, device=self.device, requires_grad=False)
+        self.base_lin_vel = quat_rotate_inverse(self.base_quat, self.root_states[:, 7:10])
+        self.base_ang_vel = quat_rotate_inverse(self.base_quat, self.root_states[:, 10:13])
+        self.projected_gravity = quat_rotate_inverse(self.base_quat, self.gravity_vec)
+      
+
+        # joint positions offsets and PD gains
+        self.default_dof_pos = torch.zeros(self.num_dof, dtype=torch.float, device=self.device, requires_grad=False)
+        for joint_index in range(self.num_dofs):
+            joint_name = self.dof_names[joint_index]
+            angle_rad = self.cfg.init_state.default_joint_angles[joint_name]
+            self.default_dof_pos[joint_index] = angle_rad
+            found = False
+            for gain_name in self.cfg.control.stiffness.keys():
+                if gain_name in joint_name:
+                    self.p_gains[joint_index] = self.cfg.control.stiffness[gain_name]
+                    self.d_gains[joint_index] = self.cfg.control.damping[gain_name]
+                    found = True
+            if not found:
+                self.p_gains[joint_index] = 0.
+                self.d_gains[joint_index] = 0.
+                if self.cfg.control.control_type in ["P", "V"]:
+                    print(f"PD gain of joint {joint_name} were not defined, setting them to zero")
+        self.default_dof_pos = self.default_dof_pos.unsqueeze(0)
+
+    def _bind_simulation_tensors(self) -> None:
+        """Bind the unchanged single-robot native root, DOF and contact layouts.
+
+        Note:
+            Refreshes native tensors once, preserving the inherited binding order.
+            Contact evaluation overrides only these layout-dependent operations.
+        """
+        actor_root_state = self.gym.acquire_actor_root_state_tensor(self.sim)
+        dof_state_tensor = self.gym.acquire_dof_state_tensor(self.sim)
+        net_contact_forces = self.gym.acquire_net_contact_force_tensor(self.sim)
+        self.gym.refresh_dof_state_tensor(self.sim)
+        self.gym.refresh_actor_root_state_tensor(self.sim)
+        self.gym.refresh_net_contact_force_tensor(self.sim)
+        self.root_states = gymtorch.wrap_tensor(actor_root_state)
+        self.dof_state = gymtorch.wrap_tensor(dof_state_tensor)
+        self.dof_pos = self.dof_state.view(self.num_envs, self.num_dof, 2)[..., 0]
+        self.dof_vel = self.dof_state.view(self.num_envs, self.num_dof, 2)[..., 1]
+        self.base_quat = self.root_states[:, 3:7]
+        self.rpy = get_euler_xyz_in_tensor(self.base_quat)
+        self.base_pos = self.root_states[:self.num_envs, 0:3]
+        self.contact_forces = gymtorch.wrap_tensor(net_contact_forces).view(self.num_envs, -1, 3)
+
+    def _bind_robot_rigid_state(self) -> None:
+        """Bind the original per-robot rigid-state view and refresh it once.
+
+        Note:
+            Default training has one robot per environment and no extra actors.
+        """
+        self.rigid_state = gymtorch.wrap_tensor(self.gym.acquire_rigid_body_state_tensor(self.sim))
+        self.rigid_state = self.rigid_state.view(self.num_envs, self.num_bodies, 13)
+        self.gym.refresh_rigid_body_state_tensor(self.sim)
+
+    def _sync_robot_state_tensors(self) -> None:
+        """Leave native single-actor views unchanged after refresh.
+
+        Note:
+            Contact evaluation overrides this to copy from globally indexed buffers.
+        """
+
+    def _commit_robot_reset(self, env_ids: torch.Tensor) -> None:
+        """Submit only selected robots using the original single-actor layout.
+
+        Args:
+            env_ids: Reset robot rows [K], equal to global actor IDs in training.
+
+        Note:
+            Writes full native root/DOF buffers through the indexed Gym setters.
+        """
+        actor_ids = env_ids.to(dtype=torch.int32)
+        self.gym.set_actor_root_state_tensor_indexed(
+            self.sim, gymtorch.unwrap_tensor(self.root_states), gymtorch.unwrap_tensor(actor_ids), len(actor_ids)
+        )
+        self.gym.set_dof_state_tensor_indexed(
+            self.sim, gymtorch.unwrap_tensor(self.dof_state), gymtorch.unwrap_tensor(actor_ids), len(actor_ids)
+        )
+
+    def _after_physics_substep(self, physics_index: int) -> None:
+        """Leave ordinary training free of contact-evaluation sampling.
+
+        Args:
+            physics_index: Physical substep index 0 through 7 within this policy step.
+        """
+
+    def _initialize_force_events(self) -> None:
+        """Allocate independent B event clocks and applied/pending force buffers.
+
+        Note:
+            Allocates [N,3] forces in newtons and integer local policy ticks.
+            Does not sample randomness, reset episodes or advance physics.
+        """
+        self.force_state = {}
+        for stream in ("command", "external"):
+            self.force_state[stream] = {
+                "peak": torch.zeros(self.num_envs, 3, device=self.device),
+                "enabled": torch.zeros(self.num_envs, dtype=torch.bool, device=self.device),
+                "start_tick": torch.zeros(self.num_envs, dtype=torch.long, device=self.device),
+                "next_start_tick": torch.zeros(self.num_envs, dtype=torch.long, device=self.device),
+                "ramp_ticks": torch.ones(self.num_envs, device=self.device),
+            }
+        self.pending_ee_force_world = torch.zeros(self.num_envs, 3, device=self.device)
+        self.applied_ee_force_world = torch.zeros_like(self.pending_ee_force_world)
+        # Native body order is contiguous in the default one-actor training scene.
+        self.rigid_body_forces = torch.zeros(self.num_envs * self.num_bodies, 3, device=self.device)
+        self.ee_force_body_indices = torch.arange(self.num_envs, device=self.device) * self.num_bodies + self.tcp_body_index
+
+    def _reset_force_events(self, env_ids: torch.Tensor) -> None:
+        """Start selected B episodes at zero force without touching other rows.
+
+        Args:
+            env_ids: Reset robot indices [K]; local episode ticks must already be zero.
+
+        Note:
+            Samples the first cycle at tick zero; the trapezoid output stays zero.
+        """
+        self.pending_ee_force_world[env_ids] = 0.0
+        self.applied_ee_force_world[env_ids] = 0.0
+        self.rigid_body_forces[self.ee_force_body_indices[env_ids]] = 0.0
+        for state in self.force_state.values():
+            state["next_start_tick"][env_ids] = 0
+        self._advance_force_events(env_ids)
+
+    def _advance_force_events(self, env_ids: torch.Tensor) -> None:
+        """Evaluate two trapezoids and sample only cycles due at this policy boundary.
+
+        Args:
+            env_ids: Selected robot rows [K], indexed by their local episode clock.
+
+        Note:
+            Command peaks are yaw-frame newtons; external peaks remain world-frame
+            newtons. Updates next command/pending force, never the applied labels.
+        """
+        settings = self.cfg.force_events
+        local_tick = self.episode_length_buf[env_ids]
+        hold_ticks = settings.hold_s / self.dt
+        for stream, state in self.force_state.items():
+            due_ids = env_ids[local_tick >= state["next_start_tick"][env_ids]]
+            if due_ids.numel():
+                interval_ticks = torch.randint(math.ceil(settings.interval_s[0] / self.dt),
+                                               math.ceil(settings.interval_s[1] / self.dt),
+                                               (due_ids.numel(),), device=self.device)
+                sampled_ramp = (settings.ramp_s[0] + torch.rand(due_ids.numel(), device=self.device)
+                                * (settings.ramp_s[1] - settings.ramp_s[0])) / self.dt
+                state["ramp_ticks"][due_ids] = torch.minimum(sampled_ramp, (interval_ticks - hold_ticks) / 2)
+                state["peak"][due_ids] = (2.0 * torch.rand(due_ids.numel(), 3, device=self.device) - 1.0) * settings.max_force_n
+                state["enabled"][due_ids] = torch.rand(due_ids.numel(), device=self.device) < settings.enabled_probability
+                state["start_tick"][due_ids] = self.episode_length_buf[due_ids]
+                state["next_start_tick"][due_ids] = self.episode_length_buf[due_ids] + interval_ticks
+            # A single envelope covers rise, hold, fall and the remaining zero wait.
+            age_ticks = local_tick - state["start_tick"][env_ids]
+            ramp_ticks = state["ramp_ticks"][env_ids]
+            envelope = torch.minimum(age_ticks / ramp_ticks, (2 * ramp_ticks + hold_ticks - age_ticks) / ramp_ticks).clamp(0.0, 1.0)
+            force = state["peak"][env_ids] * (envelope * state["enabled"][env_ids])[:, None]
+            if stream == "command":
+                self.commands[env_ids, 9:12] = force
+            else:
+                self.pending_ee_force_world[env_ids] = force
+
+    def _update_applied_force_label(self) -> None:
+        """Express the completed interval's world force in the current yaw frame.
+
+        Note:
+            Writes [N,3] unscaled newton labels. Roll/pitch and pending force do not
+            enter this conversion; frame construction applies the 0.01 scale once.
+        """
+        yaw = self.rpy[:, 2]
+        world_x, world_y, world_z = self.applied_ee_force_world.unbind(dim=1)
+        self.external_ee_force_y.copy_(torch.stack((
+            torch.cos(yaw) * world_x + torch.sin(yaw) * world_y,
+            -torch.sin(yaw) * world_x + torch.cos(yaw) * world_y, world_z,
+        ), dim=1))
 
     def step(
         self, actions: torch.Tensor
@@ -468,28 +685,43 @@ class V3PosForce(LeggedRobot):
         if not torch.isfinite(actions).all():
             raise ValueError("Actions contain non-finite values")
 
-        if torch.count_nonzero(self.commands[:, 9:15]) or torch.count_nonzero(self.external_ee_force_y) or torch.count_nonzero(self.external_base_force_y):
+        force_active = self.cfg.run.reproduction_part == "B"
+        if not force_active and (torch.count_nonzero(self.commands[:, 9:15]) or torch.count_nonzero(self.external_ee_force_y) or torch.count_nonzero(self.external_base_force_y)):
             raise RuntimeError("V3 A-stage force channels must remain zero")
+        if force_active:
+            # Freeze this interval before later event advancement publishes the next
+            # force. Only external forces enter PhysX, at the tool rigid body's COM.
+            self.applied_ee_force_world.copy_(self.pending_ee_force_world)
+            self.rigid_body_forces.zero_()
+            self.rigid_body_forces[self.ee_force_body_indices] = self.applied_ee_force_world
         base_push_applied = self._apply_scheduled_base_push()
         clip_actions = self.cfg.normalization.clip_actions
         self.actions = torch.clamp(actions.to(self.device), -clip_actions, clip_actions)
         self.velocity_before_step = self.dof_vel.clone()
         if not self.headless:
             self.render()
-        for _ in range(self.cfg.control.decimation):
+        for physics_index in range(self.cfg.control.decimation):
             self.torques = self._compute_v3_torques(self.actions)
             self.gym.set_dof_actuation_force_tensor(self.sim, gymtorch.unwrap_tensor(self.torques))
+            if force_active:
+                self.gym.apply_rigid_body_force_tensors(
+                    self.sim, gymtorch.unwrap_tensor(self.rigid_body_forces), None, gymapi.GLOBAL_SPACE
+                )
             self.gym.simulate(self.sim)
             if self.device == "cpu":
                 self.gym.fetch_results(self.sim, True)
             self.gym.refresh_dof_state_tensor(self.sim)
+            self._after_physics_substep(physics_index)
 
         self.gym.refresh_actor_root_state_tensor(self.sim)
         self.gym.refresh_net_contact_force_tensor(self.sim)
         self.gym.refresh_rigid_body_state_tensor(self.sim)
+        self._sync_robot_state_tensors()
         self.episode_length_buf += 1
         self._validate_simulation_state()
         self._update_base_state()
+        if force_active:
+            self._update_applied_force_label()
         failed = (self.rpy[:, 0].abs() > 0.8) | (self.rpy[:, 1].abs() > 1.0)
         base_contact = torch.linalg.vector_norm(self.contact_forces[:, self.base_body_index], dim=-1) > 1.0
         terminated = failed | base_contact
@@ -503,6 +735,8 @@ class V3PosForce(LeggedRobot):
         episode_records = self._accumulate_episode_metrics(done_ids, terminated)
         self.last_actions.copy_(self.actions)
         self._advance_task_commands(torch.arange(self.num_envs, device=self.device))
+        if force_active:
+            self._advance_force_events(torch.arange(self.num_envs, device=self.device))
         _, terminal_frame, _ = self._build_frames(done_ids)
         terminal_privileged = torch.cat((self.critic_history[done_ids, 1:], terminal_frame[:, None]), dim=1)
         terminal_privileged = terminal_privileged.reshape(done_ids.numel(), 294).clone()
@@ -560,7 +794,8 @@ class V3PosForce(LeggedRobot):
             "base_orientation_world_xyzw": self.root_states[:, 3:7],
             "base_linear_velocity_body_m_s": self.base_lin_vel,
             "base_angular_velocity_body_rad_s": self.base_ang_vel,
-            "state_estimate_labels_scaled": self.obs_pred,
+            "state_estimate_labels_scaled": self._build_frames(torch.arange(self.num_envs, device=self.device))[2],
+            "compensated_target_world_m": self._compensated_target_world(),
             "physical_errors": physical_errors,
             "actions": self.actions,
             "raw_rewards": self.reward_raw,
@@ -590,6 +825,7 @@ class V3PosForce(LeggedRobot):
                 "external_base_force_yaw_n": cpu_tensors["external_base_force"][env_id],
                 "target_spherical_m_rad_rad": cpu_tensors["target_spherical"][env_id],
                 "target_world_m": cpu_tensors["target_world_m"][env_id],
+                "compensated_target_world_m": cpu_tensors["compensated_target_world_m"][env_id],
                 "tcp_world_m": cpu_tensors["tcp_world_m"][env_id],
                 "base_position_world_m": cpu_tensors["base_position_world_m"][env_id],
                 "base_orientation_world_xyzw": cpu_tensors["base_orientation_world_xyzw"][env_id],
@@ -617,11 +853,11 @@ class V3PosForce(LeggedRobot):
         return trace_rows
 
     def _initialize_episode_metrics(self) -> None:
-        """Allocate bounded A-stage error histories and per-environment reward sums.
+        """Allocate bounded physical error histories and per-environment reward sums.
 
         Note:
-            Four float32 samples per policy boundary preserve exact episode P95.
-            A-stage geometric and compensated errors share these samples.
+            Six float32 samples per boundary preserve separate geometric and
+            compensated TCP statistics, even when the errors coincide in A.
         """
         self.episode_metric_steps = torch.zeros(self.num_envs, dtype=torch.long, device=self.device)
         self.episode_raw_sums = torch.zeros(self.num_envs, len(REWARD_NAMES), device=self.device)
@@ -664,8 +900,6 @@ class V3PosForce(LeggedRobot):
             error_p95 = torch.quantile(samples, 0.95, dim=0).tolist()
             errors = {name: {"mean": error_means[index], "p95": error_p95[index]}
                       for index, name in enumerate(ERROR_METRIC_NAMES)}
-            for norm in ("l1", "l2"):
-                errors[f"tcp_compensated_{norm}_m"] = dict(errors[f"tcp_geometric_{norm}_m"])
             reward_return = float(self.episode_reward_returns[env_id])
             raw_means = (self.episode_raw_sums[env_id] / steps).tolist()
             records.append({
@@ -758,16 +992,19 @@ class V3PosForce(LeggedRobot):
         return target
 
     def _physical_tracking_errors(self) -> torch.Tensor:
-        """Measure A-stage TCP and body-velocity errors independently of rewards.
+        """Measure geometric/compensated TCP and velocity errors independently of rewards.
 
         Returns:
-            [N,4] errors: TCP L1/L2 (m), planar speed L2 (m/s), yaw-rate absolute (rad/s).
+            [N,6]: geometric TCP L1/L2 (m), planar speed L2 (m/s), absolute yaw
+            rate error (rad/s), and compensated TCP L1/L2 (m).
         """
         tcp_error = self._tcp_position() - self._geometric_target_world()
+        compensated_error = self._tcp_position() - self._compensated_target_world()
         return torch.stack((
             tcp_error.abs().sum(dim=1), torch.linalg.vector_norm(tcp_error, dim=1),
             torch.linalg.vector_norm(self.base_lin_vel[:, :2] - self.commands[:, :2], dim=1),
             (self.base_ang_vel[:, 2] - self.commands[:, 2]).abs(),
+            compensated_error.abs().sum(dim=1), torch.linalg.vector_norm(compensated_error, dim=1),
         ), dim=1)
 
     def _compensated_target_world(self) -> torch.Tensor:
@@ -1049,16 +1286,11 @@ class V3PosForce(LeggedRobot):
         self.root_states[env_ids, 7:13] = 0.0
         self.dof_pos[env_ids] = self.default_dof_pos
         self.dof_vel[env_ids] = 0.0
-        actor_ids = env_ids.to(dtype=torch.int32)
-        self.gym.set_actor_root_state_tensor_indexed(
-            self.sim, gymtorch.unwrap_tensor(self.root_states), gymtorch.unwrap_tensor(actor_ids), len(actor_ids)
-        )
-        self.gym.set_dof_state_tensor_indexed(
-            self.sim, gymtorch.unwrap_tensor(self.dof_state), gymtorch.unwrap_tensor(actor_ids), len(actor_ids)
-        )
+        self._commit_robot_reset(env_ids)
         self.gym.refresh_actor_root_state_tensor(self.sim)
         self.gym.refresh_dof_state_tensor(self.sim)
         self.gym.refresh_rigid_body_state_tensor(self.sim)
+        self._sync_robot_state_tensors()
         self._update_base_state()
         self.episode_length_buf[env_ids] = 0
         self.reset_buf[env_ids] = 0
@@ -1074,8 +1306,8 @@ class V3PosForce(LeggedRobot):
         self.critic_history[env_ids] = 0.0
         self.obs_pred[env_ids] = 0.0
         self.commands[env_ids] = 0.0
-        # Refreshing after indexed root/DOF writes gives this reset's TCP state
-        # in Preview4; the zero-velocity command must start at that same state.
+        # Indexed writes do not immediately update Preview4 rigid-body caches.
+        # FK reads the new root/DOF tensors for both initial targets and labels.
         reset_tcp = self._tcp_spherical_position()[env_ids]
         self._validate_reset_state(env_ids, reset_tcp)
         self._initialize_target_segments(env_ids, reset_tcp)
@@ -1083,6 +1315,8 @@ class V3PosForce(LeggedRobot):
         self.commands[env_ids, 3:6] = reset_tcp
         self.external_ee_force_y[env_ids] = 0.0
         self.external_base_force_y[env_ids] = 0.0
+        if self.cfg.run.reproduction_part == "B":
+            self._reset_force_events(env_ids)
         self.contact_valid[env_ids] = False
 
     def _validate_reset_state(self, env_ids: torch.Tensor, tcp_spherical: torch.Tensor) -> None:
@@ -1117,6 +1351,10 @@ class V3PosForce(LeggedRobot):
 
         Returns:
             Uniformly sampled command tensor with shape ``[count, 3]`` in m/s and rad/s.
+
+        Note:
+            A zero mixture probability retains the original RNG consumption. B
+            samples an additional independent mask and zeros entire command rows.
         """
         ranges = self.cfg.commands.ranges
         lower = torch.tensor(
@@ -1127,7 +1365,11 @@ class V3PosForce(LeggedRobot):
             (ranges.lin_vel_x[1], ranges.lin_vel_y[1], ranges.ang_vel_yaw[1]),
             device=self.device,
         )
-        return lower + torch.rand(count, 3, device=self.device) * (upper - lower)
+        commands = lower + torch.rand(count, 3, device=self.device) * (upper - lower)
+        if self.cfg.commands.zero_vel_cmd_prob > 0.0:
+            zero_rows = torch.rand(count, device=self.device) < self.cfg.commands.zero_vel_cmd_prob
+            commands[zero_rows] = 0.0
+        return commands
 
     def _initialize_target_segments(self, env_ids: torch.Tensor, start: torch.Tensor) -> None:
         """Initialize per-environment target segments from reset TCP positions.
@@ -1364,14 +1606,12 @@ class V3PosForce(LeggedRobot):
         return torch.stack((roll, pitch, yaw), dim=-1)
 
     def _tcp_position(self) -> torch.Tensor:
-        """Return the candidate contact-point position in world coordinates.
+        """Compute the contact point from current root/DOF state, including reset.
 
         Returns:
             Candidate TCP world positions with shape ``[N, 3]`` in meters.
         """
-        body_state = self.rigid_state[:, self.tcp_body_index]
-        local_offset = torch.tensor((0.0, 0.0, 0.07961206), device=self.device).expand(self.num_envs, 3)
-        return body_state[:, :3] + quat_apply(body_state[:, 3:7], local_offset)
+        return self.tcp_kinematics.tcp_world(self.root_states, self.dof_pos)
 
     def _tcp_spherical_position(self) -> torch.Tensor:
         """Express the candidate TCP position relative to the yaw-aligned V3 arm center.
@@ -1381,13 +1621,24 @@ class V3PosForce(LeggedRobot):
             elevation and azimuth in radians.
         """
         self._update_base_state()
-        tcp_world = self._tcp_position()
+        return self._world_to_task_spherical(self._tcp_position())
+
+    def _world_to_task_spherical(self, world_position: torch.Tensor) -> torch.Tensor:
+        """Express world points relative to the existing nominal-height yaw center.
+
+        Args:
+            world_position: World XYZ positions [N,3] in meters; current root/yaw
+                caches define the task center, with nominal rather than actual Z.
+
+        Returns:
+            [N,3] radius (m), elevation (rad), azimuth (rad) in the yaw task frame.
+        """
         yaw = self.rpy[:, 2]
         center = self.root_states[:, :3].clone()
         center[:, 0] += ARM_MOUNT_X * torch.cos(yaw)
         center[:, 1] += ARM_MOUNT_X * torch.sin(yaw)
         center[:, 2] = self.env_origins[:, 2] + self.cfg.rewards.base_height_target + ARM_MOUNT_Z
-        delta = tcp_world - center
+        delta = world_position - center
         local_x = torch.cos(yaw) * delta[:, 0] + torch.sin(yaw) * delta[:, 1]
         local_y = -torch.sin(yaw) * delta[:, 0] + torch.cos(yaw) * delta[:, 1]
         radius = torch.linalg.vector_norm(delta, dim=-1).clamp_min(1.0e-6)
@@ -1431,6 +1682,12 @@ class V3PosForce(LeggedRobot):
         actor_scaled[:, 15:29] *= 0.05
         actor_scaled[:, 43:58] *= torch.tensor(COMMAND_SCALE, device=self.device)
         compensated_target = self.commands[:, 3:6]
+        if self.cfg.run.reproduction_part == "B":
+            force_yaw = self.external_ee_force_y + self.commands[:, 9:12]
+            converted_target = self._world_to_task_spherical(self._compensated_target_world())
+            # Preserve the exact A representation when the net force cancels.
+            compensated_target = torch.where((force_yaw == 0).all(dim=1, keepdim=True),
+                                             compensated_target, converted_target)
         critic = torch.cat((
             labels,
             self.mass_com_delta,

@@ -1,0 +1,23 @@
+Importing module 'gym_38' (/home/sorry/.cache/unifp/isaacgym_preview4/pkg/isaacgym/python/isaacgym/_bindings/linux-x86_64/gym_38.so)
+Setting GYM_USD_PLUG_INFO_PATH to /home/sorry/.cache/unifp/isaacgym_preview4/pkg/isaacgym/python/isaacgym/_bindings/linux-x86_64/usd/plugInfo.json
+.............................................                            [100%]
+=============================== warnings summary ===============================
+../../../../.cache/unifp/isaacgym_preview4/pkg/isaacgym/python/isaacgym/torch_utils.py:135
+  /home/sorry/.cache/unifp/isaacgym_preview4/pkg/isaacgym/python/isaacgym/torch_utils.py:135: DeprecationWarning: `np.float` is a deprecated alias for the builtin `float`. To silence this warning, use `float` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.float64` here.
+  Deprecated in NumPy 1.20; for more details and guidance: https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+    def get_axis_params(value, axis_idx, x_value=0., dtype=np.float, n_dims=3):
+
+../../../../.cache/unifp/isaacgym_preview4/py38/lib/python3.8/site-packages/wandb/analytics/sentry.py:90
+  /home/sorry/.cache/unifp/isaacgym_preview4/py38/lib/python3.8/site-packages/wandb/analytics/sentry.py:90: SentryHubDeprecationWarning: `sentry_sdk.Hub` is deprecated and will be removed in a future major release. Please consult our 1.x to 2.x migration guide for details on how to migrate `Hub` usage to the new API: https://docs.sentry.io/platforms/python/migration/1.x-to-2.x
+    self.hub = sentry_sdk.Hub(client)
+
+tests/test_v3_rewards.py::V3RewardTests::test_load_verifies_creation_properties_without_runtime_setters
+  /home/sorry/.cache/unifp/isaacgym_preview4/torch231/lib/python3.8/site-packages/torch/cuda/__init__.py:209: UserWarning: 
+  NVIDIA GeForce RTX 5060 Laptop GPU with CUDA capability sm_120 is not compatible with the current PyTorch installation.
+  The current PyTorch install supports CUDA capabilities sm_50 sm_60 sm_70 sm_75 sm_80 sm_86 sm_90.
+  If you want to use the NVIDIA GeForce RTX 5060 Laptop GPU GPU with PyTorch, please check the instructions at https://pytorch.org/get-started/locally/
+  
+    warnings.warn(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+45 passed, 3 warnings in 10.81s

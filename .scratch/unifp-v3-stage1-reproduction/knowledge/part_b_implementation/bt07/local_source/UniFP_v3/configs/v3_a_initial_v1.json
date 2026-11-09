@@ -1,0 +1,125 @@
+{
+  "schema_version": 2,
+  "reproduction_part": "A",
+  "checkpoint_iteration": 8000,
+  "num_envs": 32,
+  "episodes_per_env": 3,
+  "seed": 1001,
+  "push_seed": 2001,
+  "action_mode": "actor_mean",
+  "scenario_protocol": "v3_a_three_scenarios_v1",
+  "threshold_version": "v3-a-initial-v1",
+  "thresholds": {
+    "S0": {
+      "tcp_geometric_l2_m": {
+        "max": 0.08
+      },
+      "tcp_geometric_l1_m": {
+        "max": 0.12
+      },
+      "base_planar_speed_m_s": {
+        "max": 0.05
+      },
+      "base_yaw_rate_rad_s": {
+        "max": 0.15
+      },
+      "physical_failure_rate": {
+        "max": 0.05
+      },
+      "state_estimation/base_vx_m_s_mae": {
+        "max": 0.1
+      },
+      "state_estimation/base_vy_m_s_mae": {
+        "max": 0.1
+      },
+      "state_estimation/base_vz_m_s_mae": {
+        "max": 0.05
+      },
+      "state_estimation/tcp_radius_m_mae": {
+        "max": 0.05
+      },
+      "state_estimation/tcp_elevation_rad_mae": {
+        "max": 0.1
+      },
+      "state_estimation/tcp_azimuth_rad_mae": {
+        "max": 0.15
+      }
+    },
+    "S1": {
+      "tcp_geometric_l2_m": {
+        "max": 0.12
+      },
+      "tcp_geometric_l1_m": {
+        "max": 0.18
+      },
+      "base_planar_speed_m_s": {
+        "max": 0.15
+      },
+      "base_yaw_rate_rad_s": {
+        "max": 0.2
+      },
+      "physical_failure_rate": {
+        "max": 0.05
+      },
+      "state_estimation/base_vx_m_s_mae": {
+        "max": 0.1
+      },
+      "state_estimation/base_vy_m_s_mae": {
+        "max": 0.1
+      },
+      "state_estimation/base_vz_m_s_mae": {
+        "max": 0.05
+      },
+      "state_estimation/tcp_radius_m_mae": {
+        "max": 0.05
+      },
+      "state_estimation/tcp_elevation_rad_mae": {
+        "max": 0.1
+      },
+      "state_estimation/tcp_azimuth_rad_mae": {
+        "max": 0.15
+      }
+    },
+    "S2": {
+      "tcp_geometric_l2_m": {
+        "max": 0.15
+      },
+      "tcp_geometric_l1_m": {
+        "max": 0.24
+      },
+      "base_planar_speed_m_s": {
+        "max": 0.2
+      },
+      "base_yaw_rate_rad_s": {
+        "max": 0.25
+      },
+      "physical_failure_rate": {
+        "max": 0.1
+      },
+      "state_estimation/base_vx_m_s_mae": {
+        "max": 0.1
+      },
+      "state_estimation/base_vy_m_s_mae": {
+        "max": 0.1
+      },
+      "state_estimation/base_vz_m_s_mae": {
+        "max": 0.05
+      },
+      "state_estimation/tcp_radius_m_mae": {
+        "max": 0.05
+      },
+      "state_estimation/tcp_elevation_rad_mae": {
+        "max": 0.1
+      },
+      "state_estimation/tcp_azimuth_rad_mae": {
+        "max": 0.15
+      },
+      "push_recovery_tcp_l2_m": {
+        "max": 0.2
+      },
+      "push_recovery_base_speed_error_m_s": {
+        "max": 0.3
+      }
+    }
+  }
+}

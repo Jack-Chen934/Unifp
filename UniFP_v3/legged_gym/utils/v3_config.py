@@ -88,4 +88,7 @@ def resolve_v3_configs(
 
     env_cfg.run.reproduction_part = reproduction_part
     env_cfg.run.run_purpose = run_purpose
+    if reproduction_part == "B":
+        train_cfg.runner.experiment_name = "v3_pos_force_stage_b"
+        env_cfg.commands.zero_vel_cmd_prob = 0.3
     return env_cfg, train_cfg

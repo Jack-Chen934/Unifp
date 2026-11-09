@@ -1,0 +1,26 @@
+[
+  {
+    "file": "contact_10N.mp4",
+    "frames": 500,
+    "fps": 25.0,
+    "duration_s": 20.0
+  },
+  {
+    "file": "contact_20N.mp4",
+    "frames": 500,
+    "fps": 25.0,
+    "duration_s": 20.0
+  },
+  {
+    "file": "R2_policy.mp4",
+    "frames": 26,
+    "fps": 25.0,
+    "duration_s": 1.04
+  },
+  {
+    "file": "contact_0N.mp4",
+    "frames": 500,
+    "fps": 25.0,
+    "duration_s": 20.0
+  }
+]

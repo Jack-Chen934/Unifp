@@ -254,3 +254,104 @@ def test_start_gate_checks_all_three_scenario_threshold_tables() -> None:
     report = assess_a_start_gate(make_evidence(identity), identity, manifest, formal_num_envs=4096)
     assert not report["ready"]
     assert any("manifest" in blocker and "S2" in blocker for blocker in report["blockers"])
+
+
+def test_b_gate_accepts_hashed_engineering_evidence_without_demanding_b_performance(tmp_path: Path) -> None:
+    """Accept full-scale engineering results even when A cannot perform B tasks.
+
+    Args:
+        tmp_path: New machine-report files with explicit synthetic identities.
+
+    Raises:
+        AssertionError: Complete B evidence is rejected, or edited reports,
+            incomplete capacity, wrong parents or unfrozen force ranges pass.
+    """
+    from legged_gym.b2_gym_learn.ppo_cse_pf.v3_preflight import assess_b_start_gate
+
+    source_root = Path(__file__).resolve().parents[1]
+    force_manifest = json.loads((source_root / "configs/v3_b_initial_v1.json").read_text())
+    contact_manifest = json.loads((source_root / "configs/v3_b_contact_v1.json").read_text())
+    zero_manifest = json.loads((source_root / "configs/v3_a_initial_v1.json").read_text())
+    identity = {"official_commit": "base", "source_manifest": {"v3.py": "bytes"},
+                "asset_manifest": {"v6.urdf": "v6"}, "schema_sha256": "schema",
+                "runtime": {"device": "cuda:0"}, "learning_config_sha256": "formal-config",
+                "reproduction_part": "B", "seed": 1}
+    parent = {"sha256": "a" * 64, "reproduction_part": "A", "completed_iterations": 8000,
+              "num_envs": 4096, "seed": 1, "asset_manifest": identity["asset_manifest"],
+              "schema_sha256": "schema"}
+    stages = {
+        "unit_tests": {"passed": True},
+        "force_smoke": {"passed": True, "two_runtimes": True, "com_force_verified": True,
+                        "reset_isolated": True},
+        "contact_smoke": {"passed": True, "two_runtimes": True, "measurement_verified": True,
+                          "reset_isolated": True},
+        "zero_force_regression": {"passed": True, "scenarios": ["S0", "S1", "S2"],
+                                  "num_envs": 32, "episodes_per_env": 3, "policy_updates": 0},
+        "training_resume": {"passed": True, "num_envs": 4096, "iterations": 10,
+                            "resumed_iterations": 1, "completed_iterations": 8011,
+                            "counters_consistent": True, "full_state_restored": True,
+                            "nonzero_force_learned": True},
+        "capacity": {"passed": True, "num_envs": 4096, "rollout_update": True,
+                     "stress_verified": True, "physics_warnings_absent": True},
+        "evaluation_baseline": {"passed": True, "force_scenarios": 14,
+                                "force_episodes": 1344, "contact_episodes": 96,
+                                "zero_control_episodes": 32, "policy_updates": 0,
+                                "cost_recorded": True},
+    }
+    for name, stage in stages.items():
+        stage["identity"] = copy.deepcopy(identity)
+        path = tmp_path / f"{name}.json"
+        path.write_text(json.dumps({"stage": name, "result": stage}))
+        stage["artifact"] = {"path": str(path), "sha256": hashlib.sha256(path.read_bytes()).hexdigest()}
+    evidence = {"schema_version": 1, "identity": identity, "formal_config_sha256": "formal-config",
+                "parent_sha256": parent["sha256"], "stages": stages,
+                "manifest_sha256": {name: hashlib.sha256(json.dumps(value, sort_keys=True).encode()).hexdigest()
+                    for name, value in (("force", force_manifest), ("contact", contact_manifest), ("zero_force", zero_manifest))}}
+    ready = assess_b_start_gate(evidence, identity, parent, force_manifest, contact_manifest, zero_manifest)
+    assert ready["ready"], ready["blockers"]
+    # Ordinary failures and poor A force tracking are deliberately not gate fields.
+    broken = copy.deepcopy(evidence)
+    del broken["stages"]["capacity"]
+    assert not assess_b_start_gate(broken, identity, parent, force_manifest, contact_manifest, zero_manifest)["ready"]
+    wrong_parent = {**parent, "sha256": "b" * 64}
+    assert not assess_b_start_gate(evidence, identity, wrong_parent, force_manifest, contact_manifest, zero_manifest)["ready"]
+    unfrozen = {**force_manifest, "range_frozen": False}
+    assert not assess_b_start_gate(evidence, identity, parent, unfrozen, contact_manifest, zero_manifest)["ready"]
+    Path(stages["capacity"]["artifact"]["path"]).write_text("{}")
+    assert not assess_b_start_gate(evidence, identity, parent, force_manifest, contact_manifest, zero_manifest)["ready"]
+
+
+def test_b_cli_reports_missing_real_evidence_before_simulation(tmp_path: Path) -> None:
+    """Expose B's missing full-scale stages through the actual read-only CLI.
+
+    Args:
+        tmp_path: Synthetic formal configuration and declared parent metadata.
+
+    Raises:
+        AssertionError: The B CLI crashes instead of reporting missing evidence.
+    """
+    source_root = Path(__file__).resolve().parents[1]
+    snapshot = {"environment": {"asset": {"file": str(source_root / "resources/robots/v3_a1_desktop/urdf/a1arm_rgm3_desktop_fixed_gripper.urdf")},
+                               "run": {"reproduction_part": "B", "run_purpose": "formal"},
+                               "env": {"num_envs": 4096}},
+                "training": {"seed": 1, "runner": {"max_iterations": 32000}}}
+    runtime = {"device": "synthetic"}
+    identity = build_run_identity(source_root, snapshot, runtime)
+    inputs = {"config_snapshot": snapshot, "runtime": runtime,
+              "parent_metadata": {"sha256": "a" * 64},
+              "evidence": {"schema_version": 1, "identity": identity, "stages": {}}}
+    command = [sys.executable, "-m", "legged_gym.scripts.preflight_v3"]
+    for name, value in inputs.items():
+        path = tmp_path / f"{name}.json"
+        path.write_text(json.dumps(value))
+        command.extend(["--" + name, str(path)])
+    for flag, filename in (("manifest", "v3_b_initial_v1.json"), ("contact_manifest", "v3_b_contact_v1.json"),
+                           ("zero_force_manifest", "v3_a_initial_v1.json")):
+        command.extend(["--" + flag, str(source_root / "configs" / filename)])
+    output = tmp_path / "gate.json"
+    command.extend(["--output", str(output)])
+    result = subprocess.run(command, cwd=source_root, capture_output=True, text=True, check=False)
+    assert result.returncode == 1, result.stderr
+    report = json.loads(output.read_text())
+    assert not report["ready"]
+    assert any("training_resume" in blocker for blocker in report["blockers"])

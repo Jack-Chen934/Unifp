@@ -1,0 +1,55 @@
+{
+  "passed": true,
+  "num_envs": 4,
+  "seed": 1,
+  "records": [
+    {
+      "boundary": "constructor_reset",
+      "tcp_world_m": [
+        0.4157872498035431,
+        4.0306581468030345e-06,
+        1.1968613862991333
+      ],
+      "tcp_fk_error_m": 8.275107541153957e-08,
+      "raw_cache_fk_error_m": 1.4543942960183105,
+      "target_fk_error_m": 1.0815555664723788e-07,
+      "label_error": 0.0,
+      "critic_label_error": 0.0
+    },
+    {
+      "boundary": "local_reset",
+      "tcp_world_m": [
+        0.4157872498035431,
+        4.0306581468030345e-06,
+        1.1968613862991333
+      ],
+      "tcp_fk_error_m": 8.275107541153957e-08,
+      "raw_cache_fk_error_m": 0.7079996057885559,
+      "target_fk_error_m": 1.0815555664723788e-07,
+      "label_error": 0.0,
+      "critic_label_error": 0.0
+    },
+    {
+      "boundary": "after_physics",
+      "tcp_world_m": [
+        0.4157872498035431,
+        4.0306899791175965e-06,
+        1.194408893585205
+      ],
+      "tcp_fk_error_m": 1.0331452132478026e-07,
+      "raw_cache_fk_error_m": 4.703486100934011e-07,
+      "target_fk_error_m": 0.002452571812759865,
+      "label_error": 0.0,
+      "critic_label_error": 0.0
+    }
+  ],
+  "other_row_differences": {
+    "root_states": 0.0,
+    "dof_pos": 0.0,
+    "dof_vel": 0.0,
+    "obs_history": 0.0,
+    "critic_history": 0.0,
+    "episode_length_buf": 0.0
+  },
+  "training_counters_unchanged": true
+}

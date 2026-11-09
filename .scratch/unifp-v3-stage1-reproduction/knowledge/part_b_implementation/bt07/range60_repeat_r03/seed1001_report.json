@@ -1,0 +1,2764 @@
+{
+  "peak_n": 60.0,
+  "conditions": {
+    "static_C": {
+      "samples": 4000,
+      "direction_samples": [
+        396,
+        396,
+        396,
+        396,
+        396,
+        396
+      ],
+      "arm_near_limit_samples": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "tcp_geometric_l2_sum_m": 96.65841356408782,
+      "tcp_compensated_l2_sum_m": 586.4441669490188,
+      "physical_failures": 0,
+      "compensated_radius_outside_sampled_domain": 998,
+      "compensated_target_exceeds_chain_bound_samples": 0,
+      "arm_near_limit_fraction": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "tcp_geometric_l2_mean_m": 0.024164603391021954,
+      "tcp_compensated_l2_mean_m": 0.1466110417372547,
+      "direction_coverage_complete": true
+    },
+    "static_E": {
+      "samples": 4000,
+      "direction_samples": [
+        396,
+        396,
+        396,
+        396,
+        396,
+        396
+      ],
+      "arm_near_limit_samples": [
+        3,
+        61,
+        2,
+        0,
+        60,
+        0
+      ],
+      "tcp_geometric_l2_sum_m": 749.4651715089567,
+      "tcp_compensated_l2_sum_m": 652.1205435823649,
+      "physical_failures": 0,
+      "compensated_radius_outside_sampled_domain": 1295,
+      "compensated_target_exceeds_chain_bound_samples": 0,
+      "arm_near_limit_fraction": [
+        0.00075,
+        0.01525,
+        0.0005,
+        0.0,
+        0.015,
+        0.0
+      ],
+      "tcp_geometric_l2_mean_m": 0.1873662928772392,
+      "tcp_compensated_l2_mean_m": 0.16303013589559123,
+      "direction_coverage_complete": true
+    },
+    "static_same": {
+      "samples": 4000,
+      "direction_samples": [
+        495,
+        495,
+        495,
+        336,
+        297,
+        297
+      ],
+      "arm_near_limit_samples": [
+        0,
+        1,
+        0,
+        0,
+        1,
+        0
+      ],
+      "tcp_geometric_l2_sum_m": 750.3967503106687,
+      "tcp_compensated_l2_sum_m": 946.6461639569607,
+      "physical_failures": 1,
+      "compensated_radius_outside_sampled_domain": 1854,
+      "compensated_target_exceeds_chain_bound_samples": 0,
+      "arm_near_limit_fraction": [
+        0.0,
+        0.00025,
+        0.0,
+        0.0,
+        0.00025,
+        0.0
+      ],
+      "tcp_geometric_l2_mean_m": 0.1875991875776672,
+      "tcp_compensated_l2_mean_m": 0.23666154098924017,
+      "direction_coverage_complete": true
+    },
+    "static_match": {
+      "samples": 4000,
+      "direction_samples": [
+        495,
+        396,
+        396,
+        396,
+        396,
+        327
+      ],
+      "arm_near_limit_samples": [
+        11,
+        4,
+        0,
+        10,
+        4,
+        0
+      ],
+      "tcp_geometric_l2_sum_m": 664.9067268983927,
+      "tcp_compensated_l2_sum_m": 664.9110827648547,
+      "physical_failures": 1,
+      "compensated_radius_outside_sampled_domain": 277,
+      "compensated_target_exceeds_chain_bound_samples": 0,
+      "arm_near_limit_fraction": [
+        0.00275,
+        0.001,
+        0.0,
+        0.0025,
+        0.001,
+        0.0
+      ],
+      "tcp_geometric_l2_mean_m": 0.16622668172459817,
+      "tcp_compensated_l2_mean_m": 0.16622777069121367,
+      "direction_coverage_complete": true
+    },
+    "moving_C": {
+      "samples": 4000,
+      "direction_samples": [
+        396,
+        396,
+        396,
+        396,
+        396,
+        396
+      ],
+      "arm_near_limit_samples": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "tcp_geometric_l2_sum_m": 79.19698730530217,
+      "tcp_compensated_l2_sum_m": 576.9782096629497,
+      "physical_failures": 0,
+      "compensated_radius_outside_sampled_domain": 1104,
+      "compensated_target_exceeds_chain_bound_samples": 0,
+      "arm_near_limit_fraction": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "tcp_geometric_l2_mean_m": 0.019799246826325542,
+      "tcp_compensated_l2_mean_m": 0.14424455241573741,
+      "direction_coverage_complete": true
+    },
+    "moving_E": {
+      "samples": 4000,
+      "direction_samples": [
+        396,
+        396,
+        396,
+        396,
+        396,
+        396
+      ],
+      "arm_near_limit_samples": [
+        0,
+        24,
+        0,
+        0,
+        14,
+        0
+      ],
+      "tcp_geometric_l2_sum_m": 578.3565733176656,
+      "tcp_compensated_l2_sum_m": 593.7744689355604,
+      "physical_failures": 0,
+      "compensated_radius_outside_sampled_domain": 1477,
+      "compensated_target_exceeds_chain_bound_samples": 0,
+      "arm_near_limit_fraction": [
+        0.0,
+        0.006,
+        0.0,
+        0.0,
+        0.0035,
+        0.0
+      ],
+      "tcp_geometric_l2_mean_m": 0.14458914332941641,
+      "tcp_compensated_l2_mean_m": 0.1484436172338901,
+      "direction_coverage_complete": true
+    },
+    "moving_same": {
+      "samples": 4000,
+      "direction_samples": [
+        396,
+        396,
+        396,
+        396,
+        396,
+        396
+      ],
+      "arm_near_limit_samples": [
+        3,
+        5,
+        27,
+        0,
+        17,
+        0
+      ],
+      "tcp_geometric_l2_sum_m": 670.7469096309505,
+      "tcp_compensated_l2_sum_m": 983.4339938871562,
+      "physical_failures": 0,
+      "compensated_radius_outside_sampled_domain": 1627,
+      "compensated_target_exceeds_chain_bound_samples": 0,
+      "arm_near_limit_fraction": [
+        0.00075,
+        0.00125,
+        0.00675,
+        0.0,
+        0.00425,
+        0.0
+      ],
+      "tcp_geometric_l2_mean_m": 0.16768672740773763,
+      "tcp_compensated_l2_mean_m": 0.24585849847178906,
+      "direction_coverage_complete": true
+    },
+    "moving_match": {
+      "samples": 4000,
+      "direction_samples": [
+        396,
+        396,
+        396,
+        396,
+        396,
+        396
+      ],
+      "arm_near_limit_samples": [
+        0,
+        5,
+        36,
+        17,
+        37,
+        0
+      ],
+      "tcp_geometric_l2_sum_m": 684.2490365039557,
+      "tcp_compensated_l2_sum_m": 684.4864641088061,
+      "physical_failures": 0,
+      "compensated_radius_outside_sampled_domain": 155,
+      "compensated_target_exceeds_chain_bound_samples": 0,
+      "arm_near_limit_fraction": [
+        0.0,
+        0.00125,
+        0.009,
+        0.00425,
+        0.00925,
+        0.0
+      ],
+      "tcp_geometric_l2_mean_m": 0.17106225912598894,
+      "tcp_compensated_l2_mean_m": 0.17112161602720152,
+      "direction_coverage_complete": true
+    }
+  },
+  "policy_steps": 1000,
+  "policy_updates": 0,
+  "completed_episodes": [
+    {
+      "completed_iterations": 0,
+      "training_policy_steps": 0,
+      "training_transitions": 0,
+      "env_id": 9,
+      "steps": 540,
+      "duration_s": 10.799999758601189,
+      "end_type": "physical_failure",
+      "reward_return": 57.65208053588867,
+      "reward_rate": 5.338155724491956,
+      "raw_reward_means": {
+        "tracking_ee_force_world": 0.5938968062400818,
+        "tracking_lin_vel": 0.9932963848114014,
+        "tracking_ang_vel": 0.9927533864974976,
+        "alive": 1.0,
+        "torques_steering": 51.51071548461914,
+        "torques_drive": 202.85462951660156,
+        "torques_arm": 274.8210144042969,
+        "action_rate_steering": 0.0337085947394371,
+        "action_rate_drive": 0.0069168792106211185,
+        "action_rate_arm": 0.11985815316438675,
+        "dof_vel_steering": 2.531235933303833,
+        "dof_vel_arm": 21.54976463317871,
+        "dof_acc_steering": 2727.998779296875,
+        "dof_acc_drive": 3793.75146484375,
+        "dof_acc_arm": 8581.6005859375,
+        "torque_limits_steering": 0.0,
+        "torque_limits_drive": 0.0,
+        "torque_limits_arm": 0.0,
+        "dof_pos_limits": 0.0066808052361011505,
+        "lin_vel_z": 0.0004250691563356668,
+        "ang_vel_xy": 0.0036363389808684587,
+        "base_height": 2.2013651687302627e-05,
+        "collision": 0.04814814776182175
+      },
+      "errors": {
+        "tcp_geometric_l1_m": {
+          "mean": 0.267084538936615,
+          "p95": 0.6897266507148743
+        },
+        "tcp_geometric_l2_m": {
+          "mean": 0.18107475340366364,
+          "p95": 0.47598811984062195
+        },
+        "base_planar_speed_m_s": {
+          "mean": 0.026993555948138237,
+          "p95": 0.10141077637672424
+        },
+        "base_yaw_rate_rad_s": {
+          "mean": 0.024333205074071884,
+          "p95": 0.11334788799285889
+        },
+        "tcp_compensated_l1_m": {
+          "mean": 0.3048979640007019,
+          "p95": 0.6475551724433899
+        },
+        "tcp_compensated_l2_m": {
+          "mean": 0.22536708414554596,
+          "p95": 0.572239875793457
+        }
+      },
+      "timeout_bootstrap_bonus": null
+    },
+    {
+      "completed_iterations": 0,
+      "training_policy_steps": 0,
+      "training_transitions": 0,
+      "env_id": 12,
+      "steps": 831,
+      "duration_s": 16.61999962851405,
+      "end_type": "physical_failure",
+      "reward_return": 94.616455078125,
+      "reward_rate": 5.692927628939087,
+      "raw_reward_means": {
+        "tracking_ee_force_world": 0.6264852285385132,
+        "tracking_lin_vel": 0.9946117997169495,
+        "tracking_ang_vel": 0.9962804913520813,
+        "alive": 1.0,
+        "torques_steering": 27.430755615234375,
+        "torques_drive": 200.56451416015625,
+        "torques_arm": 460.8840637207031,
+        "action_rate_steering": 0.02699130028486252,
+        "action_rate_drive": 0.007222984917461872,
+        "action_rate_arm": 0.1416434496641159,
+        "dof_vel_steering": 1.655049204826355,
+        "dof_vel_arm": 23.02290916442871,
+        "dof_acc_steering": 2816.086181640625,
+        "dof_acc_drive": 5579.931640625,
+        "dof_acc_arm": 9954.3056640625,
+        "torque_limits_steering": 0.0,
+        "torque_limits_drive": 0.0,
+        "torque_limits_arm": 0.08594357967376709,
+        "dof_pos_limits": 0.0009528658119961619,
+        "lin_vel_z": 0.0002981237194035202,
+        "ang_vel_xy": 0.002536861225962639,
+        "base_height": 2.1317393475328572e-05,
+        "collision": 0.002406738931313157
+      },
+      "errors": {
+        "tcp_geometric_l1_m": {
+          "mean": 0.2841302752494812,
+          "p95": 0.8159749507904053
+        },
+        "tcp_geometric_l2_m": {
+          "mean": 0.1907069981098175,
+          "p95": 0.5322924852371216
+        },
+        "base_planar_speed_m_s": {
+          "mean": 0.02361806109547615,
+          "p95": 0.0861205905675888
+        },
+        "base_yaw_rate_rad_s": {
+          "mean": 0.018970772624015808,
+          "p95": 0.05826814845204353
+        },
+        "tcp_compensated_l1_m": {
+          "mean": 0.2841280698776245,
+          "p95": 0.8159732818603516
+        },
+        "tcp_compensated_l2_m": {
+          "mean": 0.19070589542388916,
+          "p95": 0.5322699546813965
+        }
+      },
+      "timeout_bootstrap_bonus": null
+    },
+    {
+      "completed_iterations": 0,
+      "training_policy_steps": 0,
+      "training_transitions": 0,
+      "env_id": 0,
+      "steps": 1000,
+      "duration_s": 19.999999552965164,
+      "end_type": "timeout",
+      "reward_return": 119.44087219238281,
+      "reward_rate": 5.97204374310472,
+      "raw_reward_means": {
+        "tracking_ee_force_world": 0.7426724433898926,
+        "tracking_lin_vel": 0.9986729621887207,
+        "tracking_ang_vel": 0.996149480342865,
+        "alive": 1.0,
+        "torques_steering": 9.557446479797363,
+        "torques_drive": 41.36534118652344,
+        "torques_arm": 101.38479614257812,
+        "action_rate_steering": 0.01503064390271902,
+        "action_rate_drive": 0.008727273903787136,
+        "action_rate_arm": 0.04220782592892647,
+        "dof_vel_steering": 0.6752625703811646,
+        "dof_vel_arm": 2.583435535430908,
+        "dof_acc_steering": 1584.302734375,
+        "dof_acc_drive": 539.0272827148438,
+        "dof_acc_arm": 3786.094970703125,
+        "torque_limits_steering": 0.0,
+        "torque_limits_drive": 0.0,
+        "torque_limits_arm": 0.0,
+        "dof_pos_limits": 0.0,
+        "lin_vel_z": 0.00019657667144201696,
+        "ang_vel_xy": 0.0013075374299660325,
+        "base_height": 2.1637073587044142e-05,
+        "collision": 0.0
+      },
+      "errors": {
+        "tcp_geometric_l1_m": {
+          "mean": 0.03559121862053871,
+          "p95": 0.09048474580049515
+        },
+        "tcp_geometric_l2_m": {
+          "mean": 0.023002048954367638,
+          "p95": 0.05714980885386467
+        },
+        "base_planar_speed_m_s": {
+          "mean": 0.013126859441399574,
+          "p95": 0.032652597874403
+        },
+        "base_yaw_rate_rad_s": {
+          "mean": 0.020778600126504898,
+          "p95": 0.05998660624027252
+        },
+        "tcp_compensated_l1_m": {
+          "mean": 0.16596880555152893,
+          "p95": 0.3618527054786682
+        },
+        "tcp_compensated_l2_m": {
+          "mean": 0.14765547215938568,
+          "p95": 0.32309380173683167
+        }
+      },
+      "timeout_bootstrap_bonus": null
+    },
+    {
+      "completed_iterations": 0,
+      "training_policy_steps": 0,
+      "training_transitions": 0,
+      "env_id": 1,
+      "steps": 1000,
+      "duration_s": 19.999999552965164,
+      "end_type": "timeout",
+      "reward_return": 119.49716186523438,
+      "reward_rate": 5.974858226810207,
+      "raw_reward_means": {
+        "tracking_ee_force_world": 0.7418950796127319,
+        "tracking_lin_vel": 0.9991760849952698,
+        "tracking_ang_vel": 0.9982049465179443,
+        "alive": 1.0,
+        "torques_steering": 20.194129943847656,
+        "torques_drive": 24.97459602355957,
+        "torques_arm": 49.852439880371094,
+        "action_rate_steering": 0.014513067901134491,
+        "action_rate_drive": 0.007484320551156998,
+        "action_rate_arm": 0.039681341499090195,
+        "dof_vel_steering": 0.6712908744812012,
+        "dof_vel_arm": 2.2821853160858154,
+        "dof_acc_steering": 1394.59521484375,
+        "dof_acc_drive": 314.3516540527344,
+        "dof_acc_arm": 2077.51123046875,
+        "torque_limits_steering": 0.0,
+        "torque_limits_drive": 0.0,
+        "torque_limits_arm": 0.0,
+        "dof_pos_limits": 0.0,
+        "lin_vel_z": 0.0002310626150574535,
+        "ang_vel_xy": 0.002121609402820468,
+        "base_height": 2.1557787476922385e-05,
+        "collision": 0.0
+      },
+      "errors": {
+        "tcp_geometric_l1_m": {
+          "mean": 0.03765888139605522,
+          "p95": 0.08587360382080078
+        },
+        "tcp_geometric_l2_m": {
+          "mean": 0.024796761572360992,
+          "p95": 0.05379171669483185
+        },
+        "base_planar_speed_m_s": {
+          "mean": 0.010668144561350346,
+          "p95": 0.029191801324486732
+        },
+        "base_yaw_rate_rad_s": {
+          "mean": 0.014027788303792477,
+          "p95": 0.04336037486791611
+        },
+        "tcp_compensated_l1_m": {
+          "mean": 0.16510969400405884,
+          "p95": 0.33860284090042114
+        },
+        "tcp_compensated_l2_m": {
+          "mean": 0.1459197849035263,
+          "p95": 0.30968889594078064
+        }
+      },
+      "timeout_bootstrap_bonus": null
+    },
+    {
+      "completed_iterations": 0,
+      "training_policy_steps": 0,
+      "training_transitions": 0,
+      "env_id": 2,
+      "steps": 1000,
+      "duration_s": 19.999999552965164,
+      "end_type": "timeout",
+      "reward_return": 119.92965698242188,
+      "reward_rate": 5.996482983152933,
+      "raw_reward_means": {
+        "tracking_ee_force_world": 0.754392147064209,
+        "tracking_lin_vel": 0.9988335967063904,
+        "tracking_ang_vel": 0.9959292411804199,
+        "alive": 1.0,
+        "torques_steering": 17.190265655517578,
+        "torques_drive": 39.74879455566406,
+        "torques_arm": 93.7801742553711,
+        "action_rate_steering": 0.014381189830601215,
+        "action_rate_drive": 0.007963563315570354,
+        "action_rate_arm": 0.036445342004299164,
+        "dof_vel_steering": 0.6871829628944397,
+        "dof_vel_arm": 2.2805466651916504,
+        "dof_acc_steering": 1714.995849609375,
+        "dof_acc_drive": 482.5054016113281,
+        "dof_acc_arm": 2394.397216796875,
+        "torque_limits_steering": 0.0,
+        "torque_limits_drive": 0.0,
+        "torque_limits_arm": 0.0,
+        "dof_pos_limits": 0.0,
+        "lin_vel_z": 0.00023290976241696626,
+        "ang_vel_xy": 0.0018051128135994077,
+        "base_height": 2.161105840059463e-05,
+        "collision": 0.0
+      },
+      "errors": {
+        "tcp_geometric_l1_m": {
+          "mean": 0.027738573029637337,
+          "p95": 0.05749621242284775
+        },
+        "tcp_geometric_l2_m": {
+          "mean": 0.018292298540472984,
+          "p95": 0.03721145913004875
+        },
+        "base_planar_speed_m_s": {
+          "mean": 0.012301977723836899,
+          "p95": 0.037310890853405
+        },
+        "base_yaw_rate_rad_s": {
+          "mean": 0.022855272516608238,
+          "p95": 0.06823741644620895
+        },
+        "tcp_compensated_l1_m": {
+          "mean": 0.15712882578372955,
+          "p95": 0.32916924357414246
+        },
+        "tcp_compensated_l2_m": {
+          "mean": 0.143772691488266,
+          "p95": 0.3127292990684509
+        }
+      },
+      "timeout_bootstrap_bonus": null
+    },
+    {
+      "completed_iterations": 0,
+      "training_policy_steps": 0,
+      "training_transitions": 0,
+      "env_id": 3,
+      "steps": 1000,
+      "duration_s": 19.999999552965164,
+      "end_type": "timeout",
+      "reward_return": 119.31221771240234,
+      "reward_rate": 5.965611018961915,
+      "raw_reward_means": {
+        "tracking_ee_force_world": 0.7368809580802917,
+        "tracking_lin_vel": 0.9993968605995178,
+        "tracking_ang_vel": 0.999110758304596,
+        "alive": 1.0,
+        "torques_steering": 15.655936241149902,
+        "torques_drive": 39.48935317993164,
+        "torques_arm": 83.04508209228516,
+        "action_rate_steering": 0.01575518772006035,
+        "action_rate_drive": 0.00666671572253108,
+        "action_rate_arm": 0.0448383167386055,
+        "dof_vel_steering": 0.599561333656311,
+        "dof_vel_arm": 3.0312914848327637,
+        "dof_acc_steering": 1182.7908935546875,
+        "dof_acc_drive": 288.42547607421875,
+        "dof_acc_arm": 2221.3916015625,
+        "torque_limits_steering": 0.0,
+        "torque_limits_drive": 0.0,
+        "torque_limits_arm": 0.0,
+        "dof_pos_limits": 0.0,
+        "lin_vel_z": 0.00024199071049224585,
+        "ang_vel_xy": 0.0018775075441226363,
+        "base_height": 2.0954768842784688e-05,
+        "collision": 0.0
+      },
+      "errors": {
+        "tcp_geometric_l1_m": {
+          "mean": 0.04658519849181175,
+          "p95": 0.15181182324886322
+        },
+        "tcp_geometric_l2_m": {
+          "mean": 0.030567308887839317,
+          "p95": 0.09788621217012405
+        },
+        "base_planar_speed_m_s": {
+          "mean": 0.00881644431501627,
+          "p95": 0.02695765346288681
+        },
+        "base_yaw_rate_rad_s": {
+          "mean": 0.008917870931327343,
+          "p95": 0.029321642592549324
+        },
+        "tcp_compensated_l1_m": {
+          "mean": 0.16963592171669006,
+          "p95": 0.3522490859031677
+        },
+        "tcp_compensated_l2_m": {
+          "mean": 0.14909622073173523,
+          "p95": 0.3266659379005432
+        }
+      },
+      "timeout_bootstrap_bonus": null
+    },
+    {
+      "completed_iterations": 0,
+      "training_policy_steps": 0,
+      "training_transitions": 0,
+      "env_id": 4,
+      "steps": 1000,
+      "duration_s": 19.999999552965164,
+      "end_type": "timeout",
+      "reward_return": 112.03006744384766,
+      "reward_rate": 5.6015034973957425,
+      "raw_reward_means": {
+        "tracking_ee_force_world": 0.6712237596511841,
+        "tracking_lin_vel": 0.9921308159828186,
+        "tracking_ang_vel": 0.9883050918579102,
+        "alive": 1.0,
+        "torques_steering": 14.449687004089355,
+        "torques_drive": 119.58875274658203,
+        "torques_arm": 374.74224853515625,
+        "action_rate_steering": 0.027943365275859833,
+        "action_rate_drive": 0.006998972501605749,
+        "action_rate_arm": 0.10171592980623245,
+        "dof_vel_steering": 2.0444695949554443,
+        "dof_vel_arm": 16.241819381713867,
+        "dof_acc_steering": 2611.7470703125,
+        "dof_acc_drive": 2652.1640625,
+        "dof_acc_arm": 5939.80419921875,
+        "torque_limits_steering": 0.0,
+        "torque_limits_drive": 0.0,
+        "torque_limits_arm": 0.00877926405519247,
+        "dof_pos_limits": 0.007633363362401724,
+        "lin_vel_z": 0.00023711472749710083,
+        "ang_vel_xy": 0.0018585837678983808,
+        "base_height": 2.1669364286935888e-05,
+        "collision": 0.024000000208616257
+      },
+      "errors": {
+        "tcp_geometric_l1_m": {
+          "mean": 0.2658277750015259,
+          "p95": 0.7336993217468262
+        },
+        "tcp_geometric_l2_m": {
+          "mean": 0.1804644912481308,
+          "p95": 0.47987648844718933
+        },
+        "base_planar_speed_m_s": {
+          "mean": 0.02945922501385212,
+          "p95": 0.10235042124986649
+        },
+        "base_yaw_rate_rad_s": {
+          "mean": 0.031406208872795105,
+          "p95": 0.1305951327085495
+        },
+        "tcp_compensated_l1_m": {
+          "mean": 0.22057385742664337,
+          "p95": 0.48024603724479675
+        },
+        "tcp_compensated_l2_m": {
+          "mean": 0.14605799317359924,
+          "p95": 0.296294629573822
+        }
+      },
+      "timeout_bootstrap_bonus": null
+    },
+    {
+      "completed_iterations": 0,
+      "training_policy_steps": 0,
+      "training_transitions": 0,
+      "env_id": 5,
+      "steps": 1000,
+      "duration_s": 19.999999552965164,
+      "end_type": "timeout",
+      "reward_return": 109.97863006591797,
+      "reward_rate": 5.498931626206598,
+      "raw_reward_means": {
+        "tracking_ee_force_world": 0.6571813821792603,
+        "tracking_lin_vel": 0.9966430068016052,
+        "tracking_ang_vel": 0.9935667514801025,
+        "alive": 1.0,
+        "torques_steering": 27.793598175048828,
+        "torques_drive": 139.0726318359375,
+        "torques_arm": 356.6647644042969,
+        "action_rate_steering": 0.026860199868679047,
+        "action_rate_drive": 0.006716880481690168,
+        "action_rate_arm": 0.09936709702014923,
+        "dof_vel_steering": 1.875732183456421,
+        "dof_vel_arm": 15.95281982421875,
+        "dof_acc_steering": 3063.95068359375,
+        "dof_acc_drive": 2454.09912109375,
+        "dof_acc_arm": 5957.091796875,
+        "torque_limits_steering": 0.0,
+        "torque_limits_drive": 0.00800000037997961,
+        "torque_limits_arm": 0.04152217134833336,
+        "dof_pos_limits": 0.004510644357651472,
+        "lin_vel_z": 0.00022544078819919378,
+        "ang_vel_xy": 0.001779483282007277,
+        "base_height": 2.1681911675841548e-05,
+        "collision": 0.04800000041723251
+      },
+      "errors": {
+        "tcp_geometric_l1_m": {
+          "mean": 0.24438181519508362,
+          "p95": 0.5933578014373779
+        },
+        "tcp_geometric_l2_m": {
+          "mean": 0.1594558209180832,
+          "p95": 0.3818109333515167
+        },
+        "base_planar_speed_m_s": {
+          "mean": 0.021119141951203346,
+          "p95": 0.06616897881031036
+        },
+        "base_yaw_rate_rad_s": {
+          "mean": 0.02270263060927391,
+          "p95": 0.09583025425672531
+        },
+        "tcp_compensated_l1_m": {
+          "mean": 0.23195822536945343,
+          "p95": 0.4187471568584442
+        },
+        "tcp_compensated_l2_m": {
+          "mean": 0.15548047423362732,
+          "p95": 0.2918442487716675
+        }
+      },
+      "timeout_bootstrap_bonus": null
+    },
+    {
+      "completed_iterations": 0,
+      "training_policy_steps": 0,
+      "training_transitions": 0,
+      "env_id": 6,
+      "steps": 1000,
+      "duration_s": 19.999999552965164,
+      "end_type": "timeout",
+      "reward_return": 112.27290344238281,
+      "reward_rate": 5.613645297593891,
+      "raw_reward_means": {
+        "tracking_ee_force_world": 0.6195946335792542,
+        "tracking_lin_vel": 0.9931170344352722,
+        "tracking_ang_vel": 0.9907341599464417,
+        "alive": 1.0,
+        "torques_steering": 18.063915252685547,
+        "torques_drive": 166.37937927246094,
+        "torques_arm": 507.4888610839844,
+        "action_rate_steering": 0.029250916093587875,
+        "action_rate_drive": 0.006966480053961277,
+        "action_rate_arm": 0.130458801984787,
+        "dof_vel_steering": 2.3086748123168945,
+        "dof_vel_arm": 26.451860427856445,
+        "dof_acc_steering": 3225.5673828125,
+        "dof_acc_drive": 4342.65869140625,
+        "dof_acc_arm": 10779.58203125,
+        "torque_limits_steering": 0.0,
+        "torque_limits_drive": 0.0,
+        "torque_limits_arm": 0.29935571551322937,
+        "dof_pos_limits": 0.007664002478122711,
+        "lin_vel_z": 0.00023685325868427753,
+        "ang_vel_xy": 0.0020603197626769543,
+        "base_height": 2.1672234652214684e-05,
+        "collision": 0.0
+      },
+      "errors": {
+        "tcp_geometric_l1_m": {
+          "mean": 0.3437977135181427,
+          "p95": 0.8047565817832947
+        },
+        "tcp_geometric_l2_m": {
+          "mean": 0.2335824966430664,
+          "p95": 0.5952388048171997
+        },
+        "base_planar_speed_m_s": {
+          "mean": 0.03039362095296383,
+          "p95": 0.08714692294597626
+        },
+        "base_yaw_rate_rad_s": {
+          "mean": 0.028468716889619827,
+          "p95": 0.10099493712186813
+        },
+        "tcp_compensated_l1_m": {
+          "mean": 0.2695411145687103,
+          "p95": 0.5620440244674683
+        },
+        "tcp_compensated_l2_m": {
+          "mean": 0.17709802091121674,
+          "p95": 0.36046478152275085
+        }
+      },
+      "timeout_bootstrap_bonus": null
+    },
+    {
+      "completed_iterations": 0,
+      "training_policy_steps": 0,
+      "training_transitions": 0,
+      "env_id": 7,
+      "steps": 1000,
+      "duration_s": 19.999999552965164,
+      "end_type": "timeout",
+      "reward_return": 99.44278717041016,
+      "reward_rate": 4.972139469656486,
+      "raw_reward_means": {
+        "tracking_ee_force_world": 0.6249361038208008,
+        "tracking_lin_vel": 0.9953051805496216,
+        "tracking_ang_vel": 0.9923021197319031,
+        "alive": 1.0,
+        "torques_steering": 31.109071731567383,
+        "torques_drive": 118.12899780273438,
+        "torques_arm": 307.9414978027344,
+        "action_rate_steering": 0.029793767258524895,
+        "action_rate_drive": 0.006867261603474617,
+        "action_rate_arm": 0.12588468194007874,
+        "dof_vel_steering": 2.1159088611602783,
+        "dof_vel_arm": 22.428070068359375,
+        "dof_acc_steering": 3024.62646484375,
+        "dof_acc_drive": 1769.97314453125,
+        "dof_acc_arm": 9233.083984375,
+        "torque_limits_steering": 0.0,
+        "torque_limits_drive": 0.0,
+        "torque_limits_arm": 0.020781146362423897,
+        "dof_pos_limits": 0.011990143917500973,
+        "lin_vel_z": 0.00022265304869506508,
+        "ang_vel_xy": 0.0021579922176897526,
+        "base_height": 2.202747418778017e-05,
+        "collision": 0.12400000542402267
+      },
+      "errors": {
+        "tcp_geometric_l1_m": {
+          "mean": 0.27187052369117737,
+          "p95": 0.6150190830230713
+        },
+        "tcp_geometric_l2_m": {
+          "mean": 0.17596237361431122,
+          "p95": 0.42233362793922424
+        },
+        "base_planar_speed_m_s": {
+          "mean": 0.023733502253890038,
+          "p95": 0.07779286056756973
+        },
+        "base_yaw_rate_rad_s": {
+          "mean": 0.02487632818520069,
+          "p95": 0.0997111052274704
+        },
+        "tcp_compensated_l1_m": {
+          "mean": 0.2658548951148987,
+          "p95": 0.6430341601371765
+        },
+        "tcp_compensated_l2_m": {
+          "mean": 0.17348408699035645,
+          "p95": 0.39726439118385315
+        }
+      },
+      "timeout_bootstrap_bonus": null
+    },
+    {
+      "completed_iterations": 0,
+      "training_policy_steps": 0,
+      "training_transitions": 0,
+      "env_id": 8,
+      "steps": 1000,
+      "duration_s": 19.999999552965164,
+      "end_type": "timeout",
+      "reward_return": 107.11721801757812,
+      "reward_rate": 5.355861020591729,
+      "raw_reward_means": {
+        "tracking_ee_force_world": 0.5625721216201782,
+        "tracking_lin_vel": 0.9925713539123535,
+        "tracking_ang_vel": 0.9824982285499573,
+        "alive": 1.0,
+        "torques_steering": 22.434452056884766,
+        "torques_drive": 154.45533752441406,
+        "torques_arm": 356.88958740234375,
+        "action_rate_steering": 0.027459509670734406,
+        "action_rate_drive": 0.006687508430331945,
+        "action_rate_arm": 0.10340962558984756,
+        "dof_vel_steering": 2.2343339920043945,
+        "dof_vel_arm": 16.330568313598633,
+        "dof_acc_steering": 3127.048583984375,
+        "dof_acc_drive": 3313.947998046875,
+        "dof_acc_arm": 4879.431640625,
+        "torque_limits_steering": 0.0,
+        "torque_limits_drive": 0.0,
+        "torque_limits_arm": 0.02828078530728817,
+        "dof_pos_limits": 0.005449583288282156,
+        "lin_vel_z": 0.00022341379371937364,
+        "ang_vel_xy": 0.00218021497130394,
+        "base_height": 2.1792946427012794e-05,
+        "collision": 0.032999999821186066
+      },
+      "errors": {
+        "tcp_geometric_l1_m": {
+          "mean": 0.2944788336753845,
+          "p95": 0.5833474397659302
+        },
+        "tcp_geometric_l2_m": {
+          "mean": 0.1927282214164734,
+          "p95": 0.3958486020565033
+        },
+        "base_planar_speed_m_s": {
+          "mean": 0.03289384767413139,
+          "p95": 0.08929456770420074
+        },
+        "base_yaw_rate_rad_s": {
+          "mean": 0.04139695316553116,
+          "p95": 0.15942801535129547
+        },
+        "tcp_compensated_l1_m": {
+          "mean": 0.3373120129108429,
+          "p95": 0.6757820248603821
+        },
+        "tcp_compensated_l2_m": {
+          "mean": 0.22984154522418976,
+          "p95": 0.44336867332458496
+        }
+      },
+      "timeout_bootstrap_bonus": null
+    },
+    {
+      "completed_iterations": 0,
+      "training_policy_steps": 0,
+      "training_transitions": 0,
+      "env_id": 10,
+      "steps": 1000,
+      "duration_s": 19.999999552965164,
+      "end_type": "timeout",
+      "reward_return": 111.20722961425781,
+      "reward_rate": 5.5603616049966575,
+      "raw_reward_means": {
+        "tracking_ee_force_world": 0.5800016522407532,
+        "tracking_lin_vel": 0.9936652779579163,
+        "tracking_ang_vel": 0.9911251068115234,
+        "alive": 1.0,
+        "torques_steering": 22.688522338867188,
+        "torques_drive": 204.2833251953125,
+        "torques_arm": 299.1845397949219,
+        "action_rate_steering": 0.026280643418431282,
+        "action_rate_drive": 0.006873439997434616,
+        "action_rate_arm": 0.08495078235864639,
+        "dof_vel_steering": 1.7592253684997559,
+        "dof_vel_arm": 12.734335899353027,
+        "dof_acc_steering": 2827.10986328125,
+        "dof_acc_drive": 3769.561279296875,
+        "dof_acc_arm": 5199.77490234375,
+        "torque_limits_steering": 0.0,
+        "torque_limits_drive": 0.0,
+        "torque_limits_arm": 0.0003713798651006073,
+        "dof_pos_limits": 0.006257802248001099,
+        "lin_vel_z": 0.0002516560780350119,
+        "ang_vel_xy": 0.001943467534147203,
+        "base_height": 2.1671388822142035e-05,
+        "collision": 0.0
+      },
+      "errors": {
+        "tcp_geometric_l1_m": {
+          "mean": 0.25635451078414917,
+          "p95": 0.6665023565292358
+        },
+        "tcp_geometric_l2_m": {
+          "mean": 0.17163333296775818,
+          "p95": 0.46320974826812744
+        },
+        "base_planar_speed_m_s": {
+          "mean": 0.02732045203447342,
+          "p95": 0.0903598889708519
+        },
+        "base_yaw_rate_rad_s": {
+          "mean": 0.0278750192373991,
+          "p95": 0.09806814044713974
+        },
+        "tcp_compensated_l1_m": {
+          "mean": 0.3230399191379547,
+          "p95": 0.7242991924285889
+        },
+        "tcp_compensated_l2_m": {
+          "mean": 0.2356068193912506,
+          "p95": 0.517741322517395
+        }
+      },
+      "timeout_bootstrap_bonus": null
+    },
+    {
+      "completed_iterations": 0,
+      "training_policy_steps": 0,
+      "training_transitions": 0,
+      "env_id": 11,
+      "steps": 1000,
+      "duration_s": 19.999999552965164,
+      "end_type": "timeout",
+      "reward_return": 96.45687103271484,
+      "reward_rate": 4.822843659434699,
+      "raw_reward_means": {
+        "tracking_ee_force_world": 0.5491607785224915,
+        "tracking_lin_vel": 0.9938513040542603,
+        "tracking_ang_vel": 0.9919682741165161,
+        "alive": 1.0,
+        "torques_steering": 29.54612159729004,
+        "torques_drive": 154.31295776367188,
+        "torques_arm": 305.7427062988281,
+        "action_rate_steering": 0.03132345899939537,
+        "action_rate_drive": 0.006431311368942261,
+        "action_rate_arm": 0.14020735025405884,
+        "dof_vel_steering": 2.2109813690185547,
+        "dof_vel_arm": 24.64925765991211,
+        "dof_acc_steering": 3014.29638671875,
+        "dof_acc_drive": 2451.666015625,
+        "dof_acc_arm": 10841.0927734375,
+        "torque_limits_steering": 0.0,
+        "torque_limits_drive": 0.0,
+        "torque_limits_arm": 0.017398467287421227,
+        "dof_pos_limits": 0.011217571794986725,
+        "lin_vel_z": 0.00022649126185569912,
+        "ang_vel_xy": 0.002325017238035798,
+        "base_height": 2.1703788661397994e-05,
+        "collision": 0.12400000542402267
+      },
+      "errors": {
+        "tcp_geometric_l1_m": {
+          "mean": 0.2578173875808716,
+          "p95": 0.5569375157356262
+        },
+        "tcp_geometric_l2_m": {
+          "mean": 0.17329339683055878,
+          "p95": 0.40090927481651306
+        },
+        "base_planar_speed_m_s": {
+          "mean": 0.02805170975625515,
+          "p95": 0.08955001831054688
+        },
+        "base_yaw_rate_rad_s": {
+          "mean": 0.026864225044846535,
+          "p95": 0.1071644276380539
+        },
+        "tcp_compensated_l1_m": {
+          "mean": 0.3505726754665375,
+          "p95": 0.7040212750434875
+        },
+        "tcp_compensated_l2_m": {
+          "mean": 0.25426697731018066,
+          "p95": 0.504183828830719
+        }
+      },
+      "timeout_bootstrap_bonus": null
+    },
+    {
+      "completed_iterations": 0,
+      "training_policy_steps": 0,
+      "training_transitions": 0,
+      "env_id": 13,
+      "steps": 1000,
+      "duration_s": 19.999999552965164,
+      "end_type": "timeout",
+      "reward_return": 112.88652038574219,
+      "reward_rate": 5.64432614544763,
+      "raw_reward_means": {
+        "tracking_ee_force_world": 0.6404664516448975,
+        "tracking_lin_vel": 0.9947880506515503,
+        "tracking_ang_vel": 0.9821681976318359,
+        "alive": 1.0,
+        "torques_steering": 45.76272964477539,
+        "torques_drive": 128.49940490722656,
+        "torques_arm": 282.4262390136719,
+        "action_rate_steering": 0.02878238819539547,
+        "action_rate_drive": 0.006823631003499031,
+        "action_rate_arm": 0.10950317978858948,
+        "dof_vel_steering": 2.181264638900757,
+        "dof_vel_arm": 18.096988677978516,
+        "dof_acc_steering": 2723.88818359375,
+        "dof_acc_drive": 3079.343017578125,
+        "dof_acc_arm": 5802.529296875,
+        "torque_limits_steering": 1.172637985291658e-05,
+        "torque_limits_drive": 0.0,
+        "torque_limits_arm": 0.003198030171915889,
+        "dof_pos_limits": 0.009053302928805351,
+        "lin_vel_z": 0.00023998416145332158,
+        "ang_vel_xy": 0.0023032661993056536,
+        "base_height": 2.142702396668028e-05,
+        "collision": 0.0
+      },
+      "errors": {
+        "tcp_geometric_l1_m": {
+          "mean": 0.2527364194393158,
+          "p95": 0.6106202602386475
+        },
+        "tcp_geometric_l2_m": {
+          "mean": 0.16557541489601135,
+          "p95": 0.3660358786582947
+        },
+        "base_planar_speed_m_s": {
+          "mean": 0.024680783972144127,
+          "p95": 0.07451971620321274
+        },
+        "base_yaw_rate_rad_s": {
+          "mean": 0.036462485790252686,
+          "p95": 0.15893302857875824
+        },
+        "tcp_compensated_l1_m": {
+          "mean": 0.25274550914764404,
+          "p95": 0.6107520461082458
+        },
+        "tcp_compensated_l2_m": {
+          "mean": 0.16557572782039642,
+          "p95": 0.36622416973114014
+        }
+      },
+      "timeout_bootstrap_bonus": null
+    },
+    {
+      "completed_iterations": 0,
+      "training_policy_steps": 0,
+      "training_transitions": 0,
+      "env_id": 14,
+      "steps": 1000,
+      "duration_s": 19.999999552965164,
+      "end_type": "timeout",
+      "reward_return": 111.65119171142578,
+      "reward_rate": 5.582559710351222,
+      "raw_reward_means": {
+        "tracking_ee_force_world": 0.6560903787612915,
+        "tracking_lin_vel": 0.9969787001609802,
+        "tracking_ang_vel": 0.9951236248016357,
+        "alive": 1.0,
+        "torques_steering": 13.050289154052734,
+        "torques_drive": 90.77172088623047,
+        "torques_arm": 265.4302978515625,
+        "action_rate_steering": 0.022245807573199272,
+        "action_rate_drive": 0.005836828146129847,
+        "action_rate_arm": 0.08304794877767563,
+        "dof_vel_steering": 1.5351179838180542,
+        "dof_vel_arm": 12.06409740447998,
+        "dof_acc_steering": 2199.995849609375,
+        "dof_acc_drive": 1442.525390625,
+        "dof_acc_arm": 3928.279296875,
+        "torque_limits_steering": 0.0,
+        "torque_limits_drive": 0.0,
+        "torque_limits_arm": 0.0014179659774526954,
+        "dof_pos_limits": 0.00858144648373127,
+        "lin_vel_z": 0.00022269775217864662,
+        "ang_vel_xy": 0.0019060664344578981,
+        "base_height": 2.170731022488326e-05,
+        "collision": 0.024000000208616257
+      },
+      "errors": {
+        "tcp_geometric_l1_m": {
+          "mean": 0.2350686490535736,
+          "p95": 0.4859012961387634
+        },
+        "tcp_geometric_l2_m": {
+          "mean": 0.15461793541908264,
+          "p95": 0.334499329328537
+        },
+        "base_planar_speed_m_s": {
+          "mean": 0.019744956865906715,
+          "p95": 0.06410012394189835
+        },
+        "base_yaw_rate_rad_s": {
+          "mean": 0.02094532735645771,
+          "p95": 0.08433312177658081
+        },
+        "tcp_compensated_l1_m": {
+          "mean": 0.23508320748806,
+          "p95": 0.4859012961387634
+        },
+        "tcp_compensated_l2_m": {
+          "mean": 0.15462268888950348,
+          "p95": 0.33450695872306824
+        }
+      },
+      "timeout_bootstrap_bonus": null
+    },
+    {
+      "completed_iterations": 0,
+      "training_policy_steps": 0,
+      "training_transitions": 0,
+      "env_id": 15,
+      "steps": 1000,
+      "duration_s": 19.999999552965164,
+      "end_type": "timeout",
+      "reward_return": 106.90681457519531,
+      "reward_rate": 5.345340848237444,
+      "raw_reward_means": {
+        "tracking_ee_force_world": 0.6450181603431702,
+        "tracking_lin_vel": 0.992344081401825,
+        "tracking_ang_vel": 0.9884777665138245,
+        "alive": 1.0,
+        "torques_steering": 21.69240379333496,
+        "torques_drive": 143.1626739501953,
+        "torques_arm": 324.561767578125,
+        "action_rate_steering": 0.02704557590186596,
+        "action_rate_drive": 0.005983713082969189,
+        "action_rate_arm": 0.14057300984859467,
+        "dof_vel_steering": 1.8557307720184326,
+        "dof_vel_arm": 25.382917404174805,
+        "dof_acc_steering": 2654.426513671875,
+        "dof_acc_drive": 2728.885009765625,
+        "dof_acc_arm": 9410.9375,
+        "torque_limits_steering": 0.0,
+        "torque_limits_drive": 0.0,
+        "torque_limits_arm": 0.015935061499476433,
+        "dof_pos_limits": 0.010076927952468395,
+        "lin_vel_z": 0.0002360723738092929,
+        "ang_vel_xy": 0.0021323696710169315,
+        "base_height": 2.1174562789383344e-05,
+        "collision": 0.05900000408291817
+      },
+      "errors": {
+        "tcp_geometric_l1_m": {
+          "mean": 0.2642468214035034,
+          "p95": 0.7120606303215027
+        },
+        "tcp_geometric_l2_m": {
+          "mean": 0.17011699080467224,
+          "p95": 0.482590913772583
+        },
+        "base_planar_speed_m_s": {
+          "mean": 0.029115833342075348,
+          "p95": 0.10367155075073242
+        },
+        "base_yaw_rate_rad_s": {
+          "mean": 0.03031875565648079,
+          "p95": 0.12108336389064789
+        },
+        "tcp_compensated_l1_m": {
+          "mean": 0.2642557919025421,
+          "p95": 0.7126523852348328
+        },
+        "tcp_compensated_l2_m": {
+          "mean": 0.1701185256242752,
+          "p95": 0.48256996273994446
+        }
+      },
+      "timeout_bootstrap_bonus": null
+    },
+    {
+      "completed_iterations": 0,
+      "training_policy_steps": 0,
+      "training_transitions": 0,
+      "env_id": 16,
+      "steps": 1000,
+      "duration_s": 19.999999552965164,
+      "end_type": "timeout",
+      "reward_return": 117.73370361328125,
+      "reward_rate": 5.886685312241733,
+      "raw_reward_means": {
+        "tracking_ee_force_world": 0.7527548670768738,
+        "tracking_lin_vel": 0.9651697874069214,
+        "tracking_ang_vel": 0.967786967754364,
+        "alive": 1.0,
+        "torques_steering": 24.0394344329834,
+        "torques_drive": 195.27474975585938,
+        "torques_arm": 53.819766998291016,
+        "action_rate_steering": 0.04829327389597893,
+        "action_rate_drive": 0.03391795977950096,
+        "action_rate_arm": 0.03865192458033562,
+        "dof_vel_steering": 2.354511022567749,
+        "dof_vel_arm": 2.7103002071380615,
+        "dof_acc_steering": 8570.7255859375,
+        "dof_acc_drive": 15121.33203125,
+        "dof_acc_arm": 5839.4169921875,
+        "torque_limits_steering": 0.0,
+        "torque_limits_drive": 0.01600000075995922,
+        "torque_limits_arm": 0.0,
+        "dof_pos_limits": 0.0,
+        "lin_vel_z": 0.0005929864710196853,
+        "ang_vel_xy": 0.010553312487900257,
+        "base_height": 2.238936758658383e-05,
+        "collision": 0.0
+      },
+      "errors": {
+        "tcp_geometric_l1_m": {
+          "mean": 0.028428317978978157,
+          "p95": 0.06291010230779648
+        },
+        "tcp_geometric_l2_m": {
+          "mean": 0.01884021796286106,
+          "p95": 0.04259559139609337
+        },
+        "base_planar_speed_m_s": {
+          "mean": 0.07408380508422852,
+          "p95": 0.15512490272521973
+        },
+        "base_yaw_rate_rad_s": {
+          "mean": 0.06260853260755539,
+          "p95": 0.1578627973794937
+        },
+        "tcp_compensated_l1_m": {
+          "mean": 0.1594661921262741,
+          "p95": 0.3393387198448181
+        },
+        "tcp_compensated_l2_m": {
+          "mean": 0.14391955733299255,
+          "p95": 0.316804975271225
+        }
+      },
+      "timeout_bootstrap_bonus": null
+    },
+    {
+      "completed_iterations": 0,
+      "training_policy_steps": 0,
+      "training_transitions": 0,
+      "env_id": 17,
+      "steps": 1000,
+      "duration_s": 19.999999552965164,
+      "end_type": "timeout",
+      "reward_return": 118.09510040283203,
+      "reward_rate": 5.9047551521231645,
+      "raw_reward_means": {
+        "tracking_ee_force_world": 0.7591131329536438,
+        "tracking_lin_vel": 0.9769472479820251,
+        "tracking_ang_vel": 0.949974775314331,
+        "alive": 1.0,
+        "torques_steering": 94.30870819091797,
+        "torques_drive": 181.491455078125,
+        "torques_arm": 83.50180053710938,
+        "action_rate_steering": 0.054003819823265076,
+        "action_rate_drive": 0.02281607687473297,
+        "action_rate_arm": 0.031836237758398056,
+        "dof_vel_steering": 3.751312732696533,
+        "dof_vel_arm": 1.7506210803985596,
+        "dof_acc_steering": 13944.6259765625,
+        "dof_acc_drive": 10939.396484375,
+        "dof_acc_arm": 2983.0615234375,
+        "torque_limits_steering": 0.1583128124475479,
+        "torque_limits_drive": 0.00800000037997961,
+        "torque_limits_arm": 0.0,
+        "dof_pos_limits": 0.0,
+        "lin_vel_z": 0.00040884935879148543,
+        "ang_vel_xy": 0.008591574616730213,
+        "base_height": 2.2215446733753197e-05,
+        "collision": 0.0
+      },
+      "errors": {
+        "tcp_geometric_l1_m": {
+          "mean": 0.025551842525601387,
+          "p95": 0.0527622252702713
+        },
+        "tcp_geometric_l2_m": {
+          "mean": 0.017183484509587288,
+          "p95": 0.036282848566770554
+        },
+        "base_planar_speed_m_s": {
+          "mean": 0.06033589318394661,
+          "p95": 0.13229383528232574
+        },
+        "base_yaw_rate_rad_s": {
+          "mean": 0.082923024892807,
+          "p95": 0.22841593623161316
+        },
+        "tcp_compensated_l1_m": {
+          "mean": 0.1556532084941864,
+          "p95": 0.3446792662143707
+        },
+        "tcp_compensated_l2_m": {
+          "mean": 0.1411496251821518,
+          "p95": 0.30942878127098083
+        }
+      },
+      "timeout_bootstrap_bonus": null
+    },
+    {
+      "completed_iterations": 0,
+      "training_policy_steps": 0,
+      "training_transitions": 0,
+      "env_id": 18,
+      "steps": 1000,
+      "duration_s": 19.999999552965164,
+      "end_type": "timeout",
+      "reward_return": 118.26289367675781,
+      "reward_rate": 5.913144816006977,
+      "raw_reward_means": {
+        "tracking_ee_force_world": 0.7578796148300171,
+        "tracking_lin_vel": 0.9682883620262146,
+        "tracking_ang_vel": 0.9796339869499207,
+        "alive": 1.0,
+        "torques_steering": 148.58578491210938,
+        "torques_drive": 166.25381469726562,
+        "torques_arm": 77.17839050292969,
+        "action_rate_steering": 0.06719981133937836,
+        "action_rate_drive": 0.04355410858988762,
+        "action_rate_arm": 0.03695687651634216,
+        "dof_vel_steering": 3.6289496421813965,
+        "dof_vel_arm": 1.911795973777771,
+        "dof_acc_steering": 11525.4013671875,
+        "dof_acc_drive": 11888.5166015625,
+        "dof_acc_arm": 3885.417236328125,
+        "torque_limits_steering": 0.21505491435527802,
+        "torque_limits_drive": 0.00800000037997961,
+        "torque_limits_arm": 0.0,
+        "dof_pos_limits": 0.0,
+        "lin_vel_z": 0.00048471728223375976,
+        "ang_vel_xy": 0.010485134087502956,
+        "base_height": 2.222569855803158e-05,
+        "collision": 0.0
+      },
+      "errors": {
+        "tcp_geometric_l1_m": {
+          "mean": 0.027020415291190147,
+          "p95": 0.05141260474920273
+        },
+        "tcp_geometric_l2_m": {
+          "mean": 0.017812930047512054,
+          "p95": 0.03499459847807884
+        },
+        "base_planar_speed_m_s": {
+          "mean": 0.05915939435362816,
+          "p95": 0.21893438696861267
+        },
+        "base_yaw_rate_rad_s": {
+          "mean": 0.05138080194592476,
+          "p95": 0.14135360717773438
+        },
+        "tcp_compensated_l1_m": {
+          "mean": 0.1550356149673462,
+          "p95": 0.3348710536956787
+        },
+        "tcp_compensated_l2_m": {
+          "mean": 0.14209392666816711,
+          "p95": 0.3125022053718567
+        }
+      },
+      "timeout_bootstrap_bonus": null
+    },
+    {
+      "completed_iterations": 0,
+      "training_policy_steps": 0,
+      "training_transitions": 0,
+      "env_id": 19,
+      "steps": 1000,
+      "duration_s": 19.999999552965164,
+      "end_type": "timeout",
+      "reward_return": 117.8574447631836,
+      "reward_rate": 5.892872369875142,
+      "raw_reward_means": {
+        "tracking_ee_force_world": 0.738603413105011,
+        "tracking_lin_vel": 0.9808430075645447,
+        "tracking_ang_vel": 0.9668987393379211,
+        "alive": 1.0,
+        "torques_steering": 68.414306640625,
+        "torques_drive": 101.66097259521484,
+        "torques_arm": 65.23231506347656,
+        "action_rate_steering": 0.04559846222400665,
+        "action_rate_drive": 0.017374595627188683,
+        "action_rate_arm": 0.04147674888372421,
+        "dof_vel_steering": 2.244398355484009,
+        "dof_vel_arm": 2.5982916355133057,
+        "dof_acc_steering": 7080.4267578125,
+        "dof_acc_drive": 6613.7646484375,
+        "dof_acc_arm": 3342.75927734375,
+        "torque_limits_steering": 0.1147225946187973,
+        "torque_limits_drive": 0.0,
+        "torque_limits_arm": 0.0,
+        "dof_pos_limits": 0.0,
+        "lin_vel_z": 0.0004070874711032957,
+        "ang_vel_xy": 0.0071812579408288,
+        "base_height": 2.224329364253208e-05,
+        "collision": 0.0
+      },
+      "errors": {
+        "tcp_geometric_l1_m": {
+          "mean": 0.037095822393894196,
+          "p95": 0.08088845759630203
+        },
+        "tcp_geometric_l2_m": {
+          "mean": 0.025360358878970146,
+          "p95": 0.05170334130525589
+        },
+        "base_planar_speed_m_s": {
+          "mean": 0.049566712230443954,
+          "p95": 0.09937983006238937
+        },
+        "base_yaw_rate_rad_s": {
+          "mean": 0.062067825347185135,
+          "p95": 0.1861211657524109
+        },
+        "tcp_compensated_l1_m": {
+          "mean": 0.16886158287525177,
+          "p95": 0.3534916043281555
+        },
+        "tcp_compensated_l2_m": {
+          "mean": 0.1498151272535324,
+          "p95": 0.32416388392448425
+        }
+      },
+      "timeout_bootstrap_bonus": null
+    },
+    {
+      "completed_iterations": 0,
+      "training_policy_steps": 0,
+      "training_transitions": 0,
+      "env_id": 20,
+      "steps": 1000,
+      "duration_s": 19.999999552965164,
+      "end_type": "timeout",
+      "reward_return": 115.0103759765625,
+      "reward_rate": 5.750518927362239,
+      "raw_reward_means": {
+        "tracking_ee_force_world": 0.7167336344718933,
+        "tracking_lin_vel": 0.9736732840538025,
+        "tracking_ang_vel": 0.9707909822463989,
+        "alive": 1.0,
+        "torques_steering": 16.4576473236084,
+        "torques_drive": 181.1098175048828,
+        "torques_arm": 307.5711669921875,
+        "action_rate_steering": 0.04789048060774803,
+        "action_rate_drive": 0.066055528819561,
+        "action_rate_arm": 0.06155329942703247,
+        "dof_vel_steering": 2.748863697052002,
+        "dof_vel_arm": 8.14711856842041,
+        "dof_acc_steering": 9283.916015625,
+        "dof_acc_drive": 15392.91015625,
+        "dof_acc_arm": 5501.1298828125,
+        "torque_limits_steering": 0.0,
+        "torque_limits_drive": 0.01600000075995922,
+        "torque_limits_arm": 0.1361406296491623,
+        "dof_pos_limits": 0.007928422652184963,
+        "lin_vel_z": 0.0005133707891218364,
+        "ang_vel_xy": 0.008755902759730816,
+        "base_height": 2.2294098016573116e-05,
+        "collision": 0.0
+      },
+      "errors": {
+        "tcp_geometric_l1_m": {
+          "mean": 0.18293577432632446,
+          "p95": 0.42339301109313965
+        },
+        "tcp_geometric_l2_m": {
+          "mean": 0.120681032538414,
+          "p95": 0.27477675676345825
+        },
+        "base_planar_speed_m_s": {
+          "mean": 0.06084083393216133,
+          "p95": 0.17488159239292145
+        },
+        "base_yaw_rate_rad_s": {
+          "mean": 0.06597579270601273,
+          "p95": 0.18182271718978882
+        },
+        "tcp_compensated_l1_m": {
+          "mean": 0.17940570414066315,
+          "p95": 0.36092689633369446
+        },
+        "tcp_compensated_l2_m": {
+          "mean": 0.12320911884307861,
+          "p95": 0.256822407245636
+        }
+      },
+      "timeout_bootstrap_bonus": null
+    },
+    {
+      "completed_iterations": 0,
+      "training_policy_steps": 0,
+      "training_transitions": 0,
+      "env_id": 21,
+      "steps": 1000,
+      "duration_s": 19.999999552965164,
+      "end_type": "timeout",
+      "reward_return": 113.12322998046875,
+      "reward_rate": 5.656161625448502,
+      "raw_reward_means": {
+        "tracking_ee_force_world": 0.6792597770690918,
+        "tracking_lin_vel": 0.9528576731681824,
+        "tracking_ang_vel": 0.9556254744529724,
+        "alive": 1.0,
+        "torques_steering": 85.39214324951172,
+        "torques_drive": 165.2979278564453,
+        "torques_arm": 323.24774169921875,
+        "action_rate_steering": 0.051255740225315094,
+        "action_rate_drive": 0.021607451140880585,
+        "action_rate_arm": 0.06120101734995842,
+        "dof_vel_steering": 2.7267539501190186,
+        "dof_vel_arm": 9.601222038269043,
+        "dof_acc_steering": 8795.6513671875,
+        "dof_acc_drive": 11262.5859375,
+        "dof_acc_arm": 5236.98095703125,
+        "torque_limits_steering": 0.13058613240718842,
+        "torque_limits_drive": 0.00016258240793831646,
+        "torque_limits_arm": 0.004787175916135311,
+        "dof_pos_limits": 0.004363289102911949,
+        "lin_vel_z": 0.00041878019692376256,
+        "ang_vel_xy": 0.008181944489479065,
+        "base_height": 2.2196081772563048e-05,
+        "collision": 0.0
+      },
+      "errors": {
+        "tcp_geometric_l1_m": {
+          "mean": 0.223396435379982,
+          "p95": 0.5705425143241882
+        },
+        "tcp_geometric_l2_m": {
+          "mean": 0.1477847546339035,
+          "p95": 0.37252017855644226
+        },
+        "base_planar_speed_m_s": {
+          "mean": 0.08963234722614288,
+          "p95": 0.18782414495944977
+        },
+        "base_yaw_rate_rad_s": {
+          "mean": 0.07693753391504288,
+          "p95": 0.23526698350906372
+        },
+        "tcp_compensated_l1_m": {
+          "mean": 0.21015913784503937,
+          "p95": 0.4157862067222595
+        },
+        "tcp_compensated_l2_m": {
+          "mean": 0.14007048308849335,
+          "p95": 0.29920631647109985
+        }
+      },
+      "timeout_bootstrap_bonus": null
+    },
+    {
+      "completed_iterations": 0,
+      "training_policy_steps": 0,
+      "training_transitions": 0,
+      "env_id": 22,
+      "steps": 1000,
+      "duration_s": 19.999999552965164,
+      "end_type": "timeout",
+      "reward_return": 106.36885833740234,
+      "reward_rate": 5.318443035746583,
+      "raw_reward_means": {
+        "tracking_ee_force_world": 0.6542456150054932,
+        "tracking_lin_vel": 0.959426760673523,
+        "tracking_ang_vel": 0.9503804445266724,
+        "alive": 1.0,
+        "torques_steering": 81.59452819824219,
+        "torques_drive": 191.18275451660156,
+        "torques_arm": 262.8434753417969,
+        "action_rate_steering": 0.05946065112948418,
+        "action_rate_drive": 0.03964497148990631,
+        "action_rate_arm": 0.08782752603292465,
+        "dof_vel_steering": 3.199404716491699,
+        "dof_vel_arm": 16.99074363708496,
+        "dof_acc_steering": 7628.13330078125,
+        "dof_acc_drive": 13104.0205078125,
+        "dof_acc_arm": 9123.7880859375,
+        "torque_limits_steering": 0.0533113107085228,
+        "torque_limits_drive": 0.030853714793920517,
+        "torque_limits_arm": 0.008248352445662022,
+        "dof_pos_limits": 0.010411608032882214,
+        "lin_vel_z": 0.0004314368707127869,
+        "ang_vel_xy": 0.007699148263782263,
+        "base_height": 2.2175618141773157e-05,
+        "collision": 0.046000003814697266
+      },
+      "errors": {
+        "tcp_geometric_l1_m": {
+          "mean": 0.23521506786346436,
+          "p95": 0.7987498044967651
+        },
+        "tcp_geometric_l2_m": {
+          "mean": 0.158136785030365,
+          "p95": 0.608906090259552
+        },
+        "base_planar_speed_m_s": {
+          "mean": 0.07481534034013748,
+          "p95": 0.2541077733039856
+        },
+        "base_yaw_rate_rad_s": {
+          "mean": 0.0860268771648407,
+          "p95": 0.27410900592803955
+        },
+        "tcp_compensated_l1_m": {
+          "mean": 0.23533667623996735,
+          "p95": 0.5397387742996216
+        },
+        "tcp_compensated_l2_m": {
+          "mean": 0.16147498786449432,
+          "p95": 0.3752939701080322
+        }
+      },
+      "timeout_bootstrap_bonus": null
+    },
+    {
+      "completed_iterations": 0,
+      "training_policy_steps": 0,
+      "training_transitions": 0,
+      "env_id": 23,
+      "steps": 1000,
+      "duration_s": 19.999999552965164,
+      "end_type": "timeout",
+      "reward_return": 105.59028625488281,
+      "reward_rate": 5.279514430750484,
+      "raw_reward_means": {
+        "tracking_ee_force_world": 0.6470807790756226,
+        "tracking_lin_vel": 0.9549732804298401,
+        "tracking_ang_vel": 0.9369183778762817,
+        "alive": 1.0,
+        "torques_steering": 129.2330322265625,
+        "torques_drive": 339.8862609863281,
+        "torques_arm": 257.996337890625,
+        "action_rate_steering": 0.07601842284202576,
+        "action_rate_drive": 0.06900379061698914,
+        "action_rate_arm": 0.07932556420564651,
+        "dof_vel_steering": 3.844942569732666,
+        "dof_vel_arm": 18.78436851501465,
+        "dof_acc_steering": 12204.904296875,
+        "dof_acc_drive": 22762.8046875,
+        "dof_acc_arm": 11334.240234375,
+        "torque_limits_steering": 0.23470424115657806,
+        "torque_limits_drive": 0.0423181876540184,
+        "torque_limits_arm": 0.001330493949353695,
+        "dof_pos_limits": 0.01383023802191019,
+        "lin_vel_z": 0.0005114750820212066,
+        "ang_vel_xy": 0.011381713673472404,
+        "base_height": 2.226881952083204e-05,
+        "collision": 0.03800000250339508
+      },
+      "errors": {
+        "tcp_geometric_l1_m": {
+          "mean": 0.2361181080341339,
+          "p95": 0.7364985346794128
+        },
+        "tcp_geometric_l2_m": {
+          "mean": 0.1517540067434311,
+          "p95": 0.47580695152282715
+        },
+        "base_planar_speed_m_s": {
+          "mean": 0.08204395323991776,
+          "p95": 0.25715184211730957
+        },
+        "base_yaw_rate_rad_s": {
+          "mean": 0.09618144482374191,
+          "p95": 0.2734297215938568
+        },
+        "tcp_compensated_l1_m": {
+          "mean": 0.24914444983005524,
+          "p95": 0.6428680419921875
+        },
+        "tcp_compensated_l2_m": {
+          "mean": 0.1690199077129364,
+          "p95": 0.39728787541389465
+        }
+      },
+      "timeout_bootstrap_bonus": null
+    },
+    {
+      "completed_iterations": 0,
+      "training_policy_steps": 0,
+      "training_transitions": 0,
+      "env_id": 24,
+      "steps": 1000,
+      "duration_s": 19.999999552965164,
+      "end_type": "timeout",
+      "reward_return": 109.49128723144531,
+      "reward_rate": 5.474564483938317,
+      "raw_reward_means": {
+        "tracking_ee_force_world": 0.5723620057106018,
+        "tracking_lin_vel": 0.980888307094574,
+        "tracking_ang_vel": 0.966706395149231,
+        "alive": 1.0,
+        "torques_steering": 47.01161575317383,
+        "torques_drive": 220.51205444335938,
+        "torques_arm": 352.7834167480469,
+        "action_rate_steering": 0.05450122058391571,
+        "action_rate_drive": 0.044874563813209534,
+        "action_rate_arm": 0.08670016378164291,
+        "dof_vel_steering": 2.8547451496124268,
+        "dof_vel_arm": 15.810830116271973,
+        "dof_acc_steering": 9857.033203125,
+        "dof_acc_drive": 17196.291015625,
+        "dof_acc_arm": 8951.375,
+        "torque_limits_steering": 0.051720697432756424,
+        "torque_limits_drive": 0.003971542697399855,
+        "torque_limits_arm": 0.04730480536818504,
+        "dof_pos_limits": 0.0071716890670359135,
+        "lin_vel_z": 0.0006056086858734488,
+        "ang_vel_xy": 0.011524703353643417,
+        "base_height": 2.2493659344036132e-05,
+        "collision": 0.0
+      },
+      "errors": {
+        "tcp_geometric_l1_m": {
+          "mean": 0.240982323884964,
+          "p95": 0.6795810461044312
+        },
+        "tcp_geometric_l2_m": {
+          "mean": 0.16125547885894775,
+          "p95": 0.49068912863731384
+        },
+        "base_planar_speed_m_s": {
+          "mean": 0.051304567605257034,
+          "p95": 0.11172164231538773
+        },
+        "base_yaw_rate_rad_s": {
+          "mean": 0.06980203837156296,
+          "p95": 0.20206673443317413
+        },
+        "tcp_compensated_l1_m": {
+          "mean": 0.3255135416984558,
+          "p95": 0.6687254309654236
+        },
+        "tcp_compensated_l2_m": {
+          "mean": 0.24091288447380066,
+          "p95": 0.5134872198104858
+        }
+      },
+      "timeout_bootstrap_bonus": null
+    },
+    {
+      "completed_iterations": 0,
+      "training_policy_steps": 0,
+      "training_transitions": 0,
+      "env_id": 25,
+      "steps": 1000,
+      "duration_s": 19.999999552965164,
+      "end_type": "timeout",
+      "reward_return": 105.75475311279297,
+      "reward_rate": 5.2877377738297975,
+      "raw_reward_means": {
+        "tracking_ee_force_world": 0.5443710684776306,
+        "tracking_lin_vel": 0.9498509168624878,
+        "tracking_ang_vel": 0.9003073573112488,
+        "alive": 1.0,
+        "torques_steering": 104.95572662353516,
+        "torques_drive": 403.3377990722656,
+        "torques_arm": 318.1524658203125,
+        "action_rate_steering": 0.0722595676779747,
+        "action_rate_drive": 0.041107188910245895,
+        "action_rate_arm": 0.08076304197311401,
+        "dof_vel_steering": 3.8509774208068848,
+        "dof_vel_arm": 12.618858337402344,
+        "dof_acc_steering": 14351.708984375,
+        "dof_acc_drive": 27100.802734375,
+        "dof_acc_arm": 6268.404296875,
+        "torque_limits_steering": 0.2060668021440506,
+        "torque_limits_drive": 0.03342230245471001,
+        "torque_limits_arm": 0.032595232129096985,
+        "dof_pos_limits": 0.006974039599299431,
+        "lin_vel_z": 0.0005423862021416426,
+        "ang_vel_xy": 0.01154700480401516,
+        "base_height": 2.2315982278087176e-05,
+        "collision": 0.0
+      },
+      "errors": {
+        "tcp_geometric_l1_m": {
+          "mean": 0.28562647104263306,
+          "p95": 0.8320242762565613
+        },
+        "tcp_geometric_l2_m": {
+          "mean": 0.18333445489406586,
+          "p95": 0.5210392475128174
+        },
+        "base_planar_speed_m_s": {
+          "mean": 0.0895596295595169,
+          "p95": 0.26378747820854187
+        },
+        "base_yaw_rate_rad_s": {
+          "mean": 0.12423622608184814,
+          "p95": 0.46874886751174927
+        },
+        "tcp_compensated_l1_m": {
+          "mean": 0.35774293541908264,
+          "p95": 0.7136587500572205
+        },
+        "tcp_compensated_l2_m": {
+          "mean": 0.25397974252700806,
+          "p95": 0.5701050758361816
+        }
+      },
+      "timeout_bootstrap_bonus": null
+    },
+    {
+      "completed_iterations": 0,
+      "training_policy_steps": 0,
+      "training_transitions": 0,
+      "env_id": 26,
+      "steps": 1000,
+      "duration_s": 19.999999552965164,
+      "end_type": "timeout",
+      "reward_return": 109.4574203491211,
+      "reward_rate": 5.4728711397842575,
+      "raw_reward_means": {
+        "tracking_ee_force_world": 0.581928551197052,
+        "tracking_lin_vel": 0.9808478951454163,
+        "tracking_ang_vel": 0.9668679237365723,
+        "alive": 1.0,
+        "torques_steering": 10.79725170135498,
+        "torques_drive": 204.70932006835938,
+        "torques_arm": 307.4071960449219,
+        "action_rate_steering": 0.04632541537284851,
+        "action_rate_drive": 0.03298065811395645,
+        "action_rate_arm": 0.07115188241004944,
+        "dof_vel_steering": 2.691932439804077,
+        "dof_vel_arm": 9.632548332214355,
+        "dof_acc_steering": 10403.2509765625,
+        "dof_acc_drive": 13931.6630859375,
+        "dof_acc_arm": 5595.88720703125,
+        "torque_limits_steering": 0.0,
+        "torque_limits_drive": 0.004696709103882313,
+        "torque_limits_arm": 0.0126374876126647,
+        "dof_pos_limits": 0.009833105839788914,
+        "lin_vel_z": 0.0005374021711759269,
+        "ang_vel_xy": 0.009924272075295448,
+        "base_height": 2.2252514099818654e-05,
+        "collision": 0.0
+      },
+      "errors": {
+        "tcp_geometric_l1_m": {
+          "mean": 0.2039409577846527,
+          "p95": 0.4851343333721161
+        },
+        "tcp_geometric_l2_m": {
+          "mean": 0.13558697700500488,
+          "p95": 0.3317011594772339
+        },
+        "base_planar_speed_m_s": {
+          "mean": 0.053292956203222275,
+          "p95": 0.1448935866355896
+        },
+        "base_yaw_rate_rad_s": {
+          "mean": 0.07234680652618408,
+          "p95": 0.18052318692207336
+        },
+        "tcp_compensated_l1_m": {
+          "mean": 0.32078900933265686,
+          "p95": 0.6647139191627502
+        },
+        "tcp_compensated_l2_m": {
+          "mean": 0.24310052394866943,
+          "p95": 0.545990526676178
+        }
+      },
+      "timeout_bootstrap_bonus": null
+    },
+    {
+      "completed_iterations": 0,
+      "training_policy_steps": 0,
+      "training_transitions": 0,
+      "env_id": 27,
+      "steps": 1000,
+      "duration_s": 19.999999552965164,
+      "end_type": "timeout",
+      "reward_return": 98.62757110595703,
+      "reward_rate": 4.931378665522754,
+      "raw_reward_means": {
+        "tracking_ee_force_world": 0.5577271580696106,
+        "tracking_lin_vel": 0.9635881781578064,
+        "tracking_ang_vel": 0.9427244067192078,
+        "alive": 1.0,
+        "torques_steering": 35.400604248046875,
+        "torques_drive": 223.13787841796875,
+        "torques_arm": 290.0553283691406,
+        "action_rate_steering": 0.054287414997816086,
+        "action_rate_drive": 0.026820490136742592,
+        "action_rate_arm": 0.10635956376791,
+        "dof_vel_steering": 3.2857866287231445,
+        "dof_vel_arm": 21.19062042236328,
+        "dof_acc_steering": 9737.6572265625,
+        "dof_acc_drive": 13751.0732421875,
+        "dof_acc_arm": 13897.2861328125,
+        "torque_limits_steering": 0.0012436104007065296,
+        "torque_limits_drive": 0.00800000037997961,
+        "torque_limits_arm": 0.07480093836784363,
+        "dof_pos_limits": 0.007945189252495766,
+        "lin_vel_z": 0.00047634640941396356,
+        "ang_vel_xy": 0.01033766195178032,
+        "base_height": 2.228693301731255e-05,
+        "collision": 0.08900000154972076
+      },
+      "errors": {
+        "tcp_geometric_l1_m": {
+          "mean": 0.2885473668575287,
+          "p95": 0.7765698432922363
+        },
+        "tcp_geometric_l2_m": {
+          "mean": 0.19057001173496246,
+          "p95": 0.5034970045089722
+        },
+        "base_planar_speed_m_s": {
+          "mean": 0.07714534550905228,
+          "p95": 0.19528479874134064
+        },
+        "base_yaw_rate_rad_s": {
+          "mean": 0.09568286687135696,
+          "p95": 0.27503839135169983
+        },
+        "tcp_compensated_l1_m": {
+          "mean": 0.34235042333602905,
+          "p95": 0.6562129855155945
+        },
+        "tcp_compensated_l2_m": {
+          "mean": 0.24544093012809753,
+          "p95": 0.5246579051017761
+        }
+      },
+      "timeout_bootstrap_bonus": null
+    },
+    {
+      "completed_iterations": 0,
+      "training_policy_steps": 0,
+      "training_transitions": 0,
+      "env_id": 28,
+      "steps": 1000,
+      "duration_s": 19.999999552965164,
+      "end_type": "timeout",
+      "reward_return": 106.23702239990234,
+      "reward_rate": 5.311851238724245,
+      "raw_reward_means": {
+        "tracking_ee_force_world": 0.6627699136734009,
+        "tracking_lin_vel": 0.9672813415527344,
+        "tracking_ang_vel": 0.9554926156997681,
+        "alive": 1.0,
+        "torques_steering": 75.13907623291016,
+        "torques_drive": 272.0926818847656,
+        "torques_arm": 302.2198486328125,
+        "action_rate_steering": 0.05980250984430313,
+        "action_rate_drive": 0.03375207260251045,
+        "action_rate_arm": 0.09562917053699493,
+        "dof_vel_steering": 3.3693130016326904,
+        "dof_vel_arm": 19.041149139404297,
+        "dof_acc_steering": 11407.6787109375,
+        "dof_acc_drive": 18882.244140625,
+        "dof_acc_arm": 12878.3251953125,
+        "torque_limits_steering": 0.09174275398254395,
+        "torque_limits_drive": 0.01020893920212984,
+        "torque_limits_arm": 0.11266279220581055,
+        "dof_pos_limits": 0.009229249320924282,
+        "lin_vel_z": 0.0005406385753303766,
+        "ang_vel_xy": 0.01132272370159626,
+        "base_height": 2.2351645384333096e-05,
+        "collision": 0.0560000017285347
+      },
+      "errors": {
+        "tcp_geometric_l1_m": {
+          "mean": 0.24250052869319916,
+          "p95": 0.6582098007202148
+        },
+        "tcp_geometric_l2_m": {
+          "mean": 0.15684784948825836,
+          "p95": 0.41387465596199036
+        },
+        "base_planar_speed_m_s": {
+          "mean": 0.06983254104852676,
+          "p95": 0.2116488218307495
+        },
+        "base_yaw_rate_rad_s": {
+          "mean": 0.08064866811037064,
+          "p95": 0.23084776103496552
+        },
+        "tcp_compensated_l1_m": {
+          "mean": 0.24251654744148254,
+          "p95": 0.6584728956222534
+        },
+        "tcp_compensated_l2_m": {
+          "mean": 0.156794011592865,
+          "p95": 0.4143303334712982
+        }
+      },
+      "timeout_bootstrap_bonus": null
+    },
+    {
+      "completed_iterations": 0,
+      "training_policy_steps": 0,
+      "training_transitions": 0,
+      "env_id": 29,
+      "steps": 1000,
+      "duration_s": 19.999999552965164,
+      "end_type": "timeout",
+      "reward_return": 98.46510314941406,
+      "reward_rate": 4.923255267514033,
+      "raw_reward_means": {
+        "tracking_ee_force_world": 0.6288300156593323,
+        "tracking_lin_vel": 0.9551059603691101,
+        "tracking_ang_vel": 0.958171546459198,
+        "alive": 1.0,
+        "torques_steering": 19.146745681762695,
+        "torques_drive": 300.9314880371094,
+        "torques_arm": 292.060546875,
+        "action_rate_steering": 0.048374250531196594,
+        "action_rate_drive": 0.03490403667092323,
+        "action_rate_arm": 0.12395894527435303,
+        "dof_vel_steering": 3.1243128776550293,
+        "dof_vel_arm": 21.81841468811035,
+        "dof_acc_steering": 9517.572265625,
+        "dof_acc_drive": 18782.859375,
+        "dof_acc_arm": 17750.23046875,
+        "torque_limits_steering": 0.0,
+        "torque_limits_drive": 0.03200000151991844,
+        "torque_limits_arm": 0.08209440857172012,
+        "dof_pos_limits": 0.010386655107140541,
+        "lin_vel_z": 0.0005745865637436509,
+        "ang_vel_xy": 0.010825310833752155,
+        "base_height": 2.242728805867955e-05,
+        "collision": 0.11300000548362732
+      },
+      "errors": {
+        "tcp_geometric_l1_m": {
+          "mean": 0.2665133774280548,
+          "p95": 0.6326311230659485
+        },
+        "tcp_geometric_l2_m": {
+          "mean": 0.18315081298351288,
+          "p95": 0.41615593433380127
+        },
+        "base_planar_speed_m_s": {
+          "mean": 0.08185188472270966,
+          "p95": 0.21185767650604248
+        },
+        "base_yaw_rate_rad_s": {
+          "mean": 0.08270420879125595,
+          "p95": 0.2194502353668213
+        },
+        "tcp_compensated_l1_m": {
+          "mean": 0.26652753353118896,
+          "p95": 0.6324842572212219
+        },
+        "tcp_compensated_l2_m": {
+          "mean": 0.18316008150577545,
+          "p95": 0.41615593433380127
+        }
+      },
+      "timeout_bootstrap_bonus": null
+    },
+    {
+      "completed_iterations": 0,
+      "training_policy_steps": 0,
+      "training_transitions": 0,
+      "env_id": 30,
+      "steps": 1000,
+      "duration_s": 19.999999552965164,
+      "end_type": "timeout",
+      "reward_return": 110.23175048828125,
+      "reward_rate": 5.511587647607646,
+      "raw_reward_means": {
+        "tracking_ee_force_world": 0.6448588967323303,
+        "tracking_lin_vel": 0.9640995860099792,
+        "tracking_ang_vel": 0.927432656288147,
+        "alive": 1.0,
+        "torques_steering": 88.61253356933594,
+        "torques_drive": 244.39791870117188,
+        "torques_arm": 345.5511474609375,
+        "action_rate_steering": 0.056406065821647644,
+        "action_rate_drive": 0.027898481115698814,
+        "action_rate_arm": 0.09038642048835754,
+        "dof_vel_steering": 3.351973056793213,
+        "dof_vel_arm": 15.55111026763916,
+        "dof_acc_steering": 10012.12890625,
+        "dof_acc_drive": 14710.3974609375,
+        "dof_acc_arm": 7886.70458984375,
+        "torque_limits_steering": 0.049876730889081955,
+        "torque_limits_drive": 0.02907455526292324,
+        "torque_limits_arm": 0.017543597146868706,
+        "dof_pos_limits": 0.010790118016302586,
+        "lin_vel_z": 0.000367170840036124,
+        "ang_vel_xy": 0.005857439246028662,
+        "base_height": 2.2148617063066922e-05,
+        "collision": 0.0
+      },
+      "errors": {
+        "tcp_geometric_l1_m": {
+          "mean": 0.2523747682571411,
+          "p95": 0.7133097648620605
+        },
+        "tcp_geometric_l2_m": {
+          "mean": 0.1674463301897049,
+          "p95": 0.48037412762641907
+        },
+        "base_planar_speed_m_s": {
+          "mean": 0.07476633787155151,
+          "p95": 0.21123522520065308
+        },
+        "base_yaw_rate_rad_s": {
+          "mean": 0.10424814373254776,
+          "p95": 0.34374547004699707
+        },
+        "tcp_compensated_l1_m": {
+          "mean": 0.25249767303466797,
+          "p95": 0.7166157960891724
+        },
+        "tcp_compensated_l2_m": {
+          "mean": 0.1674942672252655,
+          "p95": 0.4809652268886566
+        }
+      },
+      "timeout_bootstrap_bonus": null
+    },
+    {
+      "completed_iterations": 0,
+      "training_policy_steps": 0,
+      "training_transitions": 0,
+      "env_id": 31,
+      "steps": 1000,
+      "duration_s": 19.999999552965164,
+      "end_type": "timeout",
+      "reward_return": 101.7720718383789,
+      "reward_rate": 5.088603705658102,
+      "raw_reward_means": {
+        "tracking_ee_force_world": 0.6456332206726074,
+        "tracking_lin_vel": 0.9713646173477173,
+        "tracking_ang_vel": 0.9490391612052917,
+        "alive": 1.0,
+        "torques_steering": 63.03286361694336,
+        "torques_drive": 175.51370239257812,
+        "torques_arm": 276.7841796875,
+        "action_rate_steering": 0.05806317180395126,
+        "action_rate_drive": 0.028076427057385445,
+        "action_rate_arm": 0.11998311430215836,
+        "dof_vel_steering": 3.438647508621216,
+        "dof_vel_arm": 28.677690505981445,
+        "dof_acc_steering": 8821.5791015625,
+        "dof_acc_drive": 11102.7314453125,
+        "dof_acc_arm": 11904.2578125,
+        "torque_limits_steering": 0.05018256977200508,
+        "torque_limits_drive": 0.00800000037997961,
+        "torque_limits_arm": 0.04122726619243622,
+        "dof_pos_limits": 0.006956066004931927,
+        "lin_vel_z": 0.00042058477993123233,
+        "ang_vel_xy": 0.008746027015149593,
+        "base_height": 2.2217416699277237e-05,
+        "collision": 0.0990000069141388
+      },
+      "errors": {
+        "tcp_geometric_l1_m": {
+          "mean": 0.2691369652748108,
+          "p95": 0.7963868379592896
+        },
+        "tcp_geometric_l2_m": {
+          "mean": 0.1768040806055069,
+          "p95": 0.5468846559524536
+        },
+        "base_planar_speed_m_s": {
+          "mean": 0.0677829310297966,
+          "p95": 0.18631692230701447
+        },
+        "base_yaw_rate_rad_s": {
+          "mean": 0.08378078043460846,
+          "p95": 0.2764126658439636
+        },
+        "tcp_compensated_l1_m": {
+          "mean": 0.26951661705970764,
+          "p95": 0.7980584502220154
+        },
+        "tcp_compensated_l2_m": {
+          "mean": 0.17703811824321747,
+          "p95": 0.5487856864929199
+        }
+      },
+      "timeout_bootstrap_bonus": null
+    }
+  ],
+  "longest_arm_near_limit_duration_s": [
+    0.2199999988079071,
+    1.2200000286102295,
+    0.5399999618530273,
+    0.3400000035762787,
+    0.25999999046325684,
+    0.0
+  ],
+  "tcp_root_reach_upper_bound_m": 1.8749462626874447,
+  "nominal_com_loads": {
+    "reset": {
+      "com_jacobian_m_rad": [
+        [
+          0.0,
+          0.5540400147438049,
+          0.24935601651668549,
+          0.0,
+          -1.4901160284352954e-05,
+          0.0
+        ],
+        [
+          0.13898882269859314,
+          3.5593072880146792e-06,
+          6.878053113723581e-07,
+          0.0002321757929166779,
+          0.11870398372411728,
+          9.276845247541132e-08
+        ],
+        [
+          0.0,
+          -0.13899801671504974,
+          -0.3108977973461151,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "axis_box_load_bound_nm": [
+        8.339329719543457,
+        41.582496643066406,
+        33.615272521972656,
+        0.0139305479824543,
+        7.123133182525635,
+        5.56610712010297e-06
+      ]
+    },
+    "reference": {
+      "com_jacobian_m_rad": [
+        [
+          0.0,
+          0.25907155871391296,
+          -0.08851289004087448,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.34889277815818787,
+          6.207300771166047e-07,
+          -2.078422539852909e-06,
+          0.0002321757929166779,
+          0.11870399862527847,
+          9.276845247541132e-08
+        ],
+        [
+          0.0,
+          -0.34892556071281433,
+          -0.3885626494884491,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "axis_box_load_bound_nm": [
+        20.93356704711914,
+        36.47986602783203,
+        28.624656677246094,
+        0.0139305479824543,
+        7.12224006652832,
+        5.56610712010297e-06
+      ]
+    }
+  },
+  "说明": "力矩为实际裁剪后值；目标超出原采样域不等同于物理不可达，普通失败不自动降幅。",
+  "seed": 1001,
+  "source_identity": {
+    "task": "v3_pos_force",
+    "seed": 1,
+    "reproduction_part": "A",
+    "run_purpose": "formal",
+    "runtime": {
+      "python": "3.8.20",
+      "torch": "2.3.1+cu121",
+      "numpy": "1.23.0",
+      "cuda_runtime": "12.1",
+      "isaac_gym": "1.0.preview4",
+      "device": "cuda:0",
+      "sim_device": "cuda:0",
+      "physics_engine": "SimType.SIM_PHYSX",
+      "use_gpu_pipeline": true,
+      "physx_use_gpu": true,
+      "cuda_visible_devices": "1",
+      "gpu_name": "NVIDIA RTX A6000",
+      "gpu_driver": "580.105.08",
+      "torch_num_threads": 4,
+      "platform": "Linux-6.8.0-139-generic-x86_64-with-glibc2.17",
+      "python_executable": "/mnt/data_8THDD/conda_envs/unifp_v3_stage1/bin/python",
+      "gym_import_path": "/mnt/data_8THDD/myl_unifp/isaacgym/python/isaacgym/__init__.py"
+    },
+    "official_commit": "68847a070f88d731058c3d8476929bc3b205f5bd",
+    "source_manifest": {
+      "legged_gym/__init__.py": "6a255b7f9ad90ddb96036a32e711dfe4a49dcb26c9c2e8e891417ad9edecc8f6",
+      "legged_gym/b2_gym_learn/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "legged_gym/b2_gym_learn/env/__init__.py": "a75215a0c48156cea158ed559507f479680c672a6681b2a7948e3cb42d30e8ae",
+      "legged_gym/b2_gym_learn/env/vec_env.py": "25bd38bd404a96c4c4ffb37256daf34bc07286acb34a10ce5834db0490b938fb",
+      "legged_gym/b2_gym_learn/ppo_cse_pf/actor_critic.py": "e44cdb63f7e05bc82a469559d6a24f54596e1e4dfa9e784c4b12cce39b53c971",
+      "legged_gym/b2_gym_learn/ppo_cse_pf/metrics_caches.py": "ab694e33ba91bf37f3aa600e7c12e9bae4d21fe19392983e26595a32d6b93ccf",
+      "legged_gym/b2_gym_learn/ppo_cse_pf/on_policy_runner.py": "38a220e870bdfdde9f8139da0df64559d4371d5b6de89687b4d3facf85680e86",
+      "legged_gym/b2_gym_learn/ppo_cse_pf/ppo.py": "a3366f5d951a19c819ed26c5a171df89c3ff682d4a97d9c8c77585146e778e15",
+      "legged_gym/b2_gym_learn/ppo_cse_pf/rollout_storage.py": "ca7618b01150de14424201b2a61e50d42402f61f6771ab409d545f9cd90ae399",
+      "legged_gym/b2_gym_learn/ppo_cse_pf/v3_actor_critic.py": "530e8d5e5c66a28c2dc9327f4c7410607971324851f7b935d710f99c1a1bdd7d",
+      "legged_gym/b2_gym_learn/ppo_cse_pf/v3_episode_log.py": "c3fddc1846b77e5286efa29646b440f454a6a3477204116ee093e96b5b7027bd",
+      "legged_gym/b2_gym_learn/ppo_cse_pf/v3_evaluation.py": "31e496c6f685584d00caf1cba2dca786ade220bb3159f5592f7c84f65350c04d",
+      "legged_gym/b2_gym_learn/ppo_cse_pf/v3_on_policy_runner.py": "75bab97ea39a91b9a79d1e7c05fd3155a10c0a53abdf6f5cdd7f4c11c3a26939",
+      "legged_gym/b2_gym_learn/ppo_cse_pf/v3_ppo.py": "27d9200e14d141eb0a3ec55fa959a4f1464bb8f3e6fb40d0dfb31cb21496caaf",
+      "legged_gym/b2_gym_learn/ppo_cse_pf/v3_preflight.py": "b290c22c77bf6166cc3ee1d999fba2cff2ae59931bc72414c4ec71421c793e93",
+      "legged_gym/b2_gym_learn/ppo_cse_pf/v3_rollout_storage.py": "da9fe9964828a1fdb1248b78203dd2bf21f2f8ab2c4a471c844cfcf4c46ca7df",
+      "legged_gym/b2_gym_learn/ppo_cse_pf/v3_run_identity.py": "f25d9953499c17b1211b78ca61830b17806162dbbcffcf156ba33d91ab67c4c8",
+      "legged_gym/b2_gym_learn/utils/__init__.py": "f2f74903b3fb0398051c94d1dfb1a11b9f560a1e60d506dcb72aa11ab34386a3",
+      "legged_gym/b2_gym_learn/utils/utils.py": "cc30cac0d301f4f97ea11067f5fc3d447d09c793055902e75bc29792ef567312",
+      "legged_gym/envs/__init__.py": "729e50054eebfbb747e07cea732224825479c6c58bbe48186b074850a2634126",
+      "legged_gym/envs/b2/b2z1_pos_force_config.py": "a1213a398cb7928a90aaa7ca13ae0840ce970cf5cdfa81827057a9c5b3b751fc",
+      "legged_gym/envs/b2/legged_robot_b2z1_pos_force.py": "220b05ed078bf7b12be3bd489610bb90c25b12a5b78538bc8af58484093a88c4",
+      "legged_gym/envs/base/base_config.py": "0597eabb0aa9422240ea408e7bd3aa0ebc9ec36cc781d1e5fb26773ca3579362",
+      "legged_gym/envs/base/base_task.py": "bfb15b670b3ee533389de8209634bc141650c54aa0aba6c8536437d9e14d8e13",
+      "legged_gym/envs/base/legged_robot.py": "080e43e3c8c2783b9c17a0a45c1f34f990875e8c93f8870c671e1f7aa0e9931a",
+      "legged_gym/envs/base/legged_robot_config.py": "e75e7d3889ecda02cdc28b18c92b0531ddedb823fc853b9bc342657f25e85b9c",
+      "legged_gym/envs/v3/__init__.py": "fc7951fa1218bd3729784aaed481b524ae6dd1d71d058ba86b750278e0e4cc6d",
+      "legged_gym/envs/v3/legged_robot_v3.py": "558295945e22af4091a196e1f53ce9fafdcc6c898bc0ccf205578381329836ca",
+      "legged_gym/envs/v3/v3_contact_evaluation.py": "3fbd305e62b7446c60c536f2b7fd25d53cc5af13b237c3e025e29d6392aba845",
+      "legged_gym/envs/v3/v3_force_evaluation.py": "de9dc9773b2a6c5d76665dd7e776dff297f123fd7441b1fa41f0fa92704e576e",
+      "legged_gym/envs/v3/v3_pos_force_config.py": "93af20919c7b6f4095216c9824f26b26678b1fe76eab164f027bd6a8018886e3",
+      "legged_gym/scripts/evaluate_v3.py": "049f3fe22716ca6ffabfabbc0b889f7100613a20394c8d31514d203c5bcfb76a",
+      "legged_gym/scripts/evaluate_v3_contact.py": "adb4d179fb60ec089f7e6edd3beec9a4964537cb035b00fa84800edd7d9bfea7",
+      "legged_gym/scripts/play_b2z1posforce.py": "876a2d574989c70ec62a91094eb3795ed3ff88ff0761e7387b5e4c78b2c77ce4",
+      "legged_gym/scripts/preflight_v3.py": "cc9c25ea7694b79280e2650bbb1181da734ba3f8bde82575ee482d44f655fbaf",
+      "legged_gym/scripts/train_b2z1posforce.py": "29780b7070d1760f492024b401a6b8fafcdbdd672f3e28e5e4eae588f82ef6df",
+      "legged_gym/scripts/train_v3.py": "daa58d08a4f5dceafc854cf607f652dd5dfecf3be84077ae3cfe743f602f85e8",
+      "legged_gym/scripts/v3_args.py": "8c2ae17e5189b9a9c73a4db36a5b6e6d7666c8299c63fb614f6ae20b8c91a43c",
+      "legged_gym/utils/__init__.py": "263753156ef2c3830c02c8d9a3a8567d1968144069d3f68efeb2b423d9f35126",
+      "legged_gym/utils/go2w_piper_contract.py": "f5515c15d695fdf6505e08c980baee2f7149dff70849aa9204f86913b08031b7",
+      "legged_gym/utils/helpers.py": "ab892862a8ea9ac59cce0765c1323bd2d9b5a34bc9490141ab70e49f5a5a0410",
+      "legged_gym/utils/isaacgym_utils.py": "6b3705becf060b07c26cbea1adb95a159f416d3b37984fa9951af344b8ea0a46",
+      "legged_gym/utils/logger.py": "d3b7582e2aa0f62db8fb80f0ba56f5611023aaaf9a6550c0a968d8fdf65c3063",
+      "legged_gym/utils/math.py": "4b2d840dd02515e236ce0cc9b21f4e0a049cb9e22a203ba93f3f253a9bd7691d",
+      "legged_gym/utils/task_registry.py": "ff0698eb68a843a22f51721fae106ff3b9bf39c617960f1770f94eac9d667fd1",
+      "legged_gym/utils/terrain.py": "c38aa9a69e9d651495f699a91349c250ec40580b1b189c98c9fc79b3518eceec",
+      "legged_gym/utils/v3_asset_collision.py": "c1e2163b4583d6bd9f0fc3f0fe4ab6786fbd4ad6bd406e2a7188dbac43201174",
+      "legged_gym/utils/v3_config.py": "f2623389df5c1a30023bb2948a0355eea5578a9061b8f5496883145862474de1",
+      "legged_gym/utils/v3_kinematics.py": "f27c5b437dd1aef79b70864e6018dd82b86d7a38e9ed02cdbc22eea94504a67c",
+      "SOURCE_BASELINE.json": "9c81dd13fc9c38f449152644e6fa4908b2d97765d85bee3f80461c13f67de8b0"
+    },
+    "asset_manifest": {
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/README.md": "0a2b3e3e9f82a9667d2df7f24e5d6e9a5c2c15fbd8028f62e7b7a298253b9b19",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/asset_manifest.json": "1e0f6541e9f2ed34a50d19108cf2bfb0d3c31091a5aa18ed2e7181fbe82abe69",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/aluminum_profiles_modified.visual.glb": "267c49ae1f2a8490261574099779b667ffbf69a9056f97e45a745381061893ed",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/aluminum_profiles_proxy_0.glb": "810e32759c4493c7d4b7c07f6c78b2b184b6f2a534360a9d8f5ba4780601948b",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/aluminum_profiles_proxy_1.glb": "69d9331d755aaec481d68f9695ba55950c118f33247a029dd28f7a778d644cd7",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/aluminum_profiles_proxy_2.glb": "b5122dc0c275a067eddfdad02be10d7be9d733485bd47481d7fdd43e067d9558",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/aluminum_profiles_proxy_3.glb": "b5843d9ec964bde306329e73d86ce9033e0229cff09173ff0b8ef7eba0ad8f38",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/aluminum_profiles_proxy_4.glb": "de62f03c8d1ba01ab8eb438fe86e202d25a5d23a24bdbef6c55ae587b7dc92ef",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/aluminum_profiles_proxy_5.glb": "c1e2b6502ef0d61c2272638206c073b82ef010df67c4ccd18e4f4221ceea3056",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/aluminum_profiles_proxy_6.glb": "f9ddd1a5a1b7addbb03ed091d405e33e4fd21acf6f7509eb117e6c4a10ef7073",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/aluminum_profiles_proxy_7.glb": "e69c6c138414ac1676cba6d1aa0bd51ab311bd000b56458a3b9c39910d1b62ac",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/aluminum_profiles_proxy_8.glb": "0c34e9dc87d31c2187fe916713f4c989aecd8de410e324d328dbb5efc4620c79",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/arm_base.visual.glb": "509c69ea79f79d721a72838a8546991f684eb121f93e0044725d901b8b919ea8",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/arm_base_proxy_0.glb": "a7d0b24ba7d98a632861a05d26b075c43d963603298885b7d7e53701180fe0a8",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/arm_seg1.visual.glb": "571e652b7cf82566ba4a50ebed9886a6a2ba5276e29dd97dacb4a4354168a213",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/arm_seg1_proxy_0.glb": "7c57a730340938360f293a7853a15f43dcf4490f50edcfd205bd5cf63c4b20dd",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/arm_seg2.visual.glb": "f51e2fdcfe18ba497f57d6e46fd813d51040c88fc364faffa6f4a499205cbee7",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/arm_seg2_proxy_0.glb": "e378eb207e200a2a9379c173ec34b849b7fc52380f148e01856e92af0500f3cf",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/arm_seg2_proxy_1.glb": "f9f7fe75da61750344bb74b943556a1950ef950260886b8ec617d40a6f2e96dc",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/arm_seg3.visual.glb": "299e7c8e661c1dc10ffea7dab339eb2dab2f64c20009a465ee4ffd742e927ce4",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/arm_seg3_proxy_0.glb": "f40777f835f045f4d7de1e9c7887da8e9c6818c27eb6abc1de3dcf1b07fc22d2",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/arm_seg3_proxy_1.glb": "ee7b3f740b72e2a4212bd7535685678715e2974639513b94fc0444324deef680",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/arm_seg4.visual.glb": "22a0260025b073eb4a55ef77aa1e31eaf4313e041e356d55234259d57c115171",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/arm_seg4_proxy_0.glb": "eb6108b136a42d0edeeaa56613a6ae84504eff5cfca64fc198b96c0634cadc34",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/arm_seg4_proxy_1.glb": "ed977697049c41e5af795b0f6d4d388a30e2ee813c8ad6b3d6c9f666a72abe21",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/arm_seg5.visual.glb": "1cdb25d8dc3789325bf1f7df53f6e85f3a83de14f5036b2c084656eb959729db",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/arm_seg5_proxy_0.glb": "01749e8ceda9b48e97b0aad1e2f1cbd86b30db364edd84ea64f8496cec218d1f",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/arm_seg5_proxy_1.glb": "6fd2f5dc944c150a3872d20a4a488688c0e77e5d16b32bf35ad9dd3109fae453",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/arm_seg6.visual.glb": "cfcc5f74a2e3740e8e1c1935f64e87326eb7c275ecd1495e5e2673e948ac8108",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/arm_seg6_proxy_0.glb": "b82ad87651ab9b0f2f4fbf6fa83959ee54a51e74cccb7df08d623a56cc0228b9",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/base_link_clearance_12.glb": "fd68b870aab6c4967bcbd44a43985b7df7fcf6b9dd8a674e8a654d3b85aa2b01",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/base_link_clearance_18.glb": "d940df9a351377b1b00a9457b25df71bd0fff88cc8deaf75ac686045141dfdae",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/base_link_clearance_24.glb": "cfe2d071494c1d7ac7f2dd488f9e2ac082c03a4a283f5c1d22f70e57a547cf64",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/base_link_clearance_35.glb": "3d8c0365a5fe22a3cbfb6057dcd0ce4fe6a89a6b4a2a76cead2f26784f440ca1",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/base_link_clearance_47.glb": "db7c0510d364ff908e5b00e1933c4da11d9029258d202e6db0a985a8f69bc768",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/base_link_proxy_0.glb": "6f2c442925013747fc209985d790d3b38e71f12952eb23fac3c391c8726ef784",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/base_link_proxy_1.glb": "d54f3df5edbf08d79586e1f42db36db633ba4a6c24b614e297bf2b0e5d3d5223",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/base_link_proxy_13.glb": "6d5606a40f681de58b969fa4bb8a17df8b32dbf35a4b44a8d1839823e3f2c342",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/base_link_proxy_16.glb": "1de9b1956b19e9645f9e09ce0d412d5e4cf4823df2d54bd250acf158ab0f2b9a",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/base_link_proxy_18.glb": "eaf93d1c62f4322655db1e9f7e3e9b60cf9792a719d8134c82a6c8d384787060",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/base_link_proxy_2.glb": "875951f7084693f2fe9f0b4de836b25c1646b384584ee27f6dd3adab016ce02e",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/base_link_proxy_24.glb": "3a41e71fa6d4ff1d2866606f94600872398b8391eed6c653ef09f3c6bb687d2e",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/base_link_proxy_28.glb": "c450f6d391978ed2866e358155d8525b86a71e7a9e2942547158d474cf4817aa",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/base_link_proxy_29.glb": "7033bb289f3d366dff965553b3ee551b6848c78af5dfdbd158944b0aaaf5dbd1",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/base_link_proxy_31.glb": "3604465d6bd7634abef00cdbb537af2d595c8a1fb5e0473672d0fdd4a13e08bb",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/base_link_proxy_8.glb": "46790aa381438d7185fe7e54524675b257aa19569b62b461765f63248e36afcb",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/base_link_solid_109.glb": "5d2e8c900821a140849a88358d92a000d7e7defd44819a3a943560515847d49b",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/base_link_solid_110.glb": "4845e22452b1a4e203cba97aac5d69ca4f925e2efa3f2efe0469e470409cee5d",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/base_link_solid_111.glb": "877b8d4822160305c52be80530ae405982f880bdec2cc6e1d4533f55366626ac",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/base_link_solid_112.glb": "900a903625de4709037155dc60f66b88a97201c3507c40c1424ab311c09fed52",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/base_link_solid_115.glb": "4e5672dc66f60d2c1d4c1498d8cb6e4ab2737e2072559cafae568ce4f87afae2",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/base_link_solid_122.glb": "8009d74eedb8ba99539ae9e371349e458f29a12e7c67172380a2a1c088d0d2af",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/base_link_solid_13.glb": "a75bd9c84c6846f32c297e1360f54f32c4e647a5ea2d32002586aadf2cc6b0c7",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/base_link_solid_136.glb": "c15836e6eaaa30bfda1ac45de9b5e54faa5562c922e87234afe76faa3acba11e",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/base_link_solid_16.glb": "41a642e0705d90fb3ceb8f6166d5dde2f295a04d3ca8792e7bc2036f84dd78c7",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/base_link_solid_17.glb": "4bedf4ac62db33b625d6a4d3bcc4d2ba0f02706d96aaa395715fac02514049b5",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/base_link_solid_2.glb": "de294fd99571d0280f40bc1140d37bfbaa5fb3bb19368e487911bfcb6f204495",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/base_link_solid_20.glb": "01236eb50cef2eb0b36d43a67d403aeb1e5f61e016531802ab9ad2aafd3d8896",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/base_link_solid_21.glb": "844835a96aa8fdac020a72496c82df9eea4719f56cf9cc6e6dc30d312b84f8ab",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/base_link_solid_3.glb": "c22d41dc91fabe70db4f1113c9a021f207821c932b23ce4bd3e152a745b17de5",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/base_link_solid_35.glb": "29fc696a4dc10a747f48cf9ac1e9c6dcd05236dc6e9d3019193985f891a85f99",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/base_link_solid_36.glb": "8ec7b9889efa352e0ebc986e4f13d749df7d8c7b2be3c1190e3de21f9d942399",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/base_link_solid_41.glb": "213a0a21fcb1aa6f31d8b866fd1305c6d67d41c9b142449a645b50c7d6079b24",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/base_link_solid_49.glb": "c3d649c9bc571e541beae413b34e574748d3977644a8e343563f2f358d35edcb",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/base_link_solid_5.glb": "09f76ec7908f0b7f0663521ac4b319a303834299050faca4071875e9850b3a1a",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/base_link_solid_52.glb": "9eef85bac2cc7fc1a88329a18a9d0e7efe9d83ddb99c28e9a2791ee15b78d4b5",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/base_link_solid_54.glb": "dbfac3fc80496e3c6d5063a6c54dc26e9d331d281f44749e2bd9a17c858b1536",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/base_link_solid_56.glb": "91273de61b496251367a7ab5189c28657979e5e29a1a251f07987053faceba4b",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/base_link_solid_58.glb": "159ab4bd2f262a59ce28dbef93501514527bcf95a9486e91fee2c3ca27cfe1eb",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/base_link_solid_62.glb": "d323bb46bbfd9a02a524d8605a115ccedf96312104881694a975444ea3a175bd",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/base_link_solid_63.glb": "49c7070458e8fa5de7763f67ff9a8ace68e82dd6313dc7603c33963724116e16",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/base_link_solid_64.glb": "171f03d035ef5d8dc0fb1fcc529adbe4751d8b33a8e3b9e4d5dfb208273e0b17",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/base_link_solid_68.glb": "26861557c530a252f067ff70da6aef51508a55684fbaff0887898175c70e9ea5",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/base_link_solid_7.glb": "76f954477f338e53fec4362a445b9fe11950dcbdd9f667f0dd15b77dafe5f089",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/base_link_solid_75.glb": "2c3f5dd592a83429f735741efc53cda5f6801dd065b20fd66261c0ab2aaaf825",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/base_link_solid_80.glb": "f01645d529e4043ca7d396d0b881554475790d2605f85b99e9f044120741353a",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/base_link_solid_89.glb": "c03c23c798c8c78ddca2a6004b2e4675ee9245c9a907a91580899f0e6cdef0a3",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/base_link_solid_97.glb": "9f9d1c4f78baff4852e86210c6aa5cfcb849a2886b3de8a3f4795fd874160262",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/base_link_visual_clearance_27.glb": "366059c2cf5a6bf07717e332231aaac7e695a1ceacf80a6f9d4833270ea07130",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/base_link_visual_clearance_37.glb": "128eb7caa6b363bb4c1aa132519a334df63f5976b835b22309e7eb08fb930c6b",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/bl_Link_proxy_0.glb": "7cb0ce86e88064ddd38bf2800df7a7ed938ab333a4bf2d0e57e585cbdbc13b7e",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/bl_fixed_visual.glb": "225e5cdce8d4c0650696cd363225a071ff9e969eb92af6ae3988e1b1a82601ac",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/bl_rolling_tire_0.glb": "2e4481f55deec0f8fcb763f568cd448318fd775a60808f48af3555be6bffaad3",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/bl_rolling_tire_1.glb": "7959eb44219482c9a32c4913d5d556b2fb42ebaf4ee6c5e0dd952c93db56ebb0",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/bl_rolling_tire_10.glb": "c18a67957782be20d912823423c1d4938b1802bc3b4c0b8d7ec054d4a76bc7de",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/bl_rolling_tire_11.glb": "a75a7a5d0d411d9a330efb953746aeca9c305eeb0958ffb0db491117ca58f083",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/bl_rolling_tire_12.glb": "de11dd7aa19dd7b1aa4a29abfe17a0b12f0393761bbd54b957d3dc472d857f84",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/bl_rolling_tire_13.glb": "bf32d6f43cb26a7d9049fcbd36bdc2ed97db9bb5921fd7098e6793e624703d4f",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/bl_rolling_tire_14.glb": "d539f688a561e7eea57cc976f33f0a7fa234616f56246365d4be196d1cd9b2ca",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/bl_rolling_tire_15.glb": "250fb3af8aa9e508b0af03dd86c3f94bb4d27befe1c503babb9275f594a74223",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/bl_rolling_tire_2.glb": "d297019951a8d052a802ec026ebfc7b401693301eaee95a32cd2121b350f84be",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/bl_rolling_tire_3.glb": "6bf74c3d14a4da4dec4a5280b9995d7468ccdc9553b610356dcdec7e31e2ff88",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/bl_rolling_tire_4.glb": "d9d1a8c7a4b574cb8f17d101d2a37e16476d5d3ed3e5f367a4dd1b4154869dee",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/bl_rolling_tire_5.glb": "324698a21b6b273aaa659dc8ec05a12a8a6a9a6a05ab3d3823430884f3b88180",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/bl_rolling_tire_6.glb": "26cd553942814a279861cfa6ea0edc808448a576e62e26d0c16a69086dbc0590",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/bl_rolling_tire_7.glb": "081c1359249f667b709b0f9cbb92739e42b4b155d25b33cabd973af452c8773b",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/bl_rolling_tire_8.glb": "81984f783ded62c7aa12ef60774c1b426e3db5d092a0f1fa4ee039a61b9a5652",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/bl_rolling_tire_9.glb": "d1d084e56438c3e832f6dae4b8095ebd47a9f0fcc79b1ee209418b8ae6f7f605",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/bl_rolling_visual.glb": "d7abe8d34522dfe34cd8fb3c37c8f45ab76ff0064f90b13c542961199338c001",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/bl_steering_link_proxy_0.glb": "65d6ee81ec014eebf4e347d0bcd4271a7ebc9a049d5a9afaf5eb8c73711a642e",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/bl_steering_link_proxy_1.glb": "d77d22018df57fecdf8d3c8d676f6f4d07d0b4d5cb5f0850cb0bf236a8314284",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/bl_steering_visual.glb": "3568733e59f97cedb3cf8929ecf1c8ce88b30a284a1bfbb9525b112a0c50e545",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/br_Link_proxy_0.glb": "9f221af19e8c25b3f778fc6fcea160ade2ce07cf61bee8c3df89c103a42cf4ee",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/br_fixed_visual.glb": "51e894a92aa3583cd7a3512db230f4b2bce03b22c94a39b8e09f35b198d6cb41",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/br_rolling_tire_0.glb": "6969fda3c3aa77b36a16ac9c3fe9f90fa75477dc8c3fa89bff875caf53ccb57b",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/br_rolling_tire_1.glb": "9787aeba59d61f621afd353348609c7e2f0843d54d8777ef6efa5c36bc015d55",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/br_rolling_tire_10.glb": "3b910e163e777c63dc45b38ea7c9ade159ebc6bef76e9a197d57d85e2858272d",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/br_rolling_tire_11.glb": "04f1453ef1da2810cb97860bd4d16911fd70d5b0905ed2035603ecd06264a950",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/br_rolling_tire_12.glb": "426df4117d5de471712474cd7cab0140721ee469955f1c6db64af5a0f1707265",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/br_rolling_tire_13.glb": "733e35311163dac230bef8cf69c60d872bbf14b3cb68c7b0273f1ccb24aa4171",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/br_rolling_tire_14.glb": "3e3a813168fba1830120b579c0433f23b4a418170f459d1ac2801b89b1354ffb",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/br_rolling_tire_15.glb": "7208a71a8bcd2b7719cc4c09cdbf7e55732ebaffc67704a5cef9ad4b8532b6c8",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/br_rolling_tire_2.glb": "1245d7974c45ee4856fe72e38099f633b9b3a1187633779f2120d4500e0ae821",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/br_rolling_tire_3.glb": "e0816c25965b775be3f4d79f08141a4db7a393b7a72724627ecf09cde7a984b1",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/br_rolling_tire_4.glb": "2681515f8fc4b7b98226b544088de404642fbe12c0a9b46ec26bba4cc8e851a7",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/br_rolling_tire_5.glb": "abbade29c8efde182ee80d3c604cdc55bd47cda5c8c6628d3ea1af3c4862e08e",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/br_rolling_tire_6.glb": "6d05f0abb0d5d8fd2350c6256e35da0c7cd5ca66d4d30f7cb7e613dd82ec0cc6",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/br_rolling_tire_7.glb": "b446532840b6af63b85961104e7c30c5e88fdaa677450cfeeb3d468370f88eeb",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/br_rolling_tire_8.glb": "89f007af917a05ce26271f8dd91e99851c39e8b00e756b3d8bd8e87f9191a3c9",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/br_rolling_tire_9.glb": "37cb4fc16f9ccfbf5add98333e1de8f218c3da3a5fb4ef1d0d43a4500e56ddce",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/br_rolling_visual.glb": "cccbb8c19d96fb8ed6fb034c150ffbc02e34d640d8925f25d48d6f6ecc4a8917",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/br_steering_link_proxy_0.glb": "c19c3630406463a413461beddaaf35e3880b59d1eb3131153a8561b4816605c0",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/br_steering_link_proxy_1.glb": "9139840c40a6c962cc43707e09b1ef864013c120ebf1c0c5d1bf13f1445bd05b",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/br_steering_visual.glb": "f26eff086a7671d8319ce7ee18420f7a534dfc7c3938b487dc953e92d02a8698",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/camera.visual.glb": "af85717a5169965ee71e76bf2b819e42b1a6e86d9d8cbc3d353c888547e2e63f",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/fl_Link_proxy_0.glb": "7cb0ce86e88064ddd38bf2800df7a7ed938ab333a4bf2d0e57e585cbdbc13b7e",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/fl_fixed_visual.glb": "01a1ee6f62806ebf05dc280f9d93dd7e7b9d39001d54488b7efb67efa984c164",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/fl_rolling_tire_0.glb": "4077ac30e1cd68cbbfc7cebc657fd3cb4843a60f8db80dd6d62d4ebd34f7919d",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/fl_rolling_tire_1.glb": "2ae3c79018c89d309af8413612e1817a99a3e699f3005615e7ca7e05b2f2d1e7",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/fl_rolling_tire_10.glb": "1cd0d6cf6079c13fbbbea710687ae3df2545160f8ae669b8de8e38790323b4f1",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/fl_rolling_tire_11.glb": "5fe0880affebe4c52c9ac8e467d4abd39c1dd4265cbd97e0c205773ed342a634",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/fl_rolling_tire_12.glb": "b40fc2dc49ae77ecb3280e0f147ceaab29c24befff0d80a7a09bff92dd9ef81a",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/fl_rolling_tire_13.glb": "551d567b5ba12aa6a4ba332e67a95ec63266330d71573480d0b6468d9dd685d7",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/fl_rolling_tire_14.glb": "de94b7d4128bcf86e26568b0b38299275d6a953269a5dac97833a386d183656d",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/fl_rolling_tire_15.glb": "dfc4931d770dd57233e3badd15fc2dd2520d1a606e3c191c402e86fedf3e9a1f",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/fl_rolling_tire_2.glb": "20b638f4af7581917d9e414eefd763b085d8a57e8da92541475ffd3198303af9",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/fl_rolling_tire_3.glb": "e086a3d71276ba7c1d22528f213290fa1c46c73e82401944e3029a95f46af48c",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/fl_rolling_tire_4.glb": "bc032413aed2ed33ecad936529c8a7a896c989de6da002816591b37486d0a98d",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/fl_rolling_tire_5.glb": "48803d174c956645dbb10a7c51d4dd2eda7fedcd946b6ec48d71e2879c2a4704",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/fl_rolling_tire_6.glb": "f7b90a3d7b078f45f0efc127b9a2d93fbc657d0bfa37d71bb93e684ab0c646d3",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/fl_rolling_tire_7.glb": "9b240e51df3a54e0109e73031a58c00ee87c7b753a6a9b4f9bce93ad229aeca2",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/fl_rolling_tire_8.glb": "96d1e537c2de79e50e8e47c6457664a822bb4adbdd49d58ee0f8dfafac4ff75e",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/fl_rolling_tire_9.glb": "376ec80b18250ae13e68bc94d7447541c12a7ffa1e3f7b7d6781c12d04a81cf4",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/fl_rolling_visual.glb": "d7abe8d34522dfe34cd8fb3c37c8f45ab76ff0064f90b13c542961199338c001",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/fl_steering_link_proxy_0.glb": "65d6ee81ec014eebf4e347d0bcd4271a7ebc9a049d5a9afaf5eb8c73711a642e",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/fl_steering_link_proxy_1.glb": "d77d22018df57fecdf8d3c8d676f6f4d07d0b4d5cb5f0850cb0bf236a8314284",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/fl_steering_visual.glb": "3568733e59f97cedb3cf8929ecf1c8ce88b30a284a1bfbb9525b112a0c50e545",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/fr_Link_proxy_0.glb": "9f221af19e8c25b3f778fc6fcea160ade2ce07cf61bee8c3df89c103a42cf4ee",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/fr_fixed_visual.glb": "cca5d94802cb630f1786354c886c1a5cdcd8635cd4b544300481d5d5f9fc48da",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/fr_rolling_tire_0.glb": "9f595da1a517208ec0f64d47147d184c7e3dad1cf34f327d3faa817814ee976d",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/fr_rolling_tire_1.glb": "aab730f1af53503366fd96542e1b406008a8bb19d4e27ba62406fc1439480eec",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/fr_rolling_tire_10.glb": "c0c542f49599e5160744796def587ae7ebf5d8d51f1373a97d93c85cf95b6a38",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/fr_rolling_tire_11.glb": "79b80f1ec6a0b5c5252414cbb13d75c136468a699baa2a40cd337e606977a2eb",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/fr_rolling_tire_12.glb": "e73a40ab1996eb77103d8591e8545b6fb69920ebaaed22543c84b4fc3f913bdd",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/fr_rolling_tire_13.glb": "a4e20fdf33c069ea117f27e24a2395dfbb8e30fab799a5804e0bc7a181dbcf31",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/fr_rolling_tire_14.glb": "e61656c37264362defca0823bd5472e6f9f331714d10df9915b6fbdb4714b82d",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/fr_rolling_tire_15.glb": "1defb6713ad5f027b13cf0f9919e27286c61df390426edd11ac11d9c3f2e1b0b",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/fr_rolling_tire_2.glb": "8878f6da907408c915cbbd5d649962f7c158be9928d850e1727f41ab3e172cc6",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/fr_rolling_tire_3.glb": "e32598380e2d4ae31d13cd1a7999b3e748688ac38aedbe01e3995929b037eb19",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/fr_rolling_tire_4.glb": "506c89079ebfb324669408edd0cb70568b8a6cf685430bc01f73c3955541d559",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/fr_rolling_tire_5.glb": "35c8b41fdd65589476b971ab6310c1ce0144be7fe9a7bea7b89ecbb890f5acea",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/fr_rolling_tire_6.glb": "3ba41a8873e8a83106c048a81547995e91510805ad5afc742b68d0f4c30e2298",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/fr_rolling_tire_7.glb": "1be61ddb061ac088116627c2cc0399e5e854fe021031c494e97ea128ee5c17b1",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/fr_rolling_tire_8.glb": "e216d2831a74cc5965f9814bac3f44011772ef4320aec7f4f551cbdccdddea14",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/fr_rolling_tire_9.glb": "a9f8242a35892e3cc3047e6d5337725278aaf48ef25dedef63447ade2a7a4f1c",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/fr_rolling_visual.glb": "cccbb8c19d96fb8ed6fb034c150ffbc02e34d640d8925f25d48d6f6ecc4a8917",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/fr_steering_link_proxy_0.glb": "c19c3630406463a413461beddaaf35e3880b59d1eb3131153a8561b4816605c0",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/fr_steering_link_proxy_1.glb": "9139840c40a6c962cc43707e09b1ef864013c120ebf1c0c5d1bf13f1445bd05b",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/fr_steering_visual.glb": "f26eff086a7671d8319ce7ee18420f7a534dfc7c3938b487dc953e92d02a8698",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/gripper1.visual.glb": "25a95b17bea2dc07634ff0241e966448f275eb628fd43c04577195e537660b73",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/gripper1_proxy_0.glb": "cb3d1f6308ee535c02b1dbca07177d56a134c154dba11923ffa40dc46aef3702",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/gripper1_proxy_1.glb": "c462cb9e97807736971b9804f2c9554f79b28579281b6b44e1ef10df5501148a",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/gripper2.visual.glb": "7355c60f15ba6b038ebcb3d320e3a194120398706fc0028754a7fe0a38967f35",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/gripper2_proxy_0.glb": "44b51110492d6244af58f4e9c1b02aa6ef8991b4bcff1c5f4deddf75c1a4acfa",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/gripper2_proxy_1.glb": "c462cb9e97807736971b9804f2c9554f79b28579281b6b44e1ef10df5501148a",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/left_camera.visual.glb": "8d12fbda107daf3ebd6dfeffe03b6471c38454671eed13a74fe28c9d77da606f",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/left_camera_connector.visual.glb": "76a781eb147379589318bb97131b14a5d064b484456031a63e4bb56496f1df08",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/left_camera_connector_proxy_0.glb": "5d8541d6d88817590d88d1a9d2b02f8a8bacdbae81157ac7d4d310dab5ddd95e",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/left_camera_proxy_0.glb": "892888bc070924859a8d3818525c3ff4306314f491379726c079d8a1b7e395b1",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/ranger_mini3_decimate.visual.glb": "f780fcbbbe1bb5938aa32af9355917e5f87adbacf97c9c7dbd7988d0b031f0a4",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/rear_top_camera_connector.visual.glb": "c3af3b0e1ecc9be7c272526f830647e9d1e619165c762cbf02d57ee36ae0bb82",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/rear_top_camera_connector_proxy_0.glb": "e0092bf73e3a91b82d138a977236cf3b937b4d7423da32a5178ca9e2d311fd79",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/rear_top_camera_proxy_0.glb": "ab7ac2d18bcf2658187152956d58c81b23b32d0240add22b152f2f5843e66dfe",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/right_camera.visual.glb": "9ed53bbf83fd0029e33f66626cb47d8656876852594c74ea00d4110c72940144",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/right_camera_connector.visual.glb": "50e782653778cf7d635862016abd12b15d575d386463a22d11d283078347da72",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/right_camera_connector_proxy_0.glb": "ec7e0d95f85b1aaf82e63047f7bc162b1ea02bb88bb2c8cb06fa2edfe4f5a1e1",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/right_camera_proxy_0.glb": "c546b2fd88aaf016a375392e0a482f41e3c9e029ae408b16d165b618e3879a78",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/wrist_camera_connector.visual.glb": "f46705a6606bfa2e9c831e9d35fd2d289d8606ecc0425ac27550346fc2ff385d",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/wrist_camera_connector_proxy_0.glb": "d6ce2a04a3c6fd2ba30691f092781d660b1d8882206f9cf0be6048f457e4ce55",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/meshes/wrist_camera_proxy_0.glb": "ab7ac2d18bcf2658187152956d58c81b23b32d0240add22b152f2f5843e66dfe",
+      "resources/robots/v3_a1_desktop_train_v6_coplanar_r2/urdf/a1arm_rgm3_desktop_fixed_gripper.urdf": "bbbff3c20cb87e0a94ffb6c844ae9450c50380eb51216ff4b61dd9aed63de773"
+    },
+    "schema": {
+      "version": 1,
+      "actor_frame": 58,
+      "actor_history": 32,
+      "critic_frame": 98,
+      "critic_history": 3,
+      "action_dim": 14,
+      "prediction_dim": 12,
+      "actor_fields": [
+        "roll_pitch_rad:0:2",
+        "body_angular_velocity_rad_s_x0.25:2:5",
+        "steering_arm_position_residual_rad:5:15",
+        "joint_velocity_rad_s_x0.05:15:29",
+        "previous_executed_action:29:43",
+        "scaled_command:43:58"
+      ],
+      "critic_fields": [
+        "auxiliary_labels",
+        "base_mass_kg_com_local_m_tool_mass_kg_delta",
+        "friction",
+        "execution_scale_minus_one",
+        "wheel_world_z_contact_gt_5N",
+        "body_gravity",
+        "body_angular_velocity_x0.25",
+        "position_residual",
+        "joint_velocity_x0.05",
+        "previous_action",
+        "scaled_command",
+        "compensated_spherical_target"
+      ],
+      "joint_order": [
+        "fl_steering_joint",
+        "fr_steering_joint",
+        "bl_steering_joint",
+        "br_steering_joint",
+        "fl_wheel_drive_joint",
+        "fr_wheel_drive_joint",
+        "bl_wheel_drive_joint",
+        "br_wheel_drive_joint",
+        "arm_joint1",
+        "arm_joint2",
+        "arm_joint3",
+        "arm_joint4",
+        "arm_joint5",
+        "arm_joint6"
+      ],
+      "action_semantics": "raw diagonal Gaussian; steering/arm default-angle residual; drive rad/s target; execution scale before hard clipping",
+      "command_scale": [
+        2.0,
+        2.0,
+        0.25,
+        0.5,
+        1.0,
+        1.3,
+        0.5,
+        0.5,
+        0.5,
+        0.01,
+        0.01,
+        0.01,
+        0.01,
+        0.01,
+        0.01
+      ],
+      "auxiliary_groups": [
+        "body_linear_velocity_m_s_x2",
+        "yaw_spherical_tcp_m_rad_x(0.5,1,1.3)",
+        "injected_ee_force_yaw_N_x0.01",
+        "injected_base_force_yaw_N_x0.01"
+      ],
+      "auxiliary_mse_coefficients": [
+        0.04,
+        0.04,
+        1.0,
+        1.0
+      ],
+      "networks": "1856-512-256-128-64; actor122-512-256-128-14; decoder64-128-64-12; critic294-512-256-128-1; ELU; direct_std",
+      "timeout_bootstrap": "true_terminal_successor_v_once_done_masked_gae"
+    },
+    "schema_sha256": "71f282bada6c0996ee0028a566b6863416599ef38f0a67bb52b4ef525d27c171",
+    "learning_config_sha256": "982154a34ccf1a13915d9d4564c18e5240e64ab1aff13af025300d19207e3a48"
+  },
+  "source_compatibility": {
+    "allowed_source_changes": [
+      "legged_gym/b2_gym_learn/ppo_cse_pf/v3_evaluation.py",
+      "legged_gym/b2_gym_learn/ppo_cse_pf/v3_on_policy_runner.py",
+      "legged_gym/b2_gym_learn/ppo_cse_pf/v3_run_identity.py",
+      "legged_gym/envs/v3/legged_robot_v3.py",
+      "legged_gym/envs/v3/v3_contact_evaluation.py",
+      "legged_gym/envs/v3/v3_force_evaluation.py",
+      "legged_gym/envs/v3/v3_pos_force_config.py",
+      "legged_gym/scripts/evaluate_v3.py",
+      "legged_gym/scripts/evaluate_v3_contact.py",
+      "legged_gym/scripts/train_v3.py",
+      "legged_gym/scripts/v3_args.py",
+      "legged_gym/utils/v3_config.py"
+    ],
+    "source_reproduction_part": "A"
+  },
+  "runtime": {
+    "sim_device": "cuda:1",
+    "rl_device": "cuda:1",
+    "gpu_pipeline": true
+  }
+}

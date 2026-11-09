@@ -28,8 +28,8 @@
 
 ## 早期远程证据边界（2026-11-02 r03前）
 
-- `UniFP_v3/docs/experiments/2026-10-31_v3_ppo_runner_checkpoint.md:99-130`记录512×10及跨进程续1轮已通过、32环境旧合同测试与8环境随机化短测结果；同一记录说明恢复首步物理问题已修正，但普通短训仍有提前接触终止，512测未触发400策略步push，不能外推4096容量或长训效果。
-- `UniFP_v3/docs/experiments/2026-11-01_v3_a_evaluation_archive.md:17-20`记录纯Torch测试通过，但本机`tavis`无Isaac Gym；没有A8000 checkpoint、A11量化阈值和真实A评估结果。
+- `UniFP_v3/docs/experiments/v3/实验汇总.md:99-130`记录512×10及跨进程续1轮已通过、32环境旧合同测试与8环境随机化短测结果；同一记录说明恢复首步物理问题已修正，但普通短训仍有提前接触终止，512测未触发400策略步push，不能外推4096容量或长训效果。
+- `UniFP_v3/docs/experiments/v3/实验汇总.md:17-20`记录纯Torch测试通过，但本机`tavis`无Isaac Gym；没有A8000 checkpoint、A11量化阈值和真实A评估结果。
 - `UniFP_v3/tests/`当前包含资产、Actor/Critic、episode日志、评估、PPO、奖励、rollout storage、运行身份和Runner测试；独立真实Gym工具位于`UniFP_v3/tools/check_v3_desktop_runtime.py`及`check_v3_reward_runtime.py`。
 
 ## 当前票据07门控实现

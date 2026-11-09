@@ -1,0 +1,29 @@
+{
+  "scope": "A无墙4环境×5秒默认绑定回归，非受力或接触验收",
+  "policy_steps": 250,
+  "num_envs": 4,
+  "physical_failures": 0,
+  "observation_shapes": {
+    "obs": [
+      4,
+      1856
+    ],
+    "privileged_obs": [
+      4,
+      294
+    ],
+    "obs_pred": [
+      4,
+      12
+    ]
+  },
+  "local_reset_isolated": true,
+  "source_sha256": "558295945e22af4091a196e1f53ce9fafdcc6c898bc0ccf205578381329836ca",
+  "runtime": {
+    "python": "3.8.20",
+    "torch": "2.3.1+cu121",
+    "tensor_device": "cpu",
+    "physx_gpu": true,
+    "gpu_pipeline": false
+  }
+}

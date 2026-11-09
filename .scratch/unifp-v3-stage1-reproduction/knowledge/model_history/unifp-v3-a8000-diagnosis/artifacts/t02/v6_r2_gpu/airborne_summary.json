@@ -1,0 +1,42 @@
+{
+  "airborne_gain120_factor1": {
+    "physics_dt_s": 0.005,
+    "decimation": 4,
+    "policy_dt_s": 0.019999999552965164,
+    "wheel_actor_inertia_kg_m2": {
+      "bl_Link": 0.01139300037175417,
+      "br_Link": 0.01139300037175417,
+      "fl_Link": 0.01139300037175417,
+      "fr_Link": 0.01139300037175417
+    },
+    "drive_speed_mae_rad_s": [
+      16.96993271827698,
+      16.934195356369017,
+      16.835221099853516,
+      17.06900203704834
+    ],
+    "drive_torque_peak_Nm": 80.0,
+    "wheel_contact_peak_N": 0.0,
+    "base_contact_peak_N": 0.0
+  },
+  "airborne_gain120_factor2": {
+    "physics_dt_s": 0.0025,
+    "decimation": 8,
+    "policy_dt_s": 0.019999999552965164,
+    "wheel_actor_inertia_kg_m2": {
+      "bl_Link": 0.01139300037175417,
+      "br_Link": 0.01139300037175417,
+      "fl_Link": 0.01139300037175417,
+      "fr_Link": 0.01139300037175417
+    },
+    "drive_speed_mae_rad_s": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "drive_torque_peak_Nm": 16.748958587646484,
+    "wheel_contact_peak_N": 0.0,
+    "base_contact_peak_N": 0.0
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "robot_actor_indices": [
+    0,
+    2,
+    4,
+    6
+  ],
+  "wall_body_indices": [
+    28,
+    57,
+    86,
+    115
+  ],
+  "raw_root_shape": [
+    8,
+    13
+  ],
+  "raw_body_shape": [
+    116,
+    13
+  ],
+  "robot_state_shape": [
+    4,
+    28,
+    13
+  ],
+  "physical_failures": 0,
+  "local_reset_isolated": true,
+  "policy_steps": 30,
+  "wall_peak_n": 750.6836547851562,
+  "finger_peak_n": 750.6837158203125,
+  "measurement_valid": [
+    true,
+    true,
+    true,
+    true
+  ],
+  "wall_force_peak_n": 0.0
+}

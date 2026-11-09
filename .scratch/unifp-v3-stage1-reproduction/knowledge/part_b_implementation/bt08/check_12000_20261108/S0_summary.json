@@ -1,0 +1,168 @@
+{
+  "scenario_name": "S0",
+  "checkpoint_iteration": 12000,
+  "trace_policy_steps": 96000,
+  "episodes": {
+    "completed": 96,
+    "expected": 96,
+    "completion_rate": 1.0,
+    "physical_failures": 0,
+    "timeouts": 96,
+    "failure_denominator": 96,
+    "physical_failure_rate": 0.0
+  },
+  "metrics": {
+    "tcp_geometric_l1_m": {
+      "mean": 0.1435282115493125,
+      "p95": 0.2888815045356751,
+      "sample_count": 96000
+    },
+    "tcp_geometric_l2_m": {
+      "mean": 0.09633611271535847,
+      "p95": 0.19238231256604196,
+      "sample_count": 96000
+    },
+    "base_planar_speed_m_s": {
+      "mean": 0.03034818483775309,
+      "p95": 0.0869120117276907,
+      "sample_count": 96000
+    },
+    "base_yaw_rate_rad_s": {
+      "mean": 0.05942406403945139,
+      "p95": 0.1977687947452069,
+      "sample_count": 96000
+    },
+    "episode_reward_return": {
+      "mean": 117.66788625717163,
+      "p95": 121.03788757324219,
+      "sample_count": 96
+    },
+    "episode_reward_rate": {
+      "mean": 5.883394444362696,
+      "p95": 6.051894513932493,
+      "sample_count": 96
+    },
+    "state_estimation_base_velocity_tcp_mae_rmse": {
+      "mae_by_dimension": [
+        0.02092946529280482,
+        0.020105528463432065,
+        0.006056114471476404,
+        0.021918819323492548,
+        0.02925128031304151,
+        0.041911768744069405
+      ],
+      "rmse_by_dimension": [
+        0.027413670177065957,
+        0.026208196206683663,
+        0.009496531586058564,
+        0.0292254644437294,
+        0.03776350525525374,
+        0.054380265691445676
+      ],
+      "dimensions": [
+        "base_vx_m_s",
+        "base_vy_m_s",
+        "base_vz_m_s",
+        "tcp_radius_m",
+        "tcp_elevation_rad",
+        "tcp_azimuth_rad"
+      ]
+    },
+    "state_estimation/base_vx_m_s_mae": {
+      "mean": 0.02092946529280482
+    },
+    "state_estimation/base_vx_m_s_rmse": {
+      "mean": 0.027413670177065957
+    },
+    "state_estimation/base_vy_m_s_mae": {
+      "mean": 0.020105528463432065
+    },
+    "state_estimation/base_vy_m_s_rmse": {
+      "mean": 0.026208196206683663
+    },
+    "state_estimation/base_vz_m_s_mae": {
+      "mean": 0.006056114471476404
+    },
+    "state_estimation/base_vz_m_s_rmse": {
+      "mean": 0.009496531586058564
+    },
+    "state_estimation/tcp_radius_m_mae": {
+      "mean": 0.021918819323492548
+    },
+    "state_estimation/tcp_radius_m_rmse": {
+      "mean": 0.0292254644437294
+    },
+    "state_estimation/tcp_elevation_rad_mae": {
+      "mean": 0.02925128031304151
+    },
+    "state_estimation/tcp_elevation_rad_rmse": {
+      "mean": 0.03776350525525374
+    },
+    "state_estimation/tcp_azimuth_rad_mae": {
+      "mean": 0.041911768744069405
+    },
+    "state_estimation/tcp_azimuth_rad_rmse": {
+      "mean": 0.054380265691445676
+    },
+    "physical_failure_rate": {
+      "mean": 0.0
+    },
+    "target_movement_phase_elapsed_rate": {
+      "mean": 0.3608645833333333,
+      "sample_count": 96000
+    }
+  },
+  "threshold_version": "v3-a-initial-v1",
+  "threshold_results": {
+    "tcp_geometric_l2_m": false,
+    "tcp_geometric_l1_m": false,
+    "base_planar_speed_m_s": true,
+    "base_yaw_rate_rad_s": true,
+    "physical_failure_rate": true,
+    "state_estimation/base_vx_m_s_mae": true,
+    "state_estimation/base_vy_m_s_mae": true,
+    "state_estimation/base_vz_m_s_mae": true,
+    "state_estimation/tcp_radius_m_mae": true,
+    "state_estimation/tcp_elevation_rad_mae": true,
+    "state_estimation/tcp_azimuth_rad_mae": true
+  },
+  "push_recovery_windows": [],
+  "paper_comparison_scope": {
+    "fig_3b": "V3逐维TCP球坐标与底盘速度估计误差分布；单位见维度标签",
+    "fig_3b_limit": "资产、目标分布和环境协议不同；不重建论文未公开的原始数据点",
+    "fig_3c_fig_3d": "受力仿真与实机结果不属于本A阶段评估"
+  },
+  "evidence_complete": true,
+  "assessment": "ungraded_or_incomplete",
+  "evaluation_device": "cuda:0",
+  "evaluation_environment_count": 32,
+  "evaluation_seed": 1001,
+  "push_seed": 2001,
+  "policy_updates": 0,
+  "evaluation_runtime": {
+    "python": "3.8.20",
+    "torch": "2.3.1+cu121",
+    "device": "cuda:0",
+    "gym_import_path": "/mnt/data_8THDD/myl_unifp/isaacgym/python/isaacgym/__init__.py",
+    "sim_device": "cuda:0",
+    "physx_use_gpu": true,
+    "use_gpu_pipeline": true
+  },
+  "checkpoint_sha256": "273d4269bc37e95f879d21b178bc0380e20d2539e2d9cfd7488296f049c3146c",
+  "protocol": "zero_force_regression",
+  "smoke": false,
+  "source_compatibility": {
+    "allowed_source_changes": [],
+    "source_reproduction_part": "B"
+  },
+  "source_completed_iterations": 12000,
+  "source_reproduction_part": "B",
+  "effective_quota": {
+    "num_envs": 32,
+    "episodes_per_env": 3
+  },
+  "a8000_comparison": {
+    "available": false,
+    "原因": "未提供同协议A8000参考归档"
+  }
+}

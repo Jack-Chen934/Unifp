@@ -1,0 +1,45 @@
+{
+  "checked_at": "2026-11-08T18:17:47.343611+08:00",
+  "archives": [
+    {
+      "path": "/mnt/data_8THDD/myl_unifp_v3_stage1/evaluations/b12000_supplement_20261108_r01/R2/R2",
+      "artifact_count": 16,
+      "mismatches": [],
+      "manifest_sha256": "7931b40135effd36cb5848c487cecea31c6ec3fc378025100fe15fa809b54e97",
+      "checkpoint_sha256": "273d4269bc37e95f879d21b178bc0380e20d2539e2d9cfd7488296f049c3146c",
+      "evidence_complete": true,
+      "policy_updates": 0,
+      "quota": {
+        "num_envs": 32,
+        "episodes_per_env": 3
+      }
+    },
+    {
+      "path": "/mnt/data_8THDD/myl_unifp_v3_stage1/evaluations/b12000_supplement_20261108_r01/contact/contact",
+      "artifact_count": 18,
+      "mismatches": [],
+      "manifest_sha256": "30455c9150315550f239666004b446b3981e8f705509dd12a8f1bc80eacbea51",
+      "checkpoint_sha256": "273d4269bc37e95f879d21b178bc0380e20d2539e2d9cfd7488296f049c3146c",
+      "evidence_complete": true,
+      "policy_updates": 0,
+      "quota": {
+        "num_envs": 32,
+        "episodes_per_env": 3
+      }
+    },
+    {
+      "path": "/mnt/data_8THDD/myl_unifp_v3_stage1/evaluations/b12000_supplement_20261108_r01/contact/zero_control",
+      "artifact_count": 16,
+      "mismatches": [],
+      "manifest_sha256": "ebe7d9b1ef80e733af49ef9ea2bc7ea12a8113072eef845353f7d1e88f380cca",
+      "checkpoint_sha256": "273d4269bc37e95f879d21b178bc0380e20d2539e2d9cfd7488296f049c3146c",
+      "evidence_complete": true,
+      "policy_updates": 0,
+      "quota": {
+        "num_envs": 32,
+        "episodes_per_env": 1
+      }
+    }
+  ],
+  "passed": true
+}

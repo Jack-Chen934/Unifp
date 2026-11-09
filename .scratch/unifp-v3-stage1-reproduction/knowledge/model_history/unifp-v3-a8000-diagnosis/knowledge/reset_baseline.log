@@ -1,0 +1,20 @@
+Importing module 'gym_38' (/mnt/data_8THDD/myl_unifp/isaacgym/python/isaacgym/_bindings/linux-x86_64/gym_38.so)
+Setting GYM_USD_PLUG_INFO_PATH to /mnt/data_8THDD/myl_unifp/isaacgym/python/isaacgym/_bindings/linux-x86_64/usd/plugInfo.json
+PyTorch version 2.3.1+cu121
+Device count 1
+/mnt/data_8THDD/myl_unifp/isaacgym/python/isaacgym/_bindings/src/gymtorch
+Using /mnt/data_8THDD/myl_unifp_v3_stage1/cache/torch_extensions as PyTorch extensions root...
+Emitting ninja build file /mnt/data_8THDD/myl_unifp_v3_stage1/cache/torch_extensions/gymtorch/build.ninja...
+Building extension module gymtorch...
+Using envvar MAX_JOBS (2) as the number of workers...
+ninja: no work to do.
+Not connected to PVD
++++ Using GPU PhysX
+Physics Engine: PhysX
+Physics Device: cuda:0
+GPU Pipeline: enabled
+Setting seed: 1
+{"source_root": "/mnt/data_8THDD/myl_unifp_v3_stage1/validation/collision_optimization_20261103_r02/source/UniFP_v3", "seed": 1, "num_envs": 4, "records": [{"boundary": "constructor_reset", "tcp_fk_world_m": [0.41578731626993254, 4.030657551722886e-06, 1.1968613370045134], "tcp_cache_world_m": [1.1148685216903687, -0.9453238248825073, 0.340795636177063], "target_world_m": [1.1148685216903687, -0.9453238844871521, 0.340795636177063], "cache_fk_error_m": 1.454375388393674, "target_fk_error_m": 1.4543754271360323, "target_cache_error_m": 5.960464477539063e-08}, {"boundary": "repeat_refresh_without_simulate", "tcp_fk_world_m": [0.41578731626993254, 4.030657551722886e-06, 1.1968613370045134], "tcp_cache_world_m": [1.1148685216903687, -0.9453238248825073, 0.340795636177063], "target_world_m": [1.1148685216903687, -0.9453238844871521, 0.340795636177063], "cache_fk_error_m": 1.454375388393674, "target_fk_error_m": 1.4543754271360323, "target_cache_error_m": 5.960464477539063e-08}, {"boundary": "first_physics_interval", "tcp_fk_world_m": [0.4159699932141822, 0.0009548360556702628, 1.1927327042261517], "tcp_cache_world_m": [0.41596999764442444, 0.0009545558132231236, 1.1927331686019897], "target_world_m": [1.1114581823349, -0.9423334002494812, 0.340795636177063], "cache_fk_error_m": 5.424024107135035e-07, "target_fk_error_m": 1.4488938145613626, "target_cache_error_m": 1.4488939046859741}, {"boundary": "before_local_reset_after_displacement", "tcp_fk_world_m": [1.1326134799074479, 0.01894138815325199, 1.1734639193118543], "tcp_cache_world_m": [1.1326137781143188, 0.018941013142466545, 1.173464298248291], "target_world_m": [1.8298009634017944, -0.9223950505256653, 0.340795636177063], "cache_fk_error_m": 6.108627097277413e-07, "target_fk_error_m": 1.4371921053444903, "target_cache_error_m": 1.4371918439865112}, {"boundary": "after_local_reset", "tcp_fk_world_m": [0.41578731626993254, 4.030657551722886e-06, 1.1968613370045134], "tcp_cache_world_m": [1.1326137781143188, 0.018941013142466545, 1.173464298248291], "target_world_m": [1.1326137781143188, 0.018941013142466545, 1.173464298248291], "cache_fk_error_m": 0.7174581570576332, "target_fk_error_m": 0.7174581570576332, "target_cache_error_m": 0.0}, {"boundary": "physics_after_local_reset", "tcp_fk_world_m": [0.41578731626830145, 4.030690407138921e-06, 1.1944088144882627], "tcp_cache_world_m": [0.4157874584197998, 3.7141392112971516e-06, 1.1944091320037842], "target_world_m": [1.1326137781143188, 0.018941013142466545, 1.173464298248291], "cache_fk_error_m": 4.7034860946059186e-07, "target_fk_error_m": 0.7173823655956396, "target_cache_error_m": 0.7173822522163391}], "other_root_rows_reset_difference": 0.0, "reset_cache_consistent": false}
+Loading extension module gymtorch...
+/mnt/data_8THDD/conda_envs/unifp_v3_stage1/lib/python3.8/site-packages/torch/functional.py:512: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3587.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]

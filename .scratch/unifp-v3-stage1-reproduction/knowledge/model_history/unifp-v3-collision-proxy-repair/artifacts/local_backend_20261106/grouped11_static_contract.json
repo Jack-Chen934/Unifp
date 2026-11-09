@@ -1,0 +1,11 @@
+{
+  "non_collision_structure_and_visual_mesh_identity_unchanged": true,
+  "target_components_complete_unique": true,
+  "source_component_count": 19,
+  "group_count": 11,
+  "actor_shape_count": 168,
+  "manifest_urdf_hash_verified": true,
+  "all_mesh_uris_resolve": true,
+  "diagnostic_scripts_syntax_valid": true,
+  "note_zh": "只核对临时夹具的已列静态属性，不代表最终独立资产或完整物理验收。"
+}

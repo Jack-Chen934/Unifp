@@ -1,0 +1,6 @@
+{
+  "removed_directory": "UniFP_v3/resources/robots/v3_a1_desktop_train_v6_coplanar",
+  "reason_zh": "本轮路径错误期间生成的无效候选；保留metadata追溯，防止误用于训练",
+  "files": 191,
+  "bytes": 66132911
+}

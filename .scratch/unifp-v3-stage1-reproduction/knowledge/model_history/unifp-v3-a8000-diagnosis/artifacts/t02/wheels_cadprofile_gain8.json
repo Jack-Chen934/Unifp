@@ -1,0 +1,320 @@
+{
+  "gain_scale": 8.0,
+  "controller": "analytic",
+  "asset": "/mnt/data_8THDD/myl_unifp_v3_stage1/validation/a8000_repairs_20261104_r01/source/UniFP_v3/resources/robots/v3_a1_desktop_train_v4/urdf/a1arm_rgm3_desktop_fixed_gripper.urdf",
+  "self_collision_disabled": false,
+  "nominal": true,
+  "seed": 1,
+  "wheel_radius_m": 0.1016,
+  "duration_s": 8,
+  "summary_window_s": [
+    4,
+    8
+  ],
+  "cases": {
+    "forward": {
+      "command": [
+        0.3,
+        0.0,
+        0.0
+      ],
+      "body_velocity_mean": [
+        0.26916312947869303,
+        0.001473937667287828,
+        -0.009202468248840887
+      ],
+      "body_velocity_error_mean": [
+        0.030836870521306885,
+        0.005787371109836386,
+        0.009401591453060973
+      ],
+      "drive_target_mean_rad_s": [
+        2.952755928039551,
+        2.952755928039551,
+        2.952755928039551,
+        2.952755928039551
+      ],
+      "drive_actual_mean_rad_s": [
+        2.9371321868896483,
+        2.6189722275733947,
+        2.6731120896339418,
+        2.9515867471694945
+      ],
+      "drive_speed_mae_rad_s": [
+        0.026994841098785402,
+        0.333783700466156,
+        0.27964383840560914,
+        0.016216957569122316
+      ],
+      "steering_mean_rad": [
+        0.00017714598509286362,
+        0.009347459017299116,
+        0.004252850549019058,
+        0.0013244187759119087
+      ],
+      "drive_torque_rms_Nm": [
+        0.10534310469495076,
+        0.6400978496374606,
+        0.5378050691716897,
+        0.05432171180332161
+      ],
+      "peak_base_contact_N": 0.0,
+      "max_abs_roll_pitch_rad": [
+        0.01563570275902748,
+        0.018611453473567963
+      ]
+    },
+    "backward": {
+      "command": [
+        -0.3,
+        0.0,
+        0.0
+      ],
+      "body_velocity_mean": [
+        -0.2665463861823082,
+        0.000996180557376647,
+        -0.004884971954525099
+      ],
+      "body_velocity_error_mean": [
+        0.033453613817691685,
+        0.006628385639523913,
+        0.00667590640769049
+      ],
+      "drive_target_mean_rad_s": [
+        -2.952755928039551,
+        -2.952755928039551,
+        -2.952755928039551,
+        -2.952755928039551
+      ],
+      "drive_actual_mean_rad_s": [
+        -2.9141444933414458,
+        -2.668428041934967,
+        -2.618777278661728,
+        -2.9516457772254943
+      ],
+      "drive_speed_mae_rad_s": [
+        0.052170556783676145,
+        0.2864930748939514,
+        0.3339786493778229,
+        0.01667685031890869
+      ],
+      "steering_mean_rad": [
+        0.0004935293980071264,
+        -0.008023344678804278,
+        -0.0017299909348093933,
+        0.0010974271314626095
+      ],
+      "drive_torque_rms_Nm": [
+        0.19431108291312973,
+        0.5621099985408622,
+        0.6489969972844098,
+        0.050348000944770994
+      ],
+      "peak_base_contact_N": 0.0,
+      "max_abs_roll_pitch_rad": [
+        0.015751445665955544,
+        0.018574541434645653
+      ]
+    },
+    "lateral": {
+      "command": [
+        0.0,
+        0.2,
+        0.0
+      ],
+      "body_velocity_mean": [
+        0.004705107940826565,
+        -0.0017045301926555112,
+        -0.002852559231687337
+      ],
+      "body_velocity_error_mean": [
+        0.004705107940826565,
+        0.20170453019265572,
+        0.002852559231687337
+      ],
+      "drive_target_mean_rad_s": [
+        -1.9685039520263672,
+        -1.9685039520263672,
+        -1.9685039520263672,
+        -1.9685039520263672
+      ],
+      "drive_actual_mean_rad_s": [
+        0.012257302752695978,
+        0.029480369426310063,
+        -0.11554134249687195,
+        0.7321480414271355
+      ],
+      "drive_speed_mae_rad_s": [
+        1.9807612547790632,
+        1.9979843214526773,
+        1.8529626095294953,
+        2.7006519934535027
+      ],
+      "steering_mean_rad": [
+        -1.5599264585971833,
+        -1.5039012610912323,
+        -1.0687751168012618,
+        -0.9076579454541206
+      ],
+      "drive_torque_rms_Nm": [
+        3.603163510662939,
+        3.634493985452803,
+        3.3706873295422892,
+        4.912702075447647
+      ],
+      "peak_base_contact_N": 1177.6085205078125,
+      "max_abs_roll_pitch_rad": [
+        0.014324854128062725,
+        0.017707331106066704
+      ]
+    },
+    "yaw": {
+      "command": [
+        0.0,
+        0.0,
+        0.3
+      ],
+      "body_velocity_mean": [
+        0.002451174567686394,
+        0.001648787609883584,
+        -0.000884857509227004
+      ],
+      "body_velocity_error_mean": [
+        0.002451174567686394,
+        0.001648787609883584,
+        0.30088485750922594
+      ],
+      "drive_target_mean_rad_s": [
+        -0.9189900159835815,
+        0.9200655817985535,
+        -0.9056976437568665,
+        0.9067965745925903
+      ],
+      "drive_actual_mean_rad_s": [
+        -0.03973732013255358,
+        -0.05415234537795186,
+        0.2704923836886883,
+        -0.35934854313731196
+      ],
+      "drive_speed_mae_rad_s": [
+        0.8792526958510279,
+        0.9742179271765053,
+        1.1761900274455548,
+        1.2661451177299023
+      ],
+      "steering_mean_rad": [
+        -0.9164572414755822,
+        0.8108953189849853,
+        0.9223900046944619,
+        -0.9147112965583801
+      ],
+      "drive_torque_rms_Nm": [
+        1.5994357468111948,
+        1.772189213685697,
+        2.139584197776144,
+        2.3032194021424126
+      ],
+      "peak_base_contact_N": 434.48468017578125,
+      "max_abs_roll_pitch_rad": [
+        0.014098810032010078,
+        0.017766889184713364
+      ]
+    }
+  },
+  "cpu_contacts": false,
+  "base_contact_pairs": {
+    "forward": {},
+    "backward": {},
+    "lateral": {},
+    "yaw": {}
+  },
+  "steering_gain_scale": 1.0,
+  "motion_sign": 1,
+  "analytic_kinematics": "steering_pivot_v1",
+  "dof_properties": {
+    "arm_joint1": {
+      "driveMode": 3.0,
+      "stiffness": 0.0,
+      "damping": 0.0,
+      "effort": 40.0
+    },
+    "arm_joint2": {
+      "driveMode": 3.0,
+      "stiffness": 0.0,
+      "damping": 0.0,
+      "effort": 40.0
+    },
+    "arm_joint3": {
+      "driveMode": 3.0,
+      "stiffness": 0.0,
+      "damping": 0.0,
+      "effort": 27.0
+    },
+    "arm_joint4": {
+      "driveMode": 3.0,
+      "stiffness": 0.0,
+      "damping": 0.0,
+      "effort": 7.0
+    },
+    "arm_joint5": {
+      "driveMode": 3.0,
+      "stiffness": 0.0,
+      "damping": 0.0,
+      "effort": 7.0
+    },
+    "arm_joint6": {
+      "driveMode": 3.0,
+      "stiffness": 0.0,
+      "damping": 0.0,
+      "effort": 7.0
+    },
+    "bl_steering_joint": {
+      "driveMode": 3.0,
+      "stiffness": 0.0,
+      "damping": 0.20000000298023224,
+      "effort": 35.0
+    },
+    "bl_wheel_drive_joint": {
+      "driveMode": 3.0,
+      "stiffness": 0.0,
+      "damping": 0.0,
+      "effort": 80.0
+    },
+    "br_steering_joint": {
+      "driveMode": 3.0,
+      "stiffness": 0.0,
+      "damping": 0.20000000298023224,
+      "effort": 35.0
+    },
+    "br_wheel_drive_joint": {
+      "driveMode": 3.0,
+      "stiffness": 0.0,
+      "damping": 0.0,
+      "effort": 80.0
+    },
+    "fl_steering_joint": {
+      "driveMode": 3.0,
+      "stiffness": 0.0,
+      "damping": 0.20000000298023224,
+      "effort": 35.0
+    },
+    "fl_wheel_drive_joint": {
+      "driveMode": 3.0,
+      "stiffness": 0.0,
+      "damping": 0.0,
+      "effort": 80.0
+    },
+    "fr_steering_joint": {
+      "driveMode": 3.0,
+      "stiffness": 0.0,
+      "damping": 0.20000000298023224,
+      "effort": 35.0
+    },
+    "fr_wheel_drive_joint": {
+      "driveMode": 3.0,
+      "stiffness": 0.0,
+      "damping": 0.0,
+      "effort": 80.0
+    }
+  }
+}

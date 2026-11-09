@@ -1,0 +1,47 @@
+{
+  "ticket": "B-T06",
+  "status": "部分验证完成，墙体创建时序修订待确认",
+  "related_unit_tests_passed": 64,
+  "unit_log": "partial_unit.log",
+  "native_no_wall": {
+    "scope": "A无墙4环境×5秒默认绑定回归，非受力或接触验收",
+    "policy_steps": 250,
+    "num_envs": 4,
+    "physical_failures": 0,
+    "observation_shapes": {
+      "obs": [
+        4,
+        1856
+      ],
+      "privileged_obs": [
+        4,
+        294
+      ],
+      "obs_pred": [
+        4,
+        12
+      ]
+    },
+    "local_reset_isolated": true,
+    "source_sha256": "558295945e22af4091a196e1f53ce9fafdcc6c898bc0ccf205578381329836ca",
+    "runtime": {
+      "python": "3.8.20",
+      "torch": "2.3.1+cu121",
+      "tensor_device": "cpu",
+      "physx_gpu": true,
+      "gpu_pipeline": false
+    }
+  },
+  "native_exit_code": 0,
+  "sha256": {
+    "legged_gym/envs/v3/legged_robot_v3.py": "558295945e22af4091a196e1f53ce9fafdcc6c898bc0ccf205578381329836ca",
+    "legged_gym/envs/v3/v3_contact_evaluation.py": "b49d70aaf7dd65d45e5161f1cd26d7650edc9bfa11bd1dc070c2339ed7cc0033",
+    "tests/test_v3_contact_evaluation.py": "dcbb770eb9228ca023a0aa34642aea9b47c0b83209df74d4a6ff7ecf080acc01",
+    "configs/v3_b_contact_v1.json": "5860c2d8fcbd68c231ff87a9cf78434ad4ae507c5cab87f76252e3f937768ef8"
+  },
+  "limits": [
+    "仅验证已实现的张量映射、reset写回、八点采样接缝和默认无墙路径",
+    "未创建真实墙；未进行真实接触测量、污染分类或接触协议验收",
+    "B-T06尚未完成，B-T07／08未开始，未启动正式训练"
+  ]
+}

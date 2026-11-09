@@ -1,0 +1,16 @@
+{
+  "simulation_process_exit_codes": {
+    "smoke": 0,
+    "v6": 0,
+    "r3": 0
+  },
+  "policy_updates": 0,
+  "failure_events": 5,
+  "substep_frames": 80,
+  "all_baseline_terminal_poses_and_forces_exactly_match": true,
+  "all_sampled_visual_surfaces_disjoint": true,
+  "r3_local_and_remote_asset_files_verified": 201,
+  "input_hashes_verified": 146,
+  "python38_observer_syntax_checked": true,
+  "single_report_links_valid": true
+}

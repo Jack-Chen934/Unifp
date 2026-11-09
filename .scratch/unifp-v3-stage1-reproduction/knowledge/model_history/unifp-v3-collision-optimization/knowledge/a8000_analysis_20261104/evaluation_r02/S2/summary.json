@@ -1,0 +1,1818 @@
+{
+  "scenario_name": "S2",
+  "checkpoint_iteration": 8000,
+  "trace_policy_steps": 89053,
+  "episodes": {
+    "completed": 96,
+    "expected": 96,
+    "completion_rate": 1.0,
+    "physical_failures": 8,
+    "timeouts": 88,
+    "failure_denominator": 96,
+    "physical_failure_rate": 0.08333333333333333
+  },
+  "metrics": {
+    "tcp_geometric_l1_m": {
+      "mean": 0.07431212082856116,
+      "p95": 0.157593423128128,
+      "sample_count": 89053
+    },
+    "tcp_geometric_l2_m": {
+      "mean": 0.0502105733607735,
+      "p95": 0.1028590679168697,
+      "sample_count": 89053
+    },
+    "base_planar_speed_m_s": {
+      "mean": 0.36927926876457146,
+      "p95": 0.6311797499656672,
+      "sample_count": 89053
+    },
+    "base_yaw_rate_rad_s": {
+      "mean": 0.2712887408061472,
+      "p95": 0.564848232269287,
+      "sample_count": 89053
+    },
+    "episode_reward_return": {
+      "mean": 94.56014288127578,
+      "p95": 112.02395439147949,
+      "sample_count": 96
+    },
+    "episode_reward_rate": {
+      "mean": 4.9262151486482795,
+      "p95": 5.632200366978355,
+      "sample_count": 96
+    },
+    "state_estimation_base_velocity_tcp_mae_rmse": {
+      "mae_by_dimension": [
+        0.02019723696342012,
+        0.015954994617404673,
+        0.009962911532483607,
+        0.018235421895187027,
+        0.020673900778990863,
+        0.02559274975001113
+      ],
+      "rmse_by_dimension": [
+        0.04527223990337798,
+        0.03221326165301968,
+        0.019669302275256338,
+        0.027996813663945998,
+        0.030833731847323683,
+        0.11658530301834955
+      ],
+      "dimensions": [
+        "base_vx_m_s",
+        "base_vy_m_s",
+        "base_vz_m_s",
+        "tcp_radius_m",
+        "tcp_elevation_rad",
+        "tcp_azimuth_rad"
+      ]
+    },
+    "state_estimation/base_vx_m_s_mae": {
+      "mean": 0.02019723696342012
+    },
+    "state_estimation/base_vx_m_s_rmse": {
+      "mean": 0.04527223990337798
+    },
+    "state_estimation/base_vy_m_s_mae": {
+      "mean": 0.015954994617404673
+    },
+    "state_estimation/base_vy_m_s_rmse": {
+      "mean": 0.03221326165301968
+    },
+    "state_estimation/base_vz_m_s_mae": {
+      "mean": 0.009962911532483607
+    },
+    "state_estimation/base_vz_m_s_rmse": {
+      "mean": 0.019669302275256338
+    },
+    "state_estimation/tcp_radius_m_mae": {
+      "mean": 0.018235421895187027
+    },
+    "state_estimation/tcp_radius_m_rmse": {
+      "mean": 0.027996813663945998
+    },
+    "state_estimation/tcp_elevation_rad_mae": {
+      "mean": 0.020673900778990863
+    },
+    "state_estimation/tcp_elevation_rad_rmse": {
+      "mean": 0.030833731847323683
+    },
+    "state_estimation/tcp_azimuth_rad_mae": {
+      "mean": 0.02559274975001113
+    },
+    "state_estimation/tcp_azimuth_rad_rmse": {
+      "mean": 0.11658530301834955
+    },
+    "push_recovery_tcp_l2_m": {
+      "mean": 0.07676767596179465,
+      "window_count": 204
+    },
+    "push_recovery_base_speed_error_m_s": {
+      "mean": 0.3813893345363584,
+      "window_count": 204
+    },
+    "physical_failure_rate": {
+      "mean": 0.08333333333333333
+    },
+    "target_movement_phase_elapsed_rate": {
+      "mean": 0.3646592478636318,
+      "sample_count": 89053
+    }
+  },
+  "threshold_version": "v3-a-initial-v1",
+  "threshold_results": {
+    "tcp_geometric_l2_m": true,
+    "tcp_geometric_l1_m": true,
+    "base_planar_speed_m_s": false,
+    "base_yaw_rate_rad_s": false,
+    "physical_failure_rate": true,
+    "state_estimation/base_vx_m_s_mae": true,
+    "state_estimation/base_vy_m_s_mae": true,
+    "state_estimation/base_vz_m_s_mae": true,
+    "state_estimation/tcp_radius_m_mae": true,
+    "state_estimation/tcp_elevation_rad_mae": true,
+    "state_estimation/tcp_azimuth_rad_mae": true,
+    "push_recovery_tcp_l2_m": true,
+    "push_recovery_base_speed_error_m_s": false
+  },
+  "push_recovery_windows": [
+    {
+      "scenario_id": "S2_seed1001_env0_episode0",
+      "evaluation_step": 400,
+      "pre_push_tcp_l2_m": 0.02634670026600361,
+      "post_push_tcp_l2_mean_m": 0.03361183145083487,
+      "post_push_base_speed_error_mean_m_s": 0.7138942098617553,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env1_episode0",
+      "evaluation_step": 400,
+      "pre_push_tcp_l2_m": 0.008764656260609627,
+      "post_push_tcp_l2_mean_m": 0.02634923708625138,
+      "post_push_base_speed_error_mean_m_s": 0.26974231511354446,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env3_episode0",
+      "evaluation_step": 400,
+      "pre_push_tcp_l2_m": 0.02353258617222309,
+      "post_push_tcp_l2_mean_m": 0.035536273419857024,
+      "post_push_base_speed_error_mean_m_s": 0.40495900869369506,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env4_episode0",
+      "evaluation_step": 400,
+      "pre_push_tcp_l2_m": 0.015912404283881187,
+      "post_push_tcp_l2_mean_m": 0.05070254646241665,
+      "post_push_base_speed_error_mean_m_s": 0.5164776337146759,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env5_episode0",
+      "evaluation_step": 400,
+      "pre_push_tcp_l2_m": 0.01844426989555359,
+      "post_push_tcp_l2_mean_m": 0.012934331772848964,
+      "post_push_base_speed_error_mean_m_s": 0.35596594274044036,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env6_episode0",
+      "evaluation_step": 400,
+      "pre_push_tcp_l2_m": 0.02743745595216751,
+      "post_push_tcp_l2_mean_m": 0.024667794667184353,
+      "post_push_base_speed_error_mean_m_s": 0.2670426398515701,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env7_episode0",
+      "evaluation_step": 400,
+      "pre_push_tcp_l2_m": 0.006158783100545406,
+      "post_push_tcp_l2_mean_m": 0.02199769944883883,
+      "post_push_base_speed_error_mean_m_s": 0.24017124831676484,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env8_episode0",
+      "evaluation_step": 400,
+      "pre_push_tcp_l2_m": 0.018695076927542686,
+      "post_push_tcp_l2_mean_m": 0.01602413760498166,
+      "post_push_base_speed_error_mean_m_s": 0.3475992614030838,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env9_episode0",
+      "evaluation_step": 400,
+      "pre_push_tcp_l2_m": 0.015637142583727837,
+      "post_push_tcp_l2_mean_m": 0.0189855364151299,
+      "post_push_base_speed_error_mean_m_s": 0.2809986041486263,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env10_episode0",
+      "evaluation_step": 400,
+      "pre_push_tcp_l2_m": 0.02439739927649498,
+      "post_push_tcp_l2_mean_m": 0.026329347863793373,
+      "post_push_base_speed_error_mean_m_s": 0.1635378722473979,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env11_episode1",
+      "evaluation_step": 400,
+      "pre_push_tcp_l2_m": 0.38548728823661804,
+      "post_push_tcp_l2_mean_m": 0.3769628357887268,
+      "post_push_base_speed_error_mean_m_s": 0.48855505406856536,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env12_episode0",
+      "evaluation_step": 400,
+      "pre_push_tcp_l2_m": 0.0639088973402977,
+      "post_push_tcp_l2_mean_m": 0.029362382516264916,
+      "post_push_base_speed_error_mean_m_s": 0.5097898840904236,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env13_episode0",
+      "evaluation_step": 400,
+      "pre_push_tcp_l2_m": 0.01729629747569561,
+      "post_push_tcp_l2_mean_m": 0.022818568721413614,
+      "post_push_base_speed_error_mean_m_s": 0.29037601858377454,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env14_episode0",
+      "evaluation_step": 400,
+      "pre_push_tcp_l2_m": 0.0489053800702095,
+      "post_push_tcp_l2_mean_m": 0.04084784798324108,
+      "post_push_base_speed_error_mean_m_s": 0.7161299645900726,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env15_episode0",
+      "evaluation_step": 400,
+      "pre_push_tcp_l2_m": 0.014636536128818989,
+      "post_push_tcp_l2_mean_m": 0.01924419393762946,
+      "post_push_base_speed_error_mean_m_s": 0.5227428966760636,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env16_episode0",
+      "evaluation_step": 400,
+      "pre_push_tcp_l2_m": 0.08170463889837265,
+      "post_push_tcp_l2_mean_m": 0.06305431235581636,
+      "post_push_base_speed_error_mean_m_s": 0.5487993878126144,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env17_episode0",
+      "evaluation_step": 400,
+      "pre_push_tcp_l2_m": 0.014490311034023762,
+      "post_push_tcp_l2_mean_m": 0.019262519162148238,
+      "post_push_base_speed_error_mean_m_s": 0.45261619210243226,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env18_episode0",
+      "evaluation_step": 400,
+      "pre_push_tcp_l2_m": 0.038859784603118896,
+      "post_push_tcp_l2_mean_m": 0.026330328304320572,
+      "post_push_base_speed_error_mean_m_s": 0.3523459297418594,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env19_episode0",
+      "evaluation_step": 400,
+      "pre_push_tcp_l2_m": 0.005370594095438719,
+      "post_push_tcp_l2_mean_m": 0.011396154975518585,
+      "post_push_base_speed_error_mean_m_s": 0.1599399422109127,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env20_episode0",
+      "evaluation_step": 400,
+      "pre_push_tcp_l2_m": 0.025748204439878464,
+      "post_push_tcp_l2_mean_m": 0.03448640927672386,
+      "post_push_base_speed_error_mean_m_s": 0.40124873697757724,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env21_episode0",
+      "evaluation_step": 400,
+      "pre_push_tcp_l2_m": 0.0029242068994790316,
+      "post_push_tcp_l2_mean_m": 0.026879163729026913,
+      "post_push_base_speed_error_mean_m_s": 0.29321410596370695,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env22_episode0",
+      "evaluation_step": 400,
+      "pre_push_tcp_l2_m": 0.02731206826865673,
+      "post_push_tcp_l2_mean_m": 0.021573363989591598,
+      "post_push_base_speed_error_mean_m_s": 0.07599462743848562,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env23_episode0",
+      "evaluation_step": 400,
+      "pre_push_tcp_l2_m": 0.02825031988322735,
+      "post_push_tcp_l2_mean_m": 0.024673265647143127,
+      "post_push_base_speed_error_mean_m_s": 0.44158446848392485,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env24_episode0",
+      "evaluation_step": 400,
+      "pre_push_tcp_l2_m": 0.013135816901922226,
+      "post_push_tcp_l2_mean_m": 0.02839969042688608,
+      "post_push_base_speed_error_mean_m_s": 0.29307345151901243,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env25_episode0",
+      "evaluation_step": 400,
+      "pre_push_tcp_l2_m": 0.012077671475708485,
+      "post_push_tcp_l2_mean_m": 0.025908997114747763,
+      "post_push_base_speed_error_mean_m_s": 0.37059842884540556,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env26_episode0",
+      "evaluation_step": 400,
+      "pre_push_tcp_l2_m": 0.018679797649383545,
+      "post_push_tcp_l2_mean_m": 0.013826797702349722,
+      "post_push_base_speed_error_mean_m_s": 0.5168601685762405,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env27_episode0",
+      "evaluation_step": 400,
+      "pre_push_tcp_l2_m": 0.028141915798187256,
+      "post_push_tcp_l2_mean_m": 0.03280904486775398,
+      "post_push_base_speed_error_mean_m_s": 0.46838493525981906,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env28_episode0",
+      "evaluation_step": 400,
+      "pre_push_tcp_l2_m": 0.007082292810082436,
+      "post_push_tcp_l2_mean_m": 0.022417965922504664,
+      "post_push_base_speed_error_mean_m_s": 0.5436154520511627,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env29_episode0",
+      "evaluation_step": 400,
+      "pre_push_tcp_l2_m": 0.008918608538806438,
+      "post_push_tcp_l2_mean_m": 0.0312085266597569,
+      "post_push_base_speed_error_mean_m_s": 0.40606981098651884,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env30_episode0",
+      "evaluation_step": 400,
+      "pre_push_tcp_l2_m": 0.03248171880841255,
+      "post_push_tcp_l2_mean_m": 0.025271443985402584,
+      "post_push_base_speed_error_mean_m_s": 0.178247087597847,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env31_episode0",
+      "evaluation_step": 400,
+      "pre_push_tcp_l2_m": 0.034894783049821854,
+      "post_push_tcp_l2_mean_m": 0.052820698991417885,
+      "post_push_base_speed_error_mean_m_s": 0.37666090846061706,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env0_episode0",
+      "evaluation_step": 800,
+      "pre_push_tcp_l2_m": 0.03299074247479439,
+      "post_push_tcp_l2_mean_m": 0.02356713218614459,
+      "post_push_base_speed_error_mean_m_s": 0.4157141500711441,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env1_episode0",
+      "evaluation_step": 800,
+      "pre_push_tcp_l2_m": 0.04001704975962639,
+      "post_push_tcp_l2_mean_m": 0.033199842870235446,
+      "post_push_base_speed_error_mean_m_s": 0.3114749592542648,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env2_episode2",
+      "evaluation_step": 800,
+      "pre_push_tcp_l2_m": 0.011280377395451069,
+      "post_push_tcp_l2_mean_m": 0.0342518303822726,
+      "post_push_base_speed_error_mean_m_s": 0.2347440154850483,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env3_episode0",
+      "evaluation_step": 800,
+      "pre_push_tcp_l2_m": 0.03049502894282341,
+      "post_push_tcp_l2_mean_m": 0.030158663634210825,
+      "post_push_base_speed_error_mean_m_s": 0.40359980940818785,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env4_episode0",
+      "evaluation_step": 800,
+      "pre_push_tcp_l2_m": 0.04184544086456299,
+      "post_push_tcp_l2_mean_m": 0.03277436772361398,
+      "post_push_base_speed_error_mean_m_s": 0.5607746517658234,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env5_episode0",
+      "evaluation_step": 800,
+      "pre_push_tcp_l2_m": 0.0077419099397957325,
+      "post_push_tcp_l2_mean_m": 0.015896036084741355,
+      "post_push_base_speed_error_mean_m_s": 0.43102021515369415,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env6_episode0",
+      "evaluation_step": 800,
+      "pre_push_tcp_l2_m": 0.01558284368366003,
+      "post_push_tcp_l2_mean_m": 0.025073459092527627,
+      "post_push_base_speed_error_mean_m_s": 0.2111024808883667,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env7_episode0",
+      "evaluation_step": 800,
+      "pre_push_tcp_l2_m": 0.04217773303389549,
+      "post_push_tcp_l2_mean_m": 0.023722762130200862,
+      "post_push_base_speed_error_mean_m_s": 0.4144855880737305,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env8_episode0",
+      "evaluation_step": 800,
+      "pre_push_tcp_l2_m": 0.02142014540731907,
+      "post_push_tcp_l2_mean_m": 0.015344392452389001,
+      "post_push_base_speed_error_mean_m_s": 0.3482135361433029,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env9_episode0",
+      "evaluation_step": 800,
+      "pre_push_tcp_l2_m": 0.019291864708065987,
+      "post_push_tcp_l2_mean_m": 0.032145772948861125,
+      "post_push_base_speed_error_mean_m_s": 0.2438752493262291,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env10_episode0",
+      "evaluation_step": 800,
+      "pre_push_tcp_l2_m": 0.014160092920064926,
+      "post_push_tcp_l2_mean_m": 0.04169869765639305,
+      "post_push_base_speed_error_mean_m_s": 0.22163372814655305,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env11_episode1",
+      "evaluation_step": 800,
+      "pre_push_tcp_l2_m": 0.07423639297485352,
+      "post_push_tcp_l2_mean_m": 0.04512150526046753,
+      "post_push_base_speed_error_mean_m_s": 0.27133113086223604,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env12_episode0",
+      "evaluation_step": 800,
+      "pre_push_tcp_l2_m": 0.006958079524338245,
+      "post_push_tcp_l2_mean_m": 0.035668214038014415,
+      "post_push_base_speed_error_mean_m_s": 0.20686695069074632,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env13_episode0",
+      "evaluation_step": 800,
+      "pre_push_tcp_l2_m": 0.03802265226840973,
+      "post_push_tcp_l2_mean_m": 0.027068419083952903,
+      "post_push_base_speed_error_mean_m_s": 0.4377186113595963,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env14_episode0",
+      "evaluation_step": 800,
+      "pre_push_tcp_l2_m": 0.02430412545800209,
+      "post_push_tcp_l2_mean_m": 0.019812289690598846,
+      "post_push_base_speed_error_mean_m_s": 0.6910941398143768,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env15_episode0",
+      "evaluation_step": 800,
+      "pre_push_tcp_l2_m": 0.03408217430114746,
+      "post_push_tcp_l2_mean_m": 0.03440685797482729,
+      "post_push_base_speed_error_mean_m_s": 0.4454010859131813,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env16_episode0",
+      "evaluation_step": 800,
+      "pre_push_tcp_l2_m": 0.026147494092583656,
+      "post_push_tcp_l2_mean_m": 0.029733498618006705,
+      "post_push_base_speed_error_mean_m_s": 0.27624226033687593,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env17_episode0",
+      "evaluation_step": 800,
+      "pre_push_tcp_l2_m": 0.019297340884804726,
+      "post_push_tcp_l2_mean_m": 0.020372157525271176,
+      "post_push_base_speed_error_mean_m_s": 0.21825626701116563,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env18_episode0",
+      "evaluation_step": 800,
+      "pre_push_tcp_l2_m": 0.022237183526158333,
+      "post_push_tcp_l2_mean_m": 0.0327989374473691,
+      "post_push_base_speed_error_mean_m_s": 0.11729195430874824,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env19_episode0",
+      "evaluation_step": 800,
+      "pre_push_tcp_l2_m": 0.015454541891813278,
+      "post_push_tcp_l2_mean_m": 0.02663076363503933,
+      "post_push_base_speed_error_mean_m_s": 0.4153908795118332,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env20_episode0",
+      "evaluation_step": 800,
+      "pre_push_tcp_l2_m": 0.032468006014823914,
+      "post_push_tcp_l2_mean_m": 0.05793295912444592,
+      "post_push_base_speed_error_mean_m_s": 0.5737366990745068,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env21_episode0",
+      "evaluation_step": 800,
+      "pre_push_tcp_l2_m": 0.02512156218290329,
+      "post_push_tcp_l2_mean_m": 0.02358717143535614,
+      "post_push_base_speed_error_mean_m_s": 0.38598759651184084,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env22_episode0",
+      "evaluation_step": 800,
+      "pre_push_tcp_l2_m": 0.023519666865468025,
+      "post_push_tcp_l2_mean_m": 0.03362651951611042,
+      "post_push_base_speed_error_mean_m_s": 0.2450534576177597,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env23_episode0",
+      "evaluation_step": 800,
+      "pre_push_tcp_l2_m": 0.013488358817994595,
+      "post_push_tcp_l2_mean_m": 0.03304361278191209,
+      "post_push_base_speed_error_mean_m_s": 0.33251111567020414,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env24_episode0",
+      "evaluation_step": 800,
+      "pre_push_tcp_l2_m": 0.0014522937126457691,
+      "post_push_tcp_l2_mean_m": 0.013067091209813952,
+      "post_push_base_speed_error_mean_m_s": 0.46033775866031645,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env25_episode0",
+      "evaluation_step": 800,
+      "pre_push_tcp_l2_m": 0.027342723682522774,
+      "post_push_tcp_l2_mean_m": 0.028989809416234493,
+      "post_push_base_speed_error_mean_m_s": 0.3256514799594879,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env26_episode0",
+      "evaluation_step": 800,
+      "pre_push_tcp_l2_m": 0.03799239918589592,
+      "post_push_tcp_l2_mean_m": 0.03354636449366808,
+      "post_push_base_speed_error_mean_m_s": 0.4301302486658096,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env27_episode0",
+      "evaluation_step": 800,
+      "pre_push_tcp_l2_m": 0.0220029279589653,
+      "post_push_tcp_l2_mean_m": 0.02477143483236432,
+      "post_push_base_speed_error_mean_m_s": 0.6410597741603852,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env28_episode0",
+      "evaluation_step": 800,
+      "pre_push_tcp_l2_m": 0.007848881185054779,
+      "post_push_tcp_l2_mean_m": 0.013449730798602105,
+      "post_push_base_speed_error_mean_m_s": 0.4355176770687103,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env29_episode0",
+      "evaluation_step": 800,
+      "pre_push_tcp_l2_m": 0.02796291559934616,
+      "post_push_tcp_l2_mean_m": 0.02981757201254368,
+      "post_push_base_speed_error_mean_m_s": 0.4279271185398102,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env30_episode0",
+      "evaluation_step": 800,
+      "pre_push_tcp_l2_m": 0.01094499696046114,
+      "post_push_tcp_l2_mean_m": 0.01218984485603869,
+      "post_push_base_speed_error_mean_m_s": 0.24371646702289582,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env31_episode0",
+      "evaluation_step": 800,
+      "pre_push_tcp_l2_m": 0.012357900850474834,
+      "post_push_tcp_l2_mean_m": 0.015460743941366673,
+      "post_push_base_speed_error_mean_m_s": 0.49581793785095213,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env0_episode1",
+      "evaluation_step": 1200,
+      "pre_push_tcp_l2_m": 0.047296445816755295,
+      "post_push_tcp_l2_mean_m": 0.05360775396227837,
+      "post_push_base_speed_error_mean_m_s": 0.22650822401046752,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env1_episode1",
+      "evaluation_step": 1200,
+      "pre_push_tcp_l2_m": 0.002660512924194336,
+      "post_push_tcp_l2_mean_m": 0.02466285481583327,
+      "post_push_base_speed_error_mean_m_s": 0.22257599666714667,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env2_episode2",
+      "evaluation_step": 1200,
+      "pre_push_tcp_l2_m": 0.00945605244487524,
+      "post_push_tcp_l2_mean_m": 0.010764944974798709,
+      "post_push_base_speed_error_mean_m_s": 0.4747995793819427,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env3_episode1",
+      "evaluation_step": 1200,
+      "pre_push_tcp_l2_m": 0.032177165150642395,
+      "post_push_tcp_l2_mean_m": 0.03978542787954211,
+      "post_push_base_speed_error_mean_m_s": 0.40344096899032594,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env4_episode1",
+      "evaluation_step": 1200,
+      "pre_push_tcp_l2_m": 0.032978132367134094,
+      "post_push_tcp_l2_mean_m": 0.023548551527783276,
+      "post_push_base_speed_error_mean_m_s": 0.49245600938796996,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env5_episode1",
+      "evaluation_step": 1200,
+      "pre_push_tcp_l2_m": 0.009003795683383942,
+      "post_push_tcp_l2_mean_m": 0.013268937263637781,
+      "post_push_base_speed_error_mean_m_s": 0.404984712600708,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env6_episode2",
+      "evaluation_step": 1200,
+      "pre_push_tcp_l2_m": 0.02898225374519825,
+      "post_push_tcp_l2_mean_m": 0.02968567568808794,
+      "post_push_base_speed_error_mean_m_s": 0.09542531517334282,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env7_episode1",
+      "evaluation_step": 1200,
+      "pre_push_tcp_l2_m": 0.00922973919659853,
+      "post_push_tcp_l2_mean_m": 0.010506504597142339,
+      "post_push_base_speed_error_mean_m_s": 0.2948155707120895,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env8_episode1",
+      "evaluation_step": 1200,
+      "pre_push_tcp_l2_m": 0.08396843075752258,
+      "post_push_tcp_l2_mean_m": 0.0973528677225113,
+      "post_push_base_speed_error_mean_m_s": 0.3004658369719982,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env9_episode1",
+      "evaluation_step": 1200,
+      "pre_push_tcp_l2_m": 0.01577981747686863,
+      "post_push_tcp_l2_mean_m": 0.0339624160900712,
+      "post_push_base_speed_error_mean_m_s": 0.346246540248394,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env10_episode1",
+      "evaluation_step": 1200,
+      "pre_push_tcp_l2_m": 0.013524947687983513,
+      "post_push_tcp_l2_mean_m": 0.021236838344484567,
+      "post_push_base_speed_error_mean_m_s": 0.2992132940888405,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env11_episode1",
+      "evaluation_step": 1200,
+      "pre_push_tcp_l2_m": 0.025046395137906075,
+      "post_push_tcp_l2_mean_m": 0.03331101266667247,
+      "post_push_base_speed_error_mean_m_s": 0.5819912016391754,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env12_episode1",
+      "evaluation_step": 1200,
+      "pre_push_tcp_l2_m": 0.011196250095963478,
+      "post_push_tcp_l2_mean_m": 0.02174795465543866,
+      "post_push_base_speed_error_mean_m_s": 0.49894236743450165,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env13_episode1",
+      "evaluation_step": 1200,
+      "pre_push_tcp_l2_m": 0.019414521753787994,
+      "post_push_tcp_l2_mean_m": 0.03085210273042321,
+      "post_push_base_speed_error_mean_m_s": 0.3883359009027481,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env14_episode1",
+      "evaluation_step": 1200,
+      "pre_push_tcp_l2_m": 0.01688217744231224,
+      "post_push_tcp_l2_mean_m": 0.029040193632245064,
+      "post_push_base_speed_error_mean_m_s": 0.6432995033264161,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env15_episode1",
+      "evaluation_step": 1200,
+      "pre_push_tcp_l2_m": 0.030835924670100212,
+      "post_push_tcp_l2_mean_m": 0.03467336371541023,
+      "post_push_base_speed_error_mean_m_s": 0.2986759117245674,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env16_episode1",
+      "evaluation_step": 1200,
+      "pre_push_tcp_l2_m": 0.04168485850095749,
+      "post_push_tcp_l2_mean_m": 0.048783486066386106,
+      "post_push_base_speed_error_mean_m_s": 0.44112532660365106,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env17_episode1",
+      "evaluation_step": 1200,
+      "pre_push_tcp_l2_m": 0.009907875210046768,
+      "post_push_tcp_l2_mean_m": 0.028726252242922783,
+      "post_push_base_speed_error_mean_m_s": 0.5891084718704224,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env18_episode1",
+      "evaluation_step": 1200,
+      "pre_push_tcp_l2_m": 0.016421660780906677,
+      "post_push_tcp_l2_mean_m": 0.03056132350116968,
+      "post_push_base_speed_error_mean_m_s": 0.1921180595457554,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env19_episode1",
+      "evaluation_step": 1200,
+      "pre_push_tcp_l2_m": 0.009417194873094559,
+      "post_push_tcp_l2_mean_m": 0.024534266954287887,
+      "post_push_base_speed_error_mean_m_s": 0.46107005566358567,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env20_episode1",
+      "evaluation_step": 1200,
+      "pre_push_tcp_l2_m": 0.013420634903013706,
+      "post_push_tcp_l2_mean_m": 0.018556658811867237,
+      "post_push_base_speed_error_mean_m_s": 0.3401851999759674,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env21_episode1",
+      "evaluation_step": 1200,
+      "pre_push_tcp_l2_m": 0.024237239733338356,
+      "post_push_tcp_l2_mean_m": 0.04016429487615824,
+      "post_push_base_speed_error_mean_m_s": 0.3357361948490143,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env22_episode1",
+      "evaluation_step": 1200,
+      "pre_push_tcp_l2_m": 0.026932556182146072,
+      "post_push_tcp_l2_mean_m": 0.02664497187361121,
+      "post_push_base_speed_error_mean_m_s": 0.43325212836265564,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env23_episode1",
+      "evaluation_step": 1200,
+      "pre_push_tcp_l2_m": 0.01919502019882202,
+      "post_push_tcp_l2_mean_m": 0.03059305878356099,
+      "post_push_base_speed_error_mean_m_s": 0.5489569294452668,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env24_episode1",
+      "evaluation_step": 1200,
+      "pre_push_tcp_l2_m": 0.011537302285432816,
+      "post_push_tcp_l2_mean_m": 0.017227906230837108,
+      "post_push_base_speed_error_mean_m_s": 0.41407095074653627,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env25_episode1",
+      "evaluation_step": 1200,
+      "pre_push_tcp_l2_m": 0.018485963344573975,
+      "post_push_tcp_l2_mean_m": 0.024094521552324295,
+      "post_push_base_speed_error_mean_m_s": 0.16378410754725337,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env26_episode1",
+      "evaluation_step": 1200,
+      "pre_push_tcp_l2_m": 0.02949240244925022,
+      "post_push_tcp_l2_mean_m": 0.03183445788919926,
+      "post_push_base_speed_error_mean_m_s": 0.4378718428313732,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env27_episode1",
+      "evaluation_step": 1200,
+      "pre_push_tcp_l2_m": 0.014156314544379711,
+      "post_push_tcp_l2_mean_m": 0.024681645967066287,
+      "post_push_base_speed_error_mean_m_s": 0.2801541671156883,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env28_episode1",
+      "evaluation_step": 1200,
+      "pre_push_tcp_l2_m": 0.035832479596138,
+      "post_push_tcp_l2_mean_m": 0.037636123746633526,
+      "post_push_base_speed_error_mean_m_s": 0.3201554250717163,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env29_episode1",
+      "evaluation_step": 1200,
+      "pre_push_tcp_l2_m": 0.041752200573682785,
+      "post_push_tcp_l2_mean_m": 0.0664357192069292,
+      "post_push_base_speed_error_mean_m_s": 0.23037975668907165,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env30_episode1",
+      "evaluation_step": 1200,
+      "pre_push_tcp_l2_m": 0.012372787110507488,
+      "post_push_tcp_l2_mean_m": 0.016346016312018038,
+      "post_push_base_speed_error_mean_m_s": 0.3885620123147964,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env31_episode1",
+      "evaluation_step": 1200,
+      "pre_push_tcp_l2_m": 0.03027460165321827,
+      "post_push_tcp_l2_mean_m": 0.026021627113223075,
+      "post_push_base_speed_error_mean_m_s": 0.3046978205442429,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env0_episode1",
+      "evaluation_step": 1600,
+      "pre_push_tcp_l2_m": 0.017376529052853584,
+      "post_push_tcp_l2_mean_m": 0.02067067790776491,
+      "post_push_base_speed_error_mean_m_s": 0.1085454098880291,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env1_episode1",
+      "evaluation_step": 1600,
+      "pre_push_tcp_l2_m": 0.010906359180808067,
+      "post_push_tcp_l2_mean_m": 0.023220497062429787,
+      "post_push_base_speed_error_mean_m_s": 0.38129094898700716,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env3_episode1",
+      "evaluation_step": 1600,
+      "pre_push_tcp_l2_m": 0.022276755422353745,
+      "post_push_tcp_l2_mean_m": 0.017543049100786447,
+      "post_push_base_speed_error_mean_m_s": 0.41576998591423037,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env4_episode1",
+      "evaluation_step": 1600,
+      "pre_push_tcp_l2_m": 0.04038429632782936,
+      "post_push_tcp_l2_mean_m": 0.041671217381954194,
+      "post_push_base_speed_error_mean_m_s": 0.6038591599464417,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env5_episode1",
+      "evaluation_step": 1600,
+      "pre_push_tcp_l2_m": 0.013831050135195255,
+      "post_push_tcp_l2_mean_m": 0.025757945049554108,
+      "post_push_base_speed_error_mean_m_s": 0.3151016342639923,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env6_episode2",
+      "evaluation_step": 1600,
+      "pre_push_tcp_l2_m": 0.026366598904132843,
+      "post_push_tcp_l2_mean_m": 0.019034822247922422,
+      "post_push_base_speed_error_mean_m_s": 0.6604634094238281,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env7_episode1",
+      "evaluation_step": 1600,
+      "pre_push_tcp_l2_m": 0.06682422012090683,
+      "post_push_tcp_l2_mean_m": 0.05712797529995441,
+      "post_push_base_speed_error_mean_m_s": 0.3318492305278778,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env8_episode1",
+      "evaluation_step": 1600,
+      "pre_push_tcp_l2_m": 0.009702444076538086,
+      "post_push_tcp_l2_mean_m": 0.014564185864292084,
+      "post_push_base_speed_error_mean_m_s": 0.29691794514656067,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env9_episode1",
+      "evaluation_step": 1600,
+      "pre_push_tcp_l2_m": 0.011381745338439941,
+      "post_push_tcp_l2_mean_m": 0.016081695542670787,
+      "post_push_base_speed_error_mean_m_s": 0.6007220858335495,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env10_episode1",
+      "evaluation_step": 1600,
+      "pre_push_tcp_l2_m": 0.006693709641695023,
+      "post_push_tcp_l2_mean_m": 0.013590925773605704,
+      "post_push_base_speed_error_mean_m_s": 0.11749759837985038,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env11_episode2",
+      "evaluation_step": 1600,
+      "pre_push_tcp_l2_m": 0.048534803092479706,
+      "post_push_tcp_l2_mean_m": 0.04220608398318291,
+      "post_push_base_speed_error_mean_m_s": 0.47757606983184814,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env12_episode1",
+      "evaluation_step": 1600,
+      "pre_push_tcp_l2_m": 0.02816353365778923,
+      "post_push_tcp_l2_mean_m": 0.022964832242578267,
+      "post_push_base_speed_error_mean_m_s": 0.5682836014032364,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env13_episode1",
+      "evaluation_step": 1600,
+      "pre_push_tcp_l2_m": 0.01628836616873741,
+      "post_push_tcp_l2_mean_m": 0.015523620247840882,
+      "post_push_base_speed_error_mean_m_s": 0.3308934596180916,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env14_episode1",
+      "evaluation_step": 1600,
+      "pre_push_tcp_l2_m": 0.049542661756277084,
+      "post_push_tcp_l2_mean_m": 0.048849768936634064,
+      "post_push_base_speed_error_mean_m_s": 0.5714113038778305,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env15_episode1",
+      "evaluation_step": 1600,
+      "pre_push_tcp_l2_m": 0.013818752951920033,
+      "post_push_tcp_l2_mean_m": 0.018908476885408164,
+      "post_push_base_speed_error_mean_m_s": 0.30975555956363676,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env16_episode1",
+      "evaluation_step": 1600,
+      "pre_push_tcp_l2_m": 0.05152337625622749,
+      "post_push_tcp_l2_mean_m": 0.047969531118869785,
+      "post_push_base_speed_error_mean_m_s": 0.18746056213974951,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env17_episode1",
+      "evaluation_step": 1600,
+      "pre_push_tcp_l2_m": 0.020251767709851265,
+      "post_push_tcp_l2_mean_m": 0.022700806222856043,
+      "post_push_base_speed_error_mean_m_s": 0.4941309106349945,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env18_episode1",
+      "evaluation_step": 1600,
+      "pre_push_tcp_l2_m": 0.05720996484160423,
+      "post_push_tcp_l2_mean_m": 0.02863444050773978,
+      "post_push_base_speed_error_mean_m_s": 0.3698225837945938,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env19_episode1",
+      "evaluation_step": 1600,
+      "pre_push_tcp_l2_m": 0.03434975445270538,
+      "post_push_tcp_l2_mean_m": 0.0611474235355854,
+      "post_push_base_speed_error_mean_m_s": 0.1979790335148573,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env20_episode1",
+      "evaluation_step": 1600,
+      "pre_push_tcp_l2_m": 0.00915232952684164,
+      "post_push_tcp_l2_mean_m": 0.023161348700523377,
+      "post_push_base_speed_error_mean_m_s": 0.24918420851230622,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env21_episode1",
+      "evaluation_step": 1600,
+      "pre_push_tcp_l2_m": 0.023209748789668083,
+      "post_push_tcp_l2_mean_m": 0.017143317060545088,
+      "post_push_base_speed_error_mean_m_s": 0.15029073238372803,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env22_episode1",
+      "evaluation_step": 1600,
+      "pre_push_tcp_l2_m": 0.025811538100242615,
+      "post_push_tcp_l2_mean_m": 0.04662214413285255,
+      "post_push_base_speed_error_mean_m_s": 0.3064170530438423,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env23_episode1",
+      "evaluation_step": 1600,
+      "pre_push_tcp_l2_m": 0.016927853226661682,
+      "post_push_tcp_l2_mean_m": 0.021271725203841924,
+      "post_push_base_speed_error_mean_m_s": 0.4654423689842224,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env24_episode1",
+      "evaluation_step": 1600,
+      "pre_push_tcp_l2_m": 0.03405343368649483,
+      "post_push_tcp_l2_mean_m": 0.05070690870285034,
+      "post_push_base_speed_error_mean_m_s": 0.21978290736675263,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env25_episode1",
+      "evaluation_step": 1600,
+      "pre_push_tcp_l2_m": 0.018387475982308388,
+      "post_push_tcp_l2_mean_m": 0.028892731927335262,
+      "post_push_base_speed_error_mean_m_s": 0.30940718948841095,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env26_episode1",
+      "evaluation_step": 1600,
+      "pre_push_tcp_l2_m": 0.007469756994396448,
+      "post_push_tcp_l2_mean_m": 0.02739340700209141,
+      "post_push_base_speed_error_mean_m_s": 0.47469327807426454,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env27_episode1",
+      "evaluation_step": 1600,
+      "pre_push_tcp_l2_m": 0.023436011746525764,
+      "post_push_tcp_l2_mean_m": 0.024085975624620913,
+      "post_push_base_speed_error_mean_m_s": 0.6099582207202912,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env28_episode1",
+      "evaluation_step": 1600,
+      "pre_push_tcp_l2_m": 0.018154894933104515,
+      "post_push_tcp_l2_mean_m": 0.02059351833537221,
+      "post_push_base_speed_error_mean_m_s": 0.5273751842975617,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env29_episode1",
+      "evaluation_step": 1600,
+      "pre_push_tcp_l2_m": 0.004081838298588991,
+      "post_push_tcp_l2_mean_m": 0.00751627576071769,
+      "post_push_base_speed_error_mean_m_s": 0.3879785841703415,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env30_episode1",
+      "evaluation_step": 1600,
+      "pre_push_tcp_l2_m": 0.01161953154951334,
+      "post_push_tcp_l2_mean_m": 0.015760440099984407,
+      "post_push_base_speed_error_mean_m_s": 0.25288824178278446,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env31_episode1",
+      "evaluation_step": 1600,
+      "pre_push_tcp_l2_m": 0.03173002973198891,
+      "post_push_tcp_l2_mean_m": 0.026528393626213075,
+      "post_push_base_speed_error_mean_m_s": 0.5051529598236084,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env1_episode2",
+      "evaluation_step": 2000,
+      "pre_push_tcp_l2_m": null,
+      "post_push_tcp_l2_mean_m": 0.5630262687802314,
+      "post_push_base_speed_error_mean_m_s": 0.47517154812812806,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env3_episode2",
+      "evaluation_step": 2000,
+      "pre_push_tcp_l2_m": null,
+      "post_push_tcp_l2_mean_m": 0.6890204292535782,
+      "post_push_base_speed_error_mean_m_s": 0.4048198978602886,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env4_episode2",
+      "evaluation_step": 2000,
+      "pre_push_tcp_l2_m": null,
+      "post_push_tcp_l2_mean_m": 0.22375587783753872,
+      "post_push_base_speed_error_mean_m_s": 0.1826567304879427,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env5_episode2",
+      "evaluation_step": 2000,
+      "pre_push_tcp_l2_m": null,
+      "post_push_tcp_l2_mean_m": 0.12373693378642202,
+      "post_push_base_speed_error_mean_m_s": 0.401406369805336,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env6_episode2",
+      "evaluation_step": 2000,
+      "pre_push_tcp_l2_m": 0.01765698939561844,
+      "post_push_tcp_l2_mean_m": 0.03432588193565607,
+      "post_push_base_speed_error_mean_m_s": 0.3952195864915848,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env8_episode2",
+      "evaluation_step": 2000,
+      "pre_push_tcp_l2_m": null,
+      "post_push_tcp_l2_mean_m": 0.8965706300735473,
+      "post_push_base_speed_error_mean_m_s": 0.3255721402168274,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env9_episode2",
+      "evaluation_step": 2000,
+      "pre_push_tcp_l2_m": null,
+      "post_push_tcp_l2_mean_m": 0.1634143889695406,
+      "post_push_base_speed_error_mean_m_s": 0.24307043746113777,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env10_episode2",
+      "evaluation_step": 2000,
+      "pre_push_tcp_l2_m": null,
+      "post_push_tcp_l2_mean_m": 0.10625600067898631,
+      "post_push_base_speed_error_mean_m_s": 0.35699854254722596,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env11_episode2",
+      "evaluation_step": 2000,
+      "pre_push_tcp_l2_m": 0.019461432471871376,
+      "post_push_tcp_l2_mean_m": 0.026252729715779424,
+      "post_push_base_speed_error_mean_m_s": 0.49185546696186067,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env12_episode2",
+      "evaluation_step": 2000,
+      "pre_push_tcp_l2_m": null,
+      "post_push_tcp_l2_mean_m": 0.08348846048116684,
+      "post_push_base_speed_error_mean_m_s": 0.1588362051639706,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env14_episode2",
+      "evaluation_step": 2000,
+      "pre_push_tcp_l2_m": null,
+      "post_push_tcp_l2_mean_m": 0.3457605114579201,
+      "post_push_base_speed_error_mean_m_s": 0.49420616567134856,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env15_episode2",
+      "evaluation_step": 2000,
+      "pre_push_tcp_l2_m": null,
+      "post_push_tcp_l2_mean_m": 0.5654518195986747,
+      "post_push_base_speed_error_mean_m_s": 0.21236426435410977,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env16_episode2",
+      "evaluation_step": 2000,
+      "pre_push_tcp_l2_m": null,
+      "post_push_tcp_l2_mean_m": 1.0108014798164369,
+      "post_push_base_speed_error_mean_m_s": 0.6767328661680222,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env17_episode2",
+      "evaluation_step": 2000,
+      "pre_push_tcp_l2_m": null,
+      "post_push_tcp_l2_mean_m": 0.42432252556085587,
+      "post_push_base_speed_error_mean_m_s": 0.43319411396980284,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env18_episode2",
+      "evaluation_step": 2000,
+      "pre_push_tcp_l2_m": null,
+      "post_push_tcp_l2_mean_m": 0.06561808310449123,
+      "post_push_base_speed_error_mean_m_s": 0.4841516038775444,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env19_episode2",
+      "evaluation_step": 2000,
+      "pre_push_tcp_l2_m": null,
+      "post_push_tcp_l2_mean_m": 1.0273302924633025,
+      "post_push_base_speed_error_mean_m_s": 0.3649769401550293,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env20_episode2",
+      "evaluation_step": 2000,
+      "pre_push_tcp_l2_m": null,
+      "post_push_tcp_l2_mean_m": 0.12272442799061536,
+      "post_push_base_speed_error_mean_m_s": 0.4570528495311737,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env21_episode2",
+      "evaluation_step": 2000,
+      "pre_push_tcp_l2_m": null,
+      "post_push_tcp_l2_mean_m": 0.6698906496167183,
+      "post_push_base_speed_error_mean_m_s": 0.5415564787387848,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env22_episode2",
+      "evaluation_step": 2000,
+      "pre_push_tcp_l2_m": null,
+      "post_push_tcp_l2_mean_m": 0.5012808793783188,
+      "post_push_base_speed_error_mean_m_s": 0.39783326029777527,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env23_episode2",
+      "evaluation_step": 2000,
+      "pre_push_tcp_l2_m": null,
+      "post_push_tcp_l2_mean_m": 0.3315371271967888,
+      "post_push_base_speed_error_mean_m_s": 0.20711032509803773,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env24_episode2",
+      "evaluation_step": 2000,
+      "pre_push_tcp_l2_m": null,
+      "post_push_tcp_l2_mean_m": 0.6608964389562607,
+      "post_push_base_speed_error_mean_m_s": 0.5799875617027282,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env25_episode2",
+      "evaluation_step": 2000,
+      "pre_push_tcp_l2_m": null,
+      "post_push_tcp_l2_mean_m": 0.0759085912257433,
+      "post_push_base_speed_error_mean_m_s": 0.4063958433270454,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env26_episode2",
+      "evaluation_step": 2000,
+      "pre_push_tcp_l2_m": null,
+      "post_push_tcp_l2_mean_m": 0.10079253420233726,
+      "post_push_base_speed_error_mean_m_s": 0.39036216124892237,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env27_episode2",
+      "evaluation_step": 2000,
+      "pre_push_tcp_l2_m": null,
+      "post_push_tcp_l2_mean_m": 0.2546468086540699,
+      "post_push_base_speed_error_mean_m_s": 0.32537613943219185,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env28_episode2",
+      "evaluation_step": 2000,
+      "pre_push_tcp_l2_m": null,
+      "post_push_tcp_l2_mean_m": 0.06843939651735127,
+      "post_push_base_speed_error_mean_m_s": 0.19460103958845137,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env29_episode2",
+      "evaluation_step": 2000,
+      "pre_push_tcp_l2_m": null,
+      "post_push_tcp_l2_mean_m": 0.816424640417099,
+      "post_push_base_speed_error_mean_m_s": 0.3896907615661621,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env30_episode2",
+      "evaluation_step": 2000,
+      "pre_push_tcp_l2_m": null,
+      "post_push_tcp_l2_mean_m": 0.07453126664739101,
+      "post_push_base_speed_error_mean_m_s": 0.21447875291109086,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env31_episode2",
+      "evaluation_step": 2000,
+      "pre_push_tcp_l2_m": null,
+      "post_push_tcp_l2_mean_m": 0.3695399474352598,
+      "post_push_base_speed_error_mean_m_s": 0.23133689295500517,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env1_episode2",
+      "evaluation_step": 2400,
+      "pre_push_tcp_l2_m": 0.023158825933933258,
+      "post_push_tcp_l2_mean_m": 0.0320387452095747,
+      "post_push_base_speed_error_mean_m_s": 0.189769314751029,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env3_episode2",
+      "evaluation_step": 2400,
+      "pre_push_tcp_l2_m": 0.016639284789562225,
+      "post_push_tcp_l2_mean_m": 0.016260642637498678,
+      "post_push_base_speed_error_mean_m_s": 0.4137712454795837,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env4_episode2",
+      "evaluation_step": 2400,
+      "pre_push_tcp_l2_m": 0.023768814280629158,
+      "post_push_tcp_l2_mean_m": 0.022618541177362204,
+      "post_push_base_speed_error_mean_m_s": 0.28387006878852844,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env5_episode2",
+      "evaluation_step": 2400,
+      "pre_push_tcp_l2_m": 0.05280779302120209,
+      "post_push_tcp_l2_mean_m": 0.030288046151399614,
+      "post_push_base_speed_error_mean_m_s": 0.31834330916404724,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env8_episode2",
+      "evaluation_step": 2400,
+      "pre_push_tcp_l2_m": 0.013937721960246563,
+      "post_push_tcp_l2_mean_m": 0.0142059266846627,
+      "post_push_base_speed_error_mean_m_s": 0.5290826374292373,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env9_episode2",
+      "evaluation_step": 2400,
+      "pre_push_tcp_l2_m": 0.08449947088956833,
+      "post_push_tcp_l2_mean_m": 0.06721614621579647,
+      "post_push_base_speed_error_mean_m_s": 0.1662110124528408,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env10_episode2",
+      "evaluation_step": 2400,
+      "pre_push_tcp_l2_m": 0.029943764209747314,
+      "post_push_tcp_l2_mean_m": 0.0349595233798027,
+      "post_push_base_speed_error_mean_m_s": 0.5623755049705506,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env12_episode2",
+      "evaluation_step": 2400,
+      "pre_push_tcp_l2_m": 0.03192202001810074,
+      "post_push_tcp_l2_mean_m": 0.03189439672976732,
+      "post_push_base_speed_error_mean_m_s": 0.4328550803661346,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env14_episode2",
+      "evaluation_step": 2400,
+      "pre_push_tcp_l2_m": 0.047535527497529984,
+      "post_push_tcp_l2_mean_m": 0.035927079655230044,
+      "post_push_base_speed_error_mean_m_s": 0.2798036703467369,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env15_episode2",
+      "evaluation_step": 2400,
+      "pre_push_tcp_l2_m": 0.014080296270549297,
+      "post_push_tcp_l2_mean_m": 0.030079654064029456,
+      "post_push_base_speed_error_mean_m_s": 0.25432020872831346,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env16_episode2",
+      "evaluation_step": 2400,
+      "pre_push_tcp_l2_m": 0.013162233866751194,
+      "post_push_tcp_l2_mean_m": 0.018341931020841,
+      "post_push_base_speed_error_mean_m_s": 0.3331958791613579,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env17_episode2",
+      "evaluation_step": 2400,
+      "pre_push_tcp_l2_m": 0.019040683284401894,
+      "post_push_tcp_l2_mean_m": 0.03155558660626411,
+      "post_push_base_speed_error_mean_m_s": 0.39236964225769044,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env18_episode2",
+      "evaluation_step": 2400,
+      "pre_push_tcp_l2_m": 0.025426296517252922,
+      "post_push_tcp_l2_mean_m": 0.025936977937817574,
+      "post_push_base_speed_error_mean_m_s": 0.5249508559703827,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env19_episode2",
+      "evaluation_step": 2400,
+      "pre_push_tcp_l2_m": 0.015284969471395016,
+      "post_push_tcp_l2_mean_m": 0.02657123016193509,
+      "post_push_base_speed_error_mean_m_s": 0.4353828078508377,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env20_episode2",
+      "evaluation_step": 2400,
+      "pre_push_tcp_l2_m": 0.02516157552599907,
+      "post_push_tcp_l2_mean_m": 0.025073084942996503,
+      "post_push_base_speed_error_mean_m_s": 0.47773404121398927,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env21_episode2",
+      "evaluation_step": 2400,
+      "pre_push_tcp_l2_m": 0.015257141552865505,
+      "post_push_tcp_l2_mean_m": 0.04403247070498764,
+      "post_push_base_speed_error_mean_m_s": 0.2851057642698288,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env22_episode2",
+      "evaluation_step": 2400,
+      "pre_push_tcp_l2_m": 0.049907051026821136,
+      "post_push_tcp_l2_mean_m": 0.04382868973538279,
+      "post_push_base_speed_error_mean_m_s": 0.2716643274575472,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env23_episode2",
+      "evaluation_step": 2400,
+      "pre_push_tcp_l2_m": 0.01624733954668045,
+      "post_push_tcp_l2_mean_m": 0.015085333329625427,
+      "post_push_base_speed_error_mean_m_s": 0.48734836995601655,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env24_episode2",
+      "evaluation_step": 2400,
+      "pre_push_tcp_l2_m": 0.017760924994945526,
+      "post_push_tcp_l2_mean_m": 0.01628145929425955,
+      "post_push_base_speed_error_mean_m_s": 0.361668096780777,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env25_episode2",
+      "evaluation_step": 2400,
+      "pre_push_tcp_l2_m": 0.006628428120166063,
+      "post_push_tcp_l2_mean_m": 0.01864698932506144,
+      "post_push_base_speed_error_mean_m_s": 0.10742234453558921,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env26_episode2",
+      "evaluation_step": 2400,
+      "pre_push_tcp_l2_m": 0.03487899899482727,
+      "post_push_tcp_l2_mean_m": 0.03965237159281969,
+      "post_push_base_speed_error_mean_m_s": 0.5356923842430115,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env27_episode2",
+      "evaluation_step": 2400,
+      "pre_push_tcp_l2_m": 0.014687021262943745,
+      "post_push_tcp_l2_mean_m": 0.01815509014762938,
+      "post_push_base_speed_error_mean_m_s": 0.347201389670372,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env28_episode2",
+      "evaluation_step": 2400,
+      "pre_push_tcp_l2_m": 0.03810644894838333,
+      "post_push_tcp_l2_mean_m": 0.02134712646715343,
+      "post_push_base_speed_error_mean_m_s": 0.49284491181373596,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env30_episode2",
+      "evaluation_step": 2400,
+      "pre_push_tcp_l2_m": 0.006141841411590576,
+      "post_push_tcp_l2_mean_m": 0.019160186946392058,
+      "post_push_base_speed_error_mean_m_s": 0.6303966736793518,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env31_episode2",
+      "evaluation_step": 2400,
+      "pre_push_tcp_l2_m": 0.01154526136815548,
+      "post_push_tcp_l2_mean_m": 0.01296204057522118,
+      "post_push_base_speed_error_mean_m_s": 0.39223130166530606,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env1_episode2",
+      "evaluation_step": 2800,
+      "pre_push_tcp_l2_m": 0.020756395533680916,
+      "post_push_tcp_l2_mean_m": 0.012806550436653196,
+      "post_push_base_speed_error_mean_m_s": 0.3671642363071442,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env3_episode2",
+      "evaluation_step": 2800,
+      "pre_push_tcp_l2_m": 0.026520494371652603,
+      "post_push_tcp_l2_mean_m": 0.02250653548166156,
+      "post_push_base_speed_error_mean_m_s": 0.49486918926239015,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env4_episode2",
+      "evaluation_step": 2800,
+      "pre_push_tcp_l2_m": 0.013178462162613869,
+      "post_push_tcp_l2_mean_m": 0.02458523839712143,
+      "post_push_base_speed_error_mean_m_s": 0.6611812901496887,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env5_episode2",
+      "evaluation_step": 2800,
+      "pre_push_tcp_l2_m": 0.0577329657971859,
+      "post_push_tcp_l2_mean_m": 0.03940515771508217,
+      "post_push_base_speed_error_mean_m_s": 0.6090253663063049,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env8_episode2",
+      "evaluation_step": 2800,
+      "pre_push_tcp_l2_m": 0.019431088119745255,
+      "post_push_tcp_l2_mean_m": 0.025483919735997916,
+      "post_push_base_speed_error_mean_m_s": 0.525632808804512,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env9_episode2",
+      "evaluation_step": 2800,
+      "pre_push_tcp_l2_m": 0.031884126365184784,
+      "post_push_tcp_l2_mean_m": 0.024417982380837203,
+      "post_push_base_speed_error_mean_m_s": 0.4141478854417801,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env10_episode2",
+      "evaluation_step": 2800,
+      "pre_push_tcp_l2_m": 0.01878226175904274,
+      "post_push_tcp_l2_mean_m": 0.020326836938038467,
+      "post_push_base_speed_error_mean_m_s": 0.49713469207286837,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env12_episode2",
+      "evaluation_step": 2800,
+      "pre_push_tcp_l2_m": 0.02362920343875885,
+      "post_push_tcp_l2_mean_m": 0.021535734636709093,
+      "post_push_base_speed_error_mean_m_s": 0.21629009827971457,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env14_episode2",
+      "evaluation_step": 2800,
+      "pre_push_tcp_l2_m": 0.02644939534366131,
+      "post_push_tcp_l2_mean_m": 0.018017154857516288,
+      "post_push_base_speed_error_mean_m_s": 0.2059667119383812,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env15_episode2",
+      "evaluation_step": 2800,
+      "pre_push_tcp_l2_m": 0.015720020979642868,
+      "post_push_tcp_l2_mean_m": 0.01416664082556963,
+      "post_push_base_speed_error_mean_m_s": 0.6197260713577271,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env16_episode2",
+      "evaluation_step": 2800,
+      "pre_push_tcp_l2_m": 0.02759874053299427,
+      "post_push_tcp_l2_mean_m": 0.03360319156199694,
+      "post_push_base_speed_error_mean_m_s": 0.36977804481983184,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env17_episode2",
+      "evaluation_step": 2800,
+      "pre_push_tcp_l2_m": 0.020079702138900757,
+      "post_push_tcp_l2_mean_m": 0.025050619468092918,
+      "post_push_base_speed_error_mean_m_s": 0.23498084247112275,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env18_episode2",
+      "evaluation_step": 2800,
+      "pre_push_tcp_l2_m": 0.030532673001289368,
+      "post_push_tcp_l2_mean_m": 0.0215276420628652,
+      "post_push_base_speed_error_mean_m_s": 0.2547568890452385,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env19_episode2",
+      "evaluation_step": 2800,
+      "pre_push_tcp_l2_m": 0.020235689356923103,
+      "post_push_tcp_l2_mean_m": 0.03306599570438266,
+      "post_push_base_speed_error_mean_m_s": 0.2756305593252182,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env20_episode2",
+      "evaluation_step": 2800,
+      "pre_push_tcp_l2_m": 0.030746351927518845,
+      "post_push_tcp_l2_mean_m": 0.023723737392574547,
+      "post_push_base_speed_error_mean_m_s": 0.5217316544055939,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env21_episode2",
+      "evaluation_step": 2800,
+      "pre_push_tcp_l2_m": 0.021208640187978745,
+      "post_push_tcp_l2_mean_m": 0.01855255613103509,
+      "post_push_base_speed_error_mean_m_s": 0.12919279582798482,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env22_episode2",
+      "evaluation_step": 2800,
+      "pre_push_tcp_l2_m": 0.0190834179520607,
+      "post_push_tcp_l2_mean_m": 0.021138014094904064,
+      "post_push_base_speed_error_mean_m_s": 0.25277029395103456,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env23_episode2",
+      "evaluation_step": 2800,
+      "pre_push_tcp_l2_m": 0.018444105982780457,
+      "post_push_tcp_l2_mean_m": 0.016447118259966375,
+      "post_push_base_speed_error_mean_m_s": 0.5876647210121155,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env24_episode2",
+      "evaluation_step": 2800,
+      "pre_push_tcp_l2_m": 0.00977665651589632,
+      "post_push_tcp_l2_mean_m": 0.010479643670842052,
+      "post_push_base_speed_error_mean_m_s": 0.13693286441266536,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env25_episode2",
+      "evaluation_step": 2800,
+      "pre_push_tcp_l2_m": 0.046468235552310944,
+      "post_push_tcp_l2_mean_m": 0.03193867502734065,
+      "post_push_base_speed_error_mean_m_s": 0.3671312373876572,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env26_episode2",
+      "evaluation_step": 2800,
+      "pre_push_tcp_l2_m": 0.03524991497397423,
+      "post_push_tcp_l2_mean_m": 0.03345267415046692,
+      "post_push_base_speed_error_mean_m_s": 0.60517785936594,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env27_episode2",
+      "evaluation_step": 2800,
+      "pre_push_tcp_l2_m": 0.007834255695343018,
+      "post_push_tcp_l2_mean_m": 0.01078799020498991,
+      "post_push_base_speed_error_mean_m_s": 0.4453621703386307,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env28_episode2",
+      "evaluation_step": 2800,
+      "pre_push_tcp_l2_m": 0.04856440797448158,
+      "post_push_tcp_l2_mean_m": 0.04045959774404764,
+      "post_push_base_speed_error_mean_m_s": 0.6869695746898651,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env30_episode2",
+      "evaluation_step": 2800,
+      "pre_push_tcp_l2_m": 0.03536166250705719,
+      "post_push_tcp_l2_mean_m": 0.02640044841915369,
+      "post_push_base_speed_error_mean_m_s": 0.3025715363025665,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env31_episode2",
+      "evaluation_step": 2800,
+      "pre_push_tcp_l2_m": 0.02483510598540306,
+      "post_push_tcp_l2_mean_m": 0.01854635287541896,
+      "post_push_base_speed_error_mean_m_s": 0.5867870771884918,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env2_episode0",
+      "evaluation_step": 400,
+      "pre_push_tcp_l2_m": 0.028100434690713882,
+      "post_push_tcp_l2_mean_m": 0.048283206742434276,
+      "post_push_base_speed_error_mean_m_s": 0.36399183244932265,
+      "window_policy_steps": 21
+    },
+    {
+      "scenario_id": "S2_seed1001_env0_episode2",
+      "evaluation_step": 2000,
+      "pre_push_tcp_l2_m": null,
+      "post_push_tcp_l2_mean_m": 2.1381282806396484,
+      "post_push_base_speed_error_mean_m_s": 0.5475298821926117,
+      "window_policy_steps": 5
+    },
+    {
+      "scenario_id": "S2_seed1001_env7_episode2",
+      "evaluation_step": 2000,
+      "pre_push_tcp_l2_m": null,
+      "post_push_tcp_l2_mean_m": 0.4740176498889923,
+      "post_push_base_speed_error_mean_m_s": 0.7074286639690399,
+      "window_policy_steps": 4
+    },
+    {
+      "scenario_id": "S2_seed1001_env13_episode2",
+      "evaluation_step": 2000,
+      "pre_push_tcp_l2_m": null,
+      "post_push_tcp_l2_mean_m": 0.9699908409799848,
+      "post_push_base_speed_error_mean_m_s": 0.6464464621884483,
+      "window_policy_steps": 7
+    }
+  ],
+  "paper_comparison_scope": {
+    "fig_3b": "V3逐维TCP球坐标与底盘速度估计误差分布；单位见维度标签",
+    "fig_3b_limit": "资产、目标分布和环境协议不同；不重建论文未公开的原始数据点",
+    "fig_3c_fig_3d": "受力仿真与实机结果不属于本A阶段评估"
+  },
+  "evidence_complete": true,
+  "assessment": "ungraded_or_incomplete",
+  "evaluation_device": "cuda:0",
+  "evaluation_environment_count": 32,
+  "evaluation_seed": 1001,
+  "push_seed": 2001,
+  "policy_updates": 0,
+  "checkpoint_sha256": "afa062c97b6090bad076d2888ee9f39ef5c2dc3958c624485450f8c2f8b45eef"
+}

@@ -1,0 +1,47 @@
+Importing module 'gym_38' (/home/sorry/.cache/unifp/isaacgym_preview4/pkg/isaacgym/python/isaacgym/_bindings/linux-x86_64/gym_38.so)
+Setting GYM_USD_PLUG_INFO_PATH to /home/sorry/.cache/unifp/isaacgym_preview4/pkg/isaacgym/python/isaacgym/_bindings/linux-x86_64/usd/plugInfo.json
+F                                                                        [100%]
+=================================== FAILURES ===================================
+____ test_contact_world_script_keeps_target_fixed_and_rotates_command_once _____
+
+    def test_contact_world_script_keeps_target_fixed_and_rotates_command_once() -> None:
+        """Keep an absolute target after base translation/yaw and release by 18 s.
+    
+        Raises:
+            AssertionError: The goal follows the base, force is double-rotated, or
+                the 0 N control uses a different geometric trajectory.
+        """
+        from test_v3_force_transitions import make_step_environment
+    
+        environment = make_step_environment()
+        environment.__class__ = V3ContactEvaluation
+        environment.contact_reference_world = torch.tensor([[.63, 0., .78], [.63, 0., .78]])
+        environment.contact_start_world = torch.tensor([[.4, 0., .7], [.4, 0., .7]])
+        environment.contact_target_world = environment.contact_start_world.clone()
+        environment.contact_peak_n = torch.tensor([10., 20.])
+        environment.episode_length_buf.fill_(400)  # 8 s plateau.
+        environment.root_states[:, :2] = torch.tensor([.2, -.1])
+        environment.rpy[:, 2] = torch.pi / 2
+        environment._advance_task_commands(torch.arange(2))
+>       torch.testing.assert_close(environment._geometric_target_world(), environment.contact_reference_world)
+E       AssertionError: Tensor-likes are not close!
+E       
+E       Mismatched elements: 6 / 6 (100.0%)
+E       Greatest absolute difference: 0.4315030872821808 at index (1, 0) (up to 1e-05 allowed)
+E       Greatest relative difference: inf at index (0, 1) (up to 1.3e-06 allowed)
+
+tests/test_v3_contact_evaluation.py:142: AssertionError
+=============================== warnings summary ===============================
+../../../../.cache/unifp/isaacgym_preview4/pkg/isaacgym/python/isaacgym/torch_utils.py:135
+  /home/sorry/.cache/unifp/isaacgym_preview4/pkg/isaacgym/python/isaacgym/torch_utils.py:135: DeprecationWarning: `np.float` is a deprecated alias for the builtin `float`. To silence this warning, use `float` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.float64` here.
+  Deprecated in NumPy 1.20; for more details and guidance: https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+    def get_axis_params(value, axis_idx, x_value=0., dtype=np.float, n_dims=3):
+
+../../../../.cache/unifp/isaacgym_preview4/py38/lib/python3.8/site-packages/wandb/analytics/sentry.py:90
+  /home/sorry/.cache/unifp/isaacgym_preview4/py38/lib/python3.8/site-packages/wandb/analytics/sentry.py:90: SentryHubDeprecationWarning: `sentry_sdk.Hub` is deprecated and will be removed in a future major release. Please consult our 1.x to 2.x migration guide for details on how to migrate `Hub` usage to the new API: https://docs.sentry.io/platforms/python/migration/1.x-to-2.x
+    self.hub = sentry_sdk.Hub(client)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED tests/test_v3_contact_evaluation.py::test_contact_world_script_keeps_target_fixed_and_rotates_command_once
+1 failed, 2 warnings in 1.82s

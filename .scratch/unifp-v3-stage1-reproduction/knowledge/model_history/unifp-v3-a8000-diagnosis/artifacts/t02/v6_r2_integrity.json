@@ -1,0 +1,7 @@
+{
+  "source_mesh_count": 188,
+  "source_hash_mismatches": [],
+  "candidate_changed_mesh_count": 64,
+  "only_rolling_tire_meshes_changed": true,
+  "urdf_bytes_equal": true
+}

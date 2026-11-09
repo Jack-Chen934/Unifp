@@ -1,0 +1,89 @@
+Importing module 'gym_38' (/home/sorry/.cache/unifp/isaacgym_preview4/pkg/isaacgym/python/isaacgym/_bindings/linux-x86_64/gym_38.so)
+Setting GYM_USD_PLUG_INFO_PATH to /home/sorry/.cache/unifp/isaacgym_preview4/pkg/isaacgym/python/isaacgym/_bindings/linux-x86_64/usd/plugInfo.json
+FF                                                                       [100%]
+=================================== FAILURES ===================================
+___ test_contact_groups_use_fresh_processes_and_preserve_original_arguments ____
+
+tmp_path = PosixPath('/tmp/pytest-of-sorry/pytest-0/test_contact_groups_use_fresh_0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x70e79cb19c40>
+
+    def test_contact_groups_use_fresh_processes_and_preserve_original_arguments(tmp_path: Path, monkeypatch: Any) -> None:
+        """Retain complete quotas and video flags while isolating native lifetimes.
+    
+        Args:
+            tmp_path: Writable parent archive owned by this test.
+            monkeypatch: Fixture replacing only subprocess execution.
+    
+        Raises:
+            AssertionError: Either scene is omitted, shares a process or loses flags.
+        """
+        arguments = ["--output_dir", str(tmp_path), "--num_envs", "32", "--video",
+                     "--seed", "1001", "--protocol", "fixed_wall_contact"]
+        calls: List[List[str]] = []
+    
+        def evaluate(command: List[str], **kwargs: Any) -> None:
+            """Publish a sealed child archive without starting the native SDK.
+    
+            Args:
+                command: Real single-scenario CLI including unchanged video/quota flags.
+                **kwargs: Standard subprocess check options.
+            """
+            calls.append(command)
+            output = Path(command[command.index("--output_dir") + 1])
+            name = command[command.index("--scenario") + 1]
+            (output / name).mkdir(parents=True)
+            (output / name / "summary.json").write_text(json.dumps({"policy_updates": 0, "assessment": name}))
+    
+>       monkeypatch.setattr(entry.subprocess, "run", evaluate)
+E       AttributeError: module 'legged_gym.scripts.evaluate_v3_contact' has no attribute 'subprocess'
+
+tests/test_v3_contact_processes.py:39: AttributeError
+__________ test_contact_groups_propagate_native_failure_without_retry __________
+
+tmp_path = PosixPath('/tmp/pytest-of-sorry/pytest-0/test_contact_groups_propagate_0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x70e79cac2640>
+
+    def test_contact_groups_propagate_native_failure_without_retry(tmp_path: Path, monkeypatch: Any) -> None:
+        """Stop once a native child fails, retaining its logs and completed archives.
+    
+        Args:
+            tmp_path: New parent archive with no prior successful child.
+            monkeypatch: Fixture injecting a real subprocess failure at the SDK seam.
+    
+        Raises:
+            AssertionError: A failing scene is hidden or automatically retried.
+        """
+        calls: List[List[str]] = []
+    
+        def fail(command: List[str], **kwargs: Any) -> None:
+            """Raise the native process failure without publishing a fake summary.
+    
+            Args:
+                command: Requested scene command.
+                **kwargs: Original subprocess launch options.
+    
+            Raises:
+                subprocess.CalledProcessError: Injected segmentation fault exit status.
+            """
+            calls.append(command)
+            raise subprocess.CalledProcessError(-11, command)
+    
+>       monkeypatch.setattr(entry.subprocess, "run", fail)
+E       AttributeError: module 'legged_gym.scripts.evaluate_v3_contact' has no attribute 'subprocess'
+
+tests/test_v3_contact_processes.py:76: AttributeError
+=============================== warnings summary ===============================
+../../../../.cache/unifp/isaacgym_preview4/pkg/isaacgym/python/isaacgym/torch_utils.py:135
+  /home/sorry/.cache/unifp/isaacgym_preview4/pkg/isaacgym/python/isaacgym/torch_utils.py:135: DeprecationWarning: `np.float` is a deprecated alias for the builtin `float`. To silence this warning, use `float` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.float64` here.
+  Deprecated in NumPy 1.20; for more details and guidance: https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+    def get_axis_params(value, axis_idx, x_value=0., dtype=np.float, n_dims=3):
+
+../../../../.cache/unifp/isaacgym_preview4/py38/lib/python3.8/site-packages/wandb/analytics/sentry.py:90
+  /home/sorry/.cache/unifp/isaacgym_preview4/py38/lib/python3.8/site-packages/wandb/analytics/sentry.py:90: SentryHubDeprecationWarning: `sentry_sdk.Hub` is deprecated and will be removed in a future major release. Please consult our 1.x to 2.x migration guide for details on how to migrate `Hub` usage to the new API: https://docs.sentry.io/platforms/python/migration/1.x-to-2.x
+    self.hub = sentry_sdk.Hub(client)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED tests/test_v3_contact_processes.py::test_contact_groups_use_fresh_processes_and_preserve_original_arguments
+FAILED tests/test_v3_contact_processes.py::test_contact_groups_propagate_native_failure_without_retry
+2 failed, 2 warnings in 2.61s

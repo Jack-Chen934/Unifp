@@ -1,0 +1,37 @@
+{
+  "formal_training_started": true,
+  "pid": 546497,
+  "started_at": "2026-11-04T23:11:46+08:00",
+  "run_root": "/mnt/data_8THDD/myl_unifp_v3_stage1/runs/a8000_seed1_v3_v6r2_20261104",
+  "completed_iterations_at_check": 3,
+  "last_iteration": {
+    "completed_iterations": 3,
+    "training_policy_steps": 72,
+    "training_transitions": 294912,
+    "simulated_time_per_environment_s": 1.4399999678134918,
+    "collection_s": 8.337406715378165,
+    "update_s": 0.6360473758541048,
+    "value_loss": 0.09947131834924221,
+    "surrogate_loss": -0.018770097168453504,
+    "auxiliary_loss": 0.031810371484607455,
+    "main_learning_rate": 0.0010000000000000002,
+    "auxiliary/base_velocity_loss": 0.0007954401546157897,
+    "auxiliary/tcp_position_loss": 0.020544965844601394,
+    "auxiliary/force_ee_loss": 0.004544379049912095,
+    "auxiliary/force_base_loss": 0.005925585841760039,
+    "episode/episode_count": 0
+  },
+  "checks": {
+    "identity": true,
+    "source_asset_hashes_unchanged": true,
+    "counts": true,
+    "finite_metrics": true,
+    "no_failure_file": true,
+    "from_scratch": true,
+    "gpu1": true,
+    "independent_session": true,
+    "no_missing_interactions": true
+  },
+  "passed": true,
+  "reproduction_a_accepted": false
+}

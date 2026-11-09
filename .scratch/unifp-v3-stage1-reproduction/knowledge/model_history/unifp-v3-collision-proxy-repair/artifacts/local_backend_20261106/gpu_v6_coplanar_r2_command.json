@@ -1,0 +1,18 @@
+{
+  "command": [
+    "/home/sorry/.cache/unifp/isaacgym_preview4/py38/bin/python",
+    "/home/sorry/python_ws/interactive/unifp_reproduction/.scratch/unifp-v3-collision-proxy-repair/knowledge/probe_native_backend.py",
+    "--source-root",
+    "/home/sorry/python_ws/interactive/unifp_reproduction/UniFP_v3",
+    "--asset",
+    "/home/sorry/python_ws/interactive/unifp_reproduction/UniFP_v3/resources/robots/v3_a1_desktop_train_v6_coplanar_r2/urdf/a1arm_rgm3_desktop_fixed_gripper.urdf",
+    "--backend",
+    "gpu",
+    "--pose",
+    "before",
+    "--filters",
+    "--output",
+    "/home/sorry/python_ws/interactive/unifp_reproduction/.scratch/unifp-v3-collision-proxy-repair/artifacts/local_backend_20261106/gpu_v6_coplanar_r2.json"
+  ],
+  "returncode": 0
+}

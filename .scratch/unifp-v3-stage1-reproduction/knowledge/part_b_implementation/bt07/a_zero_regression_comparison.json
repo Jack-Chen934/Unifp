@@ -1,0 +1,2448 @@
+{
+  "status": "passed",
+  "policy_updates": 0,
+  "scenarios": {
+    "S0": {
+      "archive": "/mnt/data_8THDD/myl_unifp_v3_stage1/validation/b_stage_20261107_r01/a_zero_S0_r02_sealed/S0",
+      "all_archive_hashes_verified": true,
+      "archive_manifest_sha256": "2725358abe6c883cab3dfa1b2811a3e6577af1d2f738346e3b9a730f8bd2f49a",
+      "summary": {
+        "scenario_name": "S0",
+        "checkpoint_iteration": 8000,
+        "trace_policy_steps": 96000,
+        "episodes": {
+          "completed": 96,
+          "expected": 96,
+          "completion_rate": 1.0,
+          "physical_failures": 0,
+          "timeouts": 96,
+          "failure_denominator": 96,
+          "physical_failure_rate": 0.0
+        },
+        "metrics": {
+          "tcp_geometric_l1_m": {
+            "mean": 0.031191079262954495,
+            "p95": 0.0708491027355194,
+            "sample_count": 96000
+          },
+          "tcp_geometric_l2_m": {
+            "mean": 0.020612114150951735,
+            "p95": 0.04610478356480599,
+            "sample_count": 96000
+          },
+          "base_planar_speed_m_s": {
+            "mean": 0.011016632864670138,
+            "p95": 0.03307197820395232,
+            "sample_count": 96000
+          },
+          "base_yaw_rate_rad_s": {
+            "mean": 0.014903031618166243,
+            "p95": 0.05080984234809879,
+            "sample_count": 96000
+          },
+          "episode_reward_return": {
+            "mean": 127.4205032189687,
+            "p95": 128.0298080444336,
+            "sample_count": 96
+          },
+          "episode_reward_rate": {
+            "mean": 6.371025303351948,
+            "p95": 6.401490545306143,
+            "sample_count": 96
+          },
+          "state_estimation_base_velocity_tcp_mae_rmse": {
+            "mae_by_dimension": [
+              0.009471475675443767,
+              0.0066898243429499,
+              0.0017484226596264838,
+              0.00727138097739468,
+              0.007798696066487021,
+              0.010813372921301181
+            ],
+            "rmse_by_dimension": [
+              0.012169850685903687,
+              0.009394005688845637,
+              0.002723324062179949,
+              0.009366541647911297,
+              0.010201880001138598,
+              0.014023871952082488
+            ],
+            "dimensions": [
+              "base_vx_m_s",
+              "base_vy_m_s",
+              "base_vz_m_s",
+              "tcp_radius_m",
+              "tcp_elevation_rad",
+              "tcp_azimuth_rad"
+            ]
+          },
+          "state_estimation/base_vx_m_s_mae": {
+            "mean": 0.009471475675443767
+          },
+          "state_estimation/base_vx_m_s_rmse": {
+            "mean": 0.012169850685903687
+          },
+          "state_estimation/base_vy_m_s_mae": {
+            "mean": 0.0066898243429499
+          },
+          "state_estimation/base_vy_m_s_rmse": {
+            "mean": 0.009394005688845637
+          },
+          "state_estimation/base_vz_m_s_mae": {
+            "mean": 0.0017484226596264838
+          },
+          "state_estimation/base_vz_m_s_rmse": {
+            "mean": 0.002723324062179949
+          },
+          "state_estimation/tcp_radius_m_mae": {
+            "mean": 0.00727138097739468
+          },
+          "state_estimation/tcp_radius_m_rmse": {
+            "mean": 0.009366541647911297
+          },
+          "state_estimation/tcp_elevation_rad_mae": {
+            "mean": 0.007798696066487021
+          },
+          "state_estimation/tcp_elevation_rad_rmse": {
+            "mean": 0.010201880001138598
+          },
+          "state_estimation/tcp_azimuth_rad_mae": {
+            "mean": 0.010813372921301181
+          },
+          "state_estimation/tcp_azimuth_rad_rmse": {
+            "mean": 0.014023871952082488
+          },
+          "physical_failure_rate": {
+            "mean": 0.0
+          },
+          "target_movement_phase_elapsed_rate": {
+            "mean": 0.3608645833333333,
+            "sample_count": 96000
+          }
+        },
+        "threshold_version": "v3-a-initial-v1",
+        "threshold_results": {
+          "tcp_geometric_l2_m": true,
+          "tcp_geometric_l1_m": true,
+          "base_planar_speed_m_s": true,
+          "base_yaw_rate_rad_s": true,
+          "physical_failure_rate": true,
+          "state_estimation/base_vx_m_s_mae": true,
+          "state_estimation/base_vy_m_s_mae": true,
+          "state_estimation/base_vz_m_s_mae": true,
+          "state_estimation/tcp_radius_m_mae": true,
+          "state_estimation/tcp_elevation_rad_mae": true,
+          "state_estimation/tcp_azimuth_rad_mae": true
+        },
+        "push_recovery_windows": [],
+        "paper_comparison_scope": {
+          "fig_3b": "V3\u9010\u7ef4TCP\u7403\u5750\u6807\u4e0e\u5e95\u76d8\u901f\u5ea6\u4f30\u8ba1\u8bef\u5dee\u5206\u5e03\uff1b\u5355\u4f4d\u89c1\u7ef4\u5ea6\u6807\u7b7e",
+          "fig_3b_limit": "\u8d44\u4ea7\u3001\u76ee\u6807\u5206\u5e03\u548c\u73af\u5883\u534f\u8bae\u4e0d\u540c\uff1b\u4e0d\u91cd\u5efa\u8bba\u6587\u672a\u516c\u5f00\u7684\u539f\u59cb\u6570\u636e\u70b9",
+          "fig_3c_fig_3d": "\u53d7\u529b\u4eff\u771f\u4e0e\u5b9e\u673a\u7ed3\u679c\u4e0d\u5c5e\u4e8e\u672cA\u9636\u6bb5\u8bc4\u4f30"
+        },
+        "evidence_complete": true,
+        "assessment": "pass",
+        "evaluation_device": "cuda:0",
+        "evaluation_environment_count": 32,
+        "evaluation_seed": 1001,
+        "push_seed": 2001,
+        "policy_updates": 0,
+        "evaluation_runtime": {
+          "python": "3.8.20",
+          "torch": "2.3.1+cu121",
+          "device": "cuda:0",
+          "gym_import_path": "/mnt/data_8THDD/myl_unifp/isaacgym/python/isaacgym/__init__.py",
+          "sim_device": "cuda:0",
+          "physx_use_gpu": true,
+          "use_gpu_pipeline": true
+        },
+        "checkpoint_sha256": "323a6688fe42559db1d0c545b778b456551ce0ac472f8169fec5ebce2d849dbc",
+        "protocol": "zero_force_regression",
+        "smoke": false,
+        "source_compatibility": {
+          "allowed_source_changes": [
+            "legged_gym/b2_gym_learn/ppo_cse_pf/v3_evaluation.py",
+            "legged_gym/b2_gym_learn/ppo_cse_pf/v3_on_policy_runner.py",
+            "legged_gym/b2_gym_learn/ppo_cse_pf/v3_run_identity.py",
+            "legged_gym/envs/v3/legged_robot_v3.py",
+            "legged_gym/envs/v3/v3_contact_evaluation.py",
+            "legged_gym/envs/v3/v3_force_evaluation.py",
+            "legged_gym/envs/v3/v3_pos_force_config.py",
+            "legged_gym/scripts/evaluate_v3.py",
+            "legged_gym/scripts/evaluate_v3_contact.py",
+            "legged_gym/scripts/train_v3.py",
+            "legged_gym/scripts/v3_args.py",
+            "legged_gym/utils/v3_config.py"
+          ],
+          "source_reproduction_part": "A"
+        },
+        "source_completed_iterations": 8000,
+        "source_reproduction_part": "A",
+        "effective_quota": {
+          "num_envs": 32,
+          "episodes_per_env": 3
+        },
+        "a8000_comparison": {
+          "available": false,
+          "\u539f\u56e0": "\u672a\u63d0\u4f9b\u540c\u534f\u8baeA8000\u53c2\u8003\u5f52\u6863"
+        }
+      },
+      "mean_deltas_from_historical_a8000": {
+        "tcp_geometric_l1_m": 0.0,
+        "tcp_geometric_l2_m": 0.0,
+        "base_planar_speed_m_s": 0.0,
+        "base_yaw_rate_rad_s": 0.0,
+        "episode_reward_return": 0.0,
+        "episode_reward_rate": 0.0,
+        "state_estimation/base_vx_m_s_mae": 0.0,
+        "state_estimation/base_vx_m_s_rmse": 0.0,
+        "state_estimation/base_vy_m_s_mae": 0.0,
+        "state_estimation/base_vy_m_s_rmse": 0.0,
+        "state_estimation/base_vz_m_s_mae": 0.0,
+        "state_estimation/base_vz_m_s_rmse": 0.0,
+        "state_estimation/tcp_radius_m_mae": 0.0,
+        "state_estimation/tcp_radius_m_rmse": 0.0,
+        "state_estimation/tcp_elevation_rad_mae": 0.0,
+        "state_estimation/tcp_elevation_rad_rmse": 0.0,
+        "state_estimation/tcp_azimuth_rad_mae": 0.0,
+        "state_estimation/tcp_azimuth_rad_rmse": 0.0,
+        "physical_failure_rate": 0.0,
+        "target_movement_phase_elapsed_rate": 0.0
+      },
+      "physical_failure_rate_delta": 0.0
+    },
+    "S1": {
+      "archive": "/mnt/data_8THDD/myl_unifp_v3_stage1/validation/b_stage_20261107_r01/a_zero_S1_r03/S1",
+      "all_archive_hashes_verified": true,
+      "archive_manifest_sha256": "9253a7a025ba4a236c4ec11e5bd92f73a437f0716cdb198f207e0f404c9aa529",
+      "summary": {
+        "scenario_name": "S1",
+        "checkpoint_iteration": 8000,
+        "trace_policy_steps": 96000,
+        "episodes": {
+          "completed": 96,
+          "expected": 96,
+          "completion_rate": 1.0,
+          "physical_failures": 0,
+          "timeouts": 96,
+          "failure_denominator": 96,
+          "physical_failure_rate": 0.0
+        },
+        "metrics": {
+          "tcp_geometric_l1_m": {
+            "mean": 0.03150335574522614,
+            "p95": 0.06929353773593903,
+            "sample_count": 96000
+          },
+          "tcp_geometric_l2_m": {
+            "mean": 0.02094735014438144,
+            "p95": 0.045585493370890656,
+            "sample_count": 96000
+          },
+          "base_planar_speed_m_s": {
+            "mean": 0.055414725009857495,
+            "p95": 0.1611770458519459,
+            "sample_count": 96000
+          },
+          "base_yaw_rate_rad_s": {
+            "mean": 0.06335857077489103,
+            "p95": 0.17696105986833596,
+            "sample_count": 96000
+          },
+          "episode_reward_return": {
+            "mean": 125.53375601768494,
+            "p95": 126.75805854797363,
+            "sample_count": 96
+          },
+          "episode_reward_rate": {
+            "mean": 6.276687941179155,
+            "p95": 6.337903069061854,
+            "sample_count": 96
+          },
+          "state_estimation_base_velocity_tcp_mae_rmse": {
+            "mae_by_dimension": [
+              0.016079132413591934,
+              0.015035499045763517,
+              0.012017483096483976,
+              0.007309371146994333,
+              0.008189163557164762,
+              0.009833904660816213
+            ],
+            "rmse_by_dimension": [
+              0.02142128788946565,
+              0.019538959215570924,
+              0.016079711028907043,
+              0.009600740604260256,
+              0.010512194851747174,
+              0.013034486727659455
+            ],
+            "dimensions": [
+              "base_vx_m_s",
+              "base_vy_m_s",
+              "base_vz_m_s",
+              "tcp_radius_m",
+              "tcp_elevation_rad",
+              "tcp_azimuth_rad"
+            ]
+          },
+          "state_estimation/base_vx_m_s_mae": {
+            "mean": 0.016079132413591934
+          },
+          "state_estimation/base_vx_m_s_rmse": {
+            "mean": 0.02142128788946565
+          },
+          "state_estimation/base_vy_m_s_mae": {
+            "mean": 0.015035499045763517
+          },
+          "state_estimation/base_vy_m_s_rmse": {
+            "mean": 0.019538959215570924
+          },
+          "state_estimation/base_vz_m_s_mae": {
+            "mean": 0.012017483096483976
+          },
+          "state_estimation/base_vz_m_s_rmse": {
+            "mean": 0.016079711028907043
+          },
+          "state_estimation/tcp_radius_m_mae": {
+            "mean": 0.007309371146994333
+          },
+          "state_estimation/tcp_radius_m_rmse": {
+            "mean": 0.009600740604260256
+          },
+          "state_estimation/tcp_elevation_rad_mae": {
+            "mean": 0.008189163557164762
+          },
+          "state_estimation/tcp_elevation_rad_rmse": {
+            "mean": 0.010512194851747174
+          },
+          "state_estimation/tcp_azimuth_rad_mae": {
+            "mean": 0.009833904660816213
+          },
+          "state_estimation/tcp_azimuth_rad_rmse": {
+            "mean": 0.013034486727659455
+          },
+          "physical_failure_rate": {
+            "mean": 0.0
+          },
+          "target_movement_phase_elapsed_rate": {
+            "mean": 0.3608645833333333,
+            "sample_count": 96000
+          }
+        },
+        "threshold_version": "v3-a-initial-v1",
+        "threshold_results": {
+          "tcp_geometric_l2_m": true,
+          "tcp_geometric_l1_m": true,
+          "base_planar_speed_m_s": true,
+          "base_yaw_rate_rad_s": true,
+          "physical_failure_rate": true,
+          "state_estimation/base_vx_m_s_mae": true,
+          "state_estimation/base_vy_m_s_mae": true,
+          "state_estimation/base_vz_m_s_mae": true,
+          "state_estimation/tcp_radius_m_mae": true,
+          "state_estimation/tcp_elevation_rad_mae": true,
+          "state_estimation/tcp_azimuth_rad_mae": true
+        },
+        "push_recovery_windows": [],
+        "paper_comparison_scope": {
+          "fig_3b": "V3\u9010\u7ef4TCP\u7403\u5750\u6807\u4e0e\u5e95\u76d8\u901f\u5ea6\u4f30\u8ba1\u8bef\u5dee\u5206\u5e03\uff1b\u5355\u4f4d\u89c1\u7ef4\u5ea6\u6807\u7b7e",
+          "fig_3b_limit": "\u8d44\u4ea7\u3001\u76ee\u6807\u5206\u5e03\u548c\u73af\u5883\u534f\u8bae\u4e0d\u540c\uff1b\u4e0d\u91cd\u5efa\u8bba\u6587\u672a\u516c\u5f00\u7684\u539f\u59cb\u6570\u636e\u70b9",
+          "fig_3c_fig_3d": "\u53d7\u529b\u4eff\u771f\u4e0e\u5b9e\u673a\u7ed3\u679c\u4e0d\u5c5e\u4e8e\u672cA\u9636\u6bb5\u8bc4\u4f30"
+        },
+        "evidence_complete": true,
+        "assessment": "pass",
+        "evaluation_device": "cuda:0",
+        "evaluation_environment_count": 32,
+        "evaluation_seed": 1001,
+        "push_seed": 2001,
+        "policy_updates": 0,
+        "evaluation_runtime": {
+          "python": "3.8.20",
+          "torch": "2.3.1+cu121",
+          "device": "cuda:0",
+          "gym_import_path": "/mnt/data_8THDD/myl_unifp/isaacgym/python/isaacgym/__init__.py",
+          "sim_device": "cuda:0",
+          "physx_use_gpu": true,
+          "use_gpu_pipeline": true
+        },
+        "checkpoint_sha256": "323a6688fe42559db1d0c545b778b456551ce0ac472f8169fec5ebce2d849dbc",
+        "protocol": "zero_force_regression",
+        "smoke": false,
+        "source_compatibility": {
+          "allowed_source_changes": [
+            "legged_gym/b2_gym_learn/ppo_cse_pf/v3_evaluation.py",
+            "legged_gym/b2_gym_learn/ppo_cse_pf/v3_on_policy_runner.py",
+            "legged_gym/b2_gym_learn/ppo_cse_pf/v3_run_identity.py",
+            "legged_gym/envs/v3/legged_robot_v3.py",
+            "legged_gym/envs/v3/v3_contact_evaluation.py",
+            "legged_gym/envs/v3/v3_force_evaluation.py",
+            "legged_gym/envs/v3/v3_pos_force_config.py",
+            "legged_gym/scripts/evaluate_v3.py",
+            "legged_gym/scripts/evaluate_v3_contact.py",
+            "legged_gym/scripts/train_v3.py",
+            "legged_gym/scripts/v3_args.py",
+            "legged_gym/utils/v3_config.py"
+          ],
+          "source_reproduction_part": "A"
+        },
+        "source_completed_iterations": 8000,
+        "source_reproduction_part": "A",
+        "effective_quota": {
+          "num_envs": 32,
+          "episodes_per_env": 3
+        },
+        "a8000_comparison": {
+          "available": false,
+          "\u539f\u56e0": "\u672a\u63d0\u4f9b\u540c\u534f\u8baeA8000\u53c2\u8003\u5f52\u6863"
+        }
+      },
+      "mean_deltas_from_historical_a8000": {
+        "tcp_geometric_l1_m": 0.0,
+        "tcp_geometric_l2_m": 0.0,
+        "base_planar_speed_m_s": 0.0,
+        "base_yaw_rate_rad_s": 0.0,
+        "episode_reward_return": 0.0,
+        "episode_reward_rate": 0.0,
+        "state_estimation/base_vx_m_s_mae": 0.0,
+        "state_estimation/base_vx_m_s_rmse": 0.0,
+        "state_estimation/base_vy_m_s_mae": 0.0,
+        "state_estimation/base_vy_m_s_rmse": 0.0,
+        "state_estimation/base_vz_m_s_mae": 0.0,
+        "state_estimation/base_vz_m_s_rmse": 0.0,
+        "state_estimation/tcp_radius_m_mae": 0.0,
+        "state_estimation/tcp_radius_m_rmse": 0.0,
+        "state_estimation/tcp_elevation_rad_mae": 0.0,
+        "state_estimation/tcp_elevation_rad_rmse": 0.0,
+        "state_estimation/tcp_azimuth_rad_mae": 0.0,
+        "state_estimation/tcp_azimuth_rad_rmse": 0.0,
+        "physical_failure_rate": 0.0,
+        "target_movement_phase_elapsed_rate": 0.0
+      },
+      "physical_failure_rate_delta": 0.0
+    },
+    "S2": {
+      "archive": "/mnt/data_8THDD/myl_unifp_v3_stage1/validation/b_stage_20261107_r01/a_zero_S2_r03/S2",
+      "all_archive_hashes_verified": true,
+      "archive_manifest_sha256": "96b9d7b0809497fcb56b8d09965a1cb8289bfc2bb3d010d565b99c88f52d76a0",
+      "summary": {
+        "scenario_name": "S2",
+        "checkpoint_iteration": 8000,
+        "trace_policy_steps": 96000,
+        "episodes": {
+          "completed": 96,
+          "expected": 96,
+          "completion_rate": 1.0,
+          "physical_failures": 0,
+          "timeouts": 96,
+          "failure_denominator": 96,
+          "physical_failure_rate": 0.0
+        },
+        "metrics": {
+          "tcp_geometric_l1_m": {
+            "mean": 0.034228663047911445,
+            "p95": 0.0777904272079468,
+            "sample_count": 96000
+          },
+          "tcp_geometric_l2_m": {
+            "mean": 0.022721704121276463,
+            "p95": 0.05081743560731412,
+            "sample_count": 96000
+          },
+          "base_planar_speed_m_s": {
+            "mean": 0.06011807956321983,
+            "p95": 0.18140563815832145,
+            "sample_count": 96000
+          },
+          "base_yaw_rate_rad_s": {
+            "mean": 0.0652485492364364,
+            "p95": 0.18608936965465547,
+            "sample_count": 96000
+          },
+          "episode_reward_return": {
+            "mean": 125.07602755228679,
+            "p95": 126.35258483886719,
+            "sample_count": 96
+          },
+          "episode_reward_rate": {
+            "mean": 6.253801517397696,
+            "p95": 6.31762938315338,
+            "sample_count": 96
+          },
+          "state_estimation_base_velocity_tcp_mae_rmse": {
+            "mae_by_dimension": [
+              0.01997000881917429,
+              0.01765378392358523,
+              0.012595417174822718,
+              0.007698753870713214,
+              0.008464099014984882,
+              0.011081371281918453
+            ],
+            "rmse_by_dimension": [
+              0.045975643100742924,
+              0.03633319720830024,
+              0.018356664901653146,
+              0.010174541154304552,
+              0.010979721372231382,
+              0.01579520405049666
+            ],
+            "dimensions": [
+              "base_vx_m_s",
+              "base_vy_m_s",
+              "base_vz_m_s",
+              "tcp_radius_m",
+              "tcp_elevation_rad",
+              "tcp_azimuth_rad"
+            ]
+          },
+          "state_estimation/base_vx_m_s_mae": {
+            "mean": 0.01997000881917429
+          },
+          "state_estimation/base_vx_m_s_rmse": {
+            "mean": 0.045975643100742924
+          },
+          "state_estimation/base_vy_m_s_mae": {
+            "mean": 0.01765378392358523
+          },
+          "state_estimation/base_vy_m_s_rmse": {
+            "mean": 0.03633319720830024
+          },
+          "state_estimation/base_vz_m_s_mae": {
+            "mean": 0.012595417174822718
+          },
+          "state_estimation/base_vz_m_s_rmse": {
+            "mean": 0.018356664901653146
+          },
+          "state_estimation/tcp_radius_m_mae": {
+            "mean": 0.007698753870713214
+          },
+          "state_estimation/tcp_radius_m_rmse": {
+            "mean": 0.010174541154304552
+          },
+          "state_estimation/tcp_elevation_rad_mae": {
+            "mean": 0.008464099014984882
+          },
+          "state_estimation/tcp_elevation_rad_rmse": {
+            "mean": 0.010979721372231382
+          },
+          "state_estimation/tcp_azimuth_rad_mae": {
+            "mean": 0.011081371281918453
+          },
+          "state_estimation/tcp_azimuth_rad_rmse": {
+            "mean": 0.01579520405049666
+          },
+          "push_recovery_tcp_l2_m": {
+            "mean": 0.03222237698484865,
+            "window_count": 224
+          },
+          "push_recovery_base_speed_error_m_s": {
+            "mean": 0.09026688843377738,
+            "window_count": 224
+          },
+          "physical_failure_rate": {
+            "mean": 0.0
+          },
+          "target_movement_phase_elapsed_rate": {
+            "mean": 0.3608645833333333,
+            "sample_count": 96000
+          }
+        },
+        "threshold_version": "v3-a-initial-v1",
+        "threshold_results": {
+          "tcp_geometric_l2_m": true,
+          "tcp_geometric_l1_m": true,
+          "base_planar_speed_m_s": true,
+          "base_yaw_rate_rad_s": true,
+          "physical_failure_rate": true,
+          "state_estimation/base_vx_m_s_mae": true,
+          "state_estimation/base_vy_m_s_mae": true,
+          "state_estimation/base_vz_m_s_mae": true,
+          "state_estimation/tcp_radius_m_mae": true,
+          "state_estimation/tcp_elevation_rad_mae": true,
+          "state_estimation/tcp_azimuth_rad_mae": true,
+          "push_recovery_tcp_l2_m": true,
+          "push_recovery_base_speed_error_m_s": true
+        },
+        "push_recovery_windows": [
+          {
+            "scenario_id": "S2_seed1001_env0_episode0",
+            "evaluation_step": 400,
+            "pre_push_tcp_l2_m": 0.009276061318814754,
+            "post_push_tcp_l2_mean_m": 0.03182935507502407,
+            "post_push_base_speed_error_mean_m_s": 0.2021000201907009,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env1_episode0",
+            "evaluation_step": 400,
+            "pre_push_tcp_l2_m": 0.01995502971112728,
+            "post_push_tcp_l2_mean_m": 0.05921837255358696,
+            "post_push_base_speed_error_mean_m_s": 0.07016041580587626,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env2_episode0",
+            "evaluation_step": 400,
+            "pre_push_tcp_l2_m": 0.007395886350423098,
+            "post_push_tcp_l2_mean_m": 0.026517915818840266,
+            "post_push_base_speed_error_mean_m_s": 0.1558282510191202,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env3_episode0",
+            "evaluation_step": 400,
+            "pre_push_tcp_l2_m": 0.03312772884964943,
+            "post_push_tcp_l2_mean_m": 0.0448927946947515,
+            "post_push_base_speed_error_mean_m_s": 0.06075359479524195,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env4_episode0",
+            "evaluation_step": 400,
+            "pre_push_tcp_l2_m": 0.0070603215135633945,
+            "post_push_tcp_l2_mean_m": 0.03705318557098508,
+            "post_push_base_speed_error_mean_m_s": 0.10193097855430096,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env5_episode0",
+            "evaluation_step": 400,
+            "pre_push_tcp_l2_m": 0.039452534168958664,
+            "post_push_tcp_l2_mean_m": 0.0353859618678689,
+            "post_push_base_speed_error_mean_m_s": 0.1301544551551342,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env6_episode0",
+            "evaluation_step": 400,
+            "pre_push_tcp_l2_m": 0.01708218641579151,
+            "post_push_tcp_l2_mean_m": 0.015156656969338655,
+            "post_push_base_speed_error_mean_m_s": 0.055695742703974246,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env7_episode0",
+            "evaluation_step": 400,
+            "pre_push_tcp_l2_m": 0.027859074994921684,
+            "post_push_tcp_l2_mean_m": 0.020018252953886987,
+            "post_push_base_speed_error_mean_m_s": 0.08268188683316112,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env8_episode0",
+            "evaluation_step": 400,
+            "pre_push_tcp_l2_m": 0.004121291451156139,
+            "post_push_tcp_l2_mean_m": 0.00793106643948704,
+            "post_push_base_speed_error_mean_m_s": 0.06680467396508902,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env9_episode0",
+            "evaluation_step": 400,
+            "pre_push_tcp_l2_m": 0.02973729744553566,
+            "post_push_tcp_l2_mean_m": 0.12270394809544087,
+            "post_push_base_speed_error_mean_m_s": 0.09445999481715261,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env10_episode0",
+            "evaluation_step": 400,
+            "pre_push_tcp_l2_m": 0.025006592273712158,
+            "post_push_tcp_l2_mean_m": 0.04006196776404977,
+            "post_push_base_speed_error_mean_m_s": 0.20184539757668973,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env11_episode0",
+            "evaluation_step": 400,
+            "pre_push_tcp_l2_m": 0.006356232333928347,
+            "post_push_tcp_l2_mean_m": 0.014533839216455817,
+            "post_push_base_speed_error_mean_m_s": 0.03223386004567146,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env12_episode0",
+            "evaluation_step": 400,
+            "pre_push_tcp_l2_m": 0.022529149428009987,
+            "post_push_tcp_l2_mean_m": 0.09797546880319714,
+            "post_push_base_speed_error_mean_m_s": 0.1124846692290157,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env13_episode0",
+            "evaluation_step": 400,
+            "pre_push_tcp_l2_m": 0.01117776706814766,
+            "post_push_tcp_l2_mean_m": 0.013647420145571233,
+            "post_push_base_speed_error_mean_m_s": 0.0294908288680017,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env14_episode0",
+            "evaluation_step": 400,
+            "pre_push_tcp_l2_m": 0.01779259368777275,
+            "post_push_tcp_l2_mean_m": 0.03652570640668273,
+            "post_push_base_speed_error_mean_m_s": 0.19992881370708346,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env15_episode0",
+            "evaluation_step": 400,
+            "pre_push_tcp_l2_m": 0.008927291259169579,
+            "post_push_tcp_l2_mean_m": 0.02164934400934726,
+            "post_push_base_speed_error_mean_m_s": 0.05962425072677433,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env16_episode0",
+            "evaluation_step": 400,
+            "pre_push_tcp_l2_m": 0.01920998841524124,
+            "post_push_tcp_l2_mean_m": 0.06473570585250854,
+            "post_push_base_speed_error_mean_m_s": 0.09366496885195374,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env17_episode0",
+            "evaluation_step": 400,
+            "pre_push_tcp_l2_m": 0.010451005771756172,
+            "post_push_tcp_l2_mean_m": 0.01814265487715602,
+            "post_push_base_speed_error_mean_m_s": 0.09072320086881519,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env18_episode0",
+            "evaluation_step": 400,
+            "pre_push_tcp_l2_m": 0.014713302254676819,
+            "post_push_tcp_l2_mean_m": 0.01945258978754282,
+            "post_push_base_speed_error_mean_m_s": 0.037694246205501256,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env19_episode0",
+            "evaluation_step": 400,
+            "pre_push_tcp_l2_m": 0.020866233855485916,
+            "post_push_tcp_l2_mean_m": 0.016837427138816564,
+            "post_push_base_speed_error_mean_m_s": 0.06612656015902757,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env20_episode0",
+            "evaluation_step": 400,
+            "pre_push_tcp_l2_m": 0.010146957822144032,
+            "post_push_tcp_l2_mean_m": 0.0373300657607615,
+            "post_push_base_speed_error_mean_m_s": 0.18479458324611187,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env21_episode0",
+            "evaluation_step": 400,
+            "pre_push_tcp_l2_m": 0.03568575903773308,
+            "post_push_tcp_l2_mean_m": 0.043453667927533385,
+            "post_push_base_speed_error_mean_m_s": 0.06566838494036346,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env22_episode0",
+            "evaluation_step": 400,
+            "pre_push_tcp_l2_m": 0.018072543665766716,
+            "post_push_tcp_l2_mean_m": 0.022184245698153974,
+            "post_push_base_speed_error_mean_m_s": 0.05559592965990305,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env23_episode0",
+            "evaluation_step": 400,
+            "pre_push_tcp_l2_m": 0.023922787979245186,
+            "post_push_tcp_l2_mean_m": 0.03275456741452217,
+            "post_push_base_speed_error_mean_m_s": 0.06889261006377638,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env24_episode0",
+            "evaluation_step": 400,
+            "pre_push_tcp_l2_m": 0.028633803129196167,
+            "post_push_tcp_l2_mean_m": 0.03788013093173504,
+            "post_push_base_speed_error_mean_m_s": 0.10669999787583948,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env25_episode0",
+            "evaluation_step": 400,
+            "pre_push_tcp_l2_m": 0.008301417343318462,
+            "post_push_tcp_l2_mean_m": 0.019560943003743888,
+            "post_push_base_speed_error_mean_m_s": 0.13775896411389113,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env26_episode0",
+            "evaluation_step": 400,
+            "pre_push_tcp_l2_m": 0.011626668274402618,
+            "post_push_tcp_l2_mean_m": 0.018893019631505012,
+            "post_push_base_speed_error_mean_m_s": 0.03824720903299749,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env27_episode0",
+            "evaluation_step": 400,
+            "pre_push_tcp_l2_m": 0.024454519152641296,
+            "post_push_tcp_l2_mean_m": 0.015940578551962972,
+            "post_push_base_speed_error_mean_m_s": 0.04851452106609941,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env28_episode0",
+            "evaluation_step": 400,
+            "pre_push_tcp_l2_m": 0.01906895637512207,
+            "post_push_tcp_l2_mean_m": 0.03855759649537504,
+            "post_push_base_speed_error_mean_m_s": 0.061053038835525514,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env29_episode0",
+            "evaluation_step": 400,
+            "pre_push_tcp_l2_m": 0.029520170763134956,
+            "post_push_tcp_l2_mean_m": 0.03060735361650586,
+            "post_push_base_speed_error_mean_m_s": 0.07449348583817482,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env30_episode0",
+            "evaluation_step": 400,
+            "pre_push_tcp_l2_m": 0.019222116097807884,
+            "post_push_tcp_l2_mean_m": 0.04159831613302231,
+            "post_push_base_speed_error_mean_m_s": 0.05710820700973272,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env31_episode0",
+            "evaluation_step": 400,
+            "pre_push_tcp_l2_m": 0.02354016713798046,
+            "post_push_tcp_l2_mean_m": 0.038682401403784754,
+            "post_push_base_speed_error_mean_m_s": 0.05800467340741307,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env0_episode0",
+            "evaluation_step": 800,
+            "pre_push_tcp_l2_m": 0.027596207335591316,
+            "post_push_tcp_l2_mean_m": 0.014547312622889877,
+            "post_push_base_speed_error_mean_m_s": 0.037030417900532485,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env1_episode0",
+            "evaluation_step": 800,
+            "pre_push_tcp_l2_m": 0.01401086151599884,
+            "post_push_tcp_l2_mean_m": 0.025801196498796343,
+            "post_push_base_speed_error_mean_m_s": 0.08847495097666978,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env2_episode0",
+            "evaluation_step": 800,
+            "pre_push_tcp_l2_m": 0.01971631869673729,
+            "post_push_tcp_l2_mean_m": 0.02240198872052133,
+            "post_push_base_speed_error_mean_m_s": 0.058151906873099506,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env3_episode0",
+            "evaluation_step": 800,
+            "pre_push_tcp_l2_m": 0.0209208894520998,
+            "post_push_tcp_l2_mean_m": 0.028957795295864345,
+            "post_push_base_speed_error_mean_m_s": 0.028833519569598138,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env4_episode0",
+            "evaluation_step": 800,
+            "pre_push_tcp_l2_m": 0.017703810706734657,
+            "post_push_tcp_l2_mean_m": 0.018120625372976065,
+            "post_push_base_speed_error_mean_m_s": 0.09072966963052749,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env5_episode0",
+            "evaluation_step": 800,
+            "pre_push_tcp_l2_m": 0.01535614114254713,
+            "post_push_tcp_l2_mean_m": 0.030230714427307247,
+            "post_push_base_speed_error_mean_m_s": 0.03805709166219458,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env6_episode0",
+            "evaluation_step": 800,
+            "pre_push_tcp_l2_m": 0.010552250780165195,
+            "post_push_tcp_l2_mean_m": 0.025862312875688076,
+            "post_push_base_speed_error_mean_m_s": 0.14323888704180718,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env7_episode0",
+            "evaluation_step": 800,
+            "pre_push_tcp_l2_m": 0.0078048622235655785,
+            "post_push_tcp_l2_mean_m": 0.016045215325430035,
+            "post_push_base_speed_error_mean_m_s": 0.09784420616924763,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env8_episode0",
+            "evaluation_step": 800,
+            "pre_push_tcp_l2_m": 0.013427596539258957,
+            "post_push_tcp_l2_mean_m": 0.019577363096177577,
+            "post_push_base_speed_error_mean_m_s": 0.06138633240014315,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env9_episode0",
+            "evaluation_step": 800,
+            "pre_push_tcp_l2_m": 0.032693564891815186,
+            "post_push_tcp_l2_mean_m": 0.039683591723442074,
+            "post_push_base_speed_error_mean_m_s": 0.060420123115181926,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env10_episode0",
+            "evaluation_step": 800,
+            "pre_push_tcp_l2_m": 0.01421014592051506,
+            "post_push_tcp_l2_mean_m": 0.0335274978261441,
+            "post_push_base_speed_error_mean_m_s": 0.03226154991891235,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env11_episode0",
+            "evaluation_step": 800,
+            "pre_push_tcp_l2_m": 0.010668870061635971,
+            "post_push_tcp_l2_mean_m": 0.024637070703320205,
+            "post_push_base_speed_error_mean_m_s": 0.05204991662874818,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env12_episode0",
+            "evaluation_step": 800,
+            "pre_push_tcp_l2_m": 0.014982454478740692,
+            "post_push_tcp_l2_mean_m": 0.028797952532768248,
+            "post_push_base_speed_error_mean_m_s": 0.1362995995208621,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env13_episode0",
+            "evaluation_step": 800,
+            "pre_push_tcp_l2_m": 0.021967409178614616,
+            "post_push_tcp_l2_mean_m": 0.020554755348712206,
+            "post_push_base_speed_error_mean_m_s": 0.07735187403392046,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env14_episode0",
+            "evaluation_step": 800,
+            "pre_push_tcp_l2_m": 0.03802906721830368,
+            "post_push_tcp_l2_mean_m": 0.026856415281072257,
+            "post_push_base_speed_error_mean_m_s": 0.10838442843407392,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env15_episode0",
+            "evaluation_step": 800,
+            "pre_push_tcp_l2_m": 0.015392211265861988,
+            "post_push_tcp_l2_mean_m": 0.021084127388894557,
+            "post_push_base_speed_error_mean_m_s": 0.1227897848188877,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env16_episode0",
+            "evaluation_step": 800,
+            "pre_push_tcp_l2_m": 0.011713147163391113,
+            "post_push_tcp_l2_mean_m": 0.01471475200727582,
+            "post_push_base_speed_error_mean_m_s": 0.060170911438763144,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env17_episode0",
+            "evaluation_step": 800,
+            "pre_push_tcp_l2_m": 0.011931381188333035,
+            "post_push_tcp_l2_mean_m": 0.024401602323632688,
+            "post_push_base_speed_error_mean_m_s": 0.08599065087735652,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env18_episode0",
+            "evaluation_step": 800,
+            "pre_push_tcp_l2_m": 0.021502785384655,
+            "post_push_tcp_l2_mean_m": 0.020126223238185047,
+            "post_push_base_speed_error_mean_m_s": 0.07304262593388558,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env19_episode0",
+            "evaluation_step": 800,
+            "pre_push_tcp_l2_m": 0.009843448176980019,
+            "post_push_tcp_l2_mean_m": 0.020275656790472565,
+            "post_push_base_speed_error_mean_m_s": 0.119220340102911,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env20_episode0",
+            "evaluation_step": 800,
+            "pre_push_tcp_l2_m": 0.09848765283823013,
+            "post_push_tcp_l2_mean_m": 0.027067995388060807,
+            "post_push_base_speed_error_mean_m_s": 0.09314329538494348,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env21_episode0",
+            "evaluation_step": 800,
+            "pre_push_tcp_l2_m": 0.02844787761569023,
+            "post_push_tcp_l2_mean_m": 0.041251239078119395,
+            "post_push_base_speed_error_mean_m_s": 0.06732814151793719,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env22_episode0",
+            "evaluation_step": 800,
+            "pre_push_tcp_l2_m": 0.026721950620412827,
+            "post_push_tcp_l2_mean_m": 0.04840893387794495,
+            "post_push_base_speed_error_mean_m_s": 0.18249438524246217,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env23_episode0",
+            "evaluation_step": 800,
+            "pre_push_tcp_l2_m": 0.0417691133916378,
+            "post_push_tcp_l2_mean_m": 0.055182568281888965,
+            "post_push_base_speed_error_mean_m_s": 0.19608650252223014,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env24_episode0",
+            "evaluation_step": 800,
+            "pre_push_tcp_l2_m": 0.018925700336694717,
+            "post_push_tcp_l2_mean_m": 0.031116777174174784,
+            "post_push_base_speed_error_mean_m_s": 0.03241515527945012,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env25_episode0",
+            "evaluation_step": 800,
+            "pre_push_tcp_l2_m": 0.00686523737385869,
+            "post_push_tcp_l2_mean_m": 0.013393614436499774,
+            "post_push_base_speed_error_mean_m_s": 0.026652038972824813,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env26_episode0",
+            "evaluation_step": 800,
+            "pre_push_tcp_l2_m": 0.003521131817251444,
+            "post_push_tcp_l2_mean_m": 0.032159857815131546,
+            "post_push_base_speed_error_mean_m_s": 0.08193401368334889,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env27_episode0",
+            "evaluation_step": 800,
+            "pre_push_tcp_l2_m": 0.010076531209051609,
+            "post_push_tcp_l2_mean_m": 0.020626232605427505,
+            "post_push_base_speed_error_mean_m_s": 0.05027206070255488,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env28_episode0",
+            "evaluation_step": 800,
+            "pre_push_tcp_l2_m": 0.02234448306262493,
+            "post_push_tcp_l2_mean_m": 0.021797444745898245,
+            "post_push_base_speed_error_mean_m_s": 0.09625569939613342,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env29_episode0",
+            "evaluation_step": 800,
+            "pre_push_tcp_l2_m": 0.017318181693553925,
+            "post_push_tcp_l2_mean_m": 0.04515383629128337,
+            "post_push_base_speed_error_mean_m_s": 0.07770866304636001,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env30_episode0",
+            "evaluation_step": 800,
+            "pre_push_tcp_l2_m": 0.04446849226951599,
+            "post_push_tcp_l2_mean_m": 0.03050784509629011,
+            "post_push_base_speed_error_mean_m_s": 0.03427375747822225,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env31_episode0",
+            "evaluation_step": 800,
+            "pre_push_tcp_l2_m": 0.034404903650283813,
+            "post_push_tcp_l2_mean_m": 0.027112460434436797,
+            "post_push_base_speed_error_mean_m_s": 0.12886816152371466,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env0_episode1",
+            "evaluation_step": 1200,
+            "pre_push_tcp_l2_m": 0.030630268156528473,
+            "post_push_tcp_l2_mean_m": 0.026484621064737437,
+            "post_push_base_speed_error_mean_m_s": 0.07436695344746112,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env1_episode1",
+            "evaluation_step": 1200,
+            "pre_push_tcp_l2_m": 0.01953626610338688,
+            "post_push_tcp_l2_mean_m": 0.0158405518066138,
+            "post_push_base_speed_error_mean_m_s": 0.05015418105758727,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env2_episode1",
+            "evaluation_step": 1200,
+            "pre_push_tcp_l2_m": 0.015845494344830513,
+            "post_push_tcp_l2_mean_m": 0.025835855510085822,
+            "post_push_base_speed_error_mean_m_s": 0.06546167656779289,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env3_episode1",
+            "evaluation_step": 1200,
+            "pre_push_tcp_l2_m": 0.01102500595152378,
+            "post_push_tcp_l2_mean_m": 0.03394948864355683,
+            "post_push_base_speed_error_mean_m_s": 0.07755180506035686,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env4_episode1",
+            "evaluation_step": 1200,
+            "pre_push_tcp_l2_m": 0.018125144764780998,
+            "post_push_tcp_l2_mean_m": 0.029698463417589666,
+            "post_push_base_speed_error_mean_m_s": 0.07592747961170972,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env5_episode1",
+            "evaluation_step": 1200,
+            "pre_push_tcp_l2_m": 0.014530186541378498,
+            "post_push_tcp_l2_mean_m": 0.05544042216613889,
+            "post_push_base_speed_error_mean_m_s": 0.11119708267040551,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env6_episode1",
+            "evaluation_step": 1200,
+            "pre_push_tcp_l2_m": 0.009022886864840984,
+            "post_push_tcp_l2_mean_m": 0.010961751616559923,
+            "post_push_base_speed_error_mean_m_s": 0.05806561762467027,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env7_episode1",
+            "evaluation_step": 1200,
+            "pre_push_tcp_l2_m": 0.020870031788945198,
+            "post_push_tcp_l2_mean_m": 0.03710310688242316,
+            "post_push_base_speed_error_mean_m_s": 0.1098015908151865,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env8_episode1",
+            "evaluation_step": 1200,
+            "pre_push_tcp_l2_m": 0.009366793558001518,
+            "post_push_tcp_l2_mean_m": 0.02296565191820264,
+            "post_push_base_speed_error_mean_m_s": 0.035549307549372314,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env9_episode1",
+            "evaluation_step": 1200,
+            "pre_push_tcp_l2_m": 0.054399069398641586,
+            "post_push_tcp_l2_mean_m": 0.06812850071117282,
+            "post_push_base_speed_error_mean_m_s": 0.1468312594294548,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env10_episode1",
+            "evaluation_step": 1200,
+            "pre_push_tcp_l2_m": 0.008008276112377644,
+            "post_push_tcp_l2_mean_m": 0.02657824504189193,
+            "post_push_base_speed_error_mean_m_s": 0.04748678612522781,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env11_episode1",
+            "evaluation_step": 1200,
+            "pre_push_tcp_l2_m": 0.007389293983578682,
+            "post_push_tcp_l2_mean_m": 0.05987905171699822,
+            "post_push_base_speed_error_mean_m_s": 0.13356357017997653,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env12_episode1",
+            "evaluation_step": 1200,
+            "pre_push_tcp_l2_m": 0.020840264856815338,
+            "post_push_tcp_l2_mean_m": 0.03058408560231328,
+            "post_push_base_speed_error_mean_m_s": 0.04066707811318338,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env13_episode1",
+            "evaluation_step": 1200,
+            "pre_push_tcp_l2_m": 0.012584423646330833,
+            "post_push_tcp_l2_mean_m": 0.01732945578172803,
+            "post_push_base_speed_error_mean_m_s": 0.04705986646935344,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env14_episode1",
+            "evaluation_step": 1200,
+            "pre_push_tcp_l2_m": 0.009842568077147007,
+            "post_push_tcp_l2_mean_m": 0.023471732111647724,
+            "post_push_base_speed_error_mean_m_s": 0.0844727935642004,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env15_episode1",
+            "evaluation_step": 1200,
+            "pre_push_tcp_l2_m": 0.025312231853604317,
+            "post_push_tcp_l2_mean_m": 0.027146595176309348,
+            "post_push_base_speed_error_mean_m_s": 0.05383439428289421,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env16_episode1",
+            "evaluation_step": 1200,
+            "pre_push_tcp_l2_m": 0.012240001000463963,
+            "post_push_tcp_l2_mean_m": 0.035612861700356005,
+            "post_push_base_speed_error_mean_m_s": 0.09493251724168658,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env17_episode1",
+            "evaluation_step": 1200,
+            "pre_push_tcp_l2_m": 0.023267585784196854,
+            "post_push_tcp_l2_mean_m": 0.026333742877468466,
+            "post_push_base_speed_error_mean_m_s": 0.07362966855987907,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env18_episode1",
+            "evaluation_step": 1200,
+            "pre_push_tcp_l2_m": 0.01418235246092081,
+            "post_push_tcp_l2_mean_m": 0.03456883998587727,
+            "post_push_base_speed_error_mean_m_s": 0.07597053866833449,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env19_episode1",
+            "evaluation_step": 1200,
+            "pre_push_tcp_l2_m": 0.02547445148229599,
+            "post_push_tcp_l2_mean_m": 0.04904613317921758,
+            "post_push_base_speed_error_mean_m_s": 0.14546975910663604,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env20_episode1",
+            "evaluation_step": 1200,
+            "pre_push_tcp_l2_m": 0.014932764694094658,
+            "post_push_tcp_l2_mean_m": 0.01471447958610952,
+            "post_push_base_speed_error_mean_m_s": 0.06226965906098485,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env21_episode1",
+            "evaluation_step": 1200,
+            "pre_push_tcp_l2_m": 0.007095262873917818,
+            "post_push_tcp_l2_mean_m": 0.02067138652317226,
+            "post_push_base_speed_error_mean_m_s": 0.04467017685994506,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env22_episode1",
+            "evaluation_step": 1200,
+            "pre_push_tcp_l2_m": 0.012419017031788826,
+            "post_push_tcp_l2_mean_m": 0.0768254279717803,
+            "post_push_base_speed_error_mean_m_s": 0.07883588921278716,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env23_episode1",
+            "evaluation_step": 1200,
+            "pre_push_tcp_l2_m": 0.020638391375541687,
+            "post_push_tcp_l2_mean_m": 0.016555604580789803,
+            "post_push_base_speed_error_mean_m_s": 0.07714004017412662,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env24_episode1",
+            "evaluation_step": 1200,
+            "pre_push_tcp_l2_m": 0.007196849677711725,
+            "post_push_tcp_l2_mean_m": 0.02189396619796753,
+            "post_push_base_speed_error_mean_m_s": 0.07228548710234463,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env25_episode1",
+            "evaluation_step": 1200,
+            "pre_push_tcp_l2_m": 0.013171873055398464,
+            "post_push_tcp_l2_mean_m": 0.013640758953988552,
+            "post_push_base_speed_error_mean_m_s": 0.025514302009250967,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env26_episode1",
+            "evaluation_step": 1200,
+            "pre_push_tcp_l2_m": 0.029378313571214676,
+            "post_push_tcp_l2_mean_m": 0.05423001684248448,
+            "post_push_base_speed_error_mean_m_s": 0.05718852214515209,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env27_episode1",
+            "evaluation_step": 1200,
+            "pre_push_tcp_l2_m": 0.006711177062243223,
+            "post_push_tcp_l2_mean_m": 0.04730619669891894,
+            "post_push_base_speed_error_mean_m_s": 0.1138831122405827,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env28_episode1",
+            "evaluation_step": 1200,
+            "pre_push_tcp_l2_m": 0.016036350280046463,
+            "post_push_tcp_l2_mean_m": 0.026351600904017686,
+            "post_push_base_speed_error_mean_m_s": 0.124228709442541,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env29_episode1",
+            "evaluation_step": 1200,
+            "pre_push_tcp_l2_m": 0.042922493070364,
+            "post_push_tcp_l2_mean_m": 0.10453801199793816,
+            "post_push_base_speed_error_mean_m_s": 0.09529269322752952,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env30_episode1",
+            "evaluation_step": 1200,
+            "pre_push_tcp_l2_m": 0.015820052474737167,
+            "post_push_tcp_l2_mean_m": 0.023018527645617723,
+            "post_push_base_speed_error_mean_m_s": 0.04794996650889516,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env31_episode1",
+            "evaluation_step": 1200,
+            "pre_push_tcp_l2_m": 0.01996801048517227,
+            "post_push_tcp_l2_mean_m": 0.025707464441657068,
+            "post_push_base_speed_error_mean_m_s": 0.03405064872931689,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env0_episode1",
+            "evaluation_step": 1600,
+            "pre_push_tcp_l2_m": 0.011529154144227505,
+            "post_push_tcp_l2_mean_m": 0.013470394155010581,
+            "post_push_base_speed_error_mean_m_s": 0.15932739512994887,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env1_episode1",
+            "evaluation_step": 1600,
+            "pre_push_tcp_l2_m": 0.020378347486257553,
+            "post_push_tcp_l2_mean_m": 0.019382744352333246,
+            "post_push_base_speed_error_mean_m_s": 0.05977443963289261,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env2_episode1",
+            "evaluation_step": 1600,
+            "pre_push_tcp_l2_m": 0.054093025624752045,
+            "post_push_tcp_l2_mean_m": 0.053954413663595914,
+            "post_push_base_speed_error_mean_m_s": 0.15298614712897687,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env3_episode1",
+            "evaluation_step": 1600,
+            "pre_push_tcp_l2_m": 0.011742609553039074,
+            "post_push_tcp_l2_mean_m": 0.02962153548374772,
+            "post_push_base_speed_error_mean_m_s": 0.11124145366251469,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env4_episode1",
+            "evaluation_step": 1600,
+            "pre_push_tcp_l2_m": 0.008454800583422184,
+            "post_push_tcp_l2_mean_m": 0.016906155636534095,
+            "post_push_base_speed_error_mean_m_s": 0.04037616616114974,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env5_episode1",
+            "evaluation_step": 1600,
+            "pre_push_tcp_l2_m": 0.016493240371346474,
+            "post_push_tcp_l2_mean_m": 0.02199957234784961,
+            "post_push_base_speed_error_mean_m_s": 0.03492181853856891,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env6_episode1",
+            "evaluation_step": 1600,
+            "pre_push_tcp_l2_m": 0.013491857796907425,
+            "post_push_tcp_l2_mean_m": 0.030760736260563134,
+            "post_push_base_speed_error_mean_m_s": 0.0919774539815262,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env7_episode1",
+            "evaluation_step": 1600,
+            "pre_push_tcp_l2_m": 0.01462485920637846,
+            "post_push_tcp_l2_mean_m": 0.020353670567274093,
+            "post_push_base_speed_error_mean_m_s": 0.055427193157374856,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env8_episode1",
+            "evaluation_step": 1600,
+            "pre_push_tcp_l2_m": 0.01168782263994217,
+            "post_push_tcp_l2_mean_m": 0.01960677966941148,
+            "post_push_base_speed_error_mean_m_s": 0.050663911912124604,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env9_episode1",
+            "evaluation_step": 1600,
+            "pre_push_tcp_l2_m": 0.02986016683280468,
+            "post_push_tcp_l2_mean_m": 0.03331721264868975,
+            "post_push_base_speed_error_mean_m_s": 0.11544294952764175,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env10_episode1",
+            "evaluation_step": 1600,
+            "pre_push_tcp_l2_m": 0.045294810086488724,
+            "post_push_tcp_l2_mean_m": 0.031878611585125324,
+            "post_push_base_speed_error_mean_m_s": 0.021297319727018475,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env11_episode1",
+            "evaluation_step": 1600,
+            "pre_push_tcp_l2_m": 0.008248534984886646,
+            "post_push_tcp_l2_mean_m": 0.013415948171168566,
+            "post_push_base_speed_error_mean_m_s": 0.04690017176792025,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env12_episode1",
+            "evaluation_step": 1600,
+            "pre_push_tcp_l2_m": 0.01817547157406807,
+            "post_push_tcp_l2_mean_m": 0.04527980053797364,
+            "post_push_base_speed_error_mean_m_s": 0.07720492590218782,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env13_episode1",
+            "evaluation_step": 1600,
+            "pre_push_tcp_l2_m": 0.019353898242115974,
+            "post_push_tcp_l2_mean_m": 0.029507609754800795,
+            "post_push_base_speed_error_mean_m_s": 0.16157752335071562,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env14_episode1",
+            "evaluation_step": 1600,
+            "pre_push_tcp_l2_m": 0.020846238359808922,
+            "post_push_tcp_l2_mean_m": 0.04780242759734392,
+            "post_push_base_speed_error_mean_m_s": 0.06313347723335028,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env15_episode1",
+            "evaluation_step": 1600,
+            "pre_push_tcp_l2_m": 0.010808050632476807,
+            "post_push_tcp_l2_mean_m": 0.011489724745042623,
+            "post_push_base_speed_error_mean_m_s": 0.03347721177153289,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env16_episode1",
+            "evaluation_step": 1600,
+            "pre_push_tcp_l2_m": 0.036937564611434937,
+            "post_push_tcp_l2_mean_m": 0.03370098111219704,
+            "post_push_base_speed_error_mean_m_s": 0.03348224489018321,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env17_episode1",
+            "evaluation_step": 1600,
+            "pre_push_tcp_l2_m": 0.011153576895594597,
+            "post_push_tcp_l2_mean_m": 0.011352823516353965,
+            "post_push_base_speed_error_mean_m_s": 0.06688613049685956,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env18_episode1",
+            "evaluation_step": 1600,
+            "pre_push_tcp_l2_m": 0.03096117079257965,
+            "post_push_tcp_l2_mean_m": 0.03249825788661838,
+            "post_push_base_speed_error_mean_m_s": 0.07600494117476046,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env19_episode1",
+            "evaluation_step": 1600,
+            "pre_push_tcp_l2_m": 0.007628573104739189,
+            "post_push_tcp_l2_mean_m": 0.057888039825484155,
+            "post_push_base_speed_error_mean_m_s": 0.09153774891979992,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env20_episode1",
+            "evaluation_step": 1600,
+            "pre_push_tcp_l2_m": 0.014131865464150906,
+            "post_push_tcp_l2_mean_m": 0.030992234805598855,
+            "post_push_base_speed_error_mean_m_s": 0.04618150549009442,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env21_episode1",
+            "evaluation_step": 1600,
+            "pre_push_tcp_l2_m": 0.03702386096119881,
+            "post_push_tcp_l2_mean_m": 0.03059895396232605,
+            "post_push_base_speed_error_mean_m_s": 0.028138856589794158,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env22_episode1",
+            "evaluation_step": 1600,
+            "pre_push_tcp_l2_m": 0.03684455156326294,
+            "post_push_tcp_l2_mean_m": 0.027787292413413524,
+            "post_push_base_speed_error_mean_m_s": 0.14591797813773155,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env23_episode1",
+            "evaluation_step": 1600,
+            "pre_push_tcp_l2_m": 0.0070907361805438995,
+            "post_push_tcp_l2_mean_m": 0.03158804420381785,
+            "post_push_base_speed_error_mean_m_s": 0.07707892270758748,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env24_episode1",
+            "evaluation_step": 1600,
+            "pre_push_tcp_l2_m": 0.013408220373094082,
+            "post_push_tcp_l2_mean_m": 0.015236962083727122,
+            "post_push_base_speed_error_mean_m_s": 0.10071776168420911,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env25_episode1",
+            "evaluation_step": 1600,
+            "pre_push_tcp_l2_m": 0.010879943147301674,
+            "post_push_tcp_l2_mean_m": 0.027530261687934397,
+            "post_push_base_speed_error_mean_m_s": 0.05879807119257748,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env26_episode1",
+            "evaluation_step": 1600,
+            "pre_push_tcp_l2_m": 0.03971698507666588,
+            "post_push_tcp_l2_mean_m": 0.06504282470792531,
+            "post_push_base_speed_error_mean_m_s": 0.06177584111690521,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env27_episode1",
+            "evaluation_step": 1600,
+            "pre_push_tcp_l2_m": 0.01618582010269165,
+            "post_push_tcp_l2_mean_m": 0.012540000623557717,
+            "post_push_base_speed_error_mean_m_s": 0.04325939182192087,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env28_episode1",
+            "evaluation_step": 1600,
+            "pre_push_tcp_l2_m": 0.013915922492742538,
+            "post_push_tcp_l2_mean_m": 0.016861851233989,
+            "post_push_base_speed_error_mean_m_s": 0.04433238932862878,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env29_episode1",
+            "evaluation_step": 1600,
+            "pre_push_tcp_l2_m": 0.011949880979955196,
+            "post_push_tcp_l2_mean_m": 0.02646036770194769,
+            "post_push_base_speed_error_mean_m_s": 0.11218207595869899,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env30_episode1",
+            "evaluation_step": 1600,
+            "pre_push_tcp_l2_m": 0.018792521208524704,
+            "post_push_tcp_l2_mean_m": 0.039388011991977695,
+            "post_push_base_speed_error_mean_m_s": 0.12898875461425632,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env31_episode1",
+            "evaluation_step": 1600,
+            "pre_push_tcp_l2_m": 0.02636278048157692,
+            "post_push_tcp_l2_mean_m": 0.02174306475557387,
+            "post_push_base_speed_error_mean_m_s": 0.07883696529082954,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env0_episode2",
+            "evaluation_step": 2000,
+            "pre_push_tcp_l2_m": null,
+            "post_push_tcp_l2_mean_m": 0.02299520978704095,
+            "post_push_base_speed_error_mean_m_s": 0.13246180115267633,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env1_episode2",
+            "evaluation_step": 2000,
+            "pre_push_tcp_l2_m": null,
+            "post_push_tcp_l2_mean_m": 0.021429856191389263,
+            "post_push_base_speed_error_mean_m_s": 0.18724681228399276,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env2_episode2",
+            "evaluation_step": 2000,
+            "pre_push_tcp_l2_m": null,
+            "post_push_tcp_l2_mean_m": 0.04255995239131152,
+            "post_push_base_speed_error_mean_m_s": 0.13568853929638863,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env3_episode2",
+            "evaluation_step": 2000,
+            "pre_push_tcp_l2_m": null,
+            "post_push_tcp_l2_mean_m": 0.020367581686004995,
+            "post_push_base_speed_error_mean_m_s": 0.06826235970365815,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env4_episode2",
+            "evaluation_step": 2000,
+            "pre_push_tcp_l2_m": null,
+            "post_push_tcp_l2_mean_m": 0.020621690172702073,
+            "post_push_base_speed_error_mean_m_s": 0.09351050749421119,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env5_episode2",
+            "evaluation_step": 2000,
+            "pre_push_tcp_l2_m": null,
+            "post_push_tcp_l2_mean_m": 0.054904873631894585,
+            "post_push_base_speed_error_mean_m_s": 0.24914670629426838,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env6_episode2",
+            "evaluation_step": 2000,
+            "pre_push_tcp_l2_m": null,
+            "post_push_tcp_l2_mean_m": 0.02372966063208878,
+            "post_push_base_speed_error_mean_m_s": 0.1673662061127834,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env7_episode2",
+            "evaluation_step": 2000,
+            "pre_push_tcp_l2_m": null,
+            "post_push_tcp_l2_mean_m": 0.024771724827587605,
+            "post_push_base_speed_error_mean_m_s": 0.12245326140895486,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env8_episode2",
+            "evaluation_step": 2000,
+            "pre_push_tcp_l2_m": null,
+            "post_push_tcp_l2_mean_m": 0.02574776456691325,
+            "post_push_base_speed_error_mean_m_s": 0.06137629197677597,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env9_episode2",
+            "evaluation_step": 2000,
+            "pre_push_tcp_l2_m": null,
+            "post_push_tcp_l2_mean_m": 0.03347847318276763,
+            "post_push_base_speed_error_mean_m_s": 0.09275677294470369,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env10_episode2",
+            "evaluation_step": 2000,
+            "pre_push_tcp_l2_m": null,
+            "post_push_tcp_l2_mean_m": 0.03091310732066631,
+            "post_push_base_speed_error_mean_m_s": 0.10318019071593881,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env11_episode2",
+            "evaluation_step": 2000,
+            "pre_push_tcp_l2_m": null,
+            "post_push_tcp_l2_mean_m": 0.03850433488376439,
+            "post_push_base_speed_error_mean_m_s": 0.11687014818191528,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env12_episode2",
+            "evaluation_step": 2000,
+            "pre_push_tcp_l2_m": null,
+            "post_push_tcp_l2_mean_m": 0.039678175449371335,
+            "post_push_base_speed_error_mean_m_s": 0.20260827969759704,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env13_episode2",
+            "evaluation_step": 2000,
+            "pre_push_tcp_l2_m": null,
+            "post_push_tcp_l2_mean_m": 0.020361407797317953,
+            "post_push_base_speed_error_mean_m_s": 0.15842883186414838,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env14_episode2",
+            "evaluation_step": 2000,
+            "pre_push_tcp_l2_m": null,
+            "post_push_tcp_l2_mean_m": 0.022354062544181943,
+            "post_push_base_speed_error_mean_m_s": 0.10689776077866554,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env15_episode2",
+            "evaluation_step": 2000,
+            "pre_push_tcp_l2_m": null,
+            "post_push_tcp_l2_mean_m": 0.03512836942449212,
+            "post_push_base_speed_error_mean_m_s": 0.07028420628979802,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env16_episode2",
+            "evaluation_step": 2000,
+            "pre_push_tcp_l2_m": null,
+            "post_push_tcp_l2_mean_m": 0.029490928864106536,
+            "post_push_base_speed_error_mean_m_s": 0.18193329595029353,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env17_episode2",
+            "evaluation_step": 2000,
+            "pre_push_tcp_l2_m": null,
+            "post_push_tcp_l2_mean_m": 0.04100584668107331,
+            "post_push_base_speed_error_mean_m_s": 0.10247116005048156,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env18_episode2",
+            "evaluation_step": 2000,
+            "pre_push_tcp_l2_m": null,
+            "post_push_tcp_l2_mean_m": 0.029939696583896877,
+            "post_push_base_speed_error_mean_m_s": 0.1125004679709673,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env19_episode2",
+            "evaluation_step": 2000,
+            "pre_push_tcp_l2_m": null,
+            "post_push_tcp_l2_mean_m": 0.013703826805576682,
+            "post_push_base_speed_error_mean_m_s": 0.12626871414482593,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env20_episode2",
+            "evaluation_step": 2000,
+            "pre_push_tcp_l2_m": null,
+            "post_push_tcp_l2_mean_m": 0.03560123577713967,
+            "post_push_base_speed_error_mean_m_s": 0.13531972327269615,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env21_episode2",
+            "evaluation_step": 2000,
+            "pre_push_tcp_l2_m": null,
+            "post_push_tcp_l2_mean_m": 0.02550313084386289,
+            "post_push_base_speed_error_mean_m_s": 0.12118041837587952,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env22_episode2",
+            "evaluation_step": 2000,
+            "pre_push_tcp_l2_m": null,
+            "post_push_tcp_l2_mean_m": 0.015993154989555478,
+            "post_push_base_speed_error_mean_m_s": 0.09667190376669169,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env23_episode2",
+            "evaluation_step": 2000,
+            "pre_push_tcp_l2_m": null,
+            "post_push_tcp_l2_mean_m": 0.024513696879148485,
+            "post_push_base_speed_error_mean_m_s": 0.10686132967472077,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env24_episode2",
+            "evaluation_step": 2000,
+            "pre_push_tcp_l2_m": null,
+            "post_push_tcp_l2_mean_m": 0.028765810783952475,
+            "post_push_base_speed_error_mean_m_s": 0.14697201100178062,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env25_episode2",
+            "evaluation_step": 2000,
+            "pre_push_tcp_l2_m": null,
+            "post_push_tcp_l2_mean_m": 0.058710646759718654,
+            "post_push_base_speed_error_mean_m_s": 0.19601904936134815,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env26_episode2",
+            "evaluation_step": 2000,
+            "pre_push_tcp_l2_m": null,
+            "post_push_tcp_l2_mean_m": 0.020658160727471113,
+            "post_push_base_speed_error_mean_m_s": 0.08031248454004526,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env27_episode2",
+            "evaluation_step": 2000,
+            "pre_push_tcp_l2_m": null,
+            "post_push_tcp_l2_mean_m": 0.036260816585272554,
+            "post_push_base_speed_error_mean_m_s": 0.16202148617245257,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env28_episode2",
+            "evaluation_step": 2000,
+            "pre_push_tcp_l2_m": null,
+            "post_push_tcp_l2_mean_m": 0.026213893070816993,
+            "post_push_base_speed_error_mean_m_s": 0.14395815211813898,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env29_episode2",
+            "evaluation_step": 2000,
+            "pre_push_tcp_l2_m": null,
+            "post_push_tcp_l2_mean_m": 0.042864638390019534,
+            "post_push_base_speed_error_mean_m_s": 0.15525530334562063,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env30_episode2",
+            "evaluation_step": 2000,
+            "pre_push_tcp_l2_m": null,
+            "post_push_tcp_l2_mean_m": 0.015977499997243284,
+            "post_push_base_speed_error_mean_m_s": 0.11046716735698282,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env31_episode2",
+            "evaluation_step": 2000,
+            "pre_push_tcp_l2_m": null,
+            "post_push_tcp_l2_mean_m": 0.02112690028734505,
+            "post_push_base_speed_error_mean_m_s": 0.14327802203595638,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env0_episode2",
+            "evaluation_step": 2400,
+            "pre_push_tcp_l2_m": 0.01165839470922947,
+            "post_push_tcp_l2_mean_m": 0.030974971111863852,
+            "post_push_base_speed_error_mean_m_s": 0.1776731166243553,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env1_episode2",
+            "evaluation_step": 2400,
+            "pre_push_tcp_l2_m": 0.06317741423845291,
+            "post_push_tcp_l2_mean_m": 0.08329308347776532,
+            "post_push_base_speed_error_mean_m_s": 0.12049451985862106,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env2_episode2",
+            "evaluation_step": 2400,
+            "pre_push_tcp_l2_m": 0.021687746047973633,
+            "post_push_tcp_l2_mean_m": 0.032642398457974196,
+            "post_push_base_speed_error_mean_m_s": 0.045635833237320185,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env3_episode2",
+            "evaluation_step": 2400,
+            "pre_push_tcp_l2_m": 0.008194093592464924,
+            "post_push_tcp_l2_mean_m": 0.02276851935777813,
+            "post_push_base_speed_error_mean_m_s": 0.11055501695722342,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env4_episode2",
+            "evaluation_step": 2400,
+            "pre_push_tcp_l2_m": 0.008696786127984524,
+            "post_push_tcp_l2_mean_m": 0.010571785476058722,
+            "post_push_base_speed_error_mean_m_s": 0.05593336316756904,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env5_episode2",
+            "evaluation_step": 2400,
+            "pre_push_tcp_l2_m": 0.013475766405463219,
+            "post_push_tcp_l2_mean_m": 0.025946903908625245,
+            "post_push_base_speed_error_mean_m_s": 0.16226555369794368,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env6_episode2",
+            "evaluation_step": 2400,
+            "pre_push_tcp_l2_m": 0.010620963759720325,
+            "post_push_tcp_l2_mean_m": 0.041170149464160206,
+            "post_push_base_speed_error_mean_m_s": 0.06133685604319908,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env7_episode2",
+            "evaluation_step": 2400,
+            "pre_push_tcp_l2_m": 0.03468962386250496,
+            "post_push_tcp_l2_mean_m": 0.05417639970779419,
+            "post_push_base_speed_error_mean_m_s": 0.19579499810934067,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env8_episode2",
+            "evaluation_step": 2400,
+            "pre_push_tcp_l2_m": 0.011277057230472565,
+            "post_push_tcp_l2_mean_m": 0.034668816328048704,
+            "post_push_base_speed_error_mean_m_s": 0.11377077475190163,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env9_episode2",
+            "evaluation_step": 2400,
+            "pre_push_tcp_l2_m": 0.026710348203778267,
+            "post_push_tcp_l2_mean_m": 0.03312081322073936,
+            "post_push_base_speed_error_mean_m_s": 0.044896426505874845,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env10_episode2",
+            "evaluation_step": 2400,
+            "pre_push_tcp_l2_m": 0.011625822633504868,
+            "post_push_tcp_l2_mean_m": 0.02455168202985078,
+            "post_push_base_speed_error_mean_m_s": 0.049161602135282007,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env11_episode2",
+            "evaluation_step": 2400,
+            "pre_push_tcp_l2_m": 0.02424336038529873,
+            "post_push_tcp_l2_mean_m": 0.03145470457151532,
+            "post_push_base_speed_error_mean_m_s": 0.07300750732421875,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env12_episode2",
+            "evaluation_step": 2400,
+            "pre_push_tcp_l2_m": 0.014369572512805462,
+            "post_push_tcp_l2_mean_m": 0.1206179890781641,
+            "post_push_base_speed_error_mean_m_s": 0.08472709681838751,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env13_episode2",
+            "evaluation_step": 2400,
+            "pre_push_tcp_l2_m": 0.015359013341367245,
+            "post_push_tcp_l2_mean_m": 0.023090233076363802,
+            "post_push_base_speed_error_mean_m_s": 0.06563020206056536,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env14_episode2",
+            "evaluation_step": 2400,
+            "pre_push_tcp_l2_m": 0.02345283329486847,
+            "post_push_tcp_l2_mean_m": 0.013009032980771735,
+            "post_push_base_speed_error_mean_m_s": 0.04652311411686241,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env15_episode2",
+            "evaluation_step": 2400,
+            "pre_push_tcp_l2_m": 0.018049851059913635,
+            "post_push_tcp_l2_mean_m": 0.051258786376565696,
+            "post_push_base_speed_error_mean_m_s": 0.07917330639436841,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env16_episode2",
+            "evaluation_step": 2400,
+            "pre_push_tcp_l2_m": 0.024087272584438324,
+            "post_push_tcp_l2_mean_m": 0.039058319963514804,
+            "post_push_base_speed_error_mean_m_s": 0.04666940366849303,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env17_episode2",
+            "evaluation_step": 2400,
+            "pre_push_tcp_l2_m": 0.011465330608189106,
+            "post_push_tcp_l2_mean_m": 0.03087692660279572,
+            "post_push_base_speed_error_mean_m_s": 0.13815255761146544,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env18_episode2",
+            "evaluation_step": 2400,
+            "pre_push_tcp_l2_m": 0.013789880089461803,
+            "post_push_tcp_l2_mean_m": 0.03426612326875329,
+            "post_push_base_speed_error_mean_m_s": 0.04777440385892987,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env19_episode2",
+            "evaluation_step": 2400,
+            "pre_push_tcp_l2_m": 0.013097434304654598,
+            "post_push_tcp_l2_mean_m": 0.01469311511144042,
+            "post_push_base_speed_error_mean_m_s": 0.043076113061979414,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env20_episode2",
+            "evaluation_step": 2400,
+            "pre_push_tcp_l2_m": 0.013295302167534828,
+            "post_push_tcp_l2_mean_m": 0.05098319303244352,
+            "post_push_base_speed_error_mean_m_s": 0.1489118941128254,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env21_episode2",
+            "evaluation_step": 2400,
+            "pre_push_tcp_l2_m": 0.00911540724337101,
+            "post_push_tcp_l2_mean_m": 0.03468634964898229,
+            "post_push_base_speed_error_mean_m_s": 0.1085946482140571,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env22_episode2",
+            "evaluation_step": 2400,
+            "pre_push_tcp_l2_m": 0.017910145223140717,
+            "post_push_tcp_l2_mean_m": 0.036990631520748135,
+            "post_push_base_speed_error_mean_m_s": 0.1798109611077234,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env23_episode2",
+            "evaluation_step": 2400,
+            "pre_push_tcp_l2_m": 0.011988303624093533,
+            "post_push_tcp_l2_mean_m": 0.010413383012637495,
+            "post_push_base_speed_error_mean_m_s": 0.019328488800674677,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env24_episode2",
+            "evaluation_step": 2400,
+            "pre_push_tcp_l2_m": 0.0266719963401556,
+            "post_push_tcp_l2_mean_m": 0.026958577893674375,
+            "post_push_base_speed_error_mean_m_s": 0.1187899948656559,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env25_episode2",
+            "evaluation_step": 2400,
+            "pre_push_tcp_l2_m": 0.03700065240263939,
+            "post_push_tcp_l2_mean_m": 0.08797562541440129,
+            "post_push_base_speed_error_mean_m_s": 0.08120014201849698,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env26_episode2",
+            "evaluation_step": 2400,
+            "pre_push_tcp_l2_m": 0.023151466622948647,
+            "post_push_tcp_l2_mean_m": 0.034371396861970424,
+            "post_push_base_speed_error_mean_m_s": 0.14295427225530147,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env27_episode2",
+            "evaluation_step": 2400,
+            "pre_push_tcp_l2_m": 0.013080993667244911,
+            "post_push_tcp_l2_mean_m": 0.015256085293367505,
+            "post_push_base_speed_error_mean_m_s": 0.0510312720015645,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env28_episode2",
+            "evaluation_step": 2400,
+            "pre_push_tcp_l2_m": 0.023894930258393288,
+            "post_push_tcp_l2_mean_m": 0.02715121821500361,
+            "post_push_base_speed_error_mean_m_s": 0.08157571418210864,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env29_episode2",
+            "evaluation_step": 2400,
+            "pre_push_tcp_l2_m": 0.04815949499607086,
+            "post_push_tcp_l2_mean_m": 0.03110584830865264,
+            "post_push_base_speed_error_mean_m_s": 0.06227547150105238,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env30_episode2",
+            "evaluation_step": 2400,
+            "pre_push_tcp_l2_m": 0.011832939460873604,
+            "post_push_tcp_l2_mean_m": 0.018455505333840848,
+            "post_push_base_speed_error_mean_m_s": 0.09612717745825648,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env31_episode2",
+            "evaluation_step": 2400,
+            "pre_push_tcp_l2_m": 0.016244228929281235,
+            "post_push_tcp_l2_mean_m": 0.02155793469399214,
+            "post_push_base_speed_error_mean_m_s": 0.02795017841970548,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env0_episode2",
+            "evaluation_step": 2800,
+            "pre_push_tcp_l2_m": 0.006254739128053188,
+            "post_push_tcp_l2_mean_m": 0.03302111342549324,
+            "post_push_base_speed_error_mean_m_s": 0.14415226332843303,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env1_episode2",
+            "evaluation_step": 2800,
+            "pre_push_tcp_l2_m": 0.018095577135682106,
+            "post_push_tcp_l2_mean_m": 0.017703746929764747,
+            "post_push_base_speed_error_mean_m_s": 0.03816933863330632,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env2_episode2",
+            "evaluation_step": 2800,
+            "pre_push_tcp_l2_m": 0.025647645816206932,
+            "post_push_tcp_l2_mean_m": 0.025769413812085987,
+            "post_push_base_speed_error_mean_m_s": 0.105227863304317,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env3_episode2",
+            "evaluation_step": 2800,
+            "pre_push_tcp_l2_m": 0.027635063976049423,
+            "post_push_tcp_l2_mean_m": 0.06025539640337229,
+            "post_push_base_speed_error_mean_m_s": 0.08246076375246048,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env4_episode2",
+            "evaluation_step": 2800,
+            "pre_push_tcp_l2_m": 0.01739545911550522,
+            "post_push_tcp_l2_mean_m": 0.0302969709970057,
+            "post_push_base_speed_error_mean_m_s": 0.053367584462976084,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env5_episode2",
+            "evaluation_step": 2800,
+            "pre_push_tcp_l2_m": 0.05810670554637909,
+            "post_push_tcp_l2_mean_m": 0.04832296341657639,
+            "post_push_base_speed_error_mean_m_s": 0.10924372926354409,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env6_episode2",
+            "evaluation_step": 2800,
+            "pre_push_tcp_l2_m": 0.02504287101328373,
+            "post_push_tcp_l2_mean_m": 0.018559620147570968,
+            "post_push_base_speed_error_mean_m_s": 0.07134146763011813,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env7_episode2",
+            "evaluation_step": 2800,
+            "pre_push_tcp_l2_m": 0.017487933859229088,
+            "post_push_tcp_l2_mean_m": 0.016753977071493863,
+            "post_push_base_speed_error_mean_m_s": 0.05769047535024583,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env8_episode2",
+            "evaluation_step": 2800,
+            "pre_push_tcp_l2_m": 0.046248096972703934,
+            "post_push_tcp_l2_mean_m": 0.04154702380299568,
+            "post_push_base_speed_error_mean_m_s": 0.18512925922870635,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env9_episode2",
+            "evaluation_step": 2800,
+            "pre_push_tcp_l2_m": 0.030731625854969025,
+            "post_push_tcp_l2_mean_m": 0.03574964283965528,
+            "post_push_base_speed_error_mean_m_s": 0.060982241248711946,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env10_episode2",
+            "evaluation_step": 2800,
+            "pre_push_tcp_l2_m": 0.054575495421886444,
+            "post_push_tcp_l2_mean_m": 0.032623728848993776,
+            "post_push_base_speed_error_mean_m_s": 0.035753855677321554,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env11_episode2",
+            "evaluation_step": 2800,
+            "pre_push_tcp_l2_m": 0.015535705722868443,
+            "post_push_tcp_l2_mean_m": 0.05058703518472612,
+            "post_push_base_speed_error_mean_m_s": 0.10269020961597562,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env12_episode2",
+            "evaluation_step": 2800,
+            "pre_push_tcp_l2_m": 0.048615604639053345,
+            "post_push_tcp_l2_mean_m": 0.028534134114161135,
+            "post_push_base_speed_error_mean_m_s": 0.09072238377993927,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env13_episode2",
+            "evaluation_step": 2800,
+            "pre_push_tcp_l2_m": 0.00775103410705924,
+            "post_push_tcp_l2_mean_m": 0.06597648238763214,
+            "post_push_base_speed_error_mean_m_s": 0.07684790691593663,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env14_episode2",
+            "evaluation_step": 2800,
+            "pre_push_tcp_l2_m": 0.016586754471063614,
+            "post_push_tcp_l2_mean_m": 0.028067410364747046,
+            "post_push_base_speed_error_mean_m_s": 0.06451680315192788,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env15_episode2",
+            "evaluation_step": 2800,
+            "pre_push_tcp_l2_m": 0.0167196337133646,
+            "post_push_tcp_l2_mean_m": 0.01937036238145083,
+            "post_push_base_speed_error_mean_m_s": 0.128639554977417,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env16_episode2",
+            "evaluation_step": 2800,
+            "pre_push_tcp_l2_m": 0.010718030855059624,
+            "post_push_tcp_l2_mean_m": 0.016210583336651326,
+            "post_push_base_speed_error_mean_m_s": 0.03235893154283986,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env17_episode2",
+            "evaluation_step": 2800,
+            "pre_push_tcp_l2_m": 0.003201886313036084,
+            "post_push_tcp_l2_mean_m": 0.03780615634750575,
+            "post_push_base_speed_error_mean_m_s": 0.03764788828790188,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env18_episode2",
+            "evaluation_step": 2800,
+            "pre_push_tcp_l2_m": 0.023708060383796692,
+            "post_push_tcp_l2_mean_m": 0.0351810809224844,
+            "post_push_base_speed_error_mean_m_s": 0.045814065230079,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env19_episode2",
+            "evaluation_step": 2800,
+            "pre_push_tcp_l2_m": 0.037139661610126495,
+            "post_push_tcp_l2_mean_m": 0.05243126131594181,
+            "post_push_base_speed_error_mean_m_s": 0.10204553340096027,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env20_episode2",
+            "evaluation_step": 2800,
+            "pre_push_tcp_l2_m": 0.045420289039611816,
+            "post_push_tcp_l2_mean_m": 0.04164214927703142,
+            "post_push_base_speed_error_mean_m_s": 0.03117915403097868,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env21_episode2",
+            "evaluation_step": 2800,
+            "pre_push_tcp_l2_m": 0.013378025963902473,
+            "post_push_tcp_l2_mean_m": 0.030988176930695773,
+            "post_push_base_speed_error_mean_m_s": 0.08154324409551919,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env22_episode2",
+            "evaluation_step": 2800,
+            "pre_push_tcp_l2_m": 0.011676659807562828,
+            "post_push_tcp_l2_mean_m": 0.038036600267514584,
+            "post_push_base_speed_error_mean_m_s": 0.1468823915347457,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env23_episode2",
+            "evaluation_step": 2800,
+            "pre_push_tcp_l2_m": 0.03196226432919502,
+            "post_push_tcp_l2_mean_m": 0.028740197084844113,
+            "post_push_base_speed_error_mean_m_s": 0.05899759432300925,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env24_episode2",
+            "evaluation_step": 2800,
+            "pre_push_tcp_l2_m": 0.012682920321822166,
+            "post_push_tcp_l2_mean_m": 0.01470202000811696,
+            "post_push_base_speed_error_mean_m_s": 0.035887302672490476,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env25_episode2",
+            "evaluation_step": 2800,
+            "pre_push_tcp_l2_m": 0.018270768225193024,
+            "post_push_tcp_l2_mean_m": 0.020800413805991413,
+            "post_push_base_speed_error_mean_m_s": 0.06415570870041848,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env26_episode2",
+            "evaluation_step": 2800,
+            "pre_push_tcp_l2_m": 0.006592255551367998,
+            "post_push_tcp_l2_mean_m": 0.06174095674417913,
+            "post_push_base_speed_error_mean_m_s": 0.2045882486552,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env27_episode2",
+            "evaluation_step": 2800,
+            "pre_push_tcp_l2_m": 0.012731784954667091,
+            "post_push_tcp_l2_mean_m": 0.029014538787305356,
+            "post_push_base_speed_error_mean_m_s": 0.03930586701259017,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env28_episode2",
+            "evaluation_step": 2800,
+            "pre_push_tcp_l2_m": 0.02598610147833824,
+            "post_push_tcp_l2_mean_m": 0.03746027839370072,
+            "post_push_base_speed_error_mean_m_s": 0.11314498469233512,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env29_episode2",
+            "evaluation_step": 2800,
+            "pre_push_tcp_l2_m": 0.013387042097747326,
+            "post_push_tcp_l2_mean_m": 0.024704105323180556,
+            "post_push_base_speed_error_mean_m_s": 0.14279823744669556,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env30_episode2",
+            "evaluation_step": 2800,
+            "pre_push_tcp_l2_m": 0.004545699805021286,
+            "post_push_tcp_l2_mean_m": 0.0565781282261014,
+            "post_push_base_speed_error_mean_m_s": 0.12439819097518921,
+            "window_policy_steps": 50
+          },
+          {
+            "scenario_id": "S2_seed1001_env31_episode2",
+            "evaluation_step": 2800,
+            "pre_push_tcp_l2_m": 0.03188057988882065,
+            "post_push_tcp_l2_mean_m": 0.03257874021306634,
+            "post_push_base_speed_error_mean_m_s": 0.03573727214243263,
+            "window_policy_steps": 50
+          }
+        ],
+        "paper_comparison_scope": {
+          "fig_3b": "V3\u9010\u7ef4TCP\u7403\u5750\u6807\u4e0e\u5e95\u76d8\u901f\u5ea6\u4f30\u8ba1\u8bef\u5dee\u5206\u5e03\uff1b\u5355\u4f4d\u89c1\u7ef4\u5ea6\u6807\u7b7e",
+          "fig_3b_limit": "\u8d44\u4ea7\u3001\u76ee\u6807\u5206\u5e03\u548c\u73af\u5883\u534f\u8bae\u4e0d\u540c\uff1b\u4e0d\u91cd\u5efa\u8bba\u6587\u672a\u516c\u5f00\u7684\u539f\u59cb\u6570\u636e\u70b9",
+          "fig_3c_fig_3d": "\u53d7\u529b\u4eff\u771f\u4e0e\u5b9e\u673a\u7ed3\u679c\u4e0d\u5c5e\u4e8e\u672cA\u9636\u6bb5\u8bc4\u4f30"
+        },
+        "evidence_complete": true,
+        "assessment": "pass",
+        "evaluation_device": "cuda:3",
+        "evaluation_environment_count": 32,
+        "evaluation_seed": 1001,
+        "push_seed": 2001,
+        "policy_updates": 0,
+        "evaluation_runtime": {
+          "python": "3.8.20",
+          "torch": "2.3.1+cu121",
+          "device": "cuda:3",
+          "gym_import_path": "/mnt/data_8THDD/myl_unifp/isaacgym/python/isaacgym/__init__.py",
+          "sim_device": "cuda:3",
+          "physx_use_gpu": true,
+          "use_gpu_pipeline": true
+        },
+        "checkpoint_sha256": "323a6688fe42559db1d0c545b778b456551ce0ac472f8169fec5ebce2d849dbc",
+        "protocol": "zero_force_regression",
+        "smoke": false,
+        "source_compatibility": {
+          "allowed_source_changes": [
+            "legged_gym/b2_gym_learn/ppo_cse_pf/v3_evaluation.py",
+            "legged_gym/b2_gym_learn/ppo_cse_pf/v3_on_policy_runner.py",
+            "legged_gym/b2_gym_learn/ppo_cse_pf/v3_run_identity.py",
+            "legged_gym/envs/v3/legged_robot_v3.py",
+            "legged_gym/envs/v3/v3_contact_evaluation.py",
+            "legged_gym/envs/v3/v3_force_evaluation.py",
+            "legged_gym/envs/v3/v3_pos_force_config.py",
+            "legged_gym/scripts/evaluate_v3.py",
+            "legged_gym/scripts/evaluate_v3_contact.py",
+            "legged_gym/scripts/train_v3.py",
+            "legged_gym/scripts/v3_args.py",
+            "legged_gym/utils/v3_config.py"
+          ],
+          "source_reproduction_part": "A"
+        },
+        "source_completed_iterations": 8000,
+        "source_reproduction_part": "A",
+        "effective_quota": {
+          "num_envs": 32,
+          "episodes_per_env": 3
+        },
+        "a8000_comparison": {
+          "available": false,
+          "\u539f\u56e0": "\u672a\u63d0\u4f9b\u540c\u534f\u8baeA8000\u53c2\u8003\u5f52\u6863"
+        }
+      },
+      "mean_deltas_from_historical_a8000": {
+        "tcp_geometric_l1_m": 0.0,
+        "tcp_geometric_l2_m": 0.0,
+        "base_planar_speed_m_s": 0.0,
+        "base_yaw_rate_rad_s": 0.0,
+        "episode_reward_return": 0.0,
+        "episode_reward_rate": 0.0,
+        "state_estimation/base_vx_m_s_mae": 0.0,
+        "state_estimation/base_vx_m_s_rmse": 0.0,
+        "state_estimation/base_vy_m_s_mae": 0.0,
+        "state_estimation/base_vy_m_s_rmse": 0.0,
+        "state_estimation/base_vz_m_s_mae": 0.0,
+        "state_estimation/base_vz_m_s_rmse": 0.0,
+        "state_estimation/tcp_radius_m_mae": 0.0,
+        "state_estimation/tcp_radius_m_rmse": 0.0,
+        "state_estimation/tcp_elevation_rad_mae": 0.0,
+        "state_estimation/tcp_elevation_rad_rmse": 0.0,
+        "state_estimation/tcp_azimuth_rad_mae": 0.0,
+        "state_estimation/tcp_azimuth_rad_rmse": 0.0,
+        "push_recovery_tcp_l2_m": 0.0,
+        "push_recovery_base_speed_error_m_s": 0.0,
+        "physical_failure_rate": 0.0,
+        "target_movement_phase_elapsed_rate": 0.0
+      },
+      "physical_failure_rate_delta": 0.0
+    }
+  },
+  "s0_source_bridge": {
+    "actual_physics_source": "/mnt/data_8THDD/myl_unifp_v3_stage1/validation/b_stage_20261107_r01/source_r02/UniFP_v3",
+    "later_evaluation_source": "/mnt/data_8THDD/myl_unifp_v3_stage1/validation/b_stage_20261107_r01/source_r03/UniFP_v3",
+    "changed_top_level_nodes": [
+      "summarize_force_evaluation"
+    ],
+    "scope": "force_tracking only; zero_force_regression does not call this function",
+    "original_file_sha256": "5b88f455db79ec163cc73716ee4c565619439ec581ea63937d483138bddc7889",
+    "later_file_sha256": "31e496c6f685584d00caf1cba2dca786ade220bb3159f5592f7c84f65350c04d"
+  }
+}

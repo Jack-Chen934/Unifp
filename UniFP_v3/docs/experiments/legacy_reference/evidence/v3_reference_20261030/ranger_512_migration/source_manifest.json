@@ -1,0 +1,1188 @@
+{
+  "created_utc": "2026-10-29T00:00:00+08:00",
+  "protected_file_count": 168,
+  "files": [
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/UniFP/legged_gym/__init__.py",
+      "sha256": "6a255b7f9ad90ddb96036a32e711dfe4a49dcb26c9c2e8e891417ad9edecc8f6",
+      "bytes": 171,
+      "retained_in_project": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/UniFP/legged_gym/b2_gym_learn/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "retained_in_project": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/UniFP/legged_gym/b2_gym_learn/env/__init__.py",
+      "sha256": "a75215a0c48156cea158ed559507f479680c672a6681b2a7948e3cb42d30e8ae",
+      "bytes": 29,
+      "retained_in_project": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/UniFP/legged_gym/b2_gym_learn/env/vec_env.py",
+      "sha256": "25bd38bd404a96c4c4ffb37256daf34bc07286acb34a10ce5834db0490b938fb",
+      "bytes": 978,
+      "retained_in_project": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/UniFP/legged_gym/b2_gym_learn/ppo_cse_pf/actor_critic.py",
+      "sha256": "e44cdb63f7e05bc82a469559d6a24f54596e1e4dfa9e784c4b12cce39b53c971",
+      "bytes": 8122,
+      "retained_in_project": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/UniFP/legged_gym/b2_gym_learn/ppo_cse_pf/metrics_caches.py",
+      "sha256": "ab694e33ba91bf37f3aa600e7c12e9bae4d21fe19392983e26595a32d6b93ccf",
+      "bytes": 2239,
+      "retained_in_project": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/UniFP/legged_gym/b2_gym_learn/ppo_cse_pf/on_policy_runner.py",
+      "sha256": "d44a1835b0ec3db083cc825249a97f5f535781c4a2cff8c91faede2ee470e9c4",
+      "bytes": 13776,
+      "retained_in_project": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/UniFP/legged_gym/b2_gym_learn/ppo_cse_pf/ppo.py",
+      "sha256": "a3366f5d951a19c819ed26c5a171df89c3ff682d4a97d9c8c77585146e778e15",
+      "bytes": 10132,
+      "retained_in_project": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/UniFP/legged_gym/b2_gym_learn/ppo_cse_pf/rollout_storage.py",
+      "sha256": "ca7618b01150de14424201b2a61e50d42402f61f6771ab409d545f9cd90ae399",
+      "bytes": 8526,
+      "retained_in_project": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/UniFP/legged_gym/b2_gym_learn/utils/__init__.py",
+      "sha256": "f2f74903b3fb0398051c94d1dfb1a11b9f560a1e60d506dcb72aa11ab34386a3",
+      "bytes": 116,
+      "retained_in_project": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/UniFP/legged_gym/b2_gym_learn/utils/utils.py",
+      "sha256": "cc30cac0d301f4f97ea11067f5fc3d447d09c793055902e75bc29792ef567312",
+      "bytes": 2164,
+      "retained_in_project": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/UniFP/legged_gym/envs/__init__.py",
+      "sha256": "63bf5889aaa6af56e0e2450cf50006ec5079e47e891e05960a8316f7bca8563d",
+      "bytes": 460,
+      "retained_in_project": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/UniFP/legged_gym/envs/b2/b2z1_pos_force_config.py",
+      "sha256": "a1213a398cb7928a90aaa7ca13ae0840ce970cf5cdfa81827057a9c5b3b751fc",
+      "bytes": 11977,
+      "retained_in_project": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/UniFP/legged_gym/envs/b2/legged_robot_b2z1_pos_force.py",
+      "sha256": "220b05ed078bf7b12be3bd489610bb90c25b12a5b78538bc8af58484093a88c4",
+      "bytes": 142050,
+      "retained_in_project": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/UniFP/legged_gym/envs/base/base_config.py",
+      "sha256": "0597eabb0aa9422240ea408e7bd3aa0ebc9ec36cc781d1e5fb26773ca3579362",
+      "bytes": 963,
+      "retained_in_project": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/UniFP/legged_gym/envs/base/base_task.py",
+      "sha256": "bfb15b670b3ee533389de8209634bc141650c54aa0aba6c8536437d9e14d8e13",
+      "bytes": 5917,
+      "retained_in_project": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/UniFP/legged_gym/envs/base/legged_robot.py",
+      "sha256": "080e43e3c8c2783b9c17a0a45c1f34f990875e8c93f8870c671e1f7aa0e9931a",
+      "bytes": 37351,
+      "retained_in_project": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/UniFP/legged_gym/envs/base/legged_robot_config.py",
+      "sha256": "e75e7d3889ecda02cdc28b18c92b0531ddedb823fc853b9bc342657f25e85b9c",
+      "bytes": 8788,
+      "retained_in_project": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/UniFP/legged_gym/scripts/play_b2z1posforce.py",
+      "sha256": "876a2d574989c70ec62a91094eb3795ed3ff88ff0761e7387b5e4c78b2c77ce4",
+      "bytes": 9347,
+      "retained_in_project": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/UniFP/legged_gym/scripts/train_b2z1posforce.py",
+      "sha256": "29780b7070d1760f492024b401a6b8fafcdbdd672f3e28e5e4eae588f82ef6df",
+      "bytes": 814,
+      "retained_in_project": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/UniFP/legged_gym/utils/__init__.py",
+      "sha256": "263753156ef2c3830c02c8d9a3a8567d1968144069d3f68efeb2b423d9f35126",
+      "bytes": 240,
+      "retained_in_project": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/UniFP/legged_gym/utils/helpers.py",
+      "sha256": "ab892862a8ea9ac59cce0765c1323bd2d9b5a34bc9490141ab70e49f5a5a0410",
+      "bytes": 7726,
+      "retained_in_project": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/UniFP/legged_gym/utils/isaacgym_utils.py",
+      "sha256": "6b3705becf060b07c26cbea1adb95a159f416d3b37984fa9951af344b8ea0a46",
+      "bytes": 3124,
+      "retained_in_project": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/UniFP/legged_gym/utils/logger.py",
+      "sha256": "d3b7582e2aa0f62db8fb80f0ba56f5611023aaaf9a6550c0a968d8fdf65c3063",
+      "bytes": 4368,
+      "retained_in_project": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/UniFP/legged_gym/utils/math.py",
+      "sha256": "4b2d840dd02515e236ce0cc9b21f4e0a049cb9e22a203ba93f3f253a9bd7691d",
+      "bytes": 758,
+      "retained_in_project": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/UniFP/legged_gym/utils/task_registry.py",
+      "sha256": "ff0698eb68a843a22f51721fae106ff3b9bf39c617960f1770f94eac9d667fd1",
+      "bytes": 7805,
+      "retained_in_project": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/UniFP/legged_gym/utils/terrain.py",
+      "sha256": "c38aa9a69e9d651495f699a91349c250ec40580b1b189c98c9fc79b3518eceec",
+      "bytes": 17510,
+      "retained_in_project": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/logs/ranger-unifp-v3-original-force-to10000-resume9500/model_iter_010000.pt",
+      "sha256": "5d6fffb2ed30e68a13a77e36ebe33fe2c19b5aace396fe25c223c989f0530690",
+      "bytes": 29254683,
+      "retained_in_project": false,
+      "migration_copy": "/home/sorry/python_ws/interactive/unifp_reproduction/ranger_512_migration/protected_log_sources/logs/ranger-unifp-v3-original-force-to10000-resume9500/model_iter_010000.pt",
+      "migration_copy_sha256": "5d6fffb2ed30e68a13a77e36ebe33fe2c19b5aace396fe25c223c989f0530690",
+      "migration_copy_exists": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/logs/ranger-unifp-v3-original-force-to10000-resume9500/supervision_audit/audit.py",
+      "sha256": "1a23960e6c9f6fbd0b7cf819c29d20be76ecd5b7f976e32d8be0ea5e85304889",
+      "bytes": 1295485,
+      "retained_in_project": false,
+      "migration_copy": "/home/sorry/python_ws/interactive/unifp_reproduction/ranger_512_migration/protected_log_sources/logs/ranger-unifp-v3-original-force-to10000-resume9500/supervision_audit/audit.py",
+      "migration_copy_sha256": "1a23960e6c9f6fbd0b7cf819c29d20be76ecd5b7f976e32d8be0ea5e85304889",
+      "migration_copy_exists": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/logs/ranger-unifp-v3-original-force-to10000-resume9500/supervision_audit/gym_ranger_fresh512_fixedcom_20261028_v1/audit_snapshot.py",
+      "sha256": "1a23960e6c9f6fbd0b7cf819c29d20be76ecd5b7f976e32d8be0ea5e85304889",
+      "bytes": 1295485,
+      "retained_in_project": false,
+      "migration_copy": "/home/sorry/python_ws/interactive/unifp_reproduction/ranger_512_migration/protected_log_sources/logs/ranger-unifp-v3-original-force-to10000-resume9500/supervision_audit/gym_ranger_fresh512_fixedcom_20261028_v1/audit_snapshot.py",
+      "migration_copy_sha256": "1a23960e6c9f6fbd0b7cf819c29d20be76ecd5b7f976e32d8be0ea5e85304889",
+      "migration_copy_exists": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/logs/ranger-unifp-v3-original-force-to10000-resume9500/supervision_audit/gym_ranger_fresh512_fixedcom_20261028_v1/backend_envelope.py",
+      "sha256": "6a825e2a49428d68660967c30621be57abe2e273b36f80e7b7448254641af659",
+      "bytes": 21572,
+      "retained_in_project": false,
+      "migration_copy": "/home/sorry/python_ws/interactive/unifp_reproduction/ranger_512_migration/protected_log_sources/logs/ranger-unifp-v3-original-force-to10000-resume9500/supervision_audit/gym_ranger_fresh512_fixedcom_20261028_v1/backend_envelope.py",
+      "migration_copy_sha256": "6a825e2a49428d68660967c30621be57abe2e273b36f80e7b7448254641af659",
+      "migration_copy_exists": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/logs/ranger-unifp-v3-original-force-to10000-resume9500/supervision_audit/gym_ranger_fresh512_fixedcom_20261028_v1/run.py",
+      "sha256": "fe7825f6d423e2096096d24374623626f503137abc393fcc8f9dc056cd0c587e",
+      "bytes": 34437,
+      "retained_in_project": false,
+      "migration_copy": "/home/sorry/python_ws/interactive/unifp_reproduction/ranger_512_migration/protected_log_sources/logs/ranger-unifp-v3-original-force-to10000-resume9500/supervision_audit/gym_ranger_fresh512_fixedcom_20261028_v1/run.py",
+      "migration_copy_sha256": "fe7825f6d423e2096096d24374623626f503137abc393fcc8f9dc056cd0c587e",
+      "migration_copy_exists": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/ranger_unifp_vec_env.py",
+      "sha256": "0f2db9583ffa59cfb1e0bd474dfae3ba4028f41fe274803c20f64576db9bbe1e",
+      "bytes": 15785,
+      "retained_in_project": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/robot_description/a1arm_description/meshes/aluminum_profiles_modified.STL",
+      "sha256": "39ea1deb201c86260603c96069d22ae954a9bc6738e5df4e36158e0c5513ea1a",
+      "bytes": 613084,
+      "retained_in_project": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/robot_description/a1arm_description/meshes/aluminum_profiles_modified.collision.glb",
+      "sha256": "7d50f67efb9aad45bbea4bcd88bc020a8e816c209ddab4c602b1150f6905d172",
+      "bytes": 90412,
+      "retained_in_project": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/robot_description/a1arm_description/meshes/aluminum_profiles_modified.visual.glb",
+      "sha256": "267c49ae1f2a8490261574099779b667ffbf69a9056f97e45a745381061893ed",
+      "bytes": 957204,
+      "retained_in_project": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/robot_description/a1arm_description/meshes/approx_sim/aluminum_profiles_modified_collision.glb",
+      "sha256": "7d50f67efb9aad45bbea4bcd88bc020a8e816c209ddab4c602b1150f6905d172",
+      "bytes": 90412,
+      "retained_in_project": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/robot_description/a1arm_description/meshes/approx_sim/aluminum_profiles_modified_visual.glb",
+      "sha256": "267c49ae1f2a8490261574099779b667ffbf69a9056f97e45a745381061893ed",
+      "bytes": 957204,
+      "retained_in_project": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/robot_description/a1arm_description/meshes/approx_sim/arm_base_collision.glb",
+      "sha256": "c75126b1d276538b7740207775e3979b45ad158679d8875d3d84beb79768ca3c",
+      "bytes": 1001776,
+      "retained_in_project": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/robot_description/a1arm_description/meshes/approx_sim/arm_base_visual.glb",
+      "sha256": "509c69ea79f79d721a72838a8546991f684eb121f93e0044725d901b8b919ea8",
+      "bytes": 949376,
+      "retained_in_project": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/robot_description/a1arm_description/meshes/approx_sim/arm_seg1_collision.glb",
+      "sha256": "ddc5f1e36dd98256eda8efa5d8721f71530d513f70e7828adb660d4c093a4445",
+      "bytes": 400188,
+      "retained_in_project": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/robot_description/a1arm_description/meshes/approx_sim/arm_seg1_visual.glb",
+      "sha256": "571e652b7cf82566ba4a50ebed9886a6a2ba5276e29dd97dacb4a4354168a213",
+      "bytes": 3234396,
+      "retained_in_project": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/robot_description/a1arm_description/meshes/approx_sim/arm_seg2_collision.glb",
+      "sha256": "7f92b60829668f41f45e8d5722223ccc1d8068d840e2259dd4b3c53295d026fb",
+      "bytes": 100712,
+      "retained_in_project": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/robot_description/a1arm_description/meshes/approx_sim/arm_seg2_visual.glb",
+      "sha256": "f51e2fdcfe18ba497f57d6e46fd813d51040c88fc364faffa6f4a499205cbee7",
+      "bytes": 842672,
+      "retained_in_project": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/robot_description/a1arm_description/meshes/approx_sim/arm_seg3_collision.glb",
+      "sha256": "25bbdbf6e1dd5c5903fdb09878e536b84346a340410897d5448be449cd1a10d0",
+      "bytes": 195364,
+      "retained_in_project": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/robot_description/a1arm_description/meshes/approx_sim/arm_seg3_visual.glb",
+      "sha256": "299e7c8e661c1dc10ffea7dab339eb2dab2f64c20009a465ee4ffd742e927ce4",
+      "bytes": 3320496,
+      "retained_in_project": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/robot_description/a1arm_description/meshes/approx_sim/arm_seg4_collision.glb",
+      "sha256": "0d27c250425921672b02738dda17a14980fe5e814a361ff56115a21beabbe71b",
+      "bytes": 468544,
+      "retained_in_project": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/robot_description/a1arm_description/meshes/approx_sim/arm_seg4_visual.glb",
+      "sha256": "22a0260025b073eb4a55ef77aa1e31eaf4313e041e356d55234259d57c115171",
+      "bytes": 392920,
+      "retained_in_project": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/robot_description/a1arm_description/meshes/approx_sim/arm_seg5_collision.glb",
+      "sha256": "62fc42ff6722b8b0295e026bddceb98cd727d6268af006d306d3cef1388ccc03",
+      "bytes": 243440,
+      "retained_in_project": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/robot_description/a1arm_description/meshes/approx_sim/arm_seg5_visual.glb",
+      "sha256": "1cdb25d8dc3789325bf1f7df53f6e85f3a83de14f5036b2c084656eb959729db",
+      "bytes": 479192,
+      "retained_in_project": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/robot_description/a1arm_description/meshes/approx_sim/arm_seg6_collision.glb",
+      "sha256": "603474eea23fa712246bf3fc446e767c77e62eaec41ef980a3b92b1540540c8e",
+      "bytes": 407344,
+      "retained_in_project": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/robot_description/a1arm_description/meshes/approx_sim/arm_seg6_visual.glb",
+      "sha256": "cfcc5f74a2e3740e8e1c1935f64e87326eb7c275ecd1495e5e2673e948ac8108",
+      "bytes": 1906860,
+      "retained_in_project": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/robot_description/a1arm_description/meshes/approx_sim/camera_collision.glb",
+      "sha256": "8cf850130f193618addb097b186d53984910c8600d941605a4a409e28b3e8e96",
+      "bytes": 168360,
+      "retained_in_project": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/robot_description/a1arm_description/meshes/approx_sim/camera_visual.glb",
+      "sha256": "af85717a5169965ee71e76bf2b819e42b1a6e86d9d8cbc3d353c888547e2e63f",
+      "bytes": 9401176,
+      "retained_in_project": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/robot_description/a1arm_description/meshes/approx_sim/gripper1_collision.glb",
+      "sha256": "5050a6f6a26e5a5ab60b4b7a52b6950279a4a1216b497ba10bbe9a916064e037",
+      "bytes": 111868,
+      "retained_in_project": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/robot_description/a1arm_description/meshes/approx_sim/gripper1_visual.glb",
+      "sha256": "25a95b17bea2dc07634ff0241e966448f275eb628fd43c04577195e537660b73",
+      "bytes": 886044,
+      "retained_in_project": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/robot_description/a1arm_description/meshes/approx_sim/gripper2_collision.glb",
+      "sha256": "7221ee10dc4537cad1e84a5296c055661b4193884afdbb0f74f9500fd992eff3",
+      "bytes": 111868,
+      "retained_in_project": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/robot_description/a1arm_description/meshes/approx_sim/gripper2_visual.glb",
+      "sha256": "7355c60f15ba6b038ebcb3d320e3a194120398706fc0028754a7fe0a38967f35",
+      "bytes": 886044,
+      "retained_in_project": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/robot_description/a1arm_description/meshes/approx_sim/left_camera_collision.glb",
+      "sha256": "abf9320832ee6fc657f2c62236ea5e30b9a2e1c8fef4952ec3fec47166c9ba13",
+      "bytes": 202488,
+      "retained_in_project": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/robot_description/a1arm_description/meshes/approx_sim/left_camera_connector_collision.glb",
+      "sha256": "d2dc8a6fac131900c7ff7c9087ce444a0e8ecd452951438582ea48087164c1af",
+      "bytes": 86300,
+      "retained_in_project": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/robot_description/a1arm_description/meshes/approx_sim/left_camera_connector_visual.glb",
+      "sha256": "76a781eb147379589318bb97131b14a5d064b484456031a63e4bb56496f1df08",
+      "bytes": 47716,
+      "retained_in_project": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/robot_description/a1arm_description/meshes/approx_sim/left_camera_visual.glb",
+      "sha256": "8d12fbda107daf3ebd6dfeffe03b6471c38454671eed13a74fe28c9d77da606f",
+      "bytes": 9401184,
+      "retained_in_project": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/robot_description/a1arm_description/meshes/approx_sim/ranger_mini3_decimate_collision.glb",
+      "sha256": "5c8cfa67a66e662d5537589044bbd9fde8aed63c93364c513fad62e958929ead",
+      "bytes": 342104,
+      "retained_in_project": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/robot_description/a1arm_description/meshes/approx_sim/ranger_mini3_decimate_visual.glb",
+      "sha256": "f780fcbbbe1bb5938aa32af9355917e5f87adbacf97c9c7dbd7988d0b031f0a4",
+      "bytes": 2935212,
+      "retained_in_project": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/robot_description/a1arm_description/meshes/approx_sim/rear_top_camera_connector_collision.glb",
+      "sha256": "790ca363554cc6ab11b8b1cfc4619db0d2111a0c6c1138a8cac4c26c31487fea",
+      "bytes": 69652,
+      "retained_in_project": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/robot_description/a1arm_description/meshes/approx_sim/rear_top_camera_connector_visual.glb",
+      "sha256": "c3af3b0e1ecc9be7c272526f830647e9d1e619165c762cbf02d57ee36ae0bb82",
+      "bytes": 29472,
+      "retained_in_project": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/robot_description/a1arm_description/meshes/approx_sim/right_camera_collision.glb",
+      "sha256": "5a368a96550eaeb6d10b1482e316c3908237fd97c82630efb96c16a1b988dd7f",
+      "bytes": 201268,
+      "retained_in_project": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/robot_description/a1arm_description/meshes/approx_sim/right_camera_connector_collision.glb",
+      "sha256": "7966552eeb56f479bf9aac2ea1f3e258e04d0354d8824ff393b6701e1bd18e88",
+      "bytes": 81096,
+      "retained_in_project": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/robot_description/a1arm_description/meshes/approx_sim/right_camera_connector_visual.glb",
+      "sha256": "50e782653778cf7d635862016abd12b15d575d386463a22d11d283078347da72",
+      "bytes": 47092,
+      "retained_in_project": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/robot_description/a1arm_description/meshes/approx_sim/right_camera_visual.glb",
+      "sha256": "9ed53bbf83fd0029e33f66626cb47d8656876852594c74ea00d4110c72940144",
+      "bytes": 9401188,
+      "retained_in_project": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/robot_description/a1arm_description/meshes/approx_sim/wrist_camera_connector_collision.glb",
+      "sha256": "debed46d8f1380aa669a72e39ca259160a69898f67401fd4666cc69b7ea02313",
+      "bytes": 74100,
+      "retained_in_project": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/robot_description/a1arm_description/meshes/approx_sim/wrist_camera_connector_visual.glb",
+      "sha256": "f46705a6606bfa2e9c831e9d35fd2d289d8606ecc0425ac27550346fc2ff385d",
+      "bytes": 83592,
+      "retained_in_project": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/robot_description/a1arm_description/meshes/arm_base.STL",
+      "sha256": "be3d34b3244d745f527273f2005ca4ae9b08118c7778c4f3fae88a6e361203a0",
+      "bytes": 608084,
+      "retained_in_project": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/robot_description/a1arm_description/meshes/arm_base.collision.glb",
+      "sha256": "c75126b1d276538b7740207775e3979b45ad158679d8875d3d84beb79768ca3c",
+      "bytes": 1001776,
+      "retained_in_project": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/robot_description/a1arm_description/meshes/arm_base.visual.glb",
+      "sha256": "509c69ea79f79d721a72838a8546991f684eb121f93e0044725d901b8b919ea8",
+      "bytes": 949376,
+      "retained_in_project": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/robot_description/a1arm_description/meshes/arm_seg1.STL",
+      "sha256": "b80652f37e0d2d4b59d5127cbd97b404ddf661cd421d2ea47c100cc991bedcae",
+      "bytes": 1924784,
+      "retained_in_project": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/robot_description/a1arm_description/meshes/arm_seg1.collision.glb",
+      "sha256": "ddc5f1e36dd98256eda8efa5d8721f71530d513f70e7828adb660d4c093a4445",
+      "bytes": 400188,
+      "retained_in_project": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/robot_description/a1arm_description/meshes/arm_seg1.visual.glb",
+      "sha256": "571e652b7cf82566ba4a50ebed9886a6a2ba5276e29dd97dacb4a4354168a213",
+      "bytes": 3234396,
+      "retained_in_project": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/robot_description/a1arm_description/meshes/arm_seg2.STL",
+      "sha256": "98d224d819f1ecbbd19c979e4f18409bd16e277bd752c4bb3fd913182bee41d8",
+      "bytes": 539684,
+      "retained_in_project": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/robot_description/a1arm_description/meshes/arm_seg2.collision.glb",
+      "sha256": "7f92b60829668f41f45e8d5722223ccc1d8068d840e2259dd4b3c53295d026fb",
+      "bytes": 100712,
+      "retained_in_project": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/robot_description/a1arm_description/meshes/arm_seg2.visual.glb",
+      "sha256": "f51e2fdcfe18ba497f57d6e46fd813d51040c88fc364faffa6f4a499205cbee7",
+      "bytes": 842672,
+      "retained_in_project": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/robot_description/a1arm_description/meshes/arm_seg3.STL",
+      "sha256": "dbfd8fea24de4480195d62096b63c206c002ba122021dbdab71ccfe4ea1a56f0",
+      "bytes": 1976034,
+      "retained_in_project": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/robot_description/a1arm_description/meshes/arm_seg3.collision.glb",
+      "sha256": "25bbdbf6e1dd5c5903fdb09878e536b84346a340410897d5448be449cd1a10d0",
+      "bytes": 195364,
+      "retained_in_project": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/robot_description/a1arm_description/meshes/arm_seg3.visual.glb",
+      "sha256": "299e7c8e661c1dc10ffea7dab339eb2dab2f64c20009a465ee4ffd742e927ce4",
+      "bytes": 3320496,
+      "retained_in_project": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/robot_description/a1arm_description/meshes/arm_seg4.STL",
+      "sha256": "df203b499f3c2eff565b2078a9b8b0888552c9453b97d7734f82b0689208a6bf",
+      "bytes": 251384,
+      "retained_in_project": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/robot_description/a1arm_description/meshes/arm_seg4.collision.glb",
+      "sha256": "0d27c250425921672b02738dda17a14980fe5e814a361ff56115a21beabbe71b",
+      "bytes": 468544,
+      "retained_in_project": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/robot_description/a1arm_description/meshes/arm_seg4.visual.glb",
+      "sha256": "22a0260025b073eb4a55ef77aa1e31eaf4313e041e356d55234259d57c115171",
+      "bytes": 392920,
+      "retained_in_project": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/robot_description/a1arm_description/meshes/arm_seg5.STL",
+      "sha256": "cf71a6682a3a702d92ff6278742549a9fe2620f6edc338c4d5b45621743d2ff6",
+      "bytes": 306684,
+      "retained_in_project": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/robot_description/a1arm_description/meshes/arm_seg5.collision.glb",
+      "sha256": "62fc42ff6722b8b0295e026bddceb98cd727d6268af006d306d3cef1388ccc03",
+      "bytes": 243440,
+      "retained_in_project": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/robot_description/a1arm_description/meshes/arm_seg5.visual.glb",
+      "sha256": "1cdb25d8dc3789325bf1f7df53f6e85f3a83de14f5036b2c084656eb959729db",
+      "bytes": 479192,
+      "retained_in_project": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/robot_description/a1arm_description/meshes/arm_seg6.STL",
+      "sha256": "c0073262d2cc5f950eb66ef4bec90662f30791c4be8ba6b88e0a6b5584f4153f",
+      "bytes": 1134584,
+      "retained_in_project": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/robot_description/a1arm_description/meshes/arm_seg6.collision.glb",
+      "sha256": "603474eea23fa712246bf3fc446e767c77e62eaec41ef980a3b92b1540540c8e",
+      "bytes": 407344,
+      "retained_in_project": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/robot_description/a1arm_description/meshes/arm_seg6.visual.glb",
+      "sha256": "cfcc5f74a2e3740e8e1c1935f64e87326eb7c275ecd1495e5e2673e948ac8108",
+      "bytes": 1906860,
+      "retained_in_project": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/robot_description/a1arm_description/meshes/camera.STL",
+      "sha256": "143e9a11d60f1c05c7bce39a83a81a5b128abdd2886ab02e42791e4f0582ffae",
+      "bytes": 5595484,
+      "retained_in_project": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/robot_description/a1arm_description/meshes/camera.collision.glb",
+      "sha256": "8cf850130f193618addb097b186d53984910c8600d941605a4a409e28b3e8e96",
+      "bytes": 168360,
+      "retained_in_project": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/robot_description/a1arm_description/meshes/camera.visual.glb",
+      "sha256": "af85717a5169965ee71e76bf2b819e42b1a6e86d9d8cbc3d353c888547e2e63f",
+      "bytes": 9401176,
+      "retained_in_project": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/robot_description/a1arm_description/meshes/gripper1.STL",
+      "sha256": "e888cc5f0cd77a8e1abef7b436378a38a2d0ee7268cc739fb51f9913d4ce5a1d",
+      "bytes": 567484,
+      "retained_in_project": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/robot_description/a1arm_description/meshes/gripper1.collision.glb",
+      "sha256": "5050a6f6a26e5a5ab60b4b7a52b6950279a4a1216b497ba10bbe9a916064e037",
+      "bytes": 111868,
+      "retained_in_project": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/robot_description/a1arm_description/meshes/gripper1.visual.glb",
+      "sha256": "25a95b17bea2dc07634ff0241e966448f275eb628fd43c04577195e537660b73",
+      "bytes": 886044,
+      "retained_in_project": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/robot_description/a1arm_description/meshes/gripper2.STL",
+      "sha256": "393dfe556f193ff31694e765e01161c00e2a2bb563ed1f5ea2f28d4c00048a47",
+      "bytes": 567484,
+      "retained_in_project": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/robot_description/a1arm_description/meshes/gripper2.collision.glb",
+      "sha256": "7221ee10dc4537cad1e84a5296c055661b4193884afdbb0f74f9500fd992eff3",
+      "bytes": 111868,
+      "retained_in_project": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/robot_description/a1arm_description/meshes/gripper2.visual.glb",
+      "sha256": "7355c60f15ba6b038ebcb3d320e3a194120398706fc0028754a7fe0a38967f35",
+      "bytes": 886044,
+      "retained_in_project": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/robot_description/a1arm_description/meshes/left_camera.STL",
+      "sha256": "c319d553da8e0eab8a15a69bfe15e30d70981f925c1cb2c4d792fa2086690138",
+      "bytes": 5595484,
+      "retained_in_project": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/robot_description/a1arm_description/meshes/left_camera.collision.glb",
+      "sha256": "abf9320832ee6fc657f2c62236ea5e30b9a2e1c8fef4952ec3fec47166c9ba13",
+      "bytes": 202488,
+      "retained_in_project": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/robot_description/a1arm_description/meshes/left_camera.visual.glb",
+      "sha256": "8d12fbda107daf3ebd6dfeffe03b6471c38454671eed13a74fe28c9d77da606f",
+      "bytes": 9401184,
+      "retained_in_project": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/robot_description/a1arm_description/meshes/left_camera_connector.STL",
+      "sha256": "af9bd1d798f5f347e1a4baff8123bc3a608b405e61015256f8ba8204c27417b0",
+      "bytes": 30084,
+      "retained_in_project": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/robot_description/a1arm_description/meshes/left_camera_connector.collision.glb",
+      "sha256": "d2dc8a6fac131900c7ff7c9087ce444a0e8ecd452951438582ea48087164c1af",
+      "bytes": 86300,
+      "retained_in_project": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/robot_description/a1arm_description/meshes/left_camera_connector.visual.glb",
+      "sha256": "76a781eb147379589318bb97131b14a5d064b484456031a63e4bb56496f1df08",
+      "bytes": 47716,
+      "retained_in_project": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/robot_description/a1arm_description/meshes/official_v3/ranger_base.glb",
+      "sha256": "2f190f32211807ad4ab0218a561681b40e97ee6eded0e70473a5a4330fb549aa",
+      "bytes": 12268024,
+      "retained_in_project": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/robot_description/a1arm_description/meshes/official_v3/steering_wheel.glb",
+      "sha256": "ff5d60bb48e5b46e0d147585bd95b008e6fb1505e2788042c10f3ff545846dc7",
+      "bytes": 90584,
+      "retained_in_project": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/robot_description/a1arm_description/meshes/official_v3/wheel_v3.glb",
+      "sha256": "71bdb2721051607733b3fdf4126024d18f60bf9123ec81f5a9bfcd4217b43f02",
+      "bytes": 412524,
+      "retained_in_project": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/robot_description/a1arm_description/meshes/original_movable/bl_fixed.glb",
+      "sha256": "2dba162718f237cbeab8aee05aa54d652c823a61d8c685cdced0953da1994e9f",
+      "bytes": 4610896,
+      "retained_in_project": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/robot_description/a1arm_description/meshes/original_movable/bl_rolling.glb",
+      "sha256": "c4984866a6610248a15af59fc6f35624db531cc1ea09665f50f5712745bb84b8",
+      "bytes": 4043328,
+      "retained_in_project": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/robot_description/a1arm_description/meshes/original_movable/bl_steering.glb",
+      "sha256": "a38e541c747c9d8a7f6b82cdd665f377808857969f55c3899a01e040ef8fefa4",
+      "bytes": 3820148,
+      "retained_in_project": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/robot_description/a1arm_description/meshes/original_movable/br_fixed.glb",
+      "sha256": "c03d86427baa44c8de001f1a9519e2464c2ba2c9c3fa7c068e27a5ced39e423a",
+      "bytes": 4766512,
+      "retained_in_project": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/robot_description/a1arm_description/meshes/original_movable/br_rolling.glb",
+      "sha256": "482fcbfd6cecca1458882cf85e4ad9e6a654fbf7f58291af91ae9b2fb638f783",
+      "bytes": 4263700,
+      "retained_in_project": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/robot_description/a1arm_description/meshes/original_movable/br_steering.glb",
+      "sha256": "31c4dee422dcff0608bf409444c021abe6e231a1ae3ad04eaec4931ae5e089b8",
+      "bytes": 3981772,
+      "retained_in_project": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/robot_description/a1arm_description/meshes/original_movable/fl_fixed.glb",
+      "sha256": "009593cb6aa00fdf7b3e9a532fe5c1329de5844d6adf6a5e5ceb67d026c2708e",
+      "bytes": 4610892,
+      "retained_in_project": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/robot_description/a1arm_description/meshes/original_movable/fl_rolling.glb",
+      "sha256": "c4984866a6610248a15af59fc6f35624db531cc1ea09665f50f5712745bb84b8",
+      "bytes": 4043328,
+      "retained_in_project": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/robot_description/a1arm_description/meshes/original_movable/fl_steering.glb",
+      "sha256": "a38e541c747c9d8a7f6b82cdd665f377808857969f55c3899a01e040ef8fefa4",
+      "bytes": 3820148,
+      "retained_in_project": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/robot_description/a1arm_description/meshes/original_movable/fr_fixed.glb",
+      "sha256": "0a603e9d75ff3ab9023e6fa2f29aa7860550b06752b5d5030eafb868d7056be3",
+      "bytes": 4766508,
+      "retained_in_project": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/robot_description/a1arm_description/meshes/original_movable/fr_rolling.glb",
+      "sha256": "482fcbfd6cecca1458882cf85e4ad9e6a654fbf7f58291af91ae9b2fb638f783",
+      "bytes": 4263700,
+      "retained_in_project": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/robot_description/a1arm_description/meshes/original_movable/fr_steering.glb",
+      "sha256": "31c4dee422dcff0608bf409444c021abe6e231a1ae3ad04eaec4931ae5e089b8",
+      "bytes": 3981772,
+      "retained_in_project": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/robot_description/a1arm_description/meshes/original_movable/provenance.json",
+      "sha256": "e6b71adef7212c11e45919e3fcf28b4a9bfd521f14dac547d6ee209e5bba65f7",
+      "bytes": 1854,
+      "retained_in_project": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/robot_description/a1arm_description/meshes/ranger_mini3_decimate.collision.glb",
+      "sha256": "5c8cfa67a66e662d5537589044bbd9fde8aed63c93364c513fad62e958929ead",
+      "bytes": 342104,
+      "retained_in_project": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/robot_description/a1arm_description/meshes/ranger_mini3_decimate.stl",
+      "sha256": "0757cd5f6d0134d81fc1807adeba9e7a31978fdb9b7fb9b6fc0df4d8fa19eda6",
+      "bytes": 1746684,
+      "retained_in_project": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/robot_description/a1arm_description/meshes/ranger_mini3_decimate.visual.glb",
+      "sha256": "f780fcbbbe1bb5938aa32af9355917e5f87adbacf97c9c7dbd7988d0b031f0a4",
+      "bytes": 2935212,
+      "retained_in_project": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/robot_description/a1arm_description/meshes/ranger_mini_v3_wheel.collision.glb",
+      "sha256": "01ebf4df817b532776ca36b1e00fbc01e1deca3634cd2afd224a6b563b25d866",
+      "bytes": 345228,
+      "retained_in_project": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/robot_description/a1arm_description/meshes/ranger_mini_v3_wheel.stl",
+      "sha256": "b90bf4e2772d5471f8e6bc60d7b97ffef076a06950f494f869e0eee5b70df927",
+      "bytes": 5196734,
+      "retained_in_project": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/robot_description/a1arm_description/meshes/ranger_mini_v3_wheel.visual.glb",
+      "sha256": "0cee5abbb7133c5c57df55fe888be53fa1a2bb90cbe4f5cb140aec564cd7e59e",
+      "bytes": 8731300,
+      "retained_in_project": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/robot_description/a1arm_description/meshes/ranger_mini_v3_wheel_right.collision.glb",
+      "sha256": "4e021d8d9dcd7f07bc683ad696c913126736eecc3f854309d342f381f9d1ec91",
+      "bytes": 361760,
+      "retained_in_project": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/robot_description/a1arm_description/meshes/ranger_mini_v3_wheel_right.stl",
+      "sha256": "ab295109861bb10a92e91041641e688158f95bbd08b760d8725e22a468175c55",
+      "bytes": 5420734,
+      "retained_in_project": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/robot_description/a1arm_description/meshes/ranger_mini_v3_wheel_right.visual.glb",
+      "sha256": "130a78150d24c539b91b27993955bb399cedca96b37bee8fc753ceb69c516418",
+      "bytes": 9107628,
+      "retained_in_project": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/robot_description/a1arm_description/meshes/rear_top_camera_connector.STL",
+      "sha256": "827f4226336a831fed43848fe717217aca1a36a85b0076d85fe4aa7c6977b1a3",
+      "bytes": 18384,
+      "retained_in_project": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/robot_description/a1arm_description/meshes/rear_top_camera_connector.collision.glb",
+      "sha256": "790ca363554cc6ab11b8b1cfc4619db0d2111a0c6c1138a8cac4c26c31487fea",
+      "bytes": 69652,
+      "retained_in_project": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/robot_description/a1arm_description/meshes/rear_top_camera_connector.visual.glb",
+      "sha256": "c3af3b0e1ecc9be7c272526f830647e9d1e619165c762cbf02d57ee36ae0bb82",
+      "bytes": 29472,
+      "retained_in_project": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/robot_description/a1arm_description/meshes/right_camera.STL",
+      "sha256": "656c20497e3f780c5c1b3ae45d760b2d32944fec377319a4250170f0fca4782b",
+      "bytes": 5595484,
+      "retained_in_project": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/robot_description/a1arm_description/meshes/right_camera.collision.glb",
+      "sha256": "5a368a96550eaeb6d10b1482e316c3908237fd97c82630efb96c16a1b988dd7f",
+      "bytes": 201268,
+      "retained_in_project": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/robot_description/a1arm_description/meshes/right_camera.visual.glb",
+      "sha256": "9ed53bbf83fd0029e33f66626cb47d8656876852594c74ea00d4110c72940144",
+      "bytes": 9401188,
+      "retained_in_project": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/robot_description/a1arm_description/meshes/right_camera_connector.STL",
+      "sha256": "e6f32c78a847eee738fbb9365f33cff87fd5e7d9d4a92f298b003f23d7f2acee",
+      "bytes": 29684,
+      "retained_in_project": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/robot_description/a1arm_description/meshes/right_camera_connector.collision.glb",
+      "sha256": "7966552eeb56f479bf9aac2ea1f3e258e04d0354d8824ff393b6701e1bd18e88",
+      "bytes": 81096,
+      "retained_in_project": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/robot_description/a1arm_description/meshes/right_camera_connector.visual.glb",
+      "sha256": "50e782653778cf7d635862016abd12b15d575d386463a22d11d283078347da72",
+      "bytes": 47092,
+      "retained_in_project": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/robot_description/a1arm_description/meshes/wrist_camera_connector.STL",
+      "sha256": "db3b1c84b9d742335e8b8e92eb5dddaf9423bdaa672477c8eb184322b98ad58a",
+      "bytes": 53084,
+      "retained_in_project": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/robot_description/a1arm_description/meshes/wrist_camera_connector.collision.glb",
+      "sha256": "debed46d8f1380aa669a72e39ca259160a69898f67401fd4666cc69b7ea02313",
+      "bytes": 74100,
+      "retained_in_project": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/robot_description/a1arm_description/meshes/wrist_camera_connector.visual.glb",
+      "sha256": "f46705a6606bfa2e9c831e9d35fd2d289d8606ecc0425ac27550346fc2ff385d",
+      "bytes": 83592,
+      "retained_in_project": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/robot_description/a1arm_description/urdf/a1arm_rgm3_original_movable.urdf",
+      "sha256": "49b2e1b1acf728bdf1ec403126a219f7f62d7e5bbd0912c6b81af745fda498df",
+      "bytes": 27686,
+      "retained_in_project": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/unifp_domain_randomization.py",
+      "sha256": "5528c7d506b53dd0b810f36758c3aca4da39913ed541eb29b3ca781874e20adf",
+      "bytes": 5503,
+      "retained_in_project": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/unifp_force_curriculum.py",
+      "sha256": "6e9aaa1105aa8981604ece6f23863d3718f7052f4434c43aec1618e8b6afbddf",
+      "bytes": 5845,
+      "retained_in_project": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/unifp_observations.py",
+      "sha256": "e0579b3045f4a79b6084d0a1e02305100ebd93b562a4d0efe3030eb2711a220b",
+      "bytes": 4621,
+      "retained_in_project": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/unifp_task_rewards.py",
+      "sha256": "063e29401dfe8b214cbdce7e39d72c8106ee7d0546ef01994f64c19cf9b7573f",
+      "bytes": 11888,
+      "retained_in_project": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/unifp_task_signals.py",
+      "sha256": "e95613d04a6752effe5c50a5b09607f3e525aaed636c351a6d6e7de60e085312",
+      "bytes": 12711,
+      "retained_in_project": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/unifp_vec_env.py",
+      "sha256": "90b631a49947520ebe7b908efcb8ccd4c3172f924c17f0b3e0d2e8b9edf0511d",
+      "bytes": 20366,
+      "retained_in_project": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/logs/ranger-unifp-v3-original-force-to10000-resume9500/supervision_audit/gym_ranger_force_stage_20261028_v1/run_stage.py",
+      "sha256": "0962d6481245ba9897b370156db007a02e7eaf99967ab3a1fe7eb0508346eb5d",
+      "bytes": 13761,
+      "retained_in_project": false,
+      "migration_copy": "/home/sorry/python_ws/interactive/unifp_reproduction/ranger_512_migration/protected_log_sources/logs/ranger-unifp-v3-original-force-to10000-resume9500/supervision_audit/gym_ranger_force_stage_20261028_v1/run_stage.py",
+      "migration_copy_sha256": "0962d6481245ba9897b370156db007a02e7eaf99967ab3a1fe7eb0508346eb5d",
+      "migration_copy_exists": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/logs/ranger-unifp-v3-original-force-to10000-resume9500/supervision_audit/gym_ranger_force_stage_20261028_v1/evaluate_stage_verified.py",
+      "sha256": "84618378dbce78a08d93fd58b08b5f14fb124d1e28a2dcc56fa7e1f74dfa4045",
+      "bytes": 13190,
+      "retained_in_project": false,
+      "migration_copy": "/home/sorry/python_ws/interactive/unifp_reproduction/ranger_512_migration/protected_log_sources/logs/ranger-unifp-v3-original-force-to10000-resume9500/supervision_audit/gym_ranger_force_stage_20261028_v1/evaluate_stage_verified.py",
+      "migration_copy_sha256": "84618378dbce78a08d93fd58b08b5f14fb124d1e28a2dcc56fa7e1f74dfa4045",
+      "migration_copy_exists": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/logs/ranger-unifp-v3-original-force-to10000-resume9500/supervision_audit/gym_ranger_force_stage_20261028_v1/train/model_iter_009000.pt",
+      "sha256": "bcf1a28f1073587338c7be85125a63535ed8702acff4f1721e53754bf622786b",
+      "bytes": 29264194,
+      "retained_in_project": false,
+      "migration_copy": "/home/sorry/python_ws/interactive/unifp_reproduction/ranger_512_migration/protected_log_sources/logs/ranger-unifp-v3-original-force-to10000-resume9500/supervision_audit/gym_ranger_force_stage_20261028_v1/train/model_iter_009000.pt",
+      "migration_copy_sha256": "bcf1a28f1073587338c7be85125a63535ed8702acff4f1721e53754bf622786b",
+      "migration_copy_exists": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/logs/ranger-unifp-v3-original-force-to10000-resume9500/supervision_audit/gym_ranger_fresh512_fixedcom_20261028_v1/train/model_iter_008000.pt",
+      "sha256": "3ed0adc13c3dc84b87f82606160c3eb0df6e52727fb34ea089f96c686b40110e",
+      "bytes": 29298178,
+      "retained_in_project": false,
+      "migration_copy": "/home/sorry/python_ws/interactive/unifp_reproduction/ranger_512_migration/protected_log_sources/logs/ranger-unifp-v3-original-force-to10000-resume9500/supervision_audit/gym_ranger_fresh512_fixedcom_20261028_v1/train/model_iter_008000.pt",
+      "migration_copy_sha256": "3ed0adc13c3dc84b87f82606160c3eb0df6e52727fb34ea089f96c686b40110e",
+      "migration_copy_exists": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/logs/ranger-unifp-v3-original-force-to10000-resume9500/supervision_audit/gym_ranger_force_stage_20261028_v1/completion.json",
+      "sha256": "4c2130be5f6fc159883ccc6424d4500766a1c2c304cf4e4c21fcdd06a05ca8bd",
+      "bytes": 705,
+      "retained_in_project": false,
+      "migration_copy": "/home/sorry/python_ws/interactive/unifp_reproduction/ranger_512_migration/protected_log_sources/logs/ranger-unifp-v3-original-force-to10000-resume9500/supervision_audit/gym_ranger_force_stage_20261028_v1/completion.json",
+      "migration_copy_sha256": "4c2130be5f6fc159883ccc6424d4500766a1c2c304cf4e4c21fcdd06a05ca8bd",
+      "migration_copy_exists": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/logs/ranger-unifp-v3-original-force-to10000-resume9500/supervision_audit/gym_ranger_force_stage_20261028_v1/evaluation_summary.json",
+      "sha256": "fe9288eff15f470ea4284119f094d6f429619fd51516e65ac084f3913b700d8e",
+      "bytes": 33320,
+      "retained_in_project": false,
+      "migration_copy": "/home/sorry/python_ws/interactive/unifp_reproduction/ranger_512_migration/protected_log_sources/logs/ranger-unifp-v3-original-force-to10000-resume9500/supervision_audit/gym_ranger_force_stage_20261028_v1/evaluation_summary.json",
+      "migration_copy_sha256": "fe9288eff15f470ea4284119f094d6f429619fd51516e65ac084f3913b700d8e",
+      "migration_copy_exists": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/logs/ranger-unifp-v3-original-force-to10000-resume9500/supervision_audit/gym_ranger_force_continue9000_to12000_20261028_v1/run.py",
+      "sha256": "0610e53ea0825dddb4ddcdebb14ea2671f7307cb9cc5d17811c6ec2a00afe684",
+      "bytes": 26985,
+      "retained_in_project": false,
+      "migration_copy": "/home/sorry/python_ws/interactive/unifp_reproduction/ranger_512_migration/protected_log_sources/logs/ranger-unifp-v3-original-force-to10000-resume9500/supervision_audit/gym_ranger_force_continue9000_to12000_20261028_v1/run.py",
+      "migration_copy_sha256": "0610e53ea0825dddb4ddcdebb14ea2671f7307cb9cc5d17811c6ec2a00afe684",
+      "migration_copy_exists": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/logs/ranger-unifp-v3-original-force-to10000-resume9500/supervision_audit/gym_ranger_force_continue9000_to12000_20261028_v1/plan.json",
+      "sha256": "b60d894a7617f23b0689fd5df7341a63f8c00184d1d5e3f3fe1120a5f429dbbb",
+      "bytes": 34611,
+      "retained_in_project": false,
+      "migration_copy": "/home/sorry/python_ws/interactive/unifp_reproduction/ranger_512_migration/protected_log_sources/logs/ranger-unifp-v3-original-force-to10000-resume9500/supervision_audit/gym_ranger_force_continue9000_to12000_20261028_v1/plan.json",
+      "migration_copy_sha256": "b60d894a7617f23b0689fd5df7341a63f8c00184d1d5e3f3fe1120a5f429dbbb",
+      "migration_copy_exists": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/logs/ranger-unifp-v3-original-force-to10000-resume9500/supervision_audit/gym_ranger_force_continue9000_to12000_20261028_v1/dispatch.json",
+      "sha256": "f6dcdb7be24668f98cd2ea270ec9ba56b99f853a11cc4fb87290f490f1759684",
+      "bytes": 671,
+      "retained_in_project": false,
+      "migration_copy": "/home/sorry/python_ws/interactive/unifp_reproduction/ranger_512_migration/protected_log_sources/logs/ranger-unifp-v3-original-force-to10000-resume9500/supervision_audit/gym_ranger_force_continue9000_to12000_20261028_v1/dispatch.json",
+      "migration_copy_sha256": "f6dcdb7be24668f98cd2ea270ec9ba56b99f853a11cc4fb87290f490f1759684",
+      "migration_copy_exists": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/logs/ranger-unifp-v3-original-force-to10000-resume9500/supervision_audit/gym_ranger_force_continue9000_to12000_20261028_v1/restoration_verification.json",
+      "sha256": "59ed2c8dd9b888052dbb693b49050cb5c746fc4f3ac86322625a3a733582ca4e",
+      "bytes": 654,
+      "retained_in_project": false,
+      "migration_copy": "/home/sorry/python_ws/interactive/unifp_reproduction/ranger_512_migration/protected_log_sources/logs/ranger-unifp-v3-original-force-to10000-resume9500/supervision_audit/gym_ranger_force_continue9000_to12000_20261028_v1/restoration_verification.json",
+      "migration_copy_sha256": "59ed2c8dd9b888052dbb693b49050cb5c746fc4f3ac86322625a3a733582ca4e",
+      "migration_copy_exists": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/logs/ranger-unifp-v3-original-force-to10000-resume9500/supervision_audit/gym_ranger_force_continue9000_to12000_20261028_v1/preflight.json",
+      "sha256": "246640f810af96e2a00465c53e230aaf6f0e634984699a8f1a99b87ffbe8ea64",
+      "bytes": 414,
+      "retained_in_project": false,
+      "migration_copy": "/home/sorry/python_ws/interactive/unifp_reproduction/ranger_512_migration/protected_log_sources/logs/ranger-unifp-v3-original-force-to10000-resume9500/supervision_audit/gym_ranger_force_continue9000_to12000_20261028_v1/preflight.json",
+      "migration_copy_sha256": "246640f810af96e2a00465c53e230aaf6f0e634984699a8f1a99b87ffbe8ea64",
+      "migration_copy_exists": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/logs/ranger-unifp-v3-original-force-to10000-resume9500/supervision_audit/gym_ranger_force_continue12000_to13000_20261028_v1/run.py",
+      "sha256": "b1864fbaa8255933155b932b10918e14e7ec5433a1ec661c5e6922dad189e2df",
+      "bytes": 27002,
+      "retained_in_project": false,
+      "migration_copy": "/home/sorry/python_ws/interactive/unifp_reproduction/ranger_512_migration/protected_log_sources/logs/ranger-unifp-v3-original-force-to10000-resume9500/supervision_audit/gym_ranger_force_continue12000_to13000_20261028_v1/run.py",
+      "migration_copy_sha256": "b1864fbaa8255933155b932b10918e14e7ec5433a1ec661c5e6922dad189e2df",
+      "migration_copy_exists": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/logs/ranger-unifp-v3-original-force-to10000-resume9500/supervision_audit/gym_ranger_force_continue12000_to13000_20261028_v1/plan.json",
+      "sha256": "242a56a9a5a5cb86bcf9ea3872b2b1f9174cf87fdd65e2ed17f95cd6020d8870",
+      "bytes": 36286,
+      "retained_in_project": false,
+      "migration_copy": "/home/sorry/python_ws/interactive/unifp_reproduction/ranger_512_migration/protected_log_sources/logs/ranger-unifp-v3-original-force-to10000-resume9500/supervision_audit/gym_ranger_force_continue12000_to13000_20261028_v1/plan.json",
+      "migration_copy_sha256": "242a56a9a5a5cb86bcf9ea3872b2b1f9174cf87fdd65e2ed17f95cd6020d8870",
+      "migration_copy_exists": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/logs/ranger-unifp-v3-original-force-to10000-resume9500/supervision_audit/gym_ranger_force_continue12000_to13000_20261028_v1/dispatch.json",
+      "sha256": "cce9fe2462cbaf8990c83a6688ea55dc5aef6843571dc150c78317a174177070",
+      "bytes": 678,
+      "retained_in_project": false,
+      "migration_copy": "/home/sorry/python_ws/interactive/unifp_reproduction/ranger_512_migration/protected_log_sources/logs/ranger-unifp-v3-original-force-to10000-resume9500/supervision_audit/gym_ranger_force_continue12000_to13000_20261028_v1/dispatch.json",
+      "migration_copy_sha256": "cce9fe2462cbaf8990c83a6688ea55dc5aef6843571dc150c78317a174177070",
+      "migration_copy_exists": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/logs/ranger-unifp-v3-original-force-to10000-resume9500/supervision_audit/gym_ranger_force_continue12000_to13000_20261028_v1/restoration_verification.json",
+      "sha256": "537338bb3cf0a930c94a893040b4eb9b4805b5292781f1e5183713f3dcc48af3",
+      "bytes": 654,
+      "retained_in_project": false,
+      "migration_copy": "/home/sorry/python_ws/interactive/unifp_reproduction/ranger_512_migration/protected_log_sources/logs/ranger-unifp-v3-original-force-to10000-resume9500/supervision_audit/gym_ranger_force_continue12000_to13000_20261028_v1/restoration_verification.json",
+      "migration_copy_sha256": "537338bb3cf0a930c94a893040b4eb9b4805b5292781f1e5183713f3dcc48af3",
+      "migration_copy_exists": true
+    },
+    {
+      "original_path": "/home/sorry/python_ws/interactive/unifp_reproduction/logs/ranger-unifp-v3-original-force-to10000-resume9500/supervision_audit/gym_ranger_force_continue12000_to13000_20261028_v1/preflight.json",
+      "sha256": "c21166bb1840097cacaff34d56476b2d3baba7f3f5977dee18ab809f95fb69eb",
+      "bytes": 415,
+      "retained_in_project": false,
+      "migration_copy": "/home/sorry/python_ws/interactive/unifp_reproduction/ranger_512_migration/protected_log_sources/logs/ranger-unifp-v3-original-force-to10000-resume9500/supervision_audit/gym_ranger_force_continue12000_to13000_20261028_v1/preflight.json",
+      "migration_copy_sha256": "c21166bb1840097cacaff34d56476b2d3baba7f3f5977dee18ab809f95fb69eb",
+      "migration_copy_exists": true
+    },
+    {
+      "migration_path": "/home/sorry/python_ws/interactive/unifp_reproduction/ranger_512_migration/logic/audit_snapshot.py",
+      "sha256": "1a23960e6c9f6fbd0b7cf819c29d20be76ecd5b7f976e32d8be0ea5e85304889",
+      "bytes": 1295485
+    },
+    {
+      "migration_path": "/home/sorry/python_ws/interactive/unifp_reproduction/ranger_512_migration/logic/backend_envelope.py",
+      "sha256": "6a825e2a49428d68660967c30621be57abe2e273b36f80e7b7448254641af659",
+      "bytes": 21572
+    },
+    {
+      "migration_path": "/home/sorry/python_ws/interactive/unifp_reproduction/ranger_512_migration/logic/baseline_plan.json",
+      "sha256": "aaa093f8f3e1ba674c8aee4ef6712a66d924b652cdb5fb24ba21490261855437",
+      "bytes": 32757
+    },
+    {
+      "migration_path": "/home/sorry/python_ws/interactive/unifp_reproduction/ranger_512_migration/logic/evaluate_stage_verified.py",
+      "sha256": "84618378dbce78a08d93fd58b08b5f14fb124d1e28a2dcc56fa7e1f74dfa4045",
+      "bytes": 13190
+    },
+    {
+      "migration_path": "/home/sorry/python_ws/interactive/unifp_reproduction/ranger_512_migration/logic/final_plan.json",
+      "sha256": "22326e082ace2fd8178a38683bc8feffc70ded3ff058ea870505cef7d0d1dfcf",
+      "bytes": 37648
+    },
+    {
+      "migration_path": "/home/sorry/python_ws/interactive/unifp_reproduction/ranger_512_migration/logic/force_stage_plan.json",
+      "sha256": "328fa12a58f61ab8e417be3859f8ccd988fb8a550c5ef49b824debdc830fc93f",
+      "bytes": 3773
+    },
+    {
+      "migration_path": "/home/sorry/python_ws/interactive/unifp_reproduction/ranger_512_migration/logic/force_stage_runner.py",
+      "sha256": "0962d6481245ba9897b370156db007a02e7eaf99967ab3a1fe7eb0508346eb5d",
+      "bytes": 13761
+    },
+    {
+      "migration_path": "/home/sorry/python_ws/interactive/unifp_reproduction/ranger_512_migration/logic/ranger_512_fixedcom_baseline.py",
+      "sha256": "fe7825f6d423e2096096d24374623626f503137abc393fcc8f9dc056cd0c587e",
+      "bytes": 34437
+    },
+    {
+      "migration_path": "/home/sorry/python_ws/interactive/unifp_reproduction/ranger_512_migration/logic/ranger_force_continue_13000_to_16000.py",
+      "sha256": "f6101620dff058241fe69ee6d32471d6e85e2448d423c47f0e7a5aee680130b0",
+      "bytes": 27002
+    },
+    {
+      "migration_path": "/home/sorry/python_ws/interactive/unifp_reproduction/ranger_512_migration/logic/shape_properties.pt",
+      "sha256": "0d0a5347debba0db0ccfc709b809d5233bef6dcfe24672f392be67a48a9a0fa1",
+      "bytes": 4289
+    },
+    {
+      "migration_path": "/home/sorry/python_ws/interactive/unifp_reproduction/ranger_512_migration/logic/shape_properties_result.json",
+      "sha256": "6fc547223348698307be36d2a3fdcfa8854488d201b76c2b84617db1786337ea",
+      "bytes": 7970
+    },
+    {
+      "migration_path": "/home/sorry/python_ws/interactive/unifp_reproduction/ranger_512_migration/logic/verify_boundary.py",
+      "sha256": "abd624ff79f3645e5b2b3a3d5a4e2d71c811dcf8b7b07e68b80145e6d75cd2ae",
+      "bytes": 7783
+    },
+    {
+      "migration_path": "/home/sorry/python_ws/interactive/unifp_reproduction/ranger_512_migration/checkpoints/model_iter_008000.pt",
+      "sha256": "3ed0adc13c3dc84b87f82606160c3eb0df6e52727fb34ea089f96c686b40110e",
+      "bytes": 29298178
+    },
+    {
+      "migration_path": "/home/sorry/python_ws/interactive/unifp_reproduction/ranger_512_migration/checkpoints/model_iter_016000.pt",
+      "sha256": "498f039122bf33075d4144ebcd7a05adcd91fde9214ac761aed9def79ebabb25",
+      "bytes": 29264194
+    },
+    {
+      "retained_project_path": "/home/sorry/python_ws/interactive/unifp_reproduction/ranger_unifp_vec_env.py",
+      "sha256": "0f2db9583ffa59cfb1e0bd474dfae3ba4028f41fe274803c20f64576db9bbe1e",
+      "bytes": 15785
+    },
+    {
+      "retained_project_path": "/home/sorry/python_ws/interactive/unifp_reproduction/unifp_domain_randomization.py",
+      "sha256": "5528c7d506b53dd0b810f36758c3aca4da39913ed541eb29b3ca781874e20adf",
+      "bytes": 5503
+    },
+    {
+      "retained_project_path": "/home/sorry/python_ws/interactive/unifp_reproduction/unifp_force_curriculum.py",
+      "sha256": "6e9aaa1105aa8981604ece6f23863d3718f7052f4434c43aec1618e8b6afbddf",
+      "bytes": 5845
+    },
+    {
+      "retained_project_path": "/home/sorry/python_ws/interactive/unifp_reproduction/unifp_observations.py",
+      "sha256": "e0579b3045f4a79b6084d0a1e02305100ebd93b562a4d0efe3030eb2711a220b",
+      "bytes": 4621
+    },
+    {
+      "retained_project_path": "/home/sorry/python_ws/interactive/unifp_reproduction/unifp_task_rewards.py",
+      "sha256": "063e29401dfe8b214cbdce7e39d72c8106ee7d0546ef01994f64c19cf9b7573f",
+      "bytes": 11888
+    },
+    {
+      "retained_project_path": "/home/sorry/python_ws/interactive/unifp_reproduction/unifp_task_signals.py",
+      "sha256": "e95613d04a6752effe5c50a5b09607f3e525aaed636c351a6d6e7de60e085312",
+      "bytes": 12711
+    },
+    {
+      "retained_project_path": "/home/sorry/python_ws/interactive/unifp_reproduction/unifp_vec_env.py",
+      "sha256": "90b631a49947520ebe7b908efcb8ccd4c3172f924c17f0b3e0d2e8b9edf0511d",
+      "bytes": 20366
+    },
+    {
+      "retained_project_path": "/home/sorry/python_ws/interactive/unifp_reproduction/ranger_force_experiment_config.py",
+      "sha256": "c8852fc0969c83af76bb91a2f0a40713a022b5e61395aa4c052650d64f9fd78a",
+      "bytes": 603
+    }
+  ],
+  "updated_utc": "2026-10-29T03:42:12.231425+00:00"
+}

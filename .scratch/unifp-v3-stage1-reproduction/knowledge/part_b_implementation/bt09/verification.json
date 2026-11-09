@@ -1,0 +1,41 @@
+{
+  "status": "completed",
+  "ticket": "B-T09",
+  "tests_before_fix": "实际observer→evaluate.main guard集成回归1失败2通过，原ValueError稳定复现",
+  "tests_after_fix": "13项观察与准入回归通过",
+  "source_core_and_assets_unchanged": true,
+  "real_preflight_ready": true,
+  "resume": {
+    "status": "running",
+    "verified_at_beijing": "2026-11-08T17:29:05.930837+08:00",
+    "pid": 1981990,
+    "sid": 1981990,
+    "source": "/mnt/data_8THDD/myl_unifp_v3_stage1/validation/b_stage_20261107_r01/source_resume12000_20261108/UniFP_v3",
+    "run": "/mnt/data_8THDD/myl_unifp_v3_stage1/runs/b32000_seed1_v3_v6r2_resume12000_20261108",
+    "parent_checkpoint": "/mnt/data_8THDD/myl_unifp_v3_stage1/runs/b32000_seed1_v3_v6r2_from_a8000_20261108/checkpoints/model_012000.pt",
+    "parent_sha256": "273d4269bc37e95f879d21b178bc0380e20d2539e2d9cfd7488296f049c3146c",
+    "restore_mode": "same_stage",
+    "source_asset_config_runtime_identity_equal": true,
+    "num_envs": 4096,
+    "gpu_physical_index": 1,
+    "first_completed_iteration": 12001,
+    "latest_completed_iteration_at_verification": 12003,
+    "remaining_budget_at_resume": 28000,
+    "final_cumulative_iteration": 40000,
+    "next_effect_check_cumulative_iteration": 16000,
+    "metrics_finite": true,
+    "startup_errors_absent": true,
+    "old_12000_failed_evaluation_preserved": true,
+    "rewards_assets_force_range_unchanged": true,
+    "说明": "用户授权继续；12000完整状态same_stage恢复，实际执行原严格identity／checkpoint验证并更新至12001以上。普通奖励下降和物理失败不作全局停止条件。正式训练核心未变，单独修复观察工具的参考manifest路径。"
+  },
+  "说明": "只改观察工具受力评估的manifest参数；归档严格校验保持，观察安排以当前manifest为准。未改奖励、力范围、PPO和正常物理失败规则。续训通过原same_stage严格身份与完整checkpoint验证。未自动重试12000失败评估。",
+  "artifact_sha256": {
+    "resume_b_seed1.sh": "a1be35b71924add57cd5720c407d762fbd7440bb0e57187d19f2be15ab97a18d",
+    "resume_amendment.json": "69c0e053114d28b1296441e53c13a7c989193c130eb56964ab8739707a6a2892",
+    "审查记录.md": "11273a22824ffe6772c9d6a14e21aae888bbc9e834eb81178d359f9b00880eff",
+    "tool_hashes.sha256": "dea630c134efe6b04e441ab2acfdd4bffae88dd3356af4b53ee7742ae6819c36",
+    "launch.json": "3263889106286bdbc1c9ba6fc1cf8952941981bdd1b170a484441cc276434ac2",
+    "preflight_resume12000.json": "f0ae25b3e3c776640d6a567b193db496ce47f12e121bf095192989ddf11b2736"
+  }
+}

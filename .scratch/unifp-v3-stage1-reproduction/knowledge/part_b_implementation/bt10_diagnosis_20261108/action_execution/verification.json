@@ -1,0 +1,104 @@
+{
+  "checked_at": "2026-11-08T19:38:34.109943+08:00",
+  "source_files_and_results_sha256": {
+    "torque_requests.py": "f33482dcb87e1e336c87985855905a12070b96343a61d761a2eab7a98691b32d",
+    "collect_execution.py": "2ea72e05a4a1e6f91eb2b16914dac13190cf5e5ba03cd9daa6d4c7de265edaee",
+    "run_execution.py": "f361bf1119e40f5232876e15ef3e608b719784718168143e622fc29856660e4a",
+    "test_torque_requests.py": "72cdb191f4215f9d3ccf673147eae6f1d03c704d555e5ca9d0b65a096e73da36",
+    "check_9000_sample/summary.json": "6e5cd0b8d83078e6aa3d7e446cff3fc9997ff5381c72c00a83ff2ab73a8d5917",
+    "check_9000_sample/trace.npz": "ea963b8d6713f0e2c32c85b2ca56dbc4cfcccc75f5c8a36c649498f3414b9168",
+    "check_12000_sample/summary.json": "37c134323a0954a24257f2046c178c3397fb1cca393c549e972cfd345fef5a8f",
+    "check_12000_sample/trace.npz": "326b966bd401372357364093648c10d6716cf3b958aef9912d2e8c38e8f9ef7d",
+    "check_9000_mean/summary.json": "a0d516d968568ae6b520f69985620a47cf3bc8697bc9d9215d95bc5273645e69",
+    "check_9000_mean/trace.npz": "465800a02698746d5b742b1babe5b9c989e9d08fe0a9e9cb85f00f626c74b4b9",
+    "check_12000_mean/summary.json": "ba399997916dc2d157c90b0b4b3fb00b743d4a55add66731732de653fd3a6375",
+    "check_12000_mean/trace.npz": "43bd05f3aab6191c43bc460cfc319aa461211329f4dc14254c7d3f350daee9ba"
+  },
+  "matching_remote_files": 12,
+  "unit_tests": {
+    "test_position_velocity_and_limits": "通过",
+    "test_zero_request_at_nominal_rest": "通过",
+    "interpreter": "远程项目专用Python，未修改本机base或tavis"
+  },
+  "groups": [
+    {
+      "run": "check_12000_mean",
+      "controller_max_abs_difference_nm": 0.0,
+      "substep_state_samples_per_joint": 1024000,
+      "policy_updates": 0,
+      "checkpoint_sha256": "273d4269bc37e95f879d21b178bc0380e20d2539e2d9cfd7488296f049c3146c"
+    },
+    {
+      "run": "check_12000_sample",
+      "controller_max_abs_difference_nm": 0.0,
+      "substep_state_samples_per_joint": 1024000,
+      "policy_updates": 0,
+      "checkpoint_sha256": "273d4269bc37e95f879d21b178bc0380e20d2539e2d9cfd7488296f049c3146c"
+    },
+    {
+      "run": "check_9000_mean",
+      "controller_max_abs_difference_nm": 0.0,
+      "substep_state_samples_per_joint": 1024000,
+      "policy_updates": 0,
+      "checkpoint_sha256": "d0c64674c852300776662b389e14047e998f8444486f74db5fabea684f089b1f"
+    },
+    {
+      "run": "check_9000_sample",
+      "controller_max_abs_difference_nm": 0.0,
+      "substep_state_samples_per_joint": 1024000,
+      "policy_updates": 0,
+      "checkpoint_sha256": "d0c64674c852300776662b389e14047e998f8444486f74db5fabea684f089b1f"
+    }
+  ],
+  "python_ast_and_function_annotations": true,
+  "说明": "业务源码未修改；仅原生回放和无状态候选计算，策略更新为0。",
+  "passed": true,
+  "analysis_checks": [
+    {
+      "run": "check_9000_mean",
+      "npz_shape_finite_saturation_overlap": "通过",
+      "torque_identity_max_abs_difference_nm": 6.103515625e-05,
+      "error_squared_identity_max_abs_difference_m2": 4.0745362639427185e-08,
+      "force_onsets": {
+        "external": 362,
+        "command": 389
+      }
+    },
+    {
+      "run": "check_9000_sample",
+      "npz_shape_finite_saturation_overlap": "通过",
+      "torque_identity_max_abs_difference_nm": 6.103515625e-05,
+      "error_squared_identity_max_abs_difference_m2": 4.0978193283081055e-08,
+      "force_onsets": {
+        "external": 376,
+        "command": 390
+      }
+    },
+    {
+      "run": "check_12000_mean",
+      "npz_shape_finite_saturation_overlap": "通过",
+      "torque_identity_max_abs_difference_nm": 0.0001220703125,
+      "error_squared_identity_max_abs_difference_m2": 3.2223761081695557e-07,
+      "force_onsets": {
+        "external": 362,
+        "command": 380
+      }
+    },
+    {
+      "run": "check_12000_sample",
+      "npz_shape_finite_saturation_overlap": "通过",
+      "torque_identity_max_abs_difference_nm": 0.0001220703125,
+      "error_squared_identity_max_abs_difference_m2": 4.116445779800415e-07,
+      "force_onsets": {
+        "external": 401,
+        "command": 379
+      }
+    }
+  ],
+  "report_links_valid": true,
+  "visual_inspection": [
+    "同状态力矩分解.png",
+    "实际外力响应示例.png"
+  ],
+  "analysis_script_sha256": "c6ca770835439f918d15b8cd22f50a819a7d69cf6bb0f44e2036444c3b1875d7"
+}

@@ -1,0 +1,69 @@
+{
+  "passed": true,
+  "cases": [
+    {
+      "report": "ground_factor2_gain170_steering2_sign1.json",
+      "case": "forward",
+      "primary_mae": 0.014117541521787617,
+      "tolerance": 0.03,
+      "peak_base_contact_N": 0.0,
+      "passed": true
+    },
+    {
+      "report": "ground_factor2_gain170_steering2_sign1.json",
+      "case": "backward",
+      "primary_mae": 0.01412197870016095,
+      "tolerance": 0.03,
+      "peak_base_contact_N": 0.0,
+      "passed": true
+    },
+    {
+      "report": "ground_factor2_gain170_steering2_sign1.json",
+      "case": "lateral",
+      "primary_mae": 0.007932894989848114,
+      "tolerance": 0.03,
+      "peak_base_contact_N": 0.0,
+      "passed": true
+    },
+    {
+      "report": "ground_factor2_gain170_steering2_sign1.json",
+      "case": "yaw",
+      "primary_mae": 0.04124660679697983,
+      "tolerance": 0.05,
+      "peak_base_contact_N": 0.0,
+      "passed": true
+    },
+    {
+      "report": "ground_factor2_gain170_steering2_sign-1.json",
+      "case": "forward",
+      "primary_mae": 0.015808095484971953,
+      "tolerance": 0.03,
+      "peak_base_contact_N": 0.0,
+      "passed": true
+    },
+    {
+      "report": "ground_factor2_gain170_steering2_sign-1.json",
+      "case": "backward",
+      "primary_mae": 0.014566752761602363,
+      "tolerance": 0.03,
+      "peak_base_contact_N": 0.0,
+      "passed": true
+    },
+    {
+      "report": "ground_factor2_gain170_steering2_sign-1.json",
+      "case": "lateral",
+      "primary_mae": 0.007361384615302062,
+      "tolerance": 0.03,
+      "peak_base_contact_N": 0.0,
+      "passed": true
+    },
+    {
+      "report": "ground_factor2_gain170_steering2_sign-1.json",
+      "case": "yaw",
+      "primary_mae": 0.039031132414936914,
+      "tolerance": 0.05,
+      "peak_base_contact_N": 0.0,
+      "passed": true
+    }
+  ]
+}

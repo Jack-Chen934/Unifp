@@ -1,0 +1,9 @@
+{"step": 158, "body": "wrist_camera_connector", "visual_mm": 1.6890542850156032, "collision_mm": 1.736939658807384, "desktop_collision_mm": 0.0}
+{"step": 454, "body": "wrist_camera", "visual_mm": 6.9218574780944175, "collision_mm": 2.3832484392989954, "desktop_collision_mm": 2.232771144426735}
+{"step": 1068, "body": "wrist_camera", "visual_mm": 1.5600772553153566, "collision_mm": 0.8509778932682452, "desktop_collision_mm": 0.0}
+{"step": 1268, "body": "wrist_camera", "visual_mm": 3.013696588464845, "collision_mm": 0.0, "desktop_collision_mm": 0.0}
+{"step": 2066, "body": "arm_seg4", "visual_mm": 3.2084736648960046, "collision_mm": 0.0, "desktop_collision_mm": 0.0}
+{"step": 2103, "body": "wrist_camera", "visual_mm": 3.7355040876585615, "collision_mm": 3.3886906860949493, "desktop_collision_mm": 0.6747383502729943}
+{"step": 2112, "body": "wrist_camera", "visual_mm": 7.109466817802996, "collision_mm": 2.593838160871444, "desktop_collision_mm": 2.2387116757854693}
+{"step": 2242, "body": "wrist_camera", "visual_mm": 0.6604550667133046, "collision_mm": 0.012277580741025852, "desktop_collision_mm": 0.0}
+{"step": 2253, "body": "wrist_camera", "visual_mm": 15.739507258063748, "collision_mm": 10.67385735330179, "desktop_collision_mm": 10.494171658494857}

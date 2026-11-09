@@ -1,0 +1,14 @@
+[
+  {
+    "path": ".scratch/unifp-v3-a8000-diagnosis/artifacts/t02/v6_r2_forward.log",
+    "removed_duplicate_bytes": 1028794
+  },
+  {
+    "path": ".scratch/unifp-v3-a8000-diagnosis/artifacts/t02/v6_r2_reverse.log",
+    "removed_duplicate_bytes": 1028796
+  },
+  {
+    "path": ".scratch/unifp-v3-a8000-diagnosis/artifacts/t02/v6_r2_gain120_forward.log",
+    "removed_duplicate_bytes": 1037465
+  }
+]

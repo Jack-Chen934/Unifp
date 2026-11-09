@@ -1,0 +1,47 @@
+{
+  "S0": {
+    "sample_count_after_first_second": 91200,
+    "mean_command_planar_speed_m_s": 0.0,
+    "mean_actual_planar_speed_m_s": 0.007561112320921185,
+    "command_to_actual_projection_gains_vx_vy_yaw": [
+      null,
+      null,
+      null
+    ],
+    "command_to_actual_correlations_vx_vy_yaw": [
+      null,
+      null,
+      null
+    ]
+  },
+  "S1": {
+    "sample_count_after_first_second": 88343,
+    "mean_command_planar_speed_m_s": 0.3868090188824487,
+    "mean_actual_planar_speed_m_s": 0.05136570888397828,
+    "command_to_actual_projection_gains_vx_vy_yaw": [
+      0.09686939078711003,
+      0.03641362435153272,
+      0.1938505153461342
+    ],
+    "command_to_actual_correlations_vx_vy_yaw": [
+      0.3785261962770823,
+      0.17528749523088477,
+      0.36418618226139343
+    ]
+  },
+  "S2": {
+    "sample_count_after_first_second": 84387,
+    "mean_command_planar_speed_m_s": 0.39065418792949635,
+    "mean_actual_planar_speed_m_s": 0.05502593311375556,
+    "command_to_actual_projection_gains_vx_vy_yaw": [
+      0.09323730106835645,
+      0.0370691827290749,
+      0.18034323036591313
+    ],
+    "command_to_actual_correlations_vx_vy_yaw": [
+      0.34477669852963505,
+      0.1630115657129753,
+      0.33844823669589513
+    ]
+  }
+}

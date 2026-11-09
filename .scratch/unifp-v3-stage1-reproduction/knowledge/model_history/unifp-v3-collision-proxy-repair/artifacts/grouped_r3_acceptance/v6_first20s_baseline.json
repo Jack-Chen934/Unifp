@@ -1,0 +1,72 @@
+{
+  "S1": {
+    "source_summary": ".scratch/unifp-v3-failure-visualization/artifacts/early_sample_no_push_summary.json",
+    "source_failures": ".scratch/unifp-v3-failure-visualization/artifacts/early_sample_no_push_failures.json",
+    "checkpoint_sha256": "83c2784e52d0a89d5fc4b2e725a8df4c7c8e48de51add860e77e3186413d7102",
+    "seed": 1001,
+    "num_envs": 128,
+    "action_mode": "sample",
+    "window_policy_steps": [
+      0,
+      999
+    ],
+    "window_seconds_per_environment": 20,
+    "physical_failure_events": 2,
+    "events": [
+      {
+        "policy_step": 158,
+        "env_id": 8,
+        "predicates": {
+          "roll": false,
+          "pitch": false,
+          "base_contact": true
+        }
+      },
+      {
+        "policy_step": 454,
+        "env_id": 93,
+        "predicates": {
+          "roll": false,
+          "pitch": false,
+          "base_contact": true
+        }
+      }
+    ],
+    "note_zh": "提取既有60秒诊断的前20秒；保留自碰撞，依据原任务research记录。统计事件数，不把已结束episode或截尾样本混作总体失败率。"
+  },
+  "training": {
+    "source_summary": ".scratch/unifp-v3-failure-visualization/artifacts/early_sample_summary.json",
+    "source_failures": ".scratch/unifp-v3-failure-visualization/artifacts/early_sample_failures.json",
+    "checkpoint_sha256": "83c2784e52d0a89d5fc4b2e725a8df4c7c8e48de51add860e77e3186413d7102",
+    "seed": 1001,
+    "num_envs": 128,
+    "action_mode": "sample",
+    "window_policy_steps": [
+      0,
+      999
+    ],
+    "window_seconds_per_environment": 20,
+    "physical_failure_events": 2,
+    "events": [
+      {
+        "policy_step": 158,
+        "env_id": 8,
+        "predicates": {
+          "roll": false,
+          "pitch": false,
+          "base_contact": true
+        }
+      },
+      {
+        "policy_step": 454,
+        "env_id": 93,
+        "predicates": {
+          "roll": false,
+          "pitch": false,
+          "base_contact": true
+        }
+      }
+    ],
+    "note_zh": "提取既有60秒诊断的前20秒；保留自碰撞，依据原任务research记录。统计事件数，不把已结束episode或截尾样本混作总体失败率。"
+  }
+}

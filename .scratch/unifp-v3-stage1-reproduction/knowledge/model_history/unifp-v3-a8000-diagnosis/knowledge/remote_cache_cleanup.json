@@ -1,0 +1,233 @@
+{
+  "host": "gpu-server",
+  "removed": [
+    {
+      "path": "/mnt/data_8THDD/myl_unifp_v3_stage1/validation/collision_optimization_20261103_r02/source/UniFP_v3/legged_gym/__pycache__/__init__.cpython-38.pyc",
+      "bytes": 375,
+      "category": "python_bytecode"
+    },
+    {
+      "path": "/mnt/data_8THDD/myl_unifp_v3_stage1/validation/collision_optimization_20261103_r02/source/UniFP_v3/legged_gym/b2_gym_learn/__pycache__/__init__.cpython-38.pyc",
+      "bytes": 225,
+      "category": "python_bytecode"
+    },
+    {
+      "path": "/mnt/data_8THDD/myl_unifp_v3_stage1/validation/collision_optimization_20261103_r02/source/UniFP_v3/legged_gym/b2_gym_learn/env/__pycache__/__init__.cpython-38.pyc",
+      "bytes": 267,
+      "category": "python_bytecode"
+    },
+    {
+      "path": "/mnt/data_8THDD/myl_unifp_v3_stage1/validation/collision_optimization_20261103_r02/source/UniFP_v3/legged_gym/b2_gym_learn/env/__pycache__/vec_env.cpython-38.pyc",
+      "bytes": 1532,
+      "category": "python_bytecode"
+    },
+    {
+      "path": "/mnt/data_8THDD/myl_unifp_v3_stage1/validation/collision_optimization_20261103_r02/source/UniFP_v3/legged_gym/b2_gym_learn/ppo_cse_pf/__pycache__/actor_critic.cpython-38.pyc",
+      "bytes": 6774,
+      "category": "python_bytecode"
+    },
+    {
+      "path": "/mnt/data_8THDD/myl_unifp_v3_stage1/validation/collision_optimization_20261103_r02/source/UniFP_v3/legged_gym/b2_gym_learn/ppo_cse_pf/__pycache__/on_policy_runner.cpython-38.pyc",
+      "bytes": 7365,
+      "category": "python_bytecode"
+    },
+    {
+      "path": "/mnt/data_8THDD/myl_unifp_v3_stage1/validation/collision_optimization_20261103_r02/source/UniFP_v3/legged_gym/b2_gym_learn/ppo_cse_pf/__pycache__/ppo.cpython-38.pyc",
+      "bytes": 6287,
+      "category": "python_bytecode"
+    },
+    {
+      "path": "/mnt/data_8THDD/myl_unifp_v3_stage1/validation/collision_optimization_20261103_r02/source/UniFP_v3/legged_gym/b2_gym_learn/ppo_cse_pf/__pycache__/rollout_storage.cpython-38.pyc",
+      "bytes": 5857,
+      "category": "python_bytecode"
+    },
+    {
+      "path": "/mnt/data_8THDD/myl_unifp_v3_stage1/validation/collision_optimization_20261103_r02/source/UniFP_v3/legged_gym/b2_gym_learn/ppo_cse_pf/__pycache__/v3_actor_critic.cpython-38.pyc",
+      "bytes": 14169,
+      "category": "python_bytecode"
+    },
+    {
+      "path": "/mnt/data_8THDD/myl_unifp_v3_stage1/validation/collision_optimization_20261103_r02/source/UniFP_v3/legged_gym/b2_gym_learn/ppo_cse_pf/__pycache__/v3_episode_log.cpython-38.pyc",
+      "bytes": 3886,
+      "category": "python_bytecode"
+    },
+    {
+      "path": "/mnt/data_8THDD/myl_unifp_v3_stage1/validation/collision_optimization_20261103_r02/source/UniFP_v3/legged_gym/b2_gym_learn/ppo_cse_pf/__pycache__/v3_evaluation.cpython-38.pyc",
+      "bytes": 22600,
+      "category": "python_bytecode"
+    },
+    {
+      "path": "/mnt/data_8THDD/myl_unifp_v3_stage1/validation/collision_optimization_20261103_r02/source/UniFP_v3/legged_gym/b2_gym_learn/ppo_cse_pf/__pycache__/v3_on_policy_runner.cpython-38.pyc",
+      "bytes": 17910,
+      "category": "python_bytecode"
+    },
+    {
+      "path": "/mnt/data_8THDD/myl_unifp_v3_stage1/validation/collision_optimization_20261103_r02/source/UniFP_v3/legged_gym/b2_gym_learn/ppo_cse_pf/__pycache__/v3_ppo.cpython-38.pyc",
+      "bytes": 13707,
+      "category": "python_bytecode"
+    },
+    {
+      "path": "/mnt/data_8THDD/myl_unifp_v3_stage1/validation/collision_optimization_20261103_r02/source/UniFP_v3/legged_gym/b2_gym_learn/ppo_cse_pf/__pycache__/v3_preflight.cpython-38.pyc",
+      "bytes": 6485,
+      "category": "python_bytecode"
+    },
+    {
+      "path": "/mnt/data_8THDD/myl_unifp_v3_stage1/validation/collision_optimization_20261103_r02/source/UniFP_v3/legged_gym/b2_gym_learn/ppo_cse_pf/__pycache__/v3_rollout_storage.cpython-38.pyc",
+      "bytes": 9432,
+      "category": "python_bytecode"
+    },
+    {
+      "path": "/mnt/data_8THDD/myl_unifp_v3_stage1/validation/collision_optimization_20261103_r02/source/UniFP_v3/legged_gym/b2_gym_learn/ppo_cse_pf/__pycache__/v3_run_identity.cpython-38.pyc",
+      "bytes": 5267,
+      "category": "python_bytecode"
+    },
+    {
+      "path": "/mnt/data_8THDD/myl_unifp_v3_stage1/validation/collision_optimization_20261103_r02/source/UniFP_v3/legged_gym/b2_gym_learn/utils/__pycache__/__init__.cpython-38.pyc",
+      "bytes": 316,
+      "category": "python_bytecode"
+    },
+    {
+      "path": "/mnt/data_8THDD/myl_unifp_v3_stage1/validation/collision_optimization_20261103_r02/source/UniFP_v3/legged_gym/b2_gym_learn/utils/__pycache__/utils.cpython-38.pyc",
+      "bytes": 1987,
+      "category": "python_bytecode"
+    },
+    {
+      "path": "/mnt/data_8THDD/myl_unifp_v3_stage1/validation/collision_optimization_20261103_r02/source/UniFP_v3/legged_gym/envs/__pycache__/__init__.cpython-38.pyc",
+      "bytes": 867,
+      "category": "python_bytecode"
+    },
+    {
+      "path": "/mnt/data_8THDD/myl_unifp_v3_stage1/validation/collision_optimization_20261103_r02/source/UniFP_v3/legged_gym/envs/b2/__pycache__/b2z1_pos_force_config.cpython-38.pyc",
+      "bytes": 10609,
+      "category": "python_bytecode"
+    },
+    {
+      "path": "/mnt/data_8THDD/myl_unifp_v3_stage1/validation/collision_optimization_20261103_r02/source/UniFP_v3/legged_gym/envs/b2/__pycache__/legged_robot_b2z1_pos_force.cpython-38.pyc",
+      "bytes": 84854,
+      "category": "python_bytecode"
+    },
+    {
+      "path": "/mnt/data_8THDD/myl_unifp_v3_stage1/validation/collision_optimization_20261103_r02/source/UniFP_v3/legged_gym/envs/base/__pycache__/base_config.cpython-38.pyc",
+      "bytes": 972,
+      "category": "python_bytecode"
+    },
+    {
+      "path": "/mnt/data_8THDD/myl_unifp_v3_stage1/validation/collision_optimization_20261103_r02/source/UniFP_v3/legged_gym/envs/base/__pycache__/base_task.cpython-38.pyc",
+      "bytes": 4199,
+      "category": "python_bytecode"
+    },
+    {
+      "path": "/mnt/data_8THDD/myl_unifp_v3_stage1/validation/collision_optimization_20261103_r02/source/UniFP_v3/legged_gym/envs/base/__pycache__/legged_robot.cpython-38.pyc",
+      "bytes": 28979,
+      "category": "python_bytecode"
+    },
+    {
+      "path": "/mnt/data_8THDD/myl_unifp_v3_stage1/validation/collision_optimization_20261103_r02/source/UniFP_v3/legged_gym/envs/base/__pycache__/legged_robot_config.cpython-38.pyc",
+      "bytes": 8211,
+      "category": "python_bytecode"
+    },
+    {
+      "path": "/mnt/data_8THDD/myl_unifp_v3_stage1/validation/collision_optimization_20261103_r02/source/UniFP_v3/legged_gym/envs/v3/__pycache__/__init__.cpython-38.pyc",
+      "bytes": 254,
+      "category": "python_bytecode"
+    },
+    {
+      "path": "/mnt/data_8THDD/myl_unifp_v3_stage1/validation/collision_optimization_20261103_r02/source/UniFP_v3/legged_gym/envs/v3/__pycache__/legged_robot_v3.cpython-38.pyc",
+      "bytes": 61492,
+      "category": "python_bytecode"
+    },
+    {
+      "path": "/mnt/data_8THDD/myl_unifp_v3_stage1/validation/collision_optimization_20261103_r02/source/UniFP_v3/legged_gym/envs/v3/__pycache__/v3_pos_force_config.cpython-38.pyc",
+      "bytes": 7394,
+      "category": "python_bytecode"
+    },
+    {
+      "path": "/mnt/data_8THDD/myl_unifp_v3_stage1/validation/collision_optimization_20261103_r02/source/UniFP_v3/legged_gym/scripts/__pycache__/evaluate_v3.cpython-38.pyc",
+      "bytes": 9127,
+      "category": "python_bytecode"
+    },
+    {
+      "path": "/mnt/data_8THDD/myl_unifp_v3_stage1/validation/collision_optimization_20261103_r02/source/UniFP_v3/legged_gym/scripts/__pycache__/train_v3.cpython-38.pyc",
+      "bytes": 6132,
+      "category": "python_bytecode"
+    },
+    {
+      "path": "/mnt/data_8THDD/myl_unifp_v3_stage1/validation/collision_optimization_20261103_r02/source/UniFP_v3/legged_gym/scripts/__pycache__/v3_args.cpython-38.pyc",
+      "bytes": 1596,
+      "category": "python_bytecode"
+    },
+    {
+      "path": "/mnt/data_8THDD/myl_unifp_v3_stage1/validation/collision_optimization_20261103_r02/source/UniFP_v3/legged_gym/utils/__pycache__/__init__.cpython-38.pyc",
+      "bytes": 529,
+      "category": "python_bytecode"
+    },
+    {
+      "path": "/mnt/data_8THDD/myl_unifp_v3_stage1/validation/collision_optimization_20261103_r02/source/UniFP_v3/legged_gym/utils/__pycache__/helpers.cpython-38.pyc",
+      "bytes": 6721,
+      "category": "python_bytecode"
+    },
+    {
+      "path": "/mnt/data_8THDD/myl_unifp_v3_stage1/validation/collision_optimization_20261103_r02/source/UniFP_v3/legged_gym/utils/__pycache__/isaacgym_utils.cpython-38.pyc",
+      "bytes": 3328,
+      "category": "python_bytecode"
+    },
+    {
+      "path": "/mnt/data_8THDD/myl_unifp_v3_stage1/validation/collision_optimization_20261103_r02/source/UniFP_v3/legged_gym/utils/__pycache__/logger.cpython-38.pyc",
+      "bytes": 4083,
+      "category": "python_bytecode"
+    },
+    {
+      "path": "/mnt/data_8THDD/myl_unifp_v3_stage1/validation/collision_optimization_20261103_r02/source/UniFP_v3/legged_gym/utils/__pycache__/math.cpython-38.pyc",
+      "bytes": 1074,
+      "category": "python_bytecode"
+    },
+    {
+      "path": "/mnt/data_8THDD/myl_unifp_v3_stage1/validation/collision_optimization_20261103_r02/source/UniFP_v3/legged_gym/utils/__pycache__/task_registry.cpython-38.pyc",
+      "bytes": 5129,
+      "category": "python_bytecode"
+    },
+    {
+      "path": "/mnt/data_8THDD/myl_unifp_v3_stage1/validation/collision_optimization_20261103_r02/source/UniFP_v3/legged_gym/utils/__pycache__/terrain.cpython-38.pyc",
+      "bytes": 10869,
+      "category": "python_bytecode"
+    },
+    {
+      "path": "/mnt/data_8THDD/myl_unifp_v3_stage1/validation/collision_optimization_20261103_r02/source/UniFP_v3/legged_gym/utils/__pycache__/v3_asset_collision.cpython-38.pyc",
+      "bytes": 2665,
+      "category": "python_bytecode"
+    },
+    {
+      "path": "/mnt/data_8THDD/myl_unifp_v3_stage1/validation/collision_optimization_20261103_r02/source/UniFP_v3/legged_gym/utils/__pycache__/v3_config.cpython-38.pyc",
+      "bytes": 3151,
+      "category": "python_bytecode"
+    },
+    {
+      "path": "/mnt/data_8THDD/myl_unifp_v3_stage1/validation/collision_optimization_20261103_r02/source/UniFP_v3/tools/__pycache__/compare_desktop_fk.cpython-38.pyc",
+      "bytes": 9397,
+      "category": "python_bytecode"
+    },
+    {
+      "path": "/mnt/data_8THDD/myl_unifp_v3_stage1/diagnostics/a8000_20261104/__pycache__/probe_reset.cpython-38.pyc",
+      "bytes": 5648,
+      "category": "python_bytecode"
+    },
+    {
+      "path": "/mnt/data_8THDD/myl_unifp_v3_stage1/diagnostics/a8000_20261104/round_wheel_control/asset_manifest.json",
+      "bytes": 47898,
+      "category": "disposable_diagnostic_asset"
+    },
+    {
+      "path": "/mnt/data_8THDD/myl_unifp_v3_stage1/diagnostics/a8000_20261104/round_wheel_control/urdf/a1arm_rgm3_desktop_fixed_gripper.urdf",
+      "bytes": 54863,
+      "category": "disposable_diagnostic_asset"
+    }
+  ],
+  "deleted_bytes": 504482,
+  "retained_zh": [
+    "正式训练权重和日志、r02完整评估、旧训练归档",
+    "torch_extensions运行缓存",
+    "诊断JSON、trace、日志及生成脚本",
+    "其他用户进程和缓存"
+  ],
+  "probe_processes": []
+}

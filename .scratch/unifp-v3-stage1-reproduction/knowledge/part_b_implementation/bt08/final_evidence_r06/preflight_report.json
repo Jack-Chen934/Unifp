@@ -1,0 +1,10 @@
+{
+  "ready": true,
+  "blockers": [],
+  "formal_num_envs": 4096,
+  "diagnostics": {
+    "max_force_n": 60.0,
+    "ordinary_physical_failures_are_blockers": false,
+    "b_performance_required_of_a_parent": false
+  }
+}

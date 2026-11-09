@@ -1,0 +1,44 @@
+Importing module 'gym_38' (/mnt/data_8THDD/myl_unifp/isaacgym/python/isaacgym/_bindings/linux-x86_64/gym_38.so)
+Setting GYM_USD_PLUG_INFO_PATH to /mnt/data_8THDD/myl_unifp/isaacgym/python/isaacgym/_bindings/linux-x86_64/usd/plugInfo.json
+PyTorch version 2.3.1+cu121
+Device count 1
+/mnt/data_8THDD/myl_unifp/isaacgym/python/isaacgym/_bindings/src/gymtorch
+Using /mnt/data_8THDD/myl_unifp_v3_stage1/cache/torch_extensions as PyTorch extensions root...
+Emitting ninja build file /mnt/data_8THDD/myl_unifp_v3_stage1/cache/torch_extensions/gymtorch/build.ninja...
+Building extension module gymtorch...
+Allowing ninja to set a default number of workers... (overridable by setting the environment variable MAX_JOBS=N)
+ninja: no work to do.
+[DEBUG-bt08-contact] scenario before contact
+Not connected to PVD
++++ Using GPU PhysX
+Physics Engine: PhysX
+Physics Device: cuda:0
+GPU Pipeline: enabled
+Setting seed: 1001
+[DEBUG-bt08-contact] camera before /mnt/data_8THDD/myl_unifp_v3_stage1/validation/b_stage_20261107_r01/bt08_contact_lifecycle_probe/contact/representative_env0_episode0.mp4
+[DEBUG-bt08-contact] camera after
+[DEBUG-bt08-contact] camera before /mnt/data_8THDD/myl_unifp_v3_stage1/validation/b_stage_20261107_r01/bt08_contact_lifecycle_probe/contact/representative_env0_episode1.mp4
+[DEBUG-bt08-contact] camera after
+[DEBUG-bt08-contact] close before
+[DEBUG-bt08-contact] close after
+[DEBUG-bt08-contact] close before
+[DEBUG-bt08-contact] close after
+[DEBUG-bt08-contact] scenario after contact
+[DEBUG-bt08-contact] scenario before zero_control
+Not connected to PVD
++++ Using GPU PhysX
+Physics Engine: PhysX
+Physics Device: cuda:0
+GPU Pipeline: enabled
+Fatal Python error: Segmentation fault
+
+Current thread 0x000075eacff56740 (most recent call first):
+  File "/mnt/data_8THDD/myl_unifp_v3_stage1/validation/b_stage_20261107_r01/source_r04/UniFP_v3/legged_gym/envs/base/legged_robot.py", line 197 in create_sim
+  File "/mnt/data_8THDD/myl_unifp_v3_stage1/validation/b_stage_20261107_r01/source_r04/UniFP_v3/legged_gym/envs/v3/v3_contact_evaluation.py", line 79 in create_sim
+  File "/mnt/data_8THDD/myl_unifp_v3_stage1/validation/b_stage_20261107_r01/source_r04/UniFP_v3/legged_gym/envs/base/base_task.py", line 56 in __init__
+  File "/mnt/data_8THDD/myl_unifp_v3_stage1/validation/b_stage_20261107_r01/source_r04/UniFP_v3/legged_gym/envs/base/legged_robot.py", line 41 in __init__
+  File "/mnt/data_8THDD/myl_unifp_v3_stage1/validation/b_stage_20261107_r01/source_r04/UniFP_v3/legged_gym/envs/v3/legged_robot_v3.py", line 393 in __init__
+  File "/mnt/data_8THDD/myl_unifp_v3_stage1/validation/b_stage_20261107_r01/source_r04/UniFP_v3/legged_gym/envs/v3/v3_contact_evaluation.py", line 69 in __init__
+  File "/mnt/data_8THDD/myl_unifp_v3_stage1/validation/b_stage_20261107_r01/source_r04/UniFP_v3/legged_gym/scripts/evaluate_v3_contact.py", line 69 in evaluate_contact_scenario
+  File "/mnt/data_8THDD/myl_unifp_v3_stage1/validation/b_stage_20261107_r01/staging/probe_contact_lifecycle.py", line 70 in main
+  File "/mnt/data_8THDD/myl_unifp_v3_stage1/validation/b_stage_20261107_r01/staging/probe_contact_lifecycle.py", line 76 in <module>

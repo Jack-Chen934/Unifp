@@ -1,0 +1,41 @@
+{
+  "status": "superseded",
+  "formal_training_started": false,
+  "parent_sha256": "323a6688fe42559db1d0c545b778b456551ce0ac472f8169fec5ebce2d849dbc",
+  "completed": {
+    "unit_tests": 82,
+    "training_iterations": 10,
+    "resume_iterations": 1,
+    "completed_iteration": 8011,
+    "all_rng_verified": true,
+    "both_adam_final_steps": 160220,
+    "stress_num_envs": 4096,
+    "stress_policy_steps": 500,
+    "stress_world_force_n": [
+      60,
+      0,
+      60
+    ],
+    "stress_physical_failures": 10,
+    "force_baseline_scenarios": 14
+  },
+  "in_progress": [
+    "r05默认双组全配额接触／0N视频评估",
+    "训练器驻留时独立视频评估的状态隔离",
+    "最终准入与formal入口只读检查"
+  ],
+  "原生崩溃": "接触96episode已完整；同进程第二次create_sim SIGSEGV，两步最小复现一致；关闭视频同样两次生命周期通过。显式相机释放对照正在运行。",
+  "evidence": {
+    "train10_allrng_report.json": "1c25ae08069839adb8f2658402b037aef32072d84ecd5a9c538b8e98fdbc57b1",
+    "resume1_allrng_report.json": "c286cd064c6fbb90c4547a8a76621d2495ae52d77f8dd3325f7414507e3482e2",
+    "peak4096_xz_report.json": "325c9ab7269b4407f4753df71b69a2a66e23d5bd3adf1cefc8916bd6e0c97a5f",
+    "source_bridge.json": "a48e0daa33add983035b175113a9460a025c9d34095c9fba965790016c328b8c",
+    "unit_report.json": "391e936a8f5e158ea8924966494fc647f27970e7071165556564fcf23a232df9",
+    "contact_full_initial_summary.json": "16591f713ed0e2308253fb178e0b250abc7d32c08670f970e425eb71e71ddd4a",
+    "contact_lifecycle_red.log": "9b998bb6eaff1686bd123b2d29ccd0506d068adf3035bf89c65f69ba0f19a977"
+  },
+  "pending_confirmation": null,
+  "design_confirmation": "用户同意B11-Q2a；已实现单组独立进程，82项测试通过。",
+  "superseded_by": "verification.json",
+  "说明": "本文件保留进行中历史；最终结果及源码身份以verification.json为准。"
+}

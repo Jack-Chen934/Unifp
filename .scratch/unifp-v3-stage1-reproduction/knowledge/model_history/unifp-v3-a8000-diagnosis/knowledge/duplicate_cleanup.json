@@ -1,0 +1,24 @@
+{
+  "scope_zh": "首次归档失败目录中的三份逐字节重复大文件；正式封存目录完全保留。",
+  "deleted_bytes": 422844154,
+  "files": [
+    {
+      "deleted": "/mnt/data_8THDD/myl_unifp_v3_stage1/evaluations/a8000_seed1_v3_collision_v1_20261104/S0/checkpoint_a8000.pt",
+      "bytes": 29675066,
+      "retained": "/mnt/data_8THDD/myl_unifp_v3_stage1/evaluations/a8000_seed1_v3_collision_v1_20261104_r02/S0/checkpoint_a8000.pt",
+      "sha256": "afa062c97b6090bad076d2888ee9f39ef5c2dc3958c624485450f8c2f8b45eef"
+    },
+    {
+      "deleted": "/mnt/data_8THDD/myl_unifp_v3_stage1/evaluations/a8000_seed1_v3_collision_v1_20261104/S0/policy_trace.jsonl",
+      "bytes": 371562634,
+      "retained": "/mnt/data_8THDD/myl_unifp_v3_stage1/evaluations/a8000_seed1_v3_collision_v1_20261104_r02/S0/policy_trace.jsonl",
+      "sha256": "c79e9ecf4c8ecc4734470f75d5774019d7910a8d8c0cd5293527ad38d23a60fc"
+    },
+    {
+      "deleted": "/mnt/data_8THDD/myl_unifp_v3_stage1/evaluations/a8000_seed1_v3_collision_v1_20261104/S0/training_iterations.jsonl",
+      "bytes": 21606454,
+      "retained": "/mnt/data_8THDD/myl_unifp_v3_stage1/evaluations/a8000_seed1_v3_collision_v1_20261104_r02/S0/training_iterations.jsonl",
+      "sha256": "e3b6a692adbe8159d63feac0cbe7e1a307f1f64112a3a228b9af772fa71a0971"
+    }
+  ]
+}

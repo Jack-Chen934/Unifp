@@ -1,0 +1,15 @@
+{
+  "manifest_unchanged": true,
+  "source_files": 47,
+  "asset_files": 191,
+  "git_snapshot_commit": "6f93215118373445edd38c96b70aa5c88f17829d",
+  "git_status": "",
+  "tracked_diff_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "local_provenance": {
+    "local_repository_head": "0e615af30928e5fdcdf2059e76514d7e0d9240cc",
+    "local_repository_origin": "git@github.com:Jack-Chen934/Unifp.git",
+    "tracked_patch_sha256": "4d40db44e4e515c96a6b1e057019c0dd9eb7db31ceb44e83c0c98921460b89e5",
+    "说明": "远程验证目录将独立提交本次实际源码与活动资产；该提交为验证快照，不冒充本地历史或官方提交。新增未跟踪文件以final_manifest与远程快照提交为准。"
+  },
+  "formal_training_started": false
+}

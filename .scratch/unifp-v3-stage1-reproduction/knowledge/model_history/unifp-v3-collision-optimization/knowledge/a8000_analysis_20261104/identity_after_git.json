@@ -1,0 +1,9 @@
+{
+  "captured_at": "2026-11-04T10:46:04.479741+08:00",
+  "source_files_checked": 45,
+  "asset_files_checked": 113,
+  "mismatches": [],
+  "evaluation_time_git_commit": "9f173e3b89930086aa77558d15cbd6fecf9cdfde",
+  "git_status": "",
+  "note": "该Git提交在评估期建立，训练原身份仍以source／asset SHA256清单为准。"
+}

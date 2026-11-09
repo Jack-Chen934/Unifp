@@ -1,0 +1,70 @@
+{
+  "asset": "UniFP_v3/resources/robots/v3_a1_desktop_train_v6_coplanar_r2",
+  "urdf_sha256": "bbbff3c20cb87e0a94ffb6c844ae9450c50380eb51216ff4b61dd9aed63de773",
+  "manifest_sha256": "1e0f6541e9f2ed34a50d19108cf2bfb0d3c31091a5aa18ed2e7181fbe82abe69",
+  "base_height_m": 0.34,
+  "joint_positions_rad": {
+    "arm_joint2": 1.0,
+    "arm_joint3": -1.5
+  },
+  "view_specs": [
+    [
+      "perspective",
+      [
+        2.5,
+        -3.3,
+        2.2
+      ],
+      [
+        0.0,
+        0.0,
+        0.77
+      ],
+      0.9,
+      [
+        1100,
+        1200
+      ],
+      false
+    ],
+    [
+      "side",
+      [
+        0.0,
+        -4.0,
+        0.77
+      ],
+      [
+        0.0,
+        0.0,
+        0.77
+      ],
+      0.88,
+      [
+        1000,
+        690
+      ],
+      false
+    ],
+    [
+      "wheel_detail",
+      [
+        1.4,
+        -1.9,
+        0.95
+      ],
+      [
+        0.0,
+        0.0,
+        0.16
+      ],
+      0.4,
+      [
+        1000,
+        560
+      ],
+      true
+    ]
+  ],
+  "note_zh": "从当前候选真实网格渲染，非仿真截图；橙色仅突出滚动碰撞分片，未放大补偿。"
+}

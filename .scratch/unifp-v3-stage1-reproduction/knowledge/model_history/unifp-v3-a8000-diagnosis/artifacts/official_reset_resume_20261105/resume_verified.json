@@ -1,0 +1,44 @@
+{
+  "checked_at": "2026-11-05T10:25:19.486092+08:00",
+  "started_at": "2026-11-05T10:22:58+08:00",
+  "pid": 691117,
+  "process_alive": true,
+  "run": "/mnt/data_8THDD/myl_unifp_v3_stage1/runs/a8000_seed1_v3_v6r2_resume0767_20261105",
+  "resume_from_iteration": 767,
+  "first_resumed_iteration": 768,
+  "latest_completed_iteration": 774,
+  "new_iterations_verified": 7,
+  "training_policy_steps": 18576,
+  "training_transitions": 76087296,
+  "target_total_iterations": 8000,
+  "remaining_iterations": 7226,
+  "identity_matches_parent": true,
+  "finite_metrics": true,
+  "failure_file_present": false,
+  "lineage": {
+    "run_id": "a8000_seed1_v3_v6r2_resume0767_20261105",
+    "reproduction_part": "A",
+    "parent_checkpoint_path": "/mnt/data_8THDD/myl_unifp_v3_stage1/runs/a8000_seed1_v3_v6r2_20261104/checkpoints/model_000767.pt",
+    "parent_checkpoint_sha256": "3b3e65c26c851ce743ef27c5c1620eb2ebc73459a72dd8f3158df669444fc8fc"
+  },
+  "resume_episode_policy": "all new episodes after persistent-state and RNG restore",
+  "physical_gpu": 1,
+  "num_envs": 4096,
+  "observed_iteration_timings_s": [
+    {
+      "completed_iterations": 772,
+      "collection_s": 11.361617539077997,
+      "update_s": 0.6369410366751254
+    },
+    {
+      "completed_iterations": 773,
+      "collection_s": 11.853052663151175,
+      "update_s": 0.6550188669934869
+    },
+    {
+      "completed_iterations": 774,
+      "collection_s": 10.484411646146327,
+      "update_s": 0.6404051478020847
+    }
+  ]
+}

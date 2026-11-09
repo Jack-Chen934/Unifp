@@ -1,0 +1,143 @@
+{
+  "scenario_name": "S1",
+  "checkpoint_iteration": 8000,
+  "trace_policy_steps": 93143,
+  "episodes": {
+    "completed": 96,
+    "expected": 96,
+    "completion_rate": 1.0,
+    "physical_failures": 4,
+    "timeouts": 92,
+    "failure_denominator": 96,
+    "physical_failure_rate": 0.041666666666666664
+  },
+  "metrics": {
+    "tcp_geometric_l1_m": {
+      "mean": 0.07211305107163449,
+      "p95": 0.13671611547470067,
+      "sample_count": 93143
+    },
+    "tcp_geometric_l2_m": {
+      "mean": 0.04871489504947432,
+      "p95": 0.09116935953497883,
+      "sample_count": 93143
+    },
+    "base_planar_speed_m_s": {
+      "mean": 0.36154885345709165,
+      "p95": 0.6070896685123444,
+      "sample_count": 93143
+    },
+    "base_yaw_rate_rad_s": {
+      "mean": 0.26317099730977755,
+      "p95": 0.5613494217395781,
+      "sample_count": 93143
+    },
+    "episode_reward_return": {
+      "mean": 100.04452682534854,
+      "p95": 110.63434600830078,
+      "sample_count": 96
+    },
+    "episode_reward_rate": {
+      "mean": 5.137672159244178,
+      "p95": 5.548591833157655,
+      "sample_count": 96
+    },
+    "state_estimation_base_velocity_tcp_mae_rmse": {
+      "mae_by_dimension": [
+        0.01647894815328319,
+        0.013213567880938885,
+        0.009406639312869003,
+        0.016736785870692508,
+        0.020004653699297086,
+        0.02279602227928343
+      ],
+      "rmse_by_dimension": [
+        0.027568214670204098,
+        0.0202220646320772,
+        0.01760826905446257,
+        0.0248816731093542,
+        0.030420819829292026,
+        0.08557930565340092
+      ],
+      "dimensions": [
+        "base_vx_m_s",
+        "base_vy_m_s",
+        "base_vz_m_s",
+        "tcp_radius_m",
+        "tcp_elevation_rad",
+        "tcp_azimuth_rad"
+      ]
+    },
+    "state_estimation/base_vx_m_s_mae": {
+      "mean": 0.01647894815328319
+    },
+    "state_estimation/base_vx_m_s_rmse": {
+      "mean": 0.027568214670204098
+    },
+    "state_estimation/base_vy_m_s_mae": {
+      "mean": 0.013213567880938885
+    },
+    "state_estimation/base_vy_m_s_rmse": {
+      "mean": 0.0202220646320772
+    },
+    "state_estimation/base_vz_m_s_mae": {
+      "mean": 0.009406639312869003
+    },
+    "state_estimation/base_vz_m_s_rmse": {
+      "mean": 0.01760826905446257
+    },
+    "state_estimation/tcp_radius_m_mae": {
+      "mean": 0.016736785870692508
+    },
+    "state_estimation/tcp_radius_m_rmse": {
+      "mean": 0.0248816731093542
+    },
+    "state_estimation/tcp_elevation_rad_mae": {
+      "mean": 0.020004653699297086
+    },
+    "state_estimation/tcp_elevation_rad_rmse": {
+      "mean": 0.030420819829292026
+    },
+    "state_estimation/tcp_azimuth_rad_mae": {
+      "mean": 0.02279602227928343
+    },
+    "state_estimation/tcp_azimuth_rad_rmse": {
+      "mean": 0.08557930565340092
+    },
+    "physical_failure_rate": {
+      "mean": 0.041666666666666664
+    },
+    "target_movement_phase_elapsed_rate": {
+      "mean": 0.370494830529401,
+      "sample_count": 93143
+    }
+  },
+  "threshold_version": "v3-a-initial-v1",
+  "threshold_results": {
+    "tcp_geometric_l2_m": true,
+    "tcp_geometric_l1_m": true,
+    "base_planar_speed_m_s": false,
+    "base_yaw_rate_rad_s": false,
+    "physical_failure_rate": true,
+    "state_estimation/base_vx_m_s_mae": true,
+    "state_estimation/base_vy_m_s_mae": true,
+    "state_estimation/base_vz_m_s_mae": true,
+    "state_estimation/tcp_radius_m_mae": true,
+    "state_estimation/tcp_elevation_rad_mae": true,
+    "state_estimation/tcp_azimuth_rad_mae": true
+  },
+  "push_recovery_windows": [],
+  "paper_comparison_scope": {
+    "fig_3b": "V3逐维TCP球坐标与底盘速度估计误差分布；单位见维度标签",
+    "fig_3b_limit": "资产、目标分布和环境协议不同；不重建论文未公开的原始数据点",
+    "fig_3c_fig_3d": "受力仿真与实机结果不属于本A阶段评估"
+  },
+  "evidence_complete": true,
+  "assessment": "ungraded_or_incomplete",
+  "evaluation_device": "cuda:0",
+  "evaluation_environment_count": 32,
+  "evaluation_seed": 1001,
+  "push_seed": 2001,
+  "policy_updates": 0,
+  "checkpoint_sha256": "afa062c97b6090bad076d2888ee9f39ef5c2dc3958c624485450f8c2f8b45eef"
+}

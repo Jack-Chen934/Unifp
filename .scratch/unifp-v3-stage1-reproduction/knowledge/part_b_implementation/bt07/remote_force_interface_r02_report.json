@@ -1,0 +1,103 @@
+{
+  "segments": [
+    {
+      "world_force_n": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "policy_steps": 250,
+      "physical_failures": 0
+    },
+    {
+      "world_force_n": [
+        10.0,
+        0.0,
+        0.0
+      ],
+      "policy_steps": 250,
+      "physical_failures": 0
+    },
+    {
+      "world_force_n": [
+        -10.0,
+        0.0,
+        0.0
+      ],
+      "policy_steps": 250,
+      "physical_failures": 0
+    },
+    {
+      "world_force_n": [
+        0.0,
+        10.0,
+        0.0
+      ],
+      "policy_steps": 250,
+      "physical_failures": 0
+    },
+    {
+      "world_force_n": [
+        0.0,
+        -10.0,
+        0.0
+      ],
+      "policy_steps": 250,
+      "physical_failures": 0
+    },
+    {
+      "world_force_n": [
+        0.0,
+        0.0,
+        10.0
+      ],
+      "policy_steps": 250,
+      "physical_failures": 0
+    },
+    {
+      "world_force_n": [
+        0.0,
+        0.0,
+        -10.0
+      ],
+      "policy_steps": 250,
+      "physical_failures": 0
+    }
+  ],
+  "local_reset_isolated": true,
+  "num_envs": 4,
+  "tool_body_indices": [
+    8,
+    36,
+    64,
+    92
+  ],
+  "torque_argument": null,
+  "force_frame": "GLOBAL_SPACE",
+  "policy_steps": 1750,
+  "free_body": {
+    "mass_kg": 1.0,
+    "steps": 40,
+    "expected_vx_m_s": 0.9999999776482582,
+    "actual_velocity_m_s": [
+      0.9999993443489075,
+      0.0,
+      0.0
+    ],
+    "relative_error": 6.332993648938693e-07,
+    "angular_increment_rad_s": 0.0,
+    "torque_argument": null
+  },
+  "runtime": {
+    "python": "3.8.20",
+    "torch": "2.3.1+cu121",
+    "sim_device": "cuda:1",
+    "rl_device": "cuda:1",
+    "physx_gpu": true,
+    "gpu_pipeline": true
+  },
+  "source_sha256": {
+    "tools/check_v3_force_runtime.py": "d67926ac1462a9ec6bd148f4d293be764520ef3f4062c2a1d085cafb65d7a1b0",
+    "legged_gym/envs/v3/legged_robot_v3.py": "558295945e22af4091a196e1f53ce9fafdcc6c898bc0ccf205578381329836ca"
+  }
+}

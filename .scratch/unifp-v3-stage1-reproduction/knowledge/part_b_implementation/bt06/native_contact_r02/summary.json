@@ -1,0 +1,10 @@
+{
+  "scenarios": {
+    "contact": "smoke_only",
+    "zero_control": "smoke_only"
+  },
+  "policy_updates": 0,
+  "checkpoint_sha256": "8b70105696f0237e03e02401808a9525e8bad9d0efbee50265e5637c8bba6775",
+  "evaluation_manifest_sha256": "5860c2d8fcbd68c231ff87a9cf78434ad4ae507c5cab87f76252e3f937768ef8",
+  "smoke": true
+}

@@ -1,0 +1,24 @@
+{
+  "storage_sha256": "da9fe9964828a1fdb1248b78203dd2bf21f2f8ab2c4a471c844cfcf4c46ca7df",
+  "results": [
+    {
+      "iteration": 9000,
+      "blocks": 83,
+      "maximum_raw_error": 5.999838873400887e-06,
+      "maximum_normalized_error": 4.337561995831907e-05
+    },
+    {
+      "iteration": 12000,
+      "blocks": 83,
+      "maximum_raw_error": 5.248592474388358e-06,
+      "maximum_normalized_error": 1.6700834719829416e-05
+    },
+    {
+      "iteration": 16000,
+      "blocks": 83,
+      "maximum_raw_error": 4.667882915754262e-06,
+      "maximum_normalized_error": 1.9233971340737455e-05
+    }
+  ],
+  "passed": true
+}

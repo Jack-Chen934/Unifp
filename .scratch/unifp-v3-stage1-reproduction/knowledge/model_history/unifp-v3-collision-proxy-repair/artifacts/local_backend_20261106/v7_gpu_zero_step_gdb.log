@@ -1,0 +1,153 @@
+gdb: /home/sorry/.cache/unifp/isaacgym_preview4/py38/lib/libncursesw.so.6: no version information available (required by gdb)
+gdb: /home/sorry/.cache/unifp/isaacgym_preview4/py38/lib/libncursesw.so.6: no version information available (required by gdb)
+gdb: /home/sorry/.cache/unifp/isaacgym_preview4/py38/lib/libncursesw.so.6: no version information available (required by gdb)
+gdb: /home/sorry/.cache/unifp/isaacgym_preview4/py38/lib/libtinfo.so.6: no version information available (required by gdb)
+/usr/bin/zsh: /home/sorry/.cache/unifp/isaacgym_preview4/py38/lib/libtinfo.so.6: no version information available (required by /usr/bin/zsh)
+
+This GDB supports auto-downloading debuginfo from the following URLs:
+  <https://debuginfod.ubuntu.com>
+Enable debuginfod for this session? (y or [n]) [answered N; input not from terminal]
+Debuginfod has been disabled.
+To make this setting permanent, add 'set debuginfod enabled off' to .gdbinit.
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/usr/lib/x86_64-linux-gnu/libthread_db.so.1".
+[New Thread 0x7fffe77ff6c0 (LWP 82676)]
+[New Thread 0x7fffe6ffe6c0 (LWP 82677)]
+[New Thread 0x7fffe25ff6c0 (LWP 82678)]
+[New Thread 0x7fffe1dfe6c0 (LWP 82679)]
+[New Thread 0x7fffdf3ff6c0 (LWP 82680)]
+[New Thread 0x7fffdc9ff6c0 (LWP 82681)]
+[New Thread 0x7fffd9fff6c0 (LWP 82682)]
+[New Thread 0x7fffd75ff6c0 (LWP 82683)]
+[New Thread 0x7fffd4bff6c0 (LWP 82684)]
+[New Thread 0x7fffd21ff6c0 (LWP 82685)]
+[New Thread 0x7fffcf7ff6c0 (LWP 82686)]
+[New Thread 0x7fffccdff6c0 (LWP 82687)]
+[New Thread 0x7fffca3ff6c0 (LWP 82688)]
+[New Thread 0x7fffc79ff6c0 (LWP 82689)]
+[New Thread 0x7fffc4fff6c0 (LWP 82690)]
+[New Thread 0x7fffc25ff6c0 (LWP 82691)]
+[New Thread 0x7fffbfbff6c0 (LWP 82692)]
+[New Thread 0x7fffbd1ff6c0 (LWP 82693)]
+[New Thread 0x7fffba7ff6c0 (LWP 82694)]
+[New Thread 0x7fffb7dff6c0 (LWP 82695)]
+[New Thread 0x7fffb53ff6c0 (LWP 82696)]
+[New Thread 0x7fffb29ff6c0 (LWP 82697)]
+[New Thread 0x7fffaffff6c0 (LWP 82698)]
+[New Thread 0x7fffab5ff6c0 (LWP 82699)]
+[New Thread 0x7fffaadfe6c0 (LWP 82700)]
+[New Thread 0x7fffa83ff6c0 (LWP 82701)]
+[New Thread 0x7fffa59ff6c0 (LWP 82702)]
+[New Thread 0x7fffa2fff6c0 (LWP 82703)]
+[New Thread 0x7fffa05ff6c0 (LWP 82704)]
+[New Thread 0x7fff9dbff6c0 (LWP 82705)]
+[New Thread 0x7fff9b1ff6c0 (LWP 82706)]
+[Thread 0x7fff9b1ff6c0 (LWP 82706) exited]
+[Thread 0x7fff9dbff6c0 (LWP 82705) exited]
+[Thread 0x7fffa05ff6c0 (LWP 82704) exited]
+[Thread 0x7fffa2fff6c0 (LWP 82703) exited]
+[Thread 0x7fffa83ff6c0 (LWP 82701) exited]
+[Thread 0x7fffaadfe6c0 (LWP 82700) exited]
+[Thread 0x7fffab5ff6c0 (LWP 82699) exited]
+[Thread 0x7fffb29ff6c0 (LWP 82697) exited]
+[Thread 0x7fffb53ff6c0 (LWP 82696) exited]
+[Thread 0x7fffb7dff6c0 (LWP 82695) exited]
+[Thread 0x7fffba7ff6c0 (LWP 82694) exited]
+[Thread 0x7fffbd1ff6c0 (LWP 82693) exited]
+[Thread 0x7fffbfbff6c0 (LWP 82692) exited]
+[Thread 0x7fffc25ff6c0 (LWP 82691) exited]
+[Thread 0x7fffc4fff6c0 (LWP 82690) exited]
+[Thread 0x7fffc79ff6c0 (LWP 82689) exited]
+[Thread 0x7fffca3ff6c0 (LWP 82688) exited]
+[Thread 0x7fffccdff6c0 (LWP 82687) exited]
+[Thread 0x7fffcf7ff6c0 (LWP 82686) exited]
+[Thread 0x7fffd21ff6c0 (LWP 82685) exited]
+[Thread 0x7fffd4bff6c0 (LWP 82684) exited]
+[Thread 0x7fffd75ff6c0 (LWP 82683) exited]
+[Thread 0x7fffd9fff6c0 (LWP 82682) exited]
+[Thread 0x7fffdc9ff6c0 (LWP 82681) exited]
+[Thread 0x7fffdf3ff6c0 (LWP 82680) exited]
+[Thread 0x7fffe1dfe6c0 (LWP 82679) exited]
+[Thread 0x7fffe25ff6c0 (LWP 82678) exited]
+[Thread 0x7fffe6ffe6c0 (LWP 82677) exited]
+[Thread 0x7fffe77ff6c0 (LWP 82676) exited]
+[Thread 0x7fffaffff6c0 (LWP 82698) exited]
+[Thread 0x7fffa59ff6c0 (LWP 82702) exited]
+[Detaching after fork from child process 82707]
+Importing module 'gym_38' (/home/sorry/.cache/unifp/isaacgym_preview4/pkg/isaacgym/python/isaacgym/_bindings/linux-x86_64/gym_38.so)
+Setting GYM_USD_PLUG_INFO_PATH to /home/sorry/.cache/unifp/isaacgym_preview4/pkg/isaacgym/python/isaacgym/_bindings/linux-x86_64/usd/plugInfo.json
+[native-probe] create_sim
+[New Thread 0x7fff9b1ff6c0 (LWP 82709)]
+[New Thread 0x7fff9dbff6c0 (LWP 82710)]
+[New Thread 0x7fffa05ff6c0 (LWP 82711)]
+[New Thread 0x7fffa2fff6c0 (LWP 82712)]
+[New Thread 0x7fffd1bff6c0 (LWP 82713)]
+[New Thread 0x7fffb29ff6c0 (LWP 82714)]
+[New Thread 0x7fffb27fe6c0 (LWP 82715)]
+Not connected to PVD
++++ Using GPU PhysX
+Physics Engine: PhysX
+Physics Device: cuda:0
+GPU Pipeline: disabled
+[native-probe] load_asset
+[native-probe] actor {"base_link": 68, "aluminum_profiles": 9, "arm_base": 1, "arm_seg1": 1, "arm_seg2": 2, "arm_seg3": 2, "arm_seg4": 2, "arm_seg5": 2, "arm_seg6": 1, "end_effector_link": 0, "gripper1": 2, "gripper2": 2, "wrist_camera_connector": 1, "wrist_camera": 1, "left_camera_connector": 1, "left_camera": 1, "rear_top_camera_connector": 1, "rear_top_camera": 1, "right_camera_connector": 1, "right_camera": 1, "bl_steering_link": 2, "bl_Link": 17, "br_steering_link": 2, "br_Link": 17, "fl_steering_link": 2, "fl_Link": 17, "fr_steering_link": 2, "fr_Link": 17}
+[native-probe] apply_filters
+[native-probe] filters_complete
+[native-probe] set_dof_before_prepare
+[native-probe] prepare_sim
+[native-probe] simulate
+[native-probe] simulation_complete
+[native-probe] destroy_sim
+free(): invalid size
+
+Thread 1 "python" received signal SIGABRT, Aborted.
+__pthread_kill_implementation (threadid=<optimized out>, signo=6, no_tid=0) at ./nptl/pthread_kill.c:44
+warning: 44	./nptl/pthread_kill.c: No such file or directory
+
+Thread 39 (Thread 0x7fffb27fe6c0 (LWP 82715) "python"):
+#0  __syscall_cancel_arch () at ../sysdeps/unix/sysv/linux/x86_64/syscall_cancel.S:56
+#1  0x00007ffff7ca030c in __internal_syscall_cancel (a1=a1@entry=33057048, a2=<optimized out>, a3=a3@entry=2512478073, a4=a4@entry=0, a5=a5@entry=0, a6=a6@entry=4294967295, nr=202) at ./nptl/cancellation.c:49
+#2  0x00007ffff7ca06e7 in __futex_abstimed_wait_common64 (private=0, futex_word=0x1f86918, expected=2512478073, op=393, abstime=0x0, cancel=true) at ./nptl/futex-internal.c:57
+#3  __futex_abstimed_wait_common (futex_word=0x1f86918, expected=2512478073, clockid=0, abstime=0x0, private=0, cancel=true) at ./nptl/futex-internal.c:87
+
+Thread 38 (Thread 0x7fffb29ff6c0 (LWP 82714) "python"):
+#0  __syscall_cancel_arch () at ../sysdeps/unix/sysv/linux/x86_64/syscall_cancel.S:56
+#1  0x00007ffff7ca030c in __internal_syscall_cancel (a1=a1@entry=33057048, a2=<optimized out>, a3=a3@entry=198, a4=a4@entry=0, a5=a5@entry=0, a6=a6@entry=4294967295, nr=202) at ./nptl/cancellation.c:49
+#2  0x00007ffff7ca06e7 in __futex_abstimed_wait_common64 (private=0, futex_word=0x1f86918, expected=198, op=393, abstime=0x0, cancel=true) at ./nptl/futex-internal.c:57
+#3  __futex_abstimed_wait_common (futex_word=0x1f86918, expected=198, clockid=0, abstime=0x0, private=0, cancel=true) at ./nptl/futex-internal.c:87
+
+Thread 37 (Thread 0x7fffd1bff6c0 (LWP 82713) "python"):
+#0  __syscall_cancel_arch () at ../sysdeps/unix/sysv/linux/x86_64/syscall_cancel.S:56
+#1  0x00007ffff7ca030c in __internal_syscall_cancel (a1=a1@entry=33057048, a2=<optimized out>, a3=a3@entry=437918234, a4=a4@entry=0, a5=a5@entry=0, a6=a6@entry=4294967295, nr=202) at ./nptl/cancellation.c:49
+#2  0x00007ffff7ca06e7 in __futex_abstimed_wait_common64 (private=0, futex_word=0x1f86918, expected=437918234, op=393, abstime=0x0, cancel=true) at ./nptl/futex-internal.c:57
+#3  __futex_abstimed_wait_common (futex_word=0x1f86918, expected=437918234, clockid=0, abstime=0x0, private=0, cancel=true) at ./nptl/futex-internal.c:87
+
+Thread 36 (Thread 0x7fffa2fff6c0 (LWP 82712) "python"):
+#0  __syscall_cancel_arch () at ../sysdeps/unix/sysv/linux/x86_64/syscall_cancel.S:56
+#1  0x00007ffff7ca030c in __internal_syscall_cancel (a1=a1@entry=33057048, a2=<optimized out>, a3=a3@entry=1094795585, a4=a4@entry=0, a5=a5@entry=0, a6=a6@entry=4294967295, nr=202) at ./nptl/cancellation.c:49
+#2  0x00007ffff7ca06e7 in __futex_abstimed_wait_common64 (private=0, futex_word=0x1f86918, expected=1094795585, op=393, abstime=0x0, cancel=true) at ./nptl/futex-internal.c:57
+#3  __futex_abstimed_wait_common (futex_word=0x1f86918, expected=1094795585, clockid=0, abstime=0x0, private=0, cancel=true) at ./nptl/futex-internal.c:87
+
+Thread 35 (Thread 0x7fffa05ff6c0 (LWP 82711) "cuda-EvtHandlr"):
+#0  __syscall_cancel_arch () at ../sysdeps/unix/sysv/linux/x86_64/syscall_cancel.S:56
+#1  0x00007ffff7ca039c in __internal_syscall_cancel (a1=<optimized out>, a2=<optimized out>, a3=<optimized out>, a4=0, a5=0, a6=0, nr=7) at ./nptl/cancellation.c:49
+#2  __syscall_cancel (a1=<optimized out>, a2=<optimized out>, a3=<optimized out>, a4=a4@entry=0, a5=a5@entry=0, a6=a6@entry=0, nr=7) at ./nptl/cancellation.c:75
+#3  0x00007ffff7d27c0e in __GI___poll (fds=<optimized out>, nfds=<optimized out>, timeout=<optimized out>) at ../sysdeps/unix/sysv/linux/poll.c:29
+
+Thread 34 (Thread 0x7fff9dbff6c0 (LWP 82710) "python"):
+#0  __syscall_cancel_arch () at ../sysdeps/unix/sysv/linux/x86_64/syscall_cancel.S:56
+#1  0x00007ffff7ca030c in __internal_syscall_cancel (a1=a1@entry=15138664, a2=<optimized out>, a3=a3@entry=4294945072, a4=a4@entry=8392704, a5=a5@entry=0, a6=a6@entry=4294967295, nr=202) at ./nptl/cancellation.c:49
+#2  0x00007ffff7ca06e7 in __futex_abstimed_wait_common64 (private=0, futex_word=0xe6ff68, expected=4294945072, op=8388233, abstime=0x801000, cancel=true) at ./nptl/futex-internal.c:57
+#3  __futex_abstimed_wait_common (futex_word=0xe6ff68, expected=4294945072, clockid=32767, abstime=0x801000, private=0, cancel=true) at ./nptl/futex-internal.c:87
+
+Thread 33 (Thread 0x7fff9b1ff6c0 (LWP 82709) "cuda00001400006"):
+#0  __syscall_cancel_arch () at ../sysdeps/unix/sysv/linux/x86_64/syscall_cancel.S:56
+#1  0x00007ffff7ca039c in __internal_syscall_cancel (a1=<optimized out>, a2=<optimized out>, a3=<optimized out>, a4=0, a5=0, a6=0, nr=7) at ./nptl/cancellation.c:49
+#2  __syscall_cancel (a1=<optimized out>, a2=<optimized out>, a3=<optimized out>, a4=a4@entry=0, a5=a5@entry=0, a6=a6@entry=0, nr=7) at ./nptl/cancellation.c:75
+#3  0x00007ffff7d27c0e in __GI___poll (fds=<optimized out>, nfds=<optimized out>, timeout=<optimized out>) at ../sysdeps/unix/sysv/linux/poll.c:29
+
+Thread 1 (Thread 0x7ffff7e54740 (LWP 82673) "python"):
+#0  __pthread_kill_implementation (threadid=<optimized out>, signo=6, no_tid=0) at ./nptl/pthread_kill.c:44
+#1  __pthread_kill_internal (threadid=<optimized out>, signo=6) at ./nptl/pthread_kill.c:89
+#2  __GI___pthread_kill (threadid=<optimized out>, signo=signo@entry=6) at ./nptl/pthread_kill.c:100
+#3  0x00007ffff7c45b7e in __GI_raise (sig=sig@entry=6) at ../sysdeps/posix/raise.c:26

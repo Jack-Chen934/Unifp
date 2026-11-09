@@ -1,0 +1,162 @@
+{
+  "status": "completed",
+  "parent_sha256": "323a6688fe42559db1d0c545b778b456551ce0ac472f8169fec5ebce2d849dbc",
+  "checks": {
+    "G1_local": {
+      "status": "passed",
+      "report": "local_force_interface_r02/report.json",
+      "runtime": {
+        "python": "3.8.20",
+        "torch": "2.3.1+cu121",
+        "sim_device": "cuda:0",
+        "rl_device": "cpu",
+        "physx_gpu": true,
+        "gpu_pipeline": false
+      }
+    },
+    "G1_remote": {
+      "status": "passed",
+      "report": "remote_force_interface_r02_report.json",
+      "runtime": {
+        "python": "3.8.20",
+        "torch": "2.3.1+cu121",
+        "sim_device": "cuda:1",
+        "rl_device": "cuda:1",
+        "physx_gpu": true,
+        "gpu_pipeline": true
+      }
+    },
+    "G3_local": {
+      "status": "passed",
+      "report": "local_contact_interface_r02/report.json",
+      "runtime": {
+        "python": "3.8.20",
+        "torch": "2.3.1+cu121",
+        "sim_device": "cuda:0",
+        "rl_device": "cpu",
+        "physx_gpu": true,
+        "gpu_pipeline": false
+      }
+    },
+    "G3_remote": {
+      "status": "passed",
+      "report": "remote_contact_interface_r01_report.json",
+      "runtime": {
+        "python": "3.8.20",
+        "torch": "2.3.1+cu121",
+        "sim_device": "cuda:3",
+        "rl_device": "cuda:3",
+        "physx_gpu": true,
+        "gpu_pipeline": true
+      }
+    },
+    "G2_range_scan": {
+      "status": "completed",
+      "report": "range_scan_r01_report.json",
+      "peak_n": [
+        10,
+        20,
+        40,
+        60
+      ],
+      "direction_coverage_complete": true,
+      "longest_near_limit_at_60n_s": 1.22,
+      "physical_failures_at_60n": 2,
+      "repeat60": {
+        "status": "complete",
+        "seeds": [
+          1001,
+          1002
+        ],
+        "reports": [
+          "range60_repeat_r03/seed1001_report.json",
+          "range60_repeat_r03/seed1002_report.json"
+        ]
+      },
+      "range_decision": "confirmed_official_60n"
+    },
+    "A_zero_regression": {
+      "status": "passed",
+      "report": "a_zero_regression_comparison.json",
+      "episodes_per_scenario": 96,
+      "total_episodes": 288,
+      "policy_updates": 0,
+      "historical_mean_deltas_zero": true
+    }
+  },
+  "invalid_attempts": [
+    {
+      "path": "local_contact_interface",
+      "reason": "与本机G1同时执行造成PhysX显存分配失败；状态完全不演化、全部接触为零，不能用于模型结论。串行r02已通过。"
+    }
+  ],
+  "remote_storage": {
+    "root_available_bytes": 0,
+    "work_root": "/mnt/data_8THDD/myl_unifp_v3_stage1/validation/b_stage_20261107_r01",
+    "temporary_root": "/mnt/data_8THDD/myl_unifp_v3_stage1/cache/b_tmp"
+  },
+  "说明": "G1/G3工程验收与范围扫描完成；用户确认保留±60N，两份manifest已冻结。正式B训练尚未启动。",
+  "unit_tests": {
+    "status": "passed",
+    "count": 75,
+    "log": "unit_r04.log"
+  },
+  "random_stream_followup": {
+    "status": "passed",
+    "archive": "local_random_force_r02",
+    "trace_samples": 1000,
+    "previous_external_phase_pairing_verified": true,
+    "fixed_axis_groups_absent": true,
+    "policy_updates": 0,
+    "reason": "流式二次消费错误已修复，使用原始trace重汇总并通过迭代器回归。",
+    "report": "random_stream_summary_r03.json",
+    "stream_sample_counts": {
+      "command": 1000,
+      "external": 1000
+    },
+    "report_only_reprocessing": true
+  },
+  "open_items": [
+    "B-T08远程4096环境10+1轮、准入与全基准，正式B32000尚未启动。"
+  ],
+  "review": {
+    "checks": "75项V3测试通过；流式统计生成器回归通过；原生双端G1/G3、六向四档扫描及A完整回归有原始证据。",
+    "remaining": "B-T08的4096训练恢复、容量与全评估基准尚待实际验收。"
+  },
+  "report_sha256": {
+    "range_scan_r01_report.json": "b25b935c4c15e35620fbdcda1383fdfc17ed435c387a477530f9e938fda75783",
+    "a_zero_regression_comparison.json": "61b5375c1e7e33720ba7afd79571ffee36881ab88fdcfc9d8d16bd435c929e2c",
+    "random_stream_summary_r03.json": "dac7df0a6bb529e7f978d5fdca7a363324cd2e7476ca30506d87c213c48ec140",
+    "unit_r04.log": "9385268cce62310fb272913343d25e592967cbb5d2417c66c3a81aea5c4e46cb",
+    "remote_force_interface_r02_report.json": "11341dee6fea94cb1b40b7955233cbcaad4cdc1ccb86d673f8b0932121014daa",
+    "remote_contact_interface_r01_report.json": "99c410986ec69796dfdf2b165dd58c0c2dee2e75eba967bb2b744242dc565790"
+  },
+  "manifest_freeze": {
+    "status": "confirmed",
+    "default_files_unchanged": true,
+    "options": {
+      "retain_official_60n": {
+        "max_force_n": 60.0,
+        "half_force_n": 30.0,
+        "contact_peak_n": 20.0,
+        "contact_half_n": 10.0,
+        "next_stage": "4096环境10+1轮工程验收"
+      },
+      "adapt_v3_40n": {
+        "max_force_n": 40.0,
+        "half_force_n": 20.0,
+        "contact_peak_n": 20.0,
+        "contact_half_n": 10.0,
+        "next_stage": "按V3适配分布完成4096环境10+1轮工程验收"
+      }
+    },
+    "evidence_sha256": "b25b935c4c15e35620fbdcda1383fdfc17ed435c387a477530f9e938fda75783",
+    "说明": "两方案都不改K=200N/m、资产、reward、控制器或关节力矩上限；尚不启动正式B长训。",
+    "selected": "retain_official_60n",
+    "confirmation": "用户选择保留官方±60N，记录限幅并继续验证；正式32000轮训练仍不启动。",
+    "manifest_sha256": {
+      "v3_b_initial_v1.json": "92a92d5829ce2fc3a34040312ef172dde26a00c7f90c4b511e8d066882c04fb7",
+      "v3_b_contact_v1.json": "d159d116dec8caa47ea5111a089170cb9bbed86760f8d99f1f3129c42be1b9d8"
+    }
+  }
+}

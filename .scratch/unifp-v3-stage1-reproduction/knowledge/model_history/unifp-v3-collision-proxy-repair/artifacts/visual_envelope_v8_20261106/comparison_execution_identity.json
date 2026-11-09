@@ -1,0 +1,12 @@
+{
+  "remote_driver_pid": 1168993,
+  "remote_driver": "/mnt/data_8THDD/myl_unifp_v3_stage1/diagnostics/failure_visualization_20261106/visual_envelope_v8_20261106/run_remote_comparison.sh",
+  "driver_sha256": "5e6f0d924bfdf7bc14bea567f9b211b7f69bcb041b6e3b3e013963fb263b8d85",
+  "seed_physical_gpu": {
+    "1001": 0,
+    "1002": 1,
+    "1003": 3
+  },
+  "policy_updates": 0,
+  "formal_training_started": false
+}

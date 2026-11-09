@@ -1,0 +1,21 @@
+test_visual_envelope_candidate (unittest.loader._FailedTest.test_visual_envelope_candidate) ... ERROR
+
+======================================================================
+ERROR: test_visual_envelope_candidate (unittest.loader._FailedTest.test_visual_envelope_candidate)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_visual_envelope_candidate
+Traceback (most recent call last):
+  File "/home/sorry/miniconda3/lib/python3.13/unittest/loader.py", line 396, in _find_test_path
+    module = self._get_module_from_name(name)
+  File "/home/sorry/miniconda3/lib/python3.13/unittest/loader.py", line 339, in _get_module_from_name
+    __import__(name)
+    ~~~~~~~~~~^^^^^^
+  File "/home/sorry/python_ws/interactive/unifp_reproduction/.scratch/unifp-v3-collision-proxy-repair/knowledge/test_visual_envelope_candidate.py", line 8, in <module>
+    from build_visual_envelope_candidate import clip_visual_triangles
+ModuleNotFoundError: No module named 'build_visual_envelope_candidate'
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (errors=1)

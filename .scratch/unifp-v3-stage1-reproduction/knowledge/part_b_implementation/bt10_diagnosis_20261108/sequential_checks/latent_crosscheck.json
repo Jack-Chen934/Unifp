@@ -1,0 +1,423 @@
+{
+  "checkpoint_sha256": {
+    "9000": "d0c64674c852300776662b389e14047e998f8444486f74db5fabea684f089b1f",
+    "10000": "7e7ec14c8d772d9343ed3a9f9918e477657383980e9d747cd209f79006f6fd4d",
+    "12000": "273d4269bc37e95f879d21b178bc0380e20d2539e2d9cfd7488296f049c3146c"
+  },
+  "datasets": [
+    {
+      "probe": "probe_10000_mean",
+      "samples": 160,
+      "observation_sha256": "efa2b7adc758ceb024b037f503ab59ab0732808699367813a962b45e3c8e4760",
+      "comparisons": [
+        {
+          "iteration": 10000,
+          "total_action_rms": [
+            1.5766080617904663,
+            1.0579993724822998,
+            2.026026487350464
+          ],
+          "encoder_change_with_new_actor_rms": [
+            1.1972548961639404,
+            0.6106938719749451,
+            1.0502735376358032
+          ],
+          "actor_change_with_old_encoder_rms": [
+            0.9889206290245056,
+            0.7765143513679504,
+            1.8457841873168945
+          ],
+          "encoder_change_with_old_actor_rms": [
+            1.3734891414642334,
+            0.524456262588501,
+            1.2214752435684204
+          ],
+          "latent_rms_change": 1.2555264234542847,
+          "latent_rms_reference": 1.812031865119934,
+          "latent_cosine_mean": 0.8449701070785522
+        },
+        {
+          "iteration": 12000,
+          "total_action_rms": [
+            2.8905606269836426,
+            1.8619256019592285,
+            3.2006075382232666
+          ],
+          "encoder_change_with_new_actor_rms": [
+            2.3938405513763428,
+            1.1647977828979492,
+            1.6737174987792969
+          ],
+          "actor_change_with_old_encoder_rms": [
+            1.2858715057373047,
+            1.9249945878982544,
+            2.8812689781188965
+          ],
+          "encoder_change_with_old_actor_rms": [
+            1.9277461767196655,
+            0.7391629219055176,
+            1.486297369003296
+          ],
+          "latent_rms_change": 1.7423646450042725,
+          "latent_rms_reference": 1.812031865119934,
+          "latent_cosine_mean": 0.7618747353553772
+        }
+      ]
+    },
+    {
+      "probe": "probe_10000_sample",
+      "samples": 160,
+      "observation_sha256": "665482a43314e21158b502392bfaa633028089e0b5dfbe56d9a32e571dc5ad76",
+      "comparisons": [
+        {
+          "iteration": 10000,
+          "total_action_rms": [
+            1.674891471862793,
+            1.096191644668579,
+            2.1246590614318848
+          ],
+          "encoder_change_with_new_actor_rms": [
+            1.283894658088684,
+            0.6379554271697998,
+            1.0666303634643555
+          ],
+          "actor_change_with_old_encoder_rms": [
+            1.0254182815551758,
+            0.8204700946807861,
+            1.9290810823440552
+          ],
+          "encoder_change_with_old_actor_rms": [
+            1.4609225988388062,
+            0.5444459319114685,
+            1.2599587440490723
+          ],
+          "latent_rms_change": 1.317803144454956,
+          "latent_rms_reference": 1.8792433738708496,
+          "latent_cosine_mean": 0.8405205607414246
+        },
+        {
+          "iteration": 12000,
+          "total_action_rms": [
+            2.8575685024261475,
+            1.916298508644104,
+            3.385932445526123
+          ],
+          "encoder_change_with_new_actor_rms": [
+            2.355213165283203,
+            1.2178897857666016,
+            1.741782307624817
+          ],
+          "actor_change_with_old_encoder_rms": [
+            1.2999221086502075,
+            2.004971742630005,
+            3.075983762741089
+          ],
+          "encoder_change_with_old_actor_rms": [
+            1.9462060928344727,
+            0.7685645222663879,
+            1.542099118232727
+          ],
+          "latent_rms_change": 1.8109025955200195,
+          "latent_rms_reference": 1.8792433738708496,
+          "latent_cosine_mean": 0.7509703636169434
+        }
+      ]
+    },
+    {
+      "probe": "probe_12000_mean",
+      "samples": 160,
+      "observation_sha256": "a70e314c0420680b8b1ee4981306f7e5ed26bd167ae75f2331df7b4ac7d0cea6",
+      "comparisons": [
+        {
+          "iteration": 10000,
+          "total_action_rms": [
+            3.653947353363037,
+            3.1132848262786865,
+            2.998009204864502
+          ],
+          "encoder_change_with_new_actor_rms": [
+            2.6311869621276855,
+            1.899808645248413,
+            2.405754327774048
+          ],
+          "actor_change_with_old_encoder_rms": [
+            2.0072274208068848,
+            3.3968474864959717,
+            4.204401969909668
+          ],
+          "encoder_change_with_old_actor_rms": [
+            2.6834604740142822,
+            1.5591626167297363,
+            2.537834405899048
+          ],
+          "latent_rms_change": 3.437818765640259,
+          "latent_rms_reference": 6.507305145263672,
+          "latent_cosine_mean": 0.8643081784248352
+        },
+        {
+          "iteration": 12000,
+          "total_action_rms": [
+            5.149892807006836,
+            9.829752922058105,
+            7.73735237121582
+          ],
+          "encoder_change_with_new_actor_rms": [
+            3.1298866271972656,
+            3.537248134613037,
+            2.959935188293457
+          ],
+          "actor_change_with_old_encoder_rms": [
+            3.2513668537139893,
+            11.554153442382812,
+            8.046813011169434
+          ],
+          "encoder_change_with_old_actor_rms": [
+            3.6445462703704834,
+            2.099782705307007,
+            3.502845287322998
+          ],
+          "latent_rms_change": 5.662135601043701,
+          "latent_rms_reference": 6.507305145263672,
+          "latent_cosine_mean": 0.6357241868972778
+        }
+      ]
+    },
+    {
+      "probe": "probe_12000_sample",
+      "samples": 160,
+      "observation_sha256": "5c86a5dd6df1267e533fafb7d4d252bfc7b53a798051a84ad9bec368c46f8280",
+      "comparisons": [
+        {
+          "iteration": 10000,
+          "total_action_rms": [
+            4.007211208343506,
+            3.4380359649658203,
+            3.3106775283813477
+          ],
+          "encoder_change_with_new_actor_rms": [
+            2.961134910583496,
+            2.2897536754608154,
+            2.826812267303467
+          ],
+          "actor_change_with_old_encoder_rms": [
+            2.1740074157714844,
+            3.87477445602417,
+            4.807974815368652
+          ],
+          "encoder_change_with_old_actor_rms": [
+            2.928480625152588,
+            1.8969480991363525,
+            2.9545974731445312
+          ],
+          "latent_rms_change": 3.926788568496704,
+          "latent_rms_reference": 7.388828277587891,
+          "latent_cosine_mean": 0.8579333424568176
+        },
+        {
+          "iteration": 12000,
+          "total_action_rms": [
+            5.874911308288574,
+            10.509025573730469,
+            8.660360336303711
+          ],
+          "encoder_change_with_new_actor_rms": [
+            3.527381420135498,
+            4.609441757202148,
+            3.480548620223999
+          ],
+          "actor_change_with_old_encoder_rms": [
+            3.6662216186523438,
+            13.218167304992676,
+            9.13991641998291
+          ],
+          "encoder_change_with_old_actor_rms": [
+            4.123554229736328,
+            2.533344030380249,
+            4.053637504577637
+          ],
+          "latent_rms_change": 6.3961615562438965,
+          "latent_rms_reference": 7.388828277587891,
+          "latent_cosine_mean": 0.6505385041236877
+        }
+      ]
+    },
+    {
+      "probe": "probe_12000_sample_std9000",
+      "samples": 160,
+      "observation_sha256": "3df7b8d8e82a7f692d62bae86ad875d47f4ee3ef5c217664c12f87ec63deada9",
+      "comparisons": [
+        {
+          "iteration": 10000,
+          "total_action_rms": [
+            3.6401968002319336,
+            3.1563262939453125,
+            3.0254085063934326
+          ],
+          "encoder_change_with_new_actor_rms": [
+            2.635112762451172,
+            1.935448169708252,
+            2.424896478652954
+          ],
+          "actor_change_with_old_encoder_rms": [
+            1.9938901662826538,
+            3.457515001296997,
+            4.26265811920166
+          ],
+          "encoder_change_with_old_actor_rms": [
+            2.642655849456787,
+            1.604610562324524,
+            2.539228916168213
+          ],
+          "latent_rms_change": 3.404492139816284,
+          "latent_rms_reference": 6.516153335571289,
+          "latent_cosine_mean": 0.8741210103034973
+        },
+        {
+          "iteration": 12000,
+          "total_action_rms": [
+            5.280228614807129,
+            9.804051399230957,
+            7.90395975112915
+          ],
+          "encoder_change_with_new_actor_rms": [
+            3.1464455127716064,
+            3.5520033836364746,
+            2.9928879737854004
+          ],
+          "actor_change_with_old_encoder_rms": [
+            3.3883087635040283,
+            11.72887897491455,
+            8.227377891540527
+          ],
+          "encoder_change_with_old_actor_rms": [
+            3.6353507041931152,
+            2.106881618499756,
+            3.531615972518921
+          ],
+          "latent_rms_change": 5.630681991577148,
+          "latent_rms_reference": 6.516153335571289,
+          "latent_cosine_mean": 0.6531046628952026
+        }
+      ]
+    },
+    {
+      "probe": "probe_9000_mean",
+      "samples": 160,
+      "observation_sha256": "e24e44d5add51b9883788f14256c5f13e761507e421ad66f48a9ee360d2b9211",
+      "comparisons": [
+        {
+          "iteration": 10000,
+          "total_action_rms": [
+            1.4395791292190552,
+            0.8475314378738403,
+            1.1184619665145874
+          ],
+          "encoder_change_with_new_actor_rms": [
+            1.0609300136566162,
+            0.471312016248703,
+            0.6839080452919006
+          ],
+          "actor_change_with_old_encoder_rms": [
+            0.9692543745040894,
+            0.6290789246559143,
+            0.9664809107780457
+          ],
+          "encoder_change_with_old_actor_rms": [
+            1.1313457489013672,
+            0.3529416024684906,
+            0.5394211411476135
+          ],
+          "latent_rms_change": 0.6977068185806274,
+          "latent_rms_reference": 1.5263382196426392,
+          "latent_cosine_mean": 0.9337233304977417
+        },
+        {
+          "iteration": 12000,
+          "total_action_rms": [
+            2.7246904373168945,
+            2.167327880859375,
+            2.1678998470306396
+          ],
+          "encoder_change_with_new_actor_rms": [
+            2.21927547454834,
+            1.6152071952819824,
+            1.7276922464370728
+          ],
+          "actor_change_with_old_encoder_rms": [
+            1.147086262702942,
+            1.2049654722213745,
+            1.4773504734039307
+          ],
+          "encoder_change_with_old_actor_rms": [
+            1.693282961845398,
+            0.6596920490264893,
+            0.9827468395233154
+          ],
+          "latent_rms_change": 1.3056401014328003,
+          "latent_rms_reference": 1.5263382196426392,
+          "latent_cosine_mean": 0.844794750213623
+        }
+      ]
+    },
+    {
+      "probe": "probe_9000_sample",
+      "samples": 160,
+      "observation_sha256": "669a5c3cca47abf2c58243b1ea19ec4cba75a7b89abe70069a5d1918880064c1",
+      "comparisons": [
+        {
+          "iteration": 10000,
+          "total_action_rms": [
+            1.5019789934158325,
+            0.7961758375167847,
+            1.036198616027832
+          ],
+          "encoder_change_with_new_actor_rms": [
+            1.071575403213501,
+            0.45662814378738403,
+            0.7214118838310242
+          ],
+          "actor_change_with_old_encoder_rms": [
+            0.9977647662162781,
+            0.6099286079406738,
+            0.8853240013122559
+          ],
+          "encoder_change_with_old_actor_rms": [
+            1.134100317955017,
+            0.3483413755893707,
+            0.5471746921539307
+          ],
+          "latent_rms_change": 0.691051185131073,
+          "latent_rms_reference": 1.5102819204330444,
+          "latent_cosine_mean": 0.9317002296447754
+        },
+        {
+          "iteration": 12000,
+          "total_action_rms": [
+            2.973369836807251,
+            2.16623854637146,
+            2.206467628479004
+          ],
+          "encoder_change_with_new_actor_rms": [
+            2.3045666217803955,
+            1.7986642122268677,
+            1.874463438987732
+          ],
+          "actor_change_with_old_encoder_rms": [
+            1.2483000755310059,
+            1.0959807634353638,
+            1.3858693838119507
+          ],
+          "encoder_change_with_old_actor_rms": [
+            1.753208875656128,
+            0.7077191472053528,
+            1.0433634519577026
+          ],
+          "latent_rms_change": 1.333335518836975,
+          "latent_rms_reference": 1.5102819204330444,
+          "latent_cosine_mean": 0.840903103351593
+        }
+      ]
+    }
+  ],
+  "说明": "同输入离线模块替换；RMS分项不是可加百分比，混合模块有分布不匹配，不能直接当闭环修复。"
+}

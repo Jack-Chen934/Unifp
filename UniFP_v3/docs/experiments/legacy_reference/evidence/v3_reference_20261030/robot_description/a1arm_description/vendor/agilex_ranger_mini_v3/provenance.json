@@ -1,0 +1,71 @@
+{
+  "repository": "https://github.com/agilexrobotics/ugv_gazebo_sim",
+  "commit": "27633a956c845903ee630538afeb17fe70afdd84",
+  "package_license": "BSD (package.xml; no root LICENSE found)",
+  "converted_bounds_m": {
+    "ranger_base": [
+      [
+        -0.3945189118385315,
+        -0.25,
+        -0.22398942708969116
+      ],
+      [
+        0.35598108172416687,
+        0.25,
+        0.01599999889731407
+      ]
+    ],
+    "steering_wheel": [
+      [
+        -0.03497223284230522,
+        -0.05613217960816819,
+        -0.12267282272441449
+      ],
+      [
+        0.035215718145735764,
+        0.04914980477098929,
+        0.017703153957597806
+      ]
+    ],
+    "wheel_v3": [
+      [
+        -0.10040493754933766,
+        -0.08756393979132304,
+        -0.10052979707389387
+      ],
+      [
+        0.10031445421417984,
+        0.04980420777251915,
+        0.10015376777567808
+      ]
+    ]
+  },
+  "collision_radius_m": 0.1,
+  "wheelbase_m": 0.494,
+  "track_m": 0.37,
+  "nominal_root_height_m": 0.32,
+  "body_registration_z_m": 0.009,
+  "note": "CAD .1 m tire radius is a model assumption, not a measured real tire specification.",
+  "files": {
+    "ranger_mini.xacro": {
+      "bytes": 14239,
+      "sha256": "925fa108e23a931d5c98b27a3eda0d0056a50e0889a8fcbdaea97d5090f7675e"
+    },
+    "ranger_base.dae": {
+      "bytes": 38454037,
+      "sha256": "cf8d73c2d048b781f7dcd6d63122a79114836961ee347a9c5be716f5eef5501e"
+    },
+    "steering_wheel.dae": {
+      "bytes": 171983,
+      "sha256": "d8448b8856920bbdc74b21c36114cab3782a840e276511969f1ee91f8d443028"
+    },
+    "wheel_v3.dae": {
+      "bytes": 1041026,
+      "sha256": "d45ddac792ac54ba44cf516cf575a3b768cf7e95fd65c2c14af8b1061878253f"
+    },
+    "package.xml": {
+      "bytes": 651,
+      "sha256": "0c4b1cca134c534baed836130bd21e090ee039e97cbc8230ff3a9991f5442db4"
+    }
+  }
+}

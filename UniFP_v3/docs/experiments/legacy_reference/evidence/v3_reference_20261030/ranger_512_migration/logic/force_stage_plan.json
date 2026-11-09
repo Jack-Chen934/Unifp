@@ -1,0 +1,73 @@
+{
+  "created_utc": "2026-10-28T11:15:00Z",
+  "purpose": "Ranger fixed-COM force-stage continuation from the validated 8000-iteration baseline",
+  "source_experiment": "gym_ranger_fresh512_fixedcom_20261028_v1",
+  "source_checkpoint": "/home/sorry/python_ws/interactive/unifp_reproduction/logs/ranger-unifp-v3-original-force-to10000-resume9500/supervision_audit/gym_ranger_fresh512_fixedcom_20261028_v1/train/model_iter_008000.pt",
+  "source_checkpoint_sha256": "3ed0adc13c3dc84b87f82606160c3eb0df6e52727fb34ea089f96c686b40110e",
+  "source_completion_sha256": "33c26bd20e31ce8af10e660721c348e02d061287cb513b01d9ae1fbcd908345b",
+  "training_seed": 266281,
+  "initial_iteration": 8000,
+  "final_iteration": 9000,
+  "initial_global_policy_steps": 192000,
+  "force_start_global_policy_step": 192001,
+  "num_envs": 512,
+  "steps_per_env": 24,
+  "threads": 8,
+  "force_curriculum": {
+    "enabled": true,
+    "max_command_per_axis_n": 60.0,
+    "max_external_per_axis_n": 60.0,
+    "command_frame": "base_yaw",
+    "external_frame": "world",
+    "command_and_external_streams_independent": true,
+    "pulse_interval_policy_steps": [175, 449],
+    "active_probability": 0.8,
+    "ramp_seconds": [1.0, 3.0],
+    "hold_seconds": 1.0,
+    "base_velocity_push_preserved": true,
+    "base_push_interval_policy_steps": 400,
+    "base_push_max_xy_velocity_m_s": 0.8
+  },
+  "domain_randomization": {
+    "com": "fixed at checkpoint training nominal asset COM; no COM randomization",
+    "base_added_mass_kg": [0.0, 15.0],
+    "gripper_added_mass_kg": [0.0, 0.2],
+    "friction": [0.3, 2.0],
+    "motor_amplitude": [0.85, 1.15],
+    "observation_noise": true,
+    "random_goals": true,
+    "velocity_command_sampling": true
+  },
+  "algorithm": {
+    "native_ppo_and_auxiliary_updates": true,
+    "learning_rate_schedule": "restore checkpoint",
+    "adam_state": "restore both checkpoint optimizers",
+    "rng": "restore torch, numpy and python states from checkpoint after environment construction",
+    "epochs": 5,
+    "minibatches": 4,
+    "gamma": 0.99,
+    "lambda": 0.95,
+    "desired_kl": 0.01,
+    "entropy_coef": 0.01,
+    "no_algorithm_changes": true
+  },
+  "checkpoint_interval_iterations": 100,
+  "stop_rule": "Stop at iteration 9000 after the first 1000 force-stage iterations; do not auto-extend. Consider a separately authorized second 1000 only after reviewing force RMSE vs per-trace zero baseline, nonzero vector error, sustained zero-force false positives, end-effector/base control retention and termination.",
+  "required_preflight": [
+    "Verify source checkpoint SHA and 8000/global192000 counters",
+    "Verify model and both Adam states restore exactly; verify LR, RNG and PPO update counters",
+    "Verify all COM values remain at asset nominal and critic COM deltas are zero",
+    "Verify force command and external force are zero through policy step 192000 and nonzero only from 192001",
+    "Verify force frame, per-axis bounds, pulse cadence, independent streams and four-substep application",
+    "Verify zero-force replay is exact before the first forced step",
+    "Verify protected source files and checkpoint SHA are unchanged"
+  ],
+  "limitations": [
+    "512 environments are one eighth of the official 4096; this is a Ranger-adapted comparison, not a full official reproduction",
+    "Ranger morphology, flat task and implicit PD differ from B2+Z1 source task",
+    "PhysX, task, history and episode counters are reconstructed at continuation; this is not bitwise continuous training",
+    "No COM randomization is a deliberate user-selected deviation from the official randomization",
+    "One training seed; validation trajectories do not count as independent training seeds",
+    "Simulation force-stage results do not certify real hardware"
+  ]
+}

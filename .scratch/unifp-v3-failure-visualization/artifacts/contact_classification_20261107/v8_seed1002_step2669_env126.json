@@ -1,0 +1,111 @@
+{
+  "variant": "v8",
+  "seed": 1002,
+  "policy_step": 2669,
+  "env_id": 126,
+  "category": "visual_surface_intersection",
+  "counterparts": [
+    "wrist_camera"
+  ],
+  "geometry": {
+    "wrist_camera": {
+      "other_pose_in_base_m": [
+        [
+          0.3724940193400068,
+          0.19100986804624506,
+          -0.9081648726221919,
+          -0.08574731699352633
+        ],
+        [
+          0.6016084269807165,
+          0.6954155197451237,
+          0.3930197901930733,
+          -0.21909041036543186
+        ],
+        [
+          0.7066226051731678,
+          -0.6927571617865638,
+          0.1441249758081854,
+          0.053847730925655674
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "collision": {
+        "surface_intersection": true,
+        "intersecting_pairs": [
+          [
+            "base_link_local_1_group_0",
+            "wrist_camera_proxy_0"
+          ]
+        ],
+        "minimum_surface_distance_m": 0.0,
+        "closest_disjoint_pair": {
+          "distance_m": 0.014103814537977525,
+          "base_surface": "base_link_local_1_group_10",
+          "other_surface": "wrist_camera_proxy_0",
+          "nearest_points_in_base_m": [
+            [
+              -0.08709738332412353,
+              -0.25414002944104447,
+              -0.018689010010495995
+            ],
+            [
+              -0.08709334515095059,
+              -0.2602022765153329,
+              -0.005954539914527927
+            ]
+          ]
+        }
+      },
+      "visual": {
+        "surface_intersection": true,
+        "intersecting_pairs": [
+          [
+            "base_link_visual",
+            "wrist_camera_visual_0"
+          ]
+        ],
+        "minimum_surface_distance_m": 0.0,
+        "closest_disjoint_pair": {
+          "distance_m": 0.11562099910227057,
+          "base_surface": "br_fixed_visual",
+          "other_surface": "wrist_camera_visual_0",
+          "nearest_points_in_base_m": [
+            [
+              -0.20979538559913635,
+              -0.20420734584331512,
+              -0.022704459726810455
+            ],
+            [
+              -0.11017856747701141,
+              -0.2569293082180992,
+              0.0030850665189852827
+            ]
+          ]
+        }
+      }
+    }
+  },
+  "visual_mesh_watertight": {
+    "base_link": false,
+    "wrist_camera": false
+  },
+  "section_anchor_in_base_m": [
+    -0.10359373407665591,
+    -0.2485774024811826,
+    0.005670670621305696
+  ],
+  "length_unit": "m",
+  "coordinate_frame": "base_link",
+  "input_sha256": {
+    ".scratch/unifp-v3-collision-proxy-repair/artifacts/visual_envelope_v8_20261106/comparison_summary.json": "6d14434fbd5277f6d474e6cea3fc6ee2523a799f75ac583f72e841eb57b5294a",
+    ".scratch/unifp-v3-collision-proxy-repair/artifacts/visual_envelope_v8_20261106/v8_seed1002_60s/failures.json": "0c76a72dd336473dfb20ce60a6248c4cf7343a5484315a8e6f794d5ebe9af023",
+    "UniFP_v3/resources/robots/v3_a1_desktop_train_v8_visual_envelope_r1/urdf/a1arm_rgm3_desktop_fixed_gripper.urdf": "cf1644b782d66aa903ff4c75491cc1e08fa4feaffcc448dea1183ab49524af21"
+  },
+  "note_zh": "网格应用URDF scale/origin及原生body pose各一次，不使用错误显示flip。HTML仅合并1e-12m精度下重合顶点并转float32显示，不删三角面；几何与截面仍用原网格。此为真实采样边界静态视图，非动作视频；叠加透明度不代表穿透深度，截面仅显示一个平面，不是全部接触面。视觉网格不封闭时不报告体积IoU。"
+}

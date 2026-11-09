@@ -1,0 +1,74 @@
+Importing module 'gym_38' (/home/sorry/.cache/unifp/isaacgym_preview4/pkg/isaacgym/python/isaacgym/_bindings/linux-x86_64/gym_38.so)
+Setting GYM_USD_PLUG_INFO_PATH to /home/sorry/.cache/unifp/isaacgym_preview4/pkg/isaacgym/python/isaacgym/_bindings/linux-x86_64/usd/plugInfo.json
+F                                                                        [100%]
+=================================== FAILURES ===================================
+__ test_force_summary_keeps_nonzero_denominator_and_zero_predictor_reference ___
+
+    def test_force_summary_keeps_nonzero_denominator_and_zero_predictor_reference() -> None:
+        """Keep ten zero samples from diluting two 20 N estimation errors.
+    
+        Raises:
+            AssertionError: Zero samples dilute force errors, undefined directions
+                become zero degrees, or physical failures disappear from the quota.
+        """
+        from legged_gym.b2_gym_learn.ppo_cse_pf.v3_evaluation import summarize_force_evaluation
+    
+        manifest = {"num_envs": 1, "episodes_per_env": 2, "range_frozen": False,
+                    "thresholds": {"static": {"M_tcp_l2_m": .08, "other_tcp_l2_m": .10,
+                                                "base_planar_speed_m_s": .10, "base_yaw_rate_rad_s": .15,
+                                                "physical_failure_rate": .05},
+                                   "force_nonzero_axis_mae_n": 10., "force_nonzero_zero_reference_ratio": .5,
+                                   "force_zero_axis_mae_n": 3., "state_mae": [.1, .1, .05, .05, .1, .15]},
+                    "threshold_version": "v3-b-initial-v1"}
+        rows = []
+        for step in range(12):
+            force_n = 20. if step >= 10 else 0.
+            rows.append({"env_id": 0, "episode_index": step // 6, "evaluation_step": step,
+                         "scenario_id": f"fixture_{step // 6}", "policy_input_time_s": step * .02,
+                         "force_phase": "hold", "estimator_force_phase": "hold",
+                         "force_hold_tail": step == 10, "estimator_force_hold_tail": step == 11,
+                         "direction_index": 0, "base_push_applied": False,
+                         "end_effector_force_command_yaw_n": [0., 0., 0.],
+                         "external_end_effector_force_yaw_n": [force_n, 0., 0.],
+                         "state_estimates_scaled": [0.] * 9 + [.02, -.01, .03],
+                         "state_estimate_labels_scaled": [0.] * 6 + [.01 * force_n, 0., 0.] + [0.] * 3,
+                         "physical_errors": {"tcp_geometric_l1_m": .05, "tcp_geometric_l2_m": .05,
+                                             "tcp_compensated_l1_m": .06, "tcp_compensated_l2_m": .06,
+                                             "base_planar_speed_m_s": .02, "base_yaw_rate_rad_s": .03},
+                         "net_compensation_force_world_n": [force_n, 0., 0.], "torque_saturation_fraction": 0.,
+                         "tcp_world_m": [0., 0., 0.], "compensated_target_world_m": [.06, 0., 0.],
+                         "target_world_m": [.05, 0., 0.]})
+        episodes = [{"env_id": 0, "end_type": "timeout", "errors": {}},
+                    {"env_id": 0, "end_type": "physical_failure", "errors": {}}]
+        result = summarize_force_evaluation(rows, episodes, manifest, scenario={"mode": "E", "moving": False, "push": False})
+        assert result["force_estimation"]["nonzero"]["sample_count"] == 2
+        assert result["force_estimation"]["nonzero"]["axis_mae_n"] == pytest.approx([20., 0., 0.])
+        assert result["force_estimation"]["nonzero"]["zero_reference_l2_n"] == pytest.approx(20.)
+        assert result["force_estimation"]["nonzero"]["l2_mean_n"] == pytest.approx(20.)
+        assert result["force_estimation"]["zero"]["sample_count"] == 10
+        assert result["phase_metrics"]["hold_tail"]["task_samples"] == 1
+        assert result["phase_metrics"]["hold_tail"]["estimator_samples"] == 1
+        assert result["phase_metrics"]["hold_tail"]["force_axis_mae_n"] == pytest.approx([20., 0., 0.])
+        assert result["direction"]["undefined_prediction_count"] == 2
+        assert result["direction"]["mean_degrees"] is None
+        assert result["episodes"]["failure_denominator"] == 2
+        assert result["episodes"]["physical_failure_rate"] == .5
+        assert result["assessment"] != "pass"
+>       assert result["base_force_zero_input"]["sample_count"] == 12
+E       KeyError: 'base_force_zero_input'
+
+tests/test_v3_force_evaluation.py:97: KeyError
+=============================== warnings summary ===============================
+../../../../.cache/unifp/isaacgym_preview4/pkg/isaacgym/python/isaacgym/torch_utils.py:135
+  /home/sorry/.cache/unifp/isaacgym_preview4/pkg/isaacgym/python/isaacgym/torch_utils.py:135: DeprecationWarning: `np.float` is a deprecated alias for the builtin `float`. To silence this warning, use `float` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.float64` here.
+  Deprecated in NumPy 1.20; for more details and guidance: https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+    def get_axis_params(value, axis_idx, x_value=0., dtype=np.float, n_dims=3):
+
+../../../../.cache/unifp/isaacgym_preview4/py38/lib/python3.8/site-packages/wandb/analytics/sentry.py:90
+  /home/sorry/.cache/unifp/isaacgym_preview4/py38/lib/python3.8/site-packages/wandb/analytics/sentry.py:90: SentryHubDeprecationWarning: `sentry_sdk.Hub` is deprecated and will be removed in a future major release. Please consult our 1.x to 2.x migration guide for details on how to migrate `Hub` usage to the new API: https://docs.sentry.io/platforms/python/migration/1.x-to-2.x
+    self.hub = sentry_sdk.Hub(client)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED tests/test_v3_force_evaluation.py::test_force_summary_keeps_nonzero_denominator_and_zero_predictor_reference
+1 failed, 2 warnings in 1.73s

@@ -1,0 +1,59 @@
+[
+  {
+    "iteration": 9000,
+    "main": {
+      "steps": 20,
+      "mean_action_rms_change": 0.01226540356874466,
+      "max_action_rms_change": 0.023010997101664543,
+      "mean_gaussian_kl": 0.005783288984093815,
+      "mean_held_force_mae_change_n": -0.022274875640869052
+    },
+    "auxiliary": {
+      "steps": 20,
+      "mean_action_rms_change": 0.010407760390080512,
+      "max_action_rms_change": 0.01775156892836094,
+      "mean_gaussian_kl": 0.003927266353275627,
+      "mean_held_force_mae_change_n": 0.031259365876515635,
+      "adjacent_gradient_cosine_mean": 0.019409060897305607,
+      "adjacent_negative_count": 13
+    }
+  },
+  {
+    "iteration": 10000,
+    "main": {
+      "steps": 20,
+      "mean_action_rms_change": 0.013288586912676693,
+      "max_action_rms_change": 0.02562263235449791,
+      "mean_gaussian_kl": 0.0038735257752705366,
+      "mean_held_force_mae_change_n": -0.012130641937255859
+    },
+    "auxiliary": {
+      "steps": 20,
+      "mean_action_rms_change": 0.008358688955195249,
+      "max_action_rms_change": 0.010699491016566753,
+      "mean_gaussian_kl": 0.0012339625274762512,
+      "mean_held_force_mae_change_n": 0.03913702964782715,
+      "adjacent_gradient_cosine_mean": -0.005913968896493316,
+      "adjacent_negative_count": 11
+    }
+  },
+  {
+    "iteration": 12000,
+    "main": {
+      "steps": 20,
+      "mean_action_rms_change": 0.02368104490451515,
+      "max_action_rms_change": 0.047468315809965134,
+      "mean_gaussian_kl": 0.004143781153834425,
+      "mean_held_force_mae_change_n": -0.020331438382466694
+    },
+    "auxiliary": {
+      "steps": 20,
+      "mean_action_rms_change": 0.015372366970404982,
+      "max_action_rms_change": 0.022634372115135193,
+      "mean_gaussian_kl": 0.0017044267646269874,
+      "mean_held_force_mae_change_n": 0.036385289827982656,
+      "adjacent_gradient_cosine_mean": -0.003230048529803753,
+      "adjacent_negative_count": 10
+    }
+  }
+]

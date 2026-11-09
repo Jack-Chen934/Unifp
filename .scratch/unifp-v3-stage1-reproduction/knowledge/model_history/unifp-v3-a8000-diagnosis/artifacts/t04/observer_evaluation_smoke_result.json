@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "checks": {
+    "three_scenarios": true,
+    "evidence_complete": true,
+    "actual_iteration_one": true,
+    "observation_not_a8000": true,
+    "zero_updates": true,
+    "inventory_verified": true
+  },
+  "physical_failures": 0,
+  "protocol": "2 environments x 1 episode tool smoke only"
+}

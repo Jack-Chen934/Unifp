@@ -1,0 +1,41 @@
+{
+  "checked_at": "2026-11-08T20:06:22.451806+08:00",
+  "passed": true,
+  "cross_end_sha256": {
+    "artifacts": {
+      "audit_tensor_chain.py": "f13e775e2f01f5e04db4ecde166594bacab81ba29f984141fdc095903a8cf189",
+      "audit_policy_response.py": "67fba0fa55e583f778699a5b3ffe1a8c79f9c5535aaded9217d731d1356175d3",
+      "tensor_audit.json": "0b57af88b7cdc84c8f69b701f45b9b7532ec803b33df269707abbb3b21dc7315",
+      "policy_response.json": "5bd218321bcee3ccadaeb76ddf6742e5838d63781d77a6e3cf052c09d25b3cb3"
+    },
+    "source": {
+      "legged_gym/envs/v3/legged_robot_v3.py": "558295945e22af4091a196e1f53ce9fafdcc6c898bc0ccf205578381329836ca",
+      "legged_gym/b2_gym_learn/ppo_cse_pf/v3_actor_critic.py": "530e8d5e5c66a28c2dc9327f4c7410607971324851f7b935d710f99c1a1bdd7d",
+      "legged_gym/b2_gym_learn/ppo_cse_pf/v3_ppo.py": "27d9200e14d141eb0a3ec55fa959a4f1464bb8f3e6fb40d0dfb31cb21496caaf"
+    }
+  },
+  "real_input_files_sha256": {
+    "probe_10000_mean": "efa2b7adc758ceb024b037f503ab59ab0732808699367813a962b45e3c8e4760",
+    "probe_10000_sample": "665482a43314e21158b502392bfaa633028089e0b5dfbe56d9a32e571dc5ad76",
+    "probe_12000_mean": "a70e314c0420680b8b1ee4981306f7e5ed26bd167ae75f2331df7b4ac7d0cea6",
+    "probe_12000_sample": "5c86a5dd6df1267e533fafb7d4d252bfc7b53a798051a84ad9bec368c46f8280",
+    "probe_12000_sample_std9000": "3df7b8d8e82a7f692d62bae86ad875d47f4ee3ef5c217664c12f87ec63deada9",
+    "probe_9000_mean": "e24e44d5add51b9883788f14256c5f13e761507e421ad66f48a9ee360d2b9211",
+    "probe_9000_sample": "669a5c3cca47abf2c58243b1ea19ec4cba75a7b89abe70069a5d1918880064c1"
+  },
+  "checkpoint_sha256": {
+    "9000": "d0c64674c852300776662b389e14047e998f8444486f74db5fabea684f089b1f",
+    "10000": "7e7ec14c8d772d9343ed3a9f9918e477657383980e9d747cd209f79006f6fd4d",
+    "12000": "273d4269bc37e95f879d21b178bc0380e20d2539e2d9cfd7488296f049c3146c"
+  },
+  "tensor_cases": 60,
+  "real_input_count": 1120,
+  "response_record_count": 252,
+  "function_annotations_docstrings_ast": true,
+  "policy_updates": 0,
+  "native_simulations_created": 0,
+  "说明": "脚本内核验命令干预只改指定槽、旧历史不变、与原动作均值完全一致、直接／Encoder路径恒等式；CPU推理，无训练更新。",
+  "report_links_valid": true,
+  "plot_visually_checked": "命令敏感性.png",
+  "aggregate_records": 36
+}

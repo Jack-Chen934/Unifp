@@ -1,0 +1,16 @@
+{
+  "identical_observations_properties_execution_root_q_rng": true,
+  "initial_state_digests": {
+    "obs": "cdff9331c96e65633bf65e4948ece1e523593e3fd6c419d60cbdf351ed9631f3",
+    "privileged_obs": "97a59ba2272e3ef43e8abdb2ed70b3d7432542f2922d4d40ed242039e0cc06ce",
+    "obs_pred": "e9230ee07c2478cd1a7aa51738182e67bd0d031883e0fb9c8ba95381e03a5957",
+    "root_states": "7fd442185f17a4d6e8c9e6d53c9988cfb770bd792daa79ab4bffd302cd219dac",
+    "dof_pos": "d325516eba5cd75064a40cff49d822adb5f8c19ab5cd9101f89b788bf65350c6",
+    "execution_scale_delta": "d8428f385b3153598842065ac7825ff3b173de4122c155f6e86fe4af61158ab5",
+    "mass_com_delta": "7295328483b6aa05377d8096995cbe71629e6a3d854dbd89ea4b3eee275fc6b2",
+    "friction": "1a1aa65927688d3010a82518435a56f9b0581d2bbe1a9e33241ee515b943da23",
+    "cpu_rng": "05403f924884844c84bc10c1c921ccd99ef2ef1e50ec07753cf2ad7f0f74b06e",
+    "cuda_rng": "38a21d29689fea0c2be8227c61eae15a340dd5c26897abe74dea663d88e16ebe"
+  },
+  "restored_learning_state_equal_both": true
+}

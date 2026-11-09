@@ -1,0 +1,129 @@
+gdb: /home/sorry/.cache/unifp/isaacgym_preview4/py38/lib/libncursesw.so.6: no version information available (required by gdb)
+gdb: /home/sorry/.cache/unifp/isaacgym_preview4/py38/lib/libncursesw.so.6: no version information available (required by gdb)
+gdb: /home/sorry/.cache/unifp/isaacgym_preview4/py38/lib/libncursesw.so.6: no version information available (required by gdb)
+gdb: /home/sorry/.cache/unifp/isaacgym_preview4/py38/lib/libtinfo.so.6: no version information available (required by gdb)
+/usr/bin/zsh: /home/sorry/.cache/unifp/isaacgym_preview4/py38/lib/libtinfo.so.6: no version information available (required by /usr/bin/zsh)
+
+This GDB supports auto-downloading debuginfo from the following URLs:
+  <https://debuginfod.ubuntu.com>
+Enable debuginfod for this session? (y or [n]) [answered N; input not from terminal]
+Debuginfod has been disabled.
+To make this setting permanent, add 'set debuginfod enabled off' to .gdbinit.
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/usr/lib/x86_64-linux-gnu/libthread_db.so.1".
+[New Thread 0x7fffe77ff6c0 (LWP 82804)]
+[New Thread 0x7fffe6ffe6c0 (LWP 82805)]
+[New Thread 0x7fffe45ff6c0 (LWP 82806)]
+[New Thread 0x7fffe1bff6c0 (LWP 82807)]
+[New Thread 0x7fffdf1ff6c0 (LWP 82808)]
+[New Thread 0x7fffdc7ff6c0 (LWP 82809)]
+[New Thread 0x7fffd9dff6c0 (LWP 82810)]
+[New Thread 0x7fffd73ff6c0 (LWP 82811)]
+[New Thread 0x7fffd49ff6c0 (LWP 82812)]
+[New Thread 0x7fffd1fff6c0 (LWP 82813)]
+[New Thread 0x7fffcf5ff6c0 (LWP 82814)]
+[New Thread 0x7fffccbff6c0 (LWP 82815)]
+[New Thread 0x7fffca1ff6c0 (LWP 82816)]
+[New Thread 0x7fffc77ff6c0 (LWP 82817)]
+[New Thread 0x7fffc4dff6c0 (LWP 82818)]
+[New Thread 0x7fffc23ff6c0 (LWP 82819)]
+[New Thread 0x7fffbf9ff6c0 (LWP 82820)]
+[New Thread 0x7fffbcfff6c0 (LWP 82821)]
+[New Thread 0x7fffba5ff6c0 (LWP 82822)]
+[New Thread 0x7fffb7bff6c0 (LWP 82823)]
+[New Thread 0x7fffb51ff6c0 (LWP 82824)]
+[New Thread 0x7fffb27ff6c0 (LWP 82825)]
+[New Thread 0x7fffafdff6c0 (LWP 82826)]
+[New Thread 0x7fffad3ff6c0 (LWP 82827)]
+[New Thread 0x7fffaa9ff6c0 (LWP 82828)]
+[New Thread 0x7fffa7fff6c0 (LWP 82829)]
+[New Thread 0x7fffa55ff6c0 (LWP 82830)]
+[New Thread 0x7fffa2bff6c0 (LWP 82831)]
+[New Thread 0x7fffa01ff6c0 (LWP 82832)]
+[New Thread 0x7fff9b7ff6c0 (LWP 82833)]
+[New Thread 0x7fff98dff6c0 (LWP 82834)]
+[Thread 0x7fff98dff6c0 (LWP 82834) exited]
+[Thread 0x7fff9b7ff6c0 (LWP 82833) exited]
+[Thread 0x7fffa01ff6c0 (LWP 82832) exited]
+[Thread 0x7fffa2bff6c0 (LWP 82831) exited]
+[Thread 0x7fffa55ff6c0 (LWP 82830) exited]
+[Thread 0x7fffa7fff6c0 (LWP 82829) exited]
+[Thread 0x7fffaa9ff6c0 (LWP 82828) exited]
+[Thread 0x7fffad3ff6c0 (LWP 82827) exited]
+[Thread 0x7fffafdff6c0 (LWP 82826) exited]
+[Thread 0x7fffb27ff6c0 (LWP 82825) exited]
+[Thread 0x7fffb51ff6c0 (LWP 82824) exited]
+[Thread 0x7fffb7bff6c0 (LWP 82823) exited]
+[Thread 0x7fffba5ff6c0 (LWP 82822) exited]
+[Thread 0x7fffbcfff6c0 (LWP 82821) exited]
+[Thread 0x7fffbf9ff6c0 (LWP 82820) exited]
+[Thread 0x7fffc23ff6c0 (LWP 82819) exited]
+[Thread 0x7fffc4dff6c0 (LWP 82818) exited]
+[Thread 0x7fffc77ff6c0 (LWP 82817) exited]
+[Thread 0x7fffca1ff6c0 (LWP 82816) exited]
+[Thread 0x7fffccbff6c0 (LWP 82815) exited]
+[Thread 0x7fffcf5ff6c0 (LWP 82814) exited]
+[Thread 0x7fffd1fff6c0 (LWP 82813) exited]
+[Thread 0x7fffd49ff6c0 (LWP 82812) exited]
+[Thread 0x7fffd73ff6c0 (LWP 82811) exited]
+[Thread 0x7fffd9dff6c0 (LWP 82810) exited]
+[Thread 0x7fffdc7ff6c0 (LWP 82809) exited]
+[Thread 0x7fffdf1ff6c0 (LWP 82808) exited]
+[Thread 0x7fffe1bff6c0 (LWP 82807) exited]
+[Thread 0x7fffe45ff6c0 (LWP 82806) exited]
+[Thread 0x7fffe6ffe6c0 (LWP 82805) exited]
+[Thread 0x7fffe77ff6c0 (LWP 82804) exited]
+[Detaching after fork from child process 82835]
+Importing module 'gym_38' (/home/sorry/.cache/unifp/isaacgym_preview4/pkg/isaacgym/python/isaacgym/_bindings/linux-x86_64/gym_38.so)
+Setting GYM_USD_PLUG_INFO_PATH to /home/sorry/.cache/unifp/isaacgym_preview4/pkg/isaacgym/python/isaacgym/_bindings/linux-x86_64/usd/plugInfo.json
+[native-probe] create_sim
+[New Thread 0x7fff98dff6c0 (LWP 82836)]
+[New Thread 0x7fff9b7ff6c0 (LWP 82837)]
+[New Thread 0x7fffa01ff6c0 (LWP 82838)]
+[New Thread 0x7fffa2bff6c0 (LWP 82839)]
+[New Thread 0x7fffd19ff6c0 (LWP 82840)]
+[New Thread 0x7fffb27ff6c0 (LWP 82841)]
+[New Thread 0x7fffb25fe6c0 (LWP 82842)]
+Not connected to PVD
++++ Using GPU PhysX
+Physics Engine: PhysX
+Physics Device: cuda:0
+GPU Pipeline: disabled
+[native-probe] load_asset
+[native-probe] actor {"base_link": 68, "aluminum_profiles": 9, "arm_base": 1, "arm_seg1": 1, "arm_seg2": 2, "arm_seg3": 2, "arm_seg4": 2, "arm_seg5": 2, "arm_seg6": 1, "end_effector_link": 0, "gripper1": 2, "gripper2": 2, "wrist_camera_connector": 1, "wrist_camera": 1, "left_camera_connector": 1, "left_camera": 1, "rear_top_camera_connector": 1, "rear_top_camera": 1, "right_camera_connector": 1, "right_camera": 1, "bl_steering_link": 2, "bl_Link": 17, "br_steering_link": 2, "br_Link": 17, "fl_steering_link": 2, "fl_Link": 17, "fr_steering_link": 2, "fr_Link": 17}
+[native-probe] apply_filters
+[native-probe] filters_complete
+[native-probe] set_dof_before_prepare
+[native-probe] prepare_sim
+[native-probe] simulate
+[native-probe] simulation_complete
+[native-probe] destroy_sim
+free(): invalid size
+
+Thread 1 "python" received signal SIGABRT, Aborted.
+__pthread_kill_implementation (threadid=<optimized out>, signo=6, no_tid=0) at ./nptl/pthread_kill.c:44
+warning: 44	./nptl/pthread_kill.c: No such file or directory
+#0  __pthread_kill_implementation (threadid=<optimized out>, signo=6, no_tid=0) at ./nptl/pthread_kill.c:44
+#1  __pthread_kill_internal (threadid=<optimized out>, signo=6) at ./nptl/pthread_kill.c:89
+#2  __GI___pthread_kill (threadid=<optimized out>, signo=signo@entry=6) at ./nptl/pthread_kill.c:100
+#3  0x00007ffff7c45b7e in __GI_raise (sig=sig@entry=6) at ../sysdeps/posix/raise.c:26
+#4  0x00007ffff7c288ec in __GI_abort () at ./stdlib/abort.c:77
+#5  0x00007ffff7c29979 in __libc_message_impl (vma_name=vma_name@entry=0x7ffff7ddb569 "glibc: fatal", fmt=fmt@entry=0x7ffff7ddebbe "%s\n") at ../sysdeps/posix/libc_fatal.c:138
+#6  0x00007ffff7cb08ac in __libc_message_wrapper (vmaname=0x7ffff7ddb569 "glibc: fatal", fmt=0x7ffff7ddebbe "%s\n") at ../include/stdio.h:203
+#7  malloc_printerr (str=<optimized out>) at ./malloc/malloc.c:5341
+#8  0x00007ffff7cb08c4 in malloc_printerr_tail (str=<optimized out>) at ./malloc/malloc.c:5358
+#9  0x00007fffeea72cf5 in physx::PxgAABBManager::~PxgAABBManager() () from /home/sorry/.cache/unifp/isaacgym_preview4/pkg/isaacgym/python/isaacgym/_bindings/linux-x86_64/libPhysXGpu_64.so
+#10 0x00007fffeea72f09 in physx::PxgAABBManager::~PxgAABBManager() () from /home/sorry/.cache/unifp/isaacgym_preview4/pkg/isaacgym/python/isaacgym/_bindings/linux-x86_64/libPhysXGpu_64.so
+#11 0x00007fff95821e7e in physx::Sc::Scene::release() () from /home/sorry/.cache/unifp/isaacgym_preview4/pkg/isaacgym/python/isaacgym/_bindings/linux-x86_64/libcarb.gym.plugin.so
+#12 0x00007fff9576e3e1 in physx::NpScene::~NpScene() () from /home/sorry/.cache/unifp/isaacgym_preview4/pkg/isaacgym/python/isaacgym/_bindings/linux-x86_64/libcarb.gym.plugin.so
+#13 0x00007fff957700b9 in physx::NpScene::~NpScene() () from /home/sorry/.cache/unifp/isaacgym_preview4/pkg/isaacgym/python/isaacgym/_bindings/linux-x86_64/libcarb.gym.plugin.so
+#14 0x00007fff95767a97 in physx::NpPhysics::releaseSceneInternal(physx::PxScene&) () from /home/sorry/.cache/unifp/isaacgym_preview4/pkg/isaacgym/python/isaacgym/_bindings/linux-x86_64/libcarb.gym.plugin.so
+#15 0x00007fff94f99011 in carb::gym::GymPhysX::~GymPhysX (this=0x1f355d0, __in_chrg=<optimized out>) at ../../../source/plugins/carb/gym/impl/Gym/GymPhysX.cpp:1058
+#16 0x00007fff94f99799 in carb::gym::GymPhysX::~GymPhysX (this=0x1f355d0, __in_chrg=<optimized out>) at ../../../source/plugins/carb/gym/impl/Gym/GymPhysX.cpp:1257
+#17 0x00007fff94f35ee7 in carb::gym::GymDestroySim (sim=0xd5de80) at ../../../source/plugins/carb/gym/impl/Gym/Gym.cpp:545
+#18 0x00007fffeb31bfd9 in std::function<void(carb::gym::Gym&, carb::gym::GymSim*)>::operator() (__args#1=<optimized out>, __args#0=..., this=<optimized out>) at /usr/include/c++/7/bits/std_function.h:706
+#19 pybind11::detail::argument_loader<carb::gym::Gym&, carb::gym::GymSim*>::call_impl<void, std::function<void(carb::gym::Gym&, carb::gym::GymSim*)>&, 0ul, 1ul, pybind11::detail::void_type> (f=..., this=0x7fffffffbbd0) at ../../../_build/target-deps/pybind11/pybind11/cast.h:1931
+#20 pybind11::detail::argument_loader<carb::gym::Gym&, carb::gym::GymSim*>::call<void, pybind11::detail::void_type, std::function<void (carb::gym::Gym&, carb::gym::GymSim*)>&>(std::function<void (carb::gym::Gym&, carb::gym::GymSim*)>&) && (f=..., this=<optimized out>) at ../../../_build/target-deps/pybind11/pybind11/cast.h:1913
+#21 pybind11::cpp_function::initialize<std::function<void (carb::gym::Gym&, carb::gym::GymSim*)>, void, carb::gym::Gym&, carb::gym::GymSim*, pybind11::name, pybind11::is_method, pybind11::sibling, char [158]>(std::function<void (carb::gym::Gym&, carb::gym::GymSim*)>&&, void (*)(carb::gym::Gym&, carb::gym::GymSim*), pybind11::name const&, pybind11::is_method const&, pybind11::sibling const&, char const (&) [158])::{lambda(pybind11::detail::function_call&)#3}::operator()(pybind11::detail::function_call&) const (call=..., __closure=0x0) at ../../../_build/target-deps/pybind11/pybind11/pybind11.h:159
+#22 pybind11::cpp_function::initialize<std::function<void (carb::gym::Gym&, carb::gym::GymSim*)>, void, carb::gym::Gym&, carb::gym::GymSim*, pybind11::name, pybind11::is_method, pybind11::sibling, char [158]>(std::function<void (carb::gym::Gym&, carb::gym::GymSim*)>&&, void (*)(carb::gym::Gym&, carb::gym::GymSim*), pybind11::name const&, pybind11::is_method const&, pybind11::sibling const&, char const (&) [158])::{lambda(pybind11::detail::function_call&)#3}::_FUN(pybind11::detail::function_call&) () at ../../../_build/target-deps/pybind11/pybind11/pybind11.h:137
+#23 0x00007fffeb2aab04 in pybind11::cpp_function::dispatcher (self=<optimized out>, args_in=0x7fffed3a9200, kwargs_in=0x0) at ../../../_build/target-deps/pybind11/pybind11/pybind11.h:624

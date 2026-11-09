@@ -1,0 +1,143 @@
+{
+  "groups": [
+    {
+      "components": [
+        8
+      ],
+      "vertices": 12
+    },
+    {
+      "components": [
+        10
+      ],
+      "vertices": 16
+    },
+    {
+      "components": [
+        23
+      ],
+      "vertices": 15
+    },
+    {
+      "components": [
+        25
+      ],
+      "vertices": 11
+    },
+    {
+      "components": [
+        57
+      ],
+      "vertices": 18
+    },
+    {
+      "components": [
+        99
+      ],
+      "vertices": 19
+    },
+    {
+      "components": [
+        92,
+        118
+      ],
+      "vertices": 23
+    },
+    {
+      "components": [
+        26,
+        72
+      ],
+      "vertices": 24
+    },
+    {
+      "components": [
+        9,
+        94
+      ],
+      "vertices": 14
+    },
+    {
+      "components": [
+        42,
+        65,
+        40,
+        93,
+        114
+      ],
+      "vertices": 31
+    },
+    {
+      "components": [
+        18,
+        91
+      ],
+      "vertices": 26
+    }
+  ],
+  "merges": [
+    {
+      "components": [
+        93,
+        114
+      ],
+      "added_volume_m3": 4.12702958746858e-06
+    },
+    {
+      "components": [
+        92,
+        118
+      ],
+      "added_volume_m3": 4.8106041505192746e-06
+    },
+    {
+      "components": [
+        26,
+        72
+      ],
+      "added_volume_m3": 7.37206870705465e-06
+    },
+    {
+      "components": [
+        9,
+        94
+      ],
+      "added_volume_m3": 4.478089851148927e-05
+    },
+    {
+      "components": [
+        40,
+        93,
+        114
+      ],
+      "added_volume_m3": 5.431625229064996e-05
+    },
+    {
+      "components": [
+        65,
+        40,
+        93,
+        114
+      ],
+      "added_volume_m3": 3.336325186517825e-05
+    },
+    {
+      "components": [
+        42,
+        65,
+        40,
+        93,
+        114
+      ],
+      "added_volume_m3": 8.113496730165898e-05
+    },
+    {
+      "components": [
+        18,
+        91
+      ],
+      "added_volume_m3": 0.00012165000389291014
+    }
+  ],
+  "note_zh": "仅探索性诊断：新增材料体积较小不等于接触正确，未经几何及GPU回归，禁止训练。"
+}

@@ -1,0 +1,58 @@
+{
+  "v6": {
+    "physical_failures": 25,
+    "completed_episodes": {
+      "physical_failure": 25,
+      "timeout": 1128
+    },
+    "failure_predicates_overlapping": {
+      "base_contact": 25
+    },
+    "counterpart_counts": {
+      "wrist_camera_connector": 6,
+      "wrist_camera": 18,
+      "arm_seg4": 1
+    },
+    "target_counterpart_failures": 25,
+    "exposure_environment_seconds": 23039.99948501587,
+    "failures_per_1000_environment_seconds": 1.085069468697637
+  },
+  "r3": {
+    "physical_failures": 27,
+    "completed_episodes": {
+      "physical_failure": 27,
+      "timeout": 1125
+    },
+    "failure_predicates_overlapping": {
+      "base_contact": 27
+    },
+    "counterpart_counts": {
+      "wrist_camera": 20,
+      "wrist_camera_connector": 3,
+      "arm_seg4": 3,
+      "wrist_camera+wrist_camera_connector": 1
+    },
+    "target_counterpart_failures": 27,
+    "exposure_environment_seconds": 23039.99948501587,
+    "failures_per_1000_environment_seconds": 1.171875026193448
+  },
+  "v8": {
+    "physical_failures": 19,
+    "completed_episodes": {
+      "physical_failure": 19,
+      "timeout": 1133
+    },
+    "failure_predicates_overlapping": {
+      "base_contact": 19
+    },
+    "counterpart_counts": {
+      "gripper1+gripper2": 1,
+      "wrist_camera": 13,
+      "arm_seg4": 4,
+      "wrist_camera_connector": 1
+    },
+    "target_counterpart_failures": 18,
+    "exposure_environment_seconds": 23039.99948501587,
+    "failures_per_1000_environment_seconds": 0.8246527962102042
+  }
+}

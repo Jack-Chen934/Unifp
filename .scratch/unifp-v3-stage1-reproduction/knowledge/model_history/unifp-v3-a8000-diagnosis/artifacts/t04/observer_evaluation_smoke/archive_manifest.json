@@ -1,0 +1,16 @@
+{
+  "S0/config_snapshot.json": "9947b787aa6c6065547b96243abf0e5383fbba721ad472be002d17b089567626",
+  "S0/episodes.jsonl": "ecf52ce77b0560d31e92a7bddcda517854a49696762e37168393662345d6a9ac",
+  "S0/policy_trace.jsonl": "acecc21123e81bcd5857eb0a64fa181addcf2fbea2408fc4807c2a7080b633b8",
+  "S0/summary.json": "145a4e8878beafb7971dec1b7fe3d3f307aa88719b8f20c64b3e0b559d9fde75",
+  "S1/config_snapshot.json": "96992fe9485f26bfab37614d15f5d6bd4f3a2411883b4409146bf15ca3765bd3",
+  "S1/episodes.jsonl": "743f628d5b80530bcd2cc3e15e4fdc00ad52e7e3e81e82fa2c3a6aeacdf044a5",
+  "S1/policy_trace.jsonl": "64335f66d31a35a3c66663ae0192934874f2dd4877d06cdfcbf514b6382709d0",
+  "S1/summary.json": "ebc5e5106de8a64b2f0edd2770ca5cfdf89542b6b62e929fa757b32019c9c785",
+  "S2/config_snapshot.json": "af51d862471d59ecded03d69cbef914857b7311577b51180d656065441decfc3",
+  "S2/episodes.jsonl": "7f0a2519a6d2ef84fb454cbe5e9fef366f7d5beb09f02af95da00b2d1c9cd8dc",
+  "S2/policy_trace.jsonl": "2d0e5e59d538269e7f8db47968719f2c4503e944282cf5e441bf34063c5342bc",
+  "S2/summary.json": "ff11fbd13a0c2f844cd84a8c95cf4bc7e94489a083cdf1e5a1c5f68d401e1a17",
+  "evaluation_manifest.json": "ab40bf729a1cb14a40ccfa847ff94a4fec7fdf3ebea25b7db3bf41d7b9109e0c",
+  "summary.json": "0a9fa94603a6edbf70840472d2ec9bb58cb38a60a67a3637f19349e72d6dda51"
+}

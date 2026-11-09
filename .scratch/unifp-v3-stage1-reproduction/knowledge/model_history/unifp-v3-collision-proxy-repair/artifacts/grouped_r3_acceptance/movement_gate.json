@@ -1,0 +1,94 @@
+{
+  "passed": true,
+  "threshold_source": ".scratch/unifp-v3-a8000-diagnosis/artifacts/t02/v6_r2_gpu/control_candidate_gate.json",
+  "cases": [
+    {
+      "motion_sign": 1,
+      "case": "forward",
+      "command": 0.3,
+      "actual_mean": 0.2860895417630672,
+      "primary_mae": 0.013910458236932727,
+      "tolerance": 0.03,
+      "unit": "m/s",
+      "peak_base_contact_N": 0.0,
+      "passed": true
+    },
+    {
+      "motion_sign": 1,
+      "case": "backward",
+      "command": -0.3,
+      "actual_mean": -0.2856848536431789,
+      "primary_mae": 0.014324091643094982,
+      "tolerance": 0.03,
+      "unit": "m/s",
+      "peak_base_contact_N": 0.0,
+      "passed": true
+    },
+    {
+      "motion_sign": 1,
+      "case": "lateral",
+      "command": 0.2,
+      "actual_mean": 0.1925917586684227,
+      "primary_mae": 0.007755041003227212,
+      "tolerance": 0.03,
+      "unit": "m/s",
+      "peak_base_contact_N": 0.0,
+      "passed": true
+    },
+    {
+      "motion_sign": 1,
+      "case": "yaw",
+      "command": 0.3,
+      "actual_mean": 0.2559667457640171,
+      "primary_mae": 0.046135028153657914,
+      "tolerance": 0.05,
+      "unit": "rad/s",
+      "peak_base_contact_N": 0.0,
+      "passed": true
+    },
+    {
+      "motion_sign": -1,
+      "case": "forward",
+      "command": -0.3,
+      "actual_mean": -0.2852128468453884,
+      "primary_mae": 0.01478715315461155,
+      "tolerance": 0.03,
+      "unit": "m/s",
+      "peak_base_contact_N": 0.0,
+      "passed": true
+    },
+    {
+      "motion_sign": -1,
+      "case": "backward",
+      "command": 0.3,
+      "actual_mean": 0.28569064036011693,
+      "primary_mae": 0.014309359639883007,
+      "tolerance": 0.03,
+      "unit": "m/s",
+      "peak_base_contact_N": 0.0,
+      "passed": true
+    },
+    {
+      "motion_sign": -1,
+      "case": "lateral",
+      "command": -0.2,
+      "actual_mean": -0.19286846205592156,
+      "primary_mae": 0.007392161786556222,
+      "tolerance": 0.03,
+      "unit": "m/s",
+      "peak_base_contact_N": 0.0,
+      "passed": true
+    },
+    {
+      "motion_sign": -1,
+      "case": "yaw",
+      "command": -0.3,
+      "actual_mean": -0.26219603076577186,
+      "primary_mae": 0.038395216256379976,
+      "tolerance": 0.05,
+      "unit": "rad/s",
+      "peak_base_contact_N": 0.0,
+      "passed": true
+    }
+  ]
+}

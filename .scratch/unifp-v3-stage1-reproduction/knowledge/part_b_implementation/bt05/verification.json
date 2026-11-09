@@ -1,0 +1,39 @@
+{
+  "ticket": "B-T05",
+  "passed": 62,
+  "sha256": {
+    "legged_gym/envs/v3/v3_force_evaluation.py": "4a7377ada9c8d5a4311f810edf8ea90a8b4cbdf7875c7353288eee61903d9f4c",
+    "legged_gym/scripts/evaluate_v3.py": "c19cbcc4f597558192a28b1da28a0f50c6988fde57ea3ccc56c7f871ef84cd2c",
+    "legged_gym/scripts/v3_args.py": "0f19a6010251247b979e2dda0f7fd8fb902bac6eaef88c981e6aea5dbd9df53d",
+    "legged_gym/b2_gym_learn/ppo_cse_pf/v3_evaluation.py": "36883f7b7f3d4543fc2be637e674791d76abe0fc801098ca93b78e2cb5f78981",
+    "configs/v3_b_initial_v1.json": "f25201436b07902fa9e6b3bb23c9f24da8a9dc353e27c07b430dd1bc4176453b",
+    "tests/test_v3_force_evaluation.py": "6dfc69c92d8f06bbd6b874707fe4275a791c01202dc2aca62ea0e97e2f3618af"
+  },
+  "native_smoke": {
+    "runtime": "CPU Torch231＋GPU PhysX，GPU pipeline disabled，OMP/MKL=2用于video_r03",
+    "synthetic_checkpoint_only": true,
+    "environments": 1,
+    "episodes": 1,
+    "policy_steps": 1000,
+    "nonzero_intervals": 498,
+    "peak_component_n": 30.0,
+    "physical_failures": 0,
+    "policy_updates": 0,
+    "archive": "native_video_r03/static_half_E",
+    "video": "representative_env0_episode0.mp4"
+  },
+  "review": [
+    "M/E/C固定脚本与R组复用原事件，六方向按env×quota＋episode分配",
+    "动作前预测配已发生标签；实际task非零与估力非零分母分别统计",
+    "独立几何／补偿、零／非零、阶段与保持末0.5秒、方向未定义和截断延迟",
+    "原A精确8000默认校验保留，显式协议可对合法B边界做零力回归",
+    "来源身份与场景／实际runtime分别记录，原始失败占配额；smoke永不记pass",
+    "复用既有Gym相机＋ffmpeg方式，在reset前采图，不复制控制循环"
+  ],
+  "limits": [
+    "原生只做单环境单方向工程冒烟，不能替代B-T07两端及完整14组",
+    "range_frozen=false，60N仍待分档实测",
+    "所有视频与曲线使用合成fixture，不能作为正式模型效果",
+    "本机PATH缺ffmpeg已通过现有imageio_ffmpeg二进制的项目缓存symlink解决，未改conda依赖"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "source": "/mnt/data_8THDD/myl_unifp_v3_stage1/validation/b_stage_20261107_r01/source_resume12000_20261108/UniFP_v3",
+  "original_source": "/mnt/data_8THDD/myl_unifp_v3_stage1/validation/b_stage_20261107_r01/source_launch12000_20261108/UniFP_v3",
+  "changed_files": [
+    "tests/test_v3_b_observer.py",
+    "tools/train_v3_b_observed.py"
+  ],
+  "training_source_and_assets_unchanged": true,
+  "user_instruction": "继续训练观察趋势；从完整12000恢复到原累计40000预算",
+  "tests": "原实际参考guard集成测试1失败2通过；修复后观察与准入13项通过",
+  "resume_checkpoint_sha256": "273d4269bc37e95f879d21b178bc0380e20d2539e2d9cfd7488296f049c3146c",
+  "next_observation_iteration": 16000
+}

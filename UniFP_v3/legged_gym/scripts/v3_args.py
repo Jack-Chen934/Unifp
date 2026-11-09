@@ -13,7 +13,8 @@ def get_v3_args(description: str) -> Namespace:
         description: Short description shown by the Isaac Gym argument parser.
 
     Returns:
-        Parsed simulator and V3 command-line arguments.
+        Parsed simulator and V3 arguments, including the explicit A-to-B switch
+        and expected parent SHA256. Both migration fields are optional for A runs.
 
     Raises:
         ValueError: No explicit new output directory is supplied.
@@ -29,8 +30,17 @@ def get_v3_args(description: str) -> Namespace:
         {"name": "--num_envs", "type": int},
         {"name": "--max_iterations", "type": int},
         {"name": "--resume", "type": str},
+        {"name": "--transition_from_a", "action": "store_true"},
+        {"name": "--parent_sha256", "type": str},
         {"name": "--checkpoint", "type": str},
         {"name": "--manifest", "type": str},
+        {"name": "--protocol", "type": str, "default": "a8000",
+         "choices": ["a8000", "zero_force_regression", "force_tracking", "fixed_wall_contact"]},
+        {"name": "--scenario", "type": str},
+        {"name": "--reference_archive", "type": str},
+        {"name": "--smoke", "action": "store_true"},
+        {"name": "--video", "action": "store_true"},
+        {"name": "--episodes_per_env", "type": int},
         {"name": "--start_evidence", "type": str},
         {"name": "--output_dir", "type": str, "required": True},
         {"name": "--rl_device", "type": str, "default": "cuda:0"},

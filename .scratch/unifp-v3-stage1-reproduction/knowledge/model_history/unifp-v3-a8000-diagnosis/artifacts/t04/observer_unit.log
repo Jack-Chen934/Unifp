@@ -1,0 +1,7 @@
+test_boundaries_and_failures (test_training_observer.ObserverTests.test_boundaries_and_failures)
+Require health cadence, separate evaluation and saved failure stops. ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.002s
+
+OK

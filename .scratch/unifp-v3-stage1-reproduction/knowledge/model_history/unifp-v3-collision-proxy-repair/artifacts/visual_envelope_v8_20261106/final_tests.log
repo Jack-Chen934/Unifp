@@ -1,0 +1,69 @@
+test_candidate_identity_and_source_indices_are_traceable (test_visual_envelope_candidate.VisualEnvelopeAssetTests.test_candidate_identity_and_source_indices_are_traceable)
+Verify real referenced bytes, direct provenance and preserved index rules. ... ok
+test_non_target_and_physical_contract_preserved (test_visual_envelope_candidate.VisualEnvelopeAssetTests.test_non_target_and_physical_contract_preserved)
+Preserve every non-target geometry, visual, joint and inertial property. ... ok
+test_serialized_mesh_covers_independent_visual_intersection (test_visual_envelope_candidate.VisualEnvelopeAssetTests.test_serialized_mesh_covers_independent_visual_intersection)
+Cover all reference surfaces clipped independently by Trimesh. ... ERROR
+test_clipping_retains_crossing_triangle (test_visual_envelope_candidate.VisualEnvelopeGeometryTests.test_clipping_retains_crossing_triangle)
+Keep the unit square crossed by a triangle whose vertices lie outside. ... ok
+test_detailed_reference_is_covered_within_vertex_budget (test_visual_envelope_candidate.VisualEnvelopeGeometryTests.test_detailed_reference_is_covered_within_vertex_budget)
+Keep all vertices of a detailed sphere while using at most 64 vertices. ... ok
+test_hull_covers_reference_with_half_millimeter_margin (test_visual_envelope_candidate.VisualEnvelopeGeometryTests.test_hull_covers_reference_with_half_millimeter_margin)
+Cover a 20 mm cube with the known 21 mm axis-aligned envelope. ... ok
+test_visual_envelope_comparison (unittest.loader._FailedTest.test_visual_envelope_comparison) ... ERROR
+test_visual_envelope_regression (unittest.loader._FailedTest.test_visual_envelope_regression) ... ERROR
+
+======================================================================
+ERROR: test_serialized_mesh_covers_independent_visual_intersection (test_visual_envelope_candidate.VisualEnvelopeAssetTests.test_serialized_mesh_covers_independent_visual_intersection)
+Cover all reference surfaces clipped independently by Trimesh.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/sorry/python_ws/interactive/unifp_reproduction/.scratch/unifp-v3-collision-proxy-repair/knowledge/test_visual_envelope_candidate.py", line 128, in test_serialized_mesh_covers_independent_visual_intersection
+    clipped_reference = trimesh.intersections.slice_mesh_plane(
+        clipped_reference, -plane[:3], -plane[3] * plane[:3], cap=False)
+  File "/home/sorry/miniconda3/lib/python3.13/site-packages/trimesh/intersections.py", line 709, in slice_mesh_plane
+    from .path import polygons
+  File "/home/sorry/miniconda3/lib/python3.13/site-packages/trimesh/path/polygons.py", line 2, in <module>
+    from shapely import ops
+ModuleNotFoundError: No module named 'shapely'
+
+======================================================================
+ERROR: test_visual_envelope_comparison (unittest.loader._FailedTest.test_visual_envelope_comparison)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_visual_envelope_comparison
+Traceback (most recent call last):
+  File "/home/sorry/miniconda3/lib/python3.13/unittest/loader.py", line 396, in _find_test_path
+    module = self._get_module_from_name(name)
+  File "/home/sorry/miniconda3/lib/python3.13/unittest/loader.py", line 339, in _get_module_from_name
+    __import__(name)
+    ~~~~~~~~~~^^^^^^
+  File "/home/sorry/python_ws/interactive/unifp_reproduction/.scratch/unifp-v3-collision-proxy-repair/knowledge/test_visual_envelope_comparison.py", line 6, in <module>
+    from summarize_visual_envelope_comparison import OUTPUT_ROOT, identify_counterparts
+  File "/home/sorry/python_ws/interactive/unifp_reproduction/.scratch/unifp-v3-collision-proxy-repair/knowledge/summarize_visual_envelope_comparison.py", line 14, in <module>
+    from audit_visual_envelope_regression import ASSETS, PROJECT_ROOT, OUTPUT_ROOT, URDF_NAME
+  File "/home/sorry/python_ws/interactive/unifp_reproduction/.scratch/unifp-v3-collision-proxy-repair/knowledge/audit_visual_envelope_regression.py", line 11, in <module>
+    import fcl
+ModuleNotFoundError: No module named 'fcl'
+
+
+======================================================================
+ERROR: test_visual_envelope_regression (unittest.loader._FailedTest.test_visual_envelope_regression)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_visual_envelope_regression
+Traceback (most recent call last):
+  File "/home/sorry/miniconda3/lib/python3.13/unittest/loader.py", line 396, in _find_test_path
+    module = self._get_module_from_name(name)
+  File "/home/sorry/miniconda3/lib/python3.13/unittest/loader.py", line 339, in _get_module_from_name
+    __import__(name)
+    ~~~~~~~~~~^^^^^^
+  File "/home/sorry/python_ws/interactive/unifp_reproduction/.scratch/unifp-v3-collision-proxy-repair/knowledge/test_visual_envelope_regression.py", line 5, in <module>
+    from audit_visual_envelope_regression import audit_geometry
+  File "/home/sorry/python_ws/interactive/unifp_reproduction/.scratch/unifp-v3-collision-proxy-repair/knowledge/audit_visual_envelope_regression.py", line 11, in <module>
+    import fcl
+ModuleNotFoundError: No module named 'fcl'
+
+
+----------------------------------------------------------------------
+Ran 8 tests in 1.296s
+
+FAILED (errors=3)

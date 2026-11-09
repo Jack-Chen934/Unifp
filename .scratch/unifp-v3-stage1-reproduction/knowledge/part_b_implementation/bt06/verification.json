@@ -1,0 +1,48 @@
+{
+  "ticket": "B-T06",
+  "status": "已完成；两端工程正对照与正式配额基准分别留B-T07／08",
+  "unit_tests_passed": 73,
+  "unit_log": "final_unit.log",
+  "sha256": {
+    "legged_gym/envs/v3/legged_robot_v3.py": "558295945e22af4091a196e1f53ce9fafdcc6c898bc0ccf205578381329836ca",
+    "legged_gym/envs/v3/v3_contact_evaluation.py": "3fbd305e62b7446c60c536f2b7fd25d53cc5af13b237c3e025e29d6392aba845",
+    "legged_gym/scripts/evaluate_v3_contact.py": "adb4d179fb60ec089f7e6edd3beec9a4964537cb035b00fa84800edd7d9bfea7",
+    "legged_gym/scripts/v3_args.py": "8c2ae17e5189b9a9c73a4db36a5b6e6d7666c8299c63fb614f6ae20b8c91a43c",
+    "legged_gym/b2_gym_learn/ppo_cse_pf/v3_evaluation.py": "174c977499f0911f0ccb2a868a2a1a29edf32e12aba9e3634726e849ff6e70fa",
+    "configs/v3_b_contact_v1.json": "5860c2d8fcbd68c231ff87a9cf78434ad4ae507c5cab87f76252e3f937768ef8",
+    "tests/test_v3_contact_evaluation.py": "b323be92f41aa6eb26bfae7cd800b15ba1f75a8d3403e9e985989b4b62ea073f"
+  },
+  "native_smoke": {
+    "archive": "native_contact_r02",
+    "synthetic_fixture_only": true,
+    "contact_episodes": 2,
+    "zero_control_episodes": 1,
+    "policy_steps": 3000,
+    "trace_rows": 3000,
+    "physical_failures": 0,
+    "policy_updates": 0,
+    "representative_mp4": 3,
+    "figures": 17,
+    "steady_samples_per_episode": 100,
+    "release_samples_per_episode": 50,
+    "first_boundary_invalid_per_episode": true,
+    "previous_substep_reaction_pairing_checked": true,
+    "runtime": "CPU Torch 2.3.1＋GPU PhysX，GPU pipeline关闭"
+  },
+  "review": [
+    "逐环境物性回调创建墙，prepare前统一查DOMAIN_SIM，不改共享base／B2",
+    "完整raw与逻辑机器人张量隔离；reset只提交真实robot actor ids",
+    "8点墙／指力与几何诊断，保守待判不算成功，接触不回填观测／Critic／辅助／reward",
+    "固定世界脚本、半／满幅配额及独立0N对照；失败与缺测不删除",
+    "动作前decoder配上一物理子步反力；reset首边界无效",
+    "SDK单精度dt时间窗先取微秒边界，再统计100／50点，不改物理步长",
+    "复用原step的info政策trace，不新增二次采样接口或独立控制循环"
+  ],
+  "limits": [
+    "合成策略未建立接触，不能用其曲线或视频评价正式A8000或B训练效果",
+    "r01是初步开发证据，发现释放窗少计1点和字体加载问题；r02为修正后的完整接口短测",
+    "主动穿入正对照峰值约751N仅验证读数可用，不表示正式按压力或范围冻结",
+    "接触分类依赖净力与保守AABB排除，不能宣称完整PhysX接触对清单",
+    "range_frozen=false；本机／远程5秒完整正对照与A正式基准尚未完成"
+  ]
+}

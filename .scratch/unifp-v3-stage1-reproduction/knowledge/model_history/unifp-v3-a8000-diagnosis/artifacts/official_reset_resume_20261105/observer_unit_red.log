@@ -1,0 +1,2 @@
+修改前实际回归失败：test_boundaries_and_failures → append_record → RuntimeError: 观察协议暂停：本轮有1次物理失败，完整边界已保存。
+复现命令：PYTHONDONTWRITEBYTECODE=1 python .scratch/unifp-v3-a8000-diagnosis/knowledge/test_training_observer.py

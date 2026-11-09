@@ -1,0 +1,181 @@
+{
+  "scenario_name": "S0",
+  "checkpoint_iteration": 8000,
+  "trace_policy_steps": 96000,
+  "episodes": {
+    "completed": 96,
+    "expected": 96,
+    "completion_rate": 1.0,
+    "physical_failures": 0,
+    "timeouts": 96,
+    "failure_denominator": 96,
+    "physical_failure_rate": 0.0
+  },
+  "metrics": {
+    "tcp_geometric_l1_m": {
+      "mean": 0.031191079262954495,
+      "p95": 0.0708491027355194,
+      "sample_count": 96000
+    },
+    "tcp_geometric_l2_m": {
+      "mean": 0.020612114150951735,
+      "p95": 0.04610478356480599,
+      "sample_count": 96000
+    },
+    "base_planar_speed_m_s": {
+      "mean": 0.011016632864670138,
+      "p95": 0.03307197820395232,
+      "sample_count": 96000
+    },
+    "base_yaw_rate_rad_s": {
+      "mean": 0.014903031618166243,
+      "p95": 0.05080984234809879,
+      "sample_count": 96000
+    },
+    "episode_reward_return": {
+      "mean": 127.4205032189687,
+      "p95": 128.0298080444336,
+      "sample_count": 96
+    },
+    "episode_reward_rate": {
+      "mean": 6.371025303351948,
+      "p95": 6.401490545306143,
+      "sample_count": 96
+    },
+    "state_estimation_base_velocity_tcp_mae_rmse": {
+      "mae_by_dimension": [
+        0.009471475675443767,
+        0.0066898243429499,
+        0.0017484226596264838,
+        0.00727138097739468,
+        0.007798696066487021,
+        0.010813372921301181
+      ],
+      "rmse_by_dimension": [
+        0.012169850685903687,
+        0.009394005688845637,
+        0.002723324062179949,
+        0.009366541647911297,
+        0.010201880001138598,
+        0.014023871952082488
+      ],
+      "dimensions": [
+        "base_vx_m_s",
+        "base_vy_m_s",
+        "base_vz_m_s",
+        "tcp_radius_m",
+        "tcp_elevation_rad",
+        "tcp_azimuth_rad"
+      ]
+    },
+    "state_estimation/base_vx_m_s_mae": {
+      "mean": 0.009471475675443767
+    },
+    "state_estimation/base_vx_m_s_rmse": {
+      "mean": 0.012169850685903687
+    },
+    "state_estimation/base_vy_m_s_mae": {
+      "mean": 0.0066898243429499
+    },
+    "state_estimation/base_vy_m_s_rmse": {
+      "mean": 0.009394005688845637
+    },
+    "state_estimation/base_vz_m_s_mae": {
+      "mean": 0.0017484226596264838
+    },
+    "state_estimation/base_vz_m_s_rmse": {
+      "mean": 0.002723324062179949
+    },
+    "state_estimation/tcp_radius_m_mae": {
+      "mean": 0.00727138097739468
+    },
+    "state_estimation/tcp_radius_m_rmse": {
+      "mean": 0.009366541647911297
+    },
+    "state_estimation/tcp_elevation_rad_mae": {
+      "mean": 0.007798696066487021
+    },
+    "state_estimation/tcp_elevation_rad_rmse": {
+      "mean": 0.010201880001138598
+    },
+    "state_estimation/tcp_azimuth_rad_mae": {
+      "mean": 0.010813372921301181
+    },
+    "state_estimation/tcp_azimuth_rad_rmse": {
+      "mean": 0.014023871952082488
+    },
+    "physical_failure_rate": {
+      "mean": 0.0
+    },
+    "target_movement_phase_elapsed_rate": {
+      "mean": 0.3608645833333333,
+      "sample_count": 96000
+    }
+  },
+  "threshold_version": "v3-a-initial-v1",
+  "threshold_results": {
+    "tcp_geometric_l2_m": true,
+    "tcp_geometric_l1_m": true,
+    "base_planar_speed_m_s": true,
+    "base_yaw_rate_rad_s": true,
+    "physical_failure_rate": true,
+    "state_estimation/base_vx_m_s_mae": true,
+    "state_estimation/base_vy_m_s_mae": true,
+    "state_estimation/base_vz_m_s_mae": true,
+    "state_estimation/tcp_radius_m_mae": true,
+    "state_estimation/tcp_elevation_rad_mae": true,
+    "state_estimation/tcp_azimuth_rad_mae": true
+  },
+  "push_recovery_windows": [],
+  "paper_comparison_scope": {
+    "fig_3b": "V3逐维TCP球坐标与底盘速度估计误差分布；单位见维度标签",
+    "fig_3b_limit": "资产、目标分布和环境协议不同；不重建论文未公开的原始数据点",
+    "fig_3c_fig_3d": "受力仿真与实机结果不属于本A阶段评估"
+  },
+  "evidence_complete": true,
+  "assessment": "pass",
+  "evaluation_device": "cuda:0",
+  "evaluation_environment_count": 32,
+  "evaluation_seed": 1001,
+  "push_seed": 2001,
+  "policy_updates": 0,
+  "evaluation_runtime": {
+    "python": "3.8.20",
+    "torch": "2.3.1+cu121",
+    "device": "cuda:0",
+    "gym_import_path": "/mnt/data_8THDD/myl_unifp/isaacgym/python/isaacgym/__init__.py",
+    "sim_device": "cuda:0",
+    "physx_use_gpu": true,
+    "use_gpu_pipeline": true
+  },
+  "checkpoint_sha256": "323a6688fe42559db1d0c545b778b456551ce0ac472f8169fec5ebce2d849dbc",
+  "protocol": "zero_force_regression",
+  "smoke": false,
+  "source_compatibility": {
+    "allowed_source_changes": [
+      "legged_gym/b2_gym_learn/ppo_cse_pf/v3_evaluation.py",
+      "legged_gym/b2_gym_learn/ppo_cse_pf/v3_on_policy_runner.py",
+      "legged_gym/b2_gym_learn/ppo_cse_pf/v3_run_identity.py",
+      "legged_gym/envs/v3/legged_robot_v3.py",
+      "legged_gym/envs/v3/v3_contact_evaluation.py",
+      "legged_gym/envs/v3/v3_force_evaluation.py",
+      "legged_gym/envs/v3/v3_pos_force_config.py",
+      "legged_gym/scripts/evaluate_v3.py",
+      "legged_gym/scripts/evaluate_v3_contact.py",
+      "legged_gym/scripts/train_v3.py",
+      "legged_gym/scripts/v3_args.py",
+      "legged_gym/utils/v3_config.py"
+    ],
+    "source_reproduction_part": "A"
+  },
+  "source_completed_iterations": 8000,
+  "source_reproduction_part": "A",
+  "effective_quota": {
+    "num_envs": 32,
+    "episodes_per_env": 3
+  },
+  "a8000_comparison": {
+    "available": false,
+    "原因": "未提供同协议A8000参考归档"
+  }
+}

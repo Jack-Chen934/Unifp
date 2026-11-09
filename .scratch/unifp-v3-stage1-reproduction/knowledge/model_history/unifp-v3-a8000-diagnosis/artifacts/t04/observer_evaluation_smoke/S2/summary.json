@@ -1,0 +1,190 @@
+{
+  "scenario_name": "S2",
+  "checkpoint_iteration": 1,
+  "trace_policy_steps": 2000,
+  "episodes": {
+    "completed": 2,
+    "expected": 2,
+    "completion_rate": 1.0,
+    "physical_failures": 0,
+    "timeouts": 2,
+    "failure_denominator": 2,
+    "physical_failure_rate": 0.0
+  },
+  "metrics": {
+    "tcp_geometric_l1_m": {
+      "mean": 0.7954536358764454,
+      "p95": 1.2304267048835755,
+      "sample_count": 2000
+    },
+    "tcp_geometric_l2_m": {
+      "mean": 0.5281936476859264,
+      "p95": 0.7798478871583938,
+      "sample_count": 2000
+    },
+    "base_planar_speed_m_s": {
+      "mean": 0.49438787961751224,
+      "p95": 0.6227153897285461,
+      "sample_count": 2000
+    },
+    "base_yaw_rate_rad_s": {
+      "mean": 0.27483835311233995,
+      "p95": 0.49719441384077073,
+      "sample_count": 2000
+    },
+    "episode_reward_return": {
+      "mean": 69.61916732788086,
+      "p95": 70.73623313903809,
+      "sample_count": 2
+    },
+    "episode_reward_rate": {
+      "mean": 3.480958444199527,
+      "p95": 3.5368117360058067,
+      "sample_count": 2
+    },
+    "state_estimation_base_velocity_tcp_mae_rmse": {
+      "mae_by_dimension": [
+        0.039079918712429614,
+        0.09922979683843096,
+        0.033837492433674926,
+        0.8656607776936144,
+        1.3297283974066376,
+        0.05947333090691944
+      ],
+      "rmse_by_dimension": [
+        0.04297585119905959,
+        0.10074013037746214,
+        0.0385050197959577,
+        0.8659414947985005,
+        1.3297745233778382,
+        0.06136726756355395
+      ],
+      "dimensions": [
+        "base_vx_m_s",
+        "base_vy_m_s",
+        "base_vz_m_s",
+        "tcp_radius_m",
+        "tcp_elevation_rad",
+        "tcp_azimuth_rad"
+      ]
+    },
+    "state_estimation/base_vx_m_s_mae": {
+      "mean": 0.039079918712429614
+    },
+    "state_estimation/base_vx_m_s_rmse": {
+      "mean": 0.04297585119905959
+    },
+    "state_estimation/base_vy_m_s_mae": {
+      "mean": 0.09922979683843096
+    },
+    "state_estimation/base_vy_m_s_rmse": {
+      "mean": 0.10074013037746214
+    },
+    "state_estimation/base_vz_m_s_mae": {
+      "mean": 0.033837492433674926
+    },
+    "state_estimation/base_vz_m_s_rmse": {
+      "mean": 0.0385050197959577
+    },
+    "state_estimation/tcp_radius_m_mae": {
+      "mean": 0.8656607776936144
+    },
+    "state_estimation/tcp_radius_m_rmse": {
+      "mean": 0.8659414947985005
+    },
+    "state_estimation/tcp_elevation_rad_mae": {
+      "mean": 1.3297283974066376
+    },
+    "state_estimation/tcp_elevation_rad_rmse": {
+      "mean": 1.3297745233778382
+    },
+    "state_estimation/tcp_azimuth_rad_mae": {
+      "mean": 0.05947333090691944
+    },
+    "state_estimation/tcp_azimuth_rad_rmse": {
+      "mean": 0.06136726756355395
+    },
+    "push_recovery_tcp_l2_m": {
+      "mean": 0.5250447997450829,
+      "window_count": 4
+    },
+    "push_recovery_base_speed_error_m_s": {
+      "mean": 0.5084293696284294,
+      "window_count": 4
+    },
+    "physical_failure_rate": {
+      "mean": 0.0
+    },
+    "target_movement_phase_elapsed_rate": {
+      "mean": 0.2845,
+      "sample_count": 2000
+    }
+  },
+  "threshold_version": "v3-a-initial-v1",
+  "threshold_results": {
+    "tcp_geometric_l2_m": false,
+    "tcp_geometric_l1_m": false,
+    "base_planar_speed_m_s": false,
+    "base_yaw_rate_rad_s": false,
+    "physical_failure_rate": true,
+    "state_estimation/base_vx_m_s_mae": true,
+    "state_estimation/base_vy_m_s_mae": true,
+    "state_estimation/base_vz_m_s_mae": true,
+    "state_estimation/tcp_radius_m_mae": false,
+    "state_estimation/tcp_elevation_rad_mae": false,
+    "state_estimation/tcp_azimuth_rad_mae": true,
+    "push_recovery_tcp_l2_m": false,
+    "push_recovery_base_speed_error_m_s": false
+  },
+  "push_recovery_windows": [
+    {
+      "scenario_id": "S2_seed1001_env0_episode0",
+      "evaluation_step": 376,
+      "pre_push_tcp_l2_m": 0.393139123916626,
+      "post_push_tcp_l2_mean_m": 0.37469273924827573,
+      "post_push_base_speed_error_mean_m_s": 0.5028792214393616,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env1_episode0",
+      "evaluation_step": 376,
+      "pre_push_tcp_l2_m": 0.6414551138877869,
+      "post_push_tcp_l2_mean_m": 0.5766880679130554,
+      "post_push_base_speed_error_mean_m_s": 0.41464968383312223,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env0_episode0",
+      "evaluation_step": 776,
+      "pre_push_tcp_l2_m": 0.5873013734817505,
+      "post_push_tcp_l2_mean_m": 0.5494080126285553,
+      "post_push_base_speed_error_mean_m_s": 0.6329499518871308,
+      "window_policy_steps": 50
+    },
+    {
+      "scenario_id": "S2_seed1001_env1_episode0",
+      "evaluation_step": 776,
+      "pre_push_tcp_l2_m": 0.5902047753334045,
+      "post_push_tcp_l2_mean_m": 0.5993903791904449,
+      "post_push_base_speed_error_mean_m_s": 0.4832386213541031,
+      "window_policy_steps": 50
+    }
+  ],
+  "paper_comparison_scope": {
+    "fig_3b": "V3逐维TCP球坐标与底盘速度估计误差分布；单位见维度标签",
+    "fig_3b_limit": "资产、目标分布和环境协议不同；不重建论文未公开的原始数据点",
+    "fig_3c_fig_3d": "受力仿真与实机结果不属于本A阶段评估"
+  },
+  "evidence_complete": true,
+  "assessment": "ungraded_or_incomplete",
+  "evaluation_device": "cuda:0",
+  "evaluation_environment_count": 2,
+  "evaluation_seed": 1001,
+  "push_seed": 2001,
+  "policy_updates": 0,
+  "observation_only": true,
+  "observed_planar_motion": {
+    "command_mean_m_s": 0.4939949234837094,
+    "actual_mean_m_s": 0.005690140461077085
+  }
+}

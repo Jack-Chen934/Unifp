@@ -28,9 +28,6 @@ events.out.tfevents.*
 *.zip
 *.7z
 *.bundle
-# 历史完整目录在本机留存，Git 只收录入口说明
-/legacy/*
-!/legacy/README.md
 # SDK 与认证配置不纳入项目
 isaacgym/
 isaac-gym-preview-4/

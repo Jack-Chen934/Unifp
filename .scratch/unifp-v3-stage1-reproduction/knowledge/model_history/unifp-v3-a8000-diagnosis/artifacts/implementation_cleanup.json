@@ -1,0 +1,52 @@
+{
+  "scope_zh": "仅删除本轮候选上传临时包、临时编辑副本和新增模块缓存；失败候选与证据保留。共享torch扩展缓存、旧权重、官方副本和其他工作不清理。",
+  "deleted": [
+    {
+      "path": "/tmp/unifp-v3-train-v2-20261104.tar.gz",
+      "bytes": 17495898,
+      "sha256": "543771292c88c9d84ac4442ba953e8dc022bf2b1cb08ab89a0d6269435c0199f"
+    },
+    {
+      "path": "/tmp/unifp-v3-train-v3-20261104.tar.gz",
+      "bytes": 17559985,
+      "sha256": "5721c80fcf522637cfdfc86a1ad263e92572428c64a5c2bb10d0baf23ec47b9b"
+    },
+    {
+      "path": "/tmp/unifp-v3-train-v4-20261104.tar.gz",
+      "bytes": 17576172,
+      "sha256": "56abfa42cb917b52baa0b2afc6dc19a661838e61a003b8b8481cc5b4dfd09da3"
+    },
+    {
+      "path": "/tmp/build_rolling_collision_asset_new.py",
+      "bytes": 13243,
+      "sha256": "4b14d50e5680e04732dc2cb75cda2a20ef4162e92b4ce0a53fb9691b8c0ff065"
+    },
+    {
+      "path": "/home/sorry/python_ws/interactive/unifp_reproduction/UniFP_v3/tools/__pycache__/build_rolling_collision_asset.cpython-311.pyc",
+      "bytes": 23183,
+      "sha256": "00b384fd2bedc3e4184e065dfb5aae233494127973fa824242c500b1dca674a9"
+    },
+    {
+      "path": "/home/sorry/python_ws/interactive/unifp_reproduction/UniFP_v3/legged_gym/utils/__pycache__/v3_kinematics.cpython-311.pyc",
+      "bytes": 7005,
+      "sha256": "2c57b2e9ab4390c02d947154dd3cdfa7d7b5447b401546da39ff01392ec96856"
+    },
+    {
+      "path": "/home/sorry/python_ws/interactive/unifp_reproduction/UniFP_v3/tests/__pycache__/test_rolling_collision_asset.cpython-311-pytest-9.1.1.pyc",
+      "bytes": 26351,
+      "sha256": "107e49c464eebd56340f7a91c9c6d7b9d790b2f16895fd92468b3e07badb3071"
+    },
+    {
+      "path": "/home/sorry/python_ws/interactive/unifp_reproduction/UniFP_v3/tests/__pycache__/test_v3_kinematics.cpython-311-pytest-9.1.1.pyc",
+      "bytes": 5865,
+      "sha256": "49c5f8e4038ee7b586e866331b4ae5ba4dc51ef14da185598d60245c2da2b30a"
+    }
+  ],
+  "total_bytes": 52707702,
+  "remote_deleted": [
+    {
+      "path": "/mnt/data_8THDD/myl_unifp_v3_stage1/validation/a8000_repairs_20261104_r01/unifp-v3-train-v4-20261104.tar.gz",
+      "bytes": 17576172
+    }
+  ]
+}

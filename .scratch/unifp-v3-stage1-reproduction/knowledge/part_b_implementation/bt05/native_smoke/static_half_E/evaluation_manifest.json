@@ -1,0 +1,166 @@
+{
+  "schema_version": 1,
+  "protocol": "force_tracking",
+  "threshold_version": "v3-b-initial-v1",
+  "range_frozen": false,
+  "max_force_n": 60.0,
+  "num_envs": 32,
+  "episodes_per_env": 3,
+  "episode_length_s": 20.0,
+  "seed": 1001,
+  "push_seed": 2001,
+  "action_mode": "actor_mean",
+  "units": {
+    "force": "N",
+    "position": "m",
+    "time": "s",
+    "external_frame": "world",
+    "command_frame": "yaw"
+  },
+  "events": {
+    "start_s": [
+      1.0,
+      9.0
+    ],
+    "rise_s": 2.0,
+    "hold_s": 1.0,
+    "fall_s": 2.0
+  },
+  "scenarios": {
+    "static_half_M": {
+      "mode": "M",
+      "moving": false,
+      "push": false,
+      "amplitude_fraction": 0.5
+    },
+    "static_half_E": {
+      "mode": "E",
+      "moving": false,
+      "push": false,
+      "amplitude_fraction": 0.5
+    },
+    "static_half_C": {
+      "mode": "C",
+      "moving": false,
+      "push": false,
+      "amplitude_fraction": 0.5
+    },
+    "static_full_M": {
+      "mode": "M",
+      "moving": false,
+      "push": false,
+      "amplitude_fraction": 1.0
+    },
+    "static_full_E": {
+      "mode": "E",
+      "moving": false,
+      "push": false,
+      "amplitude_fraction": 1.0
+    },
+    "static_full_C": {
+      "mode": "C",
+      "moving": false,
+      "push": false,
+      "amplitude_fraction": 1.0
+    },
+    "moving_half_M": {
+      "mode": "M",
+      "moving": true,
+      "push": false,
+      "amplitude_fraction": 0.5
+    },
+    "moving_half_E": {
+      "mode": "E",
+      "moving": true,
+      "push": false,
+      "amplitude_fraction": 0.5
+    },
+    "moving_half_C": {
+      "mode": "C",
+      "moving": true,
+      "push": false,
+      "amplitude_fraction": 0.5
+    },
+    "moving_full_M": {
+      "mode": "M",
+      "moving": true,
+      "push": false,
+      "amplitude_fraction": 1.0
+    },
+    "moving_full_E": {
+      "mode": "E",
+      "moving": true,
+      "push": false,
+      "amplitude_fraction": 1.0
+    },
+    "moving_full_C": {
+      "mode": "C",
+      "moving": true,
+      "push": false,
+      "amplitude_fraction": 1.0
+    },
+    "R0": {
+      "mode": "R",
+      "moving": false,
+      "push": false,
+      "amplitude_fraction": 1.0
+    },
+    "R2": {
+      "mode": "R",
+      "moving": true,
+      "push": true,
+      "amplitude_fraction": 1.0
+    }
+  },
+  "thresholds": {
+    "static": {
+      "M_tcp_l2_m": 0.08,
+      "other_tcp_l2_m": 0.1,
+      "base_planar_speed_m_s": 0.1,
+      "base_yaw_rate_rad_s": 0.15,
+      "physical_failure_rate": 0.05
+    },
+    "moving": {
+      "M_tcp_l2_m": 0.12,
+      "other_tcp_l2_m": 0.15,
+      "base_planar_speed_m_s": 0.15,
+      "base_yaw_rate_rad_s": 0.2,
+      "physical_failure_rate": 0.05
+    },
+    "R2": {
+      "M_tcp_l2_m": 0.18,
+      "other_tcp_l2_m": 0.18,
+      "base_planar_speed_m_s": 0.2,
+      "base_yaw_rate_rad_s": 0.25,
+      "physical_failure_rate": 0.1
+    },
+    "force_nonzero_axis_mae_n": 10.0,
+    "force_nonzero_zero_reference_ratio": 0.5,
+    "force_zero_axis_mae_n": 3.0,
+    "state_mae": [
+      0.1,
+      0.1,
+      0.05,
+      0.05,
+      0.1,
+      0.15
+    ],
+    "push_compensated_tcp_l2_m": 0.25,
+    "push_base_speed_m_s": 0.3
+  },
+  "observation_schedule": {
+    "light_check_every_b_iterations": 1000,
+    "intermediate_cumulative_iterations": [
+      16000,
+      24000,
+      32000
+    ],
+    "final_cumulative_iteration": 40000,
+    "intermediate_force_scenarios": [
+      "R2"
+    ],
+    "zero_force_manifest": "configs/v3_a_initial_v1.json",
+    "contact_manifest": "configs/v3_b_contact_v1.json"
+  },
+  "说明": "力幅尚待B-T07原生分档验证冻结；当前不能作为正式效果通过证据。"
+}
